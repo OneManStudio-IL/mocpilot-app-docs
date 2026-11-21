@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog</id>
+    <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog</id>
     <title>MOCPilot Blog</title>
     <updated>2026-08-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog"/>
+    <link rel="alternate" href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog"/>
     <subtitle>MOCPilot Blog</subtitle>
-    <icon>https://OneManStudio-IL.github.io/mocpilot-app/fi/img/favicon.ico</icon>
+    <icon>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2026.5.0 -julkaisu]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/08/23/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/08/23/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post"/>
         <updated>2026-08-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--laiteohjelmistopäivitykset-sbrick-tuki-ja-rakentajan-parannukset">🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-mocpilot-202650--laiteohjelmistop%C3%A4ivitykset-sbrick-tuki-ja-rakentajan-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--laiteohjelmistopäivitykset-sbrick-tuki-ja-rakentajan-parannukset">🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-mocpilot-202650--laiteohjelmistop%C3%A4ivitykset-sbrick-tuki-ja-rakentajan-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.5.0 — Laiteohjelmistopäivitykset, SBrick-tuki ja rakentajan parannukset" translate="no">​</a></h2>
 <p>Julkaisemme ilolla <strong>MOCPilot 2026.5.0</strong> -version <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä päivitys lisää laiteohjelmiston päivitys- ja palautustuen useammille LEGO Powered Up -hubeille, tuo SBrick- ja SBrick Plus -tuen, parantaa lohkorakentajan ja ohjauspaneelin työnkulkua sekä sisältää useita käyttöliittymäparannuksia, kaatumiskorjauksia ja käännöspäivityksiä.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202650">✨ Mitä uutta versiossa 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-mit%C3%A4-uutta-versiossa-202650" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.5.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.5.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubien-laiteohjelmiston-päivitys-ja-palautus">🔄 Hubien laiteohjelmiston päivitys ja palautus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-hubien-laiteohjelmiston-p%C3%A4ivitys-ja-palautus" class="hash-link" aria-label="Suora linkki kohtaan 🔄 Hubien laiteohjelmiston päivitys ja palautus" title="Suora linkki kohtaan 🔄 Hubien laiteohjelmiston päivitys ja palautus" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202650">✨ Mitä uutta versiossa 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-mit%C3%A4-uutta-versiossa-202650" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.5.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.5.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubien-laiteohjelmiston-päivitys-ja-palautus">🔄 Hubien laiteohjelmiston päivitys ja palautus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-hubien-laiteohjelmiston-p%C3%A4ivitys-ja-palautus" class="hash-link" aria-label="Suora linkki kohtaan 🔄 Hubien laiteohjelmiston päivitys ja palautus" title="Suora linkki kohtaan 🔄 Hubien laiteohjelmiston päivitys ja palautus" translate="no">​</a></h3>
 <ul>
 <li class="">Lisätty laiteohjelmiston päivitystuki <strong>Technic Hub</strong> -hubille</li>
 <li class="">Lisätty laiteohjelmiston päivitystuki <strong>Technic Move Hub</strong> -hubille</li>
 <li class="">Laajennettu laiteohjelmiston päivitystukea muille tuetuille hubeille</li>
 <li class="">Lisätty tunnistus hubeille, jotka on yhdistetty <strong>palautustilassa</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubituki-ja-määritys">🔌 Hubituki ja määritys<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-hubituki-ja-m%C3%A4%C3%A4ritys" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubituki ja määritys" title="Suora linkki kohtaan 🔌 Hubituki ja määritys" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubituki-ja-määritys">🔌 Hubituki ja määritys<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-hubituki-ja-m%C3%A4%C3%A4ritys" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubituki ja määritys" title="Suora linkki kohtaan 🔌 Hubituki ja määritys" translate="no">​</a></h3>
 <ul>
 <li class="">Lisätty tuki <strong>SBrick</strong>- ja <strong>SBrick Plus</strong> -laitteille</li>
 <li class="">Lisätty Technic Move Hub -määritysmuutos: <strong>Porsche GT4 e-Performance</strong>, <strong>Batmobile™‎ Tumbler</strong> ja <strong>Lamborghini Revuelto</strong></li>
 <li class="">Hubien yhdistämissivut on uudistettu yhteystyypin mukaan</li>
 <li class="">Hubin valvontasivu on uudistettu</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-lohkorakentajan-päivitykset">🧱 Lohkorakentajan päivitykset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-lohkorakentajan-p%C3%A4ivitykset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Lohkorakentajan päivitykset" title="Suora linkki kohtaan 🧱 Lohkorakentajan päivitykset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-lohkorakentajan-päivitykset">🧱 Lohkorakentajan päivitykset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-lohkorakentajan-p%C3%A4ivitykset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Lohkorakentajan päivitykset" title="Suora linkki kohtaan 🧱 Lohkorakentajan päivitykset" translate="no">​</a></h3>
 <ul>
 <li class="">Lisätty lohkotason suodatus: <strong>Beginner</strong>, <strong>Advanced</strong> ja <strong>Guru</strong></li>
 <li class="">Lohkotasot voidaan määrittää profiilin lohko-ohjelmaa luotaessa, muokattaessa tai suoritettaessa</li>
@@ -40,14 +40,14 @@
 <li class="">Lisätty <strong>tehopulssi</strong> -lohko Technic Move Hubille</li>
 <li class="">Korjattu hiiren rullalla tehtävät skaalausmuutokset lohkopaletissa</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-peliohjain-ja-ohjauspaneeli">🎮 Peliohjain ja ohjauspaneeli<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-peliohjain-ja-ohjauspaneeli" class="hash-link" aria-label="Suora linkki kohtaan 🎮 Peliohjain ja ohjauspaneeli" title="Suora linkki kohtaan 🎮 Peliohjain ja ohjauspaneeli" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-peliohjain-ja-ohjauspaneeli">🎮 Peliohjain ja ohjauspaneeli<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-peliohjain-ja-ohjauspaneeli" class="hash-link" aria-label="Suora linkki kohtaan 🎮 Peliohjain ja ohjauspaneeli" title="Suora linkki kohtaan 🎮 Peliohjain ja ohjauspaneeli" translate="no">​</a></h3>
 <ul>
 <li class="">Peliohjainsivu ja peliohjaimen testaussivu on uudistettu</li>
 <li class="">Korjattu peliohjaimen suuntapainikkeen tilasiirtymät</li>
 <li class="">Lisätty kontekstivalikon valinta ohjauspaneelin säätimen teeman vaihtamiseen suoraan</li>
 <li class="">Viimeistelty ohjauspaneelin profiilien otsikot, lajitteluvalikko, korttien liukuvärit ja luontilomakkeen välit</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-käyttöliittymä-profiilit-ja-vakaus">🎨 Käyttöliittymä, profiilit ja vakaus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/08/23/post#-k%C3%A4ytt%C3%B6liittym%C3%A4-profiilit-ja-vakaus" class="hash-link" aria-label="Suora linkki kohtaan 🎨 Käyttöliittymä, profiilit ja vakaus" title="Suora linkki kohtaan 🎨 Käyttöliittymä, profiilit ja vakaus" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-käyttöliittymä-profiilit-ja-vakaus">🎨 Käyttöliittymä, profiilit ja vakaus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/08/23/post#-k%C3%A4ytt%C3%B6liittym%C3%A4-profiilit-ja-vakaus" class="hash-link" aria-label="Suora linkki kohtaan 🎨 Käyttöliittymä, profiilit ja vakaus" title="Suora linkki kohtaan 🎨 Käyttöliittymä, profiilit ja vakaus" translate="no">​</a></h3>
 <ul>
 <li class="">Poistettu keltainen paletti valmiista profiileista, joten ne näyttävät nyt tavallisen profiilisivun mukaisilta</li>
 <li class="">Parannettu yleistä ulkoasua ja pieniä käyttöliittymän yksityiskohtia</li>
@@ -61,25 +61,25 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2026.4.0 julkaisu]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/06/06/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/06/06/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post"/>
         <updated>2026-06-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--kumoatee-uudelleen-hub-profiilit-ja-rakentajan-korjaukset">🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/06/06/post#-mocpilot-202640--kumoatee-uudelleen-hub-profiilit-ja-rakentajan-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--kumoatee-uudelleen-hub-profiilit-ja-rakentajan-korjaukset">🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post#-mocpilot-202640--kumoatee-uudelleen-hub-profiilit-ja-rakentajan-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.4.0 — Kumoa/Tee uudelleen, hub-profiilit ja rakentajan korjaukset" translate="no">​</a></h2>
 <p>Julkaisemme ilolla <strong>MOCPilot 2026.4.0</strong> -version, joka on saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä päivitys lisää kumoa- ja tee uudelleen -historian lohko-ohjelmiin, parantaa hubien asetuksia profiilirakentajassa ja korjaa useita rakentajan ja laiteohjauksen ongelmia.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202640">✨ Mitä uutta versiossa 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/06/06/post#-mit%C3%A4-uutta-versiossa-202640" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.4.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.4.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-lohko-ohjelmien-historia">🧱 Lohko-ohjelmien historia<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/06/06/post#-lohko-ohjelmien-historia" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Lohko-ohjelmien historia" title="Suora linkki kohtaan 🧱 Lohko-ohjelmien historia" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202640">✨ Mitä uutta versiossa 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post#-mit%C3%A4-uutta-versiossa-202640" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.4.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.4.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-lohko-ohjelmien-historia">🧱 Lohko-ohjelmien historia<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post#-lohko-ohjelmien-historia" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Lohko-ohjelmien historia" title="Suora linkki kohtaan 🧱 Lohko-ohjelmien historia" translate="no">​</a></h3>
 <ul>
 <li class="">Lisätty <strong>kumoa- ja tee uudelleen -historian hallinta</strong> lohko-ohjelmille</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubien-profiilirakentaja">🔌 Hubien profiilirakentaja<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/06/06/post#-hubien-profiilirakentaja" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubien profiilirakentaja" title="Suora linkki kohtaan 🔌 Hubien profiilirakentaja" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubien-profiilirakentaja">🔌 Hubien profiilirakentaja<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post#-hubien-profiilirakentaja" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubien profiilirakentaja" title="Suora linkki kohtaan 🔌 Hubien profiilirakentaja" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Hubin lisääminen</strong> on erotettu yhteysprosessista profiilirakentajassa</li>
 <li class="">Hubeja voi nyt lisätä profiiliin ilman pakollista välitöntä yhteyttä</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rakentajan-ja-laitteiden-korjaukset">🛠 Rakentajan ja laitteiden korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/06/06/post#-rakentajan-ja-laitteiden-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Rakentajan ja laitteiden korjaukset" title="Suora linkki kohtaan 🛠 Rakentajan ja laitteiden korjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rakentajan-ja-laitteiden-korjaukset">🛠 Rakentajan ja laitteiden korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/06/06/post#-rakentajan-ja-laitteiden-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Rakentajan ja laitteiden korjaukset" title="Suora linkki kohtaan 🛠 Rakentajan ja laitteiden korjaukset" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu käännetty <strong>delete-blocks</strong>-kontekstivalikon teksti</li>
 <li class="">Korjattu <strong>WeDo 2.0 -moottoriporttien komentojen kohdistus</strong>, jolloin ohjaus palautuu käytettäessä yhtä kahdesta moottoriportista</li>
@@ -95,25 +95,25 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2026.3.2 julkaisu]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/05/02/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/05/02/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post"/>
         <updated>2026-05-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--ohjauspaneelin-ohjainten-kuvakkeet-ja-builder-korjaukset">🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/05/02/post#-mocpilot-202632--ohjauspaneelin-ohjainten-kuvakkeet-ja-builder-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--ohjauspaneelin-ohjainten-kuvakkeet-ja-builder-korjaukset">🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post#-mocpilot-202632--ohjauspaneelin-ohjainten-kuvakkeet-ja-builder-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset" title="Suora linkki kohtaan 🚀 MOCPilot 2026.3.2 — Ohjauspaneelin Ohjainten Kuvakkeet ja Builder-korjaukset" translate="no">​</a></h2>
 <p>Julkaisemme ilolla <strong>MOCPilot 2026.3.2</strong> -version, joka on saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä päivitys parantaa ohjauspaneelin ohjainten ulkoasua, korjaa useita builderin vuorovaikutusongelmia ja viimeistelee ohjaushammastangon kalibroinnin toimintaa.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202632">✨ Mitä uutta versiossa 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/05/02/post#-mit%C3%A4-uutta-versiossa-202632" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.2?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ohjauspaneelin-ohjainten-parannukset">🎛 Ohjauspaneelin Ohjainten Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/05/02/post#-ohjauspaneelin-ohjainten-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🎛 Ohjauspaneelin Ohjainten Parannukset" title="Suora linkki kohtaan 🎛 Ohjauspaneelin Ohjainten Parannukset" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202632">✨ Mitä uutta versiossa 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post#-mit%C3%A4-uutta-versiossa-202632" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.2?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ohjauspaneelin-ohjainten-parannukset">🎛 Ohjauspaneelin Ohjainten Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post#-ohjauspaneelin-ohjainten-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🎛 Ohjauspaneelin Ohjainten Parannukset" title="Suora linkki kohtaan 🎛 Ohjauspaneelin Ohjainten Parannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Lisätty <strong>uudet kuvakkeet</strong> ohjauspaneelin ohjaimille</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--ja-lohkokorjaukset">🧱 Builder- ja lohkokorjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/05/02/post#-builder--ja-lohkokorjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Builder- ja lohkokorjaukset" title="Suora linkki kohtaan 🧱 Builder- ja lohkokorjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--ja-lohkokorjaukset">🧱 Builder- ja lohkokorjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post#-builder--ja-lohkokorjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Builder- ja lohkokorjaukset" title="Suora linkki kohtaan 🧱 Builder- ja lohkokorjaukset" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu ongelma, jossa <strong>Hubin kallistus muuttui</strong> -tapahtuma saattoi laueta väärin kokonais- ja liukulukuarvojen vertailun vuoksi</li>
 <li class="">Korjattu <strong>lohkojen vedä ja kiinnitä</strong> -ongelmia, jotka vaikuttivat <strong>C-lohkoihin</strong> ja muihin lohkotyyppeihin</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-päivitys-ohjauksen-kalibrointiin">⚙️ Päivitys ohjauksen kalibrointiin<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/05/02/post#%EF%B8%8F-p%C3%A4ivitys-ohjauksen-kalibrointiin" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Päivitys ohjauksen kalibrointiin" title="Suora linkki kohtaan ⚙️ Päivitys ohjauksen kalibrointiin" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-päivitys-ohjauksen-kalibrointiin">⚙️ Päivitys ohjauksen kalibrointiin<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/05/02/post#%EF%B8%8F-p%C3%A4ivitys-ohjauksen-kalibrointiin" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Päivitys ohjauksen kalibrointiin" title="Suora linkki kohtaan ⚙️ Päivitys ohjauksen kalibrointiin" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Kalibroi ohjaustanko</strong> -lohko on uudistettu</li>
 <li class="">Lohko nollaa nyt <strong>suhteellisen sijainnin arvoon <code>0</code></strong>, kun kalibrointi valmistuu</li>
@@ -129,22 +129,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2026.3.1 -julkaisu]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/04/18/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/04/18/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post"/>
         <updated>2026-04-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--gamepad--ja-builder-päivitys">🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-mocpilot-202631--gamepad--ja-builder-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--gamepad--ja-builder-päivitys">🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-mocpilot-202631--gamepad--ja-builder-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.3.1 — Gamepad- ja builder-päivitys" translate="no">​</a></h2>
 <p>On ilo julkaista <strong>MOCPilot 2026.3.1</strong>, saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä julkaisu tuo merkittäviä parannuksia lohkorakentajaan (touch + desktop) sekä entistä paremman gamepad-tuen.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202631">✨ Mitä uutta versiossa 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-mit%C3%A4-uutta-versiossa-202631" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.1?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.1?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-parannukset">🎮 Gamepad-parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-gamepad-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🎮 Gamepad-parannukset" title="Suora linkki kohtaan 🎮 Gamepad-parannukset" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202631">✨ Mitä uutta versiossa 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-mit%C3%A4-uutta-versiossa-202631" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.1?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.3.1?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-parannukset">🎮 Gamepad-parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-gamepad-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🎮 Gamepad-parannukset" title="Suora linkki kohtaan 🎮 Gamepad-parannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Gamepad-lohkot <strong>aktivoituvat automaattisesti</strong>, kun profiili avataan (myös silloin kun gamepad on jo yhdistetty)</li>
 <li class="">Korjattu ongelma, jossa <strong>myöhemmin lisätyt gamepad-tapahtumalohkot</strong> eivät aktivoituneet ennen ohjelman uudelleenkäynnistystä</li>
 <li class="">Lisätty <strong>gamepad-arvoalueen</strong> asetus tarkempaa ohjausta varten</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--ja-editoriparannukset">🧱 Builder- ja editoriparannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-builder--ja-editoriparannukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Builder- ja editoriparannukset" title="Suora linkki kohtaan 🧱 Builder- ja editoriparannukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--ja-editoriparannukset">🧱 Builder- ja editoriparannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-builder--ja-editoriparannukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Builder- ja editoriparannukset" title="Suora linkki kohtaan 🧱 Builder- ja editoriparannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Suuri määrä parannuksia <strong>kosketuseleisiin</strong> ja yleiseen builder-käytettävyyteen (mobiili + desktop)</li>
 <li class="">Luotettavampi <strong>kumoa/historia</strong> (toistaiseksi <strong>vain dashboardissa</strong>), uudistetulla historial­la, joka seuraa muutoksia, jotta aiempaan tilaan palaaminen on johdonmukaisempaa</li>
@@ -153,24 +153,24 @@
 <li class="">Parannettu lohkojen snap-valahtelua ja lisäyksen esikatselua kontrollirakenteita rakentaessa</li>
 <li class="">Lisätty <strong>halo-korostus</strong> suoritettaville lohkoille</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubi-ja-yhteydet">🔌 Hubi ja yhteydet<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-hubi-ja-yhteydet" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubi ja yhteydet" title="Suora linkki kohtaan 🔌 Hubi ja yhteydet" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubi-ja-yhteydet">🔌 Hubi ja yhteydet<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-hubi-ja-yhteydet" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubi ja yhteydet" title="Suora linkki kohtaan 🔌 Hubi ja yhteydet" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Hubin painikevalitsin</strong> kyseisessä lohkossa on nyt <strong>aina näkyvissä</strong>, ja painiketapahtumien asetus on uudistettu</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paletti-ja-ohje">🧩 Paletti ja ohje<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-paletti-ja-ohje" class="hash-link" aria-label="Suora linkki kohtaan 🧩 Paletti ja ohje" title="Suora linkki kohtaan 🧩 Paletti ja ohje" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paletti-ja-ohje">🧩 Paletti ja ohje<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-paletti-ja-ohje" class="hash-link" aria-label="Suora linkki kohtaan 🧩 Paletti ja ohje" title="Suora linkki kohtaan 🧩 Paletti ja ohje" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu paletin ongelmia <strong>kielen/locale-vaihdon</strong> jälkeen (paletin toimintopainikkeet saattoivat muuttua epäaktiivisiksi)</li>
 <li class="">Lisätty kontekstivalikkoon <strong>“About Block”</strong> avaamaan valitun lohkon dokumentaation</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ohje-päivitykset">📚 Ohje-päivitykset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-ohje-p%C3%A4ivitykset" class="hash-link" aria-label="Suora linkki kohtaan 📚 Ohje-päivitykset" title="Suora linkki kohtaan 📚 Ohje-päivitykset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ohje-päivitykset">📚 Ohje-päivitykset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-ohje-p%C3%A4ivitykset" class="hash-link" aria-label="Suora linkki kohtaan 📚 Ohje-päivitykset" title="Suora linkki kohtaan 📚 Ohje-päivitykset" translate="no">​</a></h3>
 <ul>
 <li class="">Ohjesivuja laajennettu <strong>suorilla linkeillä lohkodokumentaatioon</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-korjaukset">🤖 Android-korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-android-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🤖 Android-korjaukset" title="Suora linkki kohtaan 🤖 Android-korjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-korjaukset">🤖 Android-korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-android-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🤖 Android-korjaukset" title="Suora linkki kohtaan 🤖 Android-korjaukset" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu ongelmia <strong>profiilien jakamisessa ja tuonnissa</strong> Androidilla</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-renderöinti-ja-suorituskyky">🛠 Renderöinti ja suorituskyky<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/04/18/post#-render%C3%B6inti-ja-suorituskyky" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Renderöinti ja suorituskyky" title="Suora linkki kohtaan 🛠 Renderöinti ja suorituskyky" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-renderöinti-ja-suorituskyky">🛠 Renderöinti ja suorituskyky<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/04/18/post#-render%C3%B6inti-ja-suorituskyky" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Renderöinti ja suorituskyky" title="Suora linkki kohtaan 🛠 Renderöinti ja suorituskyky" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu korkealla skaalalla näkyneet <strong>sumeat/epäterävät lohkot</strong> uudistamalla renderöinnin tekstuurikäsittelyä</li>
 <li class="">Optimoitu <strong>texture upscaler</strong> mobiililaitteille ja parannettu ohjelma-alueen välistystä/zoom-käyttäytymistä</li>
@@ -185,27 +185,27 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2026.2.3 -julkaisu]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/02/28/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/02/28/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post"/>
         <updated>2026-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--dashboard-parannuksia-ja-hub-korjauksia">🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/28/post#-mocpilot-202623--dashboard-parannuksia-ja-hub-korjauksia" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia" title="Suora linkki kohtaan 🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--dashboard-parannuksia-ja-hub-korjauksia">🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post#-mocpilot-202623--dashboard-parannuksia-ja-hub-korjauksia" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia" title="Suora linkki kohtaan 🚀 MOCPilot 2026.2.3 — Dashboard-parannuksia ja hub-korjauksia" translate="no">​</a></h2>
 <p>On ilo julkaista <strong>MOCPilot 2026.2.3</strong>, saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä päivitys parantaa dashboard-työskentelyä ja korjaa useita tärkeitä hubi- ja editoriongelmia.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202623">✨ Mitä uutta versiossa 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/28/post#-mit%C3%A4-uutta-versiossa-202623" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.3?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.3?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dashboard-parannukset">🧱 Dashboard-parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/28/post#-dashboard-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Dashboard-parannukset" title="Suora linkki kohtaan 🧱 Dashboard-parannukset" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202623">✨ Mitä uutta versiossa 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post#-mit%C3%A4-uutta-versiossa-202623" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.3?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.3?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dashboard-parannukset">🧱 Dashboard-parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post#-dashboard-parannukset" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Dashboard-parannukset" title="Suora linkki kohtaan 🧱 Dashboard-parannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Voit nyt <strong>kopioida (duplikoida) dashboard-ohjaimia</strong>, ja valita <strong>kopioida kaikki ominaisuudet</strong> tai <strong>vain tyypin mukaan</strong></li>
 <li class=""><strong>Paletti uudistettu</strong> nopeampaa rakentamista varten: näkyy dashboardin alla, sisältää tyhjennä-painikkeen, ei sulkeudu komponenttien lisäämisen jälkeen ja säilyttää osion valinnan johdonmukaisesti</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-päivitykset-ja-korjaukset">🔌 Hub-päivitykset ja korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/28/post#-hub-p%C3%A4ivitykset-ja-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hub-päivitykset ja korjaukset" title="Suora linkki kohtaan 🔌 Hub-päivitykset ja korjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-päivitykset-ja-korjaukset">🔌 Hub-päivitykset ja korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post#-hub-p%C3%A4ivitykset-ja-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hub-päivitykset ja korjaukset" title="Suora linkki kohtaan 🔌 Hub-päivitykset ja korjaukset" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0</strong> toteutettu uudelleen <strong>uudella protokollalla iOS<!-- -->:ll<!-- -->ä</strong> (Android käyttää edelleen aiempaa protokollaa)</li>
 <li class="">Korjattu ongelma, jossa <strong>”hub on yhdistetty” -boolean-lohko</strong> ei näkynyt, kun hubi oli advertising-tilassa</li>
 <li class="">Korjattu bugi, jossa <strong>valo-lohko</strong> saattoi lakata toimimasta moottorin käynnistys/pysäytyskomennon käsittelyn vuoksi</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-korjaukset">🛠 Korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/28/post#-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Korjaukset" title="Suora linkki kohtaan 🛠 Korjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-korjaukset">🛠 Korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/28/post#-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Korjaukset" title="Suora linkki kohtaan 🛠 Korjaukset" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu sähköpostin validointi syötekomponentissa, joka saattoi hyväksyä virheellisiä osoitteita kuten <code>mail@domain.</code></li>
 </ul>
@@ -219,31 +219,31 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2026.2.2]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/02/18/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/02/18/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post"/>
         <updated>2026-02-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--laajennettu-hubi--ja-ohjauspäivitys">🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-mocpilot-202622--laajennettu-hubi--ja-ohjausp%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--laajennettu-hubi--ja-ohjauspäivitys">🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-mocpilot-202622--laajennettu-hubi--ja-ohjausp%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.2.2 — Laajennettu hubi- ja ohjauspäivitys" translate="no">​</a></h2>
 <p>Meillä on ilo ilmoittaa <strong>MOCPilot 2026.2.2</strong> -julkaisusta, joka on nyt saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä versio laajentaa merkittävästi laitteistoyhteensopivuutta ja tuo mukanaan tehokkaita uusia ohjelmointilohkoja edistyneeseen hubien vuorovaikutukseen.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202622">✨ Mitä uutta versiossa 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-mit%C3%A4-uutta-versiossa-202622" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.2?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uusi-hubituki">🆕 Uusi hubituki<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-uusi-hubituki" class="hash-link" aria-label="Suora linkki kohtaan 🆕 Uusi hubituki" title="Suora linkki kohtaan 🆕 Uusi hubituki" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202622">✨ Mitä uutta versiossa 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-mit%C3%A4-uutta-versiossa-202622" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.2?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.2.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uusi-hubituki">🆕 Uusi hubituki<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-uusi-hubituki" class="hash-link" aria-label="Suora linkki kohtaan 🆕 Uusi hubituki" title="Suora linkki kohtaan 🆕 Uusi hubituki" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0 -hubit</strong> ovat nyt täysin tuettuja</li>
 <li class=""><strong>Mould King 6.0 -hubit</strong> ovat nyt täysin tuettuja</li>
 <li class=""><strong>LEGO WeDo 2.0 -hubi</strong> on nyt täysin tuettu</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-sensorituki">🔌 Sensorituki<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-sensorituki" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Sensorituki" title="Suora linkki kohtaan 🔌 Sensorituki" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-sensorituki">🔌 Sensorituki<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-sensorituki" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Sensorituki" title="Suora linkki kohtaan 🔌 Sensorituki" translate="no">​</a></h3>
 <ul>
 <li class="">WeDo 2.0 -kallistusanturi</li>
 <li class="">WeDo 2.0 -liikeanturi</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uudet-ohjelmointilohkot">🧱 Uudet ohjelmointilohkot<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-uudet-ohjelmointilohkot" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Uudet ohjelmointilohkot" title="Suora linkki kohtaan 🧱 Uudet ohjelmointilohkot" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uudet-ohjelmointilohkot">🧱 Uudet ohjelmointilohkot<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-uudet-ohjelmointilohkot" class="hash-link" aria-label="Suora linkki kohtaan 🧱 Uudet ohjelmointilohkot" title="Suora linkki kohtaan 🧱 Uudet ohjelmointilohkot" translate="no">​</a></h3>
 <p>Tämä julkaisu tuo mukanaan uusia tapahtuma- ja ohjauslohkoja, jotka laajentavat reaaliaikaista hubien vuorovaikutusta.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubin-sensoritapahtumalohkot">🔄 Hubin sensoritapahtumalohkot<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-hubin-sensoritapahtumalohkot" class="hash-link" aria-label="Suora linkki kohtaan 🔄 Hubin sensoritapahtumalohkot" title="Suora linkki kohtaan 🔄 Hubin sensoritapahtumalohkot" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubin-sensoritapahtumalohkot">🔄 Hubin sensoritapahtumalohkot<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-hubin-sensoritapahtumalohkot" class="hash-link" aria-label="Suora linkki kohtaan 🔄 Hubin sensoritapahtumalohkot" title="Suora linkki kohtaan 🔄 Hubin sensoritapahtumalohkot" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Hubin kiihtyvyysanturidata muuttui</strong></li>
 <li class=""><strong>Hubin kallistus muuttui</strong></li>
@@ -251,7 +251,7 @@
 <li class=""><strong>Kaikkien hubien akun varaustaso muuttui</strong></li>
 </ul>
 <p>Nämä lohkot mahdollistavat ohjelman välittömän reagoinnin liikkeeseen, pyörimiseen ja virran muutoksiin.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubin-yhteydenhallintalohkot">🔌 Hubin yhteydenhallintalohkot<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#-hubin-yhteydenhallintalohkot" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubin yhteydenhallintalohkot" title="Suora linkki kohtaan 🔌 Hubin yhteydenhallintalohkot" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubin-yhteydenhallintalohkot">🔌 Hubin yhteydenhallintalohkot<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#-hubin-yhteydenhallintalohkot" class="hash-link" aria-label="Suora linkki kohtaan 🔌 Hubin yhteydenhallintalohkot" title="Suora linkki kohtaan 🔌 Hubin yhteydenhallintalohkot" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Yhdistä hubi</strong></li>
 <li class=""><strong>Katkaise hubi</strong></li>
@@ -259,7 +259,7 @@
 <p>Voit nyt hallita hubien yhteyksiä suoraan ohjelman suorituksen aikana.<br>
 <!-- -->Tämä mahdollistaa hubin uudelleenyhdistämisen ilman ohjelman uudelleenkäynnistystä yhteyden katketessa, mikä tekee projekteista kestävämpiä ja joustavampia.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-parannukset">⚙️ Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/02/18/post#%EF%B8%8F-parannukset" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Parannukset" title="Suora linkki kohtaan ⚙️ Parannukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-parannukset">⚙️ Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/02/18/post#%EF%B8%8F-parannukset" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Parannukset" title="Suora linkki kohtaan ⚙️ Parannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Parannettu yleinen järjestelmän vakaus</li>
 <li class="">Suorituskykyoptimointeja sujuvampaan hubivuorovaikutukseen</li>
@@ -275,22 +275,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2026.1.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/01/10/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2026/01/10/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post"/>
         <updated>2026-01-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--ominaisuuksia-ja-vakautta-parantava-päivitys">🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/01/10/post#-mocpilot-202610--ominaisuuksia-ja-vakautta-parantava-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--ominaisuuksia-ja-vakautta-parantava-päivitys">🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post#-mocpilot-202610--ominaisuuksia-ja-vakautta-parantava-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2026.1.0 — Ominaisuuksia ja vakautta parantava päivitys" translate="no">​</a></h2>
 <p>Olemme iloisia voidessamme julkaista <strong>MOCPilot 2026.1.0</strong> -version, joka on nyt saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä julkaisu tuo <strong>vierastilan</strong>, parantaa käytettävyyttä mobiililaitteilla sekä sisältää tärkeitä vakaus- ja suorituskykykorjauksia kaikille alustoille.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202610">✨ Mitä uutta versiossa 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/01/10/post#-mit%C3%A4-uutta-versiossa-202610" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.1.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.1.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uutta">🆕 Uutta<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/01/10/post#-uutta" class="hash-link" aria-label="Suora linkki kohtaan 🆕 Uutta" title="Suora linkki kohtaan 🆕 Uutta" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-uutta-versiossa-202610">✨ Mitä uutta versiossa 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post#-mit%C3%A4-uutta-versiossa-202610" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.1.0?" title="Suora linkki kohtaan ✨ Mitä uutta versiossa 2026.1.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uutta">🆕 Uutta<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post#-uutta" class="hash-link" aria-label="Suora linkki kohtaan 🆕 Uutta" title="Suora linkki kohtaan 🆕 Uutta" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Vierastila</strong> — käytä sovellusta ilman tiliä, ja luo tili myöhemmin halutessasi</li>
 <li class="">Kielivalinta lisätty kirjautumis-/todennusnäyttöön</li>
 <li class="">Sovellus estää nyt sellaisten hubien käytön, joiden laiteohjelmisto ei ole tuettu, ja näyttää selkeän varoituksen</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-parannukset">⚙️ Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/01/10/post#%EF%B8%8F-parannukset" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Parannukset" title="Suora linkki kohtaan ⚙️ Parannukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-parannukset">⚙️ Parannukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post#%EF%B8%8F-parannukset" class="hash-link" aria-label="Suora linkki kohtaan ⚙️ Parannukset" title="Suora linkki kohtaan ⚙️ Parannukset" translate="no">​</a></h3>
 <ul>
 <li class="">Parannettu lohkojen raahausta mobiililaitteilla (parempi kosketuskäsittely, vähemmän vahinkokosketuksia)</li>
 <li class="">Lohkopaletti piilotetaan nyt automaattisesti raahauksen aikana mobiilissa</li>
@@ -298,7 +298,7 @@
 <li class="">Parannettu tekstinsyötön käsittely kaikilla alustoilla</li>
 <li class="">Sulavampi hubin ohjaus pienemmällä viiveellä</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-korjaukset">🛠 Korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2026/01/10/post#-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Korjaukset" title="Suora linkki kohtaan 🛠 Korjaukset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-korjaukset">🛠 Korjaukset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2026/01/10/post#-korjaukset" class="hash-link" aria-label="Suora linkki kohtaan 🛠 Korjaukset" title="Suora linkki kohtaan 🛠 Korjaukset" translate="no">​</a></h3>
 <ul>
 <li class="">Korjattu useita raahaus- ja pudotusongelmia, mukaan lukien jumiutuneet lohkot ja kadonnut hiiri-/kosketussyöte</li>
 <li class="">Korjattu kaatumisia ohjelmia pysäytettäessä, kun käytössä on omia (“My”) lohkoja</li>
@@ -318,15 +318,15 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.2.0 - 2025.2.4]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/12/28/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/12/28/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/12/28/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/12/28/post"/>
         <updated>2025-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--vakautta-ja-käyttökokemusta-parantava-päivitys">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/12/28/post#-mocpilot-202520---202524--vakautta-ja-k%C3%A4ytt%C3%B6kokemusta-parantava-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--vakautta-ja-käyttökokemusta-parantava-päivitys">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/12/28/post#-mocpilot-202520---202524--vakautta-ja-k%C3%A4ytt%C3%B6kokemusta-parantava-p%C3%A4ivitys" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys" title="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Vakautta ja käyttökokemusta parantava päivitys" translate="no">​</a></h2>
 <p>Olemme iloisia voidessamme julkaista <strong>MOCPilot 2025.2.0 - 2025.2.4</strong> -version, joka on nyt saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>.</p>
 <p>Tämä julkaisu keskittyy <strong>sujuvampaan toimintaan</strong>, <strong>parempaan luotettavuuteen</strong> ja <strong>käyttöliittymän parannuksiin</strong> kaikilla alustoilla.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-parannuksia-versioissa-202520---202524-on-tehty">✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/12/28/post#-mit%C3%A4-parannuksia-versioissa-202520---202524-on-tehty" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?" title="Suora linkki kohtaan ✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mitä-parannuksia-versioissa-202520---202524-on-tehty">✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/12/28/post#-mit%C3%A4-parannuksia-versioissa-202520---202524-on-tehty" class="hash-link" aria-label="Suora linkki kohtaan ✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?" title="Suora linkki kohtaan ✨ Mitä parannuksia versioissa 2025.2.0 - 2025.2.4 on tehty?" translate="no">​</a></h2>
 <ul>
 <li class="">Sujuvampi ja vakaampi toiminta parannetun ajastuslogiikan ansiosta</li>
 <li class="">Parannettu profiilien synkronointi ja päivitysten luotettavuus</li>
@@ -348,16 +348,16 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.2.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/11/15/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/11/15/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/11/15/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/11/15/post"/>
         <updated>2025-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--virallinen-monialustajulkaisu">🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/11/15/post#-mocpilot-202520--virallinen-monialustajulkaisu" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--virallinen-monialustajulkaisu">🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/11/15/post#-mocpilot-202520--virallinen-monialustajulkaisu" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.2.0 — virallinen monialustajulkaisu!" translate="no">​</a></h2>
 <p>Olemme iloisia voidessamme julkaista <strong>MOCPilot 2025.2.0</strong> -version, joka on nyt saatavilla <strong>Androidille</strong>, <strong>iOS<!-- -->:lle</strong> ja <strong>macOS<!-- -->:lle</strong>!</p>
 <p>Aikaisemmin nimellä <strong>Controlz</strong> tunnettu sovellus on nyt nimeltään <strong>MOCPilot</strong>.<br>
 <!-- -->Uusi nimi kuvaa paremmin sovelluksen tarkoitusta — toimia yhtenäisenä “ohjaamona” LEGO®-luomustesi hallintaan ja ohjelmointiin.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uutta-versiossa-202520">✨ Uutta versiossa 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/11/15/post#-uutta-versiossa-202520" class="hash-link" aria-label="Suora linkki kohtaan ✨ Uutta versiossa 2025.2.0" title="Suora linkki kohtaan ✨ Uutta versiossa 2025.2.0" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uutta-versiossa-202520">✨ Uutta versiossa 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/11/15/post#-uutta-versiossa-202520" class="hash-link" aria-label="Suora linkki kohtaan ✨ Uutta versiossa 2025.2.0" title="Suora linkki kohtaan ✨ Uutta versiossa 2025.2.0" translate="no">​</a></h2>
 <ul>
 <li class="">Yhtenäinen julkaisu Androidille, iOS<!-- -->:lle<!-- --> ja macOS<!-- -->:lle</li>
 <li class="">Parannettu vakaus, suorituskyky ja käyttöliittymän reagointi</li>
@@ -374,16 +374,16 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.1.9]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/06/3/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/06/3/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/06/3/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/06/3/post"/>
         <updated>2025-06-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-on-nyt-saatavilla-mac-app-storessa">🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/06/3/post#-mocpilot-202519-on-nyt-saatavilla-mac-app-storessa" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-on-nyt-saatavilla-mac-app-storessa">🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/06/3/post#-mocpilot-202519-on-nyt-saatavilla-mac-app-storessa" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.1.9 on nyt saatavilla Mac App Storessa!" translate="no">​</a></h2>
 <p>Olemme innoissamme voidessamme ilmoittaa MOCPilot 2025.1.9 -version julkaisusta natiivina macOS-sovelluksena!</p>
 <hr>
 <p>Nyt voit nauttia täysistä työpöytäominaisuuksista ja saumattomasta macOS-integraatiosta.<br>
 <!-- -->Lataa se jo tänään Mac App Storesta ja ota LEGO®-luomuksesi hallintaan kuin koskaan ennen!</p>
-<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app/fi/img/store_badges/mac/mac_FI.svg" alt="Download on the Mac App Store" height="60"></a>]]></content>
+<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/img/store_badges/mac/mac_FI.svg" alt="Download on the Mac App Store" height="60"></a>]]></content>
         <author>
             <name>Maxim</name>
             <uri>https://github.com/llOzzeell</uri>
@@ -393,14 +393,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.1.5]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/05/17/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/05/17/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/05/17/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/05/17/post"/>
         <updated>2025-05-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Kuvaus]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/05/17/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/05/17/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
 <p>Tämä päivitys parantaa lohkojen muokkauskokemusta, lisää suorituskykyä ja varmistaa sovelluksen toimivuuden uusilla Android-versioilla.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/05/17/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/05/17/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Korjattiin bugi hubien skannauksessa Android 12+<!-- -->:lla</strong> pyytämällä tarkka sijaintilupa.</li>
 <li class=""><strong>Lisättiin mahdollisuus piilottaa/näyttää lohkovalikko</strong> napsauttamalla valittua lohkokokoelmaa.</li>
@@ -417,14 +417,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.1.4]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/05/10/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/05/10/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/05/10/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/05/10/post"/>
         <updated>2025-05-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Kuvaus]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/05/10/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/05/10/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
 <p>Tämä päivitys parantaa tablettien tukea, lisää hyödyllisiä testisivuja ja korjaa useita yhteensopivuus- ja suorituskykyongelmia.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/05/10/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/05/10/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Lisättiin tablettituki</strong>, joka hyödyntää paremmin suurempia näyttöjä.</li>
 <li class=""><strong>Korjattiin bugi, jossa "hub-painike painettu" -lohko</strong> näkyi myös hubeilla, jotka eivät tue tätä toimintoa. Korjattiin myös virheelliset <strong>värisensorilohkot</strong> ei-tuetuille hubeille (esim. BuWizz).</li>
@@ -445,14 +445,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.1.2 – 2025.1.3]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/19/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/19/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/19/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/19/post"/>
         <updated>2025-04-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Kuvaus]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/04/19/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/04/19/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
 <p>Tämä päivitys tuo mukanaan uusia joystickin mukautusvaihtoehtoja, käyttöliittymäparannuksia ja tärkeitä vakautuskorjauksia.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/04/19/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/04/19/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Korjattiin bugi lohkopaletin kokoelma-valitsimessa</strong>: kokoelman valitseminen, toiseen vierittäminen ja paluu ei vaikuttanut mihinkään.</li>
 <li class=""><strong>Korjattiin kaatuminen raskaita profiileja ladattaessa</strong>, joissa oli suuri määrä lohkoja.</li>
@@ -469,14 +469,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Julkaisu MOCPilot 2025.1.1]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/14/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/14/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/14/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/14/post"/>
         <updated>2025-04-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Kuvaus]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/04/14/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kuvaus">Kuvaus<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/04/14/post#kuvaus" class="hash-link" aria-label="Suora linkki kohtaan Kuvaus" title="Suora linkki kohtaan Kuvaus" translate="no">​</a></h3>
 <p>Tässä päivityksessä on useita tärkeitä bugikorjauksia, jotka parantavat suorituskykyä, vähentävät akun kulutusta ja parantavat lohkojen toimintaa ohjelmointiympäristössä.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/04/14/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="muutokset">Muutokset<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/04/14/post#muutokset" class="hash-link" aria-label="Suora linkki kohtaan Muutokset" title="Suora linkki kohtaan Muutokset" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Korjattiin bugi, joka aiheutti korkean suorittimen käytön, akun kulutuksen ja heikon suorituskyvyn.</strong></li>
 <li class=""><strong>Korjattiin bugi, jossa peliohjaimen lohkoja</strong> (esim. "onko painiketta painettu", "onko D-PAD-painiketta painettu") <strong>ei voitu liittää muihin lohkoihin.</strong></li>
@@ -492,11 +492,11 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2025.1.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/04/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/fi/blog/2025/04/04/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/04/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/fi/blog/2025/04/04/post"/>
         <updated>2025-04-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-suljettu-beta-on-alkanut">🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!<a href="https://onemanstudio-il.github.io/mocpilot-app/fi/blog/2025/04/04/post#-mocpilot-202510-suljettu-beta-on-alkanut" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-suljettu-beta-on-alkanut">🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/fi/blog/2025/04/04/post#-mocpilot-202510-suljettu-beta-on-alkanut" class="hash-link" aria-label="Suora linkki kohtaan 🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!" title="Suora linkki kohtaan 🚀 MOCPilot 2025.1.0 Suljettu Beta on Alkanut!" translate="no">​</a></h2>
 <p>Olemme innoissamme ilmoittaessamme, että MOCPilot 2025<!-- -->:n<!-- --> suljettu beta-testaus on nyt käynnissä! Valitut käyttäjät voivat nyt tutustua uusiin ominaisuuksiin, antaa palautetta ja auttaa muovaamaan MOCPilotin tulevaisuutta.</p>
 <p>Jos olet saanut kutsun, tarkista sähköpostistasi käyttöohjeet.<br>
 <!-- -->Kiitos, että olet mukana tässä tärkeässä vaiheessa!</p>]]></content>

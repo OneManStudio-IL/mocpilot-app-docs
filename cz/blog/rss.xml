@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>MOCPilot Blog</title>
-        <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog</link>
+        <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog</link>
         <description>MOCPilot Blog</description>
         <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,30 +10,30 @@
         <language>cz</language>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.5.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/08/23/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/08/23/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post</guid>
             <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--aktualizace-firmwaru-podpora-sbrick-a-vylepšení-konstruktoru">🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-mocpilot-202650--aktualizace-firmwaru-podpora-sbrick-a-vylep%C5%A1en%C3%AD-konstruktoru" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru" title="Přímý odkaz na 🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--aktualizace-firmwaru-podpora-sbrick-a-vylepšení-konstruktoru">🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-mocpilot-202650--aktualizace-firmwaru-podpora-sbrick-a-vylep%C5%A1en%C3%AD-konstruktoru" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru" title="Přímý odkaz na 🚀 MOCPilot 2026.5.0 — Aktualizace firmwaru, podpora SBrick a vylepšení konstruktoru" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.5.0</strong>, dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato aktualizace přidává podporu aktualizace a obnovy firmwaru pro více LEGO Powered Up hubů, zavádí podporu SBrick a SBrick Plus, vylepšuje práci s konstruktorem bloků a ovládacím panelem a obsahuje řadu úprav rozhraní, oprav pádů a aktualizací překladů.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202650">✨ Co je nového ve verzi 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-co-je-nov%C3%A9ho-ve-verzi-202650" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.5.0?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.5.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-a-obnova-firmwaru-hubů">🔄 Aktualizace a obnova firmwaru hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-aktualizace-a-obnova-firmwaru-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔄 Aktualizace a obnova firmwaru hubů" title="Přímý odkaz na 🔄 Aktualizace a obnova firmwaru hubů" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202650">✨ Co je nového ve verzi 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-co-je-nov%C3%A9ho-ve-verzi-202650" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.5.0?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.5.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-a-obnova-firmwaru-hubů">🔄 Aktualizace a obnova firmwaru hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-aktualizace-a-obnova-firmwaru-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔄 Aktualizace a obnova firmwaru hubů" title="Přímý odkaz na 🔄 Aktualizace a obnova firmwaru hubů" translate="no">​</a></h3>
 <ul>
 <li class="">Přidána podpora aktualizace firmwaru pro <strong>Technic Hub</strong></li>
 <li class="">Přidána podpora aktualizace firmwaru pro <strong>Technic Move Hub</strong></li>
 <li class="">Rozšířena podpora aktualizace firmwaru pro další podporované huby</li>
 <li class="">Přidána detekce hubů připojených v <strong>režimu obnovy</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-podpora-a-konfigurace-hubů">🔌 Podpora a konfigurace hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-podpora-a-konfigurace-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Podpora a konfigurace hubů" title="Přímý odkaz na 🔌 Podpora a konfigurace hubů" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-podpora-a-konfigurace-hubů">🔌 Podpora a konfigurace hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-podpora-a-konfigurace-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Podpora a konfigurace hubů" title="Přímý odkaz na 🔌 Podpora a konfigurace hubů" translate="no">​</a></h3>
 <ul>
 <li class="">Přidána podpora pro <strong>SBrick</strong> a <strong>SBrick Plus</strong></li>
 <li class="">Přidána změna konfigurace Technic Move Hub: <strong>Porsche GT4 e-Performance</strong>, <strong>Batmobile™‎ Tumbler</strong> a <strong>Lamborghini Revuelto</strong></li>
 <li class="">Přepracovány stránky připojení hubů podle typu připojení</li>
 <li class="">Přepracována stránka monitorování hubu</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-konstruktoru-bloků">🧱 Aktualizace konstruktoru bloků<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-aktualizace-konstruktoru-blok%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Aktualizace konstruktoru bloků" title="Přímý odkaz na 🧱 Aktualizace konstruktoru bloků" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-konstruktoru-bloků">🧱 Aktualizace konstruktoru bloků<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-aktualizace-konstruktoru-blok%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Aktualizace konstruktoru bloků" title="Přímý odkaz na 🧱 Aktualizace konstruktoru bloků" translate="no">​</a></h3>
 <ul>
 <li class="">Přidáno filtrování úrovní bloků: <strong>Beginner</strong>, <strong>Advanced</strong> a <strong>Guru</strong></li>
 <li class="">Úrovně bloků lze nastavit při vytváření, úpravě nebo spuštění programu bloků profilu</li>
@@ -41,14 +41,14 @@
 <li class="">Přidán blok <strong>výkonový pulz</strong> pro Technic Move Hub</li>
 <li class="">Opraveny změny měřítka kolečkem myši v paletě bloků</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-a-ovládací-panel">🎮 Gamepad a ovládací panel<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-gamepad-a-ovl%C3%A1dac%C3%AD-panel" class="hash-link" aria-label="Přímý odkaz na 🎮 Gamepad a ovládací panel" title="Přímý odkaz na 🎮 Gamepad a ovládací panel" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-a-ovládací-panel">🎮 Gamepad a ovládací panel<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-gamepad-a-ovl%C3%A1dac%C3%AD-panel" class="hash-link" aria-label="Přímý odkaz na 🎮 Gamepad a ovládací panel" title="Přímý odkaz na 🎮 Gamepad a ovládací panel" translate="no">​</a></h3>
 <ul>
 <li class="">Přepracována stránka gamepadu a stránka testeru gamepadu</li>
 <li class="">Opraveny přechody stavů D-padu gamepadu</li>
 <li class="">Přidána volba kontextového menu pro přímou změnu tématu ovládacího prvku panelu</li>
 <li class="">Vylepšeny hlavičky profilů ovládacího panelu, menu řazení, přechody karet a rozestupy formuláře vytvoření</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rozhraní-profily-a-stabilita">🎨 Rozhraní, profily a stabilita<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/08/23/post#-rozhran%C3%AD-profily-a-stabilita" class="hash-link" aria-label="Přímý odkaz na 🎨 Rozhraní, profily a stabilita" title="Přímý odkaz na 🎨 Rozhraní, profily a stabilita" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rozhraní-profily-a-stabilita">🎨 Rozhraní, profily a stabilita<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/08/23/post#-rozhran%C3%AD-profily-a-stabilita" class="hash-link" aria-label="Přímý odkaz na 🎨 Rozhraní, profily a stabilita" title="Přímý odkaz na 🎨 Rozhraní, profily a stabilita" translate="no">​</a></h3>
 <ul>
 <li class="">Odstraněna žlutá paleta z předpřipravených profilů, takže nyní vypadají jako běžná stránka profilů</li>
 <li class="">Vylepšen celkový vzhled a drobné detaily rozhraní</li>
@@ -58,25 +58,25 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.4.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/06/06/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/06/06/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post</guid>
             <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--zpětznovu-profily-hubů-a-opravy-konstruktoru">🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/06/06/post#-mocpilot-202640--zp%C4%9Btznovu-profily-hub%C5%AF-a-opravy-konstruktoru" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru" title="Přímý odkaz na 🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--zpětznovu-profily-hubů-a-opravy-konstruktoru">🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post#-mocpilot-202640--zp%C4%9Btznovu-profily-hub%C5%AF-a-opravy-konstruktoru" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru" title="Přímý odkaz na 🚀 MOCPilot 2026.4.0 — Zpět/Znovu, profily hubů a opravy konstruktoru" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.4.0</strong>, dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato aktualizace přidává historii zpět a znovu pro blokové programy, zlepšuje nastavení hubů v konstruktoru profilů a opravuje několik problémů v konstruktoru a ovládání zařízení.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202640">✨ Co je nového v 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/06/06/post#-co-je-nov%C3%A9ho-v-202640" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.4.0?" title="Přímý odkaz na ✨ Co je nového v 2026.4.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-historie-blokových-programů">🧱 Historie blokových programů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/06/06/post#-historie-blokov%C3%BDch-program%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Historie blokových programů" title="Přímý odkaz na 🧱 Historie blokových programů" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202640">✨ Co je nového v 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post#-co-je-nov%C3%A9ho-v-202640" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.4.0?" title="Přímý odkaz na ✨ Co je nového v 2026.4.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-historie-blokových-programů">🧱 Historie blokových programů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post#-historie-blokov%C3%BDch-program%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Historie blokových programů" title="Přímý odkaz na 🧱 Historie blokových programů" translate="no">​</a></h3>
 <ul>
 <li class="">Přidáno <strong>ovládání historie zpět a znovu</strong> pro blokové programy</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-konstruktor-profilů-hubů">🔌 Konstruktor profilů hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/06/06/post#-konstruktor-profil%C5%AF-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Konstruktor profilů hubů" title="Přímý odkaz na 🔌 Konstruktor profilů hubů" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-konstruktor-profilů-hubů">🔌 Konstruktor profilů hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post#-konstruktor-profil%C5%AF-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Konstruktor profilů hubů" title="Přímý odkaz na 🔌 Konstruktor profilů hubů" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Přidání hubu</strong> bylo odděleno od procesu připojení v konstruktoru profilů</li>
 <li class="">Huby lze nyní přidat do profilu bez nutnosti okamžitého připojení</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy-konstruktoru-a-zařízení">🛠 Opravy konstruktoru a zařízení<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/06/06/post#-opravy-konstruktoru-a-za%C5%99%C3%ADzen%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy konstruktoru a zařízení" title="Přímý odkaz na 🛠 Opravy konstruktoru a zařízení" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy-konstruktoru-a-zařízení">🛠 Opravy konstruktoru a zařízení<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/06/06/post#-opravy-konstruktoru-a-za%C5%99%C3%ADzen%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy konstruktoru a zařízení" title="Přímý odkaz na 🛠 Opravy konstruktoru a zařízení" translate="no">​</a></h3>
 <ul>
 <li class="">Opravena přeložená položka kontextového menu <strong>delete-blocks</strong></li>
 <li class="">Opraveno <strong>mapování příkazů portů motoru WeDo 2.0</strong>, které obnovuje ovládání při použití jednoho ze dvou portů motoru</li>
@@ -88,25 +88,25 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.3.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/05/02/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/05/02/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post</guid>
             <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--ikony-ovladačů-dashboardu-a-opravy-builderu">🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/05/02/post#-mocpilot-202632--ikony-ovlada%C4%8D%C5%AF-dashboardu-a-opravy-builderu" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu" title="Přímý odkaz na 🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--ikony-ovladačů-dashboardu-a-opravy-builderu">🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post#-mocpilot-202632--ikony-ovlada%C4%8D%C5%AF-dashboardu-a-opravy-builderu" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu" title="Přímý odkaz na 🚀 MOCPilot 2026.3.2 — Ikony Ovladačů Dashboardu a Opravy Builderu" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.3.2</strong>, dostupného pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato aktualizace vylepšuje vzhled ovladačů dashboardu, opravuje několik problémů s interakcí v builderu a zpřesňuje chování kalibrace hřebenu řízení.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202632">✨ Co je nového v 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/05/02/post#-co-je-nov%C3%A9ho-v-202632" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.3.2?" title="Přímý odkaz na ✨ Co je nového v 2026.3.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-ovladačů-dashboardu">🎛 Vylepšení Ovladačů Dashboardu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/05/02/post#-vylep%C5%A1en%C3%AD-ovlada%C4%8D%C5%AF-dashboardu" class="hash-link" aria-label="Přímý odkaz na 🎛 Vylepšení Ovladačů Dashboardu" title="Přímý odkaz na 🎛 Vylepšení Ovladačů Dashboardu" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202632">✨ Co je nového v 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post#-co-je-nov%C3%A9ho-v-202632" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.3.2?" title="Přímý odkaz na ✨ Co je nového v 2026.3.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-ovladačů-dashboardu">🎛 Vylepšení Ovladačů Dashboardu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post#-vylep%C5%A1en%C3%AD-ovlada%C4%8D%C5%AF-dashboardu" class="hash-link" aria-label="Přímý odkaz na 🎛 Vylepšení Ovladačů Dashboardu" title="Přímý odkaz na 🎛 Vylepšení Ovladačů Dashboardu" translate="no">​</a></h3>
 <ul>
 <li class="">Přidány <strong>nové ikony</strong> pro ovladače dashboardu</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy-builderu-a-bloků">🧱 Opravy Builderu a Bloků<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/05/02/post#-opravy-builderu-a-blok%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Opravy Builderu a Bloků" title="Přímý odkaz na 🧱 Opravy Builderu a Bloků" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy-builderu-a-bloků">🧱 Opravy Builderu a Bloků<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post#-opravy-builderu-a-blok%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🧱 Opravy Builderu a Bloků" title="Přímý odkaz na 🧱 Opravy Builderu a Bloků" translate="no">​</a></h3>
 <ul>
 <li class="">Opraven problém, kdy se událost <strong>Změna náklonu hubu</strong> mohla spouštět nesprávně kvůli porovnávání celočíselných a desetinných hodnot</li>
 <li class="">Opraveny problémy s <strong>připojováním bloků při přetahování</strong>, které ovlivňovaly <strong>C bloky</strong> a další typy bloků</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-aktualizace-kalibrace-řízení">⚙️ Aktualizace Kalibrace Řízení<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/05/02/post#%EF%B8%8F-aktualizace-kalibrace-%C5%99%C3%ADzen%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Aktualizace Kalibrace Řízení" title="Přímý odkaz na ⚙️ Aktualizace Kalibrace Řízení" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-aktualizace-kalibrace-řízení">⚙️ Aktualizace Kalibrace Řízení<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/05/02/post#%EF%B8%8F-aktualizace-kalibrace-%C5%99%C3%ADzen%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Aktualizace Kalibrace Řízení" title="Přímý odkaz na ⚙️ Aktualizace Kalibrace Řízení" translate="no">​</a></h3>
 <ul>
 <li class="">Blok <strong>Kalibrovat hřeben řízení</strong> byl přepracován</li>
 <li class="">Po dokončení kalibrace nyní blok resetuje <strong>relativní pozici na <code>0</code></strong></li>
@@ -118,22 +118,22 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.3.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/04/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/04/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post</guid>
             <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--aktualizace-gamepadu-a-builderu">🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-mocpilot-202631--aktualizace-gamepadu-a-builderu" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu" title="Přímý odkaz na 🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--aktualizace-gamepadu-a-builderu">🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-mocpilot-202631--aktualizace-gamepadu-a-builderu" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu" title="Přímý odkaz na 🚀 MOCPilot 2026.3.1 — Aktualizace gamepadu a builderu" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.3.1</strong>, dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato verze přináší velká vylepšení block builderu (touch + desktop) a silnější podporu gamepadu.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202631">✨ Co je nového v 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-co-je-nov%C3%A9ho-v-202631" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.3.1?" title="Přímý odkaz na ✨ Co je nového v 2026.3.1?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-gamepadu">🎮 Vylepšení gamepadu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-vylep%C5%A1en%C3%AD-gamepadu" class="hash-link" aria-label="Přímý odkaz na 🎮 Vylepšení gamepadu" title="Přímý odkaz na 🎮 Vylepšení gamepadu" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202631">✨ Co je nového v 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-co-je-nov%C3%A9ho-v-202631" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.3.1?" title="Přímý odkaz na ✨ Co je nového v 2026.3.1?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-gamepadu">🎮 Vylepšení gamepadu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-vylep%C5%A1en%C3%AD-gamepadu" class="hash-link" aria-label="Přímý odkaz na 🎮 Vylepšení gamepadu" title="Přímý odkaz na 🎮 Vylepšení gamepadu" translate="no">​</a></h3>
 <ul>
 <li class="">Gamepad bloky se nyní <strong>automaticky aktivují</strong> při otevření profilu (i když je gamepad už připojený)</li>
 <li class="">Opraven problém, kdy se <strong>později přidané event bloky gamepadu</strong> neaktivovaly až do restartu programu</li>
 <li class="">Přidáno nastavení <strong>rozsahu hodnot gamepadu</strong> pro jemnější ovládání</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-builderu-a-editoru">🧱 Vylepšení builderu a editoru<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-vylep%C5%A1en%C3%AD-builderu-a-editoru" class="hash-link" aria-label="Přímý odkaz na 🧱 Vylepšení builderu a editoru" title="Přímý odkaz na 🧱 Vylepšení builderu a editoru" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-builderu-a-editoru">🧱 Vylepšení builderu a editoru<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-vylep%C5%A1en%C3%AD-builderu-a-editoru" class="hash-link" aria-label="Přímý odkaz na 🧱 Vylepšení builderu a editoru" title="Přímý odkaz na 🧱 Vylepšení builderu a editoru" translate="no">​</a></h3>
 <ul>
 <li class="">Velký balík vylepšení <strong>dotykových gest</strong> a celkové interakce (mobil + desktop)</li>
 <li class="">Spolehlivější <strong>undo/historie</strong> (zatím <strong>jen dashboard</strong>), s přepracovanou historií, která sleduje změny, aby bylo možné konzistentněji vracet předchozí stav</li>
@@ -142,24 +142,24 @@
 <li class="">Vylepšené přichytávání bloků a náhledy vkládání při stavbě řídicích struktur</li>
 <li class="">Přidáno <strong>halo</strong> pro běžící bloky</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-a-konektivita">🔌 Hub a konektivita<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-hub-a-konektivita" class="hash-link" aria-label="Přímý odkaz na 🔌 Hub a konektivita" title="Přímý odkaz na 🔌 Hub a konektivita" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-a-konektivita">🔌 Hub a konektivita<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-hub-a-konektivita" class="hash-link" aria-label="Přímý odkaz na 🔌 Hub a konektivita" title="Přímý odkaz na 🔌 Hub a konektivita" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Výběr tlačítek hubu</strong> v příslušném bloku je nyní <strong>vždy viditelný</strong>, s přepracovaným nastavením událostí tlačítek</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paleta-a-nápověda">🧩 Paleta a nápověda<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-paleta-a-n%C3%A1pov%C4%9Bda" class="hash-link" aria-label="Přímý odkaz na 🧩 Paleta a nápověda" title="Přímý odkaz na 🧩 Paleta a nápověda" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paleta-a-nápověda">🧩 Paleta a nápověda<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-paleta-a-n%C3%A1pov%C4%9Bda" class="hash-link" aria-label="Přímý odkaz na 🧩 Paleta a nápověda" title="Přímý odkaz na 🧩 Paleta a nápověda" translate="no">​</a></h3>
 <ul>
 <li class="">Opraveny problémy palety po <strong>změně jazyka/locale</strong> (tlačítka akcí palety mohla být neaktivní)</li>
 <li class="">Přidána položka kontextového menu <strong>„About Block“</strong> pro otevření dokumentace vybraného bloku</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-nápovědy">📚 Aktualizace nápovědy<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-aktualizace-n%C3%A1pov%C4%9Bdy" class="hash-link" aria-label="Přímý odkaz na 📚 Aktualizace nápovědy" title="Přímý odkaz na 📚 Aktualizace nápovědy" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-nápovědy">📚 Aktualizace nápovědy<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-aktualizace-n%C3%A1pov%C4%9Bdy" class="hash-link" aria-label="Přímý odkaz na 📚 Aktualizace nápovědy" title="Přímý odkaz na 📚 Aktualizace nápovědy" translate="no">​</a></h3>
 <ul>
 <li class="">Stránky nápovědy rozšířeny o <strong>přímé odkazy na dokumentaci bloků</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-opravy">🤖 Android opravy<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-android-opravy" class="hash-link" aria-label="Přímý odkaz na 🤖 Android opravy" title="Přímý odkaz na 🤖 Android opravy" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-opravy">🤖 Android opravy<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-android-opravy" class="hash-link" aria-label="Přímý odkaz na 🤖 Android opravy" title="Přímý odkaz na 🤖 Android opravy" translate="no">​</a></h3>
 <ul>
 <li class="">Opraveny problémy se <strong>sdílením a importem profilů</strong> na Androidu</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-renderování-a-výkon">🛠 Renderování a výkon<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/04/18/post#-renderov%C3%A1n%C3%AD-a-v%C3%BDkon" class="hash-link" aria-label="Přímý odkaz na 🛠 Renderování a výkon" title="Přímý odkaz na 🛠 Renderování a výkon" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-renderování-a-výkon">🛠 Renderování a výkon<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/04/18/post#-renderov%C3%A1n%C3%AD-a-v%C3%BDkon" class="hash-link" aria-label="Přímý odkaz na 🛠 Renderování a výkon" title="Přímý odkaz na 🛠 Renderování a výkon" translate="no">​</a></h3>
 <ul>
 <li class="">Opraveny <strong>rozmazané/neostré bloky</strong> při vysokém měřítku přepracováním práce s texturami rendereru</li>
 <li class="">Optimalizován <strong>texture upscaler</strong> pro mobilní zařízení a vylepšeno odsazení/zoom chování programové oblasti</li>
@@ -170,27 +170,27 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.2.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/02/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/02/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post</guid>
             <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--vylepšení-dashboardu-a-opravy-hubů">🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/28/post#-mocpilot-202623--vylep%C5%A1en%C3%AD-dashboardu-a-opravy-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů" title="Přímý odkaz na 🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--vylepšení-dashboardu-a-opravy-hubů">🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post#-mocpilot-202623--vylep%C5%A1en%C3%AD-dashboardu-a-opravy-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů" title="Přímý odkaz na 🚀 MOCPilot 2026.2.3 — Vylepšení dashboardu a opravy hubů" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.2.3</strong>, dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato aktualizace zlepšuje práci s dashboardem a opravuje několik důležitých problémů s huby a editorem.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202623">✨ Co je nového v 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/28/post#-co-je-nov%C3%A9ho-v-202623" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.2.3?" title="Přímý odkaz na ✨ Co je nového v 2026.2.3?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-dashboardu">🧱 Vylepšení dashboardu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/28/post#-vylep%C5%A1en%C3%AD-dashboardu" class="hash-link" aria-label="Přímý odkaz na 🧱 Vylepšení dashboardu" title="Přímý odkaz na 🧱 Vylepšení dashboardu" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-v-202623">✨ Co je nového v 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post#-co-je-nov%C3%A9ho-v-202623" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového v 2026.2.3?" title="Přímý odkaz na ✨ Co je nového v 2026.2.3?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vylepšení-dashboardu">🧱 Vylepšení dashboardu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post#-vylep%C5%A1en%C3%AD-dashboardu" class="hash-link" aria-label="Přímý odkaz na 🧱 Vylepšení dashboardu" title="Přímý odkaz na 🧱 Vylepšení dashboardu" translate="no">​</a></h3>
 <ul>
 <li class="">Nyní můžete <strong>duplikovat dashboard controllery</strong>, s volbou <strong>kopírovat všechny vlastnosti</strong> nebo <strong>kopírovat pouze podle typu</strong></li>
 <li class=""><strong>Přepracovaná paleta</strong> pro rychlejší stavění: zobrazuje se pod dashboardem, má tlačítko pro vymazání, po přidání komponent se nezavírá a udržuje konzistentní výběr sekce</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-a-opravy-hubů">🔌 Aktualizace a opravy hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/28/post#-aktualizace-a-opravy-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Aktualizace a opravy hubů" title="Přímý odkaz na 🔌 Aktualizace a opravy hubů" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-aktualizace-a-opravy-hubů">🔌 Aktualizace a opravy hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post#-aktualizace-a-opravy-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Aktualizace a opravy hubů" title="Přímý odkaz na 🔌 Aktualizace a opravy hubů" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0</strong> přeimplementován na <strong>nový protokol na iOS</strong> (Android nadále používá předchozí protokol)</li>
 <li class="">Opraven problém, kdy se <strong>boolean blok „hub je připojen“</strong> nezobrazil, když hub inzeroval (advertising)</li>
 <li class="">Opraven bug, kdy <strong>blok světla</strong> mohl přestat fungovat kvůli zpracování příkazů start/stop motoru</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy">🛠 Opravy<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/28/post#-opravy" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy" title="Přímý odkaz na 🛠 Opravy" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy">🛠 Opravy<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/28/post#-opravy" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy" title="Přímý odkaz na 🛠 Opravy" translate="no">​</a></h3>
 <ul>
 <li class="">Opravena validace e-mailu ve vstupní komponentě, která mohla povolit neplatné adresy jako <code>mail@domain.</code></li>
 </ul>
@@ -200,31 +200,31 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.2.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/02/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/02/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post</guid>
             <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--rozšířená-podpora-hubů-a-aktualizace-ovládání">🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-mocpilot-202622--roz%C5%A1%C3%AD%C5%99en%C3%A1-podpora-hub%C5%AF-a-aktualizace-ovl%C3%A1d%C3%A1n%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání" title="Přímý odkaz na 🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--rozšířená-podpora-hubů-a-aktualizace-ovládání">🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-mocpilot-202622--roz%C5%A1%C3%AD%C5%99en%C3%A1-podpora-hub%C5%AF-a-aktualizace-ovl%C3%A1d%C3%A1n%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání" title="Přímý odkaz na 🚀 MOCPilot 2026.2.2 — Rozšířená podpora hubů a aktualizace ovládání" translate="no">​</a></h2>
 <p>S potěšením oznamujeme vydání <strong>MOCPilot 2026.2.2</strong>, nyní dostupného pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato verze výrazně rozšiřuje hardwarovou kompatibilitu a přináší nové výkonné programovací bloky pro pokročilou interakci s huby.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202622">✨ Co je nového ve verzi 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-co-je-nov%C3%A9ho-ve-verzi-202622" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.2.2?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.2.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nová-podpora-hubů">🆕 Nová podpora hubů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-nov%C3%A1-podpora-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🆕 Nová podpora hubů" title="Přímý odkaz na 🆕 Nová podpora hubů" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202622">✨ Co je nového ve verzi 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-co-je-nov%C3%A9ho-ve-verzi-202622" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.2.2?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.2.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nová-podpora-hubů">🆕 Nová podpora hubů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-nov%C3%A1-podpora-hub%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🆕 Nová podpora hubů" title="Přímý odkaz na 🆕 Nová podpora hubů" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0 huby</strong> jsou nyní plně podporovány</li>
 <li class=""><strong>Mould King 6.0 huby</strong> jsou nyní plně podporovány</li>
 <li class=""><strong>LEGO WeDo 2.0 hub</strong> je nyní plně podporován</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-podpora-senzorů">🔌 Podpora senzorů<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-podpora-senzor%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Podpora senzorů" title="Přímý odkaz na 🔌 Podpora senzorů" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-podpora-senzorů">🔌 Podpora senzorů<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-podpora-senzor%C5%AF" class="hash-link" aria-label="Přímý odkaz na 🔌 Podpora senzorů" title="Přímý odkaz na 🔌 Podpora senzorů" translate="no">​</a></h3>
 <ul>
 <li class="">WeDo 2.0 senzor náklonu</li>
 <li class="">WeDo 2.0 pohybový senzor</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nové-programovací-bloky">🧱 Nové programovací bloky<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-nov%C3%A9-programovac%C3%AD-bloky" class="hash-link" aria-label="Přímý odkaz na 🧱 Nové programovací bloky" title="Přímý odkaz na 🧱 Nové programovací bloky" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nové-programovací-bloky">🧱 Nové programovací bloky<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-nov%C3%A9-programovac%C3%AD-bloky" class="hash-link" aria-label="Přímý odkaz na 🧱 Nové programovací bloky" title="Přímý odkaz na 🧱 Nové programovací bloky" translate="no">​</a></h3>
 <p>Tato verze přináší nové událostní a řídicí bloky, které rozšiřují možnosti interakce s huby v reálném čase.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-událostní-bloky-senzorů-hubu">🔄 Událostní bloky senzorů hubu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-ud%C3%A1lostn%C3%AD-bloky-senzor%C5%AF-hubu" class="hash-link" aria-label="Přímý odkaz na 🔄 Událostní bloky senzorů hubu" title="Přímý odkaz na 🔄 Událostní bloky senzorů hubu" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-událostní-bloky-senzorů-hubu">🔄 Událostní bloky senzorů hubu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-ud%C3%A1lostn%C3%AD-bloky-senzor%C5%AF-hubu" class="hash-link" aria-label="Přímý odkaz na 🔄 Událostní bloky senzorů hubu" title="Přímý odkaz na 🔄 Událostní bloky senzorů hubu" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Změna dat akcelerometru hubu</strong></li>
 <li class=""><strong>Změna náklonu hubu</strong></li>
@@ -232,7 +232,7 @@
 <li class=""><strong>Změna úrovně baterie všech hubů</strong></li>
 </ul>
 <p>Tyto bloky umožňují vašemu programu okamžitě reagovat na pohyb, rotaci a změny napájení.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-řídicí-bloky-připojení-hubu">🔌 Řídicí bloky připojení hubu<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#-%C5%99%C3%ADdic%C3%AD-bloky-p%C5%99ipojen%C3%AD-hubu" class="hash-link" aria-label="Přímý odkaz na 🔌 Řídicí bloky připojení hubu" title="Přímý odkaz na 🔌 Řídicí bloky připojení hubu" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-řídicí-bloky-připojení-hubu">🔌 Řídicí bloky připojení hubu<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#-%C5%99%C3%ADdic%C3%AD-bloky-p%C5%99ipojen%C3%AD-hubu" class="hash-link" aria-label="Přímý odkaz na 🔌 Řídicí bloky připojení hubu" title="Přímý odkaz na 🔌 Řídicí bloky připojení hubu" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Připojit hub</strong></li>
 <li class=""><strong>Odpojit hub</strong></li>
@@ -240,7 +240,7 @@
 <p>Nyní můžete spravovat připojení hubů přímo během běhu programu.<br>
 <!-- -->To umožňuje znovu připojit hub bez restartování programu v případě ztráty spojení, což činí projekty odolnějšími a flexibilnějšími.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-vylepšení">⚙️ Vylepšení<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/02/18/post#%EF%B8%8F-vylep%C5%A1en%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Vylepšení" title="Přímý odkaz na ⚙️ Vylepšení" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-vylepšení">⚙️ Vylepšení<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/02/18/post#%EF%B8%8F-vylep%C5%A1en%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Vylepšení" title="Přímý odkaz na ⚙️ Vylepšení" translate="no">​</a></h3>
 <ul>
 <li class="">Zlepšená celková stabilita systému</li>
 <li class="">Optimalizace výkonu pro plynulejší interakci s huby</li>
@@ -252,22 +252,22 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2026.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/01/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2026/01/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post</guid>
             <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--aktualizace-funkcí-a-stability">🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/01/10/post#-mocpilot-202610--aktualizace-funkc%C3%AD-a-stability" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability" title="Přímý odkaz na 🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--aktualizace-funkcí-a-stability">🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post#-mocpilot-202610--aktualizace-funkc%C3%AD-a-stability" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability" title="Přímý odkaz na 🚀 MOCPilot 2026.1.0 — Aktualizace funkcí a stability" translate="no">​</a></h2>
 <p>S radostí oznamujeme vydání <strong>MOCPilot 2026.1.0</strong>, nyní dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato verze přináší <strong>režim hosta</strong>, zlepšuje použitelnost na mobilních zařízeních a obsahuje důležité opravy stability a výkonu napříč všemi platformami.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202610">✨ Co je nového ve verzi 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/01/10/post#-co-je-nov%C3%A9ho-ve-verzi-202610" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.1.0?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.1.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-novinky">🆕 Novinky<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/01/10/post#-novinky" class="hash-link" aria-label="Přímý odkaz na 🆕 Novinky" title="Přímý odkaz na 🆕 Novinky" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzi-202610">✨ Co je nového ve verzi 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post#-co-je-nov%C3%A9ho-ve-verzi-202610" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzi 2026.1.0?" title="Přímý odkaz na ✨ Co je nového ve verzi 2026.1.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-novinky">🆕 Novinky<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post#-novinky" class="hash-link" aria-label="Přímý odkaz na 🆕 Novinky" title="Přímý odkaz na 🆕 Novinky" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Režim hosta</strong> — používejte aplikaci bez účtu, s možností si ho později vytvořit</li>
 <li class="">Výběr jazyka přidán na přihlašovací/autorizační obrazovku</li>
 <li class="">Aplikace nyní blokuje použití hubů s nepodporovaným firmwarem a zobrazí jasné varování</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-vylepšení">⚙️ Vylepšení<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/01/10/post#%EF%B8%8F-vylep%C5%A1en%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Vylepšení" title="Přímý odkaz na ⚙️ Vylepšení" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-vylepšení">⚙️ Vylepšení<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post#%EF%B8%8F-vylep%C5%A1en%C3%AD" class="hash-link" aria-label="Přímý odkaz na ⚙️ Vylepšení" title="Přímý odkaz na ⚙️ Vylepšení" translate="no">​</a></h3>
 <ul>
 <li class="">Vylepšené přetahování bloků na mobilních zařízeních (lepší dotykové ovládání, méně nechtěných interakcí)</li>
 <li class="">Paleta bloků se nyní při přetahování na mobilu automaticky skryje</li>
@@ -275,7 +275,7 @@
 <li class="">Vylepšené zadávání textu napříč všemi platformami</li>
 <li class="">Plynulejší ovládání hubu se sníženou latencí</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy">🛠 Opravy<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2026/01/10/post#-opravy" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy" title="Přímý odkaz na 🛠 Opravy" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opravy">🛠 Opravy<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2026/01/10/post#-opravy" class="hash-link" aria-label="Přímý odkaz na 🛠 Opravy" title="Přímý odkaz na 🛠 Opravy" translate="no">​</a></h3>
 <ul>
 <li class="">Opraveno více problémů s drag &amp; drop bloků, včetně zaseknutých bloků a ztráty vstupu myši/dotyku</li>
 <li class="">Opraveny pády při zastavení programů používajících vlastní („Moje“) bloky</li>
@@ -291,15 +291,15 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.2.0 - 2025.2.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/12/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/12/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/12/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/12/28/post</guid>
             <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--aktualizace-stability-a-uživatelského-zážitku">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/12/28/post#-mocpilot-202520---202524--aktualizace-stability-a-u%C5%BEivatelsk%C3%A9ho-z%C3%A1%C5%BEitku" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku" title="Přímý odkaz na 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--aktualizace-stability-a-uživatelského-zážitku">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/12/28/post#-mocpilot-202520---202524--aktualizace-stability-a-u%C5%BEivatelsk%C3%A9ho-z%C3%A1%C5%BEitku" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku" title="Přímý odkaz na 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Aktualizace stability a uživatelského zážitku" translate="no">​</a></h2>
 <p>S potěšením oznamujeme vydání <strong>MOCPilot 2025.2.0 - 2025.2.4</strong>, nyní dostupné pro <strong>Android</strong>, <strong>iOS</strong> a <strong>macOS</strong>.</p>
 <p>Tato verze se zaměřuje na <strong>plynulejší chování</strong>, <strong>vyšší spolehlivost</strong> a <strong>vylepšení uživatelského rozhraní</strong> napříč všemi platformami.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzích-202520---202524">✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/12/28/post#-co-je-nov%C3%A9ho-ve-verz%C3%ADch-202520---202524" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?" title="Přímý odkaz na ✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-co-je-nového-ve-verzích-202520---202524">✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/12/28/post#-co-je-nov%C3%A9ho-ve-verz%C3%ADch-202520---202524" class="hash-link" aria-label="Přímý odkaz na ✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?" title="Přímý odkaz na ✨ Co je nového ve verzích 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
 <ul>
 <li class="">Plynulejší a stabilnější chování díky vylepšené časové logice</li>
 <li class="">Zlepšená synchronizace profilů a spolehlivost aktualizací</li>
@@ -317,16 +317,16 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.2.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/11/15/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/11/15/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/11/15/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/11/15/post</guid>
             <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-představujeme-mocpilot-202520--oficiální-multiplatformní-vydání">🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/11/15/post#-p%C5%99edstavujeme-mocpilot-202520--ofici%C3%A1ln%C3%AD-multiplatformn%C3%AD-vyd%C3%A1n%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!" title="Přímý odkaz na 🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-představujeme-mocpilot-202520--oficiální-multiplatformní-vydání">🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/11/15/post#-p%C5%99edstavujeme-mocpilot-202520--ofici%C3%A1ln%C3%AD-multiplatformn%C3%AD-vyd%C3%A1n%C3%AD" class="hash-link" aria-label="Přímý odkaz na 🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!" title="Přímý odkaz na 🚀 Představujeme MOCPilot 2025.2.0 — Oficiální multiplatformní vydání!" translate="no">​</a></h2>
 <p>S potěšením oznamujeme oficiální vydání <strong>MOCPilot 2025.2.0</strong>, nyní dostupné na <strong>Androidu</strong>, <strong>iOS</strong> a <strong>macOS</strong>!</p>
 <p>Tato verze představuje významný krok vpřed. Aplikace dříve známá jako <strong>Controlz</strong> byla přejmenována na <strong>MOCPilot</strong>.<br>
 <!-- -->Nový název lépe odráží účel aplikace a její budoucí směřování — být jednotným „pilotem“ pro vaše LEGO® modely, s pokročilým ovládáním, programováním a intuitivnějším prostředím.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-novinky-ve-verzi-202520">✨ Novinky ve verzi 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/11/15/post#-novinky-ve-verzi-202520" class="hash-link" aria-label="Přímý odkaz na ✨ Novinky ve verzi 2025.2.0" title="Přímý odkaz na ✨ Novinky ve verzi 2025.2.0" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-novinky-ve-verzi-202520">✨ Novinky ve verzi 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/11/15/post#-novinky-ve-verzi-202520" class="hash-link" aria-label="Přímý odkaz na ✨ Novinky ve verzi 2025.2.0" title="Přímý odkaz na ✨ Novinky ve verzi 2025.2.0" translate="no">​</a></h2>
 <ul>
 <li class="">Sjednocené vydání pro Android, iOS a macOS</li>
 <li class="">Zlepšená stabilita, výkon a odezva uživatelského rozhraní</li>
@@ -339,29 +339,29 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.1.9]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/06/3/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/06/3/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/06/3/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/06/3/post</guid>
             <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-je-nyní-dostupný-v-mac-app-store">🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/06/3/post#-mocpilot-202519-je-nyn%C3%AD-dostupn%C3%BD-v-mac-app-store" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!" title="Přímý odkaz na 🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-je-nyní-dostupný-v-mac-app-store">🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/06/3/post#-mocpilot-202519-je-nyn%C3%AD-dostupn%C3%BD-v-mac-app-store" class="hash-link" aria-label="Přímý odkaz na 🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!" title="Přímý odkaz na 🚀 MOCPilot 2025.1.9 je nyní dostupný v Mac App Store!" translate="no">​</a></h2>
 <p>S potěšením oznamujeme vydání MOCPilot 2025.1.9 jako nativní aplikace pro macOS!</p>
 <hr>
 <p>Nyní si můžete užívat plný výkon na ploše a bezproblémovou integraci s macOS.<br>
 <!-- -->Stáhněte si ji ještě dnes z Mac App Store a získejte kontrolu nad svými LEGO® výtvory jako nikdy předtím!</p>
-<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app/cz/img/store_badges/mac/mac_CZ.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
+<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/img/store_badges/mac/mac_CZ.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
             <category>Dev</category>
             <category>Test</category>
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.1.5]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/05/17/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/05/17/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/05/17/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/05/17/post</guid>
             <pubDate>Sat, 17 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Popis]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/05/17/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/05/17/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
 <p>Tato aktualizace zlepšuje práci s bloky, zvyšuje výkon a zajišťuje správnou funkčnost na novějších verzích Androidu.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/05/17/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/05/17/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Opravená chyba při skenování hubů na Androidu 12+</strong> – nyní se vyžaduje oprávnění k přesné poloze.</li>
 <li class=""><strong>Přidána možnost skrýt/zobrazit paletu bloků</strong> kliknutím na právě vybranou kolekci bloků.</li>
@@ -374,14 +374,14 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.1.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/05/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/05/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/05/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/05/10/post</guid>
             <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Popis]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/05/10/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/05/10/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
 <p>Tato aktualizace zlepšuje podporu pro tablety, přidává užitečné testovací stránky a opravuje několik problémů s kompatibilitou a výkonem.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/05/10/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/05/10/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Přidáno rozvržení pro tablety</strong> pro lepší využití větších obrazovek.</li>
 <li class=""><strong>Opravená chyba, kdy se blok „tlačítko na hubu stisknuto“</strong> zobrazoval i pro huby, které tuto akci nepodporují. Také opraveny <strong>bloky pro barevný senzor</strong> u nepodporovaných hubů (např. BuWizz).</li>
@@ -398,14 +398,14 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.1.2 – 2025.1.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/19/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/19/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/19/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/19/post</guid>
             <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Popis]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/04/19/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/04/19/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
 <p>Tato aktualizace přináší nové možnosti přizpůsobení joysticku, vylepšení uživatelského rozhraní a důležité opravy stability.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/04/19/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/04/19/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Opravená chyba ve výběru kolekce bloků v paletě</strong>: výběr kolekce, posun na jinou a návrat zpět neměl žádný efekt.</li>
 <li class=""><strong>Opraven pád aplikace při načítání náročných profilů</strong> s velkým množstvím bloků.</li>
@@ -418,14 +418,14 @@
         </item>
         <item>
             <title><![CDATA[Vydání MOCPilot 2025.1.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/14/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/14/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/14/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/14/post</guid>
             <pubDate>Mon, 14 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Popis]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/04/14/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="popis">Popis<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/04/14/post#popis" class="hash-link" aria-label="Přímý odkaz na Popis" title="Přímý odkaz na Popis" translate="no">​</a></h3>
 <p>Tato aktualizace obsahuje několik důležitých oprav chyb, které zlepšují výkon, snižují spotřebu baterie a zlepšují chování bloků v programovacím prostředí.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/04/14/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="změny">Změny<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/04/14/post#zm%C4%9Bny" class="hash-link" aria-label="Přímý odkaz na Změny" title="Přímý odkaz na Změny" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Opravená chyba způsobující vysoké využití CPU, vybíjení baterie a nízký výkon.</strong></li>
 <li class=""><strong>Opravená chyba, kdy bloky pro gamepad</strong> (např. „je tlačítko stisknuto“, „je stisknuto tlačítko D-PAD“) <strong>nebylo možné připojit k jiným blokům.</strong></li>
@@ -437,11 +437,11 @@
         </item>
         <item>
             <title><![CDATA[MOCPilot 2025.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/04/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/cz/blog/2025/04/04/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/04/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/cz/blog/2025/04/04/post</guid>
             <pubDate>Fri, 04 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uzavřená-beta-verze-mocpilot-202510-právě-začala">🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!<a href="https://onemanstudio-il.github.io/mocpilot-app/cz/blog/2025/04/04/post#-uzav%C5%99en%C3%A1-beta-verze-mocpilot-202510-pr%C3%A1v%C4%9B-za%C4%8Dala" class="hash-link" aria-label="Přímý odkaz na 🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!" title="Přímý odkaz na 🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-uzavřená-beta-verze-mocpilot-202510-právě-začala">🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/cz/blog/2025/04/04/post#-uzav%C5%99en%C3%A1-beta-verze-mocpilot-202510-pr%C3%A1v%C4%9B-za%C4%8Dala" class="hash-link" aria-label="Přímý odkaz na 🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!" title="Přímý odkaz na 🚀 Uzavřená beta verze MOCPilot 2025.1.0 právě začala!" translate="no">​</a></h2>
 <p>S radostí oznamujeme, že uzavřené beta testování MOCPilot 2025 je nyní spuštěno! Vybraní uživatelé mohou nyní prozkoumat nové funkce, poskytnout zpětnou vazbu a pomoci formovat budoucnost aplikace MOCPilot.</p>
 <p>Pokud jste obdrželi pozvánku, zkontrolujte si svůj e-mail pro přístupové údaje.<br>
 <!-- -->Děkujeme, že jste součástí této důležité fáze!</p>]]></content:encoded>

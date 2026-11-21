@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>MOCPilot Blog</title>
-        <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog</link>
+        <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog</link>
         <description>MOCPilot Blog</description>
         <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,30 +10,30 @@
         <language>ro</language>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.5.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/08/23/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/08/23/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post</guid>
             <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--actualizări-firmware-suport-sbrick-și-îmbunătățiri-ale-constructorului">🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-mocpilot-202650--actualiz%C4%83ri-firmware-suport-sbrick-%C8%99i-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-ale-constructorului" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului" title="Link direct către 🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--actualizări-firmware-suport-sbrick-și-îmbunătățiri-ale-constructorului">🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-mocpilot-202650--actualiz%C4%83ri-firmware-suport-sbrick-%C8%99i-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-ale-constructorului" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului" title="Link direct către 🚀 MOCPilot 2026.5.0 — Actualizări firmware, suport SBrick și îmbunătățiri ale constructorului" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.5.0</strong>, disponibilă pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această actualizare adaugă suport pentru actualizarea și recuperarea firmware-ului pentru mai multe hub-uri LEGO Powered Up, introduce suport pentru SBrick și SBrick Plus, îmbunătățește fluxul constructorului de blocuri și al panoului de control și include multe rafinări ale interfeței, remedieri ale blocărilor și actualizări de traduceri.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202650">✨ Ce este nou în 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-ce-este-nou-%C3%AEn-202650" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.5.0?" title="Link direct către ✨ Ce este nou în 2026.5.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizare-și-recuperare-firmware-pentru-hub-uri">🔄 Actualizare și recuperare firmware pentru hub-uri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-actualizare-%C8%99i-recuperare-firmware-pentru-hub-uri" class="hash-link" aria-label="Link direct către 🔄 Actualizare și recuperare firmware pentru hub-uri" title="Link direct către 🔄 Actualizare și recuperare firmware pentru hub-uri" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202650">✨ Ce este nou în 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-ce-este-nou-%C3%AEn-202650" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.5.0?" title="Link direct către ✨ Ce este nou în 2026.5.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizare-și-recuperare-firmware-pentru-hub-uri">🔄 Actualizare și recuperare firmware pentru hub-uri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-actualizare-%C8%99i-recuperare-firmware-pentru-hub-uri" class="hash-link" aria-label="Link direct către 🔄 Actualizare și recuperare firmware pentru hub-uri" title="Link direct către 🔄 Actualizare și recuperare firmware pentru hub-uri" translate="no">​</a></h3>
 <ul>
 <li class="">Adăugat suport de actualizare firmware pentru <strong>Technic Hub</strong></li>
 <li class="">Adăugat suport de actualizare firmware pentru <strong>Technic Move Hub</strong></li>
 <li class="">Extins suportul de actualizare firmware pentru hub-uri compatibile suplimentare</li>
 <li class="">Adăugată detectarea hub-urilor conectate în <strong>modul de recuperare</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-și-configurare-hub-uri">🔌 Suport și configurare hub-uri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-suport-%C8%99i-configurare-hub-uri" class="hash-link" aria-label="Link direct către 🔌 Suport și configurare hub-uri" title="Link direct către 🔌 Suport și configurare hub-uri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-și-configurare-hub-uri">🔌 Suport și configurare hub-uri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-suport-%C8%99i-configurare-hub-uri" class="hash-link" aria-label="Link direct către 🔌 Suport și configurare hub-uri" title="Link direct către 🔌 Suport și configurare hub-uri" translate="no">​</a></h3>
 <ul>
 <li class="">Adăugat suport pentru <strong>SBrick</strong> și <strong>SBrick Plus</strong></li>
 <li class="">Adăugată schimbare de configurare pentru Technic Move Hub: <strong>Porsche GT4 e-Performance</strong>, <strong>Batmobile™‎ Tumbler</strong> și <strong>Lamborghini Revuelto</strong></li>
 <li class="">Refăcute paginile de conectare a hub-urilor după tipul conexiunii</li>
 <li class="">Refăcută pagina de monitorizare a hub-urilor</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-ale-constructorului-de-blocuri">🧱 Actualizări ale constructorului de blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-actualiz%C4%83ri-ale-constructorului-de-blocuri" class="hash-link" aria-label="Link direct către 🧱 Actualizări ale constructorului de blocuri" title="Link direct către 🧱 Actualizări ale constructorului de blocuri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-ale-constructorului-de-blocuri">🧱 Actualizări ale constructorului de blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-actualiz%C4%83ri-ale-constructorului-de-blocuri" class="hash-link" aria-label="Link direct către 🧱 Actualizări ale constructorului de blocuri" title="Link direct către 🧱 Actualizări ale constructorului de blocuri" translate="no">​</a></h3>
 <ul>
 <li class="">Adăugată filtrarea nivelului blocurilor: <strong>Beginner</strong>, <strong>Advanced</strong> și <strong>Guru</strong></li>
 <li class="">Nivelurile blocurilor pot fi configurate la crearea, editarea sau rularea unui program de blocuri de profil</li>
@@ -41,14 +41,14 @@
 <li class="">Adăugat blocul <strong>impuls de putere</strong> pentru Technic Move Hub</li>
 <li class="">Corectate schimbările de scală cu rotița mouse-ului în paleta de blocuri</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-și-panou-de-control">🎮 Gamepad și panou de control<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-gamepad-%C8%99i-panou-de-control" class="hash-link" aria-label="Link direct către 🎮 Gamepad și panou de control" title="Link direct către 🎮 Gamepad și panou de control" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-și-panou-de-control">🎮 Gamepad și panou de control<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-gamepad-%C8%99i-panou-de-control" class="hash-link" aria-label="Link direct către 🎮 Gamepad și panou de control" title="Link direct către 🎮 Gamepad și panou de control" translate="no">​</a></h3>
 <ul>
 <li class="">Refăcute pagina gamepadului și pagina de testare a gamepadului</li>
 <li class="">Corectate tranzițiile de stare ale cruciuliței direcționale a gamepadului</li>
 <li class="">Adăugată o opțiune de meniu contextual pentru schimbarea directă a temei controlului din panoul de control</li>
 <li class="">Îmbunătățite anteturile profilurilor panoului de control, meniul de sortare, gradientele cardurilor și spațierea formularului de creare</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-interfață-profiluri-și-stabilitate">🎨 Interfață, profiluri și stabilitate<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/08/23/post#-interfa%C8%9B%C4%83-profiluri-%C8%99i-stabilitate" class="hash-link" aria-label="Link direct către 🎨 Interfață, profiluri și stabilitate" title="Link direct către 🎨 Interfață, profiluri și stabilitate" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-interfață-profiluri-și-stabilitate">🎨 Interfață, profiluri și stabilitate<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/08/23/post#-interfa%C8%9B%C4%83-profiluri-%C8%99i-stabilitate" class="hash-link" aria-label="Link direct către 🎨 Interfață, profiluri și stabilitate" title="Link direct către 🎨 Interfață, profiluri și stabilitate" translate="no">​</a></h3>
 <ul>
 <li class="">Eliminată paleta galbenă pentru profilurile predefinite, astfel încât acum arată ca pagina obișnuită de profiluri</li>
 <li class="">Îmbunătățit aspectul general și mici detalii ale interfeței</li>
@@ -58,25 +58,25 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.4.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/06/06/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/06/06/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post</guid>
             <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--anularerefacere-profiluri-hub-și-corecții-ale-constructorului">🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/06/06/post#-mocpilot-202640--anularerefacere-profiluri-hub-%C8%99i-corec%C8%9Bii-ale-constructorului" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului" title="Link direct către 🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--anularerefacere-profiluri-hub-și-corecții-ale-constructorului">🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post#-mocpilot-202640--anularerefacere-profiluri-hub-%C8%99i-corec%C8%9Bii-ale-constructorului" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului" title="Link direct către 🚀 MOCPilot 2026.4.0 — Anulare/Refacere, profiluri hub și corecții ale constructorului" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.4.0</strong>, disponibilă pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această actualizare adaugă istoric de anulare și refacere pentru programele cu blocuri, îmbunătățește configurarea huburilor în constructorul de profiluri și corectează mai multe probleme din constructor și controlul dispozitivelor.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202640">✨ Ce este nou în 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/06/06/post#-ce-este-nou-%C3%AEn-202640" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.4.0?" title="Link direct către ✨ Ce este nou în 2026.4.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-istoric-pentru-programe-cu-blocuri">🧱 Istoric pentru programe cu blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/06/06/post#-istoric-pentru-programe-cu-blocuri" class="hash-link" aria-label="Link direct către 🧱 Istoric pentru programe cu blocuri" title="Link direct către 🧱 Istoric pentru programe cu blocuri" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202640">✨ Ce este nou în 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post#-ce-este-nou-%C3%AEn-202640" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.4.0?" title="Link direct către ✨ Ce este nou în 2026.4.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-istoric-pentru-programe-cu-blocuri">🧱 Istoric pentru programe cu blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post#-istoric-pentru-programe-cu-blocuri" class="hash-link" aria-label="Link direct către 🧱 Istoric pentru programe cu blocuri" title="Link direct către 🧱 Istoric pentru programe cu blocuri" translate="no">​</a></h3>
 <ul>
 <li class="">A fost adăugat <strong>controlul istoricului de anulare și refacere</strong> pentru programele cu blocuri</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-constructor-de-profiluri-pentru-huburi">🔌 Constructor de profiluri pentru huburi<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/06/06/post#-constructor-de-profiluri-pentru-huburi" class="hash-link" aria-label="Link direct către 🔌 Constructor de profiluri pentru huburi" title="Link direct către 🔌 Constructor de profiluri pentru huburi" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-constructor-de-profiluri-pentru-huburi">🔌 Constructor de profiluri pentru huburi<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post#-constructor-de-profiluri-pentru-huburi" class="hash-link" aria-label="Link direct către 🔌 Constructor de profiluri pentru huburi" title="Link direct către 🔌 Constructor de profiluri pentru huburi" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Adăugarea hubului</strong> a fost decuplată de fluxul de conectare în constructorul de profiluri</li>
 <li class="">Huburile pot fi acum adăugate la un profil fără a necesita o conexiune imediată</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-corecții-ale-constructorului-și-dispozitivelor">🛠 Corecții ale constructorului și dispozitivelor<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/06/06/post#-corec%C8%9Bii-ale-constructorului-%C8%99i-dispozitivelor" class="hash-link" aria-label="Link direct către 🛠 Corecții ale constructorului și dispozitivelor" title="Link direct către 🛠 Corecții ale constructorului și dispozitivelor" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-corecții-ale-constructorului-și-dispozitivelor">🛠 Corecții ale constructorului și dispozitivelor<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/06/06/post#-corec%C8%9Bii-ale-constructorului-%C8%99i-dispozitivelor" class="hash-link" aria-label="Link direct către 🛠 Corecții ale constructorului și dispozitivelor" title="Link direct către 🛠 Corecții ale constructorului și dispozitivelor" translate="no">​</a></h3>
 <ul>
 <li class="">A fost corectată eticheta tradusă a meniului contextual <strong>delete-blocks</strong></li>
 <li class="">A fost corectată <strong>maparea comenzilor pentru porturile motorului WeDo 2.0</strong>, restaurând controlul când este folosit unul dintre cele două porturi de motor</li>
@@ -88,25 +88,25 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.3.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/05/02/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/05/02/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post</guid>
             <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--iconițe-pentru-controalele-dashboard-și-corecții-builder">🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/05/02/post#-mocpilot-202632--iconi%C8%9Be-pentru-controalele-dashboard-%C8%99i-corec%C8%9Bii-builder" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder" title="Link direct către 🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--iconițe-pentru-controalele-dashboard-și-corecții-builder">🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post#-mocpilot-202632--iconi%C8%9Be-pentru-controalele-dashboard-%C8%99i-corec%C8%9Bii-builder" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder" title="Link direct către 🚀 MOCPilot 2026.3.2 — Iconițe pentru Controalele Dashboard și Corecții Builder" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.3.2</strong>, disponibilă pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această actualizare îmbunătățește aspectul controlerelor dashboard, rezolvă mai multe probleme de interacțiune din builder și rafinează comportamentul calibrării cremalierei de direcție.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202632">✨ Ce este nou în 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/05/02/post#-ce-este-nou-%C3%AEn-202632" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.3.2?" title="Link direct către ✨ Ce este nou în 2026.3.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-pentru-controalele-dashboard">🎛 Îmbunătățiri pentru Controalele Dashboard<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/05/02/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-pentru-controalele-dashboard" class="hash-link" aria-label="Link direct către 🎛 Îmbunătățiri pentru Controalele Dashboard" title="Link direct către 🎛 Îmbunătățiri pentru Controalele Dashboard" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202632">✨ Ce este nou în 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post#-ce-este-nou-%C3%AEn-202632" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.3.2?" title="Link direct către ✨ Ce este nou în 2026.3.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-pentru-controalele-dashboard">🎛 Îmbunătățiri pentru Controalele Dashboard<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-pentru-controalele-dashboard" class="hash-link" aria-label="Link direct către 🎛 Îmbunătățiri pentru Controalele Dashboard" title="Link direct către 🎛 Îmbunătățiri pentru Controalele Dashboard" translate="no">​</a></h3>
 <ul>
 <li class="">Au fost adăugate <strong>iconițe noi</strong> pentru controlerele dashboard</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-corecții-pentru-builder-și-blocuri">🧱 Corecții pentru Builder și Blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/05/02/post#-corec%C8%9Bii-pentru-builder-%C8%99i-blocuri" class="hash-link" aria-label="Link direct către 🧱 Corecții pentru Builder și Blocuri" title="Link direct către 🧱 Corecții pentru Builder și Blocuri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-corecții-pentru-builder-și-blocuri">🧱 Corecții pentru Builder și Blocuri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post#-corec%C8%9Bii-pentru-builder-%C8%99i-blocuri" class="hash-link" aria-label="Link direct către 🧱 Corecții pentru Builder și Blocuri" title="Link direct către 🧱 Corecții pentru Builder și Blocuri" translate="no">​</a></h3>
 <ul>
 <li class="">A fost corectată o problemă din cauza căreia evenimentul <strong>Înclinarea hub schimbată</strong> putea fi declanșat greșit din cauza comparării valorilor întregi și zecimale</li>
 <li class="">Au fost corectate problemele de <strong>atașare a blocurilor prin tragere</strong>, care afectau <strong>blocurile C</strong> și alte tipuri de blocuri</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-actualizare-pentru-calibrarea-direcției">⚙️ Actualizare pentru Calibrarea Direcției<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/05/02/post#%EF%B8%8F-actualizare-pentru-calibrarea-direc%C8%9Biei" class="hash-link" aria-label="Link direct către ⚙️ Actualizare pentru Calibrarea Direcției" title="Link direct către ⚙️ Actualizare pentru Calibrarea Direcției" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-actualizare-pentru-calibrarea-direcției">⚙️ Actualizare pentru Calibrarea Direcției<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/05/02/post#%EF%B8%8F-actualizare-pentru-calibrarea-direc%C8%9Biei" class="hash-link" aria-label="Link direct către ⚙️ Actualizare pentru Calibrarea Direcției" title="Link direct către ⚙️ Actualizare pentru Calibrarea Direcției" translate="no">​</a></h3>
 <ul>
 <li class="">Blocul <strong>Calibrează cremaliera de direcție</strong> a fost refăcut</li>
 <li class="">Blocul resetează acum <strong>poziția relativă la <code>0</code></strong> atunci când calibrarea se finalizează</li>
@@ -118,22 +118,22 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.3.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/04/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/04/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post</guid>
             <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--actualizare-gamepad-și-builder">🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-mocpilot-202631--actualizare-gamepad-%C8%99i-builder" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder" title="Link direct către 🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--actualizare-gamepad-și-builder">🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-mocpilot-202631--actualizare-gamepad-%C8%99i-builder" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder" title="Link direct către 🚀 MOCPilot 2026.3.1 — Actualizare Gamepad și Builder" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.3.1</strong>, disponibilă pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această versiune aduce îmbunătățiri majore pentru builder-ul de blocuri (touch + desktop) și un suport gamepad mai puternic.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202631">✨ Ce este nou în 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-ce-este-nou-%C3%AEn-202631" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.3.1?" title="Link direct către ✨ Ce este nou în 2026.3.1?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-gamepad">🎮 Îmbunătățiri Gamepad<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-gamepad" class="hash-link" aria-label="Link direct către 🎮 Îmbunătățiri Gamepad" title="Link direct către 🎮 Îmbunătățiri Gamepad" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202631">✨ Ce este nou în 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-ce-este-nou-%C3%AEn-202631" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.3.1?" title="Link direct către ✨ Ce este nou în 2026.3.1?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-gamepad">🎮 Îmbunătățiri Gamepad<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-gamepad" class="hash-link" aria-label="Link direct către 🎮 Îmbunătățiri Gamepad" title="Link direct către 🎮 Îmbunătățiri Gamepad" translate="no">​</a></h3>
 <ul>
 <li class="">Blocurile de gamepad se <strong>activează automat</strong> când este deschis un profil (inclusiv dacă gamepad-ul este deja conectat)</li>
 <li class="">Remediată o problemă în care <strong>blocurile de evenimente gamepad adăugate ulterior</strong> nu se activau până la repornirea programului</li>
 <li class="">Adăugată setarea de <strong>interval valori gamepad</strong> pentru control mai fin</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-builder--editor">🧱 Îmbunătățiri Builder &amp; Editor<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-builder--editor" class="hash-link" aria-label="Link direct către 🧱 Îmbunătățiri Builder &amp; Editor" title="Link direct către 🧱 Îmbunătățiri Builder &amp; Editor" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-builder--editor">🧱 Îmbunătățiri Builder &amp; Editor<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-builder--editor" class="hash-link" aria-label="Link direct către 🧱 Îmbunătățiri Builder &amp; Editor" title="Link direct către 🧱 Îmbunătățiri Builder &amp; Editor" translate="no">​</a></h3>
 <ul>
 <li class="">Set mare de îmbunătățiri pentru <strong>gesturi touch</strong> și interacțiunea generală (mobil + desktop)</li>
 <li class=""><strong>Undo/istoric</strong> mai fiabil (momentan <strong>doar dashboard</strong>), cu un istoric refăcut care urmărește schimbările pentru a reveni mai consecvent la o stare anterioară</li>
@@ -142,24 +142,24 @@
 <li class="">Îmbunătățit snapping-ul blocurilor și previzualizările de inserare la construirea structurilor de control</li>
 <li class="">Adăugat un <strong>halo</strong> pentru blocurile care rulează</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub--conectivitate">🔌 Hub &amp; Conectivitate<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-hub--conectivitate" class="hash-link" aria-label="Link direct către 🔌 Hub &amp; Conectivitate" title="Link direct către 🔌 Hub &amp; Conectivitate" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub--conectivitate">🔌 Hub &amp; Conectivitate<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-hub--conectivitate" class="hash-link" aria-label="Link direct către 🔌 Hub &amp; Conectivitate" title="Link direct către 🔌 Hub &amp; Conectivitate" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Selectorul de butoane al hub-ului</strong> din blocul relevant este acum <strong>mereu vizibil</strong>, cu o configurare refăcută a evenimentelor pentru butoane</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paletă--ajutor">🧩 Paletă &amp; Ajutor<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-palet%C4%83--ajutor" class="hash-link" aria-label="Link direct către 🧩 Paletă &amp; Ajutor" title="Link direct către 🧩 Paletă &amp; Ajutor" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-paletă--ajutor">🧩 Paletă &amp; Ajutor<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-palet%C4%83--ajutor" class="hash-link" aria-label="Link direct către 🧩 Paletă &amp; Ajutor" title="Link direct către 🧩 Paletă &amp; Ajutor" translate="no">​</a></h3>
 <ul>
 <li class="">Remediate probleme ale paletei după <strong>schimbarea limbii/localei</strong> (butoanele de acțiune puteau deveni inactive)</li>
 <li class="">Adăugată opțiunea de meniu contextual <strong>„About Block”</strong> pentru a deschide documentația blocului selectat</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-ajutor">📚 Actualizări Ajutor<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-actualiz%C4%83ri-ajutor" class="hash-link" aria-label="Link direct către 📚 Actualizări Ajutor" title="Link direct către 📚 Actualizări Ajutor" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-ajutor">📚 Actualizări Ajutor<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-actualiz%C4%83ri-ajutor" class="hash-link" aria-label="Link direct către 📚 Actualizări Ajutor" title="Link direct către 📚 Actualizări Ajutor" translate="no">​</a></h3>
 <ul>
 <li class="">Paginile de ajutor extinse cu <strong>linkuri directe către documentația blocurilor</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri-android">🤖 Remedieri Android<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-remedieri-android" class="hash-link" aria-label="Link direct către 🤖 Remedieri Android" title="Link direct către 🤖 Remedieri Android" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri-android">🤖 Remedieri Android<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-remedieri-android" class="hash-link" aria-label="Link direct către 🤖 Remedieri Android" title="Link direct către 🤖 Remedieri Android" translate="no">​</a></h3>
 <ul>
 <li class="">Remediate problemele de <strong>partajare și import al profilurilor</strong> pe Android</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-randare--performanță">🛠 Randare &amp; Performanță<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/04/18/post#-randare--performan%C8%9B%C4%83" class="hash-link" aria-label="Link direct către 🛠 Randare &amp; Performanță" title="Link direct către 🛠 Randare &amp; Performanță" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-randare--performanță">🛠 Randare &amp; Performanță<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/04/18/post#-randare--performan%C8%9B%C4%83" class="hash-link" aria-label="Link direct către 🛠 Randare &amp; Performanță" title="Link direct către 🛠 Randare &amp; Performanță" translate="no">​</a></h3>
 <ul>
 <li class="">Remediate blocurile <strong>neclare/încetosate</strong> la scală mare prin refacerea gestionării texturilor din renderer</li>
 <li class="">Optimizat <strong>texture upscaler</strong> pentru mobile și îmbunătățit spațierea/comportamentul de zoom al zonei programului</li>
@@ -170,27 +170,27 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.2.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/02/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/02/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post</guid>
             <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--îmbunătățiri-pentru-dashboard-și-remedieri-hub">🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/28/post#-mocpilot-202623--%C3%AEmbun%C4%83t%C4%83%C8%9Biri-pentru-dashboard-%C8%99i-remedieri-hub" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub" title="Link direct către 🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--îmbunătățiri-pentru-dashboard-și-remedieri-hub">🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post#-mocpilot-202623--%C3%AEmbun%C4%83t%C4%83%C8%9Biri-pentru-dashboard-%C8%99i-remedieri-hub" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub" title="Link direct către 🚀 MOCPilot 2026.2.3 — Îmbunătățiri pentru dashboard și remedieri hub" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.2.3</strong>, disponibilă pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această actualizare îmbunătățește fluxul de lucru al dashboard-ului și rezolvă câteva probleme importante legate de hub și editor.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202623">✨ Ce este nou în 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/28/post#-ce-este-nou-%C3%AEn-202623" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.2.3?" title="Link direct către ✨ Ce este nou în 2026.2.3?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-dashboard">🧱 Îmbunătățiri dashboard<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/28/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-dashboard" class="hash-link" aria-label="Link direct către 🧱 Îmbunătățiri dashboard" title="Link direct către 🧱 Îmbunătățiri dashboard" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202623">✨ Ce este nou în 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post#-ce-este-nou-%C3%AEn-202623" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.2.3?" title="Link direct către ✨ Ce este nou în 2026.2.3?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-îmbunătățiri-dashboard">🧱 Îmbunătățiri dashboard<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post#-%C3%AEmbun%C4%83t%C4%83%C8%9Biri-dashboard" class="hash-link" aria-label="Link direct către 🧱 Îmbunătățiri dashboard" title="Link direct către 🧱 Îmbunătățiri dashboard" translate="no">​</a></h3>
 <ul>
 <li class="">Acum poți <strong>duplica controlerele din dashboard</strong>, cu opțiuni pentru <strong>copierea tuturor proprietăților</strong> sau <strong>copiere doar după tip</strong></li>
 <li class=""><strong>Paleta refăcută</strong> pentru construire mai rapidă: afișată sub dashboard, include buton de curățare, nu se închide după adăugarea componentelor și păstrează selecția secțiunii consecventă</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-și-remedieri-hub">🔌 Actualizări și remedieri hub<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/28/post#-actualiz%C4%83ri-%C8%99i-remedieri-hub" class="hash-link" aria-label="Link direct către 🔌 Actualizări și remedieri hub" title="Link direct către 🔌 Actualizări și remedieri hub" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-actualizări-și-remedieri-hub">🔌 Actualizări și remedieri hub<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post#-actualiz%C4%83ri-%C8%99i-remedieri-hub" class="hash-link" aria-label="Link direct către 🔌 Actualizări și remedieri hub" title="Link direct către 🔌 Actualizări și remedieri hub" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0</strong> reimplementat pe <strong>protocolul nou pe iOS</strong> (Android continuă să folosească protocolul anterior)</li>
 <li class="">Remediată o problemă în care <strong>blocul boolean „hub este conectat”</strong> nu apărea în timp ce hub-ul făcea advertising</li>
 <li class="">Remediat un bug în care <strong>blocul de lumină</strong> putea să nu mai funcționeze din cauza gestionării comenzilor start/stop pentru motor</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri">🛠 Remedieri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/28/post#-remedieri" class="hash-link" aria-label="Link direct către 🛠 Remedieri" title="Link direct către 🛠 Remedieri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri">🛠 Remedieri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/28/post#-remedieri" class="hash-link" aria-label="Link direct către 🛠 Remedieri" title="Link direct către 🛠 Remedieri" translate="no">​</a></h3>
 <ul>
 <li class="">Remediată validarea e-mail în componenta de input, care putea permite adrese invalide precum <code>mail@domain.</code></li>
 </ul>
@@ -200,31 +200,31 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.2.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/02/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/02/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post</guid>
             <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--actualizare-extinsă-pentru-huburi-și-control">🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-mocpilot-202622--actualizare-extins%C4%83-pentru-huburi-%C8%99i-control" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control" title="Link direct către 🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--actualizare-extinsă-pentru-huburi-și-control">🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-mocpilot-202622--actualizare-extins%C4%83-pentru-huburi-%C8%99i-control" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control" title="Link direct către 🚀 MOCPilot 2026.2.2 — Actualizare extinsă pentru huburi și control" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.2.2</strong>, acum disponibil pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această versiune extinde semnificativ compatibilitatea hardware și introduce blocuri noi și puternice de programare pentru interacțiuni avansate cu huburile.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202622">✨ Ce este nou în 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-ce-este-nou-%C3%AEn-202622" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.2.2?" title="Link direct către ✨ Ce este nou în 2026.2.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-nou-pentru-huburi">🆕 Suport nou pentru huburi<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-suport-nou-pentru-huburi" class="hash-link" aria-label="Link direct către 🆕 Suport nou pentru huburi" title="Link direct către 🆕 Suport nou pentru huburi" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202622">✨ Ce este nou în 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-ce-este-nou-%C3%AEn-202622" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.2.2?" title="Link direct către ✨ Ce este nou în 2026.2.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-nou-pentru-huburi">🆕 Suport nou pentru huburi<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-suport-nou-pentru-huburi" class="hash-link" aria-label="Link direct către 🆕 Suport nou pentru huburi" title="Link direct către 🆕 Suport nou pentru huburi" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Huburile Mould King 4.0</strong> sunt acum complet suportate</li>
 <li class=""><strong>Huburile Mould King 6.0</strong> sunt acum complet suportate</li>
 <li class=""><strong>Hubul LEGO WeDo 2.0</strong> este acum complet suportat</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-pentru-senzori">🔌 Suport pentru senzori<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-suport-pentru-senzori" class="hash-link" aria-label="Link direct către 🔌 Suport pentru senzori" title="Link direct către 🔌 Suport pentru senzori" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-suport-pentru-senzori">🔌 Suport pentru senzori<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-suport-pentru-senzori" class="hash-link" aria-label="Link direct către 🔌 Suport pentru senzori" title="Link direct către 🔌 Suport pentru senzori" translate="no">​</a></h3>
 <ul>
 <li class="">Senzor de înclinare WeDo 2.0</li>
 <li class="">Senzor de mișcare WeDo 2.0</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-noi-de-programare">🧱 Blocuri noi de programare<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-blocuri-noi-de-programare" class="hash-link" aria-label="Link direct către 🧱 Blocuri noi de programare" title="Link direct către 🧱 Blocuri noi de programare" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-noi-de-programare">🧱 Blocuri noi de programare<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-blocuri-noi-de-programare" class="hash-link" aria-label="Link direct către 🧱 Blocuri noi de programare" title="Link direct către 🧱 Blocuri noi de programare" translate="no">​</a></h3>
 <p>Această versiune introduce noi blocuri de evenimente și control care extind capacitățile de interacțiune în timp real cu huburile.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-de-evenimente-pentru-senzori-ai-hubului">🔄 Blocuri de evenimente pentru senzori ai hubului<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-blocuri-de-evenimente-pentru-senzori-ai-hubului" class="hash-link" aria-label="Link direct către 🔄 Blocuri de evenimente pentru senzori ai hubului" title="Link direct către 🔄 Blocuri de evenimente pentru senzori ai hubului" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-de-evenimente-pentru-senzori-ai-hubului">🔄 Blocuri de evenimente pentru senzori ai hubului<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-blocuri-de-evenimente-pentru-senzori-ai-hubului" class="hash-link" aria-label="Link direct către 🔄 Blocuri de evenimente pentru senzori ai hubului" title="Link direct către 🔄 Blocuri de evenimente pentru senzori ai hubului" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Datele accelerometrului hubului au fost modificate</strong></li>
 <li class=""><strong>Înclinarea hubului a fost modificată</strong></li>
@@ -232,7 +232,7 @@
 <li class=""><strong>Nivelul bateriei tuturor huburilor a fost modificat</strong></li>
 </ul>
 <p>Aceste blocuri permit programului să reacționeze instantaneu la mișcare, rotație și schimbări de alimentare.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-de-control-al-conexiunii-hubului">🔌 Blocuri de control al conexiunii hubului<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#-blocuri-de-control-al-conexiunii-hubului" class="hash-link" aria-label="Link direct către 🔌 Blocuri de control al conexiunii hubului" title="Link direct către 🔌 Blocuri de control al conexiunii hubului" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-blocuri-de-control-al-conexiunii-hubului">🔌 Blocuri de control al conexiunii hubului<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#-blocuri-de-control-al-conexiunii-hubului" class="hash-link" aria-label="Link direct către 🔌 Blocuri de control al conexiunii hubului" title="Link direct către 🔌 Blocuri de control al conexiunii hubului" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Conectează hubul</strong></li>
 <li class=""><strong>Deconectează hubul</strong></li>
@@ -240,7 +240,7 @@
 <p>Acum puteți gestiona conexiunile huburilor direct în timpul execuției programului.<br>
 <!-- -->Acest lucru permite reconectarea unui hub fără a reporni programul în cazul pierderii conexiunii, făcând proiectele mai rezistente și mai flexibile.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-îmbunătățiri">⚙️ Îmbunătățiri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/02/18/post#%EF%B8%8F-%C3%AEmbun%C4%83t%C4%83%C8%9Biri" class="hash-link" aria-label="Link direct către ⚙️ Îmbunătățiri" title="Link direct către ⚙️ Îmbunătățiri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-îmbunătățiri">⚙️ Îmbunătățiri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/02/18/post#%EF%B8%8F-%C3%AEmbun%C4%83t%C4%83%C8%9Biri" class="hash-link" aria-label="Link direct către ⚙️ Îmbunătățiri" title="Link direct către ⚙️ Îmbunătățiri" translate="no">​</a></h3>
 <ul>
 <li class="">Stabilitate generală a sistemului îmbunătățită</li>
 <li class="">Optimizări de performanță pentru o interacțiune mai fluidă cu huburile</li>
@@ -252,22 +252,22 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2026.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/01/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2026/01/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post</guid>
             <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--actualizare-de-funcții-și-stabilitate">🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/01/10/post#-mocpilot-202610--actualizare-de-func%C8%9Bii-%C8%99i-stabilitate" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate" title="Link direct către 🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--actualizare-de-funcții-și-stabilitate">🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post#-mocpilot-202610--actualizare-de-func%C8%9Bii-%C8%99i-stabilitate" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate" title="Link direct către 🚀 MOCPilot 2026.1.0 — Actualizare de funcții și stabilitate" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2026.1.0</strong>, disponibilă acum pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această versiune introduce <strong>modul invitat</strong>, îmbunătățește utilizarea pe dispozitive mobile și aduce corecții importante de stabilitate și performanță pe toate platformele suportate.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202610">✨ Ce este nou în 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/01/10/post#-ce-este-nou-%C3%AEn-202610" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.1.0?" title="Link direct către ✨ Ce este nou în 2026.1.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nou">🆕 Nou<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/01/10/post#-nou" class="hash-link" aria-label="Link direct către 🆕 Nou" title="Link direct către 🆕 Nou" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202610">✨ Ce este nou în 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post#-ce-este-nou-%C3%AEn-202610" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2026.1.0?" title="Link direct către ✨ Ce este nou în 2026.1.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nou">🆕 Nou<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post#-nou" class="hash-link" aria-label="Link direct către 🆕 Nou" title="Link direct către 🆕 Nou" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mod invitat</strong> — folosește aplicația fără cont, cu opțiunea de a crea unul mai târziu</li>
 <li class="">Selecția limbii a fost adăugată pe ecranul de autentificare</li>
 <li class="">Aplicația blochează acum utilizarea hub-urilor cu firmware nesuportat și afișează un avertisment clar</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-îmbunătățiri">⚙️ Îmbunătățiri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/01/10/post#%EF%B8%8F-%C3%AEmbun%C4%83t%C4%83%C8%9Biri" class="hash-link" aria-label="Link direct către ⚙️ Îmbunătățiri" title="Link direct către ⚙️ Îmbunătățiri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-îmbunătățiri">⚙️ Îmbunătățiri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post#%EF%B8%8F-%C3%AEmbun%C4%83t%C4%83%C8%9Biri" class="hash-link" aria-label="Link direct către ⚙️ Îmbunătățiri" title="Link direct către ⚙️ Îmbunătățiri" translate="no">​</a></h3>
 <ul>
 <li class="">Îmbunătățit modul de tragere a blocurilor pe mobil (gestionare mai bună a atingerii, mai puține interacțiuni accidentale)</li>
 <li class="">Paleta de blocuri se ascunde acum automat în timpul tragerii pe mobil</li>
@@ -275,7 +275,7 @@
 <li class="">Îmbunătățită gestionarea introducerii textului pe toate platformele</li>
 <li class="">Control mai fluent al hub-ului cu latență redusă</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri">🛠 Remedieri<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2026/01/10/post#-remedieri" class="hash-link" aria-label="Link direct către 🛠 Remedieri" title="Link direct către 🛠 Remedieri" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-remedieri">🛠 Remedieri<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2026/01/10/post#-remedieri" class="hash-link" aria-label="Link direct către 🛠 Remedieri" title="Link direct către 🛠 Remedieri" translate="no">​</a></h3>
 <ul>
 <li class="">Remediate mai multe probleme de drag &amp; drop, inclusiv blocuri blocate și pierderea inputului mouse/touch</li>
 <li class="">Remediate crash-uri la oprirea programelor care folosesc blocuri personalizate („My”)</li>
@@ -291,15 +291,15 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.2.0 - 2025.2.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/12/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/12/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/12/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/12/28/post</guid>
             <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--actualizare-de-stabilitate-și-experiență">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/12/28/post#-mocpilot-202520---202524--actualizare-de-stabilitate-%C8%99i-experien%C8%9B%C4%83" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență" title="Link direct către 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--actualizare-de-stabilitate-și-experiență">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/12/28/post#-mocpilot-202520---202524--actualizare-de-stabilitate-%C8%99i-experien%C8%9B%C4%83" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență" title="Link direct către 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Actualizare de stabilitate și experiență" translate="no">​</a></h2>
 <p>Suntem bucuroși să anunțăm lansarea <strong>MOCPilot 2025.2.0 - 2025.2.4</strong>, disponibilă acum pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>.</p>
 <p>Această versiune se concentrează pe un <strong>comportament mai fluid</strong>, <strong>fiabilitate îmbunătățită</strong> și <strong>optimizări ale interfeței utilizatorului</strong> pe toate platformele.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-s-a-îmbunătățit-în-versiunile-202520---202524">✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/12/28/post#-ce-s-a-%C3%AEmbun%C4%83t%C4%83%C8%9Bit-%C3%AEn-versiunile-202520---202524" class="hash-link" aria-label="Link direct către ✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?" title="Link direct către ✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-s-a-îmbunătățit-în-versiunile-202520---202524">✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/12/28/post#-ce-s-a-%C3%AEmbun%C4%83t%C4%83%C8%9Bit-%C3%AEn-versiunile-202520---202524" class="hash-link" aria-label="Link direct către ✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?" title="Link direct către ✨ Ce s-a îmbunătățit în versiunile 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
 <ul>
 <li class="">Comportament mai fluid și mai stabil datorită logicii temporale îmbunătățite</li>
 <li class="">Sincronizare îmbunătățită a profilurilor și fiabilitate mai bună a actualizărilor</li>
@@ -317,15 +317,15 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.2.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/11/15/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/11/15/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/11/15/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/11/15/post</guid>
             <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--lansare-oficială-multiplatformă">🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/11/15/post#-mocpilot-202520--lansare-oficial%C4%83-multiplatform%C4%83" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!" title="Link direct către 🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--lansare-oficială-multiplatformă">🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/11/15/post#-mocpilot-202520--lansare-oficial%C4%83-multiplatform%C4%83" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!" title="Link direct către 🚀 MOCPilot 2025.2.0 — Lansare oficială multiplatformă!" translate="no">​</a></h2>
 <p>Suntem încântați să anunțăm lansarea oficială a <strong>MOCPilot 2025.2.0</strong>, disponibilă acum pe <strong>Android</strong>, <strong>iOS</strong> și <strong>macOS</strong>!</p>
 <p>Aplicația cunoscută anterior ca <strong>Controlz</strong> a fost redenumită <strong>MOCPilot</strong>, pentru a reflecta mai bine scopul și direcția viitoare — o platformă unificată pentru controlul și programarea creațiilor LEGO®.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202520">✨ Ce este nou în 2025.2.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/11/15/post#-ce-este-nou-%C3%AEn-202520" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2025.2.0?" title="Link direct către ✨ Ce este nou în 2025.2.0?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ce-este-nou-în-202520">✨ Ce este nou în 2025.2.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/11/15/post#-ce-este-nou-%C3%AEn-202520" class="hash-link" aria-label="Link direct către ✨ Ce este nou în 2025.2.0?" title="Link direct către ✨ Ce este nou în 2025.2.0?" translate="no">​</a></h2>
 <ul>
 <li class="">Lansare unificată pentru Android, iOS și macOS</li>
 <li class="">Stabilitate, performanță și reacție UI îmbunătățite</li>
@@ -338,29 +338,29 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.1.9]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/06/3/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/06/3/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/06/3/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/06/3/post</guid>
             <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-finns-nu-tillgänglig-på-mac-app-store">🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/06/3/post#-mocpilot-202519-finns-nu-tillg%C3%A4nglig-p%C3%A5-mac-app-store" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!" title="Link direct către 🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-finns-nu-tillgänglig-på-mac-app-store">🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/06/3/post#-mocpilot-202519-finns-nu-tillg%C3%A4nglig-p%C3%A5-mac-app-store" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!" title="Link direct către 🚀 MOCPilot 2025.1.9 finns nu tillgänglig på Mac App Store!" translate="no">​</a></h2>
 <p>Vi är glada att kunna meddela lanseringen av MOCPilot 2025.1.9 som en native macOS-app!</p>
 <hr>
 <p>Nu kan du njuta av full prestanda på skrivbordet och sömlös integration med macOS.<br>
 <!-- -->Ladda ner den idag från Mac App Store och ta kontroll över dina LEGO®-skapelser som aldrig förr!</p>
-<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app/ro/img/store_badges/mac/mac_RO.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
+<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/img/store_badges/mac/mac_RO.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
             <category>Dev</category>
             <category>Test</category>
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.1.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/05/17/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/05/17/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/05/17/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/05/17/post</guid>
             <pubDate>Sat, 17 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Descriere]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/05/17/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/05/17/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
 <p>Această actualizare îmbunătățește suportul pentru tablete, adaugă pagini utile de testare și remediază mai multe probleme de compatibilitate și performanță.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/05/17/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/05/17/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Adăugat layout pentru tablete</strong> pentru o utilizare mai eficientă a ecranelor mari.</li>
 <li class=""><strong>Remediată o eroare în care blocul „buton hub apăsat”</strong> apărea pentru hub-uri care nu acceptă această acțiune. De asemenea, au fost corectate <strong>blocurile de senzor de culoare</strong> afișate incorect pentru hub-uri nesuportate (ex: BuWizz).</li>
@@ -377,14 +377,14 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.1.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/05/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/05/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/05/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/05/10/post</guid>
             <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Descriere]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/05/10/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/05/10/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
 <p>Această actualizare îmbunătățește suportul pentru tablete, adaugă pagini utile de testare și corectează mai multe probleme de compatibilitate și performanță.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/05/10/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/05/10/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Adăugat un layout pentru tablete</strong> pentru o mai bună utilizare a ecranelor mai mari.</li>
 <li class=""><strong>Corectată o eroare în care blocul „buton hub apăsat”</strong> apărea pentru hub-uri care nu suportă această acțiune. De asemenea, au fost corectate <strong>blocurile de senzor de culoare</strong> nepotrivite pentru hub-uri nesuportate (ex: BuWizz).</li>
@@ -401,14 +401,14 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.1.2 - 2025.1.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/19/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/19/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/19/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/19/post</guid>
             <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Descriere]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/04/19/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/04/19/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
 <p>Această actualizare introduce noi opțiuni de personalizare pentru joystick, îmbunătățiri ale interfeței și corecturi importante pentru stabilitate.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/04/19/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/04/19/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Corectată o eroare în selectorul de colecții din paleta de blocuri</strong>: selectarea unei colecții, derularea către alta și revenirea nu aveau niciun efect.</li>
 <li class=""><strong>Corectată o prăbușire la încărcarea profilelor complexe</strong>, care conțineau un număr mare de blocuri.</li>
@@ -421,14 +421,14 @@
         </item>
         <item>
             <title><![CDATA[Lansare MOCPilot 2025.1.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/14/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/14/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/14/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/14/post</guid>
             <pubDate>Mon, 14 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Descriere]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/04/14/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriere">Descriere<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/04/14/post#descriere" class="hash-link" aria-label="Link direct către Descriere" title="Link direct către Descriere" translate="no">​</a></h3>
 <p>Această actualizare include mai multe corecturi importante de erori care îmbunătățesc performanța, reduc consumul bateriei și optimizează comportamentul blocurilor în mediul de programare.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/04/14/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modificări">Modificări<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/04/14/post#modific%C4%83ri" class="hash-link" aria-label="Link direct către Modificări" title="Link direct către Modificări" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Corectată o eroare care cauza utilizare ridicată a CPU-ului, descărcare rapidă a bateriei și performanță scăzută.</strong></li>
 <li class=""><strong>Corectată o eroare în blocurile pentru gamepad</strong> (de ex., „este butonul apăsat”, „este apăsat butonul D-PAD”) <strong>care împiedica atașarea acestora la alte blocuri.</strong></li>
@@ -440,11 +440,11 @@
         </item>
         <item>
             <title><![CDATA[MOCPilot 2025.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/04/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/ro/blog/2025/04/04/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/04/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/ro/blog/2025/04/04/post</guid>
             <pubDate>Fri, 04 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-test-beta-închis-a-început">🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!<a href="https://onemanstudio-il.github.io/mocpilot-app/ro/blog/2025/04/04/post#-mocpilot-202510-test-beta-%C3%AEnchis-a-%C3%AEnceput" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!" title="Link direct către 🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-test-beta-închis-a-început">🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/ro/blog/2025/04/04/post#-mocpilot-202510-test-beta-%C3%AEnchis-a-%C3%AEnceput" class="hash-link" aria-label="Link direct către 🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!" title="Link direct către 🚀 MOCPilot 2025.1.0 Test Beta Închis a Început!" translate="no">​</a></h2>
 <p>Suntem încântați să anunțăm că testul beta închis pentru MOCPilot 2025 este acum activ! Utilizatorii selectați pot explora noile funcționalități, pot oferi feedback și pot contribui la modelarea viitorului aplicației MOCPilot.</p>
 <p>Dacă ai primit o invitație, verifică-ți emailul pentru detaliile de acces.<br>
 <!-- -->Îți mulțumim că faci parte din această etapă importantă!</p>]]></content:encoded>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>MOCPilot Blog</title>
-        <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog</link>
+        <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog</link>
         <description>MOCPilot Blog</description>
         <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,30 +10,30 @@
         <language>no</language>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2026.5.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/08/23/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/08/23/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/08/23/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/08/23/post</guid>
             <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--fastvareoppdateringer-sbrick-støtte-og-byggerforbedringer">🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-mocpilot-202650--fastvareoppdateringer-sbrick-st%C3%B8tte-og-byggerforbedringer" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer" title="Direkte link til 🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--fastvareoppdateringer-sbrick-støtte-og-byggerforbedringer">🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-mocpilot-202650--fastvareoppdateringer-sbrick-st%C3%B8tte-og-byggerforbedringer" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer" title="Direkte link til 🚀 MOCPilot 2026.5.0 — Fastvareoppdateringer, SBrick-støtte og byggerforbedringer" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre <strong>MOCPilot 2026.5.0</strong>, tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne oppdateringen legger til støtte for fastvareoppdatering og gjenoppretting for flere LEGO Powered Up-huber, introduserer støtte for SBrick og SBrick Plus, forbedrer arbeidsflyten i blokkbyggeren og kontrollpanelet, og inkluderer mange brukergrensesnittforbedringer, krasjfikser og oversettelsesoppdateringer.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202650">✨ Hva er nytt i 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-hva-er-nytt-i-202650" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.5.0?" title="Direkte link til ✨ Hva er nytt i 2026.5.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-fastvareoppdatering-og-gjenoppretting-av-huber">🔄 Fastvareoppdatering og gjenoppretting av huber<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-fastvareoppdatering-og-gjenoppretting-av-huber" class="hash-link" aria-label="Direkte link til 🔄 Fastvareoppdatering og gjenoppretting av huber" title="Direkte link til 🔄 Fastvareoppdatering og gjenoppretting av huber" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202650">✨ Hva er nytt i 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-hva-er-nytt-i-202650" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.5.0?" title="Direkte link til ✨ Hva er nytt i 2026.5.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-fastvareoppdatering-og-gjenoppretting-av-huber">🔄 Fastvareoppdatering og gjenoppretting av huber<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-fastvareoppdatering-og-gjenoppretting-av-huber" class="hash-link" aria-label="Direkte link til 🔄 Fastvareoppdatering og gjenoppretting av huber" title="Direkte link til 🔄 Fastvareoppdatering og gjenoppretting av huber" translate="no">​</a></h3>
 <ul>
 <li class="">Lagt til støtte for fastvareoppdatering for <strong>Technic Hub</strong></li>
 <li class="">Lagt til støtte for fastvareoppdatering for <strong>Technic Move Hub</strong></li>
 <li class="">Utvidet støtte for fastvareoppdatering for flere støttede huber</li>
 <li class="">Lagt til deteksjon av huber tilkoblet i <strong>gjenopprettingsmodus</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubstøtte-og-konfigurasjon">🔌 Hubstøtte og konfigurasjon<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-hubst%C3%B8tte-og-konfigurasjon" class="hash-link" aria-label="Direkte link til 🔌 Hubstøtte og konfigurasjon" title="Direkte link til 🔌 Hubstøtte og konfigurasjon" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hubstøtte-og-konfigurasjon">🔌 Hubstøtte og konfigurasjon<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-hubst%C3%B8tte-og-konfigurasjon" class="hash-link" aria-label="Direkte link til 🔌 Hubstøtte og konfigurasjon" title="Direkte link til 🔌 Hubstøtte og konfigurasjon" translate="no">​</a></h3>
 <ul>
 <li class="">Lagt til støtte for <strong>SBrick</strong> og <strong>SBrick Plus</strong></li>
 <li class="">Lagt til konfigurasjonsendring for Technic Move Hub: <strong>Porsche GT4 e-Performance</strong>, <strong>Batmobile™‎ Tumbler</strong> og <strong>Lamborghini Revuelto</strong></li>
 <li class="">Omarbeidet hub-tilkoblingssider etter tilkoblingstype</li>
 <li class="">Omarbeidet hub-overvåkingssiden</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-oppdateringer-for-blokkbyggeren">🧱 Oppdateringer for blokkbyggeren<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-oppdateringer-for-blokkbyggeren" class="hash-link" aria-label="Direkte link til 🧱 Oppdateringer for blokkbyggeren" title="Direkte link til 🧱 Oppdateringer for blokkbyggeren" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-oppdateringer-for-blokkbyggeren">🧱 Oppdateringer for blokkbyggeren<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-oppdateringer-for-blokkbyggeren" class="hash-link" aria-label="Direkte link til 🧱 Oppdateringer for blokkbyggeren" title="Direkte link til 🧱 Oppdateringer for blokkbyggeren" translate="no">​</a></h3>
 <ul>
 <li class="">Lagt til filtrering etter blokknivå: <strong>Beginner</strong>, <strong>Advanced</strong> og <strong>Guru</strong></li>
 <li class="">Blokknivåer kan konfigureres når et profil-block program opprettes, redigeres eller kjøres</li>
@@ -41,14 +41,14 @@
 <li class="">Lagt til <strong>effektpuls</strong>-blokk for Technic Move Hub</li>
 <li class="">Fikset skalaendringer med musehjulet i blokkpaletten</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-og-kontrollpanel">🎮 Gamepad og kontrollpanel<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-gamepad-og-kontrollpanel" class="hash-link" aria-label="Direkte link til 🎮 Gamepad og kontrollpanel" title="Direkte link til 🎮 Gamepad og kontrollpanel" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-og-kontrollpanel">🎮 Gamepad og kontrollpanel<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-gamepad-og-kontrollpanel" class="hash-link" aria-label="Direkte link til 🎮 Gamepad og kontrollpanel" title="Direkte link til 🎮 Gamepad og kontrollpanel" translate="no">​</a></h3>
 <ul>
 <li class="">Omarbeidet gamepad-siden og gamepadtestersiden</li>
 <li class="">Fikset tilstandsoverganger for gamepadens D-pad</li>
 <li class="">Lagt til et kontekstmenyvalg for å endre temaet for kontrollpanelelementet direkte</li>
 <li class="">Polert profiloverskrifter i kontrollpanelet, sorteringsmeny, kortgradienter og avstand i opprettelsesskjemaet</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-brukergrensesnitt-profiler-og-stabilitet">🎨 Brukergrensesnitt, profiler og stabilitet<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/08/23/post#-brukergrensesnitt-profiler-og-stabilitet" class="hash-link" aria-label="Direkte link til 🎨 Brukergrensesnitt, profiler og stabilitet" title="Direkte link til 🎨 Brukergrensesnitt, profiler og stabilitet" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-brukergrensesnitt-profiler-og-stabilitet">🎨 Brukergrensesnitt, profiler og stabilitet<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/08/23/post#-brukergrensesnitt-profiler-og-stabilitet" class="hash-link" aria-label="Direkte link til 🎨 Brukergrensesnitt, profiler og stabilitet" title="Direkte link til 🎨 Brukergrensesnitt, profiler og stabilitet" translate="no">​</a></h3>
 <ul>
 <li class="">Fjernet den gule paletten fra forhåndsbygde profiler, slik at de nå ser ut som den vanlige profilsiden</li>
 <li class="">Forbedret generelt utseende og mindre detaljer i brukergrensesnittet</li>
@@ -58,25 +58,25 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse av MOCPilot 2026.4.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/06/06/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/06/06/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/06/06/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/06/06/post</guid>
             <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--angregjør-om-hub-profiler-og-byggerfikser">🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/06/06/post#-mocpilot-202640--angregj%C3%B8r-om-hub-profiler-og-byggerfikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser" title="Direkte link til 🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--angregjør-om-hub-profiler-og-byggerfikser">🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/06/06/post#-mocpilot-202640--angregj%C3%B8r-om-hub-profiler-og-byggerfikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser" title="Direkte link til 🚀 MOCPilot 2026.4.0 — Angre/Gjør om, hub-profiler og byggerfikser" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre lanseringen av <strong>MOCPilot 2026.4.0</strong>, tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne oppdateringen legger til angre- og gjør om-historikk for blokkprogrammer, forbedrer hub-oppsett i profilbyggeren og retter flere problemer i byggeren og enhetskontrollen.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202640">✨ Hva er nytt i 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/06/06/post#-hva-er-nytt-i-202640" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.4.0?" title="Direkte link til ✨ Hva er nytt i 2026.4.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-historikk-for-blokkprogrammer">🧱 Historikk for blokkprogrammer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/06/06/post#-historikk-for-blokkprogrammer" class="hash-link" aria-label="Direkte link til 🧱 Historikk for blokkprogrammer" title="Direkte link til 🧱 Historikk for blokkprogrammer" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202640">✨ Hva er nytt i 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/06/06/post#-hva-er-nytt-i-202640" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.4.0?" title="Direkte link til ✨ Hva er nytt i 2026.4.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-historikk-for-blokkprogrammer">🧱 Historikk for blokkprogrammer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/06/06/post#-historikk-for-blokkprogrammer" class="hash-link" aria-label="Direkte link til 🧱 Historikk for blokkprogrammer" title="Direkte link til 🧱 Historikk for blokkprogrammer" translate="no">​</a></h3>
 <ul>
 <li class="">Lagt til <strong>historikkontroll for angre og gjør om</strong> i blokkprogrammer</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-profilbygger-for-huber">🔌 Profilbygger for huber<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/06/06/post#-profilbygger-for-huber" class="hash-link" aria-label="Direkte link til 🔌 Profilbygger for huber" title="Direkte link til 🔌 Profilbygger for huber" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-profilbygger-for-huber">🔌 Profilbygger for huber<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/06/06/post#-profilbygger-for-huber" class="hash-link" aria-label="Direkte link til 🔌 Profilbygger for huber" title="Direkte link til 🔌 Profilbygger for huber" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Hub-tillegg</strong> er koblet fra tilkoblingsflyten i profilbyggeren</li>
 <li class="">Huber kan nå legges til i en profil uten krav om umiddelbar tilkobling</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-bygger--og-enhetsfikser">🛠 Bygger- og enhetsfikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/06/06/post#-bygger--og-enhetsfikser" class="hash-link" aria-label="Direkte link til 🛠 Bygger- og enhetsfikser" title="Direkte link til 🛠 Bygger- og enhetsfikser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-bygger--og-enhetsfikser">🛠 Bygger- og enhetsfikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/06/06/post#-bygger--og-enhetsfikser" class="hash-link" aria-label="Direkte link til 🛠 Bygger- og enhetsfikser" title="Direkte link til 🛠 Bygger- og enhetsfikser" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet den oversatte kontekstmenyteksten <strong>delete-blocks</strong></li>
 <li class="">Rettet <strong>kommandotilordning for WeDo 2.0-motorporter</strong>, slik at kontroll gjenopprettes ved bruk av én av to motorporter</li>
@@ -88,25 +88,25 @@
         </item>
         <item>
             <title><![CDATA[Release MOCPilot 2026.3.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/05/02/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/05/02/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/05/02/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/05/02/post</guid>
             <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--dashboard-kontrollerikoner-og-builder-fikser">🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/05/02/post#-mocpilot-202632--dashboard-kontrollerikoner-og-builder-fikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser" title="Direkte link til 🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--dashboard-kontrollerikoner-og-builder-fikser">🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/05/02/post#-mocpilot-202632--dashboard-kontrollerikoner-og-builder-fikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser" title="Direkte link til 🚀 MOCPilot 2026.3.2 — Dashboard-kontrollerikoner og Builder-fikser" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre lanseringen av <strong>MOCPilot 2026.3.2</strong>, tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne oppdateringen forbedrer utseendet til dashboard-kontrollene, retter flere interaksjonsproblemer i builderen og forbedrer kalibreringsoppførselen for styrestaget.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202632">✨ Hva er nytt i 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/05/02/post#-hva-er-nytt-i-202632" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.3.2?" title="Direkte link til ✨ Hva er nytt i 2026.3.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-forbedringer-for-dashboard-kontroller">🎛 Forbedringer for Dashboard-kontroller<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/05/02/post#-forbedringer-for-dashboard-kontroller" class="hash-link" aria-label="Direkte link til 🎛 Forbedringer for Dashboard-kontroller" title="Direkte link til 🎛 Forbedringer for Dashboard-kontroller" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202632">✨ Hva er nytt i 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/05/02/post#-hva-er-nytt-i-202632" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.3.2?" title="Direkte link til ✨ Hva er nytt i 2026.3.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-forbedringer-for-dashboard-kontroller">🎛 Forbedringer for Dashboard-kontroller<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/05/02/post#-forbedringer-for-dashboard-kontroller" class="hash-link" aria-label="Direkte link til 🎛 Forbedringer for Dashboard-kontroller" title="Direkte link til 🎛 Forbedringer for Dashboard-kontroller" translate="no">​</a></h3>
 <ul>
 <li class="">Lagt til <strong>nye ikoner</strong> for dashboard-kontroller</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--og-blokkfikser">🧱 Builder- og blokkfikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/05/02/post#-builder--og-blokkfikser" class="hash-link" aria-label="Direkte link til 🧱 Builder- og blokkfikser" title="Direkte link til 🧱 Builder- og blokkfikser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--og-blokkfikser">🧱 Builder- og blokkfikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/05/02/post#-builder--og-blokkfikser" class="hash-link" aria-label="Direkte link til 🧱 Builder- og blokkfikser" title="Direkte link til 🧱 Builder- og blokkfikser" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet et problem der <strong>Hub-tilt endret</strong>-hendelsen kunne utløses feil på grunn av sammenligning mellom heltall og desimaltall</li>
 <li class="">Rettet problemer med <strong>blokkfeste ved draing</strong>, som påvirket <strong>C-blokker</strong> og andre blokktyper</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-oppdatering-av-styrekalibrering">⚙️ Oppdatering av styrekalibrering<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/05/02/post#%EF%B8%8F-oppdatering-av-styrekalibrering" class="hash-link" aria-label="Direkte link til ⚙️ Oppdatering av styrekalibrering" title="Direkte link til ⚙️ Oppdatering av styrekalibrering" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-oppdatering-av-styrekalibrering">⚙️ Oppdatering av styrekalibrering<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/05/02/post#%EF%B8%8F-oppdatering-av-styrekalibrering" class="hash-link" aria-label="Direkte link til ⚙️ Oppdatering av styrekalibrering" title="Direkte link til ⚙️ Oppdatering av styrekalibrering" translate="no">​</a></h3>
 <ul>
 <li class="">Blokken <strong>Kalibrer styrestag</strong> er omarbeidet</li>
 <li class="">Blokken tilbakestiller nå <strong>relativ posisjon til <code>0</code></strong> når kalibreringen er fullført</li>
@@ -118,22 +118,22 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse av MOCPilot 2026.3.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/04/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/04/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/04/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/04/18/post</guid>
             <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--gamepad--og-builder-oppdatering">🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-mocpilot-202631--gamepad--og-builder-oppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering" title="Direkte link til 🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--gamepad--og-builder-oppdatering">🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-mocpilot-202631--gamepad--og-builder-oppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering" title="Direkte link til 🚀 MOCPilot 2026.3.1 — Gamepad- og Builder-oppdatering" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre <strong>MOCPilot 2026.3.1</strong>, tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne utgivelsen gir store forbedringer i blokkbyggeren (touch + desktop) og sterkere gamepad-støtte.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202631">✨ Hva er nytt i 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-hva-er-nytt-i-202631" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.3.1?" title="Direkte link til ✨ Hva er nytt i 2026.3.1?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-forbedringer">🎮 Gamepad-forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-gamepad-forbedringer" class="hash-link" aria-label="Direkte link til 🎮 Gamepad-forbedringer" title="Direkte link til 🎮 Gamepad-forbedringer" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202631">✨ Hva er nytt i 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-hva-er-nytt-i-202631" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.3.1?" title="Direkte link til ✨ Hva er nytt i 2026.3.1?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-gamepad-forbedringer">🎮 Gamepad-forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-gamepad-forbedringer" class="hash-link" aria-label="Direkte link til 🎮 Gamepad-forbedringer" title="Direkte link til 🎮 Gamepad-forbedringer" translate="no">​</a></h3>
 <ul>
 <li class="">Gamepad-blokker <strong>aktiveres automatisk</strong> når en profil åpnes (også når en gamepad allerede er tilkoblet)</li>
 <li class="">Rettet et problem der <strong>gamepad-hendelsesblokker lagt til senere</strong> ikke ble aktive før programmet ble startet på nytt</li>
 <li class="">Lagt til innstilling for <strong>gamepad-verdirekkevidde</strong> for finere kontroll</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--og-editorforbedringer">🧱 Builder- og editorforbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-builder--og-editorforbedringer" class="hash-link" aria-label="Direkte link til 🧱 Builder- og editorforbedringer" title="Direkte link til 🧱 Builder- og editorforbedringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-builder--og-editorforbedringer">🧱 Builder- og editorforbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-builder--og-editorforbedringer" class="hash-link" aria-label="Direkte link til 🧱 Builder- og editorforbedringer" title="Direkte link til 🧱 Builder- og editorforbedringer" translate="no">​</a></h3>
 <ul>
 <li class="">Stor pakke med forbedringer for <strong>touch-gester</strong> og generell interaksjon (mobil + desktop)</li>
 <li class="">Mer pålitelig <strong>angre/historikk</strong> (foreløpig <strong>kun dashboard</strong>), med en omarbeidet historikk som følger endringer slik at du kan gå tilbake til en tidligere tilstand mer konsekvent</li>
@@ -142,24 +142,24 @@
 <li class="">Forbedret block snapping og innsettingsforhåndsvisning når du bygger kontrollstrukturer</li>
 <li class="">La til en <strong>halo</strong> for blokker som kjører</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-og-tilkobling">🔌 Hub og tilkobling<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-hub-og-tilkobling" class="hash-link" aria-label="Direkte link til 🔌 Hub og tilkobling" title="Direkte link til 🔌 Hub og tilkobling" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-og-tilkobling">🔌 Hub og tilkobling<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-hub-og-tilkobling" class="hash-link" aria-label="Direkte link til 🔌 Hub og tilkobling" title="Direkte link til 🔌 Hub og tilkobling" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Hub-knappvelgeren</strong> i den relevante blokken er nå <strong>alltid synlig</strong>, med omarbeidet oppsett av knapp-hendelser</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-palett-og-hjelp">🧩 Palett og hjelp<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-palett-og-hjelp" class="hash-link" aria-label="Direkte link til 🧩 Palett og hjelp" title="Direkte link til 🧩 Palett og hjelp" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-palett-og-hjelp">🧩 Palett og hjelp<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-palett-og-hjelp" class="hash-link" aria-label="Direkte link til 🧩 Palett og hjelp" title="Direkte link til 🧩 Palett og hjelp" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet palettproblemer etter <strong>språk/locale-bytte</strong> (handlingsknapper i paletten kunne bli inaktive)</li>
 <li class="">Lagt til kontekstmenyvalget <strong>«About Block»</strong> for å åpne dokumentasjon for valgt blokk</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hjelp-oppdateringer">📚 Hjelp-oppdateringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-hjelp-oppdateringer" class="hash-link" aria-label="Direkte link til 📚 Hjelp-oppdateringer" title="Direkte link til 📚 Hjelp-oppdateringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hjelp-oppdateringer">📚 Hjelp-oppdateringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-hjelp-oppdateringer" class="hash-link" aria-label="Direkte link til 📚 Hjelp-oppdateringer" title="Direkte link til 📚 Hjelp-oppdateringer" translate="no">​</a></h3>
 <ul>
 <li class="">Hjelpesider utvidet med <strong>direkte lenker til blokkdokumentasjon</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-fikser">🤖 Android-fikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-android-fikser" class="hash-link" aria-label="Direkte link til 🤖 Android-fikser" title="Direkte link til 🤖 Android-fikser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-android-fikser">🤖 Android-fikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-android-fikser" class="hash-link" aria-label="Direkte link til 🤖 Android-fikser" title="Direkte link til 🤖 Android-fikser" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet problemer med <strong>deling og import av profiler</strong> på Android</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rendering-og-ytelse">🛠 Rendering og ytelse<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/04/18/post#-rendering-og-ytelse" class="hash-link" aria-label="Direkte link til 🛠 Rendering og ytelse" title="Direkte link til 🛠 Rendering og ytelse" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rendering-og-ytelse">🛠 Rendering og ytelse<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/04/18/post#-rendering-og-ytelse" class="hash-link" aria-label="Direkte link til 🛠 Rendering og ytelse" title="Direkte link til 🛠 Rendering og ytelse" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet <strong>uskarpe/ikke-skarpe blokker</strong> ved høy skalering ved å omarbeide rendererens teksturhåndtering</li>
 <li class="">Optimaliserte <strong>texture upscaler</strong> for mobil og forbedret avstand/zoom-oppførsel i programområdet</li>
@@ -170,27 +170,27 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse av MOCPilot 2026.2.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/02/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/02/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/02/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/02/28/post</guid>
             <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--dashboard--og-hubfikser">🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/28/post#-mocpilot-202623--dashboard--og-hubfikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser" title="Direkte link til 🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--dashboard--og-hubfikser">🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/28/post#-mocpilot-202623--dashboard--og-hubfikser" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser" title="Direkte link til 🚀 MOCPilot 2026.2.3 — Dashboard- og hubfikser" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre <strong>MOCPilot 2026.2.3</strong>, tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne oppdateringen forbedrer dashboard-arbeidsflyten og retter flere viktige hub- og editorproblemer.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202623">✨ Hva er nytt i 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/28/post#-hva-er-nytt-i-202623" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.2.3?" title="Direkte link til ✨ Hva er nytt i 2026.2.3?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dashboard-forbedringer">🧱 Dashboard-forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/28/post#-dashboard-forbedringer" class="hash-link" aria-label="Direkte link til 🧱 Dashboard-forbedringer" title="Direkte link til 🧱 Dashboard-forbedringer" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202623">✨ Hva er nytt i 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/28/post#-hva-er-nytt-i-202623" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.2.3?" title="Direkte link til ✨ Hva er nytt i 2026.2.3?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dashboard-forbedringer">🧱 Dashboard-forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/28/post#-dashboard-forbedringer" class="hash-link" aria-label="Direkte link til 🧱 Dashboard-forbedringer" title="Direkte link til 🧱 Dashboard-forbedringer" translate="no">​</a></h3>
 <ul>
 <li class="">Du kan nå <strong>duplisere dashboard-kontrollere</strong>, med valg om å <strong>kopiere alle egenskaper</strong> eller <strong>kopiere kun etter type</strong></li>
 <li class=""><strong>Paletten er omarbeidet</strong> for raskere bygging: vises under dashboardet, har en tøm-knapp, lukkes ikke etter at komponenter er lagt til, og beholder seksjonsvalget konsistent</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-oppdateringer-og-fikser">🔌 Hub-oppdateringer og fikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/28/post#-hub-oppdateringer-og-fikser" class="hash-link" aria-label="Direkte link til 🔌 Hub-oppdateringer og fikser" title="Direkte link til 🔌 Hub-oppdateringer og fikser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-oppdateringer-og-fikser">🔌 Hub-oppdateringer og fikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/28/post#-hub-oppdateringer-og-fikser" class="hash-link" aria-label="Direkte link til 🔌 Hub-oppdateringer og fikser" title="Direkte link til 🔌 Hub-oppdateringer og fikser" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0</strong> reimplementert til <strong>ny protokoll på iOS</strong> (Android fortsetter å bruke den forrige protokollen)</li>
 <li class="">Rettet et problem der den <strong>boolske blokken «hub er tilkoblet»</strong> ikke dukket opp mens huben annonserte</li>
 <li class="">Rettet en feil der <strong>lysblokken</strong> kunne slutte å fungere på grunn av håndtering av start/stopp-motorkommandoer</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-fikser">🛠 Fikser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/28/post#-fikser" class="hash-link" aria-label="Direkte link til 🛠 Fikser" title="Direkte link til 🛠 Fikser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-fikser">🛠 Fikser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/28/post#-fikser" class="hash-link" aria-label="Direkte link til 🛠 Fikser" title="Direkte link til 🛠 Fikser" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet e-postvalidering i inndata-komponenten som kunne tillate ugyldige adresser som <code>mail@domain.</code></li>
 </ul>
@@ -200,31 +200,31 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2026.2.2]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/02/18/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/02/18/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/02/18/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/02/18/post</guid>
             <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--utvidet-hub--og-kontrolloppdatering">🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-mocpilot-202622--utvidet-hub--og-kontrolloppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering" title="Direkte link til 🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--utvidet-hub--og-kontrolloppdatering">🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-mocpilot-202622--utvidet-hub--og-kontrolloppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering" title="Direkte link til 🚀 MOCPilot 2026.2.2 — Utvidet hub- og kontrolloppdatering" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre lanseringen av <strong>MOCPilot 2026.2.2</strong>, nå tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne versjonen utvider maskinvarekompatibiliteten betydelig og introduserer kraftige nye programmeringsblokker for avansert hub-interaksjon.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202622">✨ Hva er nytt i 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-hva-er-nytt-i-202622" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.2.2?" title="Direkte link til ✨ Hva er nytt i 2026.2.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ny-hub-støtte">🆕 Ny hub-støtte<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-ny-hub-st%C3%B8tte" class="hash-link" aria-label="Direkte link til 🆕 Ny hub-støtte" title="Direkte link til 🆕 Ny hub-støtte" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202622">✨ Hva er nytt i 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-hva-er-nytt-i-202622" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.2.2?" title="Direkte link til ✨ Hva er nytt i 2026.2.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ny-hub-støtte">🆕 Ny hub-støtte<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-ny-hub-st%C3%B8tte" class="hash-link" aria-label="Direkte link til 🆕 Ny hub-støtte" title="Direkte link til 🆕 Ny hub-støtte" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0-huber</strong> er nå fullt støttet</li>
 <li class=""><strong>Mould King 6.0-huber</strong> er nå fullt støttet</li>
 <li class=""><strong>LEGO WeDo 2.0-hub</strong> er nå fullt støttet</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-sensorstøtte">🔌 Sensorstøtte<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-sensorst%C3%B8tte" class="hash-link" aria-label="Direkte link til 🔌 Sensorstøtte" title="Direkte link til 🔌 Sensorstøtte" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-sensorstøtte">🔌 Sensorstøtte<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-sensorst%C3%B8tte" class="hash-link" aria-label="Direkte link til 🔌 Sensorstøtte" title="Direkte link til 🔌 Sensorstøtte" translate="no">​</a></h3>
 <ul>
 <li class="">WeDo 2.0 tilt-sensor</li>
 <li class="">WeDo 2.0 bevegelsessensor</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nye-programmeringsblokker">🧱 Nye programmeringsblokker<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-nye-programmeringsblokker" class="hash-link" aria-label="Direkte link til 🧱 Nye programmeringsblokker" title="Direkte link til 🧱 Nye programmeringsblokker" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nye-programmeringsblokker">🧱 Nye programmeringsblokker<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-nye-programmeringsblokker" class="hash-link" aria-label="Direkte link til 🧱 Nye programmeringsblokker" title="Direkte link til 🧱 Nye programmeringsblokker" translate="no">​</a></h3>
 <p>Denne versjonen introduserer nye hendelses- og kontrollblokker som utvider mulighetene for sanntidsinteraksjon med huber.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-sensor-hendelsesblokker">🔄 Hub-sensor hendelsesblokker<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-hub-sensor-hendelsesblokker" class="hash-link" aria-label="Direkte link til 🔄 Hub-sensor hendelsesblokker" title="Direkte link til 🔄 Hub-sensor hendelsesblokker" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-sensor-hendelsesblokker">🔄 Hub-sensor hendelsesblokker<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-hub-sensor-hendelsesblokker" class="hash-link" aria-label="Direkte link til 🔄 Hub-sensor hendelsesblokker" title="Direkte link til 🔄 Hub-sensor hendelsesblokker" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Hub-aksellerometerdata endret</strong></li>
 <li class=""><strong>Hub-tilt endret</strong></li>
@@ -232,7 +232,7 @@
 <li class=""><strong>Alle hubers batterinivå endret</strong></li>
 </ul>
 <p>Disse blokkene gjør det mulig for programmet ditt å reagere umiddelbart på bevegelse, rotasjon og endringer i strømtilførsel.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-tilkoblingskontrollblokker">🔌 Hub-tilkoblingskontrollblokker<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#-hub-tilkoblingskontrollblokker" class="hash-link" aria-label="Direkte link til 🔌 Hub-tilkoblingskontrollblokker" title="Direkte link til 🔌 Hub-tilkoblingskontrollblokker" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hub-tilkoblingskontrollblokker">🔌 Hub-tilkoblingskontrollblokker<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#-hub-tilkoblingskontrollblokker" class="hash-link" aria-label="Direkte link til 🔌 Hub-tilkoblingskontrollblokker" title="Direkte link til 🔌 Hub-tilkoblingskontrollblokker" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Koble til hub</strong></li>
 <li class=""><strong>Koble fra hub</strong></li>
@@ -240,7 +240,7 @@
 <p>Du kan nå administrere hub-tilkoblinger direkte under programkjøring.<br>
 <!-- -->Dette gjør det mulig å koble til en hub på nytt uten å starte programmet på nytt hvis forbindelsen mistes, noe som gjør prosjektene mer robuste og fleksible.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-forbedringer">⚙️ Forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/02/18/post#%EF%B8%8F-forbedringer" class="hash-link" aria-label="Direkte link til ⚙️ Forbedringer" title="Direkte link til ⚙️ Forbedringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-forbedringer">⚙️ Forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/02/18/post#%EF%B8%8F-forbedringer" class="hash-link" aria-label="Direkte link til ⚙️ Forbedringer" title="Direkte link til ⚙️ Forbedringer" translate="no">​</a></h3>
 <ul>
 <li class="">Forbedret generell systemstabilitet</li>
 <li class="">Ytelsesoptimaliseringer for jevnere hub-interaksjon</li>
@@ -252,22 +252,22 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2026.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/01/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2026/01/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/01/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2026/01/10/post</guid>
             <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--funksjons--og-stabilitetsoppdatering">🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/01/10/post#-mocpilot-202610--funksjons--og-stabilitetsoppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering" title="Direkte link til 🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--funksjons--og-stabilitetsoppdatering">🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/01/10/post#-mocpilot-202610--funksjons--og-stabilitetsoppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering" title="Direkte link til 🚀 MOCPilot 2026.1.0 — Funksjons- og stabilitetsoppdatering" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre lanseringen av <strong>MOCPilot 2026.1.0</strong>, nå tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne utgivelsen introduserer <strong>gjestemodus</strong>, forbedrer brukervennligheten på mobile enheter og leverer viktige stabilitets- og ytelsesrettelser på tvers av alle støttede plattformer.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202610">✨ Hva er nytt i 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/01/10/post#-hva-er-nytt-i-202610" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.1.0?" title="Direkte link til ✨ Hva er nytt i 2026.1.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nytt">🆕 Nytt<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/01/10/post#-nytt" class="hash-link" aria-label="Direkte link til 🆕 Nytt" title="Direkte link til 🆕 Nytt" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-nytt-i-202610">✨ Hva er nytt i 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/01/10/post#-hva-er-nytt-i-202610" class="hash-link" aria-label="Direkte link til ✨ Hva er nytt i 2026.1.0?" title="Direkte link til ✨ Hva er nytt i 2026.1.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nytt">🆕 Nytt<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/01/10/post#-nytt" class="hash-link" aria-label="Direkte link til 🆕 Nytt" title="Direkte link til 🆕 Nytt" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Gjestemodus</strong> — bruk appen uten konto, med mulighet til å opprette en senere</li>
 <li class="">Språkvalg lagt til på autentiseringsskjermen</li>
 <li class="">Appen blokkerer nå bruk av huber med ikke-støttet firmware og viser en tydelig advarsel</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-forbedringer">⚙️ Forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/01/10/post#%EF%B8%8F-forbedringer" class="hash-link" aria-label="Direkte link til ⚙️ Forbedringer" title="Direkte link til ⚙️ Forbedringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-forbedringer">⚙️ Forbedringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/01/10/post#%EF%B8%8F-forbedringer" class="hash-link" aria-label="Direkte link til ⚙️ Forbedringer" title="Direkte link til ⚙️ Forbedringer" translate="no">​</a></h3>
 <ul>
 <li class="">Forbedret blokk-draing på mobil (bedre touch-håndtering, færre utilsiktede interaksjoner)</li>
 <li class="">Blokketøyet/paletten skjules nå automatisk under draing på mobil</li>
@@ -275,7 +275,7 @@
 <li class="">Forbedret tekstinndata på tvers av alle plattformer</li>
 <li class="">Jevnere hub-kontroll med redusert forsinkelse</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rettelser">🛠 Rettelser<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2026/01/10/post#-rettelser" class="hash-link" aria-label="Direkte link til 🛠 Rettelser" title="Direkte link til 🛠 Rettelser" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-rettelser">🛠 Rettelser<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2026/01/10/post#-rettelser" class="hash-link" aria-label="Direkte link til 🛠 Rettelser" title="Direkte link til 🛠 Rettelser" translate="no">​</a></h3>
 <ul>
 <li class="">Rettet flere problemer med blokk drag &amp; drop, inkludert fastlåste blokker og tapt mus-/touch-inndata</li>
 <li class="">Rettet krasj ved stopping av programmer som bruker egendefinerte (“My”) blokker</li>
@@ -291,15 +291,15 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.2.0 - 2025.2.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/12/28/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/12/28/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/12/28/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/12/28/post</guid>
             <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--stabilitets--og-opplevelsesoppdatering">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/12/28/post#-mocpilot-202520---202524--stabilitets--og-opplevelsesoppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering" title="Direkte link til 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--stabilitets--og-opplevelsesoppdatering">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/12/28/post#-mocpilot-202520---202524--stabilitets--og-opplevelsesoppdatering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering" title="Direkte link til 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Stabilitets- og opplevelsesoppdatering" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre <strong>MOCPilot 2025.2.0 - 2025.2.4</strong>, nå tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>.</p>
 <p>Denne utgivelsen fokuserer på <strong>jevnere oppførsel</strong>, <strong>forbedret pålitelighet</strong> og <strong>UI-forbedringer</strong> på tvers av alle plattformer.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-forbedret-i-202520---202524">✨ Hva er forbedret i 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/12/28/post#-hva-er-forbedret-i-202520---202524" class="hash-link" aria-label="Direkte link til ✨ Hva er forbedret i 2025.2.0 - 2025.2.4?" title="Direkte link til ✨ Hva er forbedret i 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hva-er-forbedret-i-202520---202524">✨ Hva er forbedret i 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/12/28/post#-hva-er-forbedret-i-202520---202524" class="hash-link" aria-label="Direkte link til ✨ Hva er forbedret i 2025.2.0 - 2025.2.4?" title="Direkte link til ✨ Hva er forbedret i 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
 <ul>
 <li class="">Jevnere og mer stabil oppførsel takket være forbedret tidslogikk</li>
 <li class="">Forbedret profilsynkronisering og oppdateringspålitelighet</li>
@@ -317,16 +317,16 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.2.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/11/15/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/11/15/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/11/15/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/11/15/post</guid>
             <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--offisiell-flerplattform-lansering">🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/11/15/post#-mocpilot-202520--offisiell-flerplattform-lansering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!" title="Direkte link til 🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--offisiell-flerplattform-lansering">🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/11/15/post#-mocpilot-202520--offisiell-flerplattform-lansering" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!" title="Direkte link til 🚀 MOCPilot 2025.2.0 — Offisiell flerplattform-lansering!" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre den offisielle lanseringen av <strong>MOCPilot 2025.2.0</strong>, nå tilgjengelig på <strong>Android</strong>, <strong>iOS</strong> og <strong>macOS</strong>!</p>
 <p>Appen, tidligere kjent som <strong>Controlz</strong>, har fått nytt navn: <strong>MOCPilot</strong>.<br>
 <!-- -->Navnet gjenspeiler bedre appens formål — å være en samlet “cockpit” for styring og programmering av dine LEGO®-kreasjoner.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nytt-i-202520">✨ Nytt i 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/11/15/post#-nytt-i-202520" class="hash-link" aria-label="Direkte link til ✨ Nytt i 2025.2.0" title="Direkte link til ✨ Nytt i 2025.2.0" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-nytt-i-202520">✨ Nytt i 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/11/15/post#-nytt-i-202520" class="hash-link" aria-label="Direkte link til ✨ Nytt i 2025.2.0" title="Direkte link til ✨ Nytt i 2025.2.0" translate="no">​</a></h2>
 <ul>
 <li class="">Felles lansering for Android, iOS og macOS</li>
 <li class="">Forbedret stabilitet, ytelse og UI-respons</li>
@@ -339,29 +339,29 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.1.9]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/06/3/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/06/3/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/06/3/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/06/3/post</guid>
             <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-er-nå-tilgjengelig-i-mac-app-store">🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/06/3/post#-mocpilot-202519-er-n%C3%A5-tilgjengelig-i-mac-app-store" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!" title="Direkte link til 🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-er-nå-tilgjengelig-i-mac-app-store">🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/06/3/post#-mocpilot-202519-er-n%C3%A5-tilgjengelig-i-mac-app-store" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!" title="Direkte link til 🚀 MOCPilot 2025.1.9 er nå tilgjengelig i Mac App Store!" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre utgivelsen av MOCPilot 2025.1.9 som en native macOS-app!</p>
 <hr>
 <p>Nå kan du nyte full skrivebordsytelse og sømløs integrasjon med macOS.<br>
 <!-- -->Last den ned i dag fra Mac App Store og ta kontroll over LEGO®-kreftene dine som aldri før!</p>
-<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app/no/img/store_badges/mac/mac_NO.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
+<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app-docs/no/img/store_badges/mac/mac_NO.svg" alt="Download on the Mac App Store" height="60"></a>]]></content:encoded>
             <category>Dev</category>
             <category>Test</category>
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.1.5]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/05/17/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/05/17/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/05/17/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/05/17/post</guid>
             <pubDate>Sat, 17 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Beskrivelse]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/05/17/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/05/17/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
 <p>Denne oppdateringen forbedrer blokkredigeringsopplevelsen, øker ytelsen og sikrer riktig funksjonalitet på nyere Android-versjoner.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/05/17/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/05/17/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Fikset en feil med hub-skanning på Android 12+</strong> ved å be om presis lokasjonstillatelse.</li>
 <li class=""><strong>Lagt til mulighet for å skjule/vis blokkpaletten</strong> ved å klikke på den valgte blokk-kolleksjonen.</li>
@@ -374,14 +374,14 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.1.4]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/05/10/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/05/10/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/05/10/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/05/10/post</guid>
             <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Beskrivelse]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/05/10/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/05/10/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
 <p>Denne oppdateringen forbedrer støtte for nettbrett, legger til nyttige test-sider, og fikser flere kompatibilitets- og ytelsesproblemer.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/05/10/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/05/10/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Lagt til nettbrettoppsett</strong> for bedre utnyttelse av større skjermer.</li>
 <li class=""><strong>Fikset en feil hvor "hub-knapp trykket" blokken</strong> dukket opp for hubs som ikke støtter denne handlingen. Fikset også upassende <strong>fargesensor-blokker</strong> for ikke-støttede hubs (f.eks. BuWizz).</li>
@@ -398,14 +398,14 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.1.2 - 2025.1.3]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/19/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/19/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/19/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/19/post</guid>
             <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Beskrivelse]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/04/19/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/04/19/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
 <p>Denne oppdateringen introduserer nye tilpasningsmuligheter for joystick, forbedringer i brukergrensesnittet, og viktige stabilitetsfikser.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/04/19/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/04/19/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Fikset en feil i blokkpalettens samlingsvelger</strong>: å velge en samling, bla til en annen og returnere hadde ingen effekt.</li>
 <li class=""><strong>Fikset en krasj ved lasting av tunge profiler</strong> med et stort antall blokker.</li>
@@ -418,14 +418,14 @@
         </item>
         <item>
             <title><![CDATA[Utgivelse MOCPilot 2025.1.1]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/14/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/14/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/14/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/14/post</guid>
             <pubDate>Mon, 14 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Beskrivelse]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/04/14/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
+            <content:encoded><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beskrivelse">Beskrivelse<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/04/14/post#beskrivelse" class="hash-link" aria-label="Direkte link til Beskrivelse" title="Direkte link til Beskrivelse" translate="no">​</a></h3>
 <p>Denne oppdateringen inkluderer flere viktige feilrettinger som forbedrer ytelsen, reduserer batteriforbruket, og forbedrer blokkoppførselen i programmeringsmiljøet.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/04/14/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endringer">Endringer<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/04/14/post#endringer" class="hash-link" aria-label="Direkte link til Endringer" title="Direkte link til Endringer" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Fikset en feil som forårsaket høy CPU-bruk, raskt batteritap og lav ytelse.</strong></li>
 <li class=""><strong>Fikset en feil hvor gamepad-blokker</strong> (f.eks. "er knapp trykket", "er D-PAD knapp trykket") <strong>ikke kunne kobles til andre blokker.</strong></li>
@@ -437,11 +437,11 @@
         </item>
         <item>
             <title><![CDATA[MOCPilot 2025.1.0]]></title>
-            <link>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/04/post</link>
-            <guid>https://OneManStudio-IL.github.io/mocpilot-app/no/blog/2025/04/04/post</guid>
+            <link>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/04/post</link>
+            <guid>https://OneManStudio-IL.github.io/mocpilot-app-docs/no/blog/2025/04/04/post</guid>
             <pubDate>Fri, 04 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[🚀 MOCPilot 2025.1.0 lukket beta har startet!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-lukket-beta-har-startet">🚀 MOCPilot 2025.1.0 lukket beta har startet!<a href="https://onemanstudio-il.github.io/mocpilot-app/no/blog/2025/04/04/post#-mocpilot-202510-lukket-beta-har-startet" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.1.0 lukket beta har startet!" title="Direkte link til 🚀 MOCPilot 2025.1.0 lukket beta har startet!" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202510-lukket-beta-har-startet">🚀 MOCPilot 2025.1.0 lukket beta har startet!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/no/blog/2025/04/04/post#-mocpilot-202510-lukket-beta-har-startet" class="hash-link" aria-label="Direkte link til 🚀 MOCPilot 2025.1.0 lukket beta har startet!" title="Direkte link til 🚀 MOCPilot 2025.1.0 lukket beta har startet!" translate="no">​</a></h2>
 <p>Vi er glade for å kunngjøre at den lukkede betatesten for MOCPilot 2025 nå er live! Utvalgte brukere kan nå utforske nye funksjoner, gi tilbakemeldinger og bidra til å forme fremtiden for MOCPilot.</p>
 <p>Hvis du har mottatt en invitasjon, sjekk e-posten din for tilgangsdetaljer.<br>
 <!-- -->Takk for at du er en del av denne viktige fasen!</p>]]></content:encoded>

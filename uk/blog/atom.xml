@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog</id>
+    <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog</id>
     <title>MOCPilot Blog</title>
     <updated>2026-08-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog"/>
+    <link rel="alternate" href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog"/>
     <subtitle>MOCPilot Blog</subtitle>
-    <icon>https://OneManStudio-IL.github.io/mocpilot-app/uk/img/favicon.ico</icon>
+    <icon>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.5.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/08/23/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/08/23/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post"/>
         <updated>2026-08-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--оновлення-прошивки-підтримка-sbrick-і-покращення-конструктора">🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-mocpilot-202650--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-sbrick-%D1%96-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора" title="Пряме посилання на 🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202650--оновлення-прошивки-підтримка-sbrick-і-покращення-конструктора">🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-mocpilot-202650--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-sbrick-%D1%96-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора" title="Пряме посилання на 🚀 MOCPilot 2026.5.0 — оновлення прошивки, підтримка SBrick і покращення конструктора" translate="no">​</a></h2>
 <p>Ми раді оголосити про випуск <strong>MOCPilot 2026.5.0</strong>, доступний для <strong>Android</strong>, <strong>iOS</strong> і <strong>macOS</strong>.</p>
 <p>Це оновлення додає підтримку оновлення та відновлення прошивки для більшої кількості LEGO Powered Up хабів, підтримку SBrick і SBrick Plus, покращує робочий процес конструктора блоків і панелі керування, а також містить багато вдосконалень інтерфейсу, виправлень збоїв і оновлень перекладів.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202650">✨ Що нового у 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202650" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.5.0?" title="Пряме посилання на ✨ Що нового у 2026.5.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-та-відновлення-прошивки-хабів">🔄 Оновлення та відновлення прошивки хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0-%D0%B2%D1%96%D0%B4%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔄 Оновлення та відновлення прошивки хабів" title="Пряме посилання на 🔄 Оновлення та відновлення прошивки хабів" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202650">✨ Що нового у 2026.5.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202650" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.5.0?" title="Пряме посилання на ✨ Що нового у 2026.5.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-та-відновлення-прошивки-хабів">🔄 Оновлення та відновлення прошивки хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0-%D0%B2%D1%96%D0%B4%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔄 Оновлення та відновлення прошивки хабів" title="Пряме посилання на 🔄 Оновлення та відновлення прошивки хабів" translate="no">​</a></h3>
 <ul>
 <li class="">Додано підтримку оновлення прошивки для <strong>Technic Hub</strong></li>
 <li class="">Додано підтримку оновлення прошивки для <strong>Technic Move Hub</strong></li>
 <li class="">Розширено підтримку оновлення прошивки для додаткових підтримуваних хабів</li>
 <li class="">Додано виявлення хабів, підключених у <strong>режимі відновлення</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-та-конфігурація-хабів">🔌 Підтримка та конфігурація хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D1%82%D0%B0-%D0%BA%D0%BE%D0%BD%D1%84%D1%96%D0%B3%D1%83%D1%80%D0%B0%D1%86%D1%96%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Підтримка та конфігурація хабів" title="Пряме посилання на 🔌 Підтримка та конфігурація хабів" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-та-конфігурація-хабів">🔌 Підтримка та конфігурація хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D1%82%D0%B0-%D0%BA%D0%BE%D0%BD%D1%84%D1%96%D0%B3%D1%83%D1%80%D0%B0%D1%86%D1%96%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Підтримка та конфігурація хабів" title="Пряме посилання на 🔌 Підтримка та конфігурація хабів" translate="no">​</a></h3>
 <ul>
 <li class="">Додано підтримку <strong>SBrick</strong> і <strong>SBrick Plus</strong></li>
 <li class="">Додано зміну конфігурації Technic Move Hub: <strong>Porsche GT4 e-Performance</strong>, <strong>Batmobile™‎ Tumbler</strong> і <strong>Lamborghini Revuelto</strong></li>
 <li class="">Перероблено сторінки підключення хабів за типом підключення</li>
 <li class="">Перероблено сторінку моніторингу хаба</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-конструктора-блоків">🧱 Оновлення конструктора блоків<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🧱 Оновлення конструктора блоків" title="Пряме посилання на 🧱 Оновлення конструктора блоків" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-конструктора-блоків">🧱 Оновлення конструктора блоків<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🧱 Оновлення конструктора блоків" title="Пряме посилання на 🧱 Оновлення конструктора блоків" translate="no">​</a></h3>
 <ul>
 <li class="">Додано фільтрацію рівнів блоків: <strong>Beginner</strong>, <strong>Advanced</strong> і <strong>Guru</strong></li>
 <li class="">Рівні блоків можна налаштовувати під час створення, редагування або запуску block program профілю</li>
@@ -40,14 +40,14 @@
 <li class="">Додано блок <strong>імпульс потужності</strong> для Technic Move Hub</li>
 <li class="">Виправлено зміну масштабу колесом миші в палітрі блоків</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-геймпад-і-панель-керування">🎮 Геймпад і панель керування<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4-%D1%96-%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🎮 Геймпад і панель керування" title="Пряме посилання на 🎮 Геймпад і панель керування" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-геймпад-і-панель-керування">🎮 Геймпад і панель керування<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4-%D1%96-%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🎮 Геймпад і панель керування" title="Пряме посилання на 🎮 Геймпад і панель керування" translate="no">​</a></h3>
 <ul>
 <li class="">Перероблено сторінку геймпада і сторінку тестування геймпада</li>
 <li class="">Виправлено переходи станів хрестовини геймпада</li>
 <li class="">Додано пункт контекстного меню для зміни теми елемента панелі керування безпосередньо на місці</li>
 <li class="">Покращено заголовки профілів панелі керування, меню сортування, градієнти карток і відступи форми створення</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-інтерфейс-профілі-та-стабільність">🎨 Інтерфейс, профілі та стабільність<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/08/23/post#-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96-%D1%82%D0%B0-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D1%96%D1%81%D1%82%D1%8C" class="hash-link" aria-label="Пряме посилання на 🎨 Інтерфейс, профілі та стабільність" title="Пряме посилання на 🎨 Інтерфейс, профілі та стабільність" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-інтерфейс-профілі-та-стабільність">🎨 Інтерфейс, профілі та стабільність<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/08/23/post#-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96-%D1%82%D0%B0-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D1%96%D1%81%D1%82%D1%8C" class="hash-link" aria-label="Пряме посилання на 🎨 Інтерфейс, профілі та стабільність" title="Пряме посилання на 🎨 Інтерфейс, профілі та стабільність" translate="no">​</a></h3>
 <ul>
 <li class="">Видалено жовту палітру для готових профілів, тепер вони виглядають як звичайна сторінка профілів</li>
 <li class="">Покращено загальний вигляд і дрібні деталі інтерфейсу</li>
@@ -61,25 +61,25 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.4.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/06/06/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/06/06/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post"/>
         <updated>2026-06-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--скасуванняповтор-профілі-хабів-і-виправлення-конструктора">🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/06/06/post#-mocpilot-202640--%D1%81%D0%BA%D0%B0%D1%81%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BF%D0%BE%D0%B2%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96-%D1%85%D0%B0%D0%B1%D1%96%D0%B2-%D1%96-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора" title="Пряме посилання на 🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202640--скасуванняповтор-профілі-хабів-і-виправлення-конструктора">🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post#-mocpilot-202640--%D1%81%D0%BA%D0%B0%D1%81%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BF%D0%BE%D0%B2%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96-%D1%85%D0%B0%D0%B1%D1%96%D0%B2-%D1%96-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора" title="Пряме посилання на 🚀 MOCPilot 2026.4.0 — Скасування/повтор, профілі хабів і виправлення конструктора" translate="no">​</a></h2>
 <p>Ми раді оголосити про випуск <strong>MOCPilot 2026.4.0</strong>, доступного на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Це оновлення додає історію скасування та повтору для блокових програм, покращує налаштування хабів у конструкторі профілів і виправляє кілька проблем у конструкторі та керуванні пристроями.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202640">✨ Що нового у 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/06/06/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202640" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.4.0?" title="Пряме посилання на ✨ Що нового у 2026.4.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-історія-блокових-програм">🧱 Історія блокових програм<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/06/06/post#-%D1%96%D1%81%D1%82%D0%BE%D1%80%D1%96%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC" class="hash-link" aria-label="Пряме посилання на 🧱 Історія блокових програм" title="Пряме посилання на 🧱 Історія блокових програм" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202640">✨ Що нового у 2026.4.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202640" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.4.0?" title="Пряме посилання на ✨ Що нового у 2026.4.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-історія-блокових-програм">🧱 Історія блокових програм<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post#-%D1%96%D1%81%D1%82%D0%BE%D1%80%D1%96%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC" class="hash-link" aria-label="Пряме посилання на 🧱 Історія блокових програм" title="Пряме посилання на 🧱 Історія блокових програм" translate="no">​</a></h3>
 <ul>
 <li class="">Додано <strong>керування історією скасування та повтору</strong> для блокових програм</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-конструктор-профілів-для-хабів">🔌 Конструктор профілів для хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/06/06/post#-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Конструктор профілів для хабів" title="Пряме посилання на 🔌 Конструктор профілів для хабів" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-конструктор-профілів-для-хабів">🔌 Конструктор профілів для хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post#-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%96%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Конструктор профілів для хабів" title="Пряме посилання на 🔌 Конструктор профілів для хабів" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Додавання хаба</strong> відокремлено від процесу підключення у конструкторі профілів</li>
 <li class="">Хаби тепер можна додавати до профілю без обов'язкового негайного підключення</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-конструктора-і-пристроїв">🛠 Виправлення конструктора і пристроїв<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/06/06/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D1%96-%D0%BF%D1%80%D0%B8%D1%81%D1%82%D1%80%D0%BE%D1%97%D0%B2" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення конструктора і пристроїв" title="Пряме посилання на 🛠 Виправлення конструктора і пристроїв" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-конструктора-і-пристроїв">🛠 Виправлення конструктора і пристроїв<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/06/06/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D1%96-%D0%BF%D1%80%D0%B8%D1%81%D1%82%D1%80%D0%BE%D1%97%D0%B2" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення конструктора і пристроїв" title="Пряме посилання на 🛠 Виправлення конструктора і пристроїв" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено перекладену мітку контекстного меню <strong>delete-blocks</strong></li>
 <li class="">Виправлено <strong>мапінг команд портів мотора WeDo 2.0</strong>, через який один із двох портів міг бути недоступний для керування</li>
@@ -95,25 +95,25 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.3.2]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/05/02/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/05/02/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post"/>
         <updated>2026-05-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--нові-іконки-екранних-контролерів-та-виправлення-builder">🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/05/02/post#-mocpilot-202632--%D0%BD%D0%BE%D0%B2%D1%96-%D1%96%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8-%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D1%80%D1%96%D0%B2-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-builder" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder" title="Пряме посилання на 🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202632--нові-іконки-екранних-контролерів-та-виправлення-builder">🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post#-mocpilot-202632--%D0%BD%D0%BE%D0%B2%D1%96-%D1%96%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8-%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D1%80%D1%96%D0%B2-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-builder" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder" title="Пряме посилання на 🚀 MOCPilot 2026.3.2 — Нові іконки Екранних Контролерів та виправлення Builder" translate="no">​</a></h2>
 <p>Ми раді оголосити про випуск <strong>MOCPilot 2026.3.2</strong>, доступного на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Це оновлення покращує вигляд екранних контролерів, виправляє кілька проблем взаємодії в builder та доопрацьовує поведінку калібрування рульової рейки.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-в-202632">✨ Що нового в 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/05/02/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B2-202632" class="hash-link" aria-label="Пряме посилання на ✨ Що нового в 2026.3.2?" title="Пряме посилання на ✨ Що нового в 2026.3.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-екранних-контролерів">🎛 Покращення Екранних Контролерів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/05/02/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D1%80%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🎛 Покращення Екранних Контролерів" title="Пряме посилання на 🎛 Покращення Екранних Контролерів" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-в-202632">✨ Що нового в 2026.3.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B2-202632" class="hash-link" aria-label="Пряме посилання на ✨ Що нового в 2026.3.2?" title="Пряме посилання на ✨ Що нового в 2026.3.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-екранних-контролерів">🎛 Покращення Екранних Контролерів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D1%80%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🎛 Покращення Екранних Контролерів" title="Пряме посилання на 🎛 Покращення Екранних Контролерів" translate="no">​</a></h3>
 <ul>
 <li class="">Додано <strong>нові іконки</strong> для екранних контролерів</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-builder-і-блоків">🧱 Виправлення Builder і Блоків<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/05/02/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-builder-%D1%96-%D0%B1%D0%BB%D0%BE%D0%BA%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🧱 Виправлення Builder і Блоків" title="Пряме посилання на 🧱 Виправлення Builder і Блоків" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-builder-і-блоків">🧱 Виправлення Builder і Блоків<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-builder-%D1%96-%D0%B1%D0%BB%D0%BE%D0%BA%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🧱 Виправлення Builder і Блоків" title="Пряме посилання на 🧱 Виправлення Builder і Блоків" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено проблему, через яку подія <strong>Зміна нахилу хаба</strong> могла спрацьовувати неправильно через порівняння цілих і дробових значень</li>
 <li class="">Виправлено проблеми з <strong>приєднанням блоків під час перетягування</strong>, які впливали на <strong>C-блоки</strong> та інші типи блоків</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-оновлення-калібрування-кермового-керування">⚙️ Оновлення Калібрування Кермового Керування<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/05/02/post#%EF%B8%8F-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%B0%D0%BB%D1%96%D0%B1%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D0%B5%D1%80%D0%BC%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Оновлення Калібрування Кермового Керування" title="Пряме посилання на ⚙️ Оновлення Калібрування Кермового Керування" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-оновлення-калібрування-кермового-керування">⚙️ Оновлення Калібрування Кермового Керування<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/05/02/post#%EF%B8%8F-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BA%D0%B0%D0%BB%D1%96%D0%B1%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D0%B5%D1%80%D0%BC%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Оновлення Калібрування Кермового Керування" title="Пряме посилання на ⚙️ Оновлення Калібрування Кермового Керування" translate="no">​</a></h3>
 <ul>
 <li class="">Перероблено блок <strong>Калібрувати рульову рейку</strong></li>
 <li class="">Тепер блок скидає <strong>відносну позицію до <code>0</code></strong> після завершення калібрування</li>
@@ -129,22 +129,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.3.1]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/04/18/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/04/18/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post"/>
         <updated>2026-04-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--оновлення-геймпада-та-білдера">🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-mocpilot-202631--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4%D0%B0-%D1%82%D0%B0-%D0%B1%D1%96%D0%BB%D0%B4%D0%B5%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера" title="Пряме посилання на 🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202631--оновлення-геймпада-та-білдера">🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-mocpilot-202631--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4%D0%B0-%D1%82%D0%B0-%D0%B1%D1%96%D0%BB%D0%B4%D0%B5%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера" title="Пряме посилання на 🚀 MOCPilot 2026.3.1 — Оновлення геймпада та білдера" translate="no">​</a></h2>
 <p>Ми раді оголосити про реліз <strong>MOCPilot 2026.3.1</strong>, доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Цей реліз приносить суттєві покращення конструктора блоків (сенсорні пристрої + ПК) та сильнішу підтримку геймпада.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202631">✨ Що нового у 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202631" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.3.1?" title="Пряме посилання на ✨ Що нового у 2026.3.1?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-геймпада">🎮 Покращення геймпада<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4%D0%B0" class="hash-link" aria-label="Пряме посилання на 🎮 Покращення геймпада" title="Пряме посилання на 🎮 Покращення геймпада" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202631">✨ Що нового у 2026.3.1?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202631" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.3.1?" title="Пряме посилання на ✨ Що нового у 2026.3.1?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-геймпада">🎮 Покращення геймпада<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B3%D0%B5%D0%B9%D0%BC%D0%BF%D0%B0%D0%B4%D0%B0" class="hash-link" aria-label="Пряме посилання на 🎮 Покращення геймпада" title="Пряме посилання на 🎮 Покращення геймпада" translate="no">​</a></h3>
 <ul>
 <li class="">Блоки геймпада тепер <strong>автоматично вмикаються</strong> при відкритті профілю (зокрема коли геймпад уже підключено)</li>
 <li class="">Виправлено проблему, коли <strong>блоки подій геймпада, додані пізніше</strong>, не активувалися до перезапуску програми</li>
 <li class="">Додано налаштування <strong>діапазону значень геймпада</strong> для точнішого керування</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-білдера-та-редактора">🧱 Покращення білдера та редактора<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B1%D1%96%D0%BB%D0%B4%D0%B5%D1%80%D0%B0-%D1%82%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧱 Покращення білдера та редактора" title="Пряме посилання на 🧱 Покращення білдера та редактора" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-білдера-та-редактора">🧱 Покращення білдера та редактора<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B1%D1%96%D0%BB%D0%B4%D0%B5%D1%80%D0%B0-%D1%82%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧱 Покращення білдера та редактора" title="Пряме посилання на 🧱 Покращення білдера та редактора" translate="no">​</a></h3>
 <ul>
 <li class="">Великий набір покращень <strong>жестів</strong> і загальної взаємодії з білдером (мобільні пристрої + ПК)</li>
 <li class="">Надійніші <strong>Скасувати/Повторити</strong> (поки що <strong>лише для дашборда</strong>): історія тепер коректно фіксує зміни, щоб можна було стабільніше повертатися до попередніх станів</li>
@@ -153,24 +153,24 @@
 <li class="">Покращено прив’язку блоків і прев’ю вставки під час побудови керуючих структур</li>
 <li class="">Додано <strong>підсвічування блоків під час виконання</strong> (halo)</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-хаб-і-підключення">🔌 Хаб і підключення<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D1%85%D0%B0%D0%B1-%D1%96-%D0%BF%D1%96%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🔌 Хаб і підключення" title="Пряме посилання на 🔌 Хаб і підключення" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-хаб-і-підключення">🔌 Хаб і підключення<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D1%85%D0%B0%D0%B1-%D1%96-%D0%BF%D1%96%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🔌 Хаб і підключення" title="Пряме посилання на 🔌 Хаб і підключення" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Селектор кнопок хаба</strong> у відповідному блоці тепер <strong>завжди видимий</strong>, а налаштування подій кнопок перероблено</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-палітра-та-довідка">🧩 Палітра та довідка<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D0%BF%D0%B0%D0%BB%D1%96%D1%82%D1%80%D0%B0-%D1%82%D0%B0-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧩 Палітра та довідка" title="Пряме посилання на 🧩 Палітра та довідка" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-палітра-та-довідка">🧩 Палітра та довідка<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D0%BF%D0%B0%D0%BB%D1%96%D1%82%D1%80%D0%B0-%D1%82%D0%B0-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧩 Палітра та довідка" title="Пряме посилання на 🧩 Палітра та довідка" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено проблеми палітри після <strong>зміни мови/локалі</strong> (кнопки дій палітри могли ставати неактивними)</li>
 <li class="">Додано опцію контекстного меню <strong>«Про блок»</strong> для відкриття документації вибраного блока</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-довідки">📚 Оновлення довідки<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B8" class="hash-link" aria-label="Пряме посилання на 📚 Оновлення довідки" title="Пряме посилання на 📚 Оновлення довідки" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-довідки">📚 Оновлення довідки<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B8" class="hash-link" aria-label="Пряме посилання на 📚 Оновлення довідки" title="Пряме посилання на 📚 Оновлення довідки" translate="no">​</a></h3>
 <ul>
 <li class="">Сторінки довідки розширено <strong>прямими посиланнями на документацію блоків</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-android">🤖 Виправлення Android<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-android" class="hash-link" aria-label="Пряме посилання на 🤖 Виправлення Android" title="Пряме посилання на 🤖 Виправлення Android" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення-android">🤖 Виправлення Android<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-android" class="hash-link" aria-label="Пряме посилання на 🤖 Виправлення Android" title="Пряме посилання на 🤖 Виправлення Android" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено проблеми з <strong>поширенням і імпортом профілів</strong> на Android</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-рендеринг-і-продуктивність">🛠 Рендеринг і продуктивність<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/04/18/post#-%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D1%96-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C" class="hash-link" aria-label="Пряме посилання на 🛠 Рендеринг і продуктивність" title="Пряме посилання на 🛠 Рендеринг і продуктивність" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-рендеринг-і-продуктивність">🛠 Рендеринг і продуктивність<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/04/18/post#-%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D1%96-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C" class="hash-link" aria-label="Пряме посилання на 🛠 Рендеринг і продуктивність" title="Пряме посилання на 🛠 Рендеринг і продуктивність" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено <strong>розмиті/нечіткі блоки</strong> при великому масштабі завдяки переробці обробки текстур рендера</li>
 <li class="">Оптимізовано <strong>апскейлер текстур</strong> для мобільних пристроїв та покращено відступи/поведінку зуму в області програми</li>
@@ -185,27 +185,27 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.2.3]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/02/28/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/02/28/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post"/>
         <updated>2026-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--покращення-дашборда-та-виправлення-хабів">🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/28/post#-mocpilot-202623--%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%B0%D1%88%D0%B1%D0%BE%D1%80%D0%B4%D0%B0-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів" title="Пряме посилання на 🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202623--покращення-дашборда-та-виправлення-хабів">🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post#-mocpilot-202623--%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%B0%D1%88%D0%B1%D0%BE%D1%80%D0%B4%D0%B0-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів" title="Пряме посилання на 🚀 MOCPilot 2026.2.3 — Покращення дашборда та виправлення хабів" translate="no">​</a></h2>
 <p>Ми раді оголосити про реліз <strong>MOCPilot 2026.2.3</strong>, доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Це оновлення покращує робочий процес дашборда та виправляє кілька важливих проблем із хабами й редактором.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202623">✨ Що нового у 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/28/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202623" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.2.3?" title="Пряме посилання на ✨ Що нового у 2026.2.3?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-дашборда">🧱 Покращення дашборда<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/28/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%B0%D1%88%D0%B1%D0%BE%D1%80%D0%B4%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧱 Покращення дашборда" title="Пряме посилання на 🧱 Покращення дашборда" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202623">✨ Що нового у 2026.2.3?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202623" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.2.3?" title="Пряме посилання на ✨ Що нового у 2026.2.3?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-покращення-дашборда">🧱 Покращення дашборда<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post#-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%B0%D1%88%D0%B1%D0%BE%D1%80%D0%B4%D0%B0" class="hash-link" aria-label="Пряме посилання на 🧱 Покращення дашборда" title="Пряме посилання на 🧱 Покращення дашборда" translate="no">​</a></h3>
 <ul>
 <li class="">Тепер можна <strong>дублювати контролери дашборда</strong> з опціями: <strong>копіювати всі властивості</strong> або <strong>копіювати лише за типом</strong></li>
 <li class=""><strong>Палітру перероблено</strong> для швидшого складання: показується під дашбордом, є кнопка очищення, не закривається після додавання компонентів і зберігає послідовний вибір секції</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-та-виправлення-хабів">🔌 Оновлення та виправлення хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/28/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Оновлення та виправлення хабів" title="Пряме посилання на 🔌 Оновлення та виправлення хабів" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-оновлення-та-виправлення-хабів">🔌 Оновлення та виправлення хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post#-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Оновлення та виправлення хабів" title="Пряме посилання на 🔌 Оновлення та виправлення хабів" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Mould King 4.0</strong> перевпроваджено на <strong>новий протокол в iOS</strong> (Android і надалі використовує попередній протокол)</li>
 <li class="">Виправлено проблему, коли <strong>булевий блок “hub is connected”</strong> не з’являвся, поки хаб рекламувався (advertising)</li>
 <li class="">Виправлено баг, через який <strong>блок світла</strong> міг перестати працювати через обробку команд запуску/зупинки мотора</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення">🛠 Виправлення<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/28/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення" title="Пряме посилання на 🛠 Виправлення" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення">🛠 Виправлення<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/28/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення" title="Пряме посилання на 🛠 Виправлення" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено валідацію e-mail у компоненті введення, яка могла дозволяти невалідні адреси на кшталт <code>mail@domain.</code></li>
 </ul>
@@ -219,31 +219,31 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.2.2]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/02/18/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/02/18/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post"/>
         <updated>2026-02-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--розширене-оновлення-хабів-і-керування">🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-mocpilot-202622--%D1%80%D0%BE%D0%B7%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B5-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2-%D1%96-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування" title="Пряме посилання на 🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202622--розширене-оновлення-хабів-і-керування">🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-mocpilot-202622--%D1%80%D0%BE%D0%B7%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B5-%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%85%D0%B0%D0%B1%D1%96%D0%B2-%D1%96-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування" title="Пряме посилання на 🚀 MOCPilot 2026.2.2 — Розширене оновлення хабів і керування" translate="no">​</a></h2>
 <p>Ми раді оголосити про випуск <strong>MOCPilot 2026.2.2</strong>, який тепер доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Цей реліз значно розширює апаратну сумісність і додає потужні нові програмні блоки для розширеної взаємодії з хабами.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-версії-202622">✨ Що нового у версії 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%97-202622" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у версії 2026.2.2?" title="Пряме посилання на ✨ Що нового у версії 2026.2.2?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-нових-хабів">🆕 Підтримка нових хабів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D0%BD%D0%BE%D0%B2%D0%B8%D1%85-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🆕 Підтримка нових хабів" title="Пряме посилання на 🆕 Підтримка нових хабів" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-версії-202622">✨ Що нового у версії 2026.2.2?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%97-202622" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у версії 2026.2.2?" title="Пряме посилання на ✨ Що нового у версії 2026.2.2?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-нових-хабів">🆕 Підтримка нових хабів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D0%BD%D0%BE%D0%B2%D0%B8%D1%85-%D1%85%D0%B0%D0%B1%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🆕 Підтримка нових хабів" title="Пряме посилання на 🆕 Підтримка нових хабів" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Хаби Mould King 4.0</strong> тепер повністю підтримуються</li>
 <li class=""><strong>Хаби Mould King 6.0</strong> тепер повністю підтримуються</li>
 <li class=""><strong>Хаб LEGO WeDo 2.0</strong> тепер повністю підтримується</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-сенсорів">🔌 Підтримка сенсорів<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D1%81%D0%B5%D0%BD%D1%81%D0%BE%D1%80%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Підтримка сенсорів" title="Пряме посилання на 🔌 Підтримка сенсорів" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-підтримка-сенсорів">🔌 Підтримка сенсорів<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0-%D1%81%D0%B5%D0%BD%D1%81%D0%BE%D1%80%D1%96%D0%B2" class="hash-link" aria-label="Пряме посилання на 🔌 Підтримка сенсорів" title="Пряме посилання на 🔌 Підтримка сенсорів" translate="no">​</a></h3>
 <ul>
 <li class="">Датчик нахилу WeDo 2.0</li>
 <li class="">Датчик руху WeDo 2.0</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нові-програмні-блоки">🧱 Нові програмні блоки<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D0%BD%D0%BE%D0%B2%D1%96-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D1%96-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8" class="hash-link" aria-label="Пряме посилання на 🧱 Нові програмні блоки" title="Пряме посилання на 🧱 Нові програмні блоки" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нові-програмні-блоки">🧱 Нові програмні блоки<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D0%BD%D0%BE%D0%B2%D1%96-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D1%96-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8" class="hash-link" aria-label="Пряме посилання на 🧱 Нові програмні блоки" title="Пряме посилання на 🧱 Нові програмні блоки" translate="no">​</a></h3>
 <p>У цьому релізі додано нові блоки подій і керування, що розширюють можливості взаємодії з хабами в реальному часі.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-блоки-подій-сенсорів-хаба">🔄 Блоки подій сенсорів хаба<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BF%D0%BE%D0%B4%D1%96%D0%B9-%D1%81%D0%B5%D0%BD%D1%81%D0%BE%D1%80%D1%96%D0%B2-%D1%85%D0%B0%D0%B1%D0%B0" class="hash-link" aria-label="Пряме посилання на 🔄 Блоки подій сенсорів хаба" title="Пряме посилання на 🔄 Блоки подій сенсорів хаба" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-блоки-подій-сенсорів-хаба">🔄 Блоки подій сенсорів хаба<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BF%D0%BE%D0%B4%D1%96%D0%B9-%D1%81%D0%B5%D0%BD%D1%81%D0%BE%D1%80%D1%96%D0%B2-%D1%85%D0%B0%D0%B1%D0%B0" class="hash-link" aria-label="Пряме посилання на 🔄 Блоки подій сенсорів хаба" title="Пряме посилання на 🔄 Блоки подій сенсорів хаба" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Зміна даних акселерометра хаба</strong></li>
 <li class=""><strong>Зміна нахилу хаба</strong></li>
@@ -251,7 +251,7 @@
 <li class=""><strong>Зміна рівня заряду батареї всіх хабів</strong></li>
 </ul>
 <p>Ці блоки дозволяють програмі миттєво реагувати на рух, обертання та зміни живлення.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-блоки-керування-підключенням-хаба">🔌 Блоки керування підключенням хаба<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BF%D1%96%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BD%D1%8F%D0%BC-%D1%85%D0%B0%D0%B1%D0%B0" class="hash-link" aria-label="Пряме посилання на 🔌 Блоки керування підключенням хаба" title="Пряме посилання на 🔌 Блоки керування підключенням хаба" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-блоки-керування-підключенням-хаба">🔌 Блоки керування підключенням хаба<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BF%D1%96%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BD%D1%8F%D0%BC-%D1%85%D0%B0%D0%B1%D0%B0" class="hash-link" aria-label="Пряме посилання на 🔌 Блоки керування підключенням хаба" title="Пряме посилання на 🔌 Блоки керування підключенням хаба" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>Підключити хаб</strong></li>
 <li class=""><strong>Відключити хаб</strong></li>
@@ -259,7 +259,7 @@
 <p>Тепер ви можете керувати підключеннями хабів безпосередньо під час виконання програми.<br>
 <!-- -->Це дозволяє повторно підключити хаб без перезапуску програми у разі втрати з’єднання, роблячи проєкти більш надійними та гнучкими.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-покращення">⚙️ Покращення<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/02/18/post#%EF%B8%8F-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Покращення" title="Пряме посилання на ⚙️ Покращення" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-покращення">⚙️ Покращення<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/02/18/post#%EF%B8%8F-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Покращення" title="Пряме посилання на ⚙️ Покращення" translate="no">​</a></h3>
 <ul>
 <li class="">Покращена загальна стабільність системи</li>
 <li class="">Оптимізація продуктивності для більш плавної взаємодії з хабами</li>
@@ -275,22 +275,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2026.1.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/01/10/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2026/01/10/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post"/>
         <updated>2026-01-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--оновлення-функцій-і-стабільності">🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/01/10/post#-mocpilot-202610--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%B9-%D1%96-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності" title="Пряме посилання на 🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202610--оновлення-функцій-і-стабільності">🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post#-mocpilot-202610--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%B9-%D1%96-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності" title="Пряме посилання на 🚀 MOCPilot 2026.1.0 — Оновлення функцій і стабільності" translate="no">​</a></h2>
 <p>Ми раді оголосити про реліз <strong>MOCPilot 2026.1.0</strong>, доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Цей реліз додає <strong>гостьовий режим</strong>, покращує зручність використання на мобільних пристроях і приносить важливі виправлення стабільності та продуктивності на всіх підтримуваних платформах.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202610">✨ Що нового у 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/01/10/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202610" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.1.0?" title="Пряме посилання на ✨ Що нового у 2026.1.0?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нове">🆕 Нове<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/01/10/post#-%D0%BD%D0%BE%D0%B2%D0%B5" class="hash-link" aria-label="Пряме посилання на 🆕 Нове" title="Пряме посилання на 🆕 Нове" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-нового-у-202610">✨ Що нового у 2026.1.0?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post#-%D1%89%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83-202610" class="hash-link" aria-label="Пряме посилання на ✨ Що нового у 2026.1.0?" title="Пряме посилання на ✨ Що нового у 2026.1.0?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нове">🆕 Нове<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post#-%D0%BD%D0%BE%D0%B2%D0%B5" class="hash-link" aria-label="Пряме посилання на 🆕 Нове" title="Пряме посилання на 🆕 Нове" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Гостьовий режим</strong> — користуйтеся застосунком без облікового запису з можливістю створити його пізніше</li>
 <li class="">Додано вибір мови на екрані автентифікації</li>
 <li class="">Застосунок тепер блокує використання хабів із непідтримуваною прошивкою та показує чітке попередження</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-покращення">⚙️ Покращення<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/01/10/post#%EF%B8%8F-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Покращення" title="Пряме посилання на ⚙️ Покращення" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-покращення">⚙️ Покращення<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post#%EF%B8%8F-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на ⚙️ Покращення" title="Пряме посилання на ⚙️ Покращення" translate="no">​</a></h3>
 <ul>
 <li class="">Покращено перетягування блоків на мобільних пристроях (краща обробка дотиків, менше випадкових взаємодій)</li>
 <li class="">Палітра блоків тепер автоматично ховається під час перетягування на мобільних пристроях</li>
@@ -298,7 +298,7 @@
 <li class="">Покращено обробку введення тексту на всіх платформах</li>
 <li class="">Плавніше керування хабом із меншою затримкою</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення">🛠 Виправлення<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2026/01/10/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення" title="Пряме посилання на 🛠 Виправлення" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-виправлення">🛠 Виправлення<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2026/01/10/post#-%D0%B2%D0%B8%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" class="hash-link" aria-label="Пряме посилання на 🛠 Виправлення" title="Пряме посилання на 🛠 Виправлення" translate="no">​</a></h3>
 <ul>
 <li class="">Виправлено кілька проблем із drag &amp; drop блоків, зокрема «залипання» блоків і втрату введення мишею/дотиком</li>
 <li class="">Виправлено збої під час зупинки програм, що використовують власні (“My”) блоки</li>
@@ -318,15 +318,15 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.2.0 - 2025.2.4]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/12/28/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/12/28/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/12/28/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/12/28/post"/>
         <updated>2025-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--оновлення-стабільності-та-користувацького-досвіду">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/12/28/post#-mocpilot-202520---202524--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D1%82%D0%B0-%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE-%D0%B4%D0%BE%D1%81%D0%B2%D1%96%D0%B4%D1%83" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду" title="Пряме посилання на 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520---202524--оновлення-стабільності-та-користувацького-досвіду">🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/12/28/post#-mocpilot-202520---202524--%D0%BE%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%81%D1%82%D0%B0%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D1%82%D0%B0-%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE-%D0%B4%D0%BE%D1%81%D0%B2%D1%96%D0%B4%D1%83" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду" title="Пряме посилання на 🚀 MOCPilot 2025.2.0 - 2025.2.4 — Оновлення стабільності та користувацького досвіду" translate="no">​</a></h2>
 <p>Ми раді оголосити про реліз <strong>MOCPilot 2025.2.0 - 2025.2.4</strong>, який тепер доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>.</p>
 <p>Цей реліз зосереджений на <strong>плавнішій роботі</strong>, <strong>покращеній надійності</strong> та <strong>вдосконаленні користувацького інтерфейсу</strong> на всіх платформах.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-покращено-у-версіях-202520---202524">✨ Що покращено у версіях 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/12/28/post#-%D1%89%D0%BE-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BE-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%8F%D1%85-202520---202524" class="hash-link" aria-label="Пряме посилання на ✨ Що покращено у версіях 2025.2.0 - 2025.2.4?" title="Пряме посилання на ✨ Що покращено у версіях 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-що-покращено-у-версіях-202520---202524">✨ Що покращено у версіях 2025.2.0 - 2025.2.4?<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/12/28/post#-%D1%89%D0%BE-%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BE-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%8F%D1%85-202520---202524" class="hash-link" aria-label="Пряме посилання на ✨ Що покращено у версіях 2025.2.0 - 2025.2.4?" title="Пряме посилання на ✨ Що покращено у версіях 2025.2.0 - 2025.2.4?" translate="no">​</a></h2>
 <ul>
 <li class="">Плавніша та стабільніша робота завдяки покращеній часовій логіці</li>
 <li class="">Покращена синхронізація профілів та надійність оновлень</li>
@@ -348,16 +348,16 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.2.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/11/15/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/11/15/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/11/15/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/11/15/post"/>
         <updated>2025-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--офіційний-мультиплатформовий-реліз">🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/11/15/post#-mocpilot-202520--%D0%BE%D1%84%D1%96%D1%86%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D0%B8%D0%B9-%D1%80%D0%B5%D0%BB%D1%96%D0%B7" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!" title="Пряме посилання на 🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202520--офіційний-мультиплатформовий-реліз">🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/11/15/post#-mocpilot-202520--%D0%BE%D1%84%D1%96%D1%86%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D0%B8%D0%B9-%D1%80%D0%B5%D0%BB%D1%96%D0%B7" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!" title="Пряме посилання на 🚀 MOCPilot 2025.2.0 — офіційний мультиплатформовий реліз!" translate="no">​</a></h2>
 <p>Ми раді оголосити про офіційний реліз <strong>MOCPilot 2025.2.0</strong>, який тепер доступний на <strong>Android</strong>, <strong>iOS</strong> та <strong>macOS</strong>!</p>
 <p>Додаток, раніше відомий як <strong>Controlz</strong>, отримав нову назву — <strong>MOCPilot</strong>.<br>
 <!-- -->Нова назва краще відображає призначення додатка — єдину платформу-пілот для керування та програмування ваших LEGO®-механізмів.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нове-у-версії-202520">✨ Нове у версії 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/11/15/post#-%D0%BD%D0%BE%D0%B2%D0%B5-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%97-202520" class="hash-link" aria-label="Пряме посилання на ✨ Нове у версії 2025.2.0" title="Пряме посилання на ✨ Нове у версії 2025.2.0" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-нове-у-версії-202520">✨ Нове у версії 2025.2.0<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/11/15/post#-%D0%BD%D0%BE%D0%B2%D0%B5-%D1%83-%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%97-202520" class="hash-link" aria-label="Пряме посилання на ✨ Нове у версії 2025.2.0" title="Пряме посилання на ✨ Нове у версії 2025.2.0" translate="no">​</a></h2>
 <ul>
 <li class="">Об’єднаний реліз для Android, iOS та macOS</li>
 <li class="">Покращена стабільність, продуктивність і швидкість інтерфейсу</li>
@@ -374,16 +374,16 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.1.9]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/06/3/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/06/3/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/06/3/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/06/3/post"/>
         <updated>2025-06-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-тепер-доступний-у-mac-app-store">🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/06/3/post#-mocpilot-202519-%D1%82%D0%B5%D0%BF%D0%B5%D1%80-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B8%D0%B9-%D1%83-mac-app-store" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!" title="Пряме посилання на 🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mocpilot-202519-тепер-доступний-у-mac-app-store">🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/06/3/post#-mocpilot-202519-%D1%82%D0%B5%D0%BF%D0%B5%D1%80-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B8%D0%B9-%D1%83-mac-app-store" class="hash-link" aria-label="Пряме посилання на 🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!" title="Пряме посилання на 🚀 MOCPilot 2025.1.9 тепер доступний у Mac App Store!" translate="no">​</a></h2>
 <p>Ми раді повідомити про випуск MOCPilot 2025.1.9 як рідної macOS-застосунку!</p>
 <hr>
 <p>Тепер ви можете насолоджуватися повною продуктивністю робочого столу та безшовною інтеграцією з macOS.<br>
 <!-- -->Завантажте його сьогодні з Mac App Store і керуйте своїми LEGO® творіннями, як ніколи раніше!</p>
-<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app/uk/img/store_badges/mac/mac_UK.svg" alt="Download on the Mac App Store" height="60"></a>]]></content>
+<a href="https://apps.apple.com/il/app/controlz-moc-controller/id1585138043" target="_blank" rel="noopener noreferrer" class="margin--sm"><img src="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/img/store_badges/mac/mac_UK.svg" alt="Download on the Mac App Store" height="60"></a>]]></content>
         <author>
             <name>Maxim</name>
             <uri>https://github.com/llOzzeell</uri>
@@ -393,14 +393,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.1.5]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/05/17/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/05/17/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/05/17/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/05/17/post"/>
         <updated>2025-05-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Опис]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/05/17/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/05/17/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
 <p>Це оновлення покращує редагування блоків, підвищує продуктивність і забезпечує коректну роботу на нових версіях Android.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/05/17/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/05/17/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Виправлено помилку сканування хаба на пристроях з Android 12+</strong> — тепер запитується дозвіл на точне визначення місцезнаходження.</li>
 <li class=""><strong>Додано можливість приховувати/показувати палітру блоків</strong>, натисканням на поточну вибрану колекцію блоків.</li>
@@ -417,14 +417,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.1.4]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/05/10/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/05/10/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/05/10/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/05/10/post"/>
         <updated>2025-05-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Опис]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/05/10/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/05/10/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
 <p>Це оновлення покращує підтримку планшетів, додає корисні сторінки для тестування та усуває низку проблем із сумісністю та продуктивністю.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/05/10/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/05/10/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Додано планшетний інтерфейс</strong> для ефективнішого використання великих екранів.</li>
 <li class=""><strong>Виправлено помилку з блоком “натиснута кнопка хаба”</strong>, який відображався для хабів, що не підтримують цю дію. Також видалено <strong>блоки кольорового датчика</strong> для непідтримуваних хабів (наприклад, BuWizz).</li>
@@ -445,14 +445,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.1.2 - 2025.1.3]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/19/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/19/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/19/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/19/post"/>
         <updated>2025-04-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Опис]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/04/19/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/04/19/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
 <p>Це оновлення додає нові параметри налаштування джойстика, покращення інтерфейсу користувача та важливі виправлення для підвищення стабільності.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/04/19/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/04/19/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Виправлено помилку в селекторі колекцій палітри блоків</strong>: під час повернення до раніше вибраної колекції зміни не відображались.</li>
 <li class=""><strong>Виправлено збій під час завантаження важких профілів</strong>, що містять велику кількість блоків.</li>
@@ -469,14 +469,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Реліз MOCPilot 2025.1.1]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/14/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/14/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/14/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/14/post"/>
         <updated>2025-04-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Опис]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/04/14/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="опис">Опис<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/04/14/post#%D0%BE%D0%BF%D0%B8%D1%81" class="hash-link" aria-label="Пряме посилання на Опис" title="Пряме посилання на Опис" translate="no">​</a></h3>
 <p>Це оновлення включає кілька важливих виправлень, які підвищують продуктивність, знижують енергоспоживання та покращують поведінку блоків у середовищі програмування.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/04/14/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="зміни">Зміни<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/04/14/post#%D0%B7%D0%BC%D1%96%D0%BD%D0%B8" class="hash-link" aria-label="Пряме посилання на Зміни" title="Пряме посилання на Зміни" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Виправлено помилку, що спричиняла високе завантаження ЦП, розряд акумулятора та зниження продуктивності.</strong></li>
 <li class=""><strong>Виправлено помилку, через яку ігрові блоки</strong> (наприклад, «кнопка натиснута», «натиснута кнопка D-PAD») <strong>не можна було приєднати до інших блоків.</strong></li>
@@ -492,11 +492,11 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[MOCPilot 2025.1.0]]></title>
-        <id>https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/04/post</id>
-        <link href="https://OneManStudio-IL.github.io/mocpilot-app/uk/blog/2025/04/04/post"/>
+        <id>https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/04/post</id>
+        <link href="https://OneManStudio-IL.github.io/mocpilot-app-docs/uk/blog/2025/04/04/post"/>
         <updated>2025-04-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-закрите-бета-тестування-mocpilot-202510-розпочалося">🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!<a href="https://onemanstudio-il.github.io/mocpilot-app/uk/blog/2025/04/04/post#-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D1%82%D0%B5-%D0%B1%D0%B5%D1%82%D0%B0-%D1%82%D0%B5%D1%81%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-mocpilot-202510-%D1%80%D0%BE%D0%B7%D0%BF%D0%BE%D1%87%D0%B0%D0%BB%D0%BE%D1%81%D1%8F" class="hash-link" aria-label="Пряме посилання на 🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!" title="Пряме посилання на 🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-закрите-бета-тестування-mocpilot-202510-розпочалося">🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!<a href="https://onemanstudio-il.github.io/mocpilot-app-docs/uk/blog/2025/04/04/post#-%D0%B7%D0%B0%D0%BA%D1%80%D0%B8%D1%82%D0%B5-%D0%B1%D0%B5%D1%82%D0%B0-%D1%82%D0%B5%D1%81%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-mocpilot-202510-%D1%80%D0%BE%D0%B7%D0%BF%D0%BE%D1%87%D0%B0%D0%BB%D0%BE%D1%81%D1%8F" class="hash-link" aria-label="Пряме посилання на 🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!" title="Пряме посилання на 🚀 Закрите бета-тестування MOCPilot 2025.1.0 розпочалося!" translate="no">​</a></h2>
 <p>Раді повідомити, що закрите бета-тестування MOCPilot 2025 вже стартувало! Відібрані користувачі можуть першими спробувати нові функції, залишити відгуки та допомогти нам сформувати майбутнє MOCPilot.</p>
 <p>Якщо ви отримали запрошення — перевірте свою електронну пошту для отримання інструкцій щодо доступу.<br>
 <!-- -->Дякуємо, що берете участь у цьому важливому етапі!</p>]]></content>

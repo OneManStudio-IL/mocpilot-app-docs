@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmocpilot_docs=self.webpackChunkmocpilot_docs||[]).push([[7484],{5895:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/mocpilot-app-docs/fi/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":15,"previousPage":"/mocpilot-app-docs/fi/blog","blogDescription":"Blogi","blogTitle":"Blogi"}}')}}]);
