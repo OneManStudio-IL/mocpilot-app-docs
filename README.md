@@ -26,16 +26,6 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
+A push to `main` publishes the site: `.github/workflows/deploy.yml` builds it and uploads it to our server, which serves https://doc.mocpilot.com. Nothing else deploys the site.
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The old copy on GitHub Pages (`gh-pages` branch) is no longer updated; it stays online only for older app versions that still link to it.

@@ -11,16 +11,17 @@ const sBaseUrl = '/';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MOCPilot',
-  tagline: 'The official page and documentation of MOCPilot app',
+  tagline: 'Official documentation for the MOCPilot app',
   favicon: 'img/favicon.ico',
 
   // Public domain
   url: 'https://doc.mocpilot.com',
   baseUrl: sBaseUrl,
 
+  // Published only by .github/workflows/deploy.yml (push to main -> our server). There is no GitHub Pages
+  // deployment any more: the old copy on onemanstudio-il.github.io stays as it is for older app versions.
   organizationName: 'OneManStudio-IL',
   projectName: sProjectName,
-  deploymentBranch: 'gh-pages',
 
   // New storage namespace: theme choices saved by the removed color mode toggle are ignored
   future: {
