@@ -5,101 +5,87 @@ title: Peliohjain
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Peliohjain
-Peliohjainlohkot reagoivat ohjaimen syötteisiin ja lukevat peliohjaimen nykyisen tilan.
+# Peliohjain {#gamepad}
 
-## Tapahtumalohkot
+Peliohjainlohkot reagoivat peliohjaimeen ja lukevat sen painikkeita, tatteja ja liipaisimia. Luokka näkyy, kun **Ota peliohjaimen lohkot käyttöön** on päällä [Peliohjain-sivulla](/docs/Application/Dashboard/Gamepad). Painikkeiden nimet noudattavat ohjaimen asettelua: Xbox tai Sony.
 
-### `Kun peliohjaimen painike on` (Aloittelija) {#block_gamepad_event_when_button_is}
+## Tapahtumat {#events}
+
+### `kun … on …` (Aloittelija) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Käynnistyy, kun valittu peliohjaimen painike vastaa asetettua tilaa.
+Suoritetaan, kun valittua painiketta painetaan tai se vapautetaan.
 
-- Tyyppi: tapahtumalohko
 - Painikkeet (Xbox-asettelu): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
 - Painikkeet (Sony-asettelu): `risti`, `ympyrä`, `neliö`, `kolmio`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Tilavaihtoehdot: `painettu`, `vapautettu`
+- Tilat: `painettu`, `vapautettu`
 
-### `Kun peliohjaimen D-pad on` (Aloittelija) {#block_gamepad_event_when_dpad_is}
+### `kun D-Pad … nappi …` (Aloittelija) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Käynnistyy, kun D-padin suunta tai tila vastaa valittua ehtoa.
+Suoritetaan, kun D-padin painiketta painetaan tai se vapautetaan.
 
-- Tyyppi: tapahtumalohko
-- Suuntavaihtoehdot: `ylös`, `alas`, `vasen`, `oikea`
-- Tilavaihtoehdot: `painettu`, `vapautettu`
+- Suunnat: `ylös`, `alas`, `vasen`, `oikea`
+- Tilat: `painettu`, `vapautettu`
 
-### `Kun peliohjaimen ohjain­tikku on` (Aloittelija) {#block_gamepad_event_when_thumbstick_is}
+### `kun … ohjain …` (Aloittelija) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Käynnistyy, kun ohjain­tikun tila vastaa valittuja asetuksia.
+Suoritetaan, kun tattia työnnetään johonkin suuntaan, liikutetaan tai se vapautetaan.
 
-Tämä lohko tukee:
+- Tatti: `vasen`, `oikea`
+- Tila: `ylös`, `alas`, `vasen`, `oikea`, `liikkuu`, `vapautettu`
+- Tyypillinen käyttö: reagointi tatin liikkeeseen ja mallin pysäyttäminen tai keskittäminen, kun tatti vapautetaan.
 
-- Tikun valinta: `vasen` / `oikea`
-- Suunta/tila: `ylös`, `alas`, `vasen`, `oikea`, `liikkunut`, `vapautettu`
-- Tyyppi: tapahtumalohko
-- Tyypillinen käyttö: reagoida liikkeeseen tai vapautukseen
+## Arvot {#values}
 
-## Arvolohkot
-
-### `Peliohjaimen painikkeen arvo (boolean)` (Aloittelija) {#block_gamepad_button_value_boolean}
+### `on … …` (Aloittelija) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Palauttaa valitun peliohjaimen painikkeen nykyisen tilan.
+Palauttaa arvon `true`, kun valittu painike on valitussa tilassa.
 
-- Tyyppi: arvolohko
-- Tuloste: `true`/`false`
 - Painikkeet (Xbox-asettelu): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
 - Painikkeet (Sony-asettelu): `risti`, `ympyrä`, `neliö`, `kolmio`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Tilavaihtoehdot: `painettu`, `vapautettu`
+- Tilat: `painettu`, `vapautettu`
 
-### `Peliohjaimen D-pad -painikkeen arvo (boolean)` (Aloittelija) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … painike …` (Aloittelija) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Palauttaa, onko valittu D-padin suunta aktiivinen.
+Palauttaa arvon `true`, kun valittu D-padin painike on valitussa tilassa.
 
-- Tyyppi: arvolohko
-- Tuloste: `true`/`false`
-- Suuntavaihtoehdot: `ylös`, `alas`, `vasen`, `oikea`
-- Tilavaihtoehdot: `painettu`, `vapautettu`
+- Suunnat: `ylös`, `alas`, `vasen`, `oikea`
+- Tilat: `painettu`, `vapautettu`
 
-### `Peliohjaimen ohjain­tikun arvo (float)` (Aloittelija) {#block_gamepad_thumbstick_value_float}
+### `ohjain … …` (Aloittelija) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Palauttaa ohjain­tikun akselin numeerisen arvon.
+Palauttaa tatin asennon yhden akselin suunnassa.
 
-- Tyyppi: arvolohko
-- Tuloste: numeerinen (float)
-- Oletusalue: `-1` ... `1`
-- Valinnainen alue asetuksissa: `-100` ... `100`
-- Tikkuvaihtoehdot: `vasen`, `oikea`
-- Akselit: `x-akseli` / `y-akseli`
+- Tatti: `vasen`, `oikea`
+- Akseli: `X-akseli`, `Y-akseli`
+- Alue: oletuksena `-1`…`1` tai `-100`…`100`, jos valitset sen Peliohjain-sivun asetuksessa **Peliohjaimen arvoalue**.
 
-### `Peliohjaimen liipaisimen arvo (float)` (Aloittelija) {#block_gamepad_trigger_pressure_value_float}
+### `… paine` (Aloittelija) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Palauttaa valitun liipaisimen painearvon.
+Palauttaa, kuinka pitkälle liipaisinta on painettu.
 
-- Tyyppi: arvolohko
-- Tuloste: numeerinen (float)
-- Oletusalue: `-1` ... `1`
-- Valinnainen alue asetuksissa: `-100` ... `100`
 - Liipaisimet (Xbox-asettelu): `LT`, `RT`
 - Liipaisimet (Sony-asettelu): `L2`, `R2`
+- Alue: oletuksena `0` (vapautettu)…`1` tai `0`…`100` laajemmalla **Peliohjaimen arvoalueella**.

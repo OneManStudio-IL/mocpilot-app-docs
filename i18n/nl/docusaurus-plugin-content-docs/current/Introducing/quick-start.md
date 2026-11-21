@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Snelstartgids
+title: Snelstart
+description: "Installeer MOCPilot, log in, maak je eerste profiel en bestuur binnen een paar minuten een model."
 ---
 
-# Snelstart
+import Screenshot from '@site/src/components/Screenshot';
 
-Deze gids helpt je om MOCPilot voor het eerst te gebruiken.
+# Snelstart {#quick-start}
 
-## 1. Inloggen of een account maken
+Deze handleiding neemt je mee van het installeren van de app tot het besturen van je eerste model. Je hebt een ondersteunde hub met een motor nodig; zie [Ondersteunde apparaten](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Installeer de app {#1-install-the-app}
 
-We raden sterk aan om een account te gebruiken.
+MOCPilot is verkrijgbaar in de App Store (iPhone, iPad, Mac), Google Play (Android) en de Microsoft Store (Windows). De links vind je op [mocpilot.com](https://mocpilot.com).
 
-- Met een account worden je profielen en instellingen gesynchroniseerd op al je apparaten.
-- Zonder account blijven gegevens alleen op het huidige apparaat.
-- Als je de app opnieuw installeert zonder account, verlies je profielen en instellingen.
+## 2. Log in of ga verder zonder account {#2-sign-in-or-continue-without-an-account}
 
-Je kunt nog steeds **Continue without an account** gebruiken, maar dit wordt niet aanbevolen voor normaal gebruik.
+Bij de eerste start vraagt de app je om in te loggen. Gebruik je e-mailadres of login en wachtwoord, Google of Apple ID, of maak een nieuw account aan.
 
-## 2. Het hoofdmenu begrijpen
+<Screenshot name="sign-in" alt="Het inlogscherm van MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+We raden een account aan:
 
-De onderste navigatie heeft 3 hoofdsecties:
+- je profielen en instellingen worden op de server opgeslagen en tussen je apparaten gesynchroniseerd;
+- je krijgt je gegevens terug als je een apparaat vervangt of kwijtraakt;
+- aankopen en MocPilot Pro werken op al je apparaten.
 
-- **Profiles**: vooraf gebouwde en persoonlijke profielen.
-- **Settings**: app-opties en accountinstellingen.
-- **Help**: ondersteuning, feedback en officiële links.
+**Doorgaan zonder account** kan ook, maar dan blijft alles alleen op dit apparaat staan en gaat het verloren als je de app verwijdert. Je kunt later inloggen via **Instellingen → Account**. Zie [Account](/docs/Application/Account/UserAccount).
 
-## 3. Belangrijke instellingen bekijken
+## 3. Wegwijs in de app {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- Op een **telefoon** bevat de balk onderaan **Profielen**, **Instellingen** en **Help** (en **Meldingen** zodra je bent ingelogd).
+- Op een **tablet** staan dezelfde onderdelen, de **Profielcatalogus** en je account in de zijbalk.
+- Op een **computer** gebruik je de bovenbalk: menu's links; Account, Meldingen en Instellingen rechts.
 
-In **Settings** kun je beheren:
+Zie [Telefoon, tablet en desktop](/docs/Introducing/Layouts).
 
-- geluid en trilling
-- scherm ingeschakeld houden
-- taal
-- donkere modus
-- account- en synchronisatieopties
+## 4. Maak een profiel {#4-create-a-profile}
 
-## 4. Vooraf gebouwde profielen
+1. Tik op de pagina **Mijn profielen** op **+** → **Nieuw profiel** (telefoon), of kies **Nieuw profiel** (tablet en computer, of **Bestand → Nieuw profiel**).
+2. Kies het **programmatype**:
+   - **Snelle koppelingen** als je een model zonder code wilt besturen. Het beste voor een eerste poging.
+   - **Logicablokken** als je gebeurtenissen, lussen, voorwaarden en sensoren wilt gebruiken.
+3. Vul een **naam** in en voeg desgewenst een afbeelding toe.
+4. Tik op **Maken**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="De pagina Nieuw profiel met de tegels Logicablokken en Snelle koppelingen" width={900} />
 
-Gebruik **Prebuilt**-profielen om:
+Het profiel opent in de editor. Meer in [Een profiel maken](/docs/Application/Profiles/CreateProfile).
 
-- snel LEGO- en andere officiële sets te bedienen.
-- technieken te leren uit kant-en-klare blokcodevoorbeelden.
-
-:::warning Important
-Prebuilt-profielen kunnen voor experimenten worden aangepast, maar wijzigingen worden niet opgeslagen. Bij opnieuw openen wordt het profiel gereset.
+:::tip Liever een kant-en-klaar model?
+Open de **Profielcatalogus** (**Online zoeken** op de profielenpagina) en installeer een officieel profiel voor je set. Zie [Catalogus en publiceren](/docs/Application/Profiles/Catalog).
 :::
 
-Volg deze volgorde voor een prebuilt-profiel:
+## 5. Voeg je hub toe {#5-add-your-hub}
 
-1. Open het gewenste prebuilt-profiel.
+1. Open in de editor **Mijn hubs**.
+2. Tik in een vrij slot op **Nieuwe hub toevoegen**, kies je hubmodel en tik op **Toevoegen**.
+3. Zet de hub aan, druk op de knop ervan en wacht tot MOCPilot hem vindt.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="De pagina Mijn hubs met hubslots" width={900} />
 
-2. Verbind de hub.
+Vraagt de app om een firmware-update, volg dan [Firmware bijwerken](/docs/Application/Hubs/FirmwareUpdating). Meer in [Een hub toevoegen en verbinden](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Plaats bedieningselementen op het dashboard {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Open **Dashboard**.
+2. Tik op **+** (**Controller toevoegen**), kies een **Joystick** en tik op **Toevoegen aan dashboard**.
+3. Sleep hem naar de gewenste plek. Tik erop om de grootte, kleur of werking te wijzigen.
 
-3. Selecteer het dashboard en druk op **Play**.
+<Screenshot name="controller-palette" alt="Het palet Controller toevoegen met de joystick geselecteerd" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Zie [Bedieningselementen toevoegen en schikken](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Eigen profielen
+## 7. Verbind het bedieningselement met een motor {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Snelle koppelingen:** sleep de invoer van de joystick (bijvoorbeeld *JOY1 Y-as*) uit **Invoer** naar de lege rij, voeg de bewerking **Motor** en de uitvoer **Hub** uit **Uitvoer** toe en tik op de poort waarop je motor is aangesloten. De rij is klaar als hij geen rood kader meer heeft. Zie [Snelle koppelingen](/docs/Application/Links/LinksIntroducing).
 
-Gebruik **My** voor je eigen profielen.
+**Logicablokken:** voeg een blok *wanneer het programma start* toe, een lus *altijd herhalen* en een blok *stel motorsnelheid in* dat de waarde van de joystick gebruikt. Zie [Logicablokken](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) en de [voorbeelden](/docs/Application/BlockBuilder/Examples).
 
-- Je kunt onbeperkt eigen profielen maken.
-- Je kunt elk profiel direct vanaf deze pagina starten.
+## 8. Druk op Start {#8-press-run}
 
-Volg deze volgorde voor een eigen profiel:
+Druk op **Start** (▶). Beweeg de joystick, en de motor draait. Druk op **Stop** om terug te gaan naar bewerken.
 
-1. Maak of importeer een profiel.
+Dat was het. En nu:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Je kunt een nieuw profiel maken of een bestaand profielbestand (`.dat`) vanaf je apparaat importeren.
-:::
-
-2. Maak een nieuw profiel.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Voer de gewenste profielnaam in. Optioneel kun je een afbeelding uit je galerij kiezen.
-
-3. Voeg hubs toe aan het profiel.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Standaard kunnen maximaal **2 hubs** aan een profiel worden toegevoegd. Om uit te breiden naar **5** moeten extra hub-slots worden gekocht.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Open de programpagina en maak de gewenste logica door blokken te verbinden.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Open het dashboard en voeg schermcontrollers toe die aan hub-motoren kunnen worden gekoppeld.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Druk op **Play** om het profiel uit te voeren.
-
-Je bent klaar om te rijden en je profiel verder te verbeteren.
-
-## 6. Help gebruiken
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-De **Help**-pagina is bedoeld om:
-
-- de snelstarttutorial te openen
-- een vraag te stellen
-- een bug te melden
-- officiële MOCPilot-links en communitykanalen te openen
+- Leer alle [soorten bedieningselementen](/docs/Application/Dashboard/ControlTypes) kennen.
+- Geef het dashboard een nieuwe look met [thema's](/docs/Application/Themes/ThemesOverview).
+- Sluit een [gamepad](/docs/Application/Dashboard/Gamepad) aan.
+- Werkt er iets niet, kijk dan bij [Problemen oplossen](/docs/Help/Troubleshooting).

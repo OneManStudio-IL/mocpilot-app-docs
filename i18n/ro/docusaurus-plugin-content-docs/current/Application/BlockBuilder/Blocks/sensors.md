@@ -5,238 +5,275 @@ title: Senzori
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Senzori
+# Senzori {#sensors}
 
-Blocurile de senzori citesc starea hub-ului/dispozitivului și furnizează date pentru condiții, evenimente și logică de control.
+Blocurile pentru senzori citesc starea telefonului sau tabletei, cronometrul programului, huburile și senzorii conectați la ele. Folosește valorile lor în condiții, evenimente și calcule.
 
-## Senzori dispozitiv și hub
+Pe această pagină:
 
-### `Nivel baterie hub` (Începător) {#block_hubs_all_sensors_battery_level}
+- [Starea hubului](#hub-state): baterie, tensiune, temperatură, curent și mod de putere
+- [Butoanele, înclinarea și orientarea hubului](#hub-tilt-and-orientation)
+- [Senzori pe porturi](#sensors-on-ports): orice dispozitiv, senzorul de culoare Technic, senzorul de distanță Technic, senzorul de culoare și distanță BOOST, senzorii WeDo 2.0
+- [Acest dispozitiv](#this-device): telefonul, tableta sau computerul pe care rulează MOCPilot
+- [Cronometru](#timer)
+
+## Starea hubului {#hub-state}
+
+Aceste blocuri nu există pentru huburile Mould King, care nu raportează niciun fel de date.
+
+### `… % baterie` (Începător) {#block_hubs_all_sensors_battery_level}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="block_hubs_all_sensors_battery_level.svg" />
-Returnează nivelul curent al bateriei hub-ului.
+Returnează nivelul bateriei hubului, în procente.
 
-### `Tensiunea bateriei hubului` (Avansat) {#block_hubs_all_sensors_battery_voltage}
+### `… tensiunea bateriei (V)` (Avansat) {#block_hubs_all_sensors_battery_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
-Returnează tensiunea bateriei hubului selectat în volți.
+Returnează tensiunea bateriei hubului, în volți.
 
-- Tip: bloc raportor numeric
-- Disponibil doar pentru huburi care raportează tensiunea bateriei.
-- Returnează `NaN` când hubul selectat nu este conectat.
+- Huburi: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Returnează `NaN` când hubul nu este conectat.
 
-### `Baterie dispozitiv %` (Începător) {#block_sensors_device_battery_level}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
-Returnează nivelul bateriei dispozitivului (telefon/tabletă) în procente.
-
-### `Temperatura plăcii` (Avansat) {#block_hubs_all_sensors_board_temp}
+### `… temperatură (C°)` (Avansat) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
-Returnează temperatura plăcii hub-ului.
+Returnează temperatura electronicii hubului, în grade Celsius.
 
-- Disponibil doar pentru `BuWizz 2` și `BuWizz 3`.
+- Huburi: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
-### `Accelerometrul hubului` (Guru) {#block_hubs_all_sensors_accelerometer}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
-Returnează date brute de accelerometru raportate de hubul selectat.
+### `obține … tensiune de ieșire (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
+Returnează tensiunea pe care hubul o furnizează în acest moment porturilor, în volți.
 
-- Opțiuni axă: `x`, `y`, `z`
+- Huburi: BuWizz 2.
 
-### `Accelerația hubului` (Guru) {#block_hubs_all_sensors_acceleration}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
-Returnează date de accelerație raportate de hubul selectat.
+### `… curent (A)` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
+Returnează curentul consumat pe portul selectat, în amperi.
 
-- Opțiuni axă: `x`, `y`, `z`
+- Huburi: BuWizz 2, BuWizz 3.
 
-### `Buton apăsat` (Începător) {#block_hubs_all_sensors_button_pressed}
+### `setați modul de alimentare …` (Technic Move Hub) (Începător) {#block_hubs_technicmove_sensors_set_power_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
+Setează modul de putere al unui Technic Move Hub.
+
+- Moduri: `normal`, `impuls`
+- Huburi: Technic Move Hub.
+
+## Butoanele, înclinarea și orientarea hubului {#hub-tilt-and-orientation}
+
+Blocul pentru buton listează huburile cu care funcționează. Blocurile de înclinare și orientare funcționează pe BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub și Robot Inventor.
+
+### `este … … buton …` (Începător) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
-Verifică dacă un buton selectat al hub-ului corespunde stării selectate.
+Returnează `true` când butonul selectat al hubului este în starea selectată.
 
-- Opțiuni stare: `apăsat`, `eliberat`
-- Opțiune tipică: `centru`
-- Notă: opțiunile pot diferi în funcție de modelul hub-ului
+- Stări: `apăsat`, `eliberat`
+- Huburi: huburile LEGO Powered Up, WeDo 2.0 și Robot Inventor. Lista butoanelor depinde de hub (de obicei `centru`).
 
-### `Tip dispozitiv` (Începător) {#block_hubs_all_motors_port_device_type}
+### `… … unghi` (Începător) {#block_hubs_all_sensors_tilt}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
+Returnează unghiul de înclinare al hubului.
+
+- Unghiuri: `înclinare`, `rotire`, `derapaj`
+- `derapaj` este disponibil doar pe Technic Hub și Robot Inventor.
+
+### `… … accelerometru (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
+Returnează citirea brută a accelerometrului hubului pe o axă.
+
+- Axe: `x`, `y`, `z`
+
+### `… … accelerație (m/s²)` (Guru) {#block_hubs_all_sensors_acceleration}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
+Returnează accelerația hubului pe o axă.
+
+- Axe: `x`, `y`, `z`
+
+### `obține … orientare …` (Începător) {#block_hubs_sensors_get_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
+Returnează fața hubului îndreptată în sus.
+
+- Ieșire: `text` sau `index`
+- Valori: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
+
+### `… orientare …` (Începător) {#block_hubs_all_sensors_is_orientation_up}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
+Returnează `true` când fața selectată a hubului este îndreptată în sus.
+
+- Opțiuni: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
+
+### `seta … orientare înclinată la …` (Avansat) {#block_hubs_sensors_set_tilt_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
+Îi spune hubului cum este montat în model, astfel încât înclinarea și orientarea să fie măsurate față de această poziție.
+
+- Opțiuni: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
+
+## Senzori pe porturi {#sensors-on-ports}
+
+Blocurile pentru senzorii Technic și BOOST de mai jos funcționează pe City Hub, Technic Hub, BOOST Move Hub și hubul MINDSTORMS Robot Inventor (nu SBrick, BuWizz, WeDo 2.0 sau Mould King).
+
+### Orice dispozitiv pe un port {#any-port-device}
+
+#### `… tip dispozitiv` (Începător) {#block_hubs_all_motors_port_device_type}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Returnează tipul dispozitivului conectat la portul selectat.
 
-- Tip: bloc reporter
-- Utilizare tipică: detectarea dispozitivului înainte de logică specifică
+- Huburi: toate huburile cu porturi, cu excepția SBrick, SBrick Plus și BuWizz 2.
+- Utilizare tipică: verifică ce este conectat înainte de a rula blocuri specifice unui dispozitiv.
 
-### `Accelerometru dispozitiv` (Guru) {#block_sensors_device_accelerometer_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
-Returnează valorile brute ale accelerometrului.
+### Senzorul de culoare Technic {#technic-color-sensor}
 
-- Opțiuni axă: `x`, `y`, `z`
-
-### `Accelerație dispozitiv` (Guru) {#block_sensors_device_acceleration_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
-Returnează datele de accelerație.
-
-- Opțiuni axă: `x`, `y`, `z`
-
-## Senzori de orientare și înclinare
-
-### `Înclinarea dispozitivului` (Avansat) {#block_sensors_device_tilt_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
-Returnează date de înclinare de la telefonul/tableta pe care rulează MOCPilot.
-
-- Opțiuni axă: `pitch`, `roll`
-
-### `Înclinare` (Începător) {#block_hubs_all_sensors_tilt}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
-Returnează unghiul de înclinare.
-
-- Opțiuni axă: `înclinare`, `rotire`, `derapaj`
-- Notă: `derapaj` este disponibil doar pe anumite hub-uri
-
-### `Obține orientarea` (Începător) {#block_hubs_sensors_get_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
-Returnează orientarea curentă a hub-ului.
-
-- Opțiuni output: `text`, `index`
-- Valori: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
-
-### `Este orientarea sus` (Începător) {#block_hubs_all_sensors_is_orientation_up}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
-Verifică dacă orientarea corespunde direcției „sus”.
-
-- Opțiuni: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
-
-### `Setează orientarea înclinării` (Avansat) {#block_hubs_sensors_set_tilt_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
-Configurează referința de orientare.
-
-- Opțiuni: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
-
-## Timer și senzori de mișcare
-
-### `Timer` (Avansat) {#block_sensors_timer_value_float}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
-Returnează valoarea timerului în secunde.
-
-### `Resetează timerul` (Avansat) {#block_sensors_timer_reset}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
-Resetează timerul la zero.
-
-## Blocuri senzori port
-
-### `Senzor distanță Technic` (Începător) {#block_hubs_all_sensors_port_technic_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
-Returnează distanța măsurată.
-
-- Unități: `mm`, `cm`, `inci`, `%`
-
-### `Technic când distanța este` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
-Verifică/declanșează condiția de distanță.
-
-- Opțiuni: `mai aproape decât`, `mai departe decât`, `exact la`
-- Unități: `mm`, `cm`, `inci`, `%`
-
-### `Technic setează modul senzorului de culoare` (Avansat) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
+#### Senzor Technic: `setează modul la …` (Avansat) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
-Acest bloc setează senzorul de culoare Technic pe modul selectat.
+Trece senzorul de culoare Technic în modul selectat.
 
-- Notă: Schimbarea modului senzorului de culoare poate afecta programul în moduri neașteptate. De exemplu, senzorul de culoare Technic nu poate citi culori sau lumină reflectată când este în modul `"ambiental"`.
+- Moduri: `implicit`, `ambiant`
+- Schimbarea modului poate afecta programul în moduri neașteptate: în modul `ambiant` senzorul nu poate citi culori sau lumina reflectată.
 
-### `Valoare culoare Technic` (Începător) {#block_hubs_all_sensors_port_technic_sensor_color}
+#### Senzor Technic: `culoare …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
-Returnează culoarea detectată.
+Returnează culoarea văzută de senzorul de culoare Technic.
 
-- Output: `valoare`, `șir`
+- Ieșire: `valoare` (un număr) sau `șir` (numele culorii)
 
-### `Technic când culoarea este` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
+#### Senzor Technic: `este culoare …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
-Declanșează când culoarea corespunde.
+Returnează `true` când senzorul de culoare Technic vede culoarea selectată.
 
-### `Lumină reflectată Technic` (Începător) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
+#### Senzor Technic: `lumină reflectată (%)` (Începător) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
-Returnează intensitatea luminii reflectate.
+Returnează câtă lumină reflectă suprafața înapoi spre senzorul de culoare Technic, în procente.
 
-### `Technic când lumina reflectată este` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
+#### Senzor Technic: `lumină reflectată …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
-Verifică pragul luminii reflectate.
+Returnează `true` când lumina reflectată se compară cu valoarea conform operatorului selectat.
 
-- Opțiuni: `<`, `=`, `>`
+- Comparație: `<`, `=`, `>`
 
-### `Lumină ambientală Technic` (Începător) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
+#### Senzor Technic: `lumină ambientală (%)` (Începător) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
-Returnează lumina ambientală.
+Returnează luminozitatea luminii înconjurătoare, în procente.
 
-### `Technic când lumina ambientală este` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
+#### Senzor Technic: `lumină ambientală …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
-Verifică pragul luminii ambientale.
+Returnează `true` când lumina ambientală se compară cu valoarea conform operatorului selectat.
 
-- Opțiuni: `<`, `=`, `>`
+- Comparație: `<`, `=`, `>`
 
-### `Culoare brută Technic` (Începător) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
+#### Senzor Technic: `valoare brută …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Returnează valorile RGB brute.
+Returnează valoarea brută a unui canal de culoare al senzorului de culoare Technic.
 
 - Canale: `roșu`, `verde`, `albastru`
 
-### `Senzor distanță BOOST` (Începător) {#block_hubs_all_sensors_port_boost_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
-Returnează distanța.
+### Senzorul de distanță Technic {#technic-distance-sensor}
 
-- Unități: `%`, `cm`, `inci`
+#### Senzor Technic: `distanță …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
+Returnează distanța măsurată de senzorul de distanță Technic.
 
-### `BOOST când distanța este` (Începător) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
-Verifică condiția de distanță.
+- Unități: `mm`, `cm`, `inci`, `%`
 
-- Opțiuni: `mai aproape decât`, `mai departe decât`, `exact la`
-- Unități: `%`, `cm`, `inci`
+#### Senzor Technic: `este mai aproape decât / mai departe decât / exact la …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
+Returnează `true` când distanța măsurată de senzorul de distanță Technic îndeplinește condiția.
 
-### `Culoare BOOST` (Începător) {#block_hubs_all_sensors_port_boost_sensor_color}
+- Comparație: `mai aproape decât`, `mai departe decât`, `exact la`
+- Unități: `mm`, `cm`, `inci`, `%`
+
+### Senzorul de culoare și distanță BOOST {#boost-color-and-distance-sensor}
+
+#### Senzor BOOST: `culoare …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
-Returnează culoarea detectată.
+Returnează culoarea văzută de senzorul de culoare și distanță BOOST.
 
-- Output: `valoare`, `șir`
+- Ieșire: `valoare` (un număr) sau `șir` (numele culorii)
 
-### `BOOST este culoare` (Începător) {#block_hubs_all_sensors_port_boost_sensor_is_color}
+#### Senzor BOOST: `este culoare …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_is_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
-Verifică dacă senzorul detectează culoarea.
+Returnează `true` când senzorul BOOST vede culoarea selectată.
 
-### `Lumină reflectată BOOST` (Începător) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
+#### Senzor BOOST: `distanță …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
+Returnează distanța măsurată de senzorul de culoare și distanță BOOST.
+
+- Unități: `%`, `cm`, `inci`
+
+#### Senzor BOOST: `este mai aproape decât / mai departe decât / exact la …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
+Returnează `true` când distanța măsurată de senzorul BOOST îndeplinește condiția.
+
+- Comparație: `mai aproape decât`, `mai departe decât`, `exact la`
+- Unități: `%`, `cm`, `inci`
+
+#### Senzor BOOST: `lumină reflectată (%)` (Începător) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Returnează lumina reflectată.
+Returnează câtă lumină reflectă suprafața înapoi spre senzorul BOOST, în procente.
 
-### `BOOST când lumina reflectată este` (Începător) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
+#### Senzor BOOST: `lumină reflectată …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
-Verifică pragul luminii reflectate.
+Returnează `true` când lumina reflectată se compară cu valoarea conform operatorului selectat.
 
-- Opțiuni: `<`, `=`, `>`
+- Comparație: `<`, `=`, `>`
 
-### `Technic Move setează modul de putere` (Începător) {#block_hubs_technicmove_sensors_set_power_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
-Setează modul de putere.
+### Senzorii WeDo 2.0 {#wedo-2-sensors}
 
-- Opțiuni: `normal`, `impuls`
+Senzorul de mișcare și senzorul de înclinare WeDo 2.0, pe hubul WeDo 2.0.
 
-### `Tensiune de ieșire BuWizz` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
-Returnează tensiunea de ieșire curentă raportată de un hub BuWizz.
-
-- Disponibil doar pentru huburi BuWizz acceptate.
-
-### `Curent port BuWizz` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
-Returnează consumul de curent raportat pentru portul selectat al hubului BuWizz.
-
-- Disponibil doar pentru huburi și porturi BuWizz acceptate.
-
-### `Distanță WeDo 2` (Începător) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
+#### Senzor WeDo 2.0: `distanță …` (Începător) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
-Returnează distanța.
+Returnează distanța măsurată de senzorul de mișcare WeDo 2.0.
 
-### `WeDo 2 când distanța este` (Începător) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+- Unități: `%`, `cm`, `inci`
+- Huburi: WeDo 2.0.
+
+#### Senzor WeDo 2.0: `este mai aproape decât / mai departe decât / exact la …` (Începător) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
-Declanșează/verifică o condiție de distanță pentru un senzor de distanță WeDo 2.
+Returnează `true` când distanța măsurată de senzorul de mișcare WeDo 2.0 îndeplinește condiția.
 
-- Opțiuni comparație: `closer than`, `farther than`, `exactly at`
-- Opțiuni unitate: `%`, `cm`, `inch`
+- Comparație: `mai aproape decât`, `mai departe decât`, `exact la`
+- Unități: `%`, `cm`, `inci`
+- Huburi: WeDo 2.0.
 
-### `Înclinare WeDo 2` (Începător) {#block_hubs_all_sensors_port_wedo2_tilt}
+#### Senzor WeDo 2.0: `unghi …` / `direcție ca …` (Începător) {#block_hubs_all_sensors_port_wedo2_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
-Returnează înclinarea.
+Returnează date de la senzorul de înclinare WeDo 2.0: un unghi de înclinare sau direcția în care este înclinat.
 
-- Axe: `înclinare`, `rotire`
+- Unghiuri: `înclinare`, `rotire`
+- Ieșirea pentru direcție: `text` sau `număr`; direcții: `neutru`, `înainte`, `înapoi`, `stânga`, `dreapta`, `necunoscut`
+- Huburi: WeDo 2.0.
+
+## Acest dispozitiv {#this-device}
+
+Aceste blocuri citesc telefonul, tableta sau computerul pe care rulează MOCPilot.
+
+### `dispozitiv % baterie` (Începător) {#block_sensors_device_battery_level}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
+Returnează nivelul bateriei dispozitivului, în procente.
+
+### `dispozitiv … unghi` (Avansat) {#block_sensors_device_tilt_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
+Returnează unghiul de înclinare al dispozitivului.
+
+- Unghiuri: `înclinare`, `rotire`, `derapaj`
+- Utilizare tipică: condu modelul înclinând telefonul.
+
+### `dispozitiv … accelerometru (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
+Returnează citirea brută a accelerometrului dispozitivului pe o axă, în m/s².
+
+- Axe: `x`, `y`, `z`
+
+### `dispozitiv … accelerație (m/s²)` (Guru) {#block_sensors_device_acceleration_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
+Returnează accelerația dispozitivului pe o axă, în m/s².
+
+- Axe: `x`, `y`, `z`
+
+## Cronometru {#timer}
+
+### `temporizator` (Avansat) {#block_sensors_timer_value_float}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
+Returnează timpul scurs de la pornirea programului sau de la ultimul **resetați cronometrul**, în secunde.
+
+### `resetați cronometrul` (Avansat) {#block_sensors_timer_reset}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
+Readuce cronometrul la zero.

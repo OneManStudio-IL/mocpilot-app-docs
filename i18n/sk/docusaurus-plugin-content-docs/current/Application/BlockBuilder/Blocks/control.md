@@ -1,146 +1,158 @@
 ---
 id: Control
-title: Ovládanie
+title: Kontrola
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Ovládanie
+# Kontrola {#control}
 
-Bloky ovládania riadia tok vykonávania: čakanie, cykly, vetvenie a zastavenie skriptov.
+Bloky kontroly určujú, ako skript beží: čakanie, cykly, vetvenie a zastavenie. Keď má profil huby, táto kategória obsahuje aj bloky, ktoré huby pripájajú a menia ich nastavenia.
 
-## Bloky čakania
+## Bloky čakania {#wait-blocks}
 
-### `Čakaj` (Začiatočník) {#block_control_wait_for}
+### `čakať … sekundy` (Začiatočník) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pozastaví aktuálny skript na zadaný čas.
+Pozastaví skript na zadaný počet sekúnd.
 
-### `Čakaj, kým` (Pokročilý) {#block_control_wait_until}
+### `počkajte, kým …` (Pokročilý) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pozastaví aktuálny skript, kým sa podmienka nestane pravdivou.
+Pozastaví skript, kým sa podmienka nestane pravdivou.
 
-## Bloky cyklov
+## Cykly {#loops}
 
-### `Opakuj` (Pokročilý) {#block_control_repeat_for}
+### `opakovať …` (Pokročilý) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Spustí vnorené bloky pevne stanovený počet krát.
+Vykoná bloky vo svojom vnútri zadaný počet krát (predvolene 10).
 
-### `Opakuj, kým` (Pokročilý) {#block_control_repeat_until}
+### `zopakovať, kým …` (Pokročilý) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Opakovane vykonáva bloky, kým sa podmienka nestane pravdivou.
+Vykonáva bloky vo svojom vnútri stále dokola, kým sa podmienka nestane pravdivou.
 
-### `Navždy` (Pokročilý) {#block_control_repeat_forever}
+### `zopakovať vždy` (Pokročilý) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Vykonáva bloky nepretržite, kým sa program alebo skript nezastaví.
+Vykonáva bloky vo svojom vnútri znova a znova, kým sa skript alebo program nezastaví. Pod neho sa nedá nič pripojiť.
 
-## Bloky vetvenia
+## Vetvenie {#branches}
 
-### `Ak` (Začiatočník) {#block_control_if}
+### `ak … potom` (Začiatočník) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Spustí vnorené bloky iba vtedy, keď je podmienka pravdivá.
+Vykoná bloky vo svojom vnútri iba vtedy, keď je podmienka pravdivá.
 
-### `Ak / Inak` (Pokročilý) {#block_control_if_else}
+### `ak … potom … iné` (Pokročilý) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Spustí jednu vetvu, keď je podmienka pravdivá, inak spustí alternatívnu vetvu.
+Keď je podmienka pravdivá, vykoná prvú vetvu, inak druhú.
 
-### `Urob toto a toto` (Guru) {#block_control_do_this_and_this}
+### `urob to … a toto` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Spustí dve sekvencie blokov po sebe ako jednu operáciu riadenia toku.
+Vykoná prvú skupinu blokov, potom druhú a až potom pokračuje blokmi pod sebou.
 
-## Bloky zastavenia
+## Zastavenie {#stopping}
 
-### `Zastav` (Začiatočník) {#block_control_stop}
+### `zastaviť …` (Začiatočník) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Zastaví vykonávanie skriptu (rozsah závisí od zvolenej možnosti).
+Zastaví skripty; čo presne zastaví, závisí od zvolenej možnosti.
 
-- Možnosti zastavenia: `všetko`, `tento skript`, `a ukonči program`
+- `všetky`: zastaví všetky skripty.
+- `tento zásobník`: zastaví iba tento skript.
+- `a ukončiť program`: zastaví program.
 
-### `Zastav ostatné skripty` (Guru) {#block_control_stop_other_stacks}
+### `zastaviť ostatné zásobníky` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Zastaví všetky ostatné bežiace skripty, pričom aktuálny skript pokračuje.
+Zastaví všetky ostatné bežiace skripty; tento pokračuje.
 
-## Pomocné bloky hubu/ovládania
+## Bloky hubov {#hub-blocks}
 
-### `Nastav pripojenie` (Začiatočník) {#block_hubs_control_set_connect}
+### `pripojiť / odpojiť …` (Začiatočník) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Riadi stav pripojenia hubu z logiky programu.
+Pripojí vybraný hub k programu alebo ho od neho odpojí.
 
-- Možnosti akcie: `pripojiť`, `odpojiť`
+- Možnosti: `pripojiť`, `odpojiť`
+- Huby: všetky.
 
-### `Nastaviť konfiguráciu hubu` (Pokročilý) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Nastaví vybraný hub na jeden z jeho podporovaných konfiguračných profilov.
-
-- Dostupné iba pre huby, ktoré poskytujú možnosti konfigurácie.
-- Typické použitie: prepnúť konfigurovateľný hub, napríklad Technic Move Hub, na inú uloženú konfiguráciu pred spustením ďalších blokov.
-
-### `Konfigurácia hubu` (Pokročilý) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Vráti aktuálnu konfiguráciu vybraného hubu.
-
-- Typ: reportovací blok
-- Možnosti výstupného formátu: `text`, `index`
-- Dostupné iba pre huby, ktoré poskytujú možnosti konfigurácie.
-- Vráti `NaN`, keď vybraný hub nie je pripojený alebo nie je dostupná žiadna konfigurácia.
-
-### `Je pripojený` (Začiatočník) {#block_hubs_all_sensors_is_connected}
+### `… pripojené` (Začiatočník) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Vracia, či je hub aktuálne pripojený.
+Vráti `true`, keď je vybraný hub pripojený.
 
-- Typ: boolean reporter blok
+- Typ: booleovský blok
+- Huby: všetky.
 
-### `BuWizz 2 nastav režim výkonu` (Začiatočník) {#block_hubs_buwizz_sensors_set_power_mode}
+### `nastaviť … konfiguráciu na …` (Pokročilý) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Prepne hub do jednej z jeho konfigurácií.
+
+- Huby: Technic Move Hub (v súčasnosti jediný hub s konfiguráciami).
+- Typické použitie: prepnúť hub do inej konfigurácie pred vykonaním ďalších blokov.
+
+### `získať … konfigurácia ako …` (Pokročilý) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Vráti aktuálnu konfiguráciu hubu.
+
+- Typ: hlásiaci blok
+- Výstup: `text` alebo `index`
+- Huby: Technic Move Hub.
+- Vráti `NaN`, keď hub nie je pripojený alebo nemá konfiguráciu.
+
+### `nastaviť … režim napájania na …` (Začiatočník) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
 Nastaví režim výkonu hubu BuWizz 2.
 
-- Možnosti režimu: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Režimy: `Pomaly`, `Normálny`, `Rýchlo`, `Ludicrous`
+- Huby: BuWizz 2.
 
-### `BuWizz 2 zisti režim výkonu` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `získať … režim napájania ako …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Vracia aktuálne aktívny režim výkonu BuWizz 2.
+Vráti aktuálny režim výkonu hubu BuWizz 2.
 
-- Možnosti výstupu: `text`, `index`
+- Výstup: `text` alebo `index`
+- Huby: BuWizz 2.
 
-### `MouldKing nastav riadiaci kanál` (Pokročilý) {#block_hubs_mouldking_control_set_control_channel}
+### `nastaviť … riadiaci kanál na …` (Pokročilý) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Nastaví aktívny riadiaci kanál pre podporovaný MouldKing hub/ovládač.
+Nastaví ovládací kanál hubu Mould King.
 
-- Možnosti kanála: `A`, `B`, `C`
+- Kanály: `A`, `B`, `C`
+- Huby: Mould King 4.0 a 6.0.
 
-### `MouldKing zisti riadiaci kanál` (Pokročilý) {#block_hubs_mouldking_control_get_control_channel}
+### `získať … riadiaci kanál ako …` (Pokročilý) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Vracia aktuálne aktívny riadiaci kanál.
+Vráti aktuálny ovládací kanál hubu Mould King.
 
-- Možnosti výstupu: `text`, `index`
+- Výstup: `text` alebo `index`
+- Huby: Mould King 4.0 a 6.0.

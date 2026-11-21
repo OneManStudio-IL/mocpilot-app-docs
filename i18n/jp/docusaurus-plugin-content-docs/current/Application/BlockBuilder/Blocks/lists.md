@@ -5,74 +5,73 @@ title: リスト
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# リスト
+# リスト {#lists}
 
-リストは順序付きの値の集合を保存し、専用のリスト用レポーターブロックおよびスタックブロックによって操作されます。
+リストは複数の値を順番に保存します。リストの作成、名前の変更、削除は、カテゴリーの上部にある**リストを作成**、**リストの名前を変更**、**リストを削除**で行います。以下のブロックは、プログラムにリストが 1 つ以上あると表示されます。項目の番号は 1 から始まります。
 
-## リスト操作ブロック
+## リストを変更する {#changing-a-list}
 
-### `リストに追加` (上級) {#block_lists_add}
+### `追加する … へ …` (上級者) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-選択したリストの末尾に値を追加します。
+リストの末尾に値を追加します。
 
-### `〜番目に挿入` (達人) {#block_lists_insert_at}
+### `挿入する … で … の …` (達人) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-指定した位置に値を挿入します。
+指定した位置に値を挿入します。それ以降の項目は 1 つずつ後ろにずれます。
 
-### `〜番目を置き換え` (達人) {#block_lists_replace_at}
+### `アイテムを置き換える … の … と …` (達人) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-指定した位置の値を新しい値に置き換えます。
+指定した位置の項目を新しい値に置き換えます。
 
-### `削除` (上級) {#block_lists_delete}
+### `削除する … から …` (上級者) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-指定した位置の要素を削除します（または削除モードに従います）。
+指定した位置の項目を削除します。
 
-### `すべて削除` (上級) {#block_lists_clear_all}
+### `クリア …` (上級者) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-選択したリストのすべての要素を削除します。
+リストからすべての項目を削除します。
 
-## リスト値・判定ブロック
+## リストを読み取る {#reading-a-list}
 
-### `〜番目の項目` (上級) {#block_lists_item_at}
+### `アイテム … の …` (上級者) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-指定した位置の値を返します。
+指定した位置の項目を返します。
 
-### `値の位置` (達人) {#block_lists_index_of_value}
+### `インデックス … 中で …` (達人) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-一致する最初の値の位置を返します。
+値と等しい最初の項目の位置を返します。見つからない場合は `0` を返します。
 
-### `値を含むか` (達人) {#block_lists_contains_value}
+### `… 含む …` (達人) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-リストに指定した値が含まれているかを返します。
+リストに値が含まれているとき `true` を返します。
 
-### `リストの長さ` (上級) {#block_lists_size_of_value}
+### `のサイズ …` (上級者) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-リスト内の要素数を返します。
+リストの項目数を返します。
 
-## リスト値レポーター
+### リスト (上級者) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-選択したリストの現在の値を返します。
+リストにはそれぞれ、その名前の付いた値ブロックがあります。リスト全体をテキストとして返します。
 
-- タイプ: レポーターブロック
-- 出力例: `[item1,item2,item3]`
-- 使用例: リスト内容の確認や他ブロックへの入力
+- 出力例：`[item1,item2,item3]`。空のリストは空のテキストになります。
+- 主な用途：リストをモニターに表示したり、リストを受け取るブロック（たとえば距離センサーのライト用の**点灯**）に渡したりします。

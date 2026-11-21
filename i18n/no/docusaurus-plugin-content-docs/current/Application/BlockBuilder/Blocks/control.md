@@ -5,142 +5,154 @@ title: Kontroll
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Kontroll
+# Kontroll {#control}
 
-Kontrollblokker styrer kjørelogikken: venting, løkker, forgrening og stopping av skript.
+Kontrollblokker bestemmer hvordan et skript kjører: venting, løkker, forgreninger og stopp. Når profilen har hubber, inneholder denne kategorien også blokker som kobler til hubber og endrer innstillingene deres.
 
-## Venteblokker
+## Venteblokker {#wait-blocks}
 
-### `Vent` (Nybegynner) {#block_control_wait_for}
+### `vent … sekunder` (Nybegynner) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Setter det nåværende skriptet på pause i en spesifisert tid.
+Setter skriptet på pause i det angitte antallet sekunder.
 
-### `Vent til` (Avansert) {#block_control_wait_until}
+### `vent til …` (Avansert) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Setter det nåværende skriptet på pause til en betingelse blir sann.
+Setter skriptet på pause til betingelsen blir sann.
 
-## Løkkeblokker
+## Løkker {#loops}
 
-### `Gjenta` (Avansert) {#block_control_repeat_for}
+### `gjenta …` (Avansert) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Kjører innebygde blokker et fast antall ganger.
+Kjører blokkene inni det angitte antallet ganger (10 som standard).
 
-### `Gjenta til` (Avansert) {#block_control_repeat_until}
+### `gjenta så lenge …` (Avansert) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Kjører innebygde blokker gjentatte ganger til en betingelse blir sann.
+Kjører blokkene inni om og om igjen til betingelsen blir sann.
 
-### `For alltid` (Avansert) {#block_control_repeat_forever}
+### `gjenta alltid` (Avansert) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Kjører innebygde blokker kontinuerlig til programmet eller skriptet stoppes.
+Kjører blokkene inni om og om igjen til skriptet eller programmet stopper. Ingenting kan festes under den.
 
-## Forgreningsblokker
+## Forgreninger {#branches}
 
-### `Hvis` (Nybegynner) {#block_control_if}
+### `hvis … så` (Nybegynner) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Kjører innebygde blokker kun når betingelsen er sann.
+Kjører blokkene inni bare når betingelsen er sann.
 
-### `Hvis / Ellers` (Avansert) {#block_control_if_else}
+### `hvis … så … ellers` (Avansert) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Kjører én gren når betingelsen er sann, ellers kjøres den alternative grenen.
+Kjører den første grenen når betingelsen er sann, og ellers den andre grenen.
 
-### `Gjør dette og dette` (Guru) {#block_control_do_this_and_this}
+### `gjør dette … og dette` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Kjører to blokkstabler i sekvens som en del av én kontrollflytoperasjon.
+Kjører den første gruppen blokker, deretter den andre, og fortsetter først da med blokkene under.
 
-## Stoppblokker
+## Stopp {#stopping}
 
-### `Stopp` (Nybegynner) {#block_control_stop}
+### `stopp …` (Nybegynner) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Stopper kjøring av skript (omfang avhenger av valgt stoppalternativ).
+Stopper skript; hva som stoppes, avhenger av valget.
 
-- Stoppalternativer: `alle`, `denne stakken`, `og avslutt programmet`
+- `alle`: stopper alle skript.
+- `denne stakken`: stopper bare dette skriptet.
+- `og avslutt program`: stopper programmet.
 
-### `Stopp andre stabler` (Guru) {#block_control_stop_other_stacks}
+### `stopp andre stakker` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Stopper alle andre kjørende stabler mens den nåværende fortsetter.
+Stopper alle andre skript som kjører; dette fortsetter.
 
-## Hub-/kontrollverktøyblokker
+## Hubblokker {#hub-blocks}
 
-### `Sett tilkobling` (Nybegynner) {#block_hubs_control_set_connect}
+### `koble til / koble fra …` (Nybegynner) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Styrer hubens tilkoblingsstatus fra kontrollflytlogikk.
+Kobler den valgte huben til eller fra programmet.
 
-- Handlingsalternativer: `koble til`, `koble fra`
+- Valg: `koble til`, `koble fra`
+- Hubber: alle.
 
-### `Angi hub-konfigurasjon` (Avansert) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Setter den valgte huben til en av de støttede konfigurasjonsprofilene.
-
-- Bare tilgjengelig for huber som tilbyr hub-konfigurasjonsvalg.
-- Typisk bruk: bytt en konfigurerbar hub, som Technic Move Hub, til en annen lagret konfigurasjon før de neste blokkene kjøres.
-
-### `Hub-konfigurasjon` (Avansert) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Returnerer den gjeldende konfigurasjonen til den valgte huben.
-
-- Type: rapportblokk
-- Utdataformatvalg: `text`, `index`
-- Bare tilgjengelig for huber som tilbyr hub-konfigurasjonsvalg.
-- Returnerer `NaN` når den valgte huben ikke er tilkoblet eller ingen konfigurasjon er tilgjengelig.
-
-### `Er tilkoblet` (Nybegynner) {#block_hubs_all_sensors_is_connected}
+### `… tilkoblet` (Nybegynner) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Returnerer om huben for øyeblikket er tilkoblet.
+Returnerer `true` når den valgte huben er tilkoblet.
 
-- Type: boolsk rapporteringsblokk
+- Type: boolsk blokk
+- Hubber: alle.
 
-### `BuWizz 2 sett effektmodus` (Nybegynner) {#block_hubs_buwizz_sensors_set_power_mode}
+### `sett … konfigurasjon til …` (Avansert) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Bytter huben til en av konfigurasjonene sine.
+
+- Hubber: Technic Move Hub (i dag den eneste huben med konfigurasjoner).
+- Typisk bruk: bytt huben til en annen konfigurasjon før de neste blokkene kjører.
+
+### `få … konfigurasjon som …` (Avansert) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Returnerer hubens gjeldende konfigurasjon.
+
+- Type: rapporteringsblokk
+- Utdata: `tekst` eller `indeks`
+- Hubber: Technic Move Hub.
+- Returnerer `NaN` når huben ikke er tilkoblet eller ikke har noen konfigurasjon.
+
+### `sett … strømmodus til …` (Nybegynner) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Setter effektmodus for BuWizz 2-huben.
+Angir effektmodusen på en BuWizz 2.
 
-- Modusalternativer: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Moduser: `Sakte`, `Normal`, `Rask`, `Ludicrous`
+- Hubber: BuWizz 2.
 
-### `BuWizz 2 hent effektmodus` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `få … strømmodus som …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Returnerer gjeldende effektmodus for BuWizz 2.
+Returnerer gjeldende effektmodus på en BuWizz 2.
 
-- Utdataformatalternativer: `tekst`, `indeks`
+- Utdata: `tekst` eller `indeks`
+- Hubber: BuWizz 2.
 
-### `MouldKing sett kontrollkanal` (Avansert) {#block_hubs_mouldking_control_set_control_channel}
+### `sett … kontrollkanal til …` (Avansert) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Setter aktiv kontrollkanal for støttet MouldKing-hub/kontroller.
+Angir styrekanalen på en Mould King-hub.
 
-- Kanalalternativer: `A`, `B`, `C`
+- Kanaler: `A`, `B`, `C`
+- Hubber: Mould King 4.0 og 6.0.
 
-### `MouldKing hent kontrollkanal` (Avansert) {#block_hubs_mouldking_control_get_control_channel}
+### `få … kontrollkanal som …` (Avansert) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Returnerer gjeldende aktiv kontrollkanal for støttet MouldKing-hub/kontroller.
+Returnerer gjeldende styrekanal på en Mould King-hub.
 
-- Utdataformatalternativer: `tekst`, `indeks`
+- Utdata: `tekst` eller `indeks`
+- Hubber: Mould King 4.0 og 6.0.

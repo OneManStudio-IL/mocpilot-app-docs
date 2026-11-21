@@ -6,101 +6,86 @@ title: Gamepad
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Gamepad
-Bloki gamepada służą do reagowania na wejścia kontrolera oraz odczytu aktualnych wartości stanu gamepada.
 
-## Bloki zdarzeń
+Bloki gamepada reagują na kontroler do gier i odczytują jego przyciski, drążki i spusty. Kategoria pojawia się, gdy na [stronie Gamepad](/docs/Application/Dashboard/Gamepad) włączona jest opcja **Włącz bloki gamepada**. Nazwy przycisków zależą od układu kontrolera: Xbox lub Sony.
 
-### `Gdy przycisk gamepada jest` (Początkujący) {#block_gamepad_event_when_button_is}
+## Zdarzenia {#events}
+
+### `gdy … jest …` (Początkujący) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Wyzwalane, gdy wybrany przycisk gamepada odpowiada skonfigurowanemu stanowi.
+Uruchamia się, gdy wybrany przycisk zostanie naciśnięty lub zwolniony.
 
-- Typ: blok zdarzenia
-- Opcje przycisków (układ Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opcje przycisków (układ Sony): `krzyżyk`, `kółko`, `kwadrat`, `trójkąt`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Opcje stanu: `naciśnięty`, `zwolniony`
+- Przyciski (układ Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Przyciski (układ Sony): `krzyż`, `okrąg`, `kwadrat`, `trójkąt`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stany: `naciśnięty`, `zwolniony`
 
-### `Gdy D-pad gamepada jest` (Początkujący) {#block_gamepad_event_when_dpad_is}
+### `kiedy D-Pad … przycisk …` (Początkujący) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Wyzwalane, gdy kierunek lub stan D-pada odpowiada wybranemu warunkowi.
+Uruchamia się, gdy przycisk pada kierunkowego zostanie naciśnięty lub zwolniony.
 
-- Typ: blok zdarzenia
-- Opcje kierunku: `góra`, `dół`, `lewo`, `prawo`
-- Opcje stanu: `naciśnięty`, `zwolniony`
+- Kierunki: `góra`, `dół`, `lewo`, `prawo`
+- Stany: `naciśnięty`, `zwolniony`
 
-### `Gdy drążek gamepada jest` (Początkujący) {#block_gamepad_event_when_thumbstick_is}
+### `gdy … drążek …` (Początkujący) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Wyzwalane, gdy warunek drążka odpowiada wybranym opcjom.
+Uruchamia się, gdy drążek zostanie wychylony w danym kierunku, przesunięty lub puszczony.
 
-Na podstawie dostępnych opcji blok obsługuje:
+- Drążek: `lewy`, `prawy`
+- Stan: `góra`, `dół`, `lewo`, `prawo`, `przesunięty`, `zwolniony`
+- Typowe zastosowanie: reakcja na ruch drążka oraz zatrzymanie lub wyśrodkowanie modelu po puszczeniu drążka.
 
-- Wybór drążka: `lewy` / `prawy`
-- Wybór kierunku/stanu: `góra`, `dół`, `lewo`, `prawo`, `ruch`, `zwolniony`
+## Wartości {#values}
 
-- Typ: blok zdarzenia
-- Typowe użycie: reagowanie na ruch kierunkowy lub zwolnienie drążka
-
-## Bloki wartości
-
-### `Wartość przycisku gamepada (boolean)` (Początkujący) {#block_gamepad_button_value_boolean}
+### `jest … …` (Początkujący) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Zwraca aktualny stan wybranego przycisku gamepada.
+Zwraca `true`, gdy wybrany przycisk jest w wybranym stanie.
 
-- Typ: blok wartości
-- Wyjście: `true`/`false`
-- Opcje przycisków (układ Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opcje przycisków (układ Sony): `krzyżyk`, `kółko`, `kwadrat`, `trójkąt`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Opcje stanu: `naciśnięty`, `zwolniony`
+- Przyciski (układ Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Przyciski (układ Sony): `krzyż`, `okrąg`, `kwadrat`, `trójkąt`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stany: `naciśnięty`, `zwolniony`
 
-### `Wartość przycisku D-pad gamepada (boolean)` (Początkujący) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … przycisk …` (Początkujący) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Zwraca, czy wybrany kierunek D-pada jest aktualnie aktywny.
+Zwraca `true`, gdy wybrany przycisk pada kierunkowego jest w wybranym stanie.
 
-- Typ: blok wartości
-- Wyjście: `true`/`false`
-- Opcje kierunku: `góra`, `dół`, `lewo`, `prawo`
-- Opcje stanu: `naciśnięty`, `zwolniony`
+- Kierunki: `góra`, `dół`, `lewo`, `prawo`
+- Stany: `naciśnięty`, `zwolniony`
 
-### `Wartość drążka gamepada (float)` (Początkujący) {#block_gamepad_thumbstick_value_float}
+### `drążek … …` (Początkujący) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Zwraca wartość osi drążka.
+Zwraca położenie drążka wzdłuż jednej osi.
 
-- Typ: blok wartości
-- Wyjście: liczba (float)
-- Domyślny zakres: `-1` do `1`
-- Opcjonalny zakres w ustawieniach gamepada: `-100` do `100`
-- Opcje drążka: `lewy`, `prawy`
-- Opcje osi: `oś X` / `oś Y`
+- Drążek: `lewy`, `prawy`
+- Oś: `oś X`, `oś Y`
+- Zakres: domyślnie od `-1` do `1` albo od `-100` do `100`, jeśli wybierzesz to w ustawieniu **Zakres wartości gamepada** na stronie Gamepad.
 
-### `Wartość nacisku triggera (float)` (Początkujący) {#block_gamepad_trigger_pressure_value_float}
+### `… ciśnienie` (Początkujący) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Zwraca wartość nacisku dla wybranego triggera.
+Zwraca, jak mocno wciśnięty jest spust.
 
-- Typ: blok wartości
-- Wyjście: liczba (float)
-- Domyślny zakres: `-1` do `1`
-- Opcjonalny zakres w ustawieniach gamepada: `-100` do `100`
-- Opcje triggerów (układ Xbox): `LT`, `RT`
-- Opcje triggerów (układ Sony): `L2`, `R2`
+- Spusty (układ Xbox): `LT`, `RT`
+- Spusty (układ Sony): `L2`, `R2`
+- Zakres: domyślnie od `0` (puszczony) do `1` albo od `0` do `100` przy szerszym ustawieniu **Zakres wartości gamepada**.

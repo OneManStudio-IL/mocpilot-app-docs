@@ -5,74 +5,73 @@ title: Zoznamy
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Zoznamy
+# Zoznamy {#lists}
 
-Zoznamy ukladajú usporiadané kolekcie hodnôt a pracuje sa s nimi pomocou špeciálnych blokov typu Reporter a Stack.
+Zoznam uchováva viac hodnôt v poradí. Zoznamy vytvoríte, premenujete a odstránite tlačidlami **Vytvoriť zoznam**, **Premenovať zoznam** a **Odstrániť zoznam** hore v kategórii. Nižšie uvedené bloky sa zobrazia, keď má program aspoň jeden zoznam. Položky sú číslované od 1.
 
-## Bloky úprav zoznamu
+## Zmena zoznamu {#changing-a-list}
 
-### `Pridaj hodnotu do zoznamu` (Pokročilý) {#block_lists_add}
+### `pridať … do …` (Pokročilý) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Pridá hodnotu na koniec vybraného zoznamu.
+Pridá hodnotu na koniec zoznamu.
 
-### `Vlož na pozíciu` (Guru) {#block_lists_insert_at}
+### `vložiť … na … z …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Vloží hodnotu na zvolený index v zozname.
+Vloží hodnotu na zadanú pozíciu; položky za ňou sa posunú o jednu ďalej.
 
-### `Nahraď na pozícii` (Guru) {#block_lists_replace_at}
+### `nahradiť položku … z … s …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Nahradí položku na zvolenom indexe novou hodnotou.
+Nahradí položku na zadanej pozícii novou hodnotou.
 
-### `Odstráň` (Pokročilý) {#block_lists_delete}
+### `odstrániť … z …` (Pokročilý) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Odstráni položku na zvolenom indexe (alebo podľa zvoleného režimu odstránenia).
+Odstráni položku na zadanej pozícii.
 
-### `Vymaž všetko` (Pokročilý) {#block_lists_clear_all}
+### `vymazať …` (Pokročilý) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Odstráni všetky položky zo zoznamu.
+Odstráni zo zoznamu všetky položky.
 
-## Bloky čítania/kontroly zoznamu
+## Čítanie zoznamu {#reading-a-list}
 
-### `Položka na pozícii` (Pokročilý) {#block_lists_item_at}
+### `položka … z …` (Pokročilý) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Vracia hodnotu na zvolenom indexe.
+Vráti položku na zadanej pozícii.
 
-### `Index hodnoty` (Guru) {#block_lists_index_of_value}
+### `index … v …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Vracia index prvej zodpovedajúcej hodnoty v zozname.
+Vráti pozíciu prvej položky, ktorá sa rovná hodnote, alebo `0`, ak taká neexistuje.
 
-### `Obsahuje hodnotu` (Guru) {#block_lists_contains_value}
+### `… obsahuje …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Vracia, či zoznam obsahuje zadanú hodnotu.
+Vráti `true`, keď zoznam obsahuje danú hodnotu.
 
-### `Veľkosť zoznamu` (Pokročilý) {#block_lists_size_of_value}
+### `veľkosť …` (Pokročilý) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Vracia počet položiek v zozname.
+Vráti počet položiek v zozname.
 
-## Blok hodnoty zoznamu
+### Zoznam (Pokročilý) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Vracia aktuálnu hodnotu vybraného zoznamu.
+Každý zoznam má vlastný hlásiaci blok so svojím názvom. Vracia celý zoznam ako text.
 
-- Typ: reporter blok  
-- Príklad výstupu: `[item1,item2,item3]`  
-- Typické použitie: zobrazenie obsahu zoznamu alebo odovzdanie zoznamu do iných blokov
+- Príklad výstupu: `[item1,item2,item3]`; prázdny zoznam dáva prázdny text.
+- Typické použitie: zobraziť zoznam na monitore alebo ho odovzdať blokom, ktoré prijímajú zoznam (napríklad **rozsvietiť** pre svetlá senzora vzdialenosti).

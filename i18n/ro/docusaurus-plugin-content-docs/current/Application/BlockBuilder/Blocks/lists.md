@@ -5,74 +5,73 @@ title: Liste
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Liste
+# Liste {#lists}
 
-Listele stochează colecții ordonate de valori și sunt manipulate prin blocuri dedicate de tip Reporter și Stack.
+O listă stochează mai multe valori în ordine. Creează, redenumește și șterge liste cu **Creează o listă**, **Redenumește lista** și **Șterge lista** din partea de sus a categoriei. Blocurile de mai jos apar de îndată ce programul are cel puțin o listă. Elementele sunt numerotate de la 1.
 
-## Blocuri de modificare a listelor
+## Modificarea unei liste {#changing-a-list}
 
-### `Adaugă valoare în listă` (Avansat) {#block_lists_add}
+### `adăuga … la …` (Avansat) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Adaugă o valoare la sfârșitul listei selectate.
+Adaugă o valoare la sfârșitul listei.
 
-### `Inserează la` (Guru) {#block_lists_insert_at}
+### `insera … la … de …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Inserează o valoare la indexul selectat din listă.
+Inserează o valoare în poziția dată; elementele de după ea se mută cu o poziție mai jos.
 
-### `Înlocuiește la` (Guru) {#block_lists_replace_at}
+### `înlocuiți articolul … de … cu …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Înlocuiește elementul de la indexul selectat cu o valoare nouă.
+Înlocuiește elementul din poziția dată cu o valoare nouă.
 
-### `Șterge` (Avansat) {#block_lists_delete}
+### `șterge … de la …` (Avansat) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Șterge elementul de la indexul selectat (sau conform modului de ștergere selectat).
+Șterge elementul din poziția dată.
 
-### `Șterge tot` (Avansat) {#block_lists_clear_all}
+### `șterge …` (Avansat) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Elimină toate elementele din lista selectată.
+Elimină toate elementele din listă.
 
-## Blocuri de valoare/verificare listă
+## Citirea unei liste {#reading-a-list}
 
-### `Element la` (Avansat) {#block_lists_item_at}
+### `articol … de …` (Avansat) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Returnează valoarea de la indexul selectat.
+Returnează elementul din poziția dată.
 
-### `Indexul valorii` (Guru) {#block_lists_index_of_value}
+### `indexul … în …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Returnează indexul primei valori care corespunde în listă.
+Returnează poziția primului element egal cu valoarea sau `0` dacă nu există niciunul.
 
-### `Conține valoare` (Guru) {#block_lists_contains_value}
+### `… conține …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Returnează dacă lista conține o valoare specificată.
+Returnează `true` când lista conține valoarea.
 
-### `Dimensiunea listei` (Avansat) {#block_lists_size_of_value}
+### `mărimea …` (Avansat) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Returnează numărul de elemente din lista selectată.
+Returnează numărul de elemente din listă.
 
-## Bloc reporter pentru listă
+### Listă (Avansat) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Returnează valoarea curentă a listei selectate.
+Fiecare listă are propriul bloc raportor cu numele ei. Acesta returnează întreaga listă ca text.
 
-- Tip: bloc reporter
-- Exemplu format output: `[item1,item2,item3]`
-- Utilizare tipică: inspectarea conținutului listei sau transmiterea valorii listei către blocuri compatibile
+- Exemplu de ieșire: `[item1,item2,item3]`; o listă goală dă un text gol.
+- Utilizare tipică: afișează lista pe un monitor sau transmite-o blocurilor care acceptă o listă (de exemplu, **aprinde** pentru luminile senzorului de distanță).

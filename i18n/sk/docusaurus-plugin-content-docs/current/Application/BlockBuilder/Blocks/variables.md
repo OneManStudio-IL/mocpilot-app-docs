@@ -5,37 +5,35 @@ title: Premenné
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Premenné
+# Premenné {#variables}
 
-Premenné ukladajú hodnoty, ktoré je možné čítať a meniť naprieč blokmi a skriptmi.
+Premenné uchovávajú hodnoty, ktoré môže čítať a meniť každý skript v programe. Vytvoríte, premenujete a odstránite ich tlačidlami **Vytvoriť premennú**, **Premenovať premennú** a **Odstrániť premennú** hore v kategórii. Nižšie uvedené bloky sa zobrazia, keď má program aspoň jednu premennú.
 
-## Príkazové bloky premenných
+## Zmena premennej {#changing-a-variable}
 
-### `Nastav premennú na` (Začiatočník) {#block_variables_set_to}
+### `nastaviť … na …` (Začiatočník) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Nastaví vybranú premennú na zadanú hodnotu.
+Nastaví vybranú premennú na hodnotu.
 
-- Typ: príkazový blok  
-- Typické použitie: inicializácia stavu, prepísanie predchádzajúcej hodnoty  
+- Typické použitie: nastaviť počiatočnú hodnotu, nahradiť predchádzajúcu hodnotu.
 
-### `Zmeň premennú o` (Pokročilý) {#block_variables_change_by}
+### `zmeniť … podľa …` (Pokročilý) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Pripočíta zadanú hodnotu k vybranej premennej.
+Pripočíta k vybranej premennej číslo. Na odčítanie použite záporné číslo.
 
-- Typ: príkazový blok  
-- Typické použitie: počítadlá, skóre, kumulovaná vzdialenosť/čas  
+- Typické použitie: počítadlá, skóre, sčítanie vzdialenosti alebo času.
 
-## Blok hodnoty premennej
+## Čítanie premennej {#reading-a-variable}
 
-### `Hodnota premennej` (Začiatočník) {#block_variables_value}
+### Premenná (Začiatočník) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Vracia aktuálnu hodnotu vybranej premennej.
+Každá premenná má vlastný hlásiaci blok so svojím názvom. Vracia aktuálnu hodnotu premennej.
 
-- Typ: reporter blok  
-- Typické použitie: použitie hodnoty premennej v operátoroch, podmienkach a vstupoch príkazov
+- Typické použitie: vložiť hodnotu do operátorov, podmienok a vstupov iných blokov.
+- [Monitor](/docs/Application/BlockBuilder/Editor#monitor) počas behu programu ukazuje hodnoty všetkých premenných.

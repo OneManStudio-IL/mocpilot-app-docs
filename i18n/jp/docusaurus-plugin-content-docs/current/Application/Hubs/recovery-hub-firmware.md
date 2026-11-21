@@ -1,121 +1,133 @@
 ---
 id: RecoveryHubFirmware
-title: ハブのファームウェア復旧
+title: ハブのファームウェアの復旧
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# ハブのファームウェア復旧
+# ハブのファームウェアの復旧 {#hub-firmware-recovery}
 
-Obnova firmwaru hubu se používá, když se hub po přerušené nebo neúspěšné aktualizaci firmwaru nemůže normálně spustit.
+ファームウェアの復旧は、ファームウェアの更新が中断または失敗して正常に起動できなくなったハブを元に戻す機能です。
 
-Během obnovy MOCPilot opraví cestu firmwaru hubu, aby bylo možné hub znovu aktualizovat na nejnovější podporovanou verzi. Tento postup použijte pouze tehdy, když hub nereaguje běžně, MOCPilot hlásí režim obnovy nebo předchozí aktualizace selhala.
+MOCPilot が動作するファームウェアをハブにアップロードし、ハブが再び動作して更新できる状態にします。復旧は、ハブが正常に応答しないとき、MOCPilot にハブがリカバリーモードであると表示されたとき、または更新に失敗した後にだけ使ってください。
 
 :::warning 重要
-Nechte hub zapnutý a držte zařízení blízko hubu po celou dobu obnovy. Odpojení Bluetooth, zavření MOCPilot, vyjmutí baterií nebo vypnutí hubu během nahrávání firmwaru může obnovu přerušit.
+復旧の間はずっとハブの電源を入れたままにし、デバイスをハブの近くに置いてください。アップロード中に Bluetooth をオフにしたり、MOCPilot を閉じたり、電池を抜いたり、ハブの電源を切ったりすると、復旧に失敗することがあります。
 :::
 
-## Kdy je obnova potřeba
+## 復旧が必要な場合 {#when-recovery-is-required}
 
-Obnova firmwaru může být potřeba, pokud:
+次のような場合は復旧が必要かもしれません。
 
-- Aktualizace firmwaru nebyla úspěšně dokončena.
-- Hub se už nepřipojuje jako běžný hub.
-- Hub se v MOCPilot zobrazí jako **LEGO Bootloader**.
-- MOCPilot rozpozná hub připojený v režimu obnovy firmwaru.
+- ファームウェアの更新が正常に完了しなかった。
+- ハブが通常のハブとして接続できなくなった。
+- MOCPilot でハブが **LEGO Bootloader** と表示される。
+- ハブがファームウェアのリカバリーモードで接続されていることを MOCPilot が検出した。
 
-Před spuštěním obnovy zkontrolujte, že hub má dostatek energie. Pokud je to možné, nabijte také telefon, tablet nebo počítač s MOCPilot a zapněte Bluetooth.
+始める前に、ハブのバッテリーが十分にあること、スマートフォン、タブレット、コンピューターが充電されていること、Bluetooth がオンになっていることを確認してください。
 
-## Podporované huby
+## 対応ハブ {#supported-hubs}
 
-Obnova firmwaru je podporována pro stejné huby jako aktualizace firmwaru:
+復旧は、ファームウェアの更新と同じハブで使えます。
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Přepnutí Technic Hub, Boost Hub a City Hub do režimu obnovy
+## Technic Hub、Boost Hub、City Hub をリカバリーモードにする {#put-a-technic-hub-boost-hub-or-city-hub-into-recovery-mode}
 
-Technic Hub, Boost Hub a malý City Hub používají připojení přes bootloader:
+これらのハブはブートローダー経由で接続します。
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte tlačítko, dokud LED hubu nezačne blikat fialově.
-4. Nepouštějte tlačítko, dokud LED bliká fialově.
-5. Stále držte tlačítko, otevřete **マイ Bluetooth ハブ** v MOCPilot a připojte hub.
-6. Po připojení hubu v režimu bootloader můžete tlačítko pustit.
+1. ハブの電源を切ります。
+2. 緑のボタンを押し続けます。
+3. ハブの LED が紫色に点滅し始めるまで、ボタンを押し続けます。
+4. LED が紫色に点滅している間は、ボタンを離さないでください。
+5. ボタンを押したまま、MOCPilot で**私のBluetoothハブ**を開き、ハブに接続します。
+6. ハブがブートローダーモードで接続されたら、ボタンを離してかまいません。
 
-V režimu obnovy se hub může zobrazit jako **LEGO Bootloader** místo běžného názvu.
+リカバリーモードのハブは、通常のハブ名ではなく **LEGO Bootloader** と表示されることがあります。
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="ハブ一覧の LEGO Bootloader とファームウェア復旧の操作" />
 
-## Přepnutí Technic Move Hub do režimu obnovy
+## Technic Move Hub をリカバリーモードにする {#put-a-technic-move-hub-into-recovery-mode}
 
-Technic Move Hub používá jinou sekvenci obnovy než ostatní podporované huby. Nepřipojuje se jako **LEGO Bootloader**. Tato sekvence načte tovární firmware **1.2.3**, který není určen jako finální firmware pro běžné používání.
+Technic Move Hub の復旧方法は異なります。**LEGO Bootloader** としては接続されず、代わりに以下のボタン操作で工場出荷時のファームウェア **1.2.3** が読み込まれます。このファームウェアは日常的な使用を想定していません。
 
-Obnova firmwaru Technic Move Hub:
+ファームウェアを元に戻すには：
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte zelené tlačítko přibližně jednu minutu.
-4. Pusťte tlačítko.
-5. Počkejte, dokud LED hubu nezačne blikat bíle.
-6. Otevřete **マイ Bluetooth ハブ** v MOCPilot a připojte hub.
+1. ハブの電源を切ります。
+2. 緑のボタンを押し続けます。
+3. 緑のボタンを約 1 分間押し続けます。
+4. ボタンを離します。
+5. ハブの LED が白く点滅し始めるまで待ちます。
+6. MOCPilot で**私のBluetoothハブ**を開き、ハブに接続します。
 
-Po připojení MOCPilot rozpozná tovární firmware a nabídne aktualizaci hubu na nejnovější dostupnou verzi. Spusťte aktualizaci firmwaru a počkejte na dokončení.
+ハブが接続されると、MOCPilot が工場出荷時のファームウェアを検出し、最新バージョンへの更新を提案します。更新を開始し、完了するまで待ってください。
 
-## Spuštění obnovy z dialogu
+## ダイアログから復旧を開始する {#start-recovery-from-the-dialog}
 
-Když MOCPilot rozpozná hub připojený v režimu obnovy firmwaru, zobrazí dialog obnovy.
+リカバリーモードで接続されたハブを検出すると、MOCPilot は復旧ダイアログを表示します。
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="ハブのファームウェア復旧" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="「ハブのリカバリーモードを検出しました」ダイアログ" />
 
-Vyberte **復旧** pro zahájení nahrávání firmwaru do hubu.
+**復旧**を選択すると、ハブへのファームウェアのアップロードが始まります。
 
-Pokud nejste připraveni obnovu spustit, vyberte **キャンセル**. Obnovu můžete spustit později z kontextové nabídky hubu.
+準備ができていない場合は**キャンセル**を選択します。復旧は後でハブのメニューから開始できます。
 
-## Spuštění obnovy z nabídky hubu
+## ハブのメニューから復旧を開始する {#start-recovery-from-the-hub-menu}
 
-Ruční spuštění obnovy:
+自分で復旧を開始するには：
 
-1. Otevřete **マイ Bluetooth ハブ**.
-2. Najděte hub zobrazený jako **LEGO Bootloader**.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **ハブのファームウェアを復旧**.
+1. **私のBluetoothハブ**を開きます。
+2. **LEGO Bootloader** と表示されているハブを探します。
+3. ハブのメニューを開きます。
+4. **ハブのファームウェアを復旧**を選択します。
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="ハブのファームウェアを復旧" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="ハブのコンテキストメニューの「ハブのファームウェアを復旧」" />
 
-## Během obnovy firmwaru
+## ファームウェアの復旧中 {#during-firmware-recovery}
 
-Po spuštění obnovy MOCPilot nahrává firmware do hubu a zobrazuje průběh na obrazovce.
+MOCPilot がファームウェアをハブにアップロードし、進行状況を表示します。
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="ハブのファームウェア復旧" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="ファームウェア復旧の進行状況画面" />
 
-Počkejte na dokončení. Nepřesouvejte hub daleko od zařízení, nezavírejte aplikaci, nevypínejte Bluetooth ani neodpojujte napájení hubu.
+完了するまで待ってください。ハブをデバイスから離したり、アプリを閉じたり、Bluetooth をオフにしたり、ハブの電源を切ったりしないでください。
 
-Hub se může během procesu několikrát restartovat nebo znovu připojit. To je očekávané. Nechte MOCPilot otevřený a počkejte na dokončení obnovy.
+ハブが何度か再起動または再接続することがあります。これは正常な動作です。MOCPilot を開いたまま待ってください。
 
-## Dokončení obnovy
+## 復旧を完了する {#finish-recovery}
 
-Po úspěšném dokončení obnovy MOCPilot zobrazí potvrzení.
+復旧が完了すると、MOCPilot に確認画面が表示されます。
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="ハブのファームウェア復旧" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="ファームウェア復旧完了ダイアログ" />
 
-Vyberte **OK**. Hub by se měl restartovat a připojit jako běžný hub místo **LEGO Bootloader**.
+**OK** を選択します。ハブが再起動し、**LEGO Bootloader** ではなく通常のハブとして再接続されるはずです。
 
-Po obnově zkontrolujte hub v **マイ Bluetooth ハブ**. Pokud MOCPilot stále hlásí, že je potřeba aktualizace firmwaru, spusťte běžný postup [ファームウェア更新](/docs/Application/Hubs/FirmwareUpdating/).
+その後、**私のBluetoothハブ**でハブを確認してください。MOCPilot がまだファームウェアの更新を求める場合は、通常の[ファームウェアの更新](/docs/Application/Hubs/FirmwareUpdating/)を実行してください。
 
-## Pokud obnova selže
+## 復旧に失敗した場合 {#if-recovery-fails}
 
-Pokud se obnova nedokončí úspěšně:
+復旧に失敗した場合は：
 
-1. Držte hub blízko zařízení.
-2. Restartujte napájení hubu.
-3. Znovu přepněte hub do režimu obnovy.
-4. Připojte se k **LEGO Bootloader** v MOCPilot.
-5. Znovu spusťte **ハブのファームウェアを復旧**.
+1. ハブをデバイスの近くに置きます。
+2. ハブの電源を入れ直します。
+3. もう一度ハブをリカバリーモードにします。
+4. MOCPilot で **LEGO Bootloader** に接続します。
+5. もう一度**ハブのファームウェアを復旧**を開始します。
 
-Pokud se chybová zpráva objeví znovu, zopakujte obnovu od začátku. Pokud hub nejde obnovit ani po několika pokusech, vyměňte nebo nabijte baterie a zkuste to znovu.
+再びエラーが表示された場合は、手順全体を繰り返してください。何度試しても失敗する場合は、電池を交換または充電してからもう一度お試しください。

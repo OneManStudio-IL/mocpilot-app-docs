@@ -5,30 +5,33 @@ title: Moje bloky
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Moje bloky
+# Moje bloky {#my-blocks}
 
-Moje bloky umožňujú definovať vlastné opakovane použiteľné bloky.
-Táto kategória je konceptuálne podobná vytváraniu funkcií v tradičnom programovaní: definuj správanie raz a potom ho používaj viackrát.
+Moje bloky vám umožňujú vytvárať vlastné opakovane použiteľné bloky.
+Fungujú ako funkcia v bežnom programovaní: správanie opíšete raz a použijete ho na ľubovoľnom počte miest.
 
-## Základné bloky Moje bloky
+## Bloky {#the-blocks}
 
-### `Vytvor blok` (Guru) {#block_my_block_define}
+### `definovať …` (Guru) {#block_my_block_define}
 
-Vytvorí novú definíciu vlastného bloku.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Typ: definičný/nastavovací blok  
-- Typické použitie: zoskupenie opakovanej logiky do jedného pomenovaného bloku  
+Nový blok vytvoríte stlačením **Vytvoriť blok** hore v kategórii. Na programovej ploche sa potom objaví klobúkový blok `definovať` s názvom vášho bloku: bloky, ktoré pripojíte pod neho, určujú, čo váš blok robí.
 
-### `Môj blok` (Guru) {#block_my_block}
+- Typické použitie: zhrnúť opakujúcu sa logiku do jedného bloku s jasným názvom.
 
-Volá predtým vytvorený vlastný blok.
+### Váš blok (Guru) {#block_my_block}
 
-- Typ: stack blok (volanie vlastného príkazu)  
-- Typické použitie: opätovné použitie rovnakej logiky na viacerých miestach bez duplikovania blokov  
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Variadické príklady
+Každý blok, ktorý vytvoríte, sa zobrazí v palete pod svojím názvom. Jeho použitím sa vykonajú bloky pripojené k jeho bloku `definovať`.
 
-Tieto príklady ukazujú vlastné bloky s rôznymi podpismi argumentov.
+- Typ: príkazový blok
+- Typické použitie: použiť rovnakú logiku na viacerých miestach bez kopírovania stĺpcov.
+
+## Príklady s rôznymi vstupmi {#examples-with-different-inputs}
+
+Vlastné bloky s rôznymi sadami vstupov:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Tieto príklady ukazujú vlastné bloky s rôznymi podpismi argumentov.
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Príklad použitia v programovom bloku
+## Použitie vlastného bloku v programe {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Tento príklad ukazuje volanie vlastného bloku pripojené pod `keď sa program spustí`, zatiaľ čo zásobník `definuj môj blok` obsahuje opakovane použiteľnú logiku motora.
+Tu je vlastný blok použitý pod blokom `keď program začne` a stĺpec `definovať` obsahuje logiku motora, ktorú vykonáva.
 
-- Typický tok: volanie vlastného bloku z blokov udalostí  
-- Výhoda: jedna definícia, viacero miest použitia  
+- Obvyklý postup: používajte svoje bloky v skriptoch udalostí.
+- Výhoda: jedna definícia, mnoho miest, kde sa používa.
 
-## Zobrazenie editora Moje bloky
+## Editor blokov {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Editor „Vytvor blok“ sa používa na návrh podpisu vlastného bloku.  
-Môžeš pridať popisy a vstupy (napríklad číselné/textové a boolean vstupy) a následne definovať implementačnú logiku v zásobníku definície bloku.
+V editore **Vytvoriť blok** navrhnete, ako bude váš blok vyzerať: pridajte popisy (**Pridať štítok**) a vstupy (**Pridať vstup**: *číslo alebo text* alebo *boolean*). V stĺpci `definovať` fungujú vstupy ako premenné, ktoré obsahujú hodnoty odovzdané bloku.
 
-## Prečo používať Moje bloky
+## Prečo používať Moje bloky {#why-use-my-blocks}
 
-- Znovupoužiteľnosť: napíš raz, použi viackrát.  
-- Čitateľnosť: nahraď dlhé opakované sekvencie jedným zrozumiteľným názvom.  
-- Udržiavateľnosť: aktualizuj logiku na jednom mieste namiesto viacerých kópií.  
-- Štruktúra: rozdeľ veľké programy na menšie logické celky.  
+- Opakované použitie: napíšete raz, použijete mnohokrát.
+- Čitateľnosť: jeden výstižný názov namiesto dlhých opakovaných stĺpcov.
+- Jednoduché zmeny: logiku opravíte na jednom mieste namiesto v každej kópii.
+- Štruktúra: veľký program rozdelíte na malé logické časti.
 
-## Poznámky
+## Poznámky {#notes}
 
-- Vlastné bloky sú viazané na projekt a sú určené na použitie v rámci rovnakého profilu/projektu.  
-- Používaj výstižné názvy, ktoré vyjadrujú účel, nie implementačné detaily.  
+- Vlastné bloky patria profilu a dajú sa použiť kdekoľvek v jeho programe.
+- Blokom dávajte názvy, ktoré hovoria, čo robia, nie ako to robia.
+- Blok, ktorý volá sám seba, sa môže zacykliť navždy; editor vás na to upozorní.

@@ -20,7 +20,55 @@
     "description": "The label for category 'Blocks' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Hubs": {
-    "message": "Huber",
+    "message": "Hubber",
     "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.getting-started": {
+    "message": "Kom i gang",
+    "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Veiledninger",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.profiles": {
+    "message": "Profiler",
+    "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.dashboard": {
+    "message": "Dashboard",
+    "description": "The label for category 'Dashboard' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.themes": {
+    "message": "Temaer",
+    "description": "The label for category 'Themes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.quick-links": {
+    "message": "Hurtigkoblinger",
+    "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Blokkreferanse",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.logic-blocks": {
+    "message": "Logikkblokker",
+    "description": "The label for category 'Logic Blocks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.block-reference": {
+    "message": "Blokkreferanse",
+    "description": "The label for category 'Block reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.hubs": {
+    "message": "Hubber",
+    "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.account": {
+    "message": "Konto og MocPilot Pro",
+    "description": "The label for category 'Account and MocPilot Pro' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.help": {
+    "message": "Hjelp",
+    "description": "The label for category 'Help' in sidebar 'tutorialSidebar'"
   }
 }

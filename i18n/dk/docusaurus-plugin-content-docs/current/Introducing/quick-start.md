@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Hurtig start guide
+title: Hurtig start
+description: "Installér MOCPilot, log ind, opret din første profil, og kør en model på få minutter."
 ---
 
-# Hurtig start
+import Screenshot from '@site/src/components/Screenshot';
 
-Denne guide hjælper dig i gang med MOCPilot første gang.
+# Hurtig start {#quick-start}
 
-## 1. Log ind eller opret en konto
+Denne guide fører dig fra installation af appen til kørsel med din første model. Du skal bruge en understøttet hub med en motor; se [Understøttede enheder](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Installér appen {#1-install-the-app}
 
-Vi anbefaler stærkt at bruge en konto.
+MOCPilot findes i App Store (iPhone, iPad, Mac), Google Play (Android) og Microsoft Store (Windows). Du finder linkene på [mocpilot.com](https://mocpilot.com).
 
-- Med en konto synkroniseres profiler og indstillinger mellem dine enheder.
-- Uden konto gemmes data kun på den aktuelle enhed.
-- Ved geninstallation i tilstand uden konto mister du profiler og indstillinger.
+## 2. Log ind, eller fortsæt uden konto {#2-sign-in-or-continue-without-an-account}
 
-Du kan stadig vælge **Continue without an account**, men det anbefales ikke til normal brug.
+Første gang du starter appen, bliver du bedt om at logge ind. Brug din e-mail eller dit login og din adgangskode, Google eller Apple ID, eller opret en ny konto.
 
-## 2. Forstå hovedmenuen
+<Screenshot name="sign-in" alt="Login-skærmen i MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Vi anbefaler en konto:
 
-Bundnavigationen har 3 hovedsektioner:
+- dine profiler og indstillinger gemmes på serveren og synkroniseres mellem dine enheder;
+- du kan få dine data tilbage, hvis du udskifter eller mister en enhed;
+- køb og MocPilot Pro virker på alle dine enheder.
 
-- **Profiles**: præbyggede og egne profiler.
-- **Settings**: app- og kontoindstillinger.
-- **Help**: support, feedback og officielle links.
+**Fortsæt uden konto** virker også, men så bliver alt kun på denne enhed og går tabt, hvis du fjerner appen. Du kan logge ind senere under **Indstillinger → Konto**. Se [Konto](/docs/Application/Account/UserAccount).
 
-## 3. Gennemgå vigtige indstillinger
+## 3. Find rundt i appen {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- På en **telefon** har bundbjælken **Profiler**, **Indstillinger** og **Hjælp** (og **Notifikationer**, når du er logget ind).
+- På en **tablet** findes de samme sektioner, **Profilkatalog** og din konto i sidebjælken.
+- På en **computer** bruger du topbjælken: menuer til venstre; Konto, Notifikationer og Indstillinger til højre.
 
-I **Settings** kan du administrere:
+Se [Telefon, tablet og computer](/docs/Introducing/Layouts).
 
-- lyd og vibration
-- hold skærmen tændt
-- sprog
-- mørk tilstand
-- konto- og synkroniseringsindstillinger
+## 4. Opret en profil {#4-create-a-profile}
 
-## 4. Præbyggede profiler
+1. På siden **Mine profiler** trykker du på **+** → **Ny profil** (telefon) eller vælger **Ny profil** (tablet og computer, eller **Fil → Ny profil**).
+2. Vælg **programtype**:
+   - **Hurtige forbindelser**, hvis du vil køre en model uden kode. Bedst til første forsøg.
+   - **Logikblokke**, hvis du vil have hændelser, løkker, betingelser og sensorer.
+3. Indtast et **navn**, og tilføj eventuelt et billede.
+4. Tryk på **Opret**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Siden Ny profil med felterne Logikblokke og Hurtige forbindelser" width={900} />
 
-Brug **Prebuilt** profiler til at:
+Profilen åbnes i editoren. Mere i [Opret en profil](/docs/Application/Profiles/CreateProfile).
 
-- styre LEGO og andre officielle sæt hurtigt
-- lære teknikker fra færdige blokprogrammer
-
-:::warning Important
-Præbyggede profiler kan ændres til test, men ændringer gemmes ikke. Profilen nulstilles næste gang den åbnes.
+:::tip Vil du have en færdig model?
+Åbn **Profilkatalog** (**Søg online** på profilsiden), og installér en officiel profil til dit sæt. Se [Katalog og udgivelse](/docs/Application/Profiles/Catalog).
 :::
 
-Følg denne rækkefølge for en præbygget profil:
+## 5. Tilføj din hub {#5-add-your-hub}
 
-1. Åbn den ønskede præbyggede profil.
+1. Åbn **Mine hubs** i editoren.
+2. Tryk på **Tilføj en ny hub** i et ledigt slot, vælg din hubmodel, og tryk på **Tilføj**.
+3. Tænd hubben, tryk på dens knap, og vent, til MOCPilot finder den.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Siden Mine hubs med hub-slots" width={900} />
 
-2. Tilslut hubben.
+Hvis appen beder om en firmwareopdatering, så følg [Opdatering af firmware](/docs/Application/Hubs/FirmwareUpdating). Mere i [Tilføj og forbind en hub](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Placer kontroller på dashboardet {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Åbn **Dashboard**.
+2. Tryk på **+** (**Tilføj controller**), vælg en **Joystick**, og tryk på **Føj til dashboard**.
+3. Træk den derhen, hvor du vil have den. Tryk på den for at ændre størrelse, farve eller adfærd.
 
-3. Vælg dashboard og tryk **Play**.
+<Screenshot name="controller-palette" alt="Paletten Tilføj controller med joysticket valgt" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Se [Tilføj og arrangér kontroller](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Egne profiler
+## 7. Forbind kontrollen med en motor {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Hurtige forbindelser:** træk joystickets input (for eksempel *JOY1 Y-akse*) fra **Input** ind i den tomme række, tilføj handlingen **Motor** og outputtet **Hub** fra **Output**, og tryk derefter på den port, din motor sidder i. Rækken er klar, når den ikke har en rød ramme. Se [Hurtige forbindelser](/docs/Application/Links/LinksIntroducing).
 
-Brug **My** profiler til dine egne opsætninger.
+**Logikblokke:** tilføj en blok *når programmet starter*, en løkke *gentag altid* og en blok *sæt motorhastighed*, der bruger joystickets værdi. Se [Logikblokke](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) og [eksemplerne](/docs/Application/BlockBuilder/Examples).
 
-- Du kan oprette så mange profiler, du vil.
-- Start en profil direkte fra denne side.
+## 8. Tryk på Kør {#8-press-run}
 
-Følg denne rækkefølge for en brugerprofil:
+Tryk på **Kør** (▶). Bevæg joysticket, og motoren drejer. Tryk på **Stop** for at vende tilbage til redigering.
 
-1. Opret eller importér en profil.
+Det var det. Næste skridt:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Du kan oprette en ny profil eller importere en eksisterende profilfil (`.dat`) fra din enhed.
-:::
-
-2. Opret en ny profil.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Indtast ønsket profilnavn. Du kan også vælge et billede fra dit galleri.
-
-3. Tilføj hubs til profilen.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Som standard kan der tilføjes op til **2** hubs pr. profil. For at udvide til **5** skal ekstra slots købes.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Åbn programsiden og opbyg den ønskede model-logik ved at forbinde blokke.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Åbn dashboardet og tilføj skærmcontrollere, der kan kobles til hub-motorer.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Tryk **Play** for at starte profilen.
-
-Du er klar til at køre og forbedre din profil.
-
-## 6. Brug Help ved behov
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-På **Help**-siden kan du:
-
-- åbne quick start-guiden
-- stille et spørgsmål
-- rapportere en fejl
-- åbne officielle MOCPilot-links og community-kanaler
+- Lær alle [kontroltyperne](/docs/Application/Dashboard/ControlTypes) at kende.
+- Giv dashboardet et nyt udseende med [temaer](/docs/Application/Themes/ThemesOverview).
+- Forbind en [gamepad](/docs/Application/Dashboard/Gamepad).
+- Hvis noget ikke virker, så se [Fejlfinding](/docs/Help/Troubleshooting).

@@ -5,142 +5,154 @@ title: Kontroll
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Kontroll
+# Kontroll {#control}
 
-Kontrollblock styr exekveringsflödet: väntan, loopar, förgreningar och att stoppa skript.
+Kontrollblock bestämmer hur ett skript körs: väntan, loopar, förgreningar och stopp. När profilen har hubbar innehåller kategorin också block som ansluter hubbar och ändrar deras inställningar.
 
-## Väntblock
+## Vänteblock {#wait-blocks}
 
-### `Vänta` (Nybörjare) {#block_control_wait_for}
+### `vänta … sekunder` (Nybörjare) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pausar det aktuella skriptet under en angiven tid.
+Pausar skriptet i angivet antal sekunder.
 
-### `Vänta tills` (Avancerad) {#block_control_wait_until}
+### `vänta tills …` (Avancerad) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pausar det aktuella skriptet tills ett villkor blir sant.
+Pausar skriptet tills villkoret blir sant.
 
-## Loopblock
+## Loopar {#loops}
 
-### `Upprepa` (Avancerad) {#block_control_repeat_for}
+### `upprepa …` (Avancerad) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Kör nästlade block ett bestämt antal gånger.
+Kör blocken inuti angivet antal gånger (10 som standard).
 
-### `Upprepa tills` (Avancerad) {#block_control_repeat_until}
+### `upprepa så länge …` (Avancerad) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Kör nästlade block upprepade gånger tills ett villkor blir sant.
+Kör blocken inuti om och om igen tills villkoret blir sant.
 
-### `För alltid` (Avancerad) {#block_control_repeat_forever}
+### `upprepa alltid` (Avancerad) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Kör nästlade block kontinuerligt tills programmet eller skriptet stoppas.
+Kör blocken inuti om och om igen tills skriptet eller programmet stoppas. Ingenting kan fästas under det.
 
-## Förgreningsblock
+## Förgreningar {#branches}
 
-### `Om` (Nybörjare) {#block_control_if}
+### `om … då` (Nybörjare) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Kör nästlade block endast när villkoret är sant.
+Kör blocken inuti bara när villkoret är sant.
 
-### `Om / Annars` (Avancerad) {#block_control_if_else}
+### `om … då … annars` (Avancerad) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Kör en gren när villkoret är sant, annars körs den alternativa grenen.
+Kör den första grenen när villkoret är sant och annars den andra grenen.
 
-### `Gör detta och detta` (Guru) {#block_control_do_this_and_this}
+### `gör detta … och detta` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Kör två blockstaplar i följd som en del av ett kontrollflöde.
+Kör den första gruppen block, sedan den andra, och fortsätter först därefter med blocken under.
 
-## Stoppblock
+## Stoppa {#stopping}
 
-### `Stoppa` (Nybörjare) {#block_control_stop}
+### `stoppa …` (Nybörjare) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Stoppar skriptexekvering (omfattningen beror på valt stoppalternativ).
+Stoppar skript; exakt vad som stoppas beror på alternativet.
 
-- Stoppalternativ: `alla`, `denna stapel`, `och avsluta programmet`
+- `alla`: stoppar alla skript.
+- `den här högen`: stoppar bara det här skriptet.
+- `och avsluta program`: stoppar programmet.
 
-### `Stoppa andra staplar` (Guru) {#block_control_stop_other_stacks}
+### `stoppa andra högar` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Stoppar alla andra körande staplar medan den aktuella stapeln får fortsätta.
+Stoppar alla andra skript som körs; det här fortsätter.
 
-## Hubb-/kontrollverktygsblock
+## Hubbblock {#hub-blocks}
 
-### `Anslut / koppla från` (Nybörjare) {#block_hubs_control_set_connect}
+### `ansluta / koppla från …` (Nybörjare) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Styr hubbens anslutningsstatus från kontrollflödeslogik.
+Ansluter eller kopplar från den valda hubben från programmet.
 
-- Åtgärdsalternativ: `anslut`, `koppla från`
+- Alternativ: `ansluta`, `koppla från`
+- Hubbar: alla.
 
-### `Ställ in hubbkonfiguration` (Avancerad) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Ställer in den valda hubben till en av dess konfigurationsprofiler som stöds.
-
-- Endast tillgänglig för hubbar som erbjuder konfigurationsalternativ.
-- Typisk användning: växla en konfigurerbar hubb, som Technic Move Hub, till en annan sparad konfiguration innan nästa block körs.
-
-### `Hubbkonfiguration` (Avancerad) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Returnerar den aktuella konfigurationen för den valda hubben.
-
-- Typ: rapportblock
-- Utdataformatsval: `text`, `index`
-- Endast tillgänglig för hubbar som erbjuder konfigurationsalternativ.
-- Returnerar `NaN` när den valda hubben inte är ansluten eller ingen konfiguration är tillgänglig.
-
-### `Är ansluten` (Nybörjare) {#block_hubs_all_sensors_is_connected}
+### `… ansluten` (Nybörjare) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Returnerar om hubben för närvarande är ansluten.
+Returnerar `true` när den valda hubben är ansluten.
 
-- Typ: booleskt reporterblock
+- Typ: booleskt block
+- Hubbar: alla.
 
-### `BuWizz 2 ställ in effektläge` (Nybörjare) {#block_hubs_buwizz_sensors_set_power_mode}
+### `ställ in … konfiguration till …` (Avancerad) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Växlar hubben till en av dess konfigurationer.
+
+- Hubbar: Technic Move Hub (den enda hubben med konfigurationer i dag).
+- Typisk användning: växla hubben till en annan konfiguration innan nästa block körs.
+
+### `hämta … konfiguration som …` (Avancerad) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Returnerar hubbens aktuella konfiguration.
+
+- Typ: rapportblock
+- Utdata: `text` eller `index`
+- Hubbar: Technic Move Hub.
+- Returnerar `NaN` när hubben inte är ansluten eller saknar konfiguration.
+
+### `ställ in … strömläge till …` (Nybörjare) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Ställer in effektläget för BuWizz 2-hubben.
+Ställer in effektläget på en BuWizz 2.
 
-- Lägesalternativ: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Lägen: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Hubbar: BuWizz 2.
 
-### `BuWizz 2 hämta effektläge` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `hämta … strömläge som …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Returnerar det aktuella effektläget för BuWizz 2.
+Returnerar det aktuella effektläget på en BuWizz 2.
 
-- Alternativ för utdataformat: `text`, `index`
+- Utdata: `text` eller `index`
+- Hubbar: BuWizz 2.
 
-### `MouldKing ställ in kontrollkanal` (Avancerad) {#block_hubs_mouldking_control_set_control_channel}
+### `ställ in … styrkanal till …` (Avancerad) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Ställer in aktiv kontrollkanal för stödd MouldKing-hubb/-kontroller.
+Ställer in styrkanalen på en Mould King-hubb.
 
-- Kanalalternativ: `A`, `B`, `C`
+- Kanaler: `A`, `B`, `C`
+- Hubbar: Mould King 4.0 och 6.0.
 
-### `MouldKing hämta kontrollkanal` (Avancerad) {#block_hubs_mouldking_control_get_control_channel}
+### `hämta … styrkanal som …` (Avancerad) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Returnerar aktuell aktiv kontrollkanal för stödd MouldKing-hubb/-kontroller.
+Returnerar den aktuella styrkanalen på en Mould King-hubb.
 
-- Alternativ för utdataformat: `text`, `index`
+- Utdata: `text` eller `index`
+- Hubbar: Mould King 4.0 och 6.0.

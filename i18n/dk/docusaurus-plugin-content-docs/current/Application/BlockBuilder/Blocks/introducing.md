@@ -1,152 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Introduktion Til Blokke
+title: Introduktion til Logikblokke
+description: "Logikblokke er MOCPilots visuelle editor til blokprogrammering: hændelser, løkker, betingelser, variabler, sensorer og lyde."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Introduktion Til Blokke
+# Logikblokke {#logic-blocks}
 
-MOCPilot bruger et visuelt blokprogrammeringssystem, der ligner Scratch i både udseende og brug.
-Hver blok har en specifik rolle, og gyldige kombinationer definerer kontrolflow og dataflow i et script.
-Det bruger træk-og-slip-logik og Scratch-lignende interaktionsmønstre for at give en praktisk og velkendt måde at bygge programmer på.
+**Logikblokke** er MOCPilots editor til blokprogrammering. Du bygger programmer ved at sætte blokke sammen, meget som i Scratch: hændelser, løkker, betingelser, variabler, lister, dine egne blokke, lyde samt blokke til motorer, lys, sensorer, dashboardets kontroller og spilcontrolleren.
 
-:::warning Kompatibilitetsmeddelelse
-Dette er et andet bloksystem med sit eget bloksæt og sin egen adfærd.
-MOCPilot-programmer er ikke kompatible med Scratch-projekter: MOCPilot-programmer kan ikke importeres til Scratch, og Scratch-programmer kan ikke importeres til MOCPilot.
+Vælg Logikblokke, når din model har brug for logik: robotter, automatiske sekvenser, reaktioner på sensorer, opstartstjek, spil. Skal du blot forbinde kontroller med motorer, er [Hurtige forbindelser](/docs/Application/Links/LinksIntroducing) hurtigere.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Program i Logikblokke" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Ikke Scratch
+Logikblokke har sit eget sæt blokke og sin egen opførsel. Du kan ikke importere MOCPilot-programmer i Scratch eller Scratch-projekter i MOCPilot.
 :::
 
-## Blokformer og betydning
+## Editoren i overblik {#the-editor-at-a-glance}
 
-### Hat-blokke
+<Screenshot name="blocks-editor" alt="Editoren i Logikblokke med paletten og et program" width={900} />
+
+- **Paletten** viser blokkategorierne: **Begivenheder**, **Kontrol**, **Sensorer**, **Lyde**, **Operator**, **Variable**, **Lister** og **Mine blokke**. Andre kategorier vises, når din profil har brug for dem: **Motorer** og **Lys** (når en hub understøtter dem), **Simulator** (når dashboardet har pedaler, en gearkasse eller en håndbremse), **Skærmkontrollere** og **Spilcontroller**.
+- **Programområdet** er der, hvor du trækker blokke hen og bygger scripts.
+- Den øverste bjælke har **Mine hubs**, **Dashboard**, **Spilcontroller**, **Monitor**, **Editorindstillinger**, **AI-bygger** og **Kør/Stop**.
+
+Se [Arbejd i editoren](/docs/Application/BlockBuilder/Editor) for detaljer.
+
+## Sådan kører et program {#how-a-program-runs}
+
+- Et script starter med en **hændelsesblok** (en hatteblok): *når programmet starter*, *når knappen … er trykket*, *når jeg modtager …* og så videre.
+- Blokkene, der er sat fast under den, kører oppefra og ned.
+- Flere scripts kører **på samme tid**. Brug beskeder (*overføre*) til at koordinere dem.
+- **Løkker** (*gentag altid*, *gentage*, *gentag, indtil*) holder et script i gang; **betingelser** (*hvis*, *hvis … ellers*, *vent indtil*) træffer beslutninger.
+- **Rapporteringsblokke** (afrundede) returnerer værdier og passer ind i andre blokkes input; **booleske** blokke (spidse) returnerer sand eller falsk til betingelser.
+- **Variabler** og **lister** gemmer værdier mellem blokke og scripts.
+
+## Blokformer {#block-shapes}
+
+### Hatteblokke {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Starter et script, når en bestemt hændelse opstår. Blokke kan kun sættes under.
+Starter et script, når noget sker. Du kan kun sætte blokke fast under dem.
 
 ---
 
-### Stak-blokke
+### Stakblokke {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Primære kommandoblokke, der udfører handlinger.
+De vigtigste kommandoblokke: Hver af dem gør noget.
 
 ---
 
-### C-blokke
+### C-blokke {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-C-formede kontrolblokke, der indeholder indlejrede blokstakke (løkker/betingelser).
+C-formede blokke, der rummer andre blokke: løkker og betingelser.
 
 ---
 
-### Reporter-blokke
+### Rapporteringsblokke {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Returnerer værdier som tal eller tekst.
+Returnerer en værdi, for eksempel et tal eller en tekst.
 
 ---
 
-### Booleske blokke
+### Booleske blokke {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Returnerer kun `true` eller `false`, typisk brugt i betingelser.
+Returnerer kun `true` eller `false`. Du bruger dem som regel i betingelser.
 
 ---
 
-### Afslutningsblokke
+### Afslutningsblokke {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Afslutter scripts og tillader ikke blokke under.
+Afslutter et script: Der kan ikke sættes noget fast under dem.
 
 ---
 
-### Blokstak
+### Blokstak {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-En blokstak er en sekvens af forbundne blokke, der kører som ét samlet scriptflow fra top til bund.
-Stakke starter normalt med en hændelsesblok og udfører derefter de tilknyttede blokke i rækkefølge.
+En stak er en gruppe forbundne blokke, der kører som ét script oppefra og ned.
+En stak starter som regel med en hændelsesblok efterfulgt af de blokke, der kører i rækkefølge.
 
 ---
 
-## Script-udførelsesmodel
 
-- Et script starter normalt fra en hændelsesblok.
-- Forbundne stak-blokke kører fra top til bund.
-- Flere scripts kan køre parallelt.
-- Besked-/broadcast-blokke bruges til at synkronisere scripts.
-- En blokstak er en sekvens af blokke, der er forbundet med hinanden.
+## Hubs, porte og kontroller {#hubs-ports-and-controls}
 
-## Data og værdier
+- Motor- og lysblokke angiver en **hub** og en **port**. Kategorierne Motorer og Lys vises kun, når en hub i profilen understøtter dem, og nogle blokke findes kun til bestemte hubs (for eksempel BuWizz' effekttilstande eller funktioner i Technic Move Hub). Beskrivelsen af hver blok fortæller, hvilke hubs den virker med.
+- Dashboardblokke henviser til kontroller ved navn (**JOY1**, **BTN2**). Du kan ikke slette en kontrol fra dashboardet, mens blokke bruger den; fjern først disse blokke.
+- Spilcontrollerblokke vises, når **Aktivér gamepad-blokke** er slået til på [siden Spilcontroller](/docs/Application/Dashboard/Gamepad).
 
-- Reporter-blokke kan indlejres i input til kommandoer/betingelser.
-- Variabler gemmer genbrugelige værdier på tværs af blokke og scripts.
-- Lister gemmer ordnede samlinger til historik, køer og opslag.
+## Blokniveauer {#block-levels}
 
-## Hændelser og timing
+Hver profil har et **blokniveau**: **Begynder** viser de enkleste blokke, **Avanceret** tilføjer almindelige logik- og enhedsblokke, og **Guru** viser hele sættet. Du vælger det, når du opretter profilen, eller senere under Editorindstillinger. Denne oversigt viser hver bloks niveau ved siden af navnet.
 
-- Hændelsesblokke reagerer på brugerinput, hub-tilstand, sensorer eller beskeder.
-- Timer- og sensorbaserede hændelser kan udløses ofte.
-- Brug tærskler, filtrering eller korte ventetider for at reducere støjende gentagne triggere.
+## Anbefalet arbejdsgang {#recommended-workflow}
 
-## Hub, porte og controllere
+1. Start med én hændelsesblok og et kort script; tryk på **Kør**, og tjek, at det virker.
+2. Tjek motorernes retning og værdiområder tidligt (en Monitor hjælper).
+3. Del programmet op i små scripts, der taler sammen via beskeder; flyt gentaget logik til [Mine blokke](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Tilføj sikkerhed: grænser, stop, et opstartstjek og en plan for, hvad der sker, når en hub mister forbindelsen.
 
-- Hub-blokke målretter hub- og portkontekst.
-- Nogle blokke er kun tilgængelige for specifikke hub-familier/enheder.
-- Dashboard- og gamepad-blokke giver input under kørsel og UI-kontrol.
+## Almindelige faldgruber {#common-pitfalls}
 
-## Anbefalet arbejdsgang
+- Et script uden hændelsesblok starter aldrig.
+- Den forkerte hub eller port er valgt, så der sker ikke noget synligt.
+- Blanding af tekst, tal og booleske værdier giver uventede resultater.
+- Meget hyppige hændelser uden filtrering (for eksempel en sensorhændelse ved hver lille ændring) kan overbelaste programmet; brug tærskler eller korte pauser.
 
-1. Start med én hændelsesblok og et minimalt script.
-2. Bekræft tidligt motor-/sensorretning og intervaller.
-3. Udtræk gentaget logik med beskeder og hjælpescripts.
-4. Tilføj sikkerhedsforanstaltninger (grænser, stop, fallback-værdier) før endelig finjustering.
+## Blokoversigt {#block-reference}
 
-## Almindelige faldgruber
+- [Begivenheder](/docs/Application/BlockBuilder/Blocks/Events) · [Kontrol](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Variable](/docs/Application/BlockBuilder/Blocks/Variables) · [Lister](/docs/Application/BlockBuilder/Blocks/Lists) · [Mine blokke](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Motorer](/docs/Application/BlockBuilder/Blocks/Motors) · [Lys](/docs/Application/BlockBuilder/Blocks/Light) · [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors) · [Lyde](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Skærmkontrollere](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Spilcontroller](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Manglende hændelses-startblok betyder, at scriptet aldrig starter.
-- Forkert valg af hub/port giver ingen synlig effekt.
-- Blandede værdi-typer (tekst/tal/boolean) kan give ugyldig logik.
-- Højfrekvente hændelser uden filtrering kan overbelaste adfærden.
+I appen kan du trykke længe på (eller højreklikke på) en blok og vælge **Om blokken** for at åbne dens beskrivelse her.
 
-## Dokumentationsstruktur i denne sektion
-
-Brug kategorisider i denne rækkefølge:
-
-- Lys
-- Motorer
-- Sensorer
-- Hændelser
-- Kontrol
-- Operatorer
-- Variabler
-- Lister
-- Mine Blokke
-- Dashboard-controllere
-- Gamepad
+Færdige programmer: [Eksempler](/docs/Application/BlockBuilder/Examples).

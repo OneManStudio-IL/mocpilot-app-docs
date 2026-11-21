@@ -5,37 +5,35 @@ title: Variabler
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Variabler
+# Variabler {#variables}
 
-Variabler lagrer verdier som kan leses og oppdateres på tvers av blokkstabler og skript.
+Variabler lagrer verdier som alle skriptene i programmet kan lese og endre. Du oppretter, gir nytt navn til og sletter dem med **Lag en variabel**, **Gi nytt navn til variabel** og **Slett variabel** øverst i kategorien. Blokkene nedenfor vises så snart programmet har minst én variabel.
 
-## Kommando-blokker for variabler
+## Endre en variabel {#changing-a-variable}
 
-### `Sett variabel til` (Nybegynner) {#block_variables_set_to}
+### `sett … til …` (Nybegynner) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Setter valgt variabel til en spesifisert verdi.
+Setter den valgte variabelen til en verdi.
 
-- Type: kommandoblokk
-- Typisk bruk: initialisere tilstand, overskrive tidligere verdi
+- Typisk bruk: angi en startverdi eller erstatte den forrige verdien.
 
-### `Endre variabel med` (Avansert) {#block_variables_change_by}
+### `endre … med …` (Avansert) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Legger til en spesifisert verdi til valgt variabel.
+Legger et tall til den valgte variabelen. Bruk et negativt tall for å trekke fra.
 
-- Type: kommandoblokk
-- Typisk bruk: tellere, poeng, akkumulert avstand/tid
+- Typisk bruk: tellere, poeng, summering av avstand eller tid.
 
-## Variabelverdi (rapportør)
+## Lese en variabel {#reading-a-variable}
 
-### `Variabelverdi` (Nybegynner) {#block_variables_value}
+### Variabel (Nybegynner) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Returnerer gjeldende verdi av valgt variabel.
+Hver variabel har sin egen verdiblokk med variabelens navn. Den returnerer variabelens nåværende verdi.
 
-- Type: rapportørblokk
-- Typisk bruk: bruke variabelverdier i operatorer, betingelser og kommandoinput
+- Typisk bruk: sette verdien inn i operatorer, betingelser og inngangene til andre blokker.
+- [Monitor](/docs/Application/BlockBuilder/Editor#monitor) viser verdiene til alle variablene mens programmet kjører.

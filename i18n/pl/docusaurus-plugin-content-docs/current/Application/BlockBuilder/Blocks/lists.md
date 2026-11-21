@@ -7,72 +7,71 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Listy
 
-Listy przechowują uporządkowane kolekcje wartości i są modyfikowane za pomocą dedykowanych bloków raportujących i poleceń.
+Lista przechowuje kilka wartości w określonej kolejności. Tworzysz listy, zmieniasz ich nazwy i usuwasz je za pomocą przycisków **Utwórz listę**, **Zmień nazwę listy** i **Usuń listę** na górze kategorii. Poniższe bloki pojawiają się, gdy program ma co najmniej jedną listę. Elementy są numerowane od 1.
 
-## Bloki modyfikacji listy
+## Zmiana listy {#changing-a-list}
 
-### `Dodaj wartość do listy` (Zaawansowany) {#block_lists_add}
+### `dodać … do …` (Zaawansowany) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Dodaje wartość na koniec wybranej listy.
+Dodaje wartość na końcu listy.
 
-### `Wstaw na pozycji` (Guru) {#block_lists_insert_at}
+### `wstawić … w … z …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Wstawia wartość na wybranej pozycji w liście.
+Wstawia wartość na podanej pozycji; kolejne elementy przesuwają się o jedno miejsce dalej.
 
-### `Zastąp na pozycji` (Guru) {#block_lists_replace_at}
+### `zamień przedmiot … z … z …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Zastępuje element na wybranej pozycji nową wartością.
+Zastępuje element na podanej pozycji nową wartością.
 
-### `Usuń` (Zaawansowany) {#block_lists_delete}
+### `usunąć … z …` (Zaawansowany) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Usuwa element na wybranej pozycji (lub zgodnie z wybranym trybem usuwania).
+Usuwa element na podanej pozycji.
 
-### `Wyczyść wszystko` (Zaawansowany) {#block_lists_clear_all}
+### `czyścić …` (Zaawansowany) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Usuwa wszystkie elementy z wybranej listy.
+Usuwa wszystkie elementy z listy.
 
-## Bloki wartości/sprawdzeń listy
+## Odczyt listy {#reading-a-list}
 
-### `Element na pozycji` (Zaawansowany) {#block_lists_item_at}
+### `przedmiot … z …` (Zaawansowany) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Zwraca wartość na wybranej pozycji.
+Zwraca element na podanej pozycji.
 
-### `Indeks wartości` (Guru) {#block_lists_index_of_value}
+### `indeks … w …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Zwraca indeks pierwszego pasującego elementu w liście.
+Zwraca pozycję pierwszego elementu równego wartości albo `0`, jeśli takiego nie ma.
 
-### `Zawiera wartość` (Guru) {#block_lists_contains_value}
+### `… zawiera …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Zwraca informację, czy lista zawiera określoną wartość.
+Zwraca `true`, gdy lista zawiera wartość.
 
-### `Rozmiar listy` (Zaawansowany) {#block_lists_size_of_value}
+### `rozmiar …` (Zaawansowany) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Zwraca liczbę elementów w wybranej liście.
+Zwraca liczbę elementów listy.
 
-## Blok raportujący listy
+### Lista (Zaawansowany) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Zwraca aktualną wartość wybranej listy.
+Każda lista ma własny blok raportujący ze swoją nazwą. Zwraca całą listę jako tekst.
 
-- Typ: blok raportujący
-- Przykładowy format wyjścia: `[item1,item2,item3]`
-- Typowe użycie: podgląd zawartości listy lub przekazanie jej wartości do innych kompatybilnych bloków
+- Przykład wyniku: `[item1,item2,item3]`; pusta lista daje pusty tekst.
+- Typowe zastosowanie: wyświetlenie listy na monitorze lub przekazanie jej do bloków, które przyjmują listę (na przykład **zaświeć** dla świateł czujnika odległości).

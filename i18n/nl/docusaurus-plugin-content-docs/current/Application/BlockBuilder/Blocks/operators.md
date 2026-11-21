@@ -1,170 +1,162 @@
 ---
 id: Operators
-title: Operatoren
+title: Operator
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatoren
+# Operator {#operators}
 
-Operatoren zijn rapporteur- en booleaanse blokken die worden gebruikt voor berekeningen, vergelijkingen, logica en tekstverwerking.
+Operatoren zijn waarde- en booleaanse blokken voor rekenen, vergelijken, logica en tekst.
 
-## Rekenkundige operatoren
+## Rekenen {#math}
 
-### `Optellen` (Beginner) {#block_operator_plus}
+### `… + …` (Beginner) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Geeft de som van twee waarden terug.
+Geeft de som van twee getallen terug.
 
-### `Aftrekken` (Beginner) {#block_operator_minus}
+### `… − …` (Beginner) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Geeft het resultaat van de aftrekking van twee waarden terug.
+Trekt het tweede getal af van het eerste.
 
-### `Vermenigvuldigen` (Beginner) {#block_operator_multiply}
+### `… × …` (Beginner) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Geeft het product van twee waarden terug.
+Geeft het product van twee getallen terug.
 
-### `Delen` (Beginner) {#block_operator_divide}
+### `… ÷ …` (Beginner) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Geeft het resultaat van de deling van twee waarden terug.
+Deelt het eerste getal door het tweede.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+### `… mod …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Geeft de rest na deling terug.
+Geeft de rest terug na het delen van het eerste getal door het tweede.
 
-### `Afronden` (Guru) {#block_operator_round}
+### `afronden …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Rondt af naar het dichtstbijzijnde gehele getal (bijvoorbeeld `2.6 -> 3`).
+Rondt een getal af op het dichtstbijzijnde gehele getal (bijvoorbeeld: `2.6` wordt `3`).
 
-### `Enkele wiskundige functie` (Guru) {#block_operator_math_single}
+### `… van …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Past een wiskundige functie met één argument toe.
+Past een functie toe op één getal. Hoeken zijn in graden.
 
-Beschikbare functies:
+- `absoluutwaarde`: absolute waarde
+- `geheel getal kleiner`: naar beneden afronden op een geheel getal
+- `geheel getal groter`: naar boven afronden op een geheel getal
+- `vierkantswortel`: vierkantswortel
+- `sin`, `cos`, `tan`: sinus, cosinus en tangens van een hoek
+- `asin`, `acos`, `atan`: de inverse functies; ze geven een hoek terug
+- `ln`: natuurlijke logaritme (grondtal `e`)
+- `log`: logaritme met grondtal 10
+- `e^`: `e` tot de macht van het getal
+- `10^`: `10` tot de macht van het getal
 
-- `absoluutwaarde`: absolute waarde van een getal  
-- `gehel getal kleiner`: afronden naar beneden  
-- `gehel getal groter`: afronden naar boven  
-- `sqrt`: vierkantswortel  
-- `sin`: sinus (hoekgebaseerd)  
-- `cos`: cosinus (hoekgebaseerd)  
-- `tan`: tangens (hoekgebaseerd)  
-- `asin`: inverse sinus  
-- `acos`: inverse cosinus  
-- `atan`: inverse tangens  
-- `ln`: natuurlijke logaritme (basis `e`)  
-- `log`: logaritme basis `10`  
-- `e^`: `e` tot de macht van invoer  
-- `10^`: `10` tot de macht van invoer  
-
-### `Wiskundige functie (2 waarden)` (Guru) {#block_operator_math_pair}
+### `… van … en …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Past een wiskundige functie met twee argumenten toe.
+Past een functie toe op twee getallen.
 
-Beschikbare functies:
+- `min`: de kleinste van de twee
+- `max`: de grootste van de twee
+- `macht`: het eerste getal tot de macht van het tweede
+- `atan2`: de hoek van het punt dat door de twee getallen wordt gegeven
+- `hypot`: de lengte van de schuine zijde bij deze twee zijden
+- `copysign`: het eerste getal met het teken van het tweede
 
-- `min`: kleinste van twee waarden  
-- `max`: grootste van twee waarden  
-- `macht`: eerste waarde tot de macht van de tweede  
-- `atan2`: hoek uit X/Y-paar  
-- `hypot`: lengte van de hypotenusa uit twee componenten  
-- `copysign`: eerste waarde met teken van tweede waarde  
-
-### `Kies willekeurig` (Guru) {#block_operator_pick_random}
+### `kies willekeurig … tot …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Geeft een willekeurig getal binnen het geselecteerde bereik terug.
+Geeft een willekeurig getal tussen de twee waarden terug.
 
-## Vergelijkingsoperatoren
+## Vergelijken {#comparison}
 
-### `Gelijk` (Beginner) {#block_operator_equal}
+### `… = …` (Beginner) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Geeft `true` terug wanneer twee waarden gelijk zijn.
+Geeft `true` terug als de twee waarden gelijk zijn.
 
-### `Niet gelijk` (Gevorderd) {#block_operator_not_equal}
+### `… ≠ …` (Gevorderd) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Geeft `true` terug wanneer twee waarden niet gelijk zijn.
+Geeft `true` terug als de twee waarden verschillen.
 
-### `Groter dan` (Beginner) {#block_operator_greater_than}
+### `… > …` (Beginner) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Geeft `true` terug wanneer de linker waarde groter is dan de rechter waarde.
+Geeft `true` terug als de linkerwaarde groter is dan de rechter.
 
-### `Kleiner dan` (Beginner) {#block_operator_less_than}
+### `… < …` (Beginner) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Geeft `true` terug wanneer de linker waarde kleiner is dan de rechter waarde.
+Geeft `true` terug als de linkerwaarde kleiner is dan de rechter.
 
-### `Ligt tussen` (Gevorderd) {#block_operator_is_in_between}
+### `is … tussen … en …` (Gevorderd) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Geeft `true` terug wanneer een waarde binnen de opgegeven grenzen ligt.
+Geeft `true` terug als het getal tussen de twee grenzen ligt.
 
-## Booleaanse logica-operatoren
+## Logica {#logic}
 
-### `En` (Gevorderd) {#block_operator_and}
+### `… en …` (Gevorderd) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Geeft alleen `true` terug wanneer beide voorwaarden `true` zijn.
+Geeft alleen `true` terug als beide voorwaarden waar zijn.
 
-### `Of` (Gevorderd) {#block_operator_or}
+### `… of …` (Gevorderd) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Geeft `true` terug wanneer minstens één voorwaarde `true` is.
+Geeft `true` terug als minstens één van de voorwaarden waar is.
 
-### `Niet` (Gevorderd) {#block_operator_not}
+### `niet …` (Gevorderd) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Keert een booleaanse waarde om.
+Maakt van `true` `false` en van `false` `true`.
 
-## Tekstoperatoren
+## Tekst {#text}
 
-### `Samenvoegen` (Gevorderd) {#block_operator_join}
+### `verbinden … …` (Gevorderd) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Voegt twee tekstwaarden samen.
+Voegt twee stukken tekst samen tot één.
 
-### `Letter op` (Guru) {#block_operator_letter_at}
+### `letter … van …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Geeft het teken op een geselecteerde positie in de tekst terug.
+Geeft de letter op de opgegeven positie in de tekst terug. De eerste letter heeft nummer 1.
 
-### `Lengte van tekst` (Gevorderd) {#block_operator_size_of_string}
+### `lengte van …` (Gevorderd) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Geeft de lengte van de tekst terug.
+Geeft het aantal tekens in de tekst terug.
 
-### `Tekst bevat` (Guru) {#block_operator_string_contains}
+### `… bevat …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Geeft `true` terug als de tekst de opgegeven substring bevat.
+Geeft `true` terug als de eerste tekst de tweede bevat.

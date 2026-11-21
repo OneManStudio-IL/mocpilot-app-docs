@@ -5,140 +5,121 @@ title: Lys
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Lys
+# Lys {#light}
 
-Denne siden dokumenterer blokker i Lys-kategorien som brukes til å kontrollere LED-er og lysutganger på støttede huber.
+Lysblokker styrer statuslyset på huben, lys som er koblet til porter, og lysmatrisen på hubber som har en. Kategorien vises når en hub i profilen har noe som kan lyse.
 
-## Vanlige lysblokker
+## Lys på hub og porter {#hub-and-port-lights}
 
-### `Sett LED-farge` (Nybegynner) {#block_hubs_all_light_set_led_color}
+### `sett LED-farge til …` (Nybegynner) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Setter hubens LED-farge ved hjelp av forhåndsdefinerte fargevalg.
+Angir fargen på statuslyset til huben.
 
-- Type: kommandoblokk
-- Typisk bruk: vise tilstand (klar, kjører, advarsel, feil)
+- Hubber: LEGO Powered Up-hubber (også Technic Move Hub), WeDo 2.0 og MINDSTORMS Robot Inventor-huben.
+- Typisk bruk: vis tilstanden til modellen (klar, kjører, advarsel, feil).
 
-### `Sett lys til` (Nybegynner) {#block_hubs_all_light_light_turn_to}
+### `skru på ved … % lysstyrke` (Nybegynner) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Setter valgt lysutgang til en målverdi/lysstyrke.
+Slår på lysene som er koblet til den valgte porten, med den angitte lysstyrken.
 
-- Type: kommandoblokk
-- Typisk bruk: frontlys, statusintensitet
+- Hubber: alle hubber med porter, unntatt WeDo 2.0.
+- Typisk bruk: frontlys, justerbar belysning.
 
-### `Slå av lys` (Nybegynner) {#block_hubs_all_light_light_turn_off}
+### `skru av` (Nybegynner) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Slår av valgt lysutgang.
+Slår av lysene som er koblet til den valgte porten.
 
-- Type: kommandoblokk
-- Typisk bruk: avslutningssekvens, batterisparing
+- Hubber: de samme som for **skru på ved … % lysstyrke**.
 
-### `Technic Move sett lys til` (Nybegynner) {#block_hubs_technicmove_light_light_turn_to}
+### `slå på lysene …` (Nybegynner) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variant av `Sett lys til` for Technic Move hub/lys.
+Slår lysene på en Technic Move Hub av eller på.
 
-- Type: kommandoblokk
-- Typisk bruk: sette lysnivå på Move-hub
+- Valg: `av`, `på`
+- Hubber: Technic Move Hub.
 
-## Interne LED-matriseblokker
+## Lysmatrise {#light-matrix}
 
-### `Slå på lysmatrise` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_image}
+Disse blokkene arbeider med lysmatrisen på 5×5 som er innebygd i MINDSTORMS Robot Inventor-huben.
+
+### `skru på …` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Viser det valgte bildet på hubens interne LED-matrise og går umiddelbart videre til neste blokk i stabelen. Bildet blir stående på displayet til en annen blokk endrer den interne LED-matrisen eller programmet stopper.
+Viser det valgte bildet på lysmatrisen og går straks videre til neste blokk. Bildet blir stående til en annen blokk endrer matrisen eller programmet stopper.
 
-- Type: kommandoblokk
-- Merk: den valgte huben må ha en intern LED-matrise.
-
-### `Skriv på lysmatrise` (Nybegynner) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `skriv …` (Nybegynner) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Viser en tekststreng på hubens interne LED-matrise ved å rulle én bokstav om gangen.
+Ruller teksten over lysmatrisen, én bokstav om gangen.
 
-- Type: kommandoblokk
-- Merk: den valgte huben må ha en intern LED-matrise.
-
-### `Slå av matrisepiksler` (Nybegynner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `skru av piksler` (Nybegynner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Slår av alle lysene på hubens interne LED-matrise.
+Slår av alle pikslene i lysmatrisen.
 
-- Type: kommandoblokk
-- Merk: den valgte huben må ha en intern LED-matrise.
-
-### `Sett matrisepiksel` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `sett piksel … x … y … lysstyrke …` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Setter lysstyrken for én piksel på hubens interne LED-matrise. Bare den valgte pikselen oppdateres; resten av displayet forblir uendret. Pikselposisjonsfeltene bruker kolonne- og radverdier, med piksel `1, 1` øverst til venstre.
+Angir lysstyrken til én piksel; resten av matrisen forblir som den er. `x` er kolonnen og `y` er raden; piksel `1, 1` er i øvre venstre hjørne.
 
-- Type: kommandoblokk
-- Merk: den valgte huben må ha en intern LED-matrise.
-
-### `Roter matriseretning` (Avansert) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `roter orientering …` (Avansert) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Roterer retningen på det som vises på hubens interne LED-matrise med eller mot klokken. Hver rotasjon endrer displayretningen med 90 grader og påvirker lysblokker som kjøres etter den.
+Roterer bildet på lysmatrisen 90 grader med eller mot klokken. Den nye orienteringen gjelder for Lys-blokkene som kjører etterpå.
 
-- Type: kommandoblokk
-- Merk: den valgte huben må ha en intern LED-matrise.
-
-### `Sett matriseretning` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `sett orientering til …` (Avansert) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Setter retningen på det som vises på hubens interne LED-matrise. Standardretningen er oppreist, og den valgte retningen påvirker lysblokker som kjøres etter den.
+Angir orienteringen til bildet på lysmatrisen. Standard er `oppreist`; den nye orienteringen gjelder for Lys-blokkene som kjører etterpå.
 
-- Type: kommandoblokk
-- Orienteringsvalg: `oppreist`, `venstre`, `høyre`, `opp ned`
-- Merk: den valgte huben må ha en intern LED-matrise.
+- Valg: `oppreist`, `venstre`, `høyre`, `opp ned`
 
-## Lysblokker for avstandssensor
+## Lys på avstandssensoren {#distance-sensor-lights}
 
-### `Avstandssensor lys opp` (Nybegynner) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `tenn …` (Nybegynner) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Setter lysene på den valgte avstandssensoren. Blokken kan slå individuelle sensorlys på eller av, og kan bruke en listerapportørblokk til å styre lysstyrken for hvert lys.
+Styrer lysene rundt «øynene» på avstandssensoren på den valgte porten. Du kan slå hvert lys av eller på, eller legge en liste i feltet for å angi lysstyrken til hvert lys.
 
-- Type: kommandoblokk
-- Merk: kun tilgjengelig for MINDSTORMS Robot Inventor-huben.
+- Hubber: MINDSTORMS Robot Inventor.
 
-## BuWizz 3 lysblokker
+## Port-LED-er på BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 sett LED-farge` (Nybegynner) {#block_hubs_buwizz3_light_port_set_led_color}
+Disse blokkene angir fargen på LED-en ved siden av en port på BuWizz 3.
+
+### `sett port LED-farge til …` (Nybegynner) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Setter LED-farge på valgt BuWizz 3-port med innebygde fargevalg.
+Setter port-LED-en til en av de forhåndsdefinerte fargene.
 
-- Type: kommandoblokk
-
-### `BuWizz 3 sett LED-farge (tekst)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Setter BuWizz 3 LED-farge ved bruk av tekstverdi.
-
-- Type: kommandoblokk
-- Typisk bruk: dynamiske fargenavn fra variabler
-
-### `BuWizz 3 sett LED-farge (RGB)` (Avansert) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `sett port LED-farge til … … …` (RGB) (Avansert) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Setter BuWizz 3 LED-farge ved bruk av eksplisitte RGB-kanaler.
+Angir fargen på port-LED-en ut fra verdier for rødt, grønt og blått.
 
-- Type: kommandoblokk
-- Typisk bruk: full tilpasset fargekontroll og gradienter
+- Typisk bruk: hvilken som helst farge, myke fargeoverganger.
+
+### `sett port LED-farge fra streng …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Angir fargen på port-LED-en fra tekst.
+
+- Typisk bruk: hent fargen fra en variabel eller en liste.

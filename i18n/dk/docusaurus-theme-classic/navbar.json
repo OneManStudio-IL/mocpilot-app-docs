@@ -12,7 +12,7 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "logo",
+    "message": "MOCPilot-logo",
     "description": "The alt text of navbar logo"
   }
 }

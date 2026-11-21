@@ -5,37 +5,35 @@ title: Muuttujat
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Muuttujat
+# Muuttujat {#variables}
 
-Muuttujat tallentavat arvoja, joita voidaan lukea ja päivittää lohkopinojen ja skriptien välillä.
+Muuttujat tallentavat arvoja, joita ohjelman jokainen skripti voi lukea ja muuttaa. Muuttujat luodaan, nimetään uudelleen ja poistetaan luokan yläreunan painikkeilla **Luo muuttuja**, **Nimeä muuttuja uudelleen** ja **Poista muuttuja**. Alla olevat lohkot näkyvät, kun ohjelmassa on vähintään yksi muuttuja.
 
-## Muuttujien komentolohkot
+## Muuttujan muuttaminen {#changing-a-variable}
 
-### `Aseta muuttuja arvoon` (Aloittelija) {#block_variables_set_to}
+### `asettaa … arvoon …` (Aloittelija) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Asettaa valitun muuttujan annettuun arvoon.
+Asettaa valitulle muuttujalle arvon.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: alustaa tila, korvaa aiempi arvo
+- Tyypillinen käyttö: alkuarvon asettaminen, edellisen arvon korvaaminen.
 
-### `Muuta muuttujaa määrällä` (Edistynyt) {#block_variables_change_by}
+### `muuttaa … arvolla …` (Edistynyt) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Lisää annetun määrän valittuun muuttujaan.
+Lisää valittuun muuttujaan luvun. Vähennä käyttämällä negatiivista lukua.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: laskurit, pisteet, kertyvä aika/etäisyys
+- Tyypillinen käyttö: laskurit, pisteet, matkan tai ajan summaaminen.
 
-## Muuttujan arvolohko
+## Muuttujan lukeminen {#reading-a-variable}
 
-### `Muuttujan arvo` (Aloittelija) {#block_variables_value}
+### Muuttuja (Aloittelija) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Palauttaa valitun muuttujan nykyisen arvon.
+Jokaisella muuttujalla on oma nimellään varustettu raportointilohko. Se palauttaa muuttujan nykyisen arvon.
 
-- Tyyppi: reporter-lohko
-- Tyypillinen käyttö: käyttää muuttujan arvoa operaattoreissa, ehdoissa ja komentojen syötteinä
+- Tyypillinen käyttö: arvon sijoittaminen operaattoreihin, ehtoihin ja muiden lohkojen syötteisiin.
+- [Seuranta](/docs/Application/BlockBuilder/Editor#monitor) näyttää kaikkien muuttujien arvot ohjelman käydessä.

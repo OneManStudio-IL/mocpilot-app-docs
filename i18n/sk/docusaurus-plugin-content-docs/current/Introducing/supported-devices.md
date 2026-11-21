@@ -1,25 +1,35 @@
 ---
 id: SupportedDevices
 title: Podporované huby, motory a senzory
+description: "Huby, motory a senzory, ktoré fungujú s MOCPilot."
 ---
 
 import { SupportedHubsTable, SupportedMotorsTable, SupportedSensorsTable } from '@site/src/components/SupportedDevices';
 
-# ⚙️ Podporované zariadenia
+# Podporované zariadenia {#supported-devices}
 
-Tu je rýchly prehľad hubov, motorov a senzorov podporovaných aplikáciou **MOCPilot**.
+MOCPilot funguje s týmito hubmi, motormi a senzormi. Každý hub funguje s oboma editormi programov, [Rýchlymi prepojeniami](/docs/Application/Links/LinksIntroducing) aj [Logickými blokmi](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing).
 
-<details>
-<summary>Huby</summary>
+## Huby {#hubs}
+
 <SupportedHubsTable />
-</details>
 
-<details>
-<summary>Motory</summary>
+Poznámky:
+
+- Profil má 5 slotov pre huby: 2 sú zadarmo, ďalšie 3 získate nákupom dodatočného slotu pre hub alebo s [MocPilot Pro](/docs/Application/Account/Pro).
+- Huby **Mould King** iba prijímajú príkazy (bez senzorov, bez spätnej väzby). V jednom profile môžete použiť iba jeden typ Mould King: až 3 huby Mould King 4.0 alebo 1 Mould King 6.0.
+- Hub **Robot Inventor** (LEGO® Large Hub) používa klasický Bluetooth a na iPhone a iPade nie je k dispozícii.
+- Aktualizácia a obnova firmvéru sú k dispozícii pre Technic Hub, Technic Move Hub, BOOST Move Hub a City Hub. Pozrite si [Aktualizácia firmvéru](/docs/Application/Hubs/FirmwareUpdating).
+- Čo jednotlivé huby dokážu okrem motorov a svetiel, je popísané v časti [Funkcie jednotlivých hubov](/docs/Application/Hubs/HubFunctions).
+
+## Motory {#motors}
+
 <SupportedMotorsTable />
-</details>
 
-<details>
-<summary>Senzory</summary>
+Motory s enkodérom (uhlové motory, Technic L a XL) hlásia rýchlosť a polohu, takže ich možno použiť ako servá, otáčať o stupne a nastavovať do polôh. Jednoduché motory (vlakový motor, jednoduchý stredný lineárny motor) prijímajú iba rýchlosť.
+
+## Senzory a svetlá {#sensors-and-lights}
+
 <SupportedSensorsTable />
-</details>
+
+Použiť môžete aj vstavané senzory hubov (batéria, náklon, zrýchlenie, teplota) a senzory vášho telefónu alebo tabletu. Pozrite si [Senzory telefónu](/docs/Application/Dashboard/PhoneSensors).

@@ -5,146 +5,145 @@ title: 事件
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# 事件
+# 事件 {#events}
 
-**事件** 分类包含在条件发生时启动脚本的积木。
+**事件**类别包含在某件事发生时启动脚本的积木，以及在脚本之间发送消息的积木。使用类别顶部的**添加消息**和**删除消息**来管理消息。
 
-## 核心事件
+## 核心事件 {#core-events}
 
-### `当程序启动时` (初级) {#block_event_when_program_started}
+### `当程序启动时`（初学者） {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-当配置程序开始时，此脚本执行一次。
+程序启动时运行一次它的脚本。
 
-- 触发方式：程序启动
-- 常见用途：初始化变量、电机默认状态、启动提示音
+- 典型用法：设置变量的初始值，让电机处于初始状态，显示“就绪”消息。
 
-### `当` (高级) {#block_event_when}
+### `当 …`（进阶） {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-当所选条件变为真时运行。
+当插槽中的条件从假变为真时运行它的脚本。脚本运行期间，该积木会等待；只有当条件先变为假、再次变为真之后，它才会再次触发。
 
-- 触发方式：基于条件
-- 常见用途：根据运行时状态进行逻辑分支
+- 典型用法：对某种状态做出反应，例如 `当 计时器 > 5 和 开关已开启`。
 
-### `当计时器大于` (高级) {#block_event_when_timer_greater_than}
+### `当计时器 > …`（进阶） {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-当计时器值超过阈值时运行。
+当程序计时器超过该数值（以秒为单位）时运行它的脚本。
 
-- 触发方式：经过时间
-- 常见用途：延时动作、定时阶段
+- 典型用法：延时动作、定时阶段。用**重置计时器**（传感器）重置计时器。
 
-### `当收到消息` (专家) {#block_event_when_message_recieved}
+### `当我接收时 …`（大师） {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-当收到匹配的广播消息时启动脚本。
+当所选消息被广播时运行它的脚本。
 
-- 触发方式：消息通道
-- 常见用途：同步多个脚本
+- 典型用法：协调多个脚本。
 
-### `广播` (专家) {#block_event_broadcast}
+### `传递 …`（大师） {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-向所有监听该消息的脚本发送消息。
+向所有以该消息的**当我接收时**开头的脚本发送消息，并立即继续执行。
 
-- 触发方式：立即发送
-- 常见用途：无需等待地通知其他脚本
+- 典型用法：通知其他脚本开始运行，而不等待它们。
 
-### `广播并等待` (专家) {#block_event_broadcast_and_wait}
+### `传递 … 并等待`（大师） {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-发送消息并暂停当前脚本，直到监听方执行完成。
+发送消息，并暂停当前脚本，直到所有收到该消息的脚本都执行完毕。
 
-- 触发方式：立即发送 + 等待
-- 常见用途：有执行顺序要求的分阶段流程
+- 典型用法：顺序很重要的分步流程。
 
-## 主控事件
+## 集线器事件 {#hub-events}
 
-### `主控按钮按下` (初级) {#block_hubs_all_event_button_pressed}
+当配置文件中的集线器支持时，才会出现这些积木。Mould King 集线器没有这些积木。
+
+### `当 … … 按钮 …`（初学者） {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-当主控主按钮被按下时运行。
+当集线器上的按钮被按下或松开时运行。
 
-- 状态选项：`按下`、`释放`、`变化`
-- 说明：可用按钮选项可能因主控型号而不同（不同主控可能暴露不同按钮集合）。
+- 状态选项：`按下`、`松开`、`已更改`
+- 集线器：LEGO Powered Up 集线器、WeDo 2.0 和 Robot Inventor。按钮列表取决于集线器。
 
-### `主控连接状态变化` (初级) {#block_hubs_all_event_connection_changed}
+### `当 … 已连接 / 已断开`（初学者） {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-当主控连接状态发生变化（已连接或已断开）时运行。
+当集线器连接或断开时运行。
 
-- 触发方式：主控连接状态变化
-- 常见用途：断线重连处理，以及链路丢失后的安全兜底行为
+- 典型用法：连接丢失时安全地停止模型，连接恢复时还原其状态。
 
-### `主控电量变化` (初级) {#block_hubs_all_event_battery_changed}
+### `当 … % 电池已更改`（初学者） {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-当主控上报的电量发生变化时运行。
+当集线器报告的电池电量变化时运行。
 
-- 触发方式：电量更新（适用于支持电量上报的主控）
-- 常见用途：低电量告警逻辑和省电模式切换
+- 集线器：能报告电池电量的集线器。
+- 典型用法：低电量警告、切换到省电模式。
 
-### `主控加速度变化` (专家) {#block_hubs_all_event_accelerometer_changed}
+### `当 … 加速度计数据已更改`（大师） {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-当加速度数值变化时运行。
+当集线器的加速度计数值变化时运行。
 
-### `主控倾斜变化` (初级) {#block_hubs_all_event_tilt_changed}
+- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。
+
+### `当 … 倾斜 … 角度已更改`（初学者） {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-当倾斜值变化时运行。
+当集线器的倾斜角度变化时运行。
 
-- 角度选项：`任意`、`俯仰`、`横滚`、`偏航`
-- 说明：`偏航` 仅在支持偏航数据的主控上可用。
+- 角度选项：`任何`、`俯仰`、`滚转`、`偏航`
+- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。`偏航` 仅在 Technic Hub 和 Robot Inventor 上可用。
 
-### `主控朝向变化` (初级) {#block_hubs_all_event_tilt_orientation_changed}
+### `当 … 方向已更改`（初学者） {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-当朝向状态变化时运行（例如前/上/下/左/右）。
+当集线器的方向变化时运行，也就是集线器的另一面朝上时。
 
-## 传感器端口事件
+- 集线器：与倾斜事件相同。
 
-### `Technic 颜色传感器事件` (初级) {#block_hubs_all_event_port_technic_sensor_color}
+## 传感器事件 {#sensor-events}
+
+这些事件读取连接在集线器端口上的传感器。集线器：City Hub、Technic Hub、BOOST Move Hub 和 MINDSTORMS Robot Inventor 集线器（不支持 SBrick、BuWizz、WeDo 2.0 或 Mould King）。
+
+### Technic 传感器：`当颜色是 …`（初学者） {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-当 Technic 颜色传感器上报所选颜色时运行。
+当 Technic 颜色传感器检测到所选颜色时运行。
 
-
-### `Technic 距离传感器事件` (初级) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic 传感器：`当 … 比...更近 / 比...更远 / 正好在 …`（初学者） {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-当 Technic 距离传感器数值满足所选条件时运行。
+当 Technic 距离传感器测得的距离满足条件时运行。
 
-- 比较选项：`小于`、`大于`、`等于`
-- 单位选项：`毫米`、`厘米`、`英寸`、`百分比`
-- 说明：可用单位可能取决于传感器模式和已连接设备。
+- 比较选项：`比...更近`、`比...更远`、`正好在`
+- 单位：`毫米`、`厘米`、`英寸`、`%`
 
-### `BOOST 距离传感器事件` (初级) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST 传感器：`当 … 比...更近 / 比...更远 / 正好在 …`（初学者） {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-当 BOOST 距离传感器达到所选阈值/条件时运行。
+当 BOOST 颜色与距离传感器测得的距离满足条件时运行。
 
-- 比较选项：`小于`、`大于`、`等于`
-- 单位选项：`百分比`、`厘米`、`英寸`
+- 比较选项：`比...更近`、`比...更远`、`正好在`
+- 单位：`%`、`厘米`、`英寸`
 
-### `BOOST 颜色传感器事件` (初级) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST 传感器：`当颜色是 …`（初学者） {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-当 BOOST 传感器检测到所选颜色/数值时运行。
+当 BOOST 颜色与距离传感器检测到所选颜色时运行。

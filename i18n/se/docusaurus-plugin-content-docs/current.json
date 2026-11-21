@@ -22,5 +22,53 @@
   "sidebar.tutorialSidebar.category.Hubs": {
     "message": "Hubbar",
     "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.getting-started": {
+    "message": "Kom igång",
+    "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Steg-för-steg-guider",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.profiles": {
+    "message": "Profiler",
+    "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.dashboard": {
+    "message": "Instrumentpanel",
+    "description": "The label for category 'Dashboard' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.themes": {
+    "message": "Teman",
+    "description": "The label for category 'Themes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.quick-links": {
+    "message": "Snabbkopplingar",
+    "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Blockreferens",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.logic-blocks": {
+    "message": "Logikblock",
+    "description": "The label for category 'Logic Blocks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.block-reference": {
+    "message": "Blockreferens",
+    "description": "The label for category 'Block reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.hubs": {
+    "message": "Hubbar",
+    "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.account": {
+    "message": "Konto och MocPilot Pro",
+    "description": "The label for category 'Account and MocPilot Pro' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.help": {
+    "message": "Hjälp",
+    "description": "The label for category 'Help' in sidebar 'tutorialSidebar'"
   }
 }

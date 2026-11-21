@@ -5,117 +5,129 @@ title: Відновлення прошивки хаба
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Відновлення прошивки хаба
+# Відновлення прошивки хаба {#hub-firmware-recovery}
 
-Obnova firmwaru hubu se používá, když se hub po přerušené nebo neúspěšné aktualizaci firmwaru nemůže normálně spustit.
+Відновлення прошивки повертає до життя хаб, який не може нормально запуститися після перерваного або невдалого оновлення прошивки.
 
-Během obnovy MOCPilot opraví cestu firmwaru hubu, aby bylo možné hub znovu aktualizovat na nejnovější podporovanou verzi. Tento postup použijte pouze tehdy, když hub nereaguje běžně, MOCPilot hlásí režim obnovy nebo předchozí aktualizace selhala.
+MOCPilot завантажує в хаб робочу прошивку, щоб він знову працював і його можна було оновлювати. Використовуйте відновлення лише тоді, коли хаб не реагує як слід, коли MOCPilot показує, що хаб у режимі відновлення, або після невдалого оновлення.
 
 :::warning Важливо
-Nechte hub zapnutý a držte zařízení blízko hubu po celou dobu obnovy. Odpojení Bluetooth, zavření MOCPilot, vyjmutí baterií nebo vypnutí hubu během nahrávání firmwaru může obnovu přerušit.
+Не вимикайте хаб і тримайте пристрій поруч із ним протягом усього відновлення. Якщо під час завантаження вимкнути Bluetooth, закрити MOCPilot, вийняти батареї або вимкнути хаб, відновлення може не вдатися.
 :::
 
-## Kdy je obnova potřeba
+## Коли потрібне відновлення {#when-recovery-is-required}
 
-Obnova firmwaru může být potřeba, pokud:
+Відновлення може знадобитися, якщо:
 
-- Aktualizace firmwaru nebyla úspěšně dokončena.
-- Hub se už nepřipojuje jako běžný hub.
-- Hub se v MOCPilot zobrazí jako **LEGO Bootloader**.
-- MOCPilot rozpozná hub připojený v režimu obnovy firmwaru.
+- Оновлення прошивки не завершилося успішно.
+- Хаб більше не підключається як звичайний хаб.
+- Хаб відображається в MOCPilot як **LEGO Bootloader**.
+- MOCPilot виявляє, що хаб підключено в режимі відновлення прошивки.
 
-Před spuštěním obnovy zkontrolujte, že hub má dostatek energie. Pokud je to možné, nabijte také telefon, tablet nebo počítač s MOCPilot a zapněte Bluetooth.
+Перед початком переконайтеся, що хаб достатньо заряджений, ваш телефон, планшет або комп’ютер заряджений, а Bluetooth увімкнено.
 
-## Podporované huby
+## Підтримувані хаби {#supported-hubs}
 
-Obnova firmwaru je podporována pro stejné huby jako aktualizace firmwaru:
+Відновлення працює для тих самих хабів, що й оновлення прошивки:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Přepnutí Technic Hub, Boost Hub a City Hub do režimu obnovy
+## Переведення Technic Hub, Boost Hub або City Hub у режим відновлення {#put-a-technic-hub-boost-hub-or-city-hub-into-recovery-mode}
 
-Technic Hub, Boost Hub a malý City Hub používají připojení přes bootloader:
+Ці хаби підключаються через свій завантажувач (bootloader):
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte tlačítko, dokud LED hubu nezačne blikat fialově.
-4. Nepouštějte tlačítko, dokud LED bliká fialově.
-5. Stále držte tlačítko, otevřete **Мої Bluetooth-хаби** v MOCPilot a připojte hub.
-6. Po připojení hubu v režimu bootloader můžete tlačítko pustit.
+1. Вимкніть хаб.
+2. Натисніть і утримуйте зелену кнопку.
+3. Тримайте кнопку, доки світлодіод хаба не почне блимати фіолетовим.
+4. Не відпускайте кнопку, поки світлодіод блимає фіолетовим.
+5. Не відпускаючи кнопку, відкрийте в MOCPilot **Мої Bluetooth хаби** і підключіться до хаба.
+6. Коли хаб підключиться в режимі завантажувача, кнопку можна відпустити.
 
-V režimu obnovy se hub může zobrazit jako **LEGO Bootloader** místo běžného názvu.
+У режимі відновлення хаб може відображатися як **LEGO Bootloader** замість своєї звичайної назви.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Хаб LEGO Bootloader у списку хабів із дією відновлення прошивки" />
 
-## Přepnutí Technic Move Hub do režimu obnovy
+## Переведення Technic Move Hub у режим відновлення {#put-a-technic-move-hub-into-recovery-mode}
 
-Technic Move Hub používá jinou sekvenci obnovy než ostatní podporované huby. Nepřipojuje se jako **LEGO Bootloader**. Tato sekvence načte tovární firmware **1.2.3**, který není určen jako finální firmware pro běžné používání.
+Technic Move Hub відновлюється інакше: він не підключається як **LEGO Bootloader**. Натомість наведена нижче послідовність натискань завантажує заводську прошивку **1.2.3**, яка не призначена для щоденного використання.
 
-Obnova firmwaru Technic Move Hub:
+Щоб відновити його прошивку:
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte zelené tlačítko přibližně jednu minutu.
-4. Pusťte tlačítko.
-5. Počkejte, dokud LED hubu nezačne blikat bíle.
-6. Otevřete **Мої Bluetooth-хаби** v MOCPilot a připojte hub.
+1. Вимкніть хаб.
+2. Натисніть і утримуйте зелену кнопку.
+3. Тримайте зелену кнопку приблизно одну хвилину.
+4. Відпустіть кнопку.
+5. Зачекайте, поки світлодіод хаба почне блимати білим.
+6. Відкрийте в MOCPilot **Мої Bluetooth хаби** і підключіться до хаба.
 
-Po připojení MOCPilot rozpozná tovární firmware a nabídne aktualizaci hubu na nejnovější dostupnou verzi. Spusťte aktualizaci firmwaru a počkejte na dokončení.
+Коли хаб підключиться, MOCPilot виявить заводську прошивку й запропонує оновити її до останньої версії. Запустіть оновлення й дочекайтеся його завершення.
 
-## Spuštění obnovy z dialogu
+## Запуск відновлення з діалогу {#start-recovery-from-the-dialog}
 
-Když MOCPilot rozpozná hub připojený v režimu obnovy firmwaru, zobrazí dialog obnovy.
+Коли MOCPilot виявляє хаб, підключений у режимі відновлення, він показує діалог відновлення.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Відновлення прошивки хаба" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Діалог «Виявлено режим відновлення хаба»" />
 
-Vyberte **Відновити** pro zahájení nahrávání firmwaru do hubu.
+Виберіть **Відновити**, щоб почати завантаження прошивки в хаб.
 
-Pokud nejste připraveni obnovu spustit, vyberte **Скасувати**. Obnovu můžete spustit později z kontextové nabídky hubu.
+Якщо ви ще не готові, виберіть **Скасувати**. Відновлення можна запустити пізніше з меню хаба.
 
-## Spuštění obnovy z nabídky hubu
+## Запуск відновлення з меню хаба {#start-recovery-from-the-hub-menu}
 
-Ruční spuštění obnovy:
+Щоб запустити відновлення самостійно:
 
-1. Otevřete **Мої Bluetooth-хаби**.
-2. Najděte hub zobrazený jako **LEGO Bootloader**.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Відновити прошивку хаба**.
+1. Відкрийте **Мої Bluetooth хаби**.
+2. Знайдіть хаб, що відображається як **LEGO Bootloader**.
+3. Відкрийте меню хаба.
+4. Виберіть **Відновити прошивку хаба**.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Відновити прошивку хаба" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Дія «Відновити прошивку хаба» в контекстному меню хаба" />
 
-## Během obnovy firmwaru
+## Під час відновлення прошивки {#during-firmware-recovery}
 
-Po spuštění obnovy MOCPilot nahrává firmware do hubu a zobrazuje průběh na obrazovce.
+MOCPilot завантажує прошивку в хаб і показує перебіг процесу.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Відновлення прошивки хаба" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Екран перебігу відновлення прошивки" />
 
-Počkejte na dokončení. Nepřesouvejte hub daleko od zařízení, nezavírejte aplikaci, nevypínejte Bluetooth ani neodpojujte napájení hubu.
+Дочекайтеся завершення. Не відносьте хаб від пристрою, не закривайте застосунок, не вимикайте Bluetooth і не вимикайте живлення хаба.
 
-Hub se může během procesu několikrát restartovat nebo znovu připojit. To je očekávané. Nechte MOCPilot otevřený a počkejte na dokončení obnovy.
+Хаб може кілька разів перезапуститися або перепідключитися. Це нормально: не закривайте MOCPilot і зачекайте.
 
-## Dokončení obnovy
+## Завершення відновлення {#finish-recovery}
 
-Po úspěšném dokončení obnovy MOCPilot zobrazí potvrzení.
+Коли відновлення завершено, MOCPilot показує підтвердження.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Відновлення прошивки хаба" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Діалог завершення відновлення прошивки" />
 
-Vyberte **OK**. Hub by se měl restartovat a připojit jako běžný hub místo **LEGO Bootloader**.
+Виберіть **OK**. Хаб має перезапуститися й підключитися як звичайний хаб, а не як **LEGO Bootloader**.
 
-Po obnově zkontrolujte hub v **Мої Bluetooth-хаби**. Pokud MOCPilot stále hlásí, že je potřeba aktualizace firmwaru, spusťte běžný postup [Оновлення прошивки](/docs/Application/Hubs/FirmwareUpdating/).
+Потім перевірте хаб у розділі **Мої Bluetooth хаби**. Якщо MOCPilot і далі просить оновити прошивку, виконайте звичайне [оновлення прошивки](/docs/Application/Hubs/FirmwareUpdating/).
 
-## Pokud obnova selže
+## Якщо відновлення не вдалося {#if-recovery-fails}
 
-Pokud se obnova nedokončí úspěšně:
+Якщо відновлення не вдалося:
 
-1. Držte hub blízko zařízení.
-2. Restartujte napájení hubu.
-3. Znovu přepněte hub do režimu obnovy.
-4. Připojte se k **LEGO Bootloader** v MOCPilot.
-5. Znovu spusťte **Відновити прошивку хаба**.
+1. Тримайте хаб поруч із пристроєм.
+2. Вимкніть і знову увімкніть хаб.
+3. Знову переведіть хаб у режим відновлення.
+4. Підключіться до **LEGO Bootloader** у MOCPilot.
+5. Знову запустіть **Відновити прошивку хаба**.
 
-Pokud se chybová zpráva objeví znovu, zopakujte obnovu od začátku. Pokud hub nejde obnovit ani po několika pokusech, vyměňte nebo nabijte baterie a zkuste to znovu.
+Якщо помилка повторюється, виконайте всю процедуру ще раз. Якщо кілька спроб не вдалися, замініть або зарядіть батареї та спробуйте знову.

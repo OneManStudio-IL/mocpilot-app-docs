@@ -1,0 +1,72 @@
+---
+id: HubFunctions
+title: Hubspecifieke functies
+description: "Speciale functies van Technic Move, BuWizz, SBrick, Mould King, Robot Inventor en andere hubs in beide editors."
+---
+
+# Hubspecifieke functies {#hub-specific-functions}
+
+Elke hub met poorten kan motoren en lampen aansturen. Sommige hubs kunnen meer. In **Snelle koppelingen** verschijnen deze functies alleen in het palet als zo'n hub in het profiel zit; in **Logicablokken** zijn het hubspecifieke blokken.
+
+## Motoren met encoder (LEGO® Technic, City, BOOST, Robot Inventor, BuWizz 3.0 Pro) {#motors-with-encoders-lego-technic-city-boost-robot-inventor-buwizz-30-pro}
+
+| Functie | Snelle koppelingen | Logicablokken |
+|---|---|---|
+| Snelheidsregeling | [Motor](/docs/Application/Links/Blocks/OutputBlocks#op-motor) | stel snelheid in op, start motor op … % snelheid |
+| Stuurservo met kalibratie | [Servo](/docs/Application/Links/Blocks/OutputBlocks#op-servo) (Handmatig / Auto) | ga naar relatieve positie, rek kalibreren |
+| Een hoek draaien | [Draaien met graden](/docs/Application/Links/Blocks/OutputBlocks#op-degrees) | uitvoeren voor |
+| Absolute positie (hoekmotoren) | [Naar positie gaan](/docs/Application/Links/Blocks/OutputBlocks#op-goto) | gaan … naar positie |
+| Gedrag bij stoppen: uitrollen, remmen, vasthouden | Motor → **Bij stoppen** | stel motor in op … bij stop |
+| Versnellingsvoorinstellingen van de hub | Motor → **Versnelling van hub** | stel versnelling in op, stel vertraging in op |
+| Snelheid, positie, vermogen en stroom als ingang | [Hub-invoer](/docs/Application/Links/Blocks/InputBlocks#src-hub) | snelheid, positie, relatieve positie, vermogen |
+
+## Technic Move Hub {#technic-move-hub}
+
+De hub van de op afstand bestuurbare LEGO® Technic-auto's (Porsche GT4 e-Performance, Lamborghini Revuelto, Batmobile™ Tumbler).
+
+- Rijden, sturen en lichten worden per functie aangestuurd, niet per poort.
+- **Sturen** kalibreert de eigen stuurheugel.
+- **Remmen**, **Boost** (vermogensmodus) en **Vermogenspuls** (alleen met de configuratie Batmobile™ Tumbler).
+- **Hubconfiguraties**: laad een autoprofiel in de hub via **Mijn hubs → Configuratie selecteren**. Zie [Configuraties van de Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+- Lichten in Logicablokken: *Technic Move zet lichten aan*.
+
+## BuWizz 2.0 {#buwizz-20}
+
+- **Vermogensmodus**: Langzaam, Normaal, Snel, Ludicrous. Snelle koppelingen: de bewerking [Vermogensmodus](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Logicablokken: *BuWizz 2 stel stroommodus in*.
+- De huidige vermogensmodus, de **Uitgangsspanning** en de motorstroom als ingangen.
+- Eenvoudige snelheidsregeling op poort 1–4: geen positieregeling.
+
+## BuWizz 3.0 Pro {#buwizz-30-pro}
+
+- **Poortkleur**-leds op poort 1–4: uit een lijst of als RGB ([Poortkleur](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 stel LED-kleur in op*).
+- Motorstroom als ingang, relatieve posities.
+
+## SBrick en SBrick Plus {#sbrick-and-sbrick-plus}
+
+- Motoren en lampen met snelheidsregeling.
+- Geen positieregeling: Servo, Draaien met graden en Naar positie gaan zijn niet beschikbaar.
+
+## Mould King 4.0 en 6.0 {#mould-king-40-and-60}
+
+- Alleen opdrachten: geen sensoren, geen knoppen, geen terugmelding van de verbinding.
+- **Besturingskanaal** A, B of C: de bewerking [Kanaal](/docs/Application/Links/Blocks/OutputBlocks#op-channel) in Snelle koppelingen, het blok *MouldKing stel besturingskanaal in* in Logicablokken, of **Selecteer kanaal** in Mijn hubs.
+- Maximaal 3 Mould King 4.0 of 1 Mould King 6.0 per profiel, en maar één Mould King-type per profiel.
+
+## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
+
+- **LED-matrix**: een niveaubalk, een getal of een afbeelding in Snelle koppelingen; tekst en pixels in Logicablokken.
+- **Lampjes van de afstandssensor** (de “ogen” van de sensor).
+- **Blokkeerdetectie** en motorvermogen.
+- Klassieke Bluetooth: niet beschikbaar op iPhone en iPad.
+
+## LEGO®-hubs met een kleurenled {#lego-hubs-with-a-colour-led}
+
+Technic, City, BOOST, Technic Move, WeDo 2.0, Robot Inventor en de afstandsbediening: je kunt de kleur van de hub-led instellen uit een lijst of als RGB ([Hub-LED](/docs/Application/Links/Blocks/OutputBlocks#hub-led) in Snelle koppelingen, *stel LED-kleur in op* in Logicablokken).
+
+## LEGO® Powered Up Remote Control {#lego-powered-up-remote-control}
+
+De knoppen zijn ingangen, dus je kunt een model via MOCPilot met de fysieke afstandsbediening besturen (Snelle koppelingen: **Hub**-invoer → Knop; Logicablokken: gebeurtenissen van hubknoppen).
+
+## Ingebouwde sensoren {#built-in-sensors}
+
+Batterijniveau en -spanning, temperatuur van de printplaat, kanteling (pitch, roll, yaw), versnelling en oriëntatie zijn beschikbaar op hubs die ze hebben. Stel **Oriëntatie van de hub** (Snelle koppelingen) of *stel hellingsoriëntatie in* (Logicablokken) zo in dat het overeenkomt met hoe de hub gemonteerd is.

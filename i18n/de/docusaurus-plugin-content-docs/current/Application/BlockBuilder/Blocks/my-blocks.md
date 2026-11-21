@@ -5,30 +5,33 @@ title: Meine Blöcke
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Meine Blöcke
+# Meine Blöcke {#my-blocks}
 
-Mit „Meine Blöcke“ können Sie eigene wiederverwendbare Blöcke definieren.
-Diese Kategorie ist konzeptionell ähnlich wie Funktionen in klassischer Programmierung: Verhalten einmal definieren und vielfach aufrufen.
+Mit Meine Blöcke erstellen Sie eigene, wiederverwendbare Blöcke.
+Das funktioniert wie eine Funktion in der normalen Programmierung: Sie beschreiben das Verhalten einmal und verwenden es an beliebig vielen Stellen.
 
-## Kernblöcke von Meine Blöcke
+## Die Blöcke {#the-blocks}
 
-### `Block erstellen` (Guru) {#block_my_block_define}
+### `definieren …` (Guru) {#block_my_block_define}
 
-Erstellt eine neue benutzerdefinierte Blockdefinition.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Typ: Definitions-/Setup-Block
-- Typische Verwendung: Wiederholte Logik in einem benannten Block bündeln
+Drücken Sie oben in der Kategorie auf **Block erstellen**, um einen neuen Block anzulegen. Im Programmbereich erscheint dann ein Hutblock `definieren` mit dem Namen Ihres Blocks: Die Blöcke, die Sie darunter anhängen, bestimmen, was Ihr Block tut.
 
-### `MeinBlock` (Guru) {#block_my_block}
+- Typische Verwendung: wiederholte Logik in einen Block mit einem klaren Namen packen.
 
-Ruft einen zuvor erstellten benutzerdefinierten Block auf.
+### Ihr Block (Guru) {#block_my_block}
 
-- Typ: Stapelblock (benutzerdefinierter Befehlsaufruf)
-- Typische Verwendung: Gleiche Logik an mehreren Stellen nutzen, ohne Blockstapel zu duplizieren
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Beispiele mit variablen Argumenten
+Jeder Block, den Sie erstellen, erscheint unter seinem Namen in der Palette. Wenn Sie ihn verwenden, laufen die Blöcke, die an seinem Block `definieren` hängen.
 
-Diese Beispiele zeigen benutzerdefinierte Blöcke mit unterschiedlichen Argumentsignaturen.
+- Typ: Stapelblock
+- Typische Verwendung: dieselbe Logik an mehreren Stellen nutzen, ohne Stapel zu kopieren.
+
+## Beispiele mit verschiedenen Eingaben {#examples-with-different-inputs}
+
+Eigene Blöcke mit unterschiedlichen Eingaben:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Diese Beispiele zeigen benutzerdefinierte Blöcke mit unterschiedlichen Argument
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Beispielverwendung im Programmstapel
+## Einen eigenen Block im Programm verwenden {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Dieses Beispiel zeigt einen Aufruf eines benutzerdefinierten Blocks unter `Wenn Programm startet`, während der Stapel `Definiere meinen Block` die wiederverwendbare Motorlogik enthält.
+Hier wird der eigene Block unter `wenn das Programm startet` verwendet, und der Stapel `definieren` enthält die Motorlogik, die er ausführt.
 
-- Typischer Ablauf: Benutzerdefinierten Block aus Ereignisstapeln aufrufen
-- Vorteil: Eine Definition, viele Aufrufstellen
+- Übliches Muster: Ihre Blöcke in Ereignisskripten verwenden.
+- Vorteil: eine Definition, viele Stellen, die sie nutzen.
 
-## Ansicht des My-Block-Editors
+## Der Blockeditor {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Der Editor „Block erstellen“ wird verwendet, um die Signatur des benutzerdefinierten Blocks zu entwerfen.
-Sie können Beschriftungen und Eingaben hinzufügen (z. B. Zahl/Text und Boolean-Eingaben) und danach die Implementierungslogik im Definitionsstapel festlegen.
+Im Editor **Block erstellen** gestalten Sie, wie Ihr Block aussieht: Fügen Sie Beschriftungen (**Etikett hinzufügen**) und Eingaben (**Eingabe hinzufügen**: *Zahl oder Text* oder *boolean*) hinzu. Innerhalb des Stapels `definieren` funktionieren die Eingaben wie Variablen, die die an den Block übergebenen Werte enthalten.
 
-## Warum Meine Blöcke verwenden
+## Warum Meine Blöcke {#why-use-my-blocks}
 
-- Wiederverwendbarkeit: Einmal schreiben, oft aufrufen.
-- Lesbarkeit: Lange wiederholte Stapel durch einen aussagekräftigen Namen ersetzen.
-- Wartbarkeit: Logik an einer Stelle ändern statt in vielen Kopien.
-- Struktur: Große Programme in kleinere logische Einheiten aufteilen.
+- Wiederverwendung: einmal schreiben, oft verwenden.
+- Lesbarkeit: ein aussagekräftiger Name statt langer, wiederholter Stapel.
+- Einfache Änderungen: die Logik an einer Stelle korrigieren statt in jeder Kopie.
+- Struktur: ein großes Programm in kleine, logische Teile aufteilen.
 
-## Hinweise
+## Hinweise {#notes}
 
-- Benutzerdefinierte Blöcke gelten auf Projektebene und sind zur Wiederverwendung im selben Profil/Projekt gedacht.
-- Bevorzugen Sie beschreibende Namen, die die Absicht erklären, nicht die Implementierungsdetails.
+- Eigene Blöcke gehören zum Profil und können überall in seinem Programm verwendet werden.
+- Geben Sie Blöcken Namen, die sagen, was sie tun, nicht wie sie es tun.
+- Ein Block, der sich selbst aufruft, kann endlos laufen; der Editor warnt Sie davor.

@@ -1,170 +1,162 @@
 ---
 id: Operators
-title: Operatori
+title: Operatore
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatori
+# Operatore {#operators}
 
-Gli operatori sono blocchi di tipo Reporter e Booleano utilizzati per calcoli, confronti, logica e gestione delle stringhe.
+Gli operatori sono blocchi valore e booleani per calcoli, confronti, logica e testo.
 
-## Operatori aritmetici
+## Matematica {#math}
 
-### `Somma` (Principiante) {#block_operator_plus}
+### `… + …` (Principiante) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Restituisce la somma di due valori.
+Restituisce la somma di due numeri.
 
-### `Sottrai` (Principiante) {#block_operator_minus}
+### `… − …` (Principiante) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Restituisce il risultato della sottrazione di due valori.
+Sottrae il secondo numero dal primo.
 
-### `Moltiplica` (Principiante) {#block_operator_multiply}
+### `… × …` (Principiante) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Restituisce il prodotto di due valori.
+Restituisce il prodotto di due numeri.
 
-### `Dividi` (Principiante) {#block_operator_divide}
+### `… ÷ …` (Principiante) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Restituisce il risultato della divisione di due valori.
+Divide il primo numero per il secondo.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+### `… per modulo …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Restituisce il resto della divisione.
+Restituisce il resto della divisione del primo numero per il secondo.
 
-### `Arrotonda` (Guru) {#block_operator_round}
+### `arrotondare …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Arrotonda all’intero più vicino (ad esempio `2.6 -> 3`).
+Arrotonda un numero all'intero più vicino (ad esempio `2.6` diventa `3`).
 
-### `Funzione matematica (singola)` (Guru) {#block_operator_math_single}
+### `… di …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Applica una funzione matematica a un singolo argomento.
+Applica una funzione a un numero. Gli angoli sono in gradi.
 
-Funzioni disponibili:
-
-- `valore assoluto`: valore assoluto di un numero
-- `intero minore`: arrotonda per difetto all’intero più vicino
-- `intero maggiore`: arrotonda per eccesso all’intero più vicino
+- `valore assoluto`: valore assoluto
+- `intero minore`: arrotonda per difetto a un numero intero
+- `intero maggiore`: arrotonda per eccesso a un numero intero
 - `radice quadrata`: radice quadrata
-- `sin`: seno (basato su angolo)
-- `cos`: coseno (basato su angolo)
-- `tan`: tangente (basata su angolo)
-- `asin`: arco seno
-- `acos`: arco coseno
-- `atan`: arco tangente
-- `ln`: logaritmo naturale (base `e`)
-- `log`: logaritmo in base `10`
-- `e^`: eleva `e` alla potenza dell’input
-- `10^`: eleva `10` alla potenza dell’input
+- `sin`, `cos`, `tan`: seno, coseno e tangente di un angolo
+- `asin`, `acos`, `atan`: le funzioni inverse; restituiscono un angolo
+- `ln`: logaritmo naturale (in base `e`)
+- `log`: logaritmo in base 10
+- `eˆ`: `e` elevato alla potenza del numero
+- `10ˆ`: `10` elevato alla potenza del numero
 
-### `Funzione matematica (doppia)` (Guru) {#block_operator_math_pair}
+### `… di … e …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Applica una funzione matematica a due argomenti.
+Applica una funzione a due numeri.
 
-Funzioni disponibili:
+- `min`: il minore dei due
+- `max`: il maggiore dei due
+- `potenza`: il primo numero elevato alla potenza del secondo
+- `atan2`: l'angolo del punto definito dai due numeri
+- `hypot`: la lunghezza dell'ipotenusa con questi due cateti
+- `copysign`: il primo numero con il segno del secondo
 
-- `min`: il più piccolo tra due valori
-- `max`: il più grande tra due valori
-- `potenza`: il primo valore elevato alla potenza del secondo
-- `atan2`: angolo da coppia X/Y
-- `hypot`: lunghezza dell’ipotenusa da due componenti
-- `copysign`: primo valore con il segno del secondo
-
-### `Numero casuale` (Guru) {#block_operator_pick_random}
+### `scegliere casualmente … a …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Restituisce un numero casuale nell’intervallo selezionato.
+Restituisce un numero casuale compreso tra i due valori.
 
-## Operatori di confronto
+## Confronto {#comparison}
 
-### `Uguale` (Principiante) {#block_operator_equal}
+### `… = …` (Principiante) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Restituisce `true` quando due valori sono uguali.
+Restituisce `true` quando i due valori sono uguali.
 
-### `Diverso` (Avanzato) {#block_operator_not_equal}
+### `… ≠ …` (Avanzato) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Restituisce `true` quando due valori sono diversi.
+Restituisce `true` quando i due valori sono diversi.
 
-### `Maggiore di` (Principiante) {#block_operator_greater_than}
+### `… > …` (Principiante) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Restituisce `true` quando il valore di sinistra è maggiore di quello di destra.
+Restituisce `true` quando il valore a sinistra è maggiore di quello a destra.
 
-### `Minore di` (Principiante) {#block_operator_less_than}
+### `… < …` (Principiante) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Restituisce `true` quando il valore di sinistra è minore di quello di destra.
+Restituisce `true` quando il valore a sinistra è minore di quello a destra.
 
-### `È compreso tra` (Avanzato) {#block_operator_is_in_between}
+### `è … tra … e …` (Avanzato) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Restituisce `true` quando un valore è compreso tra i limiti specificati.
+Restituisce `true` quando il numero è compreso tra i due limiti.
 
-## Operatori logici booleani
+## Logica {#logic}
 
-### `E` (Avanzato) {#block_operator_and}
+### `… e …` (Avanzato) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Restituisce `true` solo quando entrambe le condizioni sono `true`.
+Restituisce `true` solo quando entrambe le condizioni sono vere.
 
-### `Oppure` (Avanzato) {#block_operator_or}
+### `… o …` (Avanzato) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Restituisce `true` quando almeno una condizione è `true`.
+Restituisce `true` quando almeno una delle condizioni è vera.
 
-### `Non` (Avanzato) {#block_operator_not}
+### `non …` (Avanzato) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Inverte un valore booleano.
+Trasforma `true` in `false` e `false` in `true`.
 
-## Operatori di testo
+## Testo {#text}
 
-### `Unisci` (Avanzato) {#block_operator_join}
+### `unire … …` (Avanzato) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Concatena due valori di testo.
+Unisce due testi in uno.
 
-### `Lettera alla posizione` (Guru) {#block_operator_letter_at}
+### `lettera … di …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Restituisce il carattere alla posizione selezionata nel testo.
+Restituisce la lettera nella posizione indicata del testo. La prima lettera è la numero 1.
 
-### `Lunghezza della stringa` (Avanzato) {#block_operator_size_of_string}
+### `lunghezza di …` (Avanzato) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Restituisce la lunghezza della stringa.
+Restituisce il numero di caratteri del testo.
 
-### `Testo contiene` (Guru) {#block_operator_string_contains}
+### `… contiene …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Restituisce `true` se il testo contiene la sottostringa specificata.
+Restituisce `true` quando il primo testo contiene il secondo.

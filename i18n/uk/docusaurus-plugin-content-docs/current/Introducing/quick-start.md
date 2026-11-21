@@ -1,131 +1,91 @@
 ---
 id: QuickStart
 title: Швидкий старт
+description: "Установіть MOCPilot, увійдіть в обліковий запис, створіть перший профіль і керуйте моделлю вже за кілька хвилин."
 ---
 
-# Швидкий старт
+import Screenshot from '@site/src/components/Screenshot';
 
-Цей посібник допоможе вам вперше почати користуватися MOCPilot.
+# Швидкий старт {#quick-start}
 
-## 1. Вхід або створення акаунта
+Цей посібник проведе вас від установлення застосунку до керування першою моделлю. Вам знадобиться підтримуваний хаб із мотором; див. [Підтримувані пристрої](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Установіть застосунок {#1-install-the-app}
 
-Ми наполегливо рекомендуємо використовувати акаунт.
+MOCPilot доступний в App Store (iPhone, iPad, Mac), Google Play (Android) і Microsoft Store (Windows). Посилання є на [mocpilot.com](https://mocpilot.com).
 
-- З акаунтом ваші профілі та налаштування синхронізуються між пристроями.
-- Без акаунта дані зберігаються лише на поточному пристрої.
-- Якщо перевстановити застосунок без акаунта, профілі й налаштування буде втрачено.
+## 2. Увійдіть або продовжте без облікового запису {#2-sign-in-or-continue-without-an-account}
 
-Ви все ще можете використати **Continue without an account**, але для регулярного використання це не рекомендується.
+Під час першого запуску застосунок пропонує ввійти. Використайте електронну пошту або логін і пароль, Google або Apple ID, або створіть новий обліковий запис.
 
-## 2. Головне меню
+<Screenshot name="sign-in" alt="Екран входу в MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Радимо створити обліковий запис:
 
-Нижня навігація має 3 основні розділи:
+- ваші профілі й налаштування зберігаються на сервері та синхронізуються між вашими пристроями;
+- ви зможете повернути свої дані, якщо заміните або загубите пристрій;
+- покупки та MocPilot Pro працюють на всіх ваших пристроях.
 
-- **Profiles**: попередньо створені та власні профілі.
-- **Settings**: параметри застосунку та налаштування акаунта.
-- **Help**: підтримка, зворотний зв’язок та офіційні посилання.
+**Продовжити без облікового запису** теж можна, але тоді все зберігається лише на цьому пристрої й зникне, якщо ви видалите застосунок. Увійти можна й пізніше в **Налаштування → Акаунт**. Див. [Обліковий запис](/docs/Application/Account/UserAccount).
 
-## 3. Перевірте важливі налаштування
+## 3. Зорієнтуйтеся {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- На **телефоні** нижня панель містить **Профілі**, **Налаштування** й **Допомогу** (і **Сповіщення**, щойно ви ввійдете).
+- На **планшеті** ті самі розділи, **Каталог профілів** і ваш обліковий запис розташовані на бічній панелі.
+- На **комп’ютері** користуйтеся верхньою панеллю: ліворуч меню, праворуч Акаунт, Сповіщення й Налаштування.
 
-У **Settings** можна керувати:
+Див. [Телефон, планшет і комп’ютер](/docs/Introducing/Layouts).
 
-- звуком і вібрацією
-- утриманням екрана увімкненим
-- мовою
-- темною темою
-- акаунтом і синхронізацією
+## 4. Створіть профіль {#4-create-a-profile}
 
-## 4. Попередньо створені профілі
+1. На сторінці **Мої профілі** торкніться **+** → **Новий профіль** (телефон) або виберіть **Новий профіль** (планшет і комп’ютер, або **Файл → Новий профіль**).
+2. Виберіть **тип програми**:
+   - **Швидкі зв’язки**, якщо хочете керувати моделлю без коду. Найкраще для першої спроби.
+   - **Логічні блоки**, якщо вам потрібні події, цикли, умови й датчики.
+3. Введіть **назву** і за бажання додайте зображення.
+4. Торкніться **Створити**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Сторінка «Новий профіль» із плитками «Логічні блоки» та «Швидкі зв’язки»" width={900} />
 
-Використовуйте профілі **Prebuilt**, щоб:
+Профіль відкриється в редакторі. Докладніше в розділі [Створення профілю](/docs/Application/Profiles/CreateProfile).
 
-- швидко керувати офіційними наборами LEGO та інших виробників.
-- вивчати техніки на готових прикладах блочного коду.
-
-:::warning Important
-Попередньо створені профілі можна змінювати для експериментів, але зміни не зберігаються. Після повторного відкриття профіль буде скинуто до початкового стану.
+:::tip Хочете готову модель?
+Відкрийте **Каталог профілів** (**Шукати онлайн** на сторінці профілів) і встановіть офіційний профіль для свого набору. Див. [Каталог і публікація](/docs/Application/Profiles/Catalog).
 :::
 
-Для prebuilt-профілю виконайте таку послідовність:
+## 5. Додайте хаб {#5-add-your-hub}
 
-1. Відкрийте потрібний prebuilt-профіль.
+1. У редакторі відкрийте **Мої хаби**.
+2. Торкніться **Додати новий хаб** у вільному слоті, виберіть модель хаба й торкніться **Додати**.
+3. Увімкніть хаб, натисніть на ньому кнопку й зачекайте, поки MOCPilot його знайде.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Сторінка «Мої хаби» зі слотами хабів" width={900} />
 
-2. Під’єднайте хаб.
+Якщо застосунок попросить оновити прошивку, виконайте кроки з розділу [Оновлення прошивки](/docs/Application/Hubs/FirmwareUpdating). Докладніше в розділі [Додавання й підключення хаба](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Розмістіть елементи керування на панелі {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Відкрийте **Панель**.
+2. Торкніться **+** (**Додати контролер**), виберіть **Джойстик** і торкніться **Додати на панель**.
+3. Перетягніть його в потрібне місце. Торкніться його, щоб змінити розмір, колір або поведінку.
 
-3. Виберіть дашборд і натисніть **Play**.
+<Screenshot name="controller-palette" alt="Палітра «Додати контролер» з вибраним джойстиком" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Див. [Додавання й розташування елементів керування](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Користувацькі профілі
+## 7. З’єднайте елемент керування з мотором {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Швидкі зв’язки:** перетягніть вхід джойстика (наприклад, *JOY1 вісь Y*) із **Входів** у порожній рядок, додайте операцію **Мотор** і вихід **Хаб** із **Виходів**, а потім торкніться порту, до якого підключено мотор. Рядок готовий, коли навколо нього немає червоної рамки. Див. [Швидкі зв’язки](/docs/Application/Links/LinksIntroducing).
 
-Використовуйте **My** для власних профілів.
+**Логічні блоки:** додайте блок *коли програма запускається*, цикл *повторювати завжди* і блок *встановити швидкість на*, який бере значення джойстика. Див. [Логічні блоки](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) і [приклади](/docs/Application/BlockBuilder/Examples).
 
-- Можна створювати необмежену кількість профілів.
-- Будь-який профіль можна запустити прямо з цієї сторінки.
+## 8. Натисніть «Запустити» {#8-press-run}
 
-Для користувацького профілю виконайте таку послідовність:
+Натисніть **Запустити** (▶). Порухайте джойстик — і мотор закрутиться. Натисніть **Зупинити**, щоб повернутися до редагування.
 
-1. Створіть або імпортуйте профіль.
+От і все. Що далі:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Ви можете створити новий профіль або імпортувати з пристрою вже створений файл профілю (`.dat`).
-:::
-
-2. Створіть новий профіль.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Введіть бажану назву профілю. За потреби виберіть зображення з галереї.
-
-3. Додайте хаби до профілю.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-За замовчуванням до профілю можна додати до **2 хабів**. Щоб розширити ліміт до **5**, потрібно придбати додаткові слоти.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Відкрийте сторінку програми та створіть потрібну логіку, з’єднуючи блоки.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Відкрийте дашборд і додайте екранні контролери, які можна підключити до моторів хаба.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Натисніть **Play**, щоб запустити профіль.
-
-Тепер ви готові керувати моделлю та вдосконалювати свій профіль.
-
-## 6. Використовуйте Help за потреби
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-На сторінці **Help** можна:
-
-- відкрити посібник швидкого старту
-- поставити запитання
-- повідомити про помилку
-- відкрити офіційні посилання MOCPilot і канали спільноти
+- Ознайомтеся з усіма [типами елементів керування](/docs/Application/Dashboard/ControlTypes).
+- Змініть вигляд панелі за допомогою [тем](/docs/Application/Themes/ThemesOverview).
+- Підключіть [геймпад](/docs/Application/Dashboard/Gamepad).
+- Якщо щось не працює, див. [Усунення проблем](/docs/Help/Troubleshooting).

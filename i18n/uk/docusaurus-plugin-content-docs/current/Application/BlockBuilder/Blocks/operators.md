@@ -5,166 +5,158 @@ title: Оператори
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Оператори
+# Оператори {#operators}
 
-Оператори — це репортер- та логічні блоки для обчислень, порівнянь, логіки і роботи з рядками.
+Оператори — це блоки-репортери та булеві блоки для математики, порівнянь, логіки й тексту.
 
-## Арифметичні оператори
+## Математика {#math}
 
-### `Плюс` (Початківець) {#block_operator_plus}
+### `… + …` (Початківець) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Повертає суму двох значень.
+Повертає суму двох чисел.
 
-### `Мінус` (Початківець) {#block_operator_minus}
+### `… − …` (Початківець) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Повертає результат віднімання двох значень.
+Віднімає друге число від першого.
 
-### `Множення` (Початківець) {#block_operator_multiply}
+### `… × …` (Початківець) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Повертає добуток двох значень.
+Повертає добуток двох чисел.
 
-### `Ділення` (Початківець) {#block_operator_divide}
+### `… ÷ …` (Початківець) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Повертає результат ділення двох значень.
+Ділить перше число на друге.
 
-### `Остача` (Гуру) {#block_operator_modulus}
+### `… по модулю …` (Гуру) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Повертає остачу після ділення.
+Повертає остачу від ділення першого числа на друге.
 
-### `Округлити` (Гуру) {#block_operator_round}
+### `округлити …` (Гуру) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Округлює до найближчого цілого (наприклад `2.6 -> 3`).
+Округлює число до найближчого цілого (наприклад, `2.6` стає `3`).
 
-### `Математична функція (один аргумент)` (Гуру) {#block_operator_math_single}
+### `… з …` (Гуру) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Застосовує математичну функцію з одним аргументом.
+Застосовує функцію до одного числа. Кути — в градусах.
 
-Доступні функції:
-
-- `модуль`: абсолютне значення числа
-- `ціле менше`: округлення вниз до найближчого цілого
-- `ціле більше`: округлення вгору до найближчого цілого
+- `модуль`: абсолютне значення
+- `ціле менше`: округлення вниз до цілого
+- `ціле більше`: округлення вгору до цілого
 - `квадратний корінь`: квадратний корінь
-- `sin`: синус (за кутом)
-- `cos`: косинус (за кутом)
-- `tan`: тангенс (за кутом)
-- `asin`: арксинус
-- `acos`: арккосинус
-- `atan`: арктангенс
-- `ln`: натуральний логарифм (основа `e`)
-- `log`: логарифм за основою `10`
-- `e^`: піднести `e` до степеня вхідного значення
-- `10^`: піднести `10` до степеня вхідного значення
+- `sin`, `cos`, `tan`: синус, косинус і тангенс кута
+- `asin`, `acos`, `atan`: обернені функції; повертають кут
+- `ln`: натуральний логарифм (за основою `e`)
+- `log`: десятковий логарифм
+- `e^`: `e` у степені цього числа
+- `10^`: `10` у степені цього числа
 
-### `Математична функція (два аргументи)` (Гуру) {#block_operator_math_pair}
+### `… з … і …` (Гуру) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Застосовує математичну функцію з двома аргументами.
+Застосовує функцію до двох чисел.
 
-Доступні функції:
+- `мін`: менше з двох
+- `макс`: більше з двох
+- `степінь`: перше число в степені другого
+- `atan2`: кут точки, заданої двома числами
+- `hypot`: довжина гіпотенузи з такими катетами
+- `copysign`: перше число зі знаком другого
 
-- `мін`: менше з двох значень
-- `макс`: більше з двох значень
-- `степінь`: перше значення у степені другого
-- `atan2`: кут за парою X/Y
-- `hypot`: довжина гіпотенузи за двома компонентами
-- `copysign`: перше значення зі знаком другого
-
-### `Випадкове число` (Гуру) {#block_operator_pick_random}
+### `вибрати випадково від … до …` (Гуру) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Повертає випадкове число у вибраному діапазоні.
+Повертає випадкове число між двома значеннями.
 
-## Оператори порівняння
+## Порівняння {#comparison}
 
-### `Дорівнює` (Початківець) {#block_operator_equal}
+### `… = …` (Початківець) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Повертає `істина`, коли два значення рівні.
+Повертає `true`, коли два значення рівні.
 
-### `Не дорівнює` (Просунутий) {#block_operator_not_equal}
+### `… ≠ …` (Просунутий) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Повертає `істина`, коли два значення не рівні.
+Повертає `true`, коли два значення різні.
 
-### `Більше ніж` (Початківець) {#block_operator_greater_than}
+### `… > …` (Початківець) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Повертає `істина`, коли ліве значення більше за праве.
+Повертає `true`, коли ліве значення більше за праве.
 
-### `Менше ніж` (Початківець) {#block_operator_less_than}
+### `… < …` (Початківець) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Повертає `істина`, коли ліве значення менше за праве.
+Повертає `true`, коли ліве значення менше за праве.
 
-### `У межах` (Просунутий) {#block_operator_is_in_between}
+### `є … між … і …` (Просунутий) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Повертає `істина`, коли значення лежить у заданих межах.
+Повертає `true`, коли число лежить між двома межами.
 
-## Логічні оператори
+## Логіка {#logic}
 
-### `І` (Просунутий) {#block_operator_and}
+### `… і …` (Просунутий) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Повертає `істина` лише тоді, коли обидві умови мають значення `істина`.
+Повертає `true`, лише коли обидві умови істинні.
 
-### `Або` (Просунутий) {#block_operator_or}
+### `… або …` (Просунутий) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Повертає `істина`, якщо хоча б одна умова має значення `істина`.
+Повертає `true`, коли істинна хоча б одна з умов.
 
-### `Не` (Просунутий) {#block_operator_not}
+### `не …` (Просунутий) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Інвертує логічне значення.
+Перетворює `true` на `false`, а `false` — на `true`.
 
-## Текстові оператори
+## Текст {#text}
 
-### `Обʼєднати` (Просунутий) {#block_operator_join}
+### `приєднати … …` (Просунутий) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Об’єднує два текстові значення.
+Об’єднує два фрагменти тексту в один.
 
-### `Символ на позиції` (Гуру) {#block_operator_letter_at}
+### `літера … з …` (Гуру) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Повертає символ на вибраній позиції у тексті.
+Повертає літеру в заданій позиції тексту. Перша літера має номер 1.
 
-### `Довжина рядка` (Просунутий) {#block_operator_size_of_string}
+### `довжина …` (Просунутий) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Повертає довжину рядка.
+Повертає кількість символів у тексті.
 
-### `Рядок містить` (Гуру) {#block_operator_string_contains}
+### `… містить …` (Гуру) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Повертає `істина`, якщо текст містить вказаний підрядок.
+Повертає `true`, коли перший текст містить другий.

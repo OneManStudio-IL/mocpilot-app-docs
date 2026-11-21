@@ -5,30 +5,33 @@ title: Mine blokker
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Mine blokker
+# Mine blokker {#my-blocks}
 
-Mine blokker lar deg definere dine egne tilpassede gjenbrukbare blokker.  
-Denne kategorien ligner konseptuelt på å lage en funksjon i tradisjonell programmering: definer oppførsel én gang, og bruk den mange ganger.
+Med Mine blokker kan du lage dine egne gjenbrukbare blokker.
+Det fungerer som en funksjon i vanlig programmering: Du beskriver oppførselen én gang og bruker den så mange steder du vil.
 
-## Grunnleggende Mine blokker
+## Blokkene {#the-blocks}
 
-### `Lag en blokk` (Guru) {#block_my_block_define}
+### `definer …` (Guru) {#block_my_block_define}
 
-Oppretter en ny tilpasset blokkdefinisjon.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Type: definisjons-/oppsettblokk
-- Typisk bruk: samle gjentatt logikk i én navngitt blokk
+Trykk på **Lag en blokk** øverst i kategorien for å lage en ny blokk. Programområdet får da en `definer`-hatteblokk med navnet på blokken din: Blokkene du fester under den, er det blokken din gjør.
 
-### `Min blokk` (Guru) {#block_my_block}
+- Typisk bruk: samle gjentatt logikk i én blokk med et tydelig navn.
 
-Kaller en tidligere opprettet tilpasset blokk.
+### Din blokk (Guru) {#block_my_block}
 
-- Type: stabelblokk (tilpasset kommando)
-- Typisk bruk: gjenbruke samme logikk flere steder uten å duplisere blokkstabler
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Variadiske eksempler
+Hver blokk du lager, vises i paletten under sitt eget navn. Når du bruker den, kjøres blokkene som er festet til `definer`-blokken.
 
-Disse eksemplene viser tilpassede blokker med ulike argumenttyper.
+- Type: stabelblokk
+- Typisk bruk: bruke den samme logikken flere steder uten å kopiere stabler.
+
+## Eksempler med ulike innganger {#examples-with-different-inputs}
+
+Egne blokker med ulike sett av innganger:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Disse eksemplene viser tilpassede blokker med ulike argumenttyper.
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Eksempel på bruk i programstabel
+## Bruke en egen blokk i et program {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Dette eksemplet viser et kall til en tilpasset blokk under `når programmet starter`, mens `definer min blokk`-stabelen inneholder gjenbrukbar motorlogikk.
+Her brukes den egne blokken under `når programmet starter`, og `definer`-stabelen inneholder motorlogikken som blokken kjører.
 
-- Typisk flyt: kall tilpassede blokker fra hendelsesstabler
-- Fordel: én definisjon, mange kallesteder
+- Vanlig mønster: bruk blokkene dine i hendelsesskript.
+- Fordel: én definisjon, mange steder som bruker den.
 
-## Redigeringsvisning for Mine blokker
+## Blokkeditoren {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Redigereren for `Lag en blokk` brukes til å designe signaturen til din tilpassede blokk.  
-Du kan legge til etiketter og inputfelt (for eksempel tall/tekst og boolske input), og deretter definere implementasjonslogikk i blokkdefinisjonen.
+I editoren **Lag en blokk** utformer du hvordan blokken din ser ut: Legg til etiketter (**Legg til etikett**) og innganger (**Legg til input**: *tall eller tekst* eller *boolean*). Inne i `definer`-stabelen fungerer inngangene som variabler som holder verdiene som sendes til blokken.
 
-## Hvorfor bruke Mine blokker
+## Hvorfor bruke Mine blokker {#why-use-my-blocks}
 
-- Gjenbruk: skriv én gang, bruk mange ganger  
-- Lesbarhet: erstatt lange gjentatte blokker med ett meningsfullt navn  
-- Vedlikehold: oppdater logikk på ett sted i stedet for mange kopier  
-- Struktur: del opp store programmer i mindre logiske enheter  
+- Gjenbruk: skriv én gang, bruk mange ganger.
+- Lesbarhet: ett meningsfullt navn i stedet for lange, gjentatte stabler.
+- Enkle endringer: rett logikken på ett sted i stedet for i hver kopi.
+- Struktur: del et stort program i små, logiske deler.
 
-## Merknader
+## Merknader {#notes}
 
-- Tilpassede blokker er prosjektbaserte og ment for gjenbruk innen samme profil/prosjekt.  
-- Foretrekk beskrivende navn som forklarer hensikt, ikke implementasjonsdetaljer.
+- Egne blokker hører til profilen og kan brukes hvor som helst i profilens program.
+- Gi blokkene navn som sier hva de gjør, ikke hvordan de gjør det.
+- En blokk som kaller seg selv, kan gå i en evig løkke; editoren advarer deg om det.

@@ -5,145 +5,145 @@ title: Evenimente
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Evenimente
+# Evenimente {#events}
 
-Categoria **Evenimente** conține blocuri care pornesc scripturi atunci când apare o condiție.
+Categoria **Evenimente** conține blocurile care pornesc scripturi când se întâmplă ceva, plus blocurile care trimit mesaje între scripturi. Folosește **Adaugă mesaj** și **Șterge mesajul** din partea de sus a categoriei pentru a gestiona mesajele.
 
-## Evenimente de bază
+## Evenimente de bază {#core-events}
 
-### `Când programul a pornit` (Începător) {#block_event_when_program_started}
+### `când începe programul` (Începător) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Pornește acest script o singură dată atunci când programul profilului începe.
+Rulează scriptul o singură dată, la pornirea programului.
 
-- Declanșator: pornirea programului
-- Utilizare tipică: inițializarea variabilelor, stări implicite pentru motoare, sunete de pornire
+- Utilizare tipică: setează valorile inițiale ale variabilelor, adu motoarele în starea inițială, afișează un mesaj „gata”.
 
-### `Când` (Avansat) {#block_event_when}
+### `când …` (Avansat) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Rulează când o condiție selectată devine adevărată.
+Rulează scriptul când condiția din câmp trece de la fals la adevărat. Cât timp scriptul rulează, blocul așteaptă; se declanșează din nou doar după ce condiția a devenit falsă și apoi încă o dată adevărată.
 
-- Declanșator: bazat pe condiție
-- Utilizare tipică: ramificare logică în funcție de starea din runtime
+- Utilizare tipică: reacția la o stare, de exemplu `când cronometrul > 5 și comutatorul este activat`.
 
-### `Când timerul este mai mare decât` (Avansat) {#block_event_when_timer_greater_than}
+### `când cronometrul > …` (Avansat) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Rulează când valoarea timerului depășește un prag.
+Rulează scriptul când cronometrul programului depășește valoarea (în secunde).
 
-- Declanșator: timp scurs
-- Utilizare tipică: acțiuni întârziate, faze temporizate
+- Utilizare tipică: acțiuni întârziate, faze temporizate. Resetează cronometrul cu **resetați cronometrul** (Senzori).
 
-### `Când mesajul este primit` (Guru) {#block_event_when_message_recieved}
+### `când primesc …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Pornește un script când este primit un mesaj broadcast corespunzător.
+Rulează scriptul când este transmis mesajul selectat.
 
-- Declanșator: canal de mesaje
-- Utilizare tipică: sincronizarea mai multor scripturi
+- Utilizare tipică: coordonarea mai multor scripturi.
 
-### `Trimite mesaj` (Guru) {#block_event_broadcast}
+### `transmite …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Trimite un mesaj tuturor scripturilor care ascultă acel mesaj.
+Trimite un mesaj tuturor scripturilor care încep cu **când primesc** pentru acel mesaj și continuă imediat.
 
-- Declanșator: trimitere imediată
-- Utilizare tipică: notificarea altor scripturi fără a aștepta
+- Utilizare tipică: spune altor scripturi să pornească fără a le aștepta.
 
-### `Trimite mesaj și așteaptă` (Guru) {#block_event_broadcast_and_wait}
+### `transmite … și așteptați` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Trimite un mesaj și pune în pauză acest script până când ascultătorii termină.
+Trimite un mesaj și întrerupe acest script până când toate scripturile care l-au primit s-au terminat.
 
-- Declanșator: trimitere imediată + așteptare
-- Utilizare tipică: fluxuri etapizate unde ordinea este importantă
+- Utilizare tipică: secvențe pas cu pas în care ordinea contează.
 
-## Evenimente hub
+## Evenimente ale hubului {#hub-events}
 
-### `Buton hub apăsat` (Începător) {#block_hubs_all_event_button_pressed}
+Aceste blocuri apar când un hub din profil le acceptă. Nu există pentru huburile Mould King.
+
+### `când … … buton …` (Începător) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Rulează când butonul principal de pe hub este apăsat.
+Rulează când un buton al hubului este apăsat sau eliberat.
 
-- Opțiuni stare: `apăsat`, `eliberat`, `schimbat`
-- Notă: opțiunile disponibile pot diferi în funcție de modelul hub-ului
+- Opțiuni de stare: `apăsat`, `eliberat`, `schimbat`
+- Huburi: huburile LEGO Powered Up, WeDo 2.0 și Robot Inventor. Lista butoanelor depinde de hub.
 
-### `Conexiunea hub schimbată` (Începător) {#block_hubs_all_event_connection_changed}
+### `când … este conectat / deconectat` (Începător) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Rulează când starea conexiunii hub-ului se schimbă (conectat sau deconectat).
+Rulează când hubul se conectează sau se deconectează.
 
-- Declanșator: schimbare stare conexiune
-- Utilizare tipică: gestionarea reconectării și comportament sigur după pierderea conexiunii
+- Utilizare tipică: oprește modelul în siguranță când se pierde conexiunea și restabilește-i starea când revine.
 
-### `Bateria hub schimbată` (Începător) {#block_hubs_all_event_battery_changed}
+### `când … % baterie modificată` (Începător) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
 Rulează când nivelul bateriei raportat de hub se schimbă.
 
-- Declanșator: actualizare nivel baterie
-- Utilizare tipică: avertizări baterie scăzută și schimbare mod economisire energie
+- Huburi: cele care își raportează nivelul bateriei.
+- Utilizare tipică: o avertizare de baterie descărcată, trecerea într-un mod de economisire a energiei.
 
-### `Accelerometrul hub schimbat` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `când … datele accelerometrului au fost modificate` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Rulează când valorile accelerației se schimbă.
+Rulează când valorile accelerometrului hubului se schimbă.
 
-### `Înclinarea hub schimbată` (Începător) {#block_hubs_all_event_tilt_changed}
+- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `când … înclinare … unghiul a fost modificat` (Începător) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Rulează când valoarea înclinării se schimbă.
+Rulează când unghiul de înclinare al hubului se schimbă.
 
-- Opțiuni unghi: `oricare`, `înclinare`, `rotire`, `derapaj`
-- Notă: `derapaj` este disponibil doar pe hub-uri care oferă acest tip de date
+- Opțiuni de unghi: `orice`, `înclinare`, `rotire`, `derapaj`
+- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `derapaj` este disponibil doar pe Technic Hub și Robot Inventor.
 
-### `Orientarea hub schimbată` (Începător) {#block_hubs_all_event_tilt_orientation_changed}
+### `când … orientarea a fost modificată` (Începător) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Rulează când starea de orientare se schimbă (de exemplu: față/sus/jos/stânga/dreapta).
+Rulează când orientarea hubului se schimbă, adică atunci când o altă față a hubului este îndreptată în sus.
 
-## Evenimente port senzori
+- Huburi: aceleași ca pentru evenimentul de înclinare.
 
-### `Eveniment senzor culoare Technic` (Începător) {#block_hubs_all_event_port_technic_sensor_color}
+## Evenimente ale senzorilor {#sensor-events}
+
+Aceste evenimente citesc un senzor conectat la un port al hubului. Huburi: City Hub, Technic Hub, BOOST Move Hub și hubul MINDSTORMS Robot Inventor (nu SBrick, BuWizz, WeDo 2.0 sau Mould King).
+
+### Senzor Technic: `când culoarea este …` (Începător) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Rulează când senzorul de culoare Technic detectează o culoare selectată.
+Rulează când senzorul de culoare Technic vede culoarea selectată.
 
-### `Eveniment senzor distanță Technic` (Începător) {#block_hubs_all_event_port_technic_sensor_distance}
+### Senzor Technic: `când … mai aproape decât / mai departe decât / exact la …` (Începător) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Rulează când valorile senzorului de distanță Technic corespund condiției selectate.
+Rulează când distanța măsurată de senzorul de distanță Technic îndeplinește condiția.
 
-- Opțiuni comparație: `mai aproape decât`, `mai departe decât`, `exact la`
-- Opțiuni unitate: `mm`, `cm`, `inci`, `%`
-- Notă: unitățile disponibile depind de modul senzorului și dispozitivul conectat
+- Opțiuni de comparare: `mai aproape decât`, `mai departe decât`, `exact la`
+- Unități: `mm`, `cm`, `inci`, `%`
 
-### `Eveniment senzor distanță BOOST` (Începător) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Senzor BOOST: `când … mai aproape decât / mai departe decât / exact la …` (Începător) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Rulează când senzorul de distanță BOOST atinge pragul/condiția aleasă.
+Rulează când distanța măsurată de senzorul de culoare și distanță BOOST îndeplinește condiția.
 
-- Opțiuni comparație: `mai aproape decât`, `mai departe decât`, `exact la`
-- Opțiuni unitate: `%`, `cm`, `inci`
+- Opțiuni de comparare: `mai aproape decât`, `mai departe decât`, `exact la`
+- Unități: `%`, `cm`, `inci`
 
-### `Eveniment senzor culoare BOOST` (Începător) {#block_hubs_all_event_port_boost_sensor_color}
+### Senzor BOOST: `când culoarea este …` (Începător) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Rulează când senzorul BOOST detectează o culoare sau valoare selectată.
+Rulează când senzorul de culoare și distanță BOOST vede culoarea selectată.

@@ -5,117 +5,129 @@ title: Gjenoppretting av hub-fastvare
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gjenoppretting av hub-fastvare
+# Gjenoppretting av hub-fastvare {#hub-firmware-recovery}
 
-Obnova firmwaru hubu se používá, když se hub po přerušené nebo neúspěšné aktualizaci firmwaru nemůže normálně spustit.
+Gjenoppretting av fastvare får liv i en hub som ikke kan starte normalt etter en avbrutt eller mislykket fastvareoppdatering.
 
-Během obnovy MOCPilot opraví cestu firmwaru hubu, aby bylo možné hub znovu aktualizovat na nejnovější podporovanou verzi. Tento postup použijte pouze tehdy, když hub nereaguje běžně, MOCPilot hlásí režim obnovy nebo předchozí aktualizace selhala.
+MOCPilot laster opp fungerende fastvare til huben, slik at den kan kjøre og oppdateres igjen. Bruk gjenoppretting bare når huben ikke svarer normalt, når MOCPilot viser at huben er i gjenopprettingsmodus, eller etter en mislykket oppdatering.
 
 :::warning Viktig
-Nechte hub zapnutý a držte zařízení blízko hubu po celou dobu obnovy. Odpojení Bluetooth, zavření MOCPilot, vyjmutí baterií nebo vypnutí hubu během nahrávání firmwaru může obnovu přerušit.
+Hold huben påslått og enheten nær den under hele gjenopprettingen. Hvis du slår av Bluetooth, lukker MOCPilot, tar ut batteriene eller slår av huben under opplastingen, kan gjenopprettingen mislykkes.
 :::
 
-## Kdy je obnova potřeba
+## Når gjenoppretting er nødvendig {#when-recovery-is-required}
 
-Obnova firmwaru může být potřeba, pokud:
+Du kan trenge gjenoppretting hvis:
 
-- Aktualizace firmwaru nebyla úspěšně dokončena.
-- Hub se už nepřipojuje jako běžný hub.
-- Hub se v MOCPilot zobrazí jako **LEGO Bootloader**.
-- MOCPilot rozpozná hub připojený v režimu obnovy firmwaru.
+- En fastvareoppdatering ikke ble fullført.
+- Huben ikke lenger kobler til som en vanlig hub.
+- Huben vises som **LEGO Bootloader** i MOCPilot.
+- MOCPilot oppdager at huben er koblet til i gjenopprettingsmodus for fastvare.
 
-Před spuštěním obnovy zkontrolujte, že hub má dostatek energie. Pokud je to možné, nabijte také telefon, tablet nebo počítač s MOCPilot a zapněte Bluetooth.
+Før du begynner, må du sørge for at huben har nok batteri, at telefonen, nettbrettet eller datamaskinen er ladet, og at Bluetooth er slått på.
 
-## Podporované huby
+## Støttede hubber {#supported-hubs}
 
-Obnova firmwaru je podporována pro stejné huby jako aktualizace firmwaru:
+Gjenoppretting fungerer for de samme hubbene som fastvareoppdatering:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Přepnutí Technic Hub, Boost Hub a City Hub do režimu obnovy
+## Sett en Technic Hub, Boost Hub eller City Hub i gjenopprettingsmodus {#put-a-technic-hub-boost-hub-or-city-hub-into-recovery-mode}
 
-Technic Hub, Boost Hub a malý City Hub používají připojení přes bootloader:
+Disse hubbene kobler til via bootloaderen sin:
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte tlačítko, dokud LED hubu nezačne blikat fialově.
-4. Nepouštějte tlačítko, dokud LED bliká fialově.
-5. Stále držte tlačítko, otevřete **Mine Bluetooth-huber** v MOCPilot a připojte hub.
-6. Po připojení hubu v režimu bootloader můžete tlačítko pustit.
+1. Slå av huben.
+2. Trykk og hold inne den grønne knappen.
+3. Hold knappen inne til LED-en på huben begynner å blinke lilla.
+4. Ikke slipp knappen mens LED-en blinker lilla.
+5. Mens du fortsatt holder knappen inne, åpner du **Mine Bluetooth-hubber** i MOCPilot og kobler til huben.
+6. Når huben er koblet til i bootloader-modus, kan du slippe knappen.
 
-V režimu obnovy se hub může zobrazit jako **LEGO Bootloader** místo běžného názvu.
+Når huben er i gjenopprettingsmodus, kan den vises som **LEGO Bootloader** i stedet for det vanlige navnet.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader-hub i hublisten med handlingen for gjenoppretting av fastvare" />
 
-## Přepnutí Technic Move Hub do režimu obnovy
+## Sett en Technic Move Hub i gjenopprettingsmodus {#put-a-technic-move-hub-into-recovery-mode}
 
-Technic Move Hub používá jinou sekvenci obnovy než ostatní podporované huby. Nepřipojuje se jako **LEGO Bootloader**. Tato sekvence načte tovární firmware **1.2.3**, který není určen jako finální firmware pro běžné používání.
+Technic Move Hub gjenopprettes på en annen måte: den kobler ikke til som **LEGO Bootloader**. I stedet laster knappesekvensen nedenfor inn fabrikkfastvaren **1.2.3**, som ikke er ment for daglig bruk.
 
-Obnova firmwaru Technic Move Hub:
+Slik gjenoppretter du fastvaren:
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte zelené tlačítko přibližně jednu minutu.
-4. Pusťte tlačítko.
-5. Počkejte, dokud LED hubu nezačne blikat bíle.
-6. Otevřete **Mine Bluetooth-huber** v MOCPilot a připojte hub.
+1. Slå av huben.
+2. Trykk og hold inne den grønne knappen.
+3. Hold den grønne knappen inne i omtrent ett minutt.
+4. Slipp knappen.
+5. Vent til LED-en på huben begynner å blinke hvitt.
+6. Åpne **Mine Bluetooth-hubber** i MOCPilot og koble til huben.
 
-Po připojení MOCPilot rozpozná tovární firmware a nabídne aktualizaci hubu na nejnovější dostupnou verzi. Spusťte aktualizaci firmwaru a počkejte na dokončení.
+Når huben kobler til, oppdager MOCPilot fabrikkfastvaren og tilbyr å oppdatere den til nyeste versjon. Start oppdateringen og vent til den er ferdig.
 
-## Spuštění obnovy z dialogu
+## Start gjenoppretting fra dialogen {#start-recovery-from-the-dialog}
 
-Když MOCPilot rozpozná hub připojený v režimu obnovy firmwaru, zobrazí dialog obnovy.
+Når MOCPilot oppdager en hub som er koblet til i gjenopprettingsmodus, vises en dialog for gjenoppretting.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Gjenoppretting av hub-fastvare" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Dialog om at huben er i gjenopprettingsmodus" />
 
-Vyberte **Gjenopprett** pro zahájení nahrávání firmwaru do hubu.
+Velg **Gjenopprett** for å begynne å laste opp fastvare til huben.
 
-Pokud nejste připraveni obnovu spustit, vyberte **Avbryt**. Obnovu můžete spustit později z kontextové nabídky hubu.
+Hvis du ikke er klar, velger du **Avbryt**. Du kan starte gjenopprettingen senere fra hubmenyen.
 
-## Spuštění obnovy z nabídky hubu
+## Start gjenoppretting fra hubmenyen {#start-recovery-from-the-hub-menu}
 
-Ruční spuštění obnovy:
+Slik starter du gjenopprettingen selv:
 
-1. Otevřete **Mine Bluetooth-huber**.
-2. Najděte hub zobrazený jako **LEGO Bootloader**.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Gjenopprett hub-fastvare**.
+1. Åpne **Mine Bluetooth-hubber**.
+2. Finn huben som vises som **LEGO Bootloader**.
+3. Åpne hubmenyen.
+4. Velg **Gjenopprett hub-fastvare**.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Gjenopprett hub-fastvare" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Handlingen Gjenopprett hub-fastvare i hubens hurtigmeny" />
 
-## Během obnovy firmwaru
+## Under gjenopprettingen {#during-firmware-recovery}
 
-Po spuštění obnovy MOCPilot nahrává firmware do hubu a zobrazuje průběh na obrazovce.
+MOCPilot laster opp fastvaren til huben og viser fremdriften.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Gjenoppretting av hub-fastvare" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Skjermbilde med fremdriften for gjenoppretting av fastvare" />
 
-Počkejte na dokončení. Nepřesouvejte hub daleko od zařízení, nezavírejte aplikaci, nevypínejte Bluetooth ani neodpojujte napájení hubu.
+Vent til den er ferdig. Ikke flytt huben bort fra enheten, lukk appen, slå av Bluetooth eller bryt strømmen til huben.
 
-Hub se může během procesu několikrát restartovat nebo znovu připojit. To je očekávané. Nechte MOCPilot otevřený a počkejte na dokončení obnovy.
+Huben kan starte på nytt eller koble til igjen flere ganger. Dette er normalt: la MOCPilot være åpen og vent.
 
-## Dokončení obnovy
+## Fullfør gjenopprettingen {#finish-recovery}
 
-Po úspěšném dokončení obnovy MOCPilot zobrazí potvrzení.
+Når gjenopprettingen er ferdig, viser MOCPilot en bekreftelse.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Gjenoppretting av hub-fastvare" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Dialog om at gjenopprettingen av fastvaren er fullført" />
 
-Vyberte **OK**. Hub by se měl restartovat a připojit jako běžný hub místo **LEGO Bootloader**.
+Velg **OK**. Huben skal starte på nytt og koble til som en vanlig hub i stedet for **LEGO Bootloader**.
 
-Po obnově zkontrolujte hub v **Mine Bluetooth-huber**. Pokud MOCPilot stále hlásí, že je potřeba aktualizace firmwaru, spusťte běžný postup [Fastvareoppdatering](/docs/Application/Hubs/FirmwareUpdating/).
+Sjekk deretter huben i **Mine Bluetooth-hubber**. Hvis MOCPilot fortsatt ber om en fastvareoppdatering, kjører du en vanlig [fastvareoppdatering](/docs/Application/Hubs/FirmwareUpdating/).
 
-## Pokud obnova selže
+## Hvis gjenopprettingen mislykkes {#if-recovery-fails}
 
-Pokud se obnova nedokončí úspěšně:
+Hvis gjenopprettingen mislykkes:
 
-1. Držte hub blízko zařízení.
-2. Restartujte napájení hubu.
-3. Znovu přepněte hub do režimu obnovy.
-4. Připojte se k **LEGO Bootloader** v MOCPilot.
-5. Znovu spusťte **Gjenopprett hub-fastvare**.
+1. Hold huben nær enheten din.
+2. Slå huben av og på.
+3. Sett huben i gjenopprettingsmodus igjen.
+4. Koble til **LEGO Bootloader** i MOCPilot.
+5. Start **Gjenopprett hub-fastvare** på nytt.
 
-Pokud se chybová zpráva objeví znovu, zopakujte obnovu od začátku. Pokud hub nejde obnovit ani po několika pokusech, vyměňte nebo nabijte baterie a zkuste to znovu.
+Hvis feilen kommer igjen, gjentar du hele prosedyren. Hvis flere forsøk mislykkes, bytter eller lader du batteriene og prøver igjen.

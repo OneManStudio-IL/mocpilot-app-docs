@@ -5,74 +5,73 @@ title: Listor
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Listor
+# Listor {#lists}
 
-Listor lagrar ordnade samlingar av värden och hanteras med dedikerade listblock av typen Reporter och Stack.
+En lista lagrar flera värden i ordning. Du skapar, byter namn på och tar bort listor med **Skapa en lista**, **Byt namn på lista** och **Ta bort lista** högst upp i kategorin. Blocken nedan visas när programmet har minst en lista. Objekten numreras från 1.
 
-## Liständringsblock
+## Ändra en lista {#changing-a-list}
 
-### `Lägg till värde i lista` (Avancerad) {#block_lists_add}
+### `lägga till … till …` (Avancerad) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Lägger till ett värde i slutet av den valda listan.
+Lägger till ett värde i slutet av listan.
 
-### `Infoga vid` (Guru) {#block_lists_insert_at}
+### `infoga … vid … av …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Infogar ett värde vid valt index i listan.
+Infogar ett värde på angiven position; objekten efter den flyttas ett steg nedåt.
 
-### `Ersätt vid` (Guru) {#block_lists_replace_at}
+### `ersätt objekt … av … med …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Ersätter objektet vid valt index med ett nytt värde.
+Ersätter objektet på angiven position med ett nytt värde.
 
-### `Ta bort` (Avancerad) {#block_lists_delete}
+### `radera … från …` (Avancerad) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Tar bort objektet vid valt index (eller enligt valt borttagningsläge).
+Raderar objektet på angiven position.
 
-### `Rensa alla` (Avancerad) {#block_lists_clear_all}
+### `rensa …` (Avancerad) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Tar bort alla objekt från den valda listan.
+Tar bort alla objekt från listan.
 
-## Listvärde-/kontrollblock
+## Läsa en lista {#reading-a-list}
 
-### `Objekt vid` (Avancerad) {#block_lists_item_at}
+### `objekt … av …` (Avancerad) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Returnerar värdet vid valt index.
+Returnerar objektet på angiven position.
 
-### `Index för värde` (Guru) {#block_lists_index_of_value}
+### `index för … i …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Returnerar indexet för det första matchande värdet i listan.
+Returnerar positionen för det första objektet som är lika med värdet, eller `0` om det inte finns något.
 
-### `Innehåller värde` (Guru) {#block_lists_contains_value}
+### `… innehåller …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Returnerar om listan innehåller ett angivet värde.
+Returnerar `true` när listan innehåller värdet.
 
-### `Listans storlek` (Avancerad) {#block_lists_size_of_value}
+### `storlek på …` (Avancerad) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Returnerar antalet objekt i den valda listan.
+Returnerar antalet objekt i listan.
 
-## Listvärdesreporter
+### Lista (Avancerad) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Returnerar det aktuella värdet för den valda listan.
+Varje lista har ett eget rapportblock med sitt namn. Det returnerar hela listan som text.
 
-- Typ: reporterblock
-- Exempel på utdataformat: `[item1,item2,item3]`
-- Typisk användning: inspektera det aktuella listinnehållet eller skicka listvärdet till kompatibla block
+- Exempel på utdata: `[item1,item2,item3]`; en tom lista ger tom text.
+- Typisk användning: visa listan på en monitor eller skicka den till block som tar emot en lista (till exempel **tänd** för avståndssensorns lampor).

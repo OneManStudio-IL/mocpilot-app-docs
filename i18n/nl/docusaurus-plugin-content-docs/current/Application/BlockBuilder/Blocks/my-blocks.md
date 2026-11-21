@@ -5,30 +5,33 @@ title: Mijn blokken
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Mijn blokken
+# Mijn blokken {#my-blocks}
 
-Met Mijn blokken kun je je eigen herbruikbare blokken definiëren.  
-Deze categorie is conceptueel vergelijkbaar met het maken van een functie in traditionele programmeertalen: definieer gedrag één keer en roep het daarna meerdere keren aan.
+Met Mijn blokken maak je je eigen herbruikbare blokken.
+Het werkt als een functie in gewoon programmeren: je beschrijft het gedrag één keer en gebruikt het op zoveel plekken als je wilt.
 
-## Basis Mijn blokken
+## De blokken {#the-blocks}
 
-### `Maak een blok` (Guru) {#block_my_block_define}
+### `definiëren …` (Guru) {#block_my_block_define}
 
-Maakt een nieuwe aangepaste blokdefinitie.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Type: definitie-/instelblok
-- Typisch gebruik: herhaalde logica groeperen in één benoemd blok
+Druk op **Maak een blok** bovenaan de categorie om een nieuw blok te maken. In het programmagebied verschijnt dan een hoedblok `definiëren` met de naam van je blok: de blokken die je eronder vastmaakt, bepalen wat je blok doet.
 
-### `MijnBlok` (Guru) {#block_my_block}
+- Gebruikelijke toepassing: herhaalde logica in één blok met een duidelijke naam zetten.
 
-Roept een eerder aangemaakt aangepast blok aan.
+### Je eigen blok (Guru) {#block_my_block}
 
-- Type: stapelblok (aangepaste opdracht-aanroep)
-- Typisch gebruik: dezelfde logica op meerdere plaatsen hergebruiken zonder blokstapels te dupliceren
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Variadische voorbeelden
+Elk blok dat je maakt, verschijnt onder zijn naam in het palet. Als je het gebruikt, worden de blokken uitgevoerd die aan het bijbehorende blok `definiëren` vastzitten.
 
-Deze voorbeelden tonen aangepaste Mijn blokken met verschillende argumentstructuren.
+- Type: stapelblok
+- Gebruikelijke toepassing: dezelfde logica op meerdere plekken gebruiken zonder stapels te kopiëren.
+
+## Voorbeelden met verschillende invoer {#examples-with-different-inputs}
+
+Eigen blokken met verschillende sets invoer:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Deze voorbeelden tonen aangepaste Mijn blokken met verschillende argumentstructu
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Voorbeeldgebruik in een programmastapel
+## Een eigen blok in een programma gebruiken {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Dit voorbeeld toont een aangepaste blokaanroep onder `wanneer programma start`, terwijl de `definieer mijn blok`-stapel de herbruikbare motorlogica bevat.
+Hier wordt het eigen blok gebruikt onder `wanneer het programma start`, en bevat de stapel `definiëren` de motorlogica die het uitvoert.
 
-- Typische flow: aangepaste blokken aanroepen vanuit gebeurtenisstapels  
-- Voordeel: één definitie, meerdere aanroeppunten  
+- Gebruikelijk patroon: gebruik je blokken in gebeurtenisscripts.
+- Voordeel: één definitie, veel plekken waar je haar gebruikt.
 
-## Mijn blok-editorweergave
+## De blokeditor {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-De editor *Maak een blok* wordt gebruikt om de signatuur van je aangepaste blok te ontwerpen.  
-Je kunt labels en invoervelden toevoegen (bijvoorbeeld getal/tekst en boolean), en daarna de implementatielogica definiëren in de blokdefinitiestapel.
+In de editor **Maak een blok** ontwerp je hoe je blok eruitziet: voeg labels toe (**Voeg een label toe**) en invoer (**Voeg een invoer toe**: *nummer of tekst* of *boolean*). Binnen de stapel `definiëren` werkt de invoer als variabelen die de waarden bevatten die aan het blok worden doorgegeven.
 
-## Waarom Mijn blokken gebruiken
+## Waarom Mijn blokken gebruiken {#why-use-my-blocks}
 
-- Herbruikbaarheid: één keer schrijven, meerdere keren gebruiken  
-- Leesbaarheid: vervang lange herhaalde blokken door één betekenisvolle naam  
-- Onderhoudbaarheid: logica op één plek aanpassen in plaats van meerdere kopieën  
-- Structuur: grote programma’s opsplitsen in kleinere logische onderdelen  
+- Hergebruik: één keer schrijven, vaak gebruiken.
+- Leesbaarheid: één betekenisvolle naam in plaats van lange herhaalde stapels.
+- Makkelijk aanpassen: corrigeer de logica op één plek in plaats van in elke kopie.
+- Structuur: verdeel een groot programma in kleine logische delen.
 
-## Opmerkingen
+## Opmerkingen {#notes}
 
-- Aangepaste blokken zijn projectgebonden en bedoeld voor hergebruik binnen dezelfde profiel-/projectcontext.  
-- Gebruik bij voorkeur beschrijvende namen die de bedoeling uitleggen, niet de implementatiedetails.
+- Eigen blokken horen bij het profiel en kunnen overal in het programma worden gebruikt.
+- Geef blokken namen die zeggen wat ze doen, niet hoe ze het doen.
+- Een blok dat zichzelf aanroept, kan eindeloos blijven herhalen; de editor waarschuwt je daarvoor.

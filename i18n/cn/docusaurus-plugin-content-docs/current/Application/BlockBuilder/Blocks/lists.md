@@ -5,74 +5,73 @@ title: 列表
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# 列表
+# 列表 {#lists}
 
-列表用于存储有序的数据集合，并通过专用的列表 Reporter 与堆叠积木进行操作。
+列表按顺序存储多个值。使用类别顶部的**创建列表**、**重命名列表**和**删除列表**来创建、重命名和删除列表。程序中至少有一个列表后，才会出现下面这些积木。列表项从 1 开始编号。
 
-## 列表修改积木
+## 修改列表 {#changing-a-list}
 
-### `将值添加到列表` (高级) {#block_lists_add}
+### `添加 … 到 …`（进阶） {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-将一个值追加到所选列表末尾。
+把一个值添加到列表末尾。
 
-### `在位置插入` (专家) {#block_lists_insert_at}
+### `插入 … 在 … 的 …`（大师） {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-在列表的所选索引位置插入一个值。
+在指定位置插入一个值；其后的各项依次后移一位。
 
-### `替换位置` (专家) {#block_lists_replace_at}
+### `替换项目 … 的 … 与 …`（大师） {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-将所选索引位置的项替换为新值。
+用新值替换指定位置的项。
 
-### `删除` (高级) {#block_lists_delete}
+### `删除 … 从 …`（进阶） {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-删除所选索引位置的项（或按所选删除模式删除）。
+删除指定位置的项。
 
-### `清空全部` (高级) {#block_lists_clear_all}
+### `清除 …`（进阶） {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-移除所选列表中的所有项。
+删除列表中的所有项。
 
-## 列表取值/检查积木
+## 读取列表 {#reading-a-list}
 
-### `位置的项` (高级) {#block_lists_item_at}
+### `项目 … 的 …`（进阶） {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-返回所选索引位置的值。
+返回指定位置的项。
 
-### `值的索引` (专家) {#block_lists_index_of_value}
+### `索引 … 在 …`（大师） {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-返回列表中第一个匹配值的索引。
+返回第一个等于该值的项的位置；如果没有，则返回 `0`。
 
-### `包含值` (专家) {#block_lists_contains_value}
+### `… 包含 …`（大师） {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-返回列表是否包含指定值。
+列表包含该值时返回 `true`。
 
-### `列表长度` (高级) {#block_lists_size_of_value}
+### `大小 …`（进阶） {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-返回所选列表中的项数量。
+返回列表中的项数。
 
-## 列表值积木
+### 列表（进阶） {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-返回所选列表的当前值。
+每个列表都有一个以其名称命名的报告积木。它以文本形式返回整个列表。
 
-- 类型：数值积木（Reporter）
-- 输出格式示例：`[item1,item2,item3]`
-- 常见用途：查看当前列表内容，或将列表值传入兼容积木
+- 输出示例：`[item1,item2,item3]`；空列表返回空文本。
+- 典型用法：在监视器上显示列表，或把它传给接受列表的积木（例如距离传感器灯光的**点亮**积木）。

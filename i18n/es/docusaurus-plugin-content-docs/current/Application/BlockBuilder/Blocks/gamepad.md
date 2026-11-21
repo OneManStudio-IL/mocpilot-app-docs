@@ -5,102 +5,87 @@ title: Gamepad
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gamepad
-Los bloques de Gamepad se utilizan para reaccionar a la entrada del controlador y leer los valores actuales del estado del gamepad.
+# Gamepad {#gamepad}
 
-## Bloques de evento
+Los bloques de gamepad reaccionan a un mando de juego y leen sus botones, sticks y gatillos. La categoría aparece cuando **Habilitar bloques de gamepad** está activado en la [página Gamepad](/docs/Application/Dashboard/Gamepad). Los nombres de los botones siguen la distribución del mando: Xbox o Sony.
 
-### `Cuando el botón del gamepad esté` (Principiante) {#block_gamepad_event_when_button_is}
+## Eventos {#events}
+
+### `cuando … está …` (Principiante) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Se activa cuando el botón seleccionado coincide con el estado configurado.
+Se ejecuta cuando se pulsa o se suelta el botón seleccionado.
 
-- Tipo: bloque de evento
-- Opciones de botón (Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opciones de botón (Sony): `cruz`, `circulo`, `cuadrado`, `triángulo`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Estados: `presionado`, `soltado`
+- Botones (distribución Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Botones (distribución Sony): `cruz`, `círculo`, `cuadrado`, `triángulo`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Estados: `presionado`, `liberado`
 
-### `Cuando el D-pad del gamepad esté` (Principiante) {#block_gamepad_event_when_dpad_is}
+### `cuando D-Pad … botón …` (Principiante) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Se activa cuando la dirección o estado del D-pad coincide con la condición seleccionada.
+Se ejecuta cuando se pulsa o se suelta un botón del pad direccional.
 
-- Tipo: bloque de evento
 - Direcciones: `arriba`, `abajo`, `izquierda`, `derecha`
-- Estados: `presionado`, `soltado`
+- Estados: `presionado`, `liberado`
 
-### `Cuando el joystick del gamepad esté` (Principiante) {#block_gamepad_event_when_thumbstick_is}
+### `cuando … palanca …` (Principiante) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Se activa cuando la condición del joystick coincide con las opciones seleccionadas.
+Se ejecuta cuando un stick se empuja en una dirección, se mueve o se suelta.
 
-Este bloque soporta:
+- Stick: `izquierda`, `derecha`
+- Estado: `arriba`, `abajo`, `izquierda`, `derecha`, `movido`, `liberado`
+- Uso típico: reaccionar al movimiento del stick, y detener o centrar el modelo cuando se suelta el stick.
 
-- Selección de joystick: `izquierdo` / `derecho`
-- Dirección/estado: `arriba`, `abajo`, `izquierda`, `derecha`, `movido`, `soltado`
+## Valores {#values}
 
-- Tipo: bloque de evento
-- Uso típico: reaccionar al movimiento o liberación del joystick
-
-## Bloques de valor
-
-### `Valor de botón del gamepad (booleano)` (Principiante) {#block_gamepad_button_value_boolean}
+### `está … …` (Principiante) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Devuelve el estado actual del botón seleccionado.
+Devuelve `true` cuando el botón seleccionado está en el estado seleccionado.
 
-- Tipo: bloque de valor
-- Salida: `true`/`false`
-- Opciones de botón (Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opciones de botón (Sony): `cruz`, `circulo`, `cuadrado`, `triángulo`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Estados: `presionado`, `soltado`
+- Botones (distribución Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Botones (distribución Sony): `cruz`, `círculo`, `cuadrado`, `triángulo`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Estados: `presionado`, `liberado`
 
-### `Valor del D-pad del gamepad (booleano)` (Principiante) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … botón …` (Principiante) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Devuelve si la dirección seleccionada del D-pad está activa.
+Devuelve `true` cuando el botón seleccionado del pad direccional está en el estado seleccionado.
 
-- Tipo: bloque de valor
-- Salida: `true`/`false`
 - Direcciones: `arriba`, `abajo`, `izquierda`, `derecha`
-- Estados: `presionado`, `soltado`
+- Estados: `presionado`, `liberado`
 
-### `Valor del joystick del gamepad (float)` (Principiante) {#block_gamepad_thumbstick_value_float}
+### `palanca … …` (Principiante) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Devuelve el valor numérico del eje del joystick.
+Devuelve la posición de un stick a lo largo de un eje.
 
-- Tipo: bloque de valor
-- Salida: numérico (float)
-- Rango por defecto: `-1` a `1`
-- Rango opcional en configuración: `-100` a `100`
-- Joystick: `izquierdo`, `derecho`
-- Ejes: `eje x` / `eje y`
+- Stick: `izquierda`, `derecha`
+- Eje: `eje X`, `eje Y`
+- Rango: de `-1` a `1` por defecto, o de `-100` a `100` si lo eliges en **Rango de valores del gamepad** en la página Gamepad.
 
-### `Valor de presión del gatillo (float)` (Principiante) {#block_gamepad_trigger_pressure_value_float}
+### `… presión` (Principiante) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Devuelve el valor de presión del gatillo seleccionado.
+Devuelve cuánto se pulsa un gatillo.
 
-- Tipo: bloque de valor
-- Salida: numérico (float)
-- Rango por defecto: `-1` a `1`
-- Rango opcional en configuración: `-100` a `100`
-- Gatillos (Xbox): `LT`, `RT`
-- Gatillos (Sony): `L2`, `R2`
+- Gatillos (distribución Xbox): `LT`, `RT`
+- Gatillos (distribución Sony): `L2`, `R2`
+- Rango: de `0` (suelto) a `1` por defecto, o de `0` a `100` con el **Rango de valores del gamepad** más amplio.

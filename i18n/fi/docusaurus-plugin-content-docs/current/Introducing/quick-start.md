@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Nopean aloituksen opas
+title: Pikaopas
+description: "Asenna MOCPilot, kirjaudu sisään, luo ensimmäinen profiilisi ja aja mallia muutamassa minuutissa."
 ---
 
-# Pika-aloitus
+import Screenshot from '@site/src/components/Screenshot';
 
-Tämä opas auttaa sinua aloittamaan MOCPilotin käytön ensimmäistä kertaa.
+# Pikaopas {#quick-start}
 
-## 1. Kirjaudu sisään tai luo tili
+Tämä opas vie sinut sovelluksen asentamisesta ensimmäisen mallisi ajamiseen. Tarvitset tuetun hubin ja moottorin; katso [Tuetut laitteet](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Asenna sovellus {#1-install-the-app}
 
-Suosittelemme vahvasti tilin käyttöä.
+MOCPilot on saatavilla App Storesta (iPhone, iPad, Mac), Google Playsta (Android) ja Microsoft Storesta (Windows). Linkit löydät osoitteesta [mocpilot.com](https://mocpilot.com).
 
-- Tilillä profiilit ja asetukset synkronoidaan laitteiden välillä.
-- Ilman tiliä tiedot tallentuvat vain nykyiselle laitteelle.
-- Jos asennat sovelluksen uudelleen ilman tiliä, profiilit ja asetukset menetetään.
+## 2. Kirjaudu sisään tai jatka ilman tiliä {#2-sign-in-or-continue-without-an-account}
 
-Voit käyttää **Continue without an account** -vaihtoehtoa, mutta emme suosittele sitä jatkuvaan käyttöön.
+Ensimmäisellä käynnistyskerralla sovellus pyytää sinua kirjautumaan sisään. Käytä sähköpostiosoitettasi tai käyttäjätunnustasi ja salasanaa, Googlea tai Apple ID:tä, tai luo uusi tili.
 
-## 2. Ymmärrä päävalikko
+<Screenshot name="sign-in" alt="MOCPilotin kirjautumisnäkymä" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Suosittelemme tiliä:
 
-Alapalkissa on 3 pääosiota:
+- profiilisi ja asetuksesi tallennetaan palvelimelle ja synkronoidaan laitteidesi välillä;
+- saat tietosi takaisin, jos vaihdat laitteen tai kadotat sen;
+- ostokset ja MocPilot Pro toimivat kaikilla laitteillasi.
 
-- **Profiles**: valmiit ja omat profiilit.
-- **Settings**: sovelluksen ja tilin asetukset.
-- **Help**: tuki, palaute ja viralliset linkit.
+**Jatka ilman tiliä** toimii myös, mutta silloin kaikki pysyy vain tällä laitteella ja katoaa, jos poistat sovelluksen. Voit kirjautua sisään myöhemmin kohdassa **Asetukset → Tili**. Katso [Tili](/docs/Application/Account/UserAccount).
 
-## 3. Tarkista tärkeät asetukset
+## 3. Tutustu sovellukseen {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- **Puhelimessa** alapalkissa ovat **Profiilit**, **Asetukset** ja **Ohje** (sekä kirjautumisen jälkeen **Ilmoitukset**).
+- **Tabletissa** samat osiot, **Profiilikatalogi** ja tilisi ovat sivupalkissa.
+- **Tietokoneella** käytä yläpalkkia: valikot vasemmalla; Tili, Ilmoitukset ja Asetukset oikealla.
 
-**Settings**-sivulla voit hallita:
+Katso [Puhelin, tabletti ja työpöytä](/docs/Introducing/Layouts).
 
-- ääntä ja värinää
-- pidä näyttö päällä
-- kieltä
-- tummaa teemaa
-- tili- ja synkronointiasetuksia
+## 4. Luo profiili {#4-create-a-profile}
 
-## 4. Valmiit profiilit
+1. Napauta **Omat profiilit** -sivulla **+** → **Uusi profiili** (puhelin) tai valitse **Uusi profiili** (tabletti ja tietokone, tai **Tiedosto → Uusi profiili**).
+2. Valitse **ohjelman tyyppi**:
+   - **Pikalinkit**, jos haluat ajaa mallia ilman koodia. Paras ensimmäiseen kokeiluun.
+   - **Logiikkalohkot**, jos haluat käyttää tapahtumia, silmukoita, ehtoja ja antureita.
+3. Kirjoita **nimi** ja lisää halutessasi kuva.
+4. Napauta **Luo**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Uusi profiili -sivu, jossa ovat Logiikkalohkot- ja Pikalinkit-ruudut" width={900} />
 
-Käytä **Prebuilt**-profiileja, jotta voit:
+Profiili avautuu editoriin. Lisätietoja sivulla [Profiilin luominen](/docs/Application/Profiles/CreateProfile).
 
-- ohjata nopeasti LEGO- ja muita virallisia settejä
-- oppia tekniikoita valmiista lohkoesimerkeistä
-
-:::warning Important
-Valmiita profiileja voi muokata kokeiluun, mutta muutoksia ei tallenneta. Profiili palautuu alkuperäiseksi, kun avaat sen uudelleen.
+:::tip Haluatko valmiin mallin?
+Avaa **Profiilikatalogi** (profiilisivun **Hae verkosta**) ja asenna settisi virallinen profiili. Katso [Katalogi ja julkaiseminen](/docs/Application/Profiles/Catalog).
 :::
 
-Toimi näin valmiin profiilin kanssa:
+## 5. Lisää hubisi {#5-add-your-hub}
 
-1. Avaa haluamasi valmiiksi tehty profiili.
+1. Avaa editorissa **Omat hubit**.
+2. Napauta vapaassa paikassa **Lisää uusi keskitin**, valitse hubisi malli ja napauta **Lisää**.
+3. Kytke hubi päälle, paina sen painiketta ja odota, kunnes MOCPilot löytää sen.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Omat hubit -sivu hubipaikkoineen" width={900} />
 
-2. Yhdistä hubi.
+Jos sovellus pyytää päivittämään laiteohjelmiston, toimi sivun [Laiteohjelmiston päivittäminen](/docs/Application/Hubs/FirmwareUpdating) ohjeiden mukaan. Lisätietoja sivulla [Hubin lisääminen ja yhdistäminen](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Sijoita ohjaimet kojelautaan {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Avaa **Kojelauta**.
+2. Napauta **+** (**Lisää ohjain**), valitse **Ohjainsauva** ja napauta **Lisää kojelautaan**.
+3. Vedä se haluamaasi kohtaan. Napauta sitä muuttaaksesi sen kokoa, väriä tai toimintaa.
 
-3. Valitse dashboard ja paina **Play**.
+<Screenshot name="controller-palette" alt="Lisää ohjain -paletti, jossa ohjainsauva on valittuna" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Katso [Ohjainten lisääminen ja järjestäminen](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Omat profiilit
+## 7. Yhdistä ohjain moottoriin {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Pikalinkit:** vedä ohjainsauvan syöte (esimerkiksi *JOY1 Y-akseli*) kohdasta **Syötteet** tyhjälle riville, lisää **Moottori**-toiminto ja **Hubi**-lähtö kohdasta **Lähdöt** ja napauta sitten porttia, johon moottorisi on kytketty. Rivi on valmis, kun sen ympärillä ei ole punaista kehystä. Katso [Pikalinkit](/docs/Application/Links/LinksIntroducing).
 
-Käytä **My**-osiota omiin profiileihisi.
+**Logiikkalohkot:** lisää *kun ohjelma käynnistyy* -lohko, *toistaa aina* -silmukka ja *aseta moottorin nopeus* -lohko, joka saa ohjainsauvan arvon. Katso [Logiikkalohkot](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) ja [esimerkit](/docs/Application/BlockBuilder/Examples).
 
-- Voit luoda niin monta profiilia kuin tarvitset.
-- Profiilin voi käynnistää suoraan tältä sivulta.
+## 8. Paina Suorita {#8-press-run}
 
-Toimi näin oman profiilin kanssa:
+Paina **Suorita** (▶). Liikuta ohjainsauvaa, ja moottori pyörii. Palaa muokkaamaan painamalla **Pysäytä**.
 
-1. Luo tai tuo profiili.
+Siinä kaikki. Seuraavaksi:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Voit luoda uuden profiilin tai tuoda laitteelta aiemmin luodun profiilitiedoston (`.dat`).
-:::
-
-2. Luo uusi profiili.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Syötä haluttu profiilin nimi. Voit myös valita profiilille kuvan galleriasta.
-
-3. Lisää hubeja profiiliin.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Oletuksena profiiliin voi lisätä enintään **2** hubia. Laajennus enintään **5** hubiin vaatii lisäslotien ostamisen.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Avaa ohjelmasivu ja rakenna mallin toiminta yhdistämällä lohkoja.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Avaa dashboard ja lisää näytölle ohjaimia, jotka voidaan liittää hubin moottoreihin.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Käynnistä profiili painamalla **Play**.
-
-Olet valmis ajamaan ja kehittämään profiiliasi.
-
-## 6. Help tarvittaessa
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-**Help**-sivulla voit:
-
-- avata pika-aloitusohjeen
-- kysyä kysymyksen
-- ilmoittaa bugista
-- avata viralliset MOCPilot-linkit ja yhteisökanavat
+- Tutustu kaikkiin [ohjaintyyppeihin](/docs/Application/Dashboard/ControlTypes).
+- Anna kojelaudalle uusi ilme [teemoilla](/docs/Application/Themes/ThemesOverview).
+- Yhdistä [peliohjain](/docs/Application/Dashboard/Gamepad).
+- Jos jokin ei toimi, katso [Vianmääritys](/docs/Help/Troubleshooting).

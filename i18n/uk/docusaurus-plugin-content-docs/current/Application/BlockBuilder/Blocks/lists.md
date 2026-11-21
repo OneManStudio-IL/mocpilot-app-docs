@@ -5,74 +5,73 @@ title: Списки
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Списки
+# Списки {#lists}
 
-Списки зберігають впорядковані колекції значень і керуються окремими list Reporter та Stack блоками.
+Список зберігає кілька значень по порядку. Створюйте, перейменовуйте й видаляйте списки кнопками **Створити список**, **Перейменувати список** і **Видалити список** вгорі категорії. Наведені нижче блоки з’являються, щойно в програмі є хоча б один список. Елементи нумеруються з 1.
 
-## Блоки зміни списку
+## Зміна списку {#changing-a-list}
 
-### `Додати значення до списку` (Просунутий) {#block_lists_add}
+### `додати … до …` (Просунутий) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Додає значення в кінець вибраного списку.
+Додає значення в кінець списку.
 
-### `Вставити на позицію` (Гуру) {#block_lists_insert_at}
+### `вставити … на … з …` (Гуру) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Вставляє значення у вибраний індекс списку.
+Вставляє значення в задану позицію; наступні елементи зсуваються на одну позицію.
 
-### `Замінити на позиції` (Гуру) {#block_lists_replace_at}
+### `замінити елемент … з … з …` (Гуру) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Замінює елемент у вибраному індексі на нове значення.
+Замінює елемент у заданій позиції новим значенням.
 
-### `Видалити` (Просунутий) {#block_lists_delete}
+### `видалити … від …` (Просунутий) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Видаляє елемент у вибраному індексі (або в обраному режимі видалення).
+Видаляє елемент у заданій позиції.
 
-### `Очистити все` (Просунутий) {#block_lists_clear_all}
+### `очистити …` (Просунутий) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Видаляє всі елементи з вибраного списку.
+Видаляє всі елементи зі списку.
 
-## Блоки читання/перевірки списку
+## Читання списку {#reading-a-list}
 
-### `Елемент на позиції` (Просунутий) {#block_lists_item_at}
+### `елемент … з …` (Просунутий) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Повертає значення за вибраним індексом.
+Повертає елемент у заданій позиції.
 
-### `Індекс значення` (Гуру) {#block_lists_index_of_value}
+### `індекс … в …` (Гуру) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Повертає індекс першого відповідного значення у списку.
+Повертає позицію першого елемента, що дорівнює значенню, або `0`, якщо такого немає.
 
-### `Містить значення` (Гуру) {#block_lists_contains_value}
+### `… містить …` (Гуру) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Повертає, чи містить список вказане значення.
+Повертає `true`, коли список містить значення.
 
-### `Розмір списку` (Просунутий) {#block_lists_size_of_value}
+### `розмір …` (Просунутий) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Повертає кількість елементів у вибраному списку.
+Повертає кількість елементів у списку.
 
-## Репортер значення списку
+### Список (Просунутий) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Повертає поточне значення вибраного списку.
+Кожен список має власний блок-репортер зі своєю назвою. Він повертає весь список як текст.
 
-- Тип: репортер-блок
-- Приклад формату виводу: `[item1,item2,item3]`
-- Типове використання: перегляд поточного вмісту списку або передача значення списку в сумісні блоки
+- Приклад результату: `[item1,item2,item3]`; порожній список дає порожній текст.
+- Для чого: показати список на моніторі або передати його блокам, які приймають список (наприклад, **засвітити** для світла датчика відстані).

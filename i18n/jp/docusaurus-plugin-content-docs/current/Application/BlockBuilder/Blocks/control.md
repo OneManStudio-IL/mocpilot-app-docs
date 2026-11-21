@@ -5,142 +5,154 @@ title: コントロール
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# コントロール
+# コントロール {#control}
 
-コントロールブロックは実行フローを管理します：待機、ループ、分岐、およびスクリプトの停止。
+コントロールブロックは、スクリプトの実行の流れを決めます。待機、繰り返し、分岐、停止などです。プロフィールにハブがある場合は、ハブの接続や設定変更を行うブロックもこのカテゴリーに入ります。
 
-## 待機ブロック
+## 待機ブロック {#wait-blocks}
 
-### `待機` (初級) {#block_control_wait_for}
+### `待つ … 秒` (初心者) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-現在のスクリプトを指定した時間だけ一時停止します。
+指定した秒数だけスクリプトを一時停止します。
 
-### `〜まで待機` (上級) {#block_control_wait_until}
+### `まで待つ …` (上級者) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-条件が真になるまで現在のスクリプトを一時停止します。
+条件が真になるまでスクリプトを一時停止します。
 
-## ループブロック
+## 繰り返し {#loops}
 
-### `繰り返し` (上級) {#block_control_repeat_for}
+### `繰り返す …` (上級者) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-ネストされたブロックを指定回数実行します。
+中のブロックを指定した回数（初期値は 10 回）実行します。
 
-### `〜まで繰り返し` (上級) {#block_control_repeat_until}
+### `～まで繰り返す …` (上級者) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-条件が真になるまでブロックを繰り返し実行します。
+条件が真になるまで、中のブロックを繰り返し実行します。
 
-### `ずっと` (上級) {#block_control_repeat_forever}
+### `いつも繰り返す` (上級者) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-プログラムまたはスクリプトが停止されるまで継続的に実行します。
+スクリプトまたはプログラムが止まるまで、中のブロックを何度でも実行します。下にはブロックをつなげられません。
 
-## 分岐ブロック
+## 分岐 {#branches}
 
-### `もし` (初級) {#block_control_if}
+### `もし … その後` (初心者) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-条件が真のときのみブロックを実行します。
+条件が真のときだけ、中のブロックを実行します。
 
-### `もし / そうでなければ` (上級) {#block_control_if_else}
+### `もし … その後 … 他の` (上級者) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-条件が真の場合は一方を、そうでない場合は別のブランチを実行します。
+条件が真なら 1 つ目の分岐を、そうでなければ 2 つ目の分岐を実行します。
 
-### `これとこれを実行` (達人) {#block_control_do_this_and_this}
+### `これをやる … そしてこれ` (達人) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-2つのブロックスタックを順番に実行します。
+1 つ目のブロック群、続いて 2 つ目のブロック群を実行し、そのあとで下のブロックへ進みます。
 
-## 停止ブロック
+## 停止 {#stopping}
 
-### `停止` (初級) {#block_control_stop}
+### `停止 …` (初心者) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-スクリプトの実行を停止します（範囲は選択されたオプションによる）。
+スクリプトを止めます。何を止めるかは選択肢によって変わります。
 
-- 停止オプション: `すべて`, `このスタック`, `プログラムを終了`
+- `すべて`：すべてのスクリプトを止めます。
+- `このスタック`：このスクリプトだけを止めます。
+- `プログラムを終了し、`：プログラムを停止します。
 
-### `他のスタックを停止` (達人) {#block_control_stop_other_stacks}
+### `他のスタックを停止する` (達人) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-現在のスタックを継続したまま、他のすべてのスタックを停止します。
+実行中のほかのスクリプトをすべて止めます。このスクリプトは動き続けます。
 
-## ハブ／制御ユーティリティブロック
+## ハブブロック {#hub-blocks}
 
-### `接続を設定` (初級) {#block_hubs_control_set_connect}
+### `接続 / 切断 …` (初心者) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-制御フローからハブの接続状態を変更します。
+選んだハブをプログラムに接続、またはプログラムから切断します。
 
-- アクションオプション: `接続`, `切断`
+- 選択肢：`接続`、`切断`
+- ハブ：すべて。
 
-### `ハブ設定をセット` (上級) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-選択したハブを、対応している設定プロファイルのいずれかに切り替えます。
-
-- ハブ設定オプションを提供するハブでのみ使用できます。
-- 主な用途: Technic Move Hub などの設定可能なハブを、次のブロックを実行する前に別の保存済み設定へ切り替えます。
-
-### `ハブ設定` (上級) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-選択したハブの現在の設定を返します。
-
-- タイプ: レポーターブロック
-- 出力形式オプション: `text`, `index`
-- ハブ設定オプションを提供するハブでのみ使用できます。
-- 選択したハブが接続されていない場合、または設定が利用できない場合は `NaN` を返します。
-
-### `接続されているか` (初級) {#block_hubs_all_sensors_is_connected}
+### `… 接続済み` (初心者) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-ハブが接続されているかどうかを返します。
+選んだハブが接続されているときに `true` を返します。
 
-- タイプ: ブール値レポーターブロック
+- 種類：真偽値ブロック
+- ハブ：すべて。
 
-### `BuWizz 2 電力モードを設定` (初級) {#block_hubs_buwizz_sensors_set_power_mode}
+### `設定する … 設定を …` (上級者) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+ハブをいずれかの構成に切り替えます。
+
+- ハブ：Technic Move Hub（現在、構成をもつ唯一のハブです）。
+- 主な使い方：次のブロックを実行する前に、ハブを別の構成に切り替える。
+
+### `取得する … 設定を次の形式で …` (上級者) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+ハブの現在の構成を返します。
+
+- 種類：値ブロック
+- 出力：`テキスト` または `インデックス`
+- ハブ：Technic Move Hub。
+- ハブが接続されていないか、構成がない場合は `NaN` を返します。
+
+### `設定する … 電源モードを …` (初心者) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-BuWizz 2 ハブの電力モードを設定します。
+BuWizz 2 のパワーモードを設定します。
 
-- モードオプション: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- モード：`遅い`、`通常`、`速い`、`Ludicrous`
+- ハブ：BuWizz 2。
 
-### `BuWizz 2 電力モードを取得` (達人) {#block_hubs_buwizz_sensors_get_power_mode}
+### `取得する … 電源モードとして …` (達人) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-現在の電力モードを返します。
+BuWizz 2 の現在のパワーモードを返します。
 
-- 出力形式: `テキスト`, `インデックス`
+- 出力：`テキスト` または `インデックス`
+- ハブ：BuWizz 2。
 
-### `MouldKing 制御チャンネルを設定` (上級) {#block_hubs_mouldking_control_set_control_channel}
+### `設定する … 制御チャンネルを …` (上級者) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-MouldKing ハブの制御チャンネルを設定します。
+Mould King ハブの制御チャンネルを設定します。
 
-- チャンネル: `A`, `B`, `C`
+- チャンネル：`A`、`B`、`C`
+- ハブ：Mould King 4.0 と 6.0。
 
-### `MouldKing 制御チャンネルを取得` (上級) {#block_hubs_mouldking_control_get_control_channel}
+### `取得する … 制御チャンネルとして …` (上級者) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-現在の制御チャンネルを返します。
+Mould King ハブの現在の制御チャンネルを返します。
 
-- 出力形式: `テキスト`, `インデックス`
+- 出力：`テキスト` または `インデックス`
+- ハブ：Mould King 4.0 と 6.0。

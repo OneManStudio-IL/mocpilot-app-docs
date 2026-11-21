@@ -7,72 +7,71 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Listes
 
-Les listes stockent des collections ordonnées de valeurs et sont manipulées par des blocs dédiés de type Reporter et Stack.
+Une liste stocke plusieurs valeurs dans un ordre donné. Créez, renommez et supprimez des listes avec **Créer une liste**, **Renommer la liste** et **Supprimer la liste** en haut de la catégorie. Les blocs ci-dessous apparaissent dès que le programme contient au moins une liste. Les éléments sont numérotés à partir de 1.
 
-## Blocs de modification de liste
+## Modifier une liste {#changing-a-list}
 
-### `Ajouter une valeur à la liste` (Avancé) {#block_lists_add}
+### `ajouter … à …` (Avancé) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Ajoute une valeur à la fin de la liste sélectionnée.
+Ajoute une valeur à la fin de la liste.
 
-### `Insérer à` (Guru) {#block_lists_insert_at}
+### `insérer … à … de …` (Gourou) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Insère une valeur à l’index sélectionné dans la liste.
+Insère une valeur à la position indiquée ; les éléments suivants descendent d’un rang.
 
-### `Remplacer à` (Guru) {#block_lists_replace_at}
+### `remplacer élément … de … avec …` (Gourou) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Remplace l’élément à l’index sélectionné par une nouvelle valeur.
+Remplace l’élément situé à la position indiquée par une nouvelle valeur.
 
-### `Supprimer` (Avancé) {#block_lists_delete}
+### `supprimer … de …` (Avancé) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Supprime l’élément à l’index sélectionné (ou selon le mode de suppression choisi).
+Supprime l’élément situé à la position indiquée.
 
-### `Tout effacer` (Avancé) {#block_lists_clear_all}
+### `effacer …` (Avancé) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Supprime tous les éléments de la liste sélectionnée.
+Retire tous les éléments de la liste.
 
-## Blocs de valeur/vérification de liste
+## Lire une liste {#reading-a-list}
 
-### `Élément à` (Avancé) {#block_lists_item_at}
+### `élément … de …` (Avancé) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Retourne la valeur à l’index sélectionné.
+Renvoie l’élément situé à la position indiquée.
 
-### `Index de la valeur` (Guru) {#block_lists_index_of_value}
+### `index de … dans …` (Gourou) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Retourne l’index de la première valeur correspondante dans la liste.
+Renvoie la position du premier élément égal à la valeur, ou `0` s’il n’y en a aucun.
 
-### `Contient la valeur` (Guru) {#block_lists_contains_value}
+### `… contient …` (Gourou) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Retourne si la liste contient une valeur spécifiée.
+Renvoie `true` lorsque la liste contient la valeur.
 
-### `Taille de la liste` (Avancé) {#block_lists_size_of_value}
+### `taille de …` (Avancé) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Retourne le nombre d’éléments dans la liste sélectionnée.
+Renvoie le nombre d’éléments de la liste.
 
-## Bloc reporter de liste
+### Liste (Avancé) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Retourne la valeur actuelle de la liste sélectionnée.
+Chaque liste possède son propre bloc rapporteur, à son nom. Il renvoie toute la liste sous forme de texte.
 
-- Type : bloc reporter
-- Exemple de format de sortie : `[item1,item2,item3]`
-- Utilisation typique : inspecter le contenu de la liste ou passer la liste à des blocs compatibles
+- Exemple de sortie : `[item1,item2,item3]` ; une liste vide donne un texte vide.
+- Utilisation type : afficher la liste sur un moniteur, ou la transmettre aux blocs qui acceptent une liste (par exemple **allumer** pour les lumières du capteur de distance).

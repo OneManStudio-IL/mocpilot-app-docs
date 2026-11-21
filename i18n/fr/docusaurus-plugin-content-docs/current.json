@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Prochaine",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Introducing": {
@@ -22,5 +22,53 @@
   "sidebar.tutorialSidebar.category.Hubs": {
     "message": "Hubs",
     "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.getting-started": {
+    "message": "Premiers pas",
+    "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Tutoriels",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.profiles": {
+    "message": "Profils",
+    "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.dashboard": {
+    "message": "Tableau de bord",
+    "description": "The label for category 'Dashboard' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.themes": {
+    "message": "Thèmes",
+    "description": "The label for category 'Themes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.quick-links": {
+    "message": "Liens rapides",
+    "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Référence des blocs",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.logic-blocks": {
+    "message": "Blocs logiques",
+    "description": "The label for category 'Logic Blocks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.block-reference": {
+    "message": "Référence des blocs",
+    "description": "The label for category 'Block reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.hubs": {
+    "message": "Hubs",
+    "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.account": {
+    "message": "Compte et MocPilot Pro",
+    "description": "The label for category 'Account and MocPilot Pro' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.help": {
+    "message": "Aide",
+    "description": "The label for category 'Help' in sidebar 'tutorialSidebar'"
   }
 }

@@ -5,140 +5,121 @@ title: Luz
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Luz
+# Luz {#light}
 
-Esta página documenta os blocos da categoria Luz usados para controlar LEDs e saídas de luz em hubs compatíveis.
+Os blocos de luz controlam a luz de status do hub, as luzes conectadas às portas e a matriz de luzes dos hubs compatíveis. A categoria aparece quando algum hub do perfil tem algo para acender.
 
-## Blocos de luz comuns
+## Luzes do hub e das portas {#hub-and-port-lights}
 
-### `Definir cor do LED` (Iniciante) {#block_hubs_all_light_set_led_color}
+### `definir cor do LED para …` (Iniciante) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Define a cor do LED do hub usando opções de cores predefinidas.
+Define a cor da luz de status do hub.
 
-- Tipo: bloco de comando
-- Uso típico: indicar estado (pronto, em execução, aviso, erro)
+- Hubs: hubs LEGO Powered Up (incluindo o Technic Move Hub), WeDo 2.0 e o hub MINDSTORMS Robot Inventor.
+- Uso típico: mostrar o estado do modelo (pronto, em funcionamento, aviso, erro).
 
-### `Definir intensidade da luz` (Iniciante) {#block_hubs_all_light_light_turn_to}
+### `ligar em … % brilho` (Iniciante) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Define a saída de luz selecionada para um valor/intensidade desejado.
+Acende as luzes conectadas à porta selecionada com o brilho indicado.
 
-- Tipo: bloco de comando
-- Uso típico: brilho de faróis, intensidade de status
+- Hubs: todos os hubs com portas, exceto o WeDo 2.0.
+- Uso típico: faróis, iluminação ajustável.
 
-### `Desligar luz` (Iniciante) {#block_hubs_all_light_light_turn_off}
+### `desligar` (Iniciante) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Desliga a saída de luz selecionada.
+Apaga as luzes conectadas à porta selecionada.
 
-- Tipo: bloco de comando
-- Uso típico: sequência de desligamento, economia de bateria
+- Hubs: os mesmos de **ligar em … % brilho**.
 
-### `Technic Move definir intensidade da luz` (Iniciante) {#block_hubs_technicmove_light_light_turn_to}
+### `ligar as luzes …` (Iniciante) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variante de `Definir intensidade da luz` para o hub/luz Technic Move.
+Acende ou apaga as luzes de um Technic Move Hub.
 
-- Tipo: bloco de comando
-- Uso típico: definir nível de saída de luz do hub Move
+- Opções: `desligado`, `ativado`
+- Hubs: Technic Move Hub.
 
-## Blocos da matriz LED interna
+## Matriz de luzes {#light-matrix}
 
-### `Ligar matriz de luz` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_image}
+Estes blocos trabalham com a matriz de luzes 5×5 integrada ao hub MINDSTORMS Robot Inventor.
+
+### `ligar …` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Mostra a imagem selecionada na matriz LED interna do hub e continua imediatamente para o próximo bloco na pilha. A imagem permanece no display até que outro bloco altere a matriz LED interna ou o programa pare.
+Mostra a imagem selecionada na matriz de luzes e passa imediatamente para o próximo bloco. A imagem fica até que outro bloco altere a matriz ou o programa pare.
 
-- Tipo: bloco de comando
-- Nota: o hub selecionado deve ter uma matriz LED interna.
-
-### `Escrever na matriz de luz` (Iniciante) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `escrever …` (Iniciante) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Mostra uma sequência de texto na matriz LED interna do hub rolando uma letra de cada vez.
+Faz o texto rolar pela matriz de luzes, uma letra de cada vez.
 
-- Tipo: bloco de comando
-- Nota: o hub selecionado deve ter uma matriz LED interna.
-
-### `Desligar pixels da matriz` (Iniciante) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `desligar píxeis` (Iniciante) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Desliga todas as luzes da matriz LED interna do hub.
+Apaga todos os pixels da matriz de luzes.
 
-- Tipo: bloco de comando
-- Nota: o hub selecionado deve ter uma matriz LED interna.
-
-### `Definir pixel da matriz` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `definir píxel … x … y … brilho …` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Define o brilho de um pixel na matriz LED interna do hub. Apenas o pixel selecionado é atualizado; o restante do display permanece inalterado. Os campos de posição do pixel usam valores de coluna e linha, com o pixel `1, 1` no canto superior esquerdo.
+Define o brilho de um pixel; o resto da matriz fica como está. `x` é a coluna e `y` é a linha; o pixel `1, 1` fica no canto superior esquerdo.
 
-- Tipo: bloco de comando
-- Nota: o hub selecionado deve ter uma matriz LED interna.
-
-### `Girar orientação da matriz` (Avançado) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `rodar orientação …` (Avançado) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Gira a orientação do que é exibido na matriz LED interna do hub no sentido horário ou anti-horário. Cada rotação altera a orientação do display em 90 graus e afeta os blocos de Luz executados depois dela.
+Gira a imagem na matriz de luzes em 90 graus, no sentido horário ou anti-horário. A nova orientação vale para os blocos de Luz executados depois dele.
 
-- Tipo: bloco de comando
-- Nota: o hub selecionado deve ter uma matriz LED interna.
-
-### `Definir orientação da matriz` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `definir orientação para …` (Avançado) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Define a orientação do que é exibido na matriz LED interna do hub. A orientação padrão é vertical, e a orientação selecionada afeta os blocos de Luz executados depois dela.
+Define a orientação da imagem na matriz de luzes. Por padrão, ela é `na vertical`; a nova orientação vale para os blocos de Luz executados depois dele.
 
-- Tipo: bloco de comando
-- Opções de orientação: `vertical`, `esquerda`, `direita`, `de cabeça para baixo`
-- Nota: o hub selecionado deve ter uma matriz LED interna.
+- Opções: `na vertical`, `esquerda`, `direita`, `de cabeça para baixo`
 
-## Blocos de luz do sensor de distância
+## Luzes do sensor de distância {#distance-sensor-lights}
 
-### `Iluminar sensor de distância` (Iniciante) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `acender …` (Iniciante) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Define as luzes no sensor de distância selecionado. O bloco pode ligar ou desligar luzes individuais do sensor e pode usar um bloco repórter de lista para controlar o brilho de cada luz.
+Controla as luzes em volta dos "olhos" do sensor de distância na porta selecionada. Você pode acender ou apagar cada luz, ou colocar uma lista no encaixe para definir o brilho de cada uma.
 
-- Tipo: bloco de comando
-- Nota: disponível apenas para o hub MINDSTORMS Robot Inventor.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## Blocos de luz BuWizz 3
+## LEDs das portas do BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 definir cor do LED` (Iniciante) {#block_hubs_buwizz3_light_port_set_led_color}
+Estes blocos definem a cor do LED ao lado de uma porta do BuWizz 3.
+
+### `definir a cor do LED da porta para …` (Iniciante) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Define a cor do LED na porta selecionada do BuWizz 3 usando opções internas.
+Define o LED da porta com uma das cores predefinidas.
 
-- Tipo: bloco de comando
-
-### `BuWizz 3 definir cor do LED (texto)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Define a cor do LED do BuWizz 3 usando um valor de texto.
-
-- Tipo: bloco de comando
-- Uso típico: cores dinâmicas vindas de variáveis
-
-### `BuWizz 3 definir cor do LED (RGB)` (Avançado) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `definir a cor do LED da porta para … … …` (RGB) (Avançado) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Define a cor do LED do BuWizz 3 usando canais RGB explícitos.
+Define a cor do LED da porta a partir de valores de vermelho, verde e azul.
 
-- Tipo: bloco de comando
-- Uso típico: controle completo de cores personalizadas e gradientes
+- Uso típico: qualquer cor que você quiser, mudanças suaves de cor.
+
+### `definir a cor do LED da porta a partir da string …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Define a cor do LED da porta a partir de um texto.
+
+- Uso típico: pegar a cor de uma variável ou de uma lista.

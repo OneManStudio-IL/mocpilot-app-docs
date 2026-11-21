@@ -5,74 +5,73 @@ title: Lijsten
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Lijsten
+# Lijsten {#lists}
 
-Lijsten slaan geordende verzamelingen van waarden op en worden beheerd met speciale lijst-rapporteur- en stapelblokken.
+Een lijst bewaart meerdere waarden op volgorde. Lijsten maak, hernoem en verwijder je met **Maak een lijst**, **Lijst hernoemen** en **Lijst verwijderen** bovenaan de categorie. De blokken hieronder verschijnen zodra het programma minstens één lijst heeft. Items worden genummerd vanaf 1.
 
-## Lijstbewerkingsblokken
+## Een lijst wijzigen {#changing-a-list}
 
-### `Waarde toevoegen aan lijst` (Gevorderd) {#block_lists_add}
+### `toevoegen … naar …` (Gevorderd) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Voegt een waarde toe aan het einde van de geselecteerde lijst.
+Voegt een waarde toe aan het einde van de lijst.
 
-### `Invoegen op` (Guru) {#block_lists_insert_at}
+### `invoegen … bij … van …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Voegt een waarde in op de geselecteerde index in de lijst.
+Voegt een waarde in op de opgegeven positie; de items erna schuiven één plek op.
 
-### `Vervangen op` (Guru) {#block_lists_replace_at}
+### `vervang item … van … met …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Vervangt het item op de geselecteerde index door een nieuwe waarde.
+Vervangt het item op de opgegeven positie door een nieuwe waarde.
 
-### `Verwijderen` (Gevorderd) {#block_lists_delete}
+### `verwijderen … van …` (Gevorderd) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Verwijdert het item op de geselecteerde index (of volgens de gekozen verwijdermodus).
+Verwijdert het item op de opgegeven positie.
 
-### `Alles wissen` (Gevorderd) {#block_lists_clear_all}
+### `wissen …` (Gevorderd) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Verwijdert alle items uit de geselecteerde lijst.
+Verwijdert alle items uit de lijst.
 
-## Lijstwaarde-/controleblokken
+## Een lijst lezen {#reading-a-list}
 
-### `Item op` (Gevorderd) {#block_lists_item_at}
+### `item … van …` (Gevorderd) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Geeft de waarde terug op de geselecteerde index.
+Geeft het item op de opgegeven positie terug.
 
-### `Index van waarde` (Guru) {#block_lists_index_of_value}
+### `index van … in …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Geeft de index terug van de eerste overeenkomende waarde in de lijst.
+Geeft de positie terug van het eerste item dat gelijk is aan de waarde, of `0` als er geen is.
 
-### `Bevat waarde` (Guru) {#block_lists_contains_value}
+### `… bevat …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Geeft aan of de lijst een bepaalde waarde bevat.
+Geeft `true` terug als de lijst de waarde bevat.
 
-### `Grootte van lijst` (Gevorderd) {#block_lists_size_of_value}
+### `grootte van …` (Gevorderd) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Geeft het aantal items in de geselecteerde lijst terug.
+Geeft het aantal items in de lijst terug.
 
-## Lijstwaarde-rapporteur
+### Lijst (Gevorderd) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Geeft de huidige waarde van de geselecteerde lijst terug.
+Elke lijst heeft een eigen waardeblok met haar naam. Het geeft de hele lijst als tekst terug.
 
-- Type: rapporteurblok
-- Uitvoerformaat voorbeeld: `[item1,item2,item3]`
-- Typisch gebruik: huidige lijstinhoud bekijken of de lijstwaarde doorgeven aan compatibele blokken
+- Voorbeeld van de uitvoer: `[item1,item2,item3]`; een lege lijst geeft lege tekst.
+- Gebruikelijke toepassing: de lijst op een monitor tonen, of doorgeven aan blokken die een lijst accepteren (bijvoorbeeld **oplichten** voor de lampjes van de afstandssensor).

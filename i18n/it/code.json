@@ -68,7 +68,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
+    "message": "Percorso di navigazione",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.colorToggle.ariaLabel": {
@@ -486,39 +486,39 @@
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(si apre in una nuova scheda)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
-    "message": "Search docs",
+    "message": "Cerca nella documentazione",
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "Fai un'altra domanda…",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "Risposta in corso…",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "search",
+    "message": "cerca",
     "description": "The hint for the search box enter key text"
   },
   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
-    "message": "enter",
+    "message": "invio",
     "description": "The hint for the Ask AI search box enter key text"
   },
   "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "Search",
+    "message": "Cerca",
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Torna alla ricerca per parole chiave",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Torna alla ricerca per parole chiave",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentSearchesTitle": {
@@ -526,71 +526,71 @@
     "description": "The title for recent searches"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Conversazioni recenti",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "Rimuovi questa conversazione dalla cronologia",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "Chiedi all'IA: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "Le risposte sono generate dall'IA, che può sbagliare. Verifica le risposte.",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Fonti correlate",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "Sto pensando…",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "Copy",
+    "message": "Copia",
     "description": "The text for copy button"
   },
   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "Copied!",
+    "message": "Copiato!",
     "description": "The text for copy button when copied"
   },
   "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "Copy",
+    "message": "Copia",
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Mi piace",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "Non mi piace",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "Grazie per il tuo feedback!",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "Ricerca in corso…",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "Ricerca di ",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "Risultati per",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Invia la domanda",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "Torna alla ricerca",
     "description": "The back to search text for footer"
   },
   "Build It. Drive It. Control Everything.": {
@@ -598,5 +598,45 @@
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Crea profili personalizzati per controllare LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motori, sensori e dispositivi Bluetooth compatibili da un’unica app potente."
+  },
+  "howItWorks.profile": {
+    "message": "Profilo = un modello",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Dashboard",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "controlli sullo schermo",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Programma",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Blocchi logici o Collegamenti rapidi",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Hub",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "motori, luci, sensori",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Gamepad",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ «Avvia» esegue il programma",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "via Bluetooth",
+    "description": "How it works diagram"
   }
 }

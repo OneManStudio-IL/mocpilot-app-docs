@@ -1,170 +1,162 @@
 ---
 id: Operators
-title: Operatory
+title: Operator
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatory
+# Operator
 
-Operatory to bloki raportujące i logiczne używane do obliczeń, porównań, logiki oraz przetwarzania tekstu.
+Operatory to bloki raportujące i logiczne do obliczeń, porównań, logiki i pracy z tekstem.
 
-## Operatory arytmetyczne
+## Matematyka {#math}
 
-### `Dodaj` (Początkujący) {#block_operator_plus}
+### `… + …` (Początkujący) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Zwraca sumę dwóch wartości.
+Zwraca sumę dwóch liczb.
 
-### `Odejmij` (Początkujący) {#block_operator_minus}
+### `… − …` (Początkujący) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Zwraca wynik odejmowania dwóch wartości.
+Odejmuje drugą liczbę od pierwszej.
 
-### `Pomnóż` (Początkujący) {#block_operator_multiply}
+### `… × …` (Początkujący) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Zwraca iloczyn dwóch wartości.
+Zwraca iloczyn dwóch liczb.
 
-### `Podziel` (Początkujący) {#block_operator_divide}
+### `… ÷ …` (Początkujący) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Zwraca wynik dzielenia dwóch wartości.
+Dzieli pierwszą liczbę przez drugą.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+### `… po modulo …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Zwraca resztę z dzielenia.
+Zwraca resztę z dzielenia pierwszej liczby przez drugą.
 
-### `Zaokrąglij` (Guru) {#block_operator_round}
+### `zaokrąglić …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Zaokrągla do najbliższej liczby całkowitej (np. `2.6 -> 3`).
+Zaokrągla liczbę do najbliższej liczby całkowitej (na przykład `2.6` staje się `3`).
 
-### `Funkcja matematyczna (1 argument)` (Guru) {#block_operator_math_single}
+### `… z …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Stosuje funkcję matematyczną z jednym argumentem.
-
-Dostępne funkcje:
+Stosuje funkcję do jednej liczby. Kąty podaje się w stopniach.
 
 - `wartość bezwzględna`: wartość bezwzględna
-- `całkowita mniejsza`: zaokrąglenie w dół
-- `całkowita większa`: zaokrąglenie w górę
+- `całkowita mniejsza`: zaokrąglenie w dół do liczby całkowitej
+- `całkowita większa`: zaokrąglenie w górę do liczby całkowitej
 - `pierwiastek kwadratowy`: pierwiastek kwadratowy
-- `sin`: sinus
-- `cos`: cosinus
-- `tan`: tangens
-- `asin`: arcsinus
-- `acos`: arccosinus
-- `atan`: arctangens
-- `ln`: logarytm naturalny (podstawa `e`)
+- `sin`, `cos`, `tan`: sinus, cosinus i tangens kąta
+- `asin`, `acos`, `atan`: funkcje odwrotne; zwracają kąt
+- `ln`: logarytm naturalny (o podstawie `e`)
 - `log`: logarytm dziesiętny
-- `e^`: potęga liczby `e`
-- `10^`: potęga liczby `10`
+- `e^`: `e` podniesione do potęgi danej liczby
+- `10^`: `10` podniesione do potęgi danej liczby
 
-### `Funkcja matematyczna (2 argumenty)` (Guru) {#block_operator_math_pair}
+### `… z … i …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Stosuje funkcję matematyczną z dwoma argumentami.
+Stosuje funkcję do dwóch liczb.
 
-Dostępne funkcje:
+- `min`: mniejsza z dwóch
+- `max`: większa z dwóch
+- `potęga`: pierwsza liczba podniesiona do potęgi drugiej
+- `atan2`: kąt punktu wyznaczonego przez dwie liczby
+- `hypot`: długość przeciwprostokątnej o takich przyprostokątnych
+- `copysign`: pierwsza liczba ze znakiem drugiej
 
-- `min`: mniejsza z dwóch wartości
-- `max`: większa z dwóch wartości
-- `potęga`: pierwsza wartość do potęgi drugiej
-- `atan2`: kąt z pary X/Y
-- `hypot`: długość przeciwprostokątnej
-- `copysign`: pierwsza wartość z znakiem drugiej
-
-### `Losuj` (Guru) {#block_operator_pick_random}
+### `wybierz losowo … do …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Zwraca losową liczbę z wybranego zakresu.
+Zwraca losową liczbę z przedziału między dwiema wartościami.
 
-## Operatory porównania
+## Porównanie {#comparison}
 
-### `Równe` (Początkujący) {#block_operator_equal}
+### `… = …` (Początkujący) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Zwraca `true`, gdy wartości są równe.
+Zwraca `true`, gdy obie wartości są równe.
 
-### `Nierówne` (Zaawansowany) {#block_operator_not_equal}
+### `… ≠ …` (Zaawansowany) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Zwraca `true`, gdy wartości są różne.
+Zwraca `true`, gdy obie wartości się różnią.
 
-### `Większe niż` (Początkujący) {#block_operator_greater_than}
+### `… > …` (Początkujący) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
 Zwraca `true`, gdy lewa wartość jest większa od prawej.
 
-### `Mniejsze niż` (Początkujący) {#block_operator_less_than}
+### `… < …` (Początkujący) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
 Zwraca `true`, gdy lewa wartość jest mniejsza od prawej.
 
-### `W zakresie` (Zaawansowany) {#block_operator_is_in_between}
+### `jest … pomiędzy … i …` (Zaawansowany) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Zwraca `true`, gdy wartość znajduje się w określonym zakresie.
+Zwraca `true`, gdy liczba mieści się między dwiema granicami.
 
-## Operatory logiczne
+## Logika {#logic}
 
-### `I` (Zaawansowany) {#block_operator_and}
+### `… i …` (Zaawansowany) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Zwraca `true` tylko wtedy, gdy oba warunki są `true`.
+Zwraca `true` tylko wtedy, gdy oba warunki są prawdziwe.
 
-### `Lub` (Zaawansowany) {#block_operator_or}
+### `… lub …` (Zaawansowany) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Zwraca `true`, gdy co najmniej jeden warunek jest `true`.
+Zwraca `true`, gdy co najmniej jeden z warunków jest prawdziwy.
 
-### `Nie` (Zaawansowany) {#block_operator_not}
+### `nie …` (Zaawansowany) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Odwraca wartość logiczną.
+Zamienia `true` na `false`, a `false` na `true`.
 
-## Operatory tekstowe
+## Tekst {#text}
 
-### `Połącz` (Zaawansowany) {#block_operator_join}
+### `połączyć … …` (Zaawansowany) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Łączy dwa teksty.
+Łączy dwa fragmenty tekstu w jeden.
 
-### `Litera na pozycji` (Guru) {#block_operator_letter_at}
+### `litera … z …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Zwraca znak na wybranej pozycji w tekście.
+Zwraca literę na podanej pozycji w tekście. Pierwsza litera ma numer 1.
 
-### `Długość tekstu` (Zaawansowany) {#block_operator_size_of_string}
+### `długość …` (Zaawansowany) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Zwraca długość tekstu.
+Zwraca liczbę znaków w tekście.
 
-### `Tekst zawiera` (Guru) {#block_operator_string_contains}
+### `… zawiera …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Zwraca `true`, jeśli tekst zawiera podany fragment.
+Zwraca `true`, gdy pierwszy tekst zawiera drugi.

@@ -5,146 +5,145 @@ title: Eventi
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Eventi
+# Eventi {#events}
 
-La categoria **Eventi** contiene blocchi che avviano script quando si verifica una condizione.
+La categoria **Eventi** contiene i blocchi che avviano gli script quando succede qualcosa, oltre ai blocchi che inviano messaggi tra gli script. Usa **Aggiungi messaggio** ed **Eliminare messaggio** in cima alla categoria per gestire i messaggi.
 
-## Eventi principali
+## Eventi principali {#core-events}
 
-### `Quando il programma inizia` (Principiante) {#block_event_when_program_started}
+### `quando il programma inizia` (Principiante) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Avvia questo script una volta quando inizia il programma del profilo.
+Esegue il suo script una volta, all'avvio del programma.
 
-- Attivazione: avvio programma
-- Uso tipico: inizializzare variabili, stati motore predefiniti, suoni di avvio
+- Uso tipico: impostare i valori iniziali delle variabili, portare i motori nello stato iniziale, mostrare un messaggio «pronto».
 
-### `Quando` (Avanzato) {#block_event_when}
+### `quando …` (Avanzato) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Esegue quando una condizione selezionata diventa vera.
+Esegue il suo script quando la condizione nello spazio passa da falsa a vera. Mentre lo script è in esecuzione, il blocco attende; scatta di nuovo solo dopo che la condizione è tornata falsa e poi di nuovo vera.
 
-- Attivazione: basata su condizione
-- Uso tipico: diramare la logica in base allo stato a runtime
+- Uso tipico: reagire a uno stato, ad esempio `quando il timer > 5 e l'interruttore è acceso`.
 
-### `Quando il timer è maggiore di` (Avanzato) {#block_event_when_timer_greater_than}
+### `quando il timer > …` (Avanzato) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Esegue quando il valore del timer supera una soglia.
+Esegue il suo script quando il timer del programma supera il valore (in secondi).
 
-- Attivazione: tempo trascorso
-- Uso tipico: azioni ritardate, fasi temporizzate
+- Uso tipico: azioni ritardate, fasi a tempo. Azzera il timer con **ripristina timer** (Sensori).
 
-### `Quando il messaggio è ricevuto` (Guru) {#block_event_when_message_recieved}
+### `quando ricevo …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Avvia uno script quando viene ricevuto un messaggio broadcast corrispondente.
+Esegue il suo script quando viene trasmesso il messaggio selezionato.
 
-- Attivazione: canale messaggi
-- Uso tipico: sincronizzare più script
+- Uso tipico: coordinare più script.
 
-### `Trasmettere` (Guru) {#block_event_broadcast}
+### `trasmettere …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Invia un messaggio a tutti gli script in ascolto di quel messaggio.
+Invia un messaggio a tutti gli script che iniziano con **quando ricevo** per quel messaggio e prosegue subito.
 
-- Attivazione: invio immediato
-- Uso tipico: notificare altri script senza attendere
+- Uso tipico: dire ad altri script di partire senza aspettarli.
 
-### `Trasmettere e aspettare` (Guru) {#block_event_broadcast_and_wait}
+### `trasmettere … e aspettare` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Invia un messaggio e mette in pausa questo script finché gli ascoltatori non completano.
+Invia un messaggio e mette in pausa questo script finché tutti gli script che l'hanno ricevuto non hanno finito.
 
-- Attivazione: invio immediato + attesa
-- Uso tipico: flussi a fasi dove l'ordine è importante
+- Uso tipico: sequenze passo per passo in cui l'ordine conta.
 
-## Eventi hub
+## Eventi degli hub {#hub-events}
 
-### `Pulsante hub premuto` (Principiante) {#block_hubs_all_event_button_pressed}
+Questi blocchi compaiono quando un hub del profilo li supporta. Non esistono per gli hub Mould King.
+
+### `quando … … pulsante …` (Principiante) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Esegue quando viene premuto il pulsante principale sull'hub.
+Viene eseguito quando un pulsante dell'hub viene premuto o rilasciato.
 
-- Opzioni stato: `premuto`, `rilasciato`, `cambiato`
-- Nota: le opzioni disponibili per i pulsanti possono variare in base al modello di hub (hub diversi possono esporre set di pulsanti diversi).
+- Opzioni di stato: `premuto`, `rilasciato`, `cambiato`
+- Hub: hub LEGO Powered Up, WeDo 2.0 e Robot Inventor. L'elenco dei pulsanti dipende dall'hub.
 
-### `Connessione hub cambiata` (Principiante) {#block_hubs_all_event_connection_changed}
+### `quando … è connesso / disconnesso` (Principiante) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Esegue quando cambia lo stato di connessione dell'hub (connesso o disconnesso).
+Viene eseguito quando l'hub si collega o si scollega.
 
-- Attivazione: cambio stato connessione hub
-- Uso tipico: gestire riconnessioni e comportamento di fallback sicuro dopo una perdita di collegamento
+- Uso tipico: fermare il modello in sicurezza quando la connessione si interrompe e ripristinarne lo stato quando torna.
 
-### `Batteria hub cambiata` (Principiante) {#block_hubs_all_event_battery_changed}
+### `quando … % batteria modificata` (Principiante) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Esegue quando cambia il livello batteria dell'hub riportato.
+Viene eseguito quando cambia il livello della batteria riportato dall'hub.
 
-- Attivazione: aggiornamento livello batteria (per hub che riportano lo stato batteria)
-- Uso tipico: logica di avviso batteria scarica e passaggio a modalità risparmio energetico
+- Hub: quelli che riportano il livello della batteria.
+- Uso tipico: un avviso di batteria scarica, il passaggio a una modalità di risparmio energetico.
 
-### `Accelerometro hub cambiato` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `quando … i dati dell’accelerometro sono cambiati` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Esegue quando cambiano i valori di accelerazione.
+Viene eseguito quando cambiano i valori dell'accelerometro dell'hub.
 
-### `Inclinazione hub cambiata` (Principiante) {#block_hubs_all_event_tilt_changed}
+- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `quando … inclinazione … angolo cambiato` (Principiante) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Esegue quando cambia il valore di inclinazione.
+Viene eseguito quando cambia l'angolo di inclinazione dell'hub.
 
-- Opzioni angolo: `qualsiasi`, `beccheggio`, `rollio`, `imbardata`
-- Nota: `imbardata` è disponibile solo sugli hub che forniscono dati di imbardata.
+- Opzioni dell'angolo: `qualsiasi`, `beccheggio`, `rollio`, `imbardata`
+- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `imbardata` è disponibile solo su Technic Hub e Robot Inventor.
 
-### `Orientamento hub cambiato` (Principiante) {#block_hubs_all_event_tilt_orientation_changed}
+### `quando … orientamento cambiato` (Principiante) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Esegue quando cambia lo stato di orientamento (ad esempio davanti/su/giù/sinistra/destra).
+Viene eseguito quando cambia l'orientamento dell'hub, cioè quando un altro lato dell'hub è rivolto verso l'alto.
 
-## Eventi sensori porta
+- Hub: gli stessi dell'evento di inclinazione.
 
-### `Evento sensore colore Technic` (Principiante) {#block_hubs_all_event_port_technic_sensor_color}
+## Eventi dei sensori {#sensor-events}
+
+Questi eventi leggono un sensore collegato a una porta dell'hub. Hub: City Hub, Technic Hub, BOOST Move Hub e l'hub MINDSTORMS Robot Inventor (non SBrick, BuWizz, WeDo 2.0 o Mould King).
+
+### Sensore Technic: `quando il colore è …` (Principiante) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Esegue quando il sensore colore Technic riporta un colore selezionato.
+Viene eseguito quando il Technic Color Sensor vede il colore selezionato.
 
-
-### `Evento sensore distanza Technic` (Principiante) {#block_hubs_all_event_port_technic_sensor_distance}
+### Sensore Technic: `quando … più vicino di / più lontano di / esattamente a …` (Principiante) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Esegue quando i valori del sensore distanza Technic corrispondono alla condizione selezionata.
+Viene eseguito quando la distanza misurata dal Technic Distance Sensor soddisfa la condizione.
 
-- Opzioni confronto: `più vicino di`, `più lontano di`, `esattamente a`
-- Opzioni unità: `mm`, `cm`, `pollici`, `%`
-- Nota: le unità disponibili possono dipendere dalla modalità del sensore e dal dispositivo collegato.
+- Opzioni di confronto: `più vicino di`, `più lontano di`, `esattamente a`
+- Unità: `mm`, `cm`, `pollici`, `%`
 
-### `Evento sensore distanza BOOST` (Principiante) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Sensore BOOST: `quando … più vicino di / più lontano di / esattamente a …` (Principiante) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Esegue quando il sensore distanza BOOST raggiunge la soglia/condizione scelta.
+Viene eseguito quando la distanza misurata dal BOOST Color & Distance Sensor soddisfa la condizione.
 
-- Opzioni confronto: `più vicino di`, `più lontano di`, `esattamente a`
-- Opzioni unità: `%`, `cm`, `pollici`
+- Opzioni di confronto: `più vicino di`, `più lontano di`, `esattamente a`
+- Unità: `%`, `cm`, `pollici`
 
-### `Evento sensore colore BOOST` (Principiante) {#block_hubs_all_event_port_boost_sensor_color}
+### Sensore BOOST: `quando il colore è …` (Principiante) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Esegue quando il sensore BOOST rileva un colore selezionato.
+Viene eseguito quando il BOOST Color & Distance Sensor vede il colore selezionato.

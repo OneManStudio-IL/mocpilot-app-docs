@@ -5,241 +5,275 @@ title: Senzory
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Senzory
+# Senzory {#sensors}
 
-Bloky senzorov čítajú stav hubu/zariadenia a poskytujú údaje pre podmienky, udalosti a riadiacu logiku.
+Bloky senzorov čítajú stav vášho telefónu alebo tabletu, časovač programu, huby a senzory k nim pripojené. Ich hodnoty používajte v podmienkach, udalostiach a výpočtoch.
 
-## Senzory zariadenia a hubu
+Na tejto stránke:
 
-### `Úroveň batérie hubu` (Začiatočník) {#block_hubs_all_sensors_battery_level}
+- [Stav hubu](#hub-state): batéria, napätie, teplota, prúd a režim výkonu
+- [Tlačidlá, náklon a orientácia hubu](#hub-tilt-and-orientation)
+- [Senzory na portoch](#sensors-on-ports): ľubovoľné zariadenie, farebný senzor Technic, senzor vzdialenosti Technic, senzor farby a vzdialenosti BOOST, senzory WeDo 2.0
+- [Toto zariadenie](#this-device): telefón, tablet alebo počítač, na ktorom beží MOCPilot
+- [Časovač](#timer)
+
+## Stav hubu {#hub-state}
+
+Tieto bloky neexistujú pre huby Mould King, ktoré nehlásia žiadne údaje.
+
+### `… % batérie` (Začiatočník) {#block_hubs_all_sensors_battery_level}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="block_hubs_all_sensors_battery_level.svg" />
-Vracia aktuálnu úroveň batérie hubu.
+Vráti úroveň batérie hubu v percentách.
 
-### `Napätie batérie hubu` (Pokročilý) {#block_hubs_all_sensors_battery_voltage}
+### `… napätie batérie (V)` (Pokročilý) {#block_hubs_all_sensors_battery_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
-Vráti napätie batérie vybraného hubu vo voltoch.
+Vráti napätie batérie hubu vo voltoch.
 
-- Typ: číselný reportovací blok
-- Dostupné iba pre huby, ktoré hlásia napätie batérie.
-- Keď vybraný hub nie je pripojený, vráti `NaN`.
+- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Vráti `NaN`, keď hub nie je pripojený.
 
-### `Batéria zariadenia %` (Začiatočník) {#block_sensors_device_battery_level}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
-Vracia aktuálnu úroveň batérie telefónu/tabletu, na ktorom beží MOCPilot (v percentách).
-
-### `Teplota dosky` (Pokročilý) {#block_hubs_all_sensors_board_temp}
+### `… teplota (C°)` (Pokročilý) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
-Vracia teplotu dosky hubu.
+Vráti teplotu elektroniky hubu v stupňoch Celzia.
 
-- Dostupné iba pre `BuWizz 2` a `BuWizz 3`.
+- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
-### `Akcelerometer hubu` (Guru) {#block_hubs_all_sensors_accelerometer}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
-Vráti surové dáta akcelerometra hlásené vybraným hubom.
-
-- Osi: `x`, `y`, `z`
-
-### `Zrýchlenie hubu` (Guru) {#block_hubs_all_sensors_acceleration}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
-Vráti dáta zrýchlenia hlásené vybraným hubom.
-
-- Osi: `x`, `y`, `z`
-
-### `Tlačidlo je stlačené` (Začiatočník) {#block_hubs_all_sensors_button_pressed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
-Kontroluje, či vybrané tlačidlo hubu zodpovedá zvolenému stavu.
-
-- Možnosti stavu: `stlačené`, `uvoľnené`
-- Typická možnosť tlačidla: `stred` (závisí od hubu)
-
-- Poznámka: dostupné možnosti tlačidiel sa môžu líšiť podľa modelu hubu (rôzne huby môžu ponúkať rôzne sady tlačidiel).
-
-### `Typ zariadenia` (Začiatočník) {#block_hubs_all_motors_port_device_type}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
-Vracia typ pripojeného zariadenia pre vybraný port.
-
-- Typ: reporter blok
-- Typické použitie: zistiť, aké zariadenie je pripojené, pred spustením logiky špecifickej pre dané zariadenie
-
-### `Akcelerometer zariadenia` (Guru) {#block_sensors_device_accelerometer_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
-Vracia surové hodnoty akcelerometra zo senzorov zariadenia.
-
-- Možnosti osi: `x`, `y`, `z`
-
-### `Zrýchlenie zariadenia` (Guru) {#block_sensors_device_acceleration_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
-Vracia údaje o zrýchlení zo senzorov zariadenia.
-
-- Možnosti osi: `x`, `y`, `z`
-
-## Senzory orientácie a náklonu
-
-### `Náklon zariadenia` (Pokročilý) {#block_sensors_device_tilt_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
-Vráti dáta náklonu z telefónu/tabletu, na ktorom beží MOCPilot.
-
-- Osi: `pitch`, `roll`
-
-### `Náklon` (Začiatočník) {#block_hubs_all_sensors_tilt}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
-Vracia uhol náklonu pre vybranú os.
-
-- Možnosti osi: `náklon`, `rotácia`, `yaw`
-- Poznámka: `yaw` je dostupné iba na huboch, ktoré poskytujú údaje yaw.
-
-### `Získať orientáciu` (Začiatočník) {#block_hubs_sensors_get_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
-Vracia aktuálny stav orientácie hubu.
-
-- Možnosti formátu výstupu: `text`, `index`
-- Hodnoty orientácie: `Predok`, `Hore`, `Vpravo`, `Zadok`, `Dole`, `Vľavo`
-
-### `Je orientácia hore` (Začiatočník) {#block_hubs_all_sensors_is_orientation_up}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
-Kontroluje, či orientácia hubu zodpovedá zvolenej orientácii „hore“.
-
-- Možnosti orientácie: `Predok`, `Hore`, `Vpravo`, `Zadok`, `Dole`, `Vľavo`
-
-### `Nastaviť orientáciu náklonu` (Pokročilý) {#block_hubs_sensors_set_tilt_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
-Nastavuje referenčnú orientáciu používanú blokmi súvisiacimi s náklonom/orientáciou.
-
-- Možnosti orientácie: `Predok`, `Hore`, `Vpravo`, `Zadok`, `Dole`, `Vľavo`
-
-## Časovač a senzory pohybu zariadenia
-
-### `Časovač` (Pokročilý) {#block_sensors_timer_value_float}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
-Vracia hodnotu časovača v sekundách.
-
-### `Resetovať časovač` (Pokročilý) {#block_sensors_timer_reset}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
-Resetuje časovač na nulu.
-
-## Bloky senzorov portu
-
-### `Technic senzor vzdialenosti` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
-Vracia hodnoty vzdialenosti zo senzora vzdialenosti Technic.
-
-- Možnosti jednotiek: `mm`, `cm`, `palce`, `%`
-
-### `Technic keď vzdialenosť je` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
-Spúšťa/kontroluje podmienku vzdialenosti pre senzor vzdialenosti Technic.
-
-- Možnosti porovnania: `bližšie ako`, `ďalej ako`, `presne na`
-- Možnosti jednotiek: `mm`, `cm`, `palce`, `%`
-
-### `Technic nastaviť režim farebného senzora` (Pokročilý) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
-Tento blok nastaví Technic farebný senzor na zvolený režim.
-
-- Poznámka: Zmena režimu farebného senzora môže ovplyvniť váš program neočakávaným spôsobom. Napríklad Technic farebný senzor nedokáže čítať farby ani odrazené svetlo, keď je v režime `"okolité"`.
-
-### `Hodnota farby senzora Technic` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
-Vracia zistenú hodnotu farby zo senzora vzdialenosti Technic.
-
-- Možnosti výstupu: `hodnota`, `reťazec`
-
-### `Technic keď farba je` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
-Spúšťa/kontroluje, keď zistená farba zodpovedá vybratej farbe.
-
-### `Technic odrazené svetlo` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
-Vracia intenzitu odrazeného svetla.
-
-### `Technic keď odrazené svetlo je` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
-Spúšťa/kontroluje prahovú podmienku odrazeného svetla.
-
-- Možnosti porovnania: `<`, `=`, `>`
-
-### `Technic okolité svetlo` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
-Vracia intenzitu okolitého svetla.
-
-### `Technic keď okolité svetlo je` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
-Spúšťa/kontroluje prahovú podmienku okolitého svetla.
-
-- Možnosti porovnania: `<`, `=`, `>`
-
-### `Technic surová farba` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Vracia surovú hodnotu farebného kanála zo senzora Technic.
-
-- Možnosti kanála: `červená`, `zelená`, `modrá`
-
-### `BOOST senzor vzdialenosti` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
-Vracia vzdialenosť zo senzora vzdialenosti BOOST.
-
-- Možnosti jednotiek: `%`, `cm`, `palce`
-
-### `BOOST keď vzdialenosť je` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
-Spúšťa/kontroluje podmienku vzdialenosti pre senzor vzdialenosti BOOST.
-
-- Možnosti porovnania: `bližšie ako`, `ďalej ako`, `presne na`
-- Možnosti jednotiek: `%`, `cm`, `palce`
-
-### `BOOST farba senzora` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
-Vracia farbu zistenú senzorom BOOST.
-
-- Možnosti výstupu: `hodnota`, `reťazec`
-
-### `BOOST je farba` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_is_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
-Kontroluje, či senzor BOOST aktuálne deteguje vybranú farbu.
-
-### `BOOST odrazené svetlo` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Vracia hodnotu odrazeného svetla zo senzora BOOST.
-
-### `BOOST keď odrazené svetlo je` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
-Spúšťa/kontroluje prahovú podmienku odrazeného svetla pre senzor BOOST.
-
-- Možnosti porovnania: `<`, `=`, `>`
-
-### `Technic Move nastaviť režim výkonu` (Začiatočník) {#block_hubs_technicmove_sensors_set_power_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
-Nastaví režim výkonu Technic Move.
-
-- Možnosti režimu: `normálny`, `boost`
-
-### `Výstupné napätie BuWizz` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
+### `získať … výstupné napätie (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
-Vráti aktuálne výstupné napätie hlásené hubom BuWizz.
+Vráti napätie, ktoré hub práve dodáva do svojich portov, vo voltoch.
 
-- Dostupné iba pre podporované huby BuWizz.
+- Huby: BuWizz 2.
 
-### `Prúd portu BuWizz` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
+### `… prúd (A)` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
-Vráti odber prúdu hlásený pre vybraný port hubu BuWizz.
+Vráti prúd odoberaný na vybranom porte v ampéroch.
 
-- Dostupné iba pre podporované huby a porty BuWizz.
+- Huby: BuWizz 2, BuWizz 3.
 
-### `WeDo 2 vzdialenosť` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
+### `nastaviť režim napájania …` (Technic Move Hub) (Začiatočník) {#block_hubs_technicmove_sensors_set_power_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
+Nastaví režim výkonu Technic Move Hubu.
+
+- Režimy: `normálny`, `boost`
+- Huby: Technic Move Hub.
+
+## Tlačidlá, náklon a orientácia hubu {#hub-tilt-and-orientation}
+
+Blok tlačidla uvádza huby, s ktorými funguje. Bloky náklonu a orientácie fungujú na BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub a Robot Inventor.
+
+### `je … … tlačidlo …` (Začiatočník) {#block_hubs_all_sensors_button_pressed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
+Vráti `true`, keď je vybrané tlačidlo hubu vo vybranom stave.
+
+- Stavy: `stlačené`, `uvoľnené`
+- Huby: huby LEGO Powered Up, WeDo 2.0 a Robot Inventor. Zoznam tlačidiel závisí od hubu (zvyčajne `stred`).
+
+### `… … uhol` (Začiatočník) {#block_hubs_all_sensors_tilt}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
+Vráti uhol náklonu hubu.
+
+- Uhly: `klonenie`, `náklon`, `vybočenie`
+- `vybočenie` je k dispozícii iba na Technic Hube a Robot Inventor.
+
+### `… … akcelerometer (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
+Vráti surový údaj akcelerometra hubu v jednej osi.
+
+- Osi: `x`, `y`, `z`
+
+### `… … zrýchlenie (m/s²)` (Guru) {#block_hubs_all_sensors_acceleration}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
+Vráti zrýchlenie hubu v jednej osi.
+
+- Osi: `x`, `y`, `z`
+
+### `získať … orientácia …` (Začiatočník) {#block_hubs_sensors_get_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
+Vráti, ktorá strana hubu je otočená nahor.
+
+- Výstup: `text` alebo `index`
+- Hodnoty: `Vpredu`, `Hore`, `Vpravo`, `Zadná strana`, `Dole`, `Vľavo`
+
+### `… orientácia …` (Začiatočník) {#block_hubs_all_sensors_is_orientation_up}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
+Vráti `true`, keď je vybraná strana hubu otočená nahor.
+
+- Možnosti: `Vpredu`, `Hore`, `Vpravo`, `Zadná strana`, `Dole`, `Vľavo`
+
+### `nastaviť … orientácia náklonu na …` (Pokročilý) {#block_hubs_sensors_set_tilt_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
+Povie hubu, ako je v modeli namontovaný, aby sa náklon a orientácia merali od tejto polohy.
+
+- Možnosti: `Vpredu`, `Hore`, `Vpravo`, `Zadná strana`, `Dole`, `Vľavo`
+
+## Senzory na portoch {#sensors-on-ports}
+
+Nižšie uvedené bloky senzorov Technic a BOOST fungujú na City Hube, Technic Hube, BOOST Move Hube a hube MINDSTORMS Robot Inventor (nie SBrick, BuWizz, WeDo 2.0 ani Mould King).
+
+### Ľubovoľné zariadenie na porte {#any-port-device}
+
+#### `… typ zariadenia` (Začiatočník) {#block_hubs_all_motors_port_device_type}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
+Vráti typ zariadenia pripojeného k vybranému portu.
+
+- Huby: všetky huby s portami okrem SBrick, SBrick Plus a BuWizz 2.
+- Typické použitie: overiť, čo je pripojené, pred spustením blokov pre konkrétne zariadenie.
+
+### Farebný senzor Technic {#technic-color-sensor}
+
+#### Senzor Technic: `nastaviť režim na …` (Pokročilý) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
+Prepne farebný senzor Technic do vybraného režimu.
+
+- Režimy: `predvolený`, `okolie`
+- Zmena režimu môže váš program ovplyvniť nečakaným spôsobom: v režime `okolie` senzor nedokáže čítať farby ani odrazené svetlo.
+
+#### Senzor Technic: `farba …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
+Vráti farbu, ktorú vidí farebný senzor Technic.
+
+- Výstup: `hodnota` (číslo) alebo `reťazec` (názov farby)
+
+#### Senzor Technic: `je farba …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
+Vráti `true`, keď farebný senzor Technic vidí vybranú farbu.
+
+#### Senzor Technic: `odrazené svetlo (%)` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
+Vráti, koľko svetla povrch odráža späť do farebného senzora Technic, v percentách.
+
+#### Senzor Technic: `odrazené svetlo …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
+Vráti `true`, keď odrazené svetlo zodpovedá zvolenému porovnaniu s hodnotou.
+
+- Porovnanie: `<`, `=`, `>`
+
+#### Senzor Technic: `okolité svetlo (%)` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
+Vráti jas okolitého svetla v percentách.
+
+#### Senzor Technic: `okolité svetlo …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
+Vráti `true`, keď okolité svetlo zodpovedá zvolenému porovnaniu s hodnotou.
+
+- Porovnanie: `<`, `=`, `>`
+
+#### Senzor Technic: `surová hodnota …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
+Vráti surovú hodnotu jedného farebného kanála farebného senzora Technic.
+
+- Kanály: `červená`, `zelená`, `modrá`
+
+### Senzor vzdialenosti Technic {#technic-distance-sensor}
+
+#### Senzor Technic: `vzdialenosť …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
+Vráti vzdialenosť nameranú senzorom vzdialenosti Technic.
+
+- Jednotky: `mm`, `cm`, `palce`, `%`
+
+#### Senzor Technic: `je bližšie ako / ďalej ako / presne na …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
+Vráti `true`, keď vzdialenosť nameraná senzorom vzdialenosti Technic splní podmienku.
+
+- Porovnanie: `bližšie ako`, `ďalej ako`, `presne na`
+- Jednotky: `mm`, `cm`, `palce`, `%`
+
+### Senzor farby a vzdialenosti BOOST {#boost-color-and-distance-sensor}
+
+#### Senzor BOOST: `farba …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
+Vráti farbu, ktorú vidí senzor farby a vzdialenosti BOOST.
+
+- Výstup: `hodnota` (číslo) alebo `reťazec` (názov farby)
+
+#### Senzor BOOST: `je farba …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_is_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
+Vráti `true`, keď senzor BOOST vidí vybranú farbu.
+
+#### Senzor BOOST: `vzdialenosť …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
+Vráti vzdialenosť nameranú senzorom farby a vzdialenosti BOOST.
+
+- Jednotky: `%`, `cm`, `palce`
+
+#### Senzor BOOST: `je bližšie ako / ďalej ako / presne na …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
+Vráti `true`, keď vzdialenosť nameraná senzorom BOOST splní podmienku.
+
+- Porovnanie: `bližšie ako`, `ďalej ako`, `presne na`
+- Jednotky: `%`, `cm`, `palce`
+
+#### Senzor BOOST: `odrazené svetlo (%)` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
+Vráti, koľko svetla povrch odráža späť do senzora BOOST, v percentách.
+
+#### Senzor BOOST: `odrazené svetlo …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
+Vráti `true`, keď odrazené svetlo zodpovedá zvolenému porovnaniu s hodnotou.
+
+- Porovnanie: `<`, `=`, `>`
+
+### Senzory WeDo 2.0 {#wedo-2-sensors}
+
+Senzor pohybu a senzor náklonu WeDo 2.0 na hube WeDo 2.0.
+
+#### Senzor WeDo 2.0: `vzdialenosť …` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
-Vracia vzdialenosť zo senzora vzdialenosti WeDo 2.
+Vráti vzdialenosť nameranú senzorom pohybu WeDo 2.0.
 
-- Možnosti jednotiek: `%`, `cm`, `palce`
+- Jednotky: `%`, `cm`, `palce`
+- Huby: WeDo 2.0.
 
-### `WeDo 2 keď je vzdialenosť` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+#### Senzor WeDo 2.0: `je bližšie ako / ďalej ako / presne na …` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
-Spustí/skontroluje podmienku vzdialenosti pre senzor vzdialenosti WeDo 2.
+Vráti `true`, keď vzdialenosť nameraná senzorom pohybu WeDo 2.0 splní podmienku.
 
-- Možnosti porovnania: `closer than`, `farther than`, `exactly at`
-- Jednotky: `%`, `cm`, `inch`
+- Porovnanie: `bližšie ako`, `ďalej ako`, `presne na`
+- Jednotky: `%`, `cm`, `palce`
+- Huby: WeDo 2.0.
 
-### `WeDo 2 náklon` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_tilt}
+#### Senzor WeDo 2.0: `uhol …` / `smer ako …` (Začiatočník) {#block_hubs_all_sensors_port_wedo2_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
-Vracia hodnotu náklonu zo senzora náklonu WeDo 2.
+Vráti údaje zo senzora náklonu WeDo 2.0: uhol náklonu alebo smer, ktorým je naklonený.
 
-- Možnosti osi: `náklon`, `rotácia`
+- Uhly: `klonenie`, `náklon`
+- Výstup smeru: `text` alebo `číslo`; smery: `neutrálny`, `dopredu`, `dozadu`, `vľavo`, `vpravo`, `neznámy`
+- Huby: WeDo 2.0.
+
+## Toto zariadenie {#this-device}
+
+Tieto bloky čítajú telefón, tablet alebo počítač, na ktorom beží MOCPilot.
+
+### `zariadenie % batérie` (Začiatočník) {#block_sensors_device_battery_level}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
+Vráti úroveň batérie zariadenia v percentách.
+
+### `zariadenie … uhol` (Pokročilý) {#block_sensors_device_tilt_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
+Vráti uhol náklonu zariadenia.
+
+- Uhly: `klonenie`, `náklon`, `vybočenie`
+- Typické použitie: riadiť model nakláňaním telefónu.
+
+### `zariadenie … akcelerometer (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
+Vráti surový údaj akcelerometra zariadenia v jednej osi, v m/s².
+
+- Osi: `x`, `y`, `z`
+
+### `zariadenie … zrýchlenie (m/s²)` (Guru) {#block_sensors_device_acceleration_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
+Vráti zrýchlenie zariadenia v jednej osi, v m/s².
+
+- Osi: `x`, `y`, `z`
+
+## Časovač {#timer}
+
+### `časovač` (Pokročilý) {#block_sensors_timer_value_float}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
+Vráti čas od spustenia programu alebo od posledného bloku **resetovať časovač** v sekundách.
+
+### `resetovať časovač` (Pokročilý) {#block_sensors_timer_reset}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
+Vynuluje časovač.

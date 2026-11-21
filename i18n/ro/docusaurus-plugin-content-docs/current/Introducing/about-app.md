@@ -1,191 +1,63 @@
 ---
 id: AboutApp
 title: Despre MOCPilot
+description: "MOCPilot transformă telefonul, tableta sau computerul într-o telecomandă pentru modele LEGO® și compatibile cu Bluetooth."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# MOCPilot - Construiește. Condu. Controlează tot.
+# MOCPilot: construiește, condu, controlează tot {#mocpilot-build-it-drive-it-control-everything}
 
-**MOCPilot** este o aplicație pentru crearea profilurilor de control personalizate pentru LEGO® și construcții compatibile cu Bluetooth.
+**MOCPilot** transformă telefonul, tableta sau computerul tău într-o telecomandă pentru modele LEGO® și compatibile cu Bluetooth: mașini, camioane, trenuri, macarale, roboți și propriile tale MOC-uri.
 
-Le oferă constructorilor un singur loc pentru conectarea huburilor, controlul motoarelor, citirea senzorilor, proiectarea panourilor și crearea programelor vizuale pentru modele, mecanisme, mașini, camioane, trenuri, roboți și MOC-uri personalizate.
+Comenzile le creezi chiar tu: un **tablou de bord** cu joystickuri, glisoare, butoane, volane și indicatoare. Apoi un **program** leagă tabloul de bord de motoarele și luminile de pe **huburi**. MOCPilot are două editoare de programe:
 
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', alignItems: 'center', margin: '24px 0'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', margin: '24px 0'}}>
   <div>
-    <img src={useBaseUrl('/img/app_phone.png')} alt="Aplicația MOCPilot pe un telefon" style={{maxWidth: '320px', width: '100%'}} />
+    <img src={useBaseUrl('/img/illustrations/editor_links.svg')} alt="Editorul Legături rapide: rânduri de la intrare la hub" style={{width: '100%'}} />
+    <h3>Legături rapide</h3>
+    <p>Fără cod. Fiecare rând leagă o comandă de un motor sau de o lumină: <em>intrare → procesare → operație → hub</em>. O mașină e gata de condus în câteva minute. <a href="/docs/Application/Links/LinksIntroducing">Află mai multe</a>.</p>
   </div>
   <div>
-    <h2>Ce oferă MOCPilot</h2>
-    <ul>
-      <li>Profiluri personalizate pentru modelele tale.</li>
-      <li>Profiluri gata făcute pentru seturi oficiale acceptate.</li>
-      <li>Conectarea și gestionarea huburilor Bluetooth.</li>
-      <li>Programare vizuală cu blocuri pentru automatizare și logică.</li>
-      <li>Controale de panou pentru condus și operarea modelelor.</li>
-      <li>Suport pentru LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motoare, senzori și dispozitive Bluetooth compatibile.</li>
-    </ul>
+    <img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Editorul Blocuri logice: program din blocuri" style={{width: '100%'}} />
+    <h3>Blocuri logice</h3>
+    <p>Blocuri vizuale cu evenimente, bucle, condiții, variabile și date de la senzori. Pentru roboți, automatizări și tot ce are nevoie de logică. <a href="/docs/Application/BlockBuilder/Blocks/BlocksIntroducing">Află mai multe</a>.</p>
   </div>
 </div>
 
-## Ideea
+## Ce poți face {#what-you-can-do}
 
-Cele mai multe construcții motorizate au nevoie de mai mult decât o telecomandă simplă. O mașină poate necesita direcție, accelerație, lumini, monitorizarea bateriei, o secvență de cutie de viteze sau o rutină specială de pornire. Un robot poate necesita senzori, evenimente, logică condițională și mai multe huburi care lucrează împreună.
+- **Conduci orice model** de pe un tablou de bord creat de tine: joystickuri, glisoare, butoane, comutatoare, comutatoare pas cu pas, monitoare și comenzi speciale precum volan, pedale, cutie de viteze, frână de mână, semnalizatoare și controler de tren.
+- **Folosești huburi reale**: LEGO® Powered Up, Technic™, Technic Move, BOOST, City, WeDo 2.0, Robot Inventor, BuWizz, SBrick și Mould King. Vezi [Dispozitive acceptate](/docs/Introducing/SupportedDevices).
+- **Folosești un gamepad** (în stil Xbox sau PlayStation) în locul ecranului tactil.
+- **Citești senzori**: bateria și înclinarea hubului, viteza și poziția motorului, senzori de culoare și de distanță, precum și înclinarea telefonului.
+- **Personalizezi tabloul de bord** cu [teme](/docs/Application/Themes/ThemesOverview).
+- **Ai profilurile peste tot**: cu un cont, profilurile se sincronizează între dispozitive și le poți edita în browser pe [mocpilot.com](/docs/Introducing/WebEditor).
+- **Conduci de pe alt dispozitiv**: cu MocPilot Pro, un dispozitiv conectează huburile, iar altul sau editorul web este telecomanda.
+- **Partajezi**: instalezi profiluri din [Catalogul de profiluri](/docs/Application/Profiles/Catalog) și le publici pe ale tale.
 
-MOCPilot este proiectat pentru zona dintre o telecomandă de bază și un mediu complet de programare. Poți începe prin a conduce modelul dintr-un panou pe ecran, apoi poți adăuga logică, senzori și automatizare.
+<Screenshot name="dashboard-run" alt="Un tablou de bord MOCPilot în timpul condusului unui model" width={900} />
 
-## Profiluri
+## Unde rulează MOCPilot {#where-mocpilot-runs}
 
-Un **profil** este centrul de control al unui model.
+| Dispozitiv | Aspect |
+|---|---|
+| Telefoane iPhone și Android | Aspect de telefon: bară inferioară; un profil deschis ocupă tot ecranul, în mod peisaj |
+| iPad și tablete Android | Aspect de tabletă: bară laterală, mai mult loc pentru editor |
+| Computere Mac și Windows | Aspect de desktop: meniuri, comenzi rapide de la tastatură, tabloul de bord în fereastră proprie |
+| Browser pe mocpilot.com | [Editor web](/docs/Introducing/WebEditor): editezi profiluri; huburile sunt conectate de aplicația de pe alt dispozitiv |
 
-Într-un profil poți alege huburile modelului, poți crea programul care rulează modelul și poți proiecta panoul folosit pentru control.
+Detalii în [Telefon, tabletă și desktop](/docs/Introducing/Layouts).
 
-<img src={useBaseUrl('/img/quick-start/my-profiles.png')} alt="Pagina de profiluri MOCPilot" width="420" />
+Huburile, profilurile tale și temele descărcate funcționează și fără internet. Vezi [Lucrul offline](/docs/Application/Account/Sync#working-offline).
 
-<details>
-<summary>Profiluri pregătite</summary>
+## De unde să începi {#where-to-start}
 
-Profilurile pregătite sunt exemple gata făcute pentru seturi oficiale acceptate. Sunt utile când vrei să începi rapid sau să studiezi cum este construit un profil funcțional.
+1. Citește [Cum funcționează MOCPilot](/docs/Introducing/HowItWorks): cinci minute care fac totul mai ușor.
+2. Urmează [Pornirea rapidă](/docs/Introducing/QuickStart) ca să conduci primul model.
+3. Nu știi ce editor să alegi? Compară-le în [Creează un profil](/docs/Application/Profiles/CreateProfile#choose-the-program-type).
 
-<img src={useBaseUrl('/img/quick-start/prebuilt-profiles.png')} alt="Profiluri pregătite MOCPilot" width="420" />
-
-<img src={useBaseUrl('/img/quick-start/prebuilt-blocks.png')} alt="Program cu blocuri pregătit MOCPilot" width="1100" />
-
-</details>
-
-<details>
-<summary>Profiluri personalizate</summary>
-
-Profilurile personalizate sunt pentru propriile MOC-uri și experimente. Poți crea un profil, adăuga huburi, conecta motoare și senzori, construi un program și proiecta un panou potrivit modelului exact.
-
-<img src={useBaseUrl('/img/quick-start/user-create-page.png')} alt="Crearea unui profil MOCPilot personalizat" width="420" />
-
-</details>
-
-## Conectarea huburilor și dispozitivelor
-
-MOCPilot se poate conecta la huburi Bluetooth acceptate și dispozitive compatibile, apoi le face disponibile în profilul tău.
-
-Poți folosi un profil cu un singur hub pentru o construcție simplă sau poți conecta mai multe huburi când modelul are nevoie de mai multe porturi, sisteme de alimentare separate sau module independente.
-
-<img src={useBaseUrl('/img/quick-start/user-hubs-page.png')} alt="Pagina Huburile mele Bluetooth în MOCPilot" width="1100" />
-
-<img src={useBaseUrl('/img/quick-start/hubs-connected.png')} alt="Huburi Bluetooth conectate în MOCPilot" width="1100" />
-
-<details>
-<summary>Exemple de hardware acceptat</summary>
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px', alignItems: 'end', margin: '16px 0'}}>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="LEGO Technic Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Technic Hub</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="LEGO Technic Move Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Technic Move Hub</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro Hub" style={{maxWidth: '130px'}} />
-    <div><strong>BuWizz 3.0</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick Hub" style={{maxWidth: '130px'}} />
-    <div><strong>SBrick</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Mould King</strong></div>
-  </div>
-</div>
-
-Vezi pagina [huburi, motoare și senzori acceptați](/docs/Introducing/SupportedDevices/) pentru lista completă.
-
-</details>
-
-## Construirea logicii cu blocuri
-
-MOCPilot include un constructor vizual de blocuri. Poți crea programe conectând blocuri în loc să scrii cod.
-
-Blocurile pot reacționa la evenimente, controla motoare, citi senzori, lucra cu variabile, folosi intrarea de la gamepad, actualiza controalele panoului și coordona mai multe acțiuni.
-
-MOCPilot acceptă complet gamepadurile fizice conectate. Blocurile de gamepad pot citi butoane, trăgaci, direcții D-pad și stickuri, astfel încât poți mapa un controler real la model când controlul fizic este preferabil ecranului tactil.
-
-<img src={useBaseUrl('/img/quick-start/user-program-blocks.png')} alt="Program MOCPilot construit cu blocuri" width="1100" />
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', alignItems: 'center', margin: '20px 0'}}>
-  <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="Bloc la pornirea programului" />
-  <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="Bloc pornire motor la viteză" />
-  <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="Bloc nivel baterie hub" />
-  <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_value_float.svg')} alt="Bloc valoare volan" />
-</div>
-
-<details>
-<summary>Ce poți face cu programele pe blocuri</summary>
-
-- Pornești, oprești și virezi motoare.
-- Citești nivelul bateriei, tensiunea, înclinarea, orientarea, temperatura și valorile senzorilor.
-- Configurezi controale cu gamepad fizic pentru direcție, accelerație, trăgaci, acțiuni și schimbarea modului.
-- Reacționezi când se schimbă butoane, senzori, temporizatoare sau controale de panou.
-- Creezi verificări de pornire înainte ca modelul să înceapă să se miște.
-- Adaugi logică proprie pentru lumini, calibrarea direcției, moduri de putere și configurarea hubului.
-- Folosești variabile, liste, condiții, bucle, difuzări și blocuri personalizate pentru comportamente complexe.
-
-</details>
-
-## Proiectarea unui panou de condus
-
-Panoul este ecranul folosit în timp ce controlezi modelul. Poate include volane, joystickuri, glisoare, butoane, comutatoare, pedale, monitoare și alte controale.
-
-Poți conecta controalele panoului și intrările gamepadului fizic la blocuri și acțiuni ale hubului, astfel încât interfața să se potrivească modelului.
-
-<img src={useBaseUrl('/img/quick-start/user-dashboard-controllers.png')} alt="Controale de panou MOCPilot" width="1100" />
-
-<img src={useBaseUrl('/img/quick-start/control-screen.png')} alt="Ecran de control MOCPilot cu volan și pedale" width="1100" />
-
-<details>
-<summary>Exemple de panouri</summary>
-
-- Folosește volan și pedale pentru mașini.
-- Folosește glisoare pentru macarale, lifturi și actuatoare liniare.
-- Folosește butoane pentru lumini, claxon, schimbări de viteză sau acțiuni scriptate.
-- Folosește monitoare pentru baterie, viteză, valori de senzori sau stare personalizată a programului.
-- Folosește un gamepad conectat dacă preferi butoane, stickuri și trăgaci fizici în locul comenzilor tactile.
-
-</details>
-
-## Păstrează construcțiile avansate ușor de gestionat
-
-Pe măsură ce modelul crește, profilul poate crește odată cu el. MOCPilot acceptă logică reutilizabilă cu **My Blocks**, configurare de hub specifică profilului, mai multe controale și fluxuri de program care combină controlul manual cu automatizarea.
-
-<img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="Exemplu de utilizare My Blocks în MOCPilot" width="1100" />
-
-Acest lucru ajută la menținerea programelor mari ușor de citit. De exemplu, un profil poate avea un bloc personalizat pentru actualizări de baterie, altul pentru calibrarea direcției și altul pentru un mod special de condus.
-
-## Flux tipic
-
-1. Creează sau deschide un profil.
-2. Adaugă huburile Bluetooth și dispozitivele folosite de model.
-3. Construiește programul cu blocuri.
-4. Proiectează un panou pentru condus și interacțiune.
-5. Apasă **Play**.
-6. Testează, ajustează și îmbunătățește profilul până când modelul se comportă așa cum dorești.
-
-<img src={useBaseUrl('/img/quick-start/connect-hub-flow.png')} alt="Flux de conectare a hubului în MOCPilot" width="1100" />
-
-## Pentru cine este MOCPilot
-
-MOCPilot este util constructorilor care doresc:
-
-- O telecomandă mai bună pentru modele LEGO® motorizate.
-- O modalitate de a controla huburi Bluetooth compatibile de la terți.
-- Un mediu de programare vizuală pentru mecanisme și roboți.
-- Profiluri pregătite pentru seturi oficiale acceptate.
-- Panouri personalizate pentru mașini, camioane, trenuri, crawlere, macarale și alte MOC-uri.
-- O singură aplicație care combină huburi, motoare, senzori, gamepaduri și controale pe ecran.
-
-## Începe explorarea
-
-- Urmează [tutorialul de pornire rapidă](/docs/Introducing/QuickStart/) pentru a crea primul profil.
-- Verifică [dispozitivele acceptate](/docs/Introducing/SupportedDevices/) înainte de a alege hardware.
-- Explorează [documentația BlockBuilder](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing/) când ești gata să adaugi logică.
-- Consultă [actualizarea firmware-ului hubului](/docs/Application/Hubs/FirmwareUpdating/) dacă un hub necesită o versiune firmware acceptată.
+:::note
+LEGO®, sigla LEGO, Powered Up și Technic sunt mărci comerciale ale LEGO Group, care nu sponsorizează, nu autorizează și nu susține MOCPilot.
+:::

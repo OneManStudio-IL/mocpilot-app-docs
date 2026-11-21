@@ -1,191 +1,63 @@
 ---
 id: AboutApp
 title: Om MOCPilot
+description: "MOCPilot gör din telefon, surfplatta eller dator till en fjärrkontroll för LEGO® och kompatibla Bluetooth-modeller."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# MOCPilot - Bygg det. Kör det. Styr allt.
+# MOCPilot: bygg, kör, styr allt
 
-**MOCPilot** är en app för att skapa egna kontrollprofiler för LEGO® och kompatibla Bluetooth-drivna byggen.
+**MOCPilot** gör din telefon, surfplatta eller dator till en fjärrkontroll för LEGO® och kompatibla Bluetooth-modeller: bilar, lastbilar, tåg, kranar, robotar och dina egna MOC:ar.
 
-Den ger byggare en plats för att ansluta hubbar, styra motorer, läsa sensorer, designa instrumentpaneler och skapa visuella program för modeller, mekanismer, bilar, lastbilar, tåg, robotar och egna MOC:er.
+Du utformar kontrollerna själv: en **instrumentpanel** med joystickar, skjutreglage, knappar, rattar och indikatorer. Ett **program** kopplar sedan instrumentpanelen till motorerna och lamporna på dina **hubbar**. MOCPilot har två programredigerare:
 
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', alignItems: 'center', margin: '24px 0'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', margin: '24px 0'}}>
   <div>
-    <img src={useBaseUrl('/img/app_phone.png')} alt="MOCPilot-appen på en telefon" style={{maxWidth: '320px', width: '100%'}} />
+    <img src={useBaseUrl('/img/illustrations/editor_links.svg')} alt="Redigeraren Snabbkopplingar: rader från ingång till hubb" style={{width: '100%'}} />
+    <h3>Snabbkopplingar</h3>
+    <p>Ingen kod. Varje rad kopplar en kontroll till en motor eller lampa: <em>ingång → bearbetning → åtgärd → hubb</em>. En bil är redo att köras på några minuter. <a href="/docs/Application/Links/LinksIntroducing">Läs mer</a>.</p>
   </div>
   <div>
-    <h2>Vad MOCPilot ger dig</h2>
-    <ul>
-      <li>Egna profiler för dina modeller.</li>
-      <li>Färdiga profiler för officiella set som stöds.</li>
-      <li>Anslutning och hantering av Bluetooth-hubbar.</li>
-      <li>Visuell blockprogrammering för automatisering och logik.</li>
-      <li>Instrumentpanelskontroller för att köra och använda modeller.</li>
-      <li>Stöd för LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motorer, sensorer och kompatibla Bluetooth-enheter.</li>
-    </ul>
+    <img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Redigeraren Logikblock: program av block" style={{width: '100%'}} />
+    <h3>Logikblock</h3>
+    <p>Visuella block med händelser, loopar, villkor, variabler och sensordata. För robotar, automation och allt som kräver logik. <a href="/docs/Application/BlockBuilder/Blocks/BlocksIntroducing">Läs mer</a>.</p>
   </div>
 </div>
 
-## Idén
+## Vad du kan göra {#what-you-can-do}
 
-De flesta motoriserade byggen behöver mer än en enkel fjärrkontroll. En bil kan behöva styrning, gas, ljus, batteriövervakning, växellådssekvens eller en särskild startrutin. En robot kan behöva sensorer, händelser, villkorslogik och flera hubbar som arbetar tillsammans.
+- **Kör vilken modell som helst** från en instrumentpanel du själv utformar: joystickar, skjutreglage, knappar, brytare, stegomkopplare, monitorer och specialkontroller som ratt, pedaler, växellåda, handbroms, blinkers och körkontroll för tåg.
+- **Använd riktiga hubbar**: LEGO® Powered Up, Technic™, Technic Move, BOOST, City, WeDo 2.0, Robot Inventor, BuWizz, SBrick och Mould King. Se [Enheter som stöds](/docs/Introducing/SupportedDevices).
+- **Använd en handkontroll** (i Xbox- eller PlayStation-stil) i stället för pekskärmen.
+- **Läs av sensorer**: hubbens batteri och lutning, motorns hastighet och position, färg- och avståndssensorer samt telefonens lutning.
+- **Gör instrumentpanelen till din egen** med [teman](/docs/Application/Themes/ThemesOverview).
+- **Ha dina profiler överallt**: med ett konto synkroniseras profilerna mellan dina enheter, och du kan redigera dem i webbläsaren på [mocpilot.com](/docs/Introducing/WebEditor).
+- **Kör från en annan enhet**: med MocPilot Pro ansluter en enhet hubbarna medan en annan enhet, eller webbredigeraren, är fjärrkontrollen.
+- **Dela**: installera profiler från [Profilkatalogen](/docs/Application/Profiles/Catalog) och publicera dina egna.
 
-MOCPilot är utformat för området mellan en enkel fjärrkontroll och en full programmeringsmiljö. Du kan börja med att köra en modell från en skärmpanel och sedan lägga till logik, sensorer och automatisering.
+<Screenshot name="dashboard-run" alt="En instrumentpanel i MOCPilot medan en modell körs" width={900} />
 
-## Profiler
+## Var MOCPilot fungerar {#where-mocpilot-runs}
 
-En **profil** är kontrollcentret för en modell.
+| Enhet | Layout |
+|---|---|
+| iPhone och Android-telefoner | Telefonlayout: nedre fält; en öppen profil fyller skärmen i liggande läge |
+| iPad och Android-surfplattor | Surfplattelayout: sidofält, mer utrymme för redigeraren |
+| Mac- och Windows-datorer | Datorlayout: menyer, kortkommandon, instrumentpanelen i ett eget fönster |
+| Webbläsare på mocpilot.com | [Webbredigerare](/docs/Introducing/WebEditor): redigera profiler; hubbarna ansluts av appen på en annan enhet |
 
-I en profil kan du välja vilka hubbar som hör till modellen, skapa programmet som kör modellen och designa panelen som används för att styra den.
+Läs mer i [Telefon, surfplatta och dator](/docs/Introducing/Layouts).
 
-<img src={useBaseUrl('/img/quick-start/my-profiles.png')} alt="MOCPilots profilsida" width="420" />
+Hubbar, dina profiler och nedladdade teman fungerar även utan internet. Se [Arbeta offline](/docs/Application/Account/Sync#working-offline).
 
-<details>
-<summary>Förbyggda profiler</summary>
+## Var du ska börja {#where-to-start}
 
-Förbyggda profiler är färdiga exempel för officiella set som stöds. De är användbara när du vill komma igång snabbt eller studera hur en fungerande profil är uppbyggd.
+1. Läs [Så fungerar MOCPilot](/docs/Introducing/HowItWorks): fem minuter som gör allt annat enklare.
+2. Följ [Snabbstart](/docs/Introducing/QuickStart) för att köra din första modell.
+3. Osäker på vilken redigerare du ska välja? Jämför dem i [Skapa en profil](/docs/Application/Profiles/CreateProfile#choose-the-program-type).
 
-<img src={useBaseUrl('/img/quick-start/prebuilt-profiles.png')} alt="Förbyggda MOCPilot-profiler" width="420" />
-
-<img src={useBaseUrl('/img/quick-start/prebuilt-blocks.png')} alt="Förbyggt MOCPilot-blockprogram" width="1100" />
-
-</details>
-
-<details>
-<summary>Egna profiler</summary>
-
-Egna profiler är för dina MOC:er och experiment. Du kan skapa en profil, lägga till hubbar, ansluta motorer och sensorer, bygga ett program och designa en kontrollpanel som passar modellen.
-
-<img src={useBaseUrl('/img/quick-start/user-create-page.png')} alt="Skapa en egen MOCPilot-profil" width="420" />
-
-</details>
-
-## Anslut hubbar och enheter
-
-MOCPilot kan ansluta till Bluetooth-hubbar som stöds och kompatibla enheter och sedan göra dem tillgängliga i din profil.
-
-Du kan använda en profil med en hubb för ett enkelt bygge eller ansluta flera hubbar när modellen behöver fler portar, separata strömsystem eller oberoende moduler.
-
-<img src={useBaseUrl('/img/quick-start/user-hubs-page.png')} alt="Mina Bluetooth-hubbar-sidan i MOCPilot" width="1100" />
-
-<img src={useBaseUrl('/img/quick-start/hubs-connected.png')} alt="Anslutna Bluetooth-hubbar i MOCPilot" width="1100" />
-
-<details>
-<summary>Exempel på maskinvara som stöds</summary>
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px', alignItems: 'end', margin: '16px 0'}}>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="LEGO Technic Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Technic Hub</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="LEGO Technic Move Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Technic Move Hub</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro Hub" style={{maxWidth: '130px'}} />
-    <div><strong>BuWizz 3.0</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick Hub" style={{maxWidth: '130px'}} />
-    <div><strong>SBrick</strong></div>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King Hub" style={{maxWidth: '130px'}} />
-    <div><strong>Mould King</strong></div>
-  </div>
-</div>
-
-Se sidan [hubbar, motorer och sensorer som stöds](/docs/Introducing/SupportedDevices/) för hela listan.
-
-</details>
-
-## Bygg logik med block
-
-MOCPilot innehåller en visuell blockbyggare. Du kan skapa program genom att koppla ihop block i stället för att skriva kod.
-
-Block kan reagera på händelser, styra motorer, läsa sensorer, arbeta med variabler, använda gamepad-inmatning, uppdatera panelkontroller och samordna flera åtgärder.
-
-MOCPilot har fullt stöd för anslutna fysiska gamepads. Gamepad-block kan läsa knappar, triggers, D-pad-riktningar och styrspakar, så att du kan mappa en riktig kontroll till modellen när fysisk styrning känns bättre än pekskärmen.
-
-<img src={useBaseUrl('/img/quick-start/user-program-blocks.png')} alt="MOCPilot-användarprogram byggt med block" width="1100" />
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', alignItems: 'center', margin: '20px 0'}}>
-  <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="Block när programmet startar" />
-  <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="Block starta motor med hastighet" />
-  <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="Block för hubbens batterinivå" />
-  <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_value_float.svg')} alt="Block för rattvärde" />
-</div>
-
-<details>
-<summary>Vad du kan göra med blockprogram</summary>
-
-- Starta, stoppa och styra motorer.
-- Läsa batterinivå, spänning, lutning, orientering, temperatur och sensorvärden.
-- Konfigurera fysisk gamepadstyrning för styrning, gas, triggers, åtgärder och lägesbyte.
-- Reagera när knappar, sensorer, timers eller panelkontroller ändras.
-- Skapa startkontroller innan modellen börjar röra sig.
-- Lägga till egen logik för ljus, styrkalibrering, effektlägen och hubbkonfiguration.
-- Använda variabler, listor, villkor, loopar, broadcasts och egna block för komplext beteende.
-
-</details>
-
-## Designa en körpanel
-
-Instrumentpanelen är skärmen du använder när du styr modellen. Den kan innehålla rattar, joysticks, reglage, knappar, brytare, pedaler, monitorer och andra kontroller.
-
-Du kan koppla panelkontroller och fysisk gamepad-inmatning till block och hubbåtgärder så att gränssnittet passar modellen.
-
-<img src={useBaseUrl('/img/quick-start/user-dashboard-controllers.png')} alt="MOCPilot-panelkontroller" width="1100" />
-
-<img src={useBaseUrl('/img/quick-start/control-screen.png')} alt="MOCPilot-kontrollskärm med ratt och pedaler" width="1100" />
-
-<details>
-<summary>Panelexempel</summary>
-
-- Använd ratt och pedaler för bilar.
-- Använd reglage för kranar, lyftar och linjära aktuatorer.
-- Använd knappar för ljus, tuta, växling eller skriptade åtgärder.
-- Använd monitorer för att visa batteri, hastighet, sensorvärden eller eget programtillstånd.
-- Använd en ansluten gamepad om du föredrar fysiska knappar, spakar och triggers.
-
-</details>
-
-## Håll avancerade byggen hanterbara
-
-När en modell växer kan profilen växa med den. MOCPilot stöder återanvändbar logik med **My Blocks**, profilspecifik hubbinställning, flera kontroller och programflöden som kombinerar manuell styrning med automatisering.
-
-<img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="Exempel på användning av My Blocks i MOCPilot" width="1100" />
-
-Det hjälper till att hålla stora program läsbara. En profil kan till exempel ha ett eget block för batteriuppdateringar, ett annat för styrkalibrering och ett tredje för ett särskilt körläge.
-
-## Typiskt arbetsflöde
-
-1. Skapa eller öppna en profil.
-2. Lägg till Bluetooth-hubbar och enheter som modellen använder.
-3. Bygg programmet med block.
-4. Designa en panel för körning och interaktion.
-5. Tryck på **Play**.
-6. Testa, justera och förbättra profilen tills modellen beter sig som du vill.
-
-<img src={useBaseUrl('/img/quick-start/connect-hub-flow.png')} alt="Flöde för hubbanslutning i MOCPilot" width="1100" />
-
-## Vem MOCPilot är till för
-
-MOCPilot är användbart för byggare som vill ha:
-
-- En bättre fjärrkontroll för motoriserade LEGO®-modeller.
-- Ett sätt att styra kompatibla Bluetooth-hubbar från tredje part.
-- En visuell programmeringsmiljö för mekanismer och robotar.
-- Förbyggda profiler för officiella set som stöds.
-- Egna paneler för bilar, lastbilar, tåg, crawlers, kranar och andra MOC:er.
-- En enda app som kombinerar hubbar, motorer, sensorer, gamepads och skärmkontroller.
-
-## Börja utforska
-
-- Följ [snabbstartsguiden](/docs/Introducing/QuickStart/) för att bygga din första profil.
-- Kontrollera [enheter som stöds](/docs/Introducing/SupportedDevices/) innan du väljer maskinvara.
-- Utforska [BlockBuilder-dokumentationen](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing/) när du är redo att lägga till logik.
-- Läs om [uppdatering av hubb-firmware](/docs/Application/Hubs/FirmwareUpdating/) om en hubb kräver en stödd firmwareversion.
+:::note
+LEGO®, LEGO-logotypen, Powered Up och Technic är varumärken som tillhör LEGO Group, som inte sponsrar, godkänner eller rekommenderar MOCPilot.
+:::

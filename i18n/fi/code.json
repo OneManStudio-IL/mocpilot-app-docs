@@ -68,7 +68,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Leipäteksti",
+    "message": "Navigointipolku",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.colorToggle.ariaLabel": {
@@ -76,11 +76,11 @@
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "tummatila",
+    "message": "tumma tila",
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "vaaleatila",
+    "message": "vaalea tila",
     "description": "The name for the light color mode"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
@@ -92,7 +92,7 @@
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} \"{tagName}\"-tägillä",
+    "message": "{nDocsTagged} tagilla ”{tagName}”",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.paginator.navAriaLabel": {
@@ -151,7 +151,7 @@
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tägitykset:",
+    "message": "Tagit:",
     "description": "The label alongside a tag list"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
@@ -207,7 +207,7 @@
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Kollapsaa sivupalkin kategoria '{label}'",
+    "message": "Supista sivupalkin kategoria '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
@@ -239,11 +239,11 @@
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Kollapsaa sivupalkki",
+    "message": "Supista sivupalkki",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Kollapsaa sivupalkki",
+    "message": "Supista sivupalkki",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.breadcrumbs.home": {
@@ -386,7 +386,7 @@
     "description": "The ARIA label for close key in footer"
   },
   "theme.SearchModal.footer.searchByText": {
-    "message": "Etsi",
+    "message": "Haun tarjoaa",
     "description": "The 'Powered by' text for footer"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
@@ -398,7 +398,7 @@
     "description": "The text for suggested query"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
-    "message": "Luuleeko, että tämän haun pitäisi tuottaa tuloksia?",
+    "message": "Pitäisikö tämän haun mielestäsi tuottaa tuloksia?",
     "description": "The text for reporting missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
@@ -406,7 +406,7 @@
     "description": "The link text for reporting missing results"
   },
   "theme.SearchModal.placeholder": {
-    "message": "Etsi dokumentaatiota",
+    "message": "Hae dokumentaatiosta",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
   "theme.blog.post.plurals": {
@@ -414,7 +414,7 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tägitetty \"{tagName}\"",
+    "message": "{nPosts} tagilla ”{tagName}”",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -434,7 +434,7 @@
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Listaamattomalla sivu",
+    "message": "Listaamaton sivu",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
@@ -458,14 +458,14 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tägitykset",
+    "message": "Tagit",
     "description": "The title of the tag list page"
   },
   "Get Started": {
-    "message": "Aloita"
+    "message": "Pikaopas"
   },
   "Supported devices": {
-    "message": "Tuetut laitteet"
+    "message": "Tuetut hubit, moottorit ja anturit"
   },
   "Download the MOCPilot": {
     "message": "Lataa MOCPilot"
@@ -478,35 +478,35 @@
     "description": "The name for the system color mode"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Laajenna valikkoa",
+    "message": "Laajenna valikko",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Kollapsaa valikkoa",
+    "message": "Supista valikko",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "supportedDevices.largeHub.notAvailableIOS": {
-    "message": "Ei saatavilla iOS:lle",
+    "message": "Ei saatavilla iPhonessa ja iPadissa",
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(avautuu uuteen välilehteen)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
-    "message": "Search docs",
+    "message": "Hae dokumentaatiosta",
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "Kysy toinen kysymys…",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "Vastataan…",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "search",
+    "message": "hae",
     "description": "The hint for the search box enter key text"
   },
   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
@@ -514,89 +514,129 @@
     "description": "The hint for the Ask AI search box enter key text"
   },
   "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "Search",
+    "message": "Haku",
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Takaisin hakusanahakuun",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Takaisin hakusanahakuun",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Viimeaikaiset keskustelut",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "Poista tämä keskustelu historiasta",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "Kysy tekoälyltä: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "Vastaukset tuottaa tekoäly, joka voi tehdä virheitä. Tarkista vastaukset.",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Aiheeseen liittyvät lähteet",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "Mietitään…",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "Copy",
+    "message": "Kopioi",
     "description": "The text for copy button"
   },
   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "Copied!",
+    "message": "Kopioitu!",
     "description": "The text for copy button when copied"
   },
   "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "Copy",
+    "message": "Kopioi",
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Tykkää",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "En tykkää",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "Kiitos palautteestasi!",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "Haetaan…",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "Haetaan: ",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "Haettiin",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Lähetä kysymys",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "Takaisin hakuun",
     "description": "The back to search text for footer"
   },
   "Build It. Drive It. Control Everything.": {
-    "message": "Rakenna se. Aja sitä. Hallitse kaikkea."
+    "message": "Rakenna. Aja. Ohjaa kaikkea."
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Luo mukautettuja profiileja LEGO® Powered Up-, Technic-, BuWizz-, SBrick- ja Mould King -laitteiden, moottoreiden, antureiden sekä yhteensopivien Bluetooth-laitteiden ohjaamiseen yhdellä tehokkaalla sovelluksella."
+  },
+  "howItWorks.profile": {
+    "message": "Profiili = yksi malli",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Kojelauta",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "ohjaimet näytöllä",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Ohjelma",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Logiikkalohkot tai Pikalinkit",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Hubit",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "moottorit, valot, anturit",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Peliohjain",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ Suorita käynnistää ohjelman",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "Bluetoothin kautta",
+    "description": "How it works diagram"
   }
 }

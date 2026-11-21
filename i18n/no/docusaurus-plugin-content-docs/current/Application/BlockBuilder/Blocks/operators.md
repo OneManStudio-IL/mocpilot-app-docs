@@ -1,170 +1,162 @@
 ---
 id: Operators
-title: Operatorer
+title: Operatører
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatorer
+# Operatører {#operators}
 
-Operatorer er rapportør- og boolske blokker som brukes til beregninger, sammenligninger, logikk og tekstbehandling.
+Operatører er rapporterings- og boolske blokker for matematikk, sammenligninger, logikk og tekst.
 
-## Aritmetiske operatorer
+## Matematikk {#math}
 
-### `Pluss` (Nybegynner) {#block_operator_plus}
+### `… + …` (Nybegynner) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Returnerer summen av to verdier.
+Returnerer summen av to tall.
 
-### `Minus` (Nybegynner) {#block_operator_minus}
+### `… − …` (Nybegynner) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Returnerer resultatet av subtraksjon mellom to verdier.
+Trekker det andre tallet fra det første.
 
-### `Multipliser` (Nybegynner) {#block_operator_multiply}
+### `… × …` (Nybegynner) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Returnerer produktet av to verdier.
+Returnerer produktet av to tall.
 
-### `Del` (Nybegynner) {#block_operator_divide}
+### `… ÷ …` (Nybegynner) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Returnerer resultatet av divisjon mellom to verdier.
+Deler det første tallet på det andre.
 
-### `Modulus` (Guru) {#block_operator_modulus}
+### `… mod …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Returnerer resten etter divisjon.
+Returnerer resten etter at det første tallet er delt på det andre.
 
-### `Avrund` (Guru) {#block_operator_round}
+### `rund …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Avrunder til nærmeste heltall (for eksempel `2.6 -> 3`).
+Runder av et tall til nærmeste heltall (for eksempel blir `2.6` til `3`).
 
-### `Matte (én verdi)` (Guru) {#block_operator_math_single}
+### `… av …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Bruker en matematisk funksjon med ett argument.
-
-Tilgjengelige funksjoner:
+Bruker en funksjon på ett tall. Vinkler er i grader.
 
 - `absoluttverdi`: absoluttverdi
-- `heltall mindre`: rund ned
-- `heltall større`: rund opp
+- `heltall mindre`: runder ned til et heltall
+- `heltall større`: runder opp til et heltall
 - `kvadratrot`: kvadratrot
-- `sin`: sinus
-- `cos`: cosinus
-- `tan`: tangens
-- `asin`: invers sinus
-- `acos`: invers cosinus
-- `atan`: invers tangens
-- `ln`: naturlig logaritme (base `e`)
-- `log`: logaritme base `10`
-- `e^`: `e` opphøyd i verdi
-- `10^`: `10` opphøyd i verdi
+- `sin`, `cos`, `tan`: sinus, cosinus og tangens til en vinkel
+- `asin`, `acos`, `atan`: de omvendte funksjonene; de returnerer en vinkel
+- `ln`: naturlig logaritme (grunntall `e`)
+- `log`: logaritme med grunntall 10
+- `e^`: `e` opphøyd i tallet
+- `10^`: `10` opphøyd i tallet
 
-### `Matte (to verdier)` (Guru) {#block_operator_math_pair}
+### `… av … og …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Bruker en matematisk funksjon med to argumenter.
+Bruker en funksjon på to tall.
 
-Tilgjengelige funksjoner:
+- `min`: det minste av de to
+- `max`: det største av de to
+- `pow`: det første tallet opphøyd i det andre
+- `atan2`: vinkelen til punktet som de to tallene angir
+- `hypot`: lengden av hypotenusen med disse to katetene
+- `copysign`: det første tallet med fortegnet til det andre
 
-- `min`: minste verdi
-- `max`: største verdi
-- `potens`: første verdi opphøyd i andre
-- `atan2`: vinkel fra X/Y
-- `hypot`: hypotenuslengde
-- `copysign`: første verdi med fortegn fra andre
-
-### `Velg tilfeldig` (Guru) {#block_operator_pick_random}
+### `velg tilfeldig … til …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Returnerer et tilfeldig tall innenfor valgt område.
+Returnerer et tilfeldig tall mellom de to verdiene.
 
-## Sammenligningsoperatorer
+## Sammenligning {#comparison}
 
-### `Lik` (Nybegynner) {#block_operator_equal}
+### `… = …` (Nybegynner) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Returnerer `true` når to verdier er like.
+Returnerer `true` når de to verdiene er like.
 
-### `Ikke lik` (Avansert) {#block_operator_not_equal}
+### `… ≠ …` (Avansert) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Returnerer `true` når to verdier ikke er like.
+Returnerer `true` når de to verdiene er forskjellige.
 
-### `Større enn` (Nybegynner) {#block_operator_greater_than}
+### `… > …` (Nybegynner) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Returnerer `true` når venstre verdi er større enn høyre.
+Returnerer `true` når verdien til venstre er større enn den til høyre.
 
-### `Mindre enn` (Nybegynner) {#block_operator_less_than}
+### `… < …` (Nybegynner) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Returnerer `true` når venstre verdi er mindre enn høyre.
+Returnerer `true` når verdien til venstre er mindre enn den til høyre.
 
-### `Er mellom` (Avansert) {#block_operator_is_in_between}
+### `er … mellom … og …` (Avansert) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Returnerer `true` når en verdi ligger innenfor angitte grenser.
+Returnerer `true` når tallet ligger mellom de to grensene.
 
-## Boolsk logikk
+## Logikk {#logic}
 
-### `Og` (Avansert) {#block_operator_and}
+### `… og …` (Avansert) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Returnerer `true` kun når begge betingelser er `true`.
+Returnerer `true` bare når begge betingelsene er sanne.
 
-### `Eller` (Avansert) {#block_operator_or}
+### `… eller …` (Avansert) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Returnerer `true` når minst én betingelse er `true`.
+Returnerer `true` når minst én av betingelsene er sann.
 
-### `Ikke` (Avansert) {#block_operator_not}
+### `ikke …` (Avansert) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Inverterer en boolsk verdi.
+Gjør `true` om til `false` og `false` om til `true`.
 
-## Tekstoperatorer
+## Tekst {#text}
 
-### `Slå sammen` (Avansert) {#block_operator_join}
+### `binde … …` (Avansert) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Slår sammen to tekstverdier.
+Slår sammen to tekstbiter til én.
 
-### `Tegn på posisjon` (Guru) {#block_operator_letter_at}
+### `bokstav … av …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Returnerer tegn på valgt posisjon i tekst.
+Returnerer bokstaven på den angitte plassen i teksten. Den første bokstaven er nummer 1.
 
-### `Lengde på tekst` (Avansert) {#block_operator_size_of_string}
+### `lengde av …` (Avansert) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Returnerer lengden på teksten.
+Returnerer antall tegn i teksten.
 
-### `Tekst inneholder` (Guru) {#block_operator_string_contains}
+### `… inneholder …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Returnerer `true` hvis teksten inneholder spesifisert delstreng.
+Returnerer `true` når den første teksten inneholder den andre.

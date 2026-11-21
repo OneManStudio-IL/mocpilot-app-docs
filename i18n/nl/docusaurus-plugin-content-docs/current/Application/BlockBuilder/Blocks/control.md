@@ -5,142 +5,154 @@ title: Besturing
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Besturing
+# Besturing {#control}
 
-Controlblokken beheren de uitvoeringsstroom: wachten, lussen, vertakkingen en het stoppen van scripts.
+Besturingsblokken bepalen hoe een script verloopt: wachten, lussen, vertakkingen en stoppen. Als het profiel hubs heeft, bevat deze categorie ook blokken die hubs verbinden en hun instellingen wijzigen.
 
-## Wachtblokken
+## Wachtblokken {#wait-blocks}
 
-### `Wacht` (Beginner) {#block_control_wait_for}
+### `wachten … seconden` (Beginner) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pauzeert het huidige script voor een opgegeven tijd.
+Pauzeert het script het opgegeven aantal seconden.
 
-### `Wacht tot` (Gevorderd) {#block_control_wait_until}
+### `wacht tot …` (Gevorderd) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pauzeert het huidige script totdat een voorwaarde waar wordt.
+Pauzeert het script tot de voorwaarde waar wordt.
 
-## Lusblokken
+## Lussen {#loops}
 
-### `Herhaal` (Gevorderd) {#block_control_repeat_for}
+### `herhalen …` (Gevorderd) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Voert geneste blokken een vast aantal keren uit.
+Voert de blokken erin het opgegeven aantal keren uit (standaard 10).
 
-### `Herhaal tot` (Gevorderd) {#block_control_repeat_until}
+### `herhalen zolang …` (Gevorderd) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Voert geneste blokken herhaaldelijk uit totdat een voorwaarde waar wordt.
+Voert de blokken erin steeds opnieuw uit tot de voorwaarde waar wordt.
 
-### `Altijd` (Gevorderd) {#block_control_repeat_forever}
+### `altijd herhalen` (Gevorderd) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Voert geneste blokken continu uit totdat het programma of script wordt gestopt.
+Voert de blokken erin steeds opnieuw uit tot het script of het programma stopt. Eronder kan niets worden vastgemaakt.
 
-## Vertakkingsblokken
+## Vertakkingen {#branches}
 
-### `Als` (Beginner) {#block_control_if}
+### `als … dan` (Beginner) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Voert geneste blokken alleen uit wanneer de voorwaarde waar is.
+Voert de blokken erin alleen uit als de voorwaarde waar is.
 
-### `Als / Anders` (Gevorderd) {#block_control_if_else}
+### `als … dan … anders` (Gevorderd) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Voert één tak uit wanneer de voorwaarde waar is, anders wordt de alternatieve tak uitgevoerd.
+Voert de eerste tak uit als de voorwaarde waar is, en anders de tweede tak.
 
-### `Doe dit en dit` (Guru) {#block_control_do_this_and_this}
+### `doe dit … en dit` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Voert twee blokstapels na elkaar uit als onderdeel van één controlestroomoperatie.
+Voert de eerste groep blokken uit, daarna de tweede, en gaat pas dan verder met de blokken eronder.
 
-## Stopblokken
+## Stoppen {#stopping}
 
-### `Stop` (Beginner) {#block_control_stop}
+### `stoppen …` (Beginner) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Stopt de uitvoering van het script (bereik hangt af van de geselecteerde stopoptie).
+Stopt scripts; wat er precies stopt, hangt af van de optie.
 
-- Stopopties: `alles`, `deze stack`, `en programma beëindigen`
+- `alles`: stopt alle scripts.
+- `deze stapel`: stopt alleen dit script.
+- `en programma beëindigen`: stopt het programma.
 
-### `Stop andere stacks` (Guru) {#block_control_stop_other_stacks}
+### `stop andere stapels` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Stopt alle andere actieve stacks terwijl de huidige stack blijft doorgaan.
+Stopt alle andere draaiende scripts; dit script gaat door.
 
-## Hub-/besturingshulpmiddelen
+## Hubblokken {#hub-blocks}
 
-### `Verbinding instellen` (Beginner) {#block_hubs_control_set_connect}
+### `verbinden / verbreken …` (Beginner) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Beheert de verbindingsstatus van de hub vanuit de controlestroomlogica.
+Verbindt de geselecteerde hub met het programma of verbreekt de verbinding.
 
-- Actieopties: `verbinden`, `verbinding verbreken`
+- Opties: `verbinden`, `verbreken`
+- Hubs: alle.
 
-### `Hubconfiguratie instellen` (Gevorderd) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Stelt de geselecteerde hub in op een van de ondersteunde configuratieprofielen.
-
-- Alleen beschikbaar voor hubs die hubconfiguratie-opties bieden.
-- Typisch gebruik: schakel een configureerbare hub, zoals Technic Move Hub, naar een andere opgeslagen configuratie voordat de volgende blokken worden uitgevoerd.
-
-### `Hubconfiguratie` (Gevorderd) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Geeft de huidige configuratie van de geselecteerde hub terug.
-
-- Type: reporterblok
-- Opties voor uitvoerformaat: `text`, `index`
-- Alleen beschikbaar voor hubs die hubconfiguratie-opties bieden.
-- Geeft `NaN` terug wanneer de geselecteerde hub niet is verbonden of er geen configuratie beschikbaar is.
-
-### `Is verbonden` (Beginner) {#block_hubs_all_sensors_is_connected}
+### `… verbonden` (Beginner) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Geeft terug of de hub momenteel verbonden is.
+Geeft `true` terug als de geselecteerde hub verbonden is.
 
-- Type: boolean rapportblok
+- Type: booleaans blok
+- Hubs: alle.
 
-### `BuWizz 2 stel vermogensmodus in` (Beginner) {#block_hubs_buwizz_sensors_set_power_mode}
+### `stel … configuratie naar …` (Gevorderd) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Zet de hub over op een van zijn configuraties.
+
+- Hubs: Technic Move Hub (op dit moment de enige hub met configuraties).
+- Gebruikelijke toepassing: de hub naar een andere configuratie overzetten voordat de volgende blokken worden uitgevoerd.
+
+### `krijg … configuratie als …` (Gevorderd) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Geeft de huidige configuratie van de hub terug.
+
+- Type: waardeblok
+- Uitvoer: `tekst` of `index`
+- Hubs: Technic Move Hub.
+- Geeft `NaN` terug als de hub niet verbonden is of geen configuratie heeft.
+
+### `stel … stroommodus naar …` (Beginner) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Stelt de vermogensmodus van de BuWizz 2 hub in.
+Stelt de vermogensmodus van een BuWizz 2 in.
 
-- Modusopties: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Modi: `Langzaam`, `Normaal`, `Snel`, `Ludicrous`
+- Hubs: BuWizz 2.
 
-### `BuWizz 2 haal vermogensmodus op` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `krijg … stroommodus als …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Geeft de momenteel actieve vermogensmodus van de BuWizz 2 terug.
+Geeft de huidige vermogensmodus van een BuWizz 2 terug.
 
-- Uitvoerformaatopties: `tekst`, `index`
+- Uitvoer: `tekst` of `index`
+- Hubs: BuWizz 2.
 
-### `MouldKing stel besturingskanaal in` (Gevorderd) {#block_hubs_mouldking_control_set_control_channel}
+### `stel … besturingskanaal naar …` (Gevorderd) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Stelt het actieve besturingskanaal in voor ondersteunde MouldKing hub/controller.
+Stelt het besturingskanaal van een Mould King-hub in.
 
-- Kanaalopties: `A`, `B`, `C`
+- Kanalen: `A`, `B`, `C`
+- Hubs: Mould King 4.0 en 6.0.
 
-### `MouldKing haal besturingskanaal op` (Gevorderd) {#block_hubs_mouldking_control_get_control_channel}
+### `krijg … besturingskanaal als …` (Gevorderd) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Geeft het huidige actieve besturingskanaal terug voor ondersteunde MouldKing hub/controller.
+Geeft het huidige besturingskanaal van een Mould King-hub terug.
 
-- Uitvoerformaatopties: `tekst`, `index`
+- Uitvoer: `tekst` of `index`
+- Hubs: Mould King 4.0 en 6.0.

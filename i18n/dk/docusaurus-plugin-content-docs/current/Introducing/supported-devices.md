@@ -1,25 +1,35 @@
 ---
 id: SupportedDevices
 title: Understøttede hubs, motorer og sensorer
+description: "Hubs, motorer og sensorer, der virker med MOCPilot."
 ---
 
 import { SupportedHubsTable, SupportedMotorsTable, SupportedSensorsTable } from '@site/src/components/SupportedDevices';
 
-# ⚙️ Understøttede enheder
+# Understøttede enheder {#supported-devices}
 
-Her er en hurtig oversigt over hubs, motorer og sensorer, som **MOCPilot** understøtter.
+MOCPilot virker med disse hubs, motorer og sensorer. Alle hubs virker med begge programeditorer, [Hurtige forbindelser](/docs/Application/Links/LinksIntroducing) og [Logikblokke](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing).
 
-<details>
-<summary>Hubs</summary>
+## Hubs {#hubs}
+
 <SupportedHubsTable />
-</details>
 
-<details>
-<summary>Motorer</summary>
+Bemærk:
+
+- En profil har 5 hub-slots: 2 er gratis, og 3 mere følger med et køb af ekstra hub-slots eller [MocPilot Pro](/docs/Application/Account/Pro).
+- **Mould King**-hubs modtager kun kommandoer (ingen sensorer, ingen tilbagemelding). Der kan kun bruges én Mould King-type i en profil: op til 3 Mould King 4.0-hubs eller 1 Mould King 6.0.
+- **Robot Inventor**-hubben (LEGO® Large Hub) bruger klassisk Bluetooth og er ikke tilgængelig på iPhone og iPad.
+- Firmwareopdatering og gendannelse er tilgængelig for Technic Hub, Technic Move Hub, BOOST Move Hub og City Hub. Se [Opdatering af firmware](/docs/Application/Hubs/FirmwareUpdating).
+- Hvad hver hub kan ud over motorer og lys, er beskrevet i [Hubspecifikke funktioner](/docs/Application/Hubs/HubFunctions).
+
+## Motorer {#motors}
+
 <SupportedMotorsTable />
-</details>
 
-<details>
-<summary>Sensorer</summary>
+Motorer med encoder (vinkelmotorer, Technic L og XL) rapporterer hastighed og position, så de kan bruges som servoer, dreje et antal grader og køre til bestemte positioner. Simple motorer (togmotor, simpel mellemstor lineær motor) tager kun imod hastighed.
+
+## Sensorer og lys {#sensors-and-lights}
+
 <SupportedSensorsTable />
-</details>
+
+Hubbenes indbyggede sensorer (batteri, hældning, acceleration, temperatur) og sensorerne i din telefon eller tablet kan også bruges. Se [Telefonens sensorer](/docs/Application/Dashboard/PhoneSensors).

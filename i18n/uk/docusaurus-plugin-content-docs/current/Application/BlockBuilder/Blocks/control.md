@@ -1,146 +1,158 @@
 ---
 id: Control
-title: Керування
+title: Контроль
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Керування
+# Контроль {#control}
 
-Блоки керування відповідають за потік виконання: очікування, цикли, розгалуження та зупинку скриптів.
+Блоки контролю визначають, як виконується скрипт: очікування, цикли, розгалуження й зупинка. Коли в профілі є хаби, у цій категорії також є блоки, що підключають хаби й змінюють їхні налаштування.
 
-## Блоки очікування
+## Блоки очікування {#wait-blocks}
 
-### `Чекати` (Початківець) {#block_control_wait_for}
+### `чекати … секунди` (Початківець) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Призупиняє поточний скрипт на вказаний час.
+Призупиняє скрипт на задану кількість секунд.
 
-### `Чекати до` (Просунутий) {#block_control_wait_until}
+### `чекайте до …` (Просунутий) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Призупиняє поточний скрипт, доки умова не стане істинною.
+Призупиняє скрипт, доки умова не стане істинною.
 
-## Блоки циклів
+## Цикли {#loops}
 
-### `Повторити` (Просунутий) {#block_control_repeat_for}
+### `повторити …` (Просунутий) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Виконує вкладені блоки фіксовану кількість разів.
+Виконує блоки всередині задану кількість разів (типово 10).
 
-### `Повторювати до` (Просунутий) {#block_control_repeat_until}
+### `повторювати поки …` (Просунутий) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Повторює вкладені блоки, доки умова не стане істинною.
+Виконує блоки всередині знову й знову, доки умова не стане істинною.
 
-### `Завжди` (Просунутий) {#block_control_repeat_forever}
+### `повторювати завжди` (Просунутий) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Виконує вкладені блоки безперервно, доки програма або скрипт не буде зупинений.
+Виконує блоки всередині знову й знову, доки не зупиниться скрипт або програма. Під ним нічого не можна приєднати.
 
-## Блоки розгалуження
+## Розгалуження {#branches}
 
-### `Якщо` (Початківець) {#block_control_if}
+### `якщо … тоді` (Початківець) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Виконує вкладені блоки лише тоді, коли умова істинна.
+Виконує блоки всередині, лише коли умова істинна.
 
-### `Якщо / Інакше` (Просунутий) {#block_control_if_else}
+### `якщо … тоді … інше` (Просунутий) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Виконує одну гілку, коли умова істинна, інакше виконує альтернативну гілку.
+Виконує першу гілку, коли умова істинна, і другу — в іншому разі.
 
-### `Зробити це і це` (Гуру) {#block_control_do_this_and_this}
+### `зроби це … і це` (Гуру) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Виконує два стеки блоків послідовно в межах однієї операції керування потоком.
+Виконує першу групу блоків, потім другу, і лише після цього переходить до блоків під ним.
 
-## Блоки зупинки
+## Зупинка {#stopping}
 
-### `Зупинити` (Початківець) {#block_control_stop}
+### `зупинити …` (Початківець) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Зупиняє виконання скрипта (область зупинки залежить від вибраного режиму).
+Зупиняє скрипти; що саме зупиняється, залежить від варіанта.
 
-- Варіанти зупинки: `all`, `this stack`, `and exit program`
+- `всі`: зупиняє всі скрипти.
+- `цей стек`: зупиняє лише цей скрипт.
+- `і вийти з програми`: зупиняє програму.
 
-### `Зупинити інші стеки` (Гуру) {#block_control_stop_other_stacks}
+### `зупинити інші стеки` (Гуру) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Зупиняє всі інші запущені стеки, залишаючи поточний стек активним.
+Зупиняє всі інші запущені скрипти; цей продовжує працювати.
 
-## Допоміжні блоки хаба/керування
+## Блоки хабів {#hub-blocks}
 
-### `Встановити підключення` (Початківець) {#block_hubs_control_set_connect}
+### `підключити / від’єднати …` (Початківець) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Керує станом підключення хаба з логіки керування.
+Підключає вибраний хаб до програми або від’єднує його.
 
-- Варіанти дії: `підключити`, `відключити`
+- Варіанти: `підключити`, `від’єднати`
+- Хаби: усі.
 
-### `Установити конфігурацію хаба` (Просунутий) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Установлює вибраний хаб на один із підтримуваних профілів конфігурації.
-
-- Доступно лише для хабів, які надають параметри конфігурації.
-- Типове використання: перемкнути налаштовуваний хаб, наприклад Technic Move Hub, на іншу збережену конфігурацію перед запуском наступних блоків.
-
-### `Конфігурація хаба` (Просунутий) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Повертає поточну конфігурацію вибраного хаба.
-
-- Тип: блок-репортер
-- Варіанти формату виводу: `text`, `index`
-- Доступно лише для хабів, які надають параметри конфігурації.
-- Повертає `NaN`, якщо вибраний хаб не підключено або конфігурація недоступна.
-
-### `Підключено?` (Початківець) {#block_hubs_all_sensors_is_connected}
+### `… підключено` (Початківець) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Повертає, чи хаб зараз підключений.
+Повертає `true`, коли вибраний хаб підключено.
 
-- Тип: логічний репортер-блок
+- Тип: булевий блок
+- Хаби: усі.
 
-### `BuWizz 2: встановити режим потужності` (Початківець) {#block_hubs_buwizz_sensors_set_power_mode}
+### `налаштувати … конфігурацію на …` (Просунутий) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Перемикає хаб на одну з його конфігурацій.
+
+- Хаби: Technic Move Hub (на сьогодні єдиний хаб із конфігураціями).
+- Для чого: перемкнути хаб на іншу конфігурацію перед виконанням наступних блоків.
+
+### `отримати … конфігурація як …` (Просунутий) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Повертає поточну конфігурацію хаба.
+
+- Тип: блок-репортер
+- Результат: `текст` або `індекс`
+- Хаби: Technic Move Hub.
+- Повертає `NaN`, коли хаб не підключено або він не має конфігурації.
+
+### `налаштувати … режим живлення на …` (Початківець) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Встановлює режим потужності хаба BuWizz 2.
+Задає режим потужності BuWizz 2.
 
-- Варіанти режиму: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Режими: `повільний`, `нормальний`, `швидкий`, `Ludicrous`
+- Хаби: BuWizz 2.
 
-### `BuWizz 2: отримати режим потужності` (Гуру) {#block_hubs_buwizz_sensors_get_power_mode}
+### `отримати … режим живлення як …` (Гуру) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Повертає поточний активний режим потужності BuWizz 2.
+Повертає поточний режим потужності BuWizz 2.
 
-- Варіанти формату виводу: `текст`, `індекс`
+- Результат: `текст` або `індекс`
+- Хаби: BuWizz 2.
 
-### `MouldKing: встановити канал керування` (Просунутий) {#block_hubs_mouldking_control_set_control_channel}
+### `налаштувати … канал керування до …` (Просунутий) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Встановлює активний канал керування для підтримуваного хаба/контролера MouldKing.
+Задає канал керування хаба Mould King.
 
-- Варіанти каналу: `A`, `B`, `C`
+- Канали: `A`, `B`, `C`
+- Хаби: Mould King 4.0 і 6.0.
 
-### `MouldKing: отримати канал керування` (Просунутий) {#block_hubs_mouldking_control_get_control_channel}
+### `отримати … канал керування як …` (Просунутий) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Повертає поточний активний канал керування для підтримуваного хаба/контролера MouldKing.
+Повертає поточний канал керування хаба Mould King.
 
-- Варіанти формату виводу: `текст`, `індекс`
+- Результат: `текст` або `індекс`
+- Хаби: Mould King 4.0 і 6.0.

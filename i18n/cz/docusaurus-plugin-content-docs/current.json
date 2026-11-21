@@ -22,5 +22,53 @@
   "sidebar.tutorialSidebar.category.Hubs": {
     "message": "Huby",
     "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.getting-started": {
+    "message": "Začínáme",
+    "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Návody",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.profiles": {
+    "message": "Profily",
+    "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.dashboard": {
+    "message": "Panel",
+    "description": "The label for category 'Dashboard' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.themes": {
+    "message": "Motivy",
+    "description": "The label for category 'Themes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.quick-links": {
+    "message": "Rychlá propojení",
+    "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Přehled bloků",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.logic-blocks": {
+    "message": "Logické bloky",
+    "description": "The label for category 'Logic Blocks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.block-reference": {
+    "message": "Přehled bloků",
+    "description": "The label for category 'Block reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.hubs": {
+    "message": "Huby",
+    "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.account": {
+    "message": "Účet a MocPilot Pro",
+    "description": "The label for category 'Account and MocPilot Pro' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.help": {
+    "message": "Nápověda",
+    "description": "The label for category 'Help' in sidebar 'tutorialSidebar'"
   }
 }

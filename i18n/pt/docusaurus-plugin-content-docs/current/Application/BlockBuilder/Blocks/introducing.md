@@ -1,152 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Introdução aos blocos
+title: Conheça os Blocos lógicos
+description: "Os Blocos lógicos são o editor de programação visual por blocos do MOCPilot: eventos, laços, condições, variáveis, sensores e sons."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Introdução aos blocos
+# Blocos lógicos {#logic-blocks}
 
-O MOCPilot utiliza um sistema de programação visual por blocos que é semelhante ao Scratch.  
-Cada bloco tem um papel específico, e combinações válidas definem o fluxo de controle e de dados dentro de um script.  
-Ele utiliza lógica de arrastar e soltar e padrões de interação semelhantes ao Scratch para oferecer uma forma conveniente e familiar de criar programas.
+**Blocos lógicos** é o editor de programação por blocos do MOCPilot. Você monta programas encaixando blocos, de forma muito parecida com o Scratch: eventos, laços, condições, variáveis, listas, blocos próprios, sons e blocos para motores, luzes, sensores, controles do painel e o gamepad.
 
-:::warning Aviso de compatibilidade
-Este é um sistema de blocos diferente, com seu próprio conjunto de blocos e comportamento.  
-Os programas do MOCPilot não são compatíveis com projetos do Scratch: não é possível importar programas do MOCPilot para o Scratch, nem programas do Scratch para o MOCPilot.
+Escolha os Blocos lógicos quando o seu modelo precisar de lógica: robôs, sequências automáticas, reações a sensores, verificações na inicialização, jogos. Se você só precisa ligar controles a motores, as [Ligações rápidas](/docs/Application/Links/LinksIntroducing) são mais rápidas.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Programa em Blocos lógicos" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Não é o Scratch
+Os Blocos lógicos têm o seu próprio conjunto de blocos e o seu próprio comportamento. Não é possível importar programas do MOCPilot no Scratch, nem projetos do Scratch no MOCPilot.
 :::
 
-## Formas de blocos e significado
+## O editor em resumo {#the-editor-at-a-glance}
 
-### Blocos de início
+<Screenshot name="blocks-editor" alt="Editor dos Blocos lógicos com a paleta e um programa" width={900} />
+
+- A **paleta** lista as categorias de blocos: **Eventos**, **Controle**, **Sensores**, **Sons**, **Operador**, **Variáveis**, **Listas** e **Meus blocos**. Outras categorias aparecem quando o seu perfil precisa delas: **Motores** e **Luz** (quando algum hub os suporta), **Simulador** (quando o painel tem pedais, câmbio ou freio de mão), **Controladores na tela** e **Gamepad**.
+- A **área do programa** é onde você arrasta os blocos e monta os scripts.
+- A barra superior tem **Meus hubs**, **Painel**, **Gamepad**, **Monitor**, **Configurações do editor**, o **Construtor com IA** e **Executar/Parar**.
+
+Veja [Trabalhar no editor](/docs/Application/BlockBuilder/Editor) para mais detalhes.
+
+## Como um programa é executado {#how-a-program-runs}
+
+- Um script começa com um bloco de **evento** (um bloco chapéu): *quando o programa começa*, *quando o botão … pressionado*, *quando eu receber …* e assim por diante.
+- Os blocos encaixados embaixo dele são executados de cima para baixo.
+- Vários scripts são executados **ao mesmo tempo**. Use mensagens (*transmitir*) para coordená-los.
+- Os **laços** (*repetir sempre*, *repetir*, *repetir enquanto*) mantêm um script em andamento; as **condições** (*se*, *se … outro*, *esperar até*) tomam decisões.
+- Os blocos **repórter** (arredondados) retornam valores e se encaixam nas entradas de outros blocos; os blocos **booleanos** (pontudos) retornam verdadeiro ou falso para as condições.
+- As **variáveis** e **listas** guardam valores entre blocos e scripts.
+
+## Formatos dos blocos {#block-shapes}
+
+### Blocos chapéu {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Iniciam um script quando um evento específico ocorre. Os blocos só podem ser anexados abaixo.
+Iniciam um script quando algo acontece. Só é possível encaixar blocos embaixo deles.
 
 ---
 
-### Blocos de pilha
+### Blocos de pilha {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Blocos principais de comando que executam ações.
+Os principais blocos de comando: cada um faz alguma coisa.
 
 ---
 
-### Blocos C
+### Blocos C {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-Blocos de controle em forma de C que contêm pilhas de blocos aninhados (loops/condições).
+Blocos em forma de C que guardam outros blocos dentro: laços e condições.
 
 ---
 
-### Blocos repórter
+### Blocos repórter {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Retornam valores como números ou texto.
+Retornam um valor, como um número ou um texto.
 
 ---
 
-### Blocos booleanos
+### Blocos booleanos {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Retornam apenas `true` ou `false`, geralmente usados em condições.
+Retornam apenas `true` ou `false`. Normalmente são usados em condições.
 
 ---
 
-### Blocos de término
+### Blocos de fim {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Encerram scripts e não permitem blocos abaixo.
+Encerram um script: nada pode ser encaixado embaixo deles.
 
 ---
 
-### Pilha de blocos
+### Pilha de blocos {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-Uma pilha de blocos é uma sequência de blocos conectados que executa como um único fluxo de script de cima para baixo.  
-As pilhas normalmente começam com um bloco de evento e executam os blocos conectados em ordem.
+Uma pilha é um grupo de blocos conectados que é executado como um único script, de cima para baixo.
+Normalmente, uma pilha começa com um bloco de evento, seguido dos blocos que são executados em ordem.
 
 ---
 
-## Modelo de execução de scripts
 
-- Um script normalmente começa com um bloco de evento.
-- Blocos conectados são executados de cima para baixo.
-- Múltiplos scripts podem ser executados em paralelo.
-- Blocos de mensagem/transmissão são usados para sincronizar scripts.
-- Uma pilha de blocos é uma sequência de blocos conectados entre si.
+## Hubs, portas e controles {#hubs-ports-and-controls}
 
-## Dados e valores
+- Os blocos de motor e de luz recebem um **hub** e uma **porta**. As categorias Motores e Luz só aparecem quando algum hub do perfil as suporta, e alguns blocos existem apenas para determinados hubs (por exemplo, os modos de potência do BuWizz ou as funções do Technic Move Hub). A descrição de cada bloco diz com quais hubs ele funciona.
+- Os blocos do painel se referem aos controles pelo nome (**JOY1**, **BTN2**). Não é possível excluir um controle do painel enquanto houver blocos usando-o; remova esses blocos primeiro.
+- Os blocos de gamepad aparecem quando **Ativar blocos de gamepad** está ativado na [página Gamepad](/docs/Application/Dashboard/Gamepad).
 
-- Blocos repórter podem ser usados dentro de entradas de comandos/condições.
-- Variáveis armazenam valores reutilizáveis entre blocos e scripts.
-- Listas armazenam coleções ordenadas para histórico, filas e dados de busca.
+## Níveis dos blocos {#block-levels}
 
-## Eventos e temporização
+Cada perfil tem um **nível dos blocos**: **Iniciante** mostra os blocos mais simples, **Avançado** adiciona os blocos comuns de lógica e de dispositivos, e **Guru** mostra o conjunto completo. Escolha o nível ao criar o perfil ou depois, nas Configurações do editor. Esta referência mostra o nível de cada bloco ao lado do nome.
 
-- Blocos de evento reagem a entrada do usuário, estado do hub, sensores ou mensagens.
-- Eventos baseados em tempo ou sensores podem ser acionados frequentemente.
-- Use limites, filtragem ou pequenas esperas para reduzir acionamentos repetidos.
+## Fluxo de trabalho recomendado {#recommended-workflow}
 
-## Hub, portas e controladores
+1. Comece com um bloco de evento e um script curto; pressione **Executar** e verifique se funciona.
+2. Confira cedo o sentido dos motores e as faixas de valores (um Monitor ajuda).
+3. Divida o programa em scripts pequenos que conversam entre si por mensagens; leve a lógica repetida para [Meus blocos](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Adicione segurança: limites, paradas, uma verificação na inicialização e um plano para quando um hub desconectar.
 
-- Blocos de hub atuam no contexto do hub e das portas.
-- Alguns blocos estão disponíveis apenas para famílias/dispositivos específicos.
-- Blocos de painel e gamepad fornecem entrada em tempo de execução e controle da interface.
+## Erros comuns {#common-pitfalls}
 
-## Fluxo de trabalho recomendado
+- Um script sem bloco de evento nunca começa.
+- O hub ou a porta errada está selecionada, então nada visível acontece.
+- Misturar texto, números e valores booleanos dá resultados inesperados.
+- Eventos muito frequentes sem filtragem (por exemplo, um evento de sensor a cada mínima alteração) podem sobrecarregar o programa; use limiares ou esperas curtas.
 
-1. Comece com um bloco de evento e um script mínimo.
-2. Valide direção e intervalos de motores/sensores logo no início.
-3. Extraia lógica repetida usando mensagens e scripts auxiliares.
-4. Adicione proteções (limites, paradas, valores padrão) antes do ajuste final.
+## Referência dos blocos {#block-reference}
 
-## Armadilhas comuns
+- [Eventos](/docs/Application/BlockBuilder/Blocks/Events) · [Controle](/docs/Application/BlockBuilder/Blocks/Control) · [Operadores](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Variáveis](/docs/Application/BlockBuilder/Blocks/Variables) · [Listas](/docs/Application/BlockBuilder/Blocks/Lists) · [Meus blocos](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Motores](/docs/Application/BlockBuilder/Blocks/Motors) · [Luz](/docs/Application/BlockBuilder/Blocks/Light) · [Sensores](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sons](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulador](/docs/Application/BlockBuilder/Blocks/Simulator) · [Controladores na tela](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Ausência de bloco de evento inicial faz com que o script nunca comece.
-- Seleção incorreta de hub/porta resulta em nenhum efeito visível.
-- Misturar tipos de valor (texto/número/booleano) pode gerar lógica inválida.
-- Eventos de alta frequência sem filtragem podem sobrecarregar o comportamento.
+No app, toque e segure (ou clique com o botão direito) em um bloco e escolha **Sobre o bloco** para abrir a descrição dele aqui.
 
-## Estrutura da documentação nesta seção
-
-Use as páginas de categoria nesta ordem:
-
-- Luz
-- Motores
-- Sensores
-- Eventos
-- Controle
-- Operadores
-- Variáveis
-- Listas
-- Meus Blocos
-- Controladores do painel
-- Gamepad
+Programas prontos: [Exemplos](/docs/Application/BlockBuilder/Examples).

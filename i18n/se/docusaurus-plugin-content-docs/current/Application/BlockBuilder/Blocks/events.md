@@ -5,145 +5,145 @@ title: Händelser
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Händelser
+# Händelser {#events}
 
-Kategorin **Händelser** innehåller block som startar skript när ett villkor inträffar.
+Kategorin **Händelser** innehåller blocken som startar skript när något händer, samt blocken som skickar meddelanden mellan skript. Använd **Lägg till meddelande** och **Ta bort meddelande** högst upp i kategorin för att hantera meddelanden.
 
-## Grundläggande händelser
+## Grundläggande händelser {#core-events}
 
-### `När programmet startar` (Nybörjare) {#block_event_when_program_started}
+### `när programmet startar` (Nybörjare) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Startar detta skript en gång när profilprogrammet börjar.
+Kör sitt skript en gång, när programmet startar.
 
-- Utlösare: programstart
-- Typisk användning: initiera variabler, standardtillstånd för motorer, startljud
+- Typisk användning: ge variabler startvärden, sätta motorerna i startläge, visa ett ”klar”-meddelande.
 
-### `När` (Avancerad) {#block_event_when}
+### `när …` (Avancerad) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Körs när ett valt villkor blir sant.
+Kör sitt skript när villkoret i facket ändras från falskt till sant. Medan skriptet körs väntar blocket; det utlöses igen först när villkoret har blivit falskt och sedan sant ännu en gång.
 
-- Utlösare: villkorsbaserad
-- Typisk användning: förgrena logik baserat på körtidstillstånd
+- Typisk användning: reagera på ett tillstånd, till exempel `när timeren > 5 och brytaren är på`.
 
-### `När timer är större än` (Avancerad) {#block_event_when_timer_greater_than}
+### `när timeren > …` (Avancerad) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Körs när timervärdet passerar ett tröskelvärde.
+Kör sitt skript när programmets timer överstiger värdet (i sekunder).
 
-- Utlösare: förfluten tid
-- Typisk användning: fördröjda åtgärder, tidsstyrda faser
+- Typisk användning: fördröjda åtgärder, tidsstyrda faser. Nollställ timern med **återställ timer** (Sensorer).
 
-### `När meddelande tas emot` (Guru) {#block_event_when_message_recieved}
+### `när jag tar emot …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Startar ett skript när ett matchande broadcast-meddelande tas emot.
+Kör sitt skript när det valda meddelandet skickas ut.
 
-- Utlösare: meddelandekanal
-- Typisk användning: synkronisera flera skript
+- Typisk användning: samordna flera skript.
 
-### `Skicka meddelande` (Guru) {#block_event_broadcast}
+### `överföra …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Skickar ett meddelande till alla skript som lyssnar efter det meddelandet.
+Skickar ett meddelande till alla skript som börjar med **när jag tar emot** för det meddelandet och fortsätter direkt.
 
-- Utlösare: omedelbar sändning
-- Typisk användning: meddela andra skript utan att vänta
+- Typisk användning: be andra skript att starta utan att vänta på dem.
 
-### `Skicka meddelande och vänta` (Guru) {#block_event_broadcast_and_wait}
+### `överföra … och vänta` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Skickar ett meddelande och pausar detta skript tills lyssnarna är klara.
+Skickar ett meddelande och pausar det här skriptet tills alla skript som tog emot det är klara.
 
-- Utlösare: omedelbar sändning + vänta
-- Typisk användning: stegvisa flöden där ordningen är viktig
+- Typisk användning: stegvisa sekvenser där ordningen spelar roll.
 
-## Hubbhändelser
+## Hubbhändelser {#hub-events}
 
-### `Hubbknapp nedtryckt` (Nybörjare) {#block_hubs_all_event_button_pressed}
+De här blocken visas när en hubb i profilen stöder dem. De finns inte för Mould King-hubbar.
+
+### `när … … knapp …` (Nybörjare) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Körs när huvudknappen på hubben trycks ned.
+Körs när en knapp på hubben trycks in eller släpps.
 
-- Tillståndsalternativ: `nedtryckt`, `släppt`, `ändrad`
-- Obs: tillgängliga knappalternativ kan skilja sig mellan olika hubbmodeller (olika hubbar kan exponera olika uppsättningar knappar).
+- Tillstånd: `tryckt`, `släppt`, `ändrad`
+- Hubbar: LEGO Powered Up-hubbar, WeDo 2.0 och Robot Inventor. Listan med knappar beror på hubben.
 
-### `Hubbanslutning ändrad` (Nybörjare) {#block_hubs_all_event_connection_changed}
+### `när … är ansluten / frånkopplad` (Nybörjare) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Körs när hubbens anslutningstillstånd ändras (ansluten eller frånkopplad).
+Körs när hubben ansluts eller kopplas från.
 
-- Utlösare: ändring av hubbens anslutningsstatus
-- Typisk användning: hantering av återanslutning och säkert fallback-beteende efter länkbortfall
+- Typisk användning: stoppa modellen säkert när anslutningen bryts och återställa dess tillstånd när den kommer tillbaka.
 
-### `Hubbbatteri ändrat` (Nybörjare) {#block_hubs_all_event_battery_changed}
+### `när … % batteri ändrat` (Nybörjare) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Körs när rapporterad batterinivå för hubben ändras.
+Körs när batterinivån som hubben rapporterar ändras.
 
-- Utlösare: uppdatering av batterinivå (för hubbar som rapporterar batteristatus)
-- Typisk användning: logik för låg batterinivå och byte till energisparläge
+- Hubbar: de som rapporterar sin batterinivå.
+- Typisk användning: en varning om lågt batteri, byte till ett energisparläge.
 
-### `Hubbaccelerometer ändrad` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `när … accelerometerdata har ändrats` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Körs när accelerationsvärden ändras.
+Körs när hubbens accelerometervärden ändras.
 
-### `Hubblutning ändrad` (Nybörjare) {#block_hubs_all_event_tilt_changed}
+- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `när … lutning … vinkel har ändrats` (Nybörjare) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Körs när lutningsvärdet ändras.
+Körs när hubbens lutningsvinkel ändras.
 
 - Vinkelalternativ: `vilken som helst`, `lutning`, `rullning`, `yaw`
-- Obs: `yaw` är endast tillgängligt på hubbar som tillhandahåller yaw-data.
+- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `yaw` finns bara på Technic Hub och Robot Inventor.
 
-### `Hubborientering ändrad` (Nybörjare) {#block_hubs_all_event_tilt_orientation_changed}
+### `när … orientering har ändrats` (Nybörjare) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Körs när orienteringstillståndet ändras (till exempel fram/upp/ner/vänster/höger).
+Körs när hubbens orientering ändras, det vill säga när en annan sida av hubben vänds uppåt.
 
-## Sensorporthändelser
+- Hubbar: samma som för lutningshändelsen.
 
-### `Technic färgsensorhändelse` (Nybörjare) {#block_hubs_all_event_port_technic_sensor_color}
+## Sensorhändelser {#sensor-events}
+
+De här händelserna läser en sensor som är ansluten till en hubbport. Hubbar: City Hub, Technic Hub, BOOST Move Hub och MINDSTORMS Robot Inventor-hubben (inte SBrick, BuWizz, WeDo 2.0 eller Mould King).
+
+### Technic-sensor: `när färgen är …` (Nybörjare) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Körs när Technic-färgsensorn rapporterar en vald färg.
+Körs när Technic-färgsensorn ser den valda färgen.
 
-### `Technic avståndssensorhändelse` (Nybörjare) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic-sensor: `när … närmare än / längre än / precis på …` (Nybörjare) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Körs när Technic-avståndssensorns värden matchar det valda villkoret.
+Körs när avståndet som Technic-avståndssensorn mäter uppfyller villkoret.
 
-- Jämförelsealternativ: `närmare än`, `längre än`, `precis på`
-- Enhetsalternativ: `mm`, `cm`, `tum`, `%`
-- Obs: tillgängliga enheter kan bero på sensorns läge och ansluten enhet.
+- Jämförelser: `närmare än`, `längre än`, `precis på`
+- Enheter: `mm`, `cm`, `tum`, `%`
 
-### `BOOST avståndssensorhändelse` (Nybörjare) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST-sensor: `när … närmare än / längre än / precis på …` (Nybörjare) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Körs när BOOST-avståndssensorn når valt tröskelvärde/villkor.
+Körs när avståndet som BOOST färg- och avståndssensor mäter uppfyller villkoret.
 
-- Jämförelsealternativ: `närmare än`, `längre än`, `precis på`
-- Enhetsalternativ: `%`, `cm`, `tum`
+- Jämförelser: `närmare än`, `längre än`, `precis på`
+- Enheter: `%`, `cm`, `tum`
 
-### `BOOST färgsensorhändelse` (Nybörjare) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST-sensor: `när färgen är …` (Nybörjare) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Körs när BOOST-sensorn detekterar en vald färg/värde.
+Körs när BOOST färg- och avståndssensor ser den valda färgen.

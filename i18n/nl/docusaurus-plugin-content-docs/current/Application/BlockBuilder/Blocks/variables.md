@@ -5,37 +5,35 @@ title: Variabelen
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Variabelen
+# Variabelen {#variables}
 
-Variabelen slaan waarden op die kunnen worden gelezen en bijgewerkt in blokstapels en scripts.
+Variabelen bewaren waarden die elk script in het programma kan lezen en wijzigen. Je maakt, hernoemt en verwijdert ze met **Maak een variabele**, **Variabele hernoemen** en **Verwijder variabele** bovenaan de categorie. De blokken hieronder verschijnen zodra het programma minstens één variabele heeft.
 
-## Variabele opdrachtblokken
+## Een variabele wijzigen {#changing-a-variable}
 
-### `Stel variabele in op` (Beginner) {#block_variables_set_to}
+### `instellen … naar …` (Beginner) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Stelt de geselecteerde variabele in op de opgegeven waarde.
+Geeft de gekozen variabele een waarde.
 
-- Type: opdrachtblok
-- Typisch gebruik: initialiseren van status, overschrijven van eerdere waarde
+- Gebruikelijke toepassing: een beginwaarde instellen, de vorige waarde vervangen.
 
-### `Verander variabele met` (Gevorderd) {#block_variables_change_by}
+### `veranderen … door …` (Gevorderd) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Voegt de opgegeven hoeveelheid toe aan de geselecteerde variabele.
+Telt een getal op bij de gekozen variabele. Gebruik een negatief getal om af te trekken.
 
-- Type: opdrachtblok
-- Typisch gebruik: tellers, score, geaccumuleerde afstand/tijd
+- Gebruikelijke toepassing: tellers, scores, afstand of tijd optellen.
 
-## Variabele waarde-rapporteur
+## Een variabele lezen {#reading-a-variable}
 
-### `Variabelewaarde` (Beginner) {#block_variables_value}
+### Variabele (Beginner) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Geeft de huidige waarde van de geselecteerde variabele terug.
+Elke variabele heeft een eigen waardeblok met haar naam. Het geeft de huidige waarde van de variabele terug.
 
-- Type: rapporteurblok
-- Typisch gebruik: variabele waarde gebruiken binnen operatoren, voorwaarden en opdrachtinvoer
+- Gebruikelijke toepassing: de waarde gebruiken in operatoren, voorwaarden en de invoervakken van andere blokken.
+- De [Monitor](/docs/Application/BlockBuilder/Editor#monitor) toont de waarden van alle variabelen terwijl het programma draait.

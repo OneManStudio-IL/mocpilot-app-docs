@@ -5,159 +5,170 @@ title: Motorer
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Motorer
+# Motorer {#motors}
 
-Motorblokke bruges til at starte, stoppe, positionere og finjustere motorer, der er forbundet til hub-porte.
+Motorblokke starter, stopper og positionerer motorer, der er tilsluttet hubbens porte, og justerer, hvordan de bevæger sig. Kategorien vises, når en hub i profilen har motorporte. I hver blok vælger du hubben og en eller flere porte.
 
-## Grundlæggende motorkommando-blokke
+Nogle blokke kræver en motor med indbygget rotationssensor (encoder), for eksempel Technic-vinkelmotorerne, og en hub, der kan styre den. Disse blokke er markeret med »encodermotorer«. De er ikke tilgængelige for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 og Mould King-hubs. Technic Move Hub har sit eget sæt blokke sidst på denne side.
 
-### `Start motor` (Begynder) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Starter den valgte motor.
+## Kør motorer {#running-motors}
 
-- Retningsmuligheder: med uret / mod uret
-
-### `Stop motor` (Begynder) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Stopper den valgte motor.
-
-### `Kør i` (Avanceret) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Kører den valgte motor i en angivet tid/vinkel/rotation afhængigt af blokindstillingerne.
-
-- Retningsmuligheder: med uret / mod uret
-- Enhedsmuligheder: `rotationer`, `grader`, `sekunder`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
-
-### `Start motor med hastighed` (Begynder) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Starter motoren med en eksplicit hastighedsværdi.
-
-### `Kør i med hastighed` (Avanceret) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Kører motoren i en målvarighed/-mængde med eksplicit hastighed.
-
-- Enhedsmuligheder: `rotationer`, `grader`, `sekunder`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
-
-### `Sæt motorhastighed` (Avanceret) {#block_hubs_all_motors_port_set_motor_speed}
+### `indstil hastighed til …` (Avanceret) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Sætter hastigheden, der bruges af relaterede motor-køreblokke.
+Indstiller den hastighed (fra −100 til 100 %), som **start motor** og **kør … i** bruger på disse porte. Blokken starter ikke selv motoren.
 
-## Positions- og bevægelsesblokke
+### `start motor …` (Begynder) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Starter motoren i den valgte retning med den hastighed, der er indstillet med **indstil hastighed til**.
 
-### `Go to position` (Avanceret) {#block_hubs_all_motors_port_go_to_position}
+- Retning: med uret eller mod uret
+
+### `start motor ved … % hastighed` (Begynder) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Starter motoren med den angivne hastighed fra −100 til 100 %. En negativ hastighed får den til at dreje den anden vej.
+
+- Typisk brug: kør med et joystick eller en skyder – sæt kontrollens værdi ind i hastighedsfeltet.
+
+### `stop motor` (Begynder) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Stopper motoren.
+
+### `kør … i …` (Avanceret) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Kører motoren i den valgte retning et antal rotationer, grader eller sekunder.
+
+- Retning: med uret eller mod uret
+- Enheder: `rotationer`, `grader`, `sekunder`
+- Kun encodermotorer.
+
+### `kør i … ved … % hastighed` (Avanceret) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Kører motoren et antal rotationer, grader eller sekunder med den angivne hastighed.
+
+- Enheder: `rotationer`, `grader`, `sekunder`
+- Kun encodermotorer.
+
+## Position {#position}
+
+### `gå … til position …` (Avanceret) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Flytter motoren til en absolut målposition.
+Drejer motoren til en absolut position (motorens eget nulmærke).
 
-- Banemuligheder: `korteste vej`, `med uret`, `mod uret`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Vej: `korteste vej`, `med uret`, `mod uret`
+- Kun encodermotorer.
 
-### `Go to relative position` (Begynder) {#block_hubs_all_motors_port_go_to_relative_position}
+### `gå til relativ position … ved … % hastighed` (Begynder) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Flytter motoren med en relativ forskydning.
+Drejer motoren til en position i grader, regnet fra det punkt, der er indstillet med **indstil relativ position**.
 
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Typisk brug: styring med en servo, hvor joystickets værdi giver vinklen.
+- Kun encodermotorer; på BuWizz 3 bruger du blokken nedenfor.
 
-### `BuWizz 3 go to relative position` (Begynder) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `gå til relativ position …` (BuWizz 3) (Begynder) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-BuWizz 3-variant af den relative positioneringsblok.
+BuWizz 3-udgaven af blokken ovenfor uden hastighedsinput.
 
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Hubs: BuWizz 3 med encodermotorer.
 
-### `Sæt relativ position` (Begynder) {#block_hubs_all_motors_port_set_relative_position}
+### `indstil relativ position …` (Begynder) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Sætter reference for motorens relative position.
+Erklærer motorens aktuelle position for at være den angivne værdi. Relative positioner regnes fra den.
 
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Kun encodermotorer.
 
-### `Kalibrér styretøjsstang` (Begynder) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `kalibrer tandstang … center … grader …` (Begynder) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Kalibrerer neutral-/referenceposition for styretøjsstangen.
+Finder midten og vandringen for en styretandstang.
 
-- Krav: motoren, der er tilsluttet den valgte port, skal understøtte absolut/relativ vinkelsporing (intern encoder).
-- Mekanisk krav: bevægelsen af styreaksen skal være fysisk begrænset til et gyldigt område (f.eks. med endestop i styretøjsstang/gearing).
-- Sådan virker det: blokken sweep'er og måler det tilgængelige styreområde og beregner derefter kalibreringsdata til styrekonfigurationen.
-- Outputadfærd: blokargumenter skriver resultater i variabler, der sendes ind i blokken (funktionslignende pass-by-reference-adfærd). Disse variabler ændres af blokken og bør bruges til at læse kalibreringsresultater.
+- Motoren drejer tandstangen til begge ender, måler, hvor langt den kan komme, og lægger resultatet i de to variabler, du sætter ind i felterne: midterpositionen og området i grader. Tandstangen stopper i midten, men dens relative position dér er lig med centerværdien, ikke 0, så tilføj **indstil relativ position** 0 lige efter denne blok; styr derefter med `område × joystick / 100`.
+- Styretøjet skal have faste mekaniske stop i begge ender (enden af tandstangen eller gearingen).
+- Kun encodermotorer.
 
-## Motor-finjustering og sikkerhedsblokke
+## Motorindstillinger {#motor-settings}
 
-### `Sæt motoradfærd ved stop` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `indstil motor til … ved stop` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Sætter motorens stoptilstand (f.eks. bremse/hold/frihjul afhængigt af tilgængelige valg).
+Vælger, hvad motoren gør, når den stopper.
 
-- Stoptilstandsmuligheder: `bremse`, `hold position`, `frihjul`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- `bremse`: stopper hurtigt.
+- `hold position`: holder aktivt sin position (nyttigt til styring).
+- `rulle frit`: løber frit ud.
+- Kun encodermotorer.
 
-### `Sæt stall-detektering` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `tænd for blokering registrering …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Aktiverer eller deaktiverer stall-detektering.
+Slår blokeringsregistrering til eller fra.
 
-- Bemærk: kun tilgængelig for MINDSTORMS Robot Inventor-hubben.
+- Hubs: MINDSTORMS Robot Inventor.
 
-### `Sæt acceleration` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+### `indstil acceleration til …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Sætter motorens accelerationsprofil/-hastighed.
+Vælger, hvor hurtigt motoren kommer op i fart.
 
-- Profilmuligheder: `standard`, `hurtig`, `balanceret`, `jævn`, `langsom`, `meget langsom`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Valg: `standard`, `hurtig`, `balanceret`, `jævn`, `langsom`, `meget langsom`
+- Kun encodermotorer.
 
-### `Sæt deceleration` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+### `indstil deceleration til …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Sætter motorens decelerationsprofil/-hastighed.
+Vælger, hvor hurtigt motoren sænker farten.
 
-- Profilmuligheder: `standard`, `hurtig`, `balanceret`, `jævn`, `langsom`, `meget langsom`
-- Bemærk: denne funktion kræver en motor på den valgte port, som understøtter encoder-baseret styring.
+- Valg: `standard`, `hurtig`, `balanceret`, `jævn`, `langsom`, `meget langsom`
+- Kun encodermotorer.
 
-## Motor-reporterblokke
+## Motorværdier {#motor-values}
 
-### `Position` (Begynder) {#block_hubs_all_motors_port_position}
+### `position` (Begynder) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Returnerer den aktuelle motorposition.
+Returnerer motorens absolutte position.
 
-### `Relativ position` (Begynder) {#block_hubs_all_motors_port_relative_position}
+- Kun encodermotorer.
+
+### `relativ position` (Begynder) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Returnerer den aktuelle relative positionsværdi.
+Returnerer motorens relative position i grader.
 
-### `Hastighed` (Begynder) {#block_hubs_all_motors_port_speed}
+- Kun encodermotorer.
+
+### `hastighed` (Begynder) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Returnerer den aktuelle motorhastighed.
+Returnerer motorens aktuelle hastighed.
 
-### `Effekt` (Avanceret) {#block_hubs_all_motors_port_power}
+### `effekt` (Avanceret) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Returnerer den aktuelle motor-effektværdi.
+Returnerer motorens aktuelle effekt.
 
-- Bemærk: kun tilgængelig for MINDSTORMS Robot Inventor-hubben.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## Technic Move-motorblokke
+## Technic Move Hub {#technic-move-hub}
 
-### `Start motorer med hastighed` (Begynder) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Technic Move Hub driver sine indbyggede motorer med disse blokke i stedet for portblokkene ovenfor.
+
+### `start motorer ved … % hastighed` (Begynder) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Starter Technic Move-drivmotorer med den valgte hastighed.
+Starter drivmotorerne med den angivne hastighed.
 
-### `Strømpuls` (Begynder) {#block_hubs_technicmove_motors_power_pulse}
+### `kraftimpuls` (Begynder) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Sender en strømpulskommando til den valgte Technic Move Hub.
+Sender en kraftimpuls til drivmotorerne.
 
-- Kun tilgængelig for Technic Move Hub.
-- Typisk brug: giv Technic Move-drivsystemet et kort boost eller væk det, før de næste blokke fortsætter.
+- Typisk brug: et kort boost før de næste blokke.
 
-### `Stop motorer` (Begynder) {#block_hubs_technicmove_motors_stop_motors}
+### `stop motorer` (Begynder) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Stopper Technic Move-drivmotorer.
+Stopper drivmotorerne.
 
-### `Bremse` (Begynder) {#block_hubs_technicmove_motors_brake}
+### `sæt motorbremse …` (Begynder) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Anvender bremseadfærd på Technic Move-motorer.
+Slår drivmotorernes bremse til eller fra.
 
-- Bremsemuligheder: `off`, `aktiveret`
+- Valg: `off`, `aktiveret`
 
-### `Sæt styretøjsstang til` (Begynder) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `sæt styring til …` (Begynder) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Sætter målposition/-værdi for styretøjsstangen.
+Drejer styringen til den angivne position.
 
-### `Kalibrér styretøjsstang` (Begynder) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `kalibrer styring` (Begynder) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Kalibrerer Technic Move-styretøjsstangen ved hjælp af hubbens interne kalibreringsalgoritme og automatisk registrering af styreområde.
+Kalibrerer styringen med hubbens egen algoritme, som automatisk finder styringens udslag.
 
-- Bemærk: motoraksen skal være mekanisk begrænset (f.eks. af en styretøjsstangsmekanisme).
+- Styretøjet skal have faste mekaniske stop (for eksempel enderne af styretandstangen).

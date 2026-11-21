@@ -5,140 +5,121 @@ title: Licht
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Licht
+# Licht {#light}
 
-Diese Seite dokumentiert die Blöcke der Kategorie Licht zum Steuern von LEDs und Lichtausgängen auf unterstützten Hubs.
+Lichtblöcke steuern die Statusleuchte des Hubs, an Ports angeschlossene Lichter und die Lichtmatrix unterstützter Hubs. Die Kategorie erscheint, wenn ein Hub im Profil etwas zum Leuchten hat.
 
-## Allgemeine Lichtblöcke
+## Hub- und Port-Lichter {#hub-and-port-lights}
 
-### `LED-Farbe setzen` (Anfänger) {#block_hubs_all_light_set_led_color}
+### `LED-Farbe setzen auf …` (Anfänger) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Setzt die LED-Farbe des Hubs über vordefinierte Farboptionen.
+Stellt die Farbe der Statusleuchte des Hubs ein.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Status anzeigen (bereit, läuft, Warnung, Fehler)
+- Hubs: LEGO Powered Up-Hubs (einschließlich Technic Move Hub), WeDo 2.0 und der Hub von MINDSTORMS Robot Inventor.
+- Typische Verwendung: den Zustand des Modells anzeigen (bereit, läuft, Warnung, Fehler).
 
-### `Licht einschalten auf` (Anfänger) {#block_hubs_all_light_light_turn_to}
+### `einschalten bei … % Helligkeit` (Anfänger) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Setzt den gewählten Lichtausgang auf einen Zielwert bzw. eine Helligkeit.
+Schaltet die am ausgewählten Port angeschlossenen Lichter mit der angegebenen Helligkeit ein.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Scheinwerferhelligkeit, Statusintensität
+- Hubs: alle Hubs mit Ports außer WeDo 2.0.
+- Typische Verwendung: Scheinwerfer, dimmbare Beleuchtung.
 
-### `Licht ausschalten` (Anfänger) {#block_hubs_all_light_light_turn_off}
+### `ausschalten` (Anfänger) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Schaltet den gewählten Lichtausgang aus.
+Schaltet die am ausgewählten Port angeschlossenen Lichter aus.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Abschaltsequenz, Energiesparen
+- Hubs: dieselben wie bei **einschalten bei … % Helligkeit**.
 
-### `Technic Move Licht einschalten auf` (Anfänger) {#block_hubs_technicmove_light_light_turn_to}
+### `Lichter einschalten …` (Anfänger) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variante von `Licht einschalten auf` für Technic Move Hub/Lichtziel.
+Schaltet die Lichter eines Technic Move Hub ein oder aus.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Lichtausgang des Move-Hubs setzen
+- Optionen: `aus`, `auf`
+- Hubs: Technic Move Hub.
 
-## Interne LED-Matrix-Blöcke
+## Lichtmatrix {#light-matrix}
 
-### `Lichtmatrix einschalten` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_image}
+Diese Blöcke arbeiten mit der 5×5-Lichtmatrix, die im Hub von MINDSTORMS Robot Inventor eingebaut ist.
+
+### `einschalten …` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Zeigt das ausgewählte Bild auf der internen LED-Matrix des Hubs an und fährt sofort mit dem nächsten Block im Stapel fort. Das Bild bleibt auf dem Display, bis ein anderer Block die interne LED-Matrix ändert oder das Programm stoppt.
+Zeigt das ausgewählte Bild auf der Lichtmatrix und geht sofort zum nächsten Block über. Das Bild bleibt, bis ein anderer Block die Matrix ändert oder das Programm stoppt.
 
-- Typ: Befehlsblock
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
-
-### `Auf Lichtmatrix schreiben` (Anfänger) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `schreiben …` (Anfänger) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Zeigt eine Textzeichenfolge auf der internen LED-Matrix des Hubs an, indem die Buchstaben nacheinander gescrollt werden.
+Lässt den Text Buchstabe für Buchstabe über die Lichtmatrix laufen.
 
-- Typ: Befehlsblock
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
-
-### `Matrix-Pixel ausschalten` (Anfänger) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `Pixel ausschalten` (Anfänger) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Schaltet alle Lichter auf der internen LED-Matrix des Hubs aus.
+Schaltet alle Pixel der Lichtmatrix aus.
 
-- Typ: Befehlsblock
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
-
-### `Matrix-Pixel setzen` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `Pixel setzen … x … y … Helligkeit …` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Setzt die Helligkeit eines einzelnen Pixels auf der internen LED-Matrix des Hubs. Nur das ausgewählte Pixel wird aktualisiert; der Rest des Displays bleibt unverändert. Die Pixelposition verwendet Spalten- und Zeilenwerte, wobei Pixel `1, 1` in der linken oberen Ecke liegt.
+Stellt die Helligkeit eines Pixels ein; der Rest der Matrix bleibt, wie er ist. `x` ist die Spalte und `y` die Zeile; Pixel `1, 1` liegt in der oberen linken Ecke.
 
-- Typ: Befehlsblock
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
-
-### `Matrixausrichtung drehen` (Fortgeschritten) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `Ausrichtung drehen …` (Fortgeschritten) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Dreht die Ausrichtung dessen, was auf der internen LED-Matrix des Hubs angezeigt wird, im oder gegen den Uhrzeigersinn. Jede Drehung ändert die Displayausrichtung um 90 Grad und wirkt sich auf danach ausgeführte Lichtblöcke aus.
+Dreht das Bild auf der Lichtmatrix um 90 Grad im oder gegen den Uhrzeigersinn. Die neue Ausrichtung gilt für die Lichtblöcke, die danach laufen.
 
-- Typ: Befehlsblock
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
-
-### `Matrixausrichtung setzen` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `Ausrichtung festlegen auf …` (Fortgeschritten) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Setzt die Ausrichtung dessen, was auf der internen LED-Matrix des Hubs angezeigt wird. Die Standardausrichtung ist aufrecht, und die ausgewählte Ausrichtung wirkt sich auf danach ausgeführte Lichtblöcke aus.
+Legt die Ausrichtung des Bildes auf der Lichtmatrix fest. Standardmäßig ist sie `aufrecht`; die neue Ausrichtung gilt für die Lichtblöcke, die danach laufen.
 
-- Typ: Befehlsblock
-- Ausrichtungsoptionen: `aufrecht`, `links`, `rechts`, `kopfüber`
-- Hinweis: Der ausgewählte Hub muss eine interne LED-Matrix haben.
+- Optionen: `aufrecht`, `links`, `rechts`, `auf dem Kopf`
 
-## Lichtblöcke für Entfernungssensoren
+## Lichter des Abstandssensors {#distance-sensor-lights}
 
-### `Entfernungssensor aufleuchten lassen` (Anfänger) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `aufleuchten …` (Anfänger) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Setzt die Lichter am ausgewählten Entfernungssensor. Der Block kann einzelne Sensorlichter ein- oder ausschalten und einen Listen-Reporterblock verwenden, um die Helligkeit jedes Lichts zu steuern.
+Steuert die Lichter um die „Augen“ des Abstandssensors am ausgewählten Port. Sie können jedes Licht ein- oder ausschalten oder eine Liste in das Eingabefeld setzen, um die Helligkeit jedes Lichts festzulegen.
 
-- Typ: Befehlsblock
-- Hinweis: Nur für den MINDSTORMS Robot Inventor Hub verfügbar.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## BuWizz 3 Lichtblöcke
+## Port-LEDs des BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 LED-Farbe setzen` (Anfänger) {#block_hubs_buwizz3_light_port_set_led_color}
+Diese Blöcke stellen die Farbe der LED neben einem Port des BuWizz 3 ein.
+
+### `Setze die Port-LED-Farbe auf …` (Anfänger) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Setzt die LED-Farbe am gewählten BuWizz-3-Port mit integrierten Farboptionen.
+Stellt die Port-LED auf eine der vordefinierten Farben ein.
 
-- Typ: Befehlsblock
-
-### `BuWizz 3 LED-Farbe setzen (String)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Setzt die BuWizz-3-LED-Farbe über einen Textwert.
-
-- Typ: Befehlsblock
-- Typische Verwendung: Dynamische Farbnamen aus Variablen
-
-### `BuWizz 3 LED-Farbe setzen (RGB)` (Fortgeschritten) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `Setze die Port-LED-Farbe auf … … …` (RGB) (Fortgeschritten) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Setzt die BuWizz-3-LED-Farbe über explizite RGB-Kanäle.
+Stellt die Farbe der Port-LED aus Rot-, Grün- und Blauwerten ein.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Volle benutzerdefinierte Farbkonteolle und Verläufe
+- Typische Verwendung: jede beliebige Farbe, fließende Farbwechsel.
+
+### `Setze die Port-LED-Farbe aus String …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Stellt die Farbe der Port-LED aus einem Text ein.
+
+- Typische Verwendung: die Farbe aus einer Variablen oder einer Liste übernehmen.

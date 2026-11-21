@@ -1,106 +1,91 @@
 ---
 id: Gamepad
-title: Gamepad
+title: Herný ovládač
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gamepad
-Bloky Gamepad sa používajú na reakciu na vstup z ovládača a na čítanie aktuálnych hodnôt jeho stavu.
+# Herný ovládač {#gamepad}
 
-## Bloky udalostí
+Bloky herného ovládača reagujú na herný ovládač a čítajú jeho tlačidlá, páčky a spúšte. Kategória sa zobrazí, keď je na [stránke Herný ovládač](/docs/Application/Dashboard/Gamepad) zapnutá voľba **Povoliť bloky gamepadu**. Názvy tlačidiel sa riadia rozložením ovládača: Xbox alebo Sony.
 
-### `Keď tlačidlo gamepadu je` (Začiatočník) {#block_gamepad_event_when_button_is}
+## Udalosti {#events}
+
+### `keď … je …` (Začiatočník) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Spustí sa, keď vybrané tlačidlo gamepadu zodpovedá nastavenému stavu.
+Spustí sa, keď sa vybrané tlačidlo stlačí alebo pustí.
 
-- Typ: blok udalosti
-- Možnosti tlačidiel (Xbox rozloženie): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Možnosti tlačidiel (Sony rozloženie): `krížik`, `kruh`, `štvorec`, `trojuholník`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Možnosti stavu: `stlačené`, `uvoľnené`
+- Tlačidlá (rozloženie Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Tlačidlá (rozloženie Sony): `krížik`, `kruh`, `štvorec`, `trojuholník`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stavy: `stlačené`, `uvoľnené`
 
-### `Keď smerový kríž je` (Začiatočník) {#block_gamepad_event_when_dpad_is}
+### `keď D-Pad … tlačidlo …` (Začiatočník) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Spustí sa, keď smer alebo stav smerového kríža zodpovedá vybranej podmienke.
+Spustí sa, keď sa tlačidlo D-padu stlačí alebo pustí.
 
-- Typ: blok udalosti
-- Možnosti smeru: `hore`, `dole`, `vľavo`, `vpravo`
-- Možnosti stavu: `stlačené`, `uvoľnené`
+- Smery: `hore`, `dole`, `vľavo`, `vpravo`
+- Stavy: `stlačené`, `uvoľnené`
 
-### `Keď páčka gamepadu je` (Začiatočník) {#block_gamepad_event_when_thumbstick_is}
+### `keď … joystick …` (Začiatočník) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Spustí sa, keď stav páčky zodpovedá vybraným možnostiam.
+Spustí sa, keď páčku vychýlite niektorým smerom, pohnete ňou alebo ju pustíte.
 
-Podľa aktuálnych možností tento blok podporuje:
+- Páčka: `ľavý`, `pravý`
+- Stav: `hore`, `dole`, `vľavo`, `vpravo`, `pohnutý`, `uvoľnené`
+- Typické použitie: reagovať na pohyb páčky a po jej pustení model zastaviť alebo vycentrovať.
 
-- Výber páčky: `ľavá` / `pravá`
-- Výber smeru/stavu: `hore`, `dole`, `vľavo`, `vpravo`, `pohyb`, `uvoľnené`
+## Hodnoty {#values}
 
-- Typ: blok udalosti
-- Typické použitie: reakcia na pohyb páčky alebo jej uvoľnenie
-
-## Bloky hodnôt
-
-### `Hodnota tlačidla gamepadu (boolean)` (Začiatočník) {#block_gamepad_button_value_boolean}
+### `je … …` (Začiatočník) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Vracia aktuálny stav vybraného tlačidla gamepadu.
+Vráti `true`, keď je vybrané tlačidlo vo vybranom stave.
 
-- Typ: blok hodnoty
-- Výstup: `true` / `false`
-- Možnosti tlačidiel (Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Možnosti tlačidiel (Sony): `krížik`, `kruh`, `štvorec`, `trojuholník`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Možnosti stavu: `stlačené`, `uvoľnené`
+- Tlačidlá (rozloženie Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Tlačidlá (rozloženie Sony): `krížik`, `kruh`, `štvorec`, `trojuholník`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stavy: `stlačené`, `uvoľnené`
 
-### `Hodnota smerového kríža (boolean)` (Začiatočník) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … tlačidlo …` (Začiatočník) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Vracia, či je vybraný smer smerového kríža aktuálne aktívny.
+Vráti `true`, keď je vybrané tlačidlo D-padu vo vybranom stave.
 
-- Typ: blok hodnoty
-- Výstup: `true` / `false`
-- Možnosti smeru: `hore`, `dole`, `vľavo`, `vpravo`
-- Možnosti stavu: `stlačené`, `uvoľnené`
+- Smery: `hore`, `dole`, `vľavo`, `vpravo`
+- Stavy: `stlačené`, `uvoľnené`
 
-### `Hodnota páčky gamepadu (float)` (Začiatočník) {#block_gamepad_thumbstick_value_float}
+### `joystick … …` (Začiatočník) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Vracia číselnú hodnotu osi páčky.
+Vráti polohu páčky v jednej osi.
 
-- Typ: blok hodnoty
-- Výstup: číslo (float)
-- Predvolený rozsah: `-1` až `1`
-- Voliteľný rozsah v nastaveniach: `-100` až `100`
-- Možnosti páčky: `ľavá`, `pravá`
-- Možnosti osi: `x-os` / `y-os`
+- Páčka: `ľavý`, `pravý`
+- Os: `os X`, `os Y`
+- Rozsah: predvolene od `-1` do `1` alebo od `-100` do `100`, ak to zvolíte v nastavení **Rozsah hodnôt gamepadu** na stránke Herný ovládač.
 
-### `Hodnota tlaku spúšte (float)` (Začiatočník) {#block_gamepad_trigger_pressure_value_float}
+### `… tlak` (Začiatočník) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Vracia hodnotu tlaku spúšte pre vybranú spúšť.
+Vráti, ako hlboko je spúšť stlačená.
 
-- Typ: blok hodnoty
-- Výstup: číslo (float)
-- Predvolený rozsah: `-1` až `1`
-- Voliteľný rozsah v nastaveniach: `-100` až `100`
-- Možnosti spúšte (Xbox): `LT`, `RT`
-- Možnosti spúšte (Sony): `L2`, `R2`
+- Spúšte (rozloženie Xbox): `LT`, `RT`
+- Spúšte (rozloženie Sony): `L2`, `R2`
+- Rozsah: predvolene od `0` (pustená) do `1` alebo od `0` do `100` so širším nastavením **Rozsah hodnôt gamepadu**.

@@ -5,102 +5,87 @@ title: Gamepad
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gamepad
-Blocurile Gamepad sunt utilizate pentru a reacționa la inputul controllerului și pentru a citi valorile curente ale stării gamepad-ului.
+# Gamepad {#gamepad}
 
-## Blocuri de eveniment
+Blocurile gamepadului reacționează la un controler de joc și îi citesc butoanele, stickurile și trăgaciele. Categoria apare când **Activează blocurile gamepad-ului** este activat pe [pagina Gamepad](/docs/Application/Dashboard/Gamepad). Numele butoanelor urmează dispunerea controlerului: Xbox sau Sony.
 
-### `Când butonul gamepad-ului este` (Începător) {#block_gamepad_event_when_button_is}
+## Evenimente {#events}
+
+### `când … este …` (Începător) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Se declanșează când butonul selectat al gamepad-ului corespunde stării configurate.
+Rulează când butonul selectat este apăsat sau eliberat.
 
-- Tip: bloc de eveniment
-- Opțiuni buton (layout Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opțiuni buton (layout Sony): `cross`, `cerc`, `pătrat`, `triunghi`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Opțiuni stare: `apăsat`, `eliberat`
+- Butoane (dispunere Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Butoane (dispunere Sony): `cruce`, `cerc`, `pătrat`, `triunghi`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stări: `apăsat`, `eliberat`
 
-### `Când D-pad-ul gamepad-ului este` (Începător) {#block_gamepad_event_when_dpad_is}
+### `când D-Pad … buton …` (Începător) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Se declanșează când direcția/starea D-pad corespunde condiției selectate.
+Rulează când un buton al D-pad-ului este apăsat sau eliberat.
 
-- Tip: bloc de eveniment
-- Opțiuni direcție: `sus`, `jos`, `stânga`, `dreapta`
-- Opțiuni stare: `apăsat`, `eliberat`
+- Direcții: `sus`, `jos`, `stânga`, `dreapta`
+- Stări: `apăsat`, `eliberat`
 
-### `Când stick-ul gamepad-ului este` (Începător) {#block_gamepad_event_when_thumbstick_is}
+### `când … joystick …` (Începător) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Se declanșează când condiția stick-ului corespunde opțiunilor selectate.
+Rulează când un stick este împins într-o direcție, mișcat sau eliberat.
 
-Pe baza opțiunilor curente, acest bloc suportă:
+- Stick: `stânga`, `dreapta`
+- Stare: `sus`, `jos`, `stânga`, `dreapta`, `mutat`, `eliberat`
+- Utilizare tipică: reacția la mișcarea stickului și oprirea sau centrarea modelului când stickul este eliberat.
 
-- Selectare stick: `stânga` / `dreapta`
-- Selectare direcție/stare: `sus`, `jos`, `stânga`, `dreapta`, `mișcat`, `eliberat`
+## Valori {#values}
 
-- Tip: bloc de eveniment
-- Utilizare tipică: reacție la mișcare direcțională sau eliberarea stick-ului
-
-## Blocuri de valoare
-
-### `Valoare buton gamepad (boolean)` (Începător) {#block_gamepad_button_value_boolean}
+### `este … …` (Începător) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Returnează starea curentă a butonului selectat al gamepad-ului.
+Returnează `true` când butonul selectat este în starea selectată.
 
-- Tip: bloc de valoare
-- Output: `true`/`false`
-- Opțiuni buton (layout Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Opțiuni buton (layout Sony): `cross`, `cerc`, `pătrat`, `triunghi`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Opțiuni stare: `apăsat`, `eliberat`
+- Butoane (dispunere Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Butoane (dispunere Sony): `cruce`, `cerc`, `pătrat`, `triunghi`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Stări: `apăsat`, `eliberat`
 
-### `Valoare buton D-pad gamepad (boolean)` (Începător) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … buton …` (Începător) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Returnează dacă direcția selectată a D-pad-ului este activă în prezent.
+Returnează `true` când butonul selectat al D-pad-ului este în starea selectată.
 
-- Tip: bloc de valoare
-- Output: `true`/`false`
-- Opțiuni direcție: `sus`, `jos`, `stânga`, `dreapta`
-- Opțiuni stare: `apăsat`, `eliberat`
+- Direcții: `sus`, `jos`, `stânga`, `dreapta`
+- Stări: `apăsat`, `eliberat`
 
-### `Valoare stick gamepad (float)` (Începător) {#block_gamepad_thumbstick_value_float}
+### `joystick … …` (Începător) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Returnează valoarea numerică a axei stick-ului.
+Returnează poziția unui stick pe o axă.
 
-- Tip: bloc de valoare
-- Output: numeric (float)
-- Interval implicit: `-1` până la `1`
-- Interval opțional în setările gamepad-ului: `-100` până la `100`
-- Opțiuni stick: `stânga`, `dreapta`
-- Opțiuni axă: `axa X` / `axa Y`
+- Stick: `stânga`, `dreapta`
+- Axă: `axa X`, `axa Y`
+- Interval: implicit de la `-1` la `1` sau de la `-100` la `100`, dacă alegi asta în **Intervalul valorilor gamepad-ului** pe pagina Gamepad.
 
-### `Valoare presiune trigger gamepad (float)` (Începător) {#block_gamepad_trigger_pressure_value_float}
+### `… presiune` (Începător) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Returnează valoarea presiunii trigger-ului selectat.
+Returnează cât de mult este apăsat un trăgaci.
 
-- Tip: bloc de valoare
-- Output: numeric (float)
-- Interval implicit: `-1` până la `1`
-- Interval opțional în setările gamepad-ului: `-100` până la `100`
-- Opțiuni trigger (layout Xbox): `LT`, `RT`
-- Opțiuni trigger (layout Sony): `L2`, `R2`
+- Trăgaci (dispunere Xbox): `LT`, `RT`
+- Trăgaci (dispunere Sony): `L2`, `R2`
+- Interval: implicit de la `0` (eliberat) la `1` sau de la `0` la `100` cu **Intervalul valorilor gamepad-ului** extins.

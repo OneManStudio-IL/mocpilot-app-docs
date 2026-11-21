@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Tutorial de início rápido
+title: Início rápido
+description: "Instale o MOCPilot, entre na sua conta, crie seu primeiro perfil e dirija um modelo em poucos minutos."
 ---
 
-# Início rápido
+import Screenshot from '@site/src/components/Screenshot';
 
-Este guia ajuda você a começar a usar o MOCPilot pela primeira vez.
+# Início rápido {#quick-start}
 
-## 1. Entrar ou criar conta
+Este guia leva você da instalação do app até dirigir seu primeiro modelo. Você precisa de um hub compatível com um motor; veja [Dispositivos compatíveis](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Instale o app {#1-install-the-app}
 
-Recomendamos fortemente usar uma conta.
+O MOCPilot está disponível na App Store (iPhone, iPad, Mac), no Google Play (Android) e na Microsoft Store (Windows). Os links estão em [mocpilot.com](https://mocpilot.com).
 
-- Com conta, seus perfis e configurações são sincronizados entre dispositivos.
-- Sem conta, os dados ficam apenas no dispositivo atual.
-- Se você reinstalar o app sem conta, perderá perfis e configurações.
+## 2. Entre na sua conta ou continue sem conta {#2-sign-in-or-continue-without-an-account}
 
-Você ainda pode usar **Continue without an account**, mas isso não é recomendado para uso regular.
+Na primeira vez que você abre o app, ele pede que você entre. Use seu e-mail ou login e senha, sua conta Google ou Apple ID, ou crie uma conta nova.
 
-## 2. Entender o menu principal
+<Screenshot name="sign-in" alt="A tela de entrada do MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Recomendamos usar uma conta:
 
-A navegação inferior tem 3 seções principais:
+- seus perfis e configurações ficam guardados no servidor e são sincronizados entre seus dispositivos;
+- você recupera seus dados se trocar ou perder um dispositivo;
+- as compras e o MocPilot Pro funcionam em todos os seus dispositivos.
 
-- **Profiles**: perfis prebuilt e perfis pessoais.
-- **Settings**: opções do app e configurações da conta.
-- **Help**: suporte, feedback e links oficiais.
+**Continuar sem conta** também funciona, mas aí tudo fica só neste dispositivo e se perde se você remover o app. Você pode entrar mais tarde em **Configurações → Conta**. Veja [Conta](/docs/Application/Account/UserAccount).
 
-## 3. Revisar configurações importantes
+## 3. Conheça o app {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- No **celular**, a barra inferior tem **Perfis**, **Configurações** e **Ajuda** (e **Notificações** depois que você entrar na sua conta).
+- No **tablet**, as mesmas seções, o **Catálogo de perfis** e a sua conta ficam na barra lateral.
+- No **computador**, use a barra superior: menus à esquerda; Conta, Notificações e Configurações à direita.
 
-Em **Settings**, você pode gerenciar:
+Veja [Celular, tablet e desktop](/docs/Introducing/Layouts).
 
-- som e vibração
-- manter a tela ligada
-- idioma
-- modo escuro
-- conta e sincronização
+## 4. Crie um perfil {#4-create-a-profile}
 
-## 4. Perfis prebuilt
+1. Na página **Meus perfis**, toque em **+** → **Novo perfil** (celular) ou escolha **Novo perfil** (tablet e computador, ou **Arquivo → Novo perfil**).
+2. Escolha o **tipo de programa**:
+   - **Ligações rápidas**, se você quer dirigir um modelo sem código. O melhor para começar.
+   - **Blocos lógicos**, se você quer eventos, laços, condições e sensores.
+3. Digite um **nome** e, se quiser, adicione uma imagem.
+4. Toque em **Criar**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Página Novo perfil com os blocos Blocos lógicos e Ligações rápidas" width={900} />
 
-Use perfis **Prebuilt** para:
+O perfil abre no editor. Mais em [Criar um perfil](/docs/Application/Profiles/CreateProfile).
 
-- controlar rapidamente conjuntos oficiais LEGO e de outros fabricantes.
-- aprender técnicas com exemplos prontos de código em blocos.
-
-:::warning Important
-Perfis prebuilt podem ser alterados para testes, mas as mudanças não são salvas. O perfil é restaurado ao abrir novamente.
+:::tip Quer um modelo pronto?
+Abra o **Catálogo de perfis** (**Pesquisar online** na página de perfis) e instale um perfil oficial para o seu set. Veja [Catálogo e publicação](/docs/Application/Profiles/Catalog).
 :::
 
-Siga esta sequência para um perfil prebuilt:
+## 5. Adicione seu hub {#5-add-your-hub}
 
-1. Abra o perfil prebuilt desejado.
+1. No editor, abra **Meus hubs**.
+2. Toque em **Adicionar um novo hub** em um slot livre, escolha o modelo do seu hub e toque em **Adicionar**.
+3. Ligue o hub, pressione o botão dele e espere o MOCPilot encontrá-lo.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Página Meus hubs com os slots de hub" width={900} />
 
-2. Conecte o hub.
+Se o app pedir uma atualização de firmware, siga [Atualização de firmware](/docs/Application/Hubs/FirmwareUpdating). Mais em [Adicionar e conectar um hub](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Posicione controles no painel {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Abra o **Painel**.
+2. Toque em **+** (**Adicionar controlador**), escolha um **Joystick** e toque em **Adicionar ao painel**.
+3. Arraste-o para onde quiser. Toque nele para mudar o tamanho, a cor ou o comportamento.
 
-3. Selecione o dashboard e pressione **Play**.
+<Screenshot name="controller-palette" alt="Paleta Adicionar controlador com o joystick selecionado" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Veja [Adicionar e organizar controles](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Perfis do usuário
+## 7. Ligue o controle a um motor {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Ligações rápidas:** arraste a entrada do joystick (por exemplo, *JOY1 eixo Y*) de **Entradas** para a linha vazia, adicione a operação **Motor** e a saída **Hub** de **Saídas** e toque na porta em que o motor está ligado. A linha está pronta quando não tem moldura vermelha. Veja [Ligações rápidas](/docs/Application/Links/LinksIntroducing).
 
-Use **My** para seus próprios perfis.
+**Blocos lógicos:** adicione um bloco *quando o programa começa*, um laço *repetir sempre* e um bloco que define a velocidade do motor com o valor do joystick. Veja [Blocos lógicos](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) e os [exemplos](/docs/Application/BlockBuilder/Examples).
 
-- Você pode criar quantos perfis quiser.
-- Você pode iniciar qualquer perfil diretamente desta página.
+## 8. Pressione Executar {#8-press-run}
 
-Siga esta sequência para um perfil do usuário:
+Pressione **Executar** (▶). Mova o joystick, e o motor gira. Pressione **Parar** para voltar à edição.
 
-1. Crie ou importe um perfil.
+Pronto. Próximos passos:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Você pode criar um novo perfil ou importar do dispositivo um arquivo de perfil já criado (`.dat`).
-:::
-
-2. Crie um novo perfil.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Digite o nome desejado. Opcionalmente, escolha uma imagem da sua galeria.
-
-3. Adicione hubs ao perfil.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Por padrão, até **2 hubs** podem ser adicionados a um perfil. Para ampliar para **5**, é necessário comprar slots adicionais de hub.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Abra a página de programa e monte a lógica do modelo conectando blocos.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Abra o dashboard para adicionar controladores na tela que podem ser conectados aos motores do hub.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Pressione **Play** para executar o perfil.
-
-Você está pronto para dirigir e evoluir seu perfil.
-
-## 6. Use Help quando necessário
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-A página **Help** permite:
-
-- abrir o tutorial de início rápido
-- fazer uma pergunta
-- reportar um bug
-- abrir links oficiais do MOCPilot e canais da comunidade
+- Conheça todos os [tipos de controle](/docs/Application/Dashboard/ControlTypes).
+- Dê um novo visual ao painel com [temas](/docs/Application/Themes/ThemesOverview).
+- Conecte um [gamepad](/docs/Application/Dashboard/Gamepad).
+- Se algo não funcionar, veja [Solução de problemas](/docs/Help/Troubleshooting).

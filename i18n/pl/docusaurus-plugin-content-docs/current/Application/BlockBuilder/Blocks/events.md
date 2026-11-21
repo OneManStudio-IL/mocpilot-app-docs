@@ -1,149 +1,149 @@
 ---
 id: Events
-title: Zdarzenia
+title: Wydarzenia
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Zdarzenia
+# Wydarzenia
 
-Kategoria **Zdarzenia** zawiera bloki, które uruchamiają skrypty, gdy wystąpi określony warunek.
+Kategoria **Wydarzenia** zawiera bloki, które uruchamiają skrypty, gdy coś się wydarzy, oraz bloki wysyłające wiadomości między skryptami. Wiadomościami zarządzasz za pomocą przycisków **Dodaj wiadomość** i **Usuń wiadomość** na górze kategorii.
 
-## Zdarzenia podstawowe
+## Podstawowe zdarzenia {#core-events}
 
-### `Gdy program się uruchomi` (Początkujący) {#block_event_when_program_started}
+### `gdy program się uruchamia` (Początkujący) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Uruchamia ten skrypt jednokrotnie przy starcie programu profilu.
+Uruchamia swój skrypt raz, przy starcie programu.
 
-- Wyzwalacz: uruchomienie programu
-- Typowe użycie: inicjalizacja zmiennych, domyślne stany silników, dźwięki startowe
+- Typowe zastosowanie: ustawienie początkowych wartości zmiennych, przywrócenie silników do stanu początkowego, wyświetlenie komunikatu „gotowe”.
 
-### `Gdy` (Zaawansowany) {#block_event_when}
+### `gdy …` (Zaawansowany) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Uruchamia się, gdy wybrany warunek stanie się prawdziwy.
+Uruchamia swój skrypt, gdy warunek w polu zmieni się z fałszu na prawdę. Podczas działania skryptu blok czeka; uruchamia się ponownie dopiero wtedy, gdy warunek stanie się fałszywy, a potem znów prawdziwy.
 
-- Wyzwalacz: warunek
-- Typowe użycie: rozgałęzianie logiki w zależności od stanu działania
+- Typowe zastosowanie: reakcja na stan, na przykład `gdy timer > 5 i przełącznik jest włączony`.
 
-### `Gdy timer większy niż` (Zaawansowany) {#block_event_when_timer_greater_than}
+### `gdy timer > …` (Zaawansowany) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Uruchamia się, gdy wartość timera przekroczy określony próg.
+Uruchamia swój skrypt, gdy stoper programu przekroczy podaną wartość (w sekundach).
 
-- Wyzwalacz: upływ czasu
-- Typowe użycie: opóźnione działania, fazy czasowe
+- Typowe zastosowanie: opóźnione działania, fazy czasowe. Stoper wyzerujesz blokiem **zresetuj timer** (Czujniki).
 
-### `Gdy odebrano wiadomość` (Guru) {#block_event_when_message_recieved}
+### `kiedy otrzymam …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Uruchamia skrypt po odebraniu pasującej wiadomości rozgłoszeniowej.
+Uruchamia swój skrypt, gdy wybrana wiadomość zostanie przekazana.
 
-- Wyzwalacz: kanał wiadomości
-- Typowe użycie: synchronizacja wielu skryptów
+- Typowe zastosowanie: koordynacja kilku skryptów.
 
-### `Nadaj komunikat` (Guru) {#block_event_broadcast}
+### `przekazać …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Wysyła wiadomość do wszystkich skryptów nasłuchujących tego komunikatu.
+Wysyła wiadomość do każdego skryptu, który zaczyna się od bloku **kiedy otrzymam** z tą wiadomością, i od razu przechodzi dalej.
 
-- Wyzwalacz: natychmiastowe wysłanie
-- Typowe użycie: powiadamianie innych skryptów bez oczekiwania
+- Typowe zastosowanie: polecenie innym skryptom, aby ruszyły, bez czekania na nie.
 
-### `Nadaj komunikat i czekaj` (Guru) {#block_event_broadcast_and_wait}
+### `przekazać … i czekać` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Wysyła wiadomość i wstrzymuje ten skrypt, aż odbiorcy zakończą działanie.
+Wysyła wiadomość i wstrzymuje ten skrypt, dopóki wszystkie skrypty, które ją otrzymały, nie zakończą działania.
 
-- Wyzwalacz: natychmiastowe wysłanie + oczekiwanie
-- Typowe użycie: sekwencyjne przepływy, gdzie kolejność ma znaczenie
+- Typowe zastosowanie: sekwencje krok po kroku, w których liczy się kolejność.
 
-## Zdarzenia huba
+## Zdarzenia hubów {#hub-events}
 
-### `Naciśnięto przycisk huba` (Początkujący) {#block_hubs_all_event_button_pressed}
+Te bloki pojawiają się, gdy obsługuje je hub w profilu. Nie istnieją dla hubów Mould King.
+
+### `gdy … … przycisk …` (Początkujący) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Uruchamia się, gdy główny przycisk na hubie zostanie naciśnięty.
+Uruchamia się, gdy przycisk na hubie zostanie naciśnięty lub zwolniony.
 
 - Opcje stanu: `naciśnięty`, `zwolniony`, `zmieniony`
-- Uwaga: dostępne opcje przycisków mogą się różnić w zależności od modelu huba.
+- Huby: huby LEGO Powered Up, WeDo 2.0 i Robot Inventor. Lista przycisków zależy od huba.
 
-### `Zmiana połączenia huba` (Początkujący) {#block_hubs_all_event_connection_changed}
+### `gdy … jest połączony / rozłączony` (Początkujący) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Uruchamia się, gdy stan połączenia huba ulega zmianie (połączony/rozłączony).
+Uruchamia się, gdy hub się połączy lub rozłączy.
 
-- Wyzwalacz: zmiana statusu połączenia
-- Typowe użycie: obsługa ponownego łączenia i bezpieczne zachowanie po utracie połączenia
+- Typowe zastosowanie: bezpieczne zatrzymanie modelu po utracie połączenia i przywrócenie jego stanu, gdy połączenie wróci.
 
-### `Zmiana baterii huba` (Początkujący) {#block_hubs_all_event_battery_changed}
+### `gdy … % bateria zmieniona` (Początkujący) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Uruchamia się, gdy zmienia się raportowany poziom baterii huba.
+Uruchamia się, gdy zmieni się poziom baterii zgłaszany przez hub.
 
-- Wyzwalacz: aktualizacja poziomu baterii
-- Typowe użycie: logika ostrzeżeń o niskim poziomie baterii i tryby oszczędzania energii
+- Huby: te, które zgłaszają poziom baterii.
+- Typowe zastosowanie: ostrzeżenie o słabej baterii, przejście w tryb oszczędzania energii.
 
-### `Zmiana akcelerometru huba` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `gdy … dane akcelerometru zostały zmienione` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Uruchamia się, gdy wartości przyspieszenia ulegają zmianie.
+Uruchamia się, gdy zmienią się wartości akcelerometru huba.
 
-### `Zmiana nachylenia huba` (Początkujący) {#block_hubs_all_event_tilt_changed}
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `gdy … nachylenie … kąt został zmieniony` (Początkujący) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Uruchamia się, gdy zmienia się wartość nachylenia.
+Uruchamia się, gdy zmieni się kąt nachylenia huba.
 
-- Opcje kąta: `dowolny`, `pitch`, `roll`, `yaw`
-- Uwaga: `yaw` dostępny tylko na hubach, które go obsługują.
+- Opcje kąta: `jakikolwiek`, `pochylenie`, `obrót`, `ryskanie`
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `ryskanie` jest dostępne tylko w Technic Hub i Robot Inventor.
 
-### `Zmiana orientacji huba` (Początkujący) {#block_hubs_all_event_tilt_orientation_changed}
+### `gdy … orientacja została zmieniona` (Początkujący) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Uruchamia się, gdy zmienia się stan orientacji (np. przód/góra/dół/lewo/prawo).
+Uruchamia się, gdy zmieni się orientacja huba, czyli gdy do góry zwróci się inna strona huba.
 
-## Zdarzenia portów czujników
+- Huby: te same co dla zdarzenia nachylenia.
 
-### `Zdarzenie czujnika koloru Technic` (Początkujący) {#block_hubs_all_event_port_technic_sensor_color}
+## Zdarzenia czujników {#sensor-events}
+
+Te zdarzenia odczytują czujnik podłączony do portu huba. Huby: City Hub, Technic Hub, BOOST Move Hub i hub MINDSTORMS Robot Inventor (nie SBrick, BuWizz, WeDo 2.0 ani Mould King).
+
+### Czujnik Technic: `gdy kolor jest …` (Początkujący) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Uruchamia się, gdy czujnik koloru Technic wykryje wybrany kolor.
+Uruchamia się, gdy czujnik koloru Technic zobaczy wybrany kolor.
 
-### `Zdarzenie czujnika odległości Technic` (Początkujący) {#block_hubs_all_event_port_technic_sensor_distance}
+### Czujnik Technic: `gdy … bliżej niż / dalej niż / dokładnie na …` (Początkujący) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Uruchamia się, gdy wartości czujnika odległości Technic spełniają wybrany warunek.
+Uruchamia się, gdy odległość zmierzona przez czujnik odległości Technic spełni warunek.
 
 - Opcje porównania: `bliżej niż`, `dalej niż`, `dokładnie na`
-- Opcje jednostek: `mm`, `cm`, `cal`, `%`
-- Uwaga: dostępne jednostki zależą od trybu czujnika i podłączonego urządzenia.
+- Jednostki: `mm`, `cm`, `cal`, `%`
 
-### `Zdarzenie czujnika odległości BOOST` (Początkujący) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Czujnik BOOST: `gdy … bliżej niż / dalej niż / dokładnie na …` (Początkujący) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Uruchamia się, gdy czujnik odległości BOOST osiągnie wybrany próg lub warunek.
+Uruchamia się, gdy odległość zmierzona przez czujnik koloru i odległości BOOST spełni warunek.
 
 - Opcje porównania: `bliżej niż`, `dalej niż`, `dokładnie na`
-- Opcje jednostek: `%`, `cm`, `cal`
+- Jednostki: `%`, `cm`, `cal`
 
-### `Zdarzenie czujnika koloru BOOST` (Początkujący) {#block_hubs_all_event_port_boost_sensor_color}
+### Czujnik BOOST: `gdy kolor jest …` (Początkujący) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Uruchamia się, gdy czujnik BOOST wykryje wybrany kolor lub wartość.
+Uruchamia się, gdy czujnik koloru i odległości BOOST zobaczy wybrany kolor.

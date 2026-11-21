@@ -5,146 +5,145 @@ title: Події
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Події
+# Події {#events}
 
-Категорія **Events** містить блоки, які запускають скрипти, коли виконується умова.
+Категорія **Події** містить блоки, які запускають скрипти, коли щось відбувається, а також блоки, що надсилають повідомлення між скриптами. Керувати повідомленнями можна кнопками **Додати повідомлення** і **Видалити повідомлення** вгорі категорії.
 
-## Базові події
+## Основні події {#core-events}
 
-### `Коли програму запущено` (Початківець) {#block_event_when_program_started}
+### `коли програма запускається` (Початківець) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Запускає цей скрипт один раз, коли починається програма профілю.
+Виконує свій скрипт один раз, під час запуску програми.
 
-- Тригер: запуск програми
-- Типове використання: ініціалізація змінних, стартові стани моторів, стартові звуки
+- Для чого: задати початкові значення змінних, привести мотори в початковий стан, показати повідомлення «готово».
 
-### `Коли` (Просунутий) {#block_event_when}
+### `коли …` (Просунутий) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Спрацьовує, коли вибрана умова стає істинною.
+Виконує свій скрипт, коли умова в полі змінюється з хибної на істинну. Поки скрипт працює, блок чекає; він спрацьовує знову лише після того, як умова стане хибною, а потім знову істинною.
 
-- Тригер: умова
-- Типове використання: розгалуження логіки за поточним станом
+- Для чого: реагувати на стан, наприклад `коли таймер > 5 і перемикач увімкнено`.
 
-### `Коли таймер більше ніж` (Просунутий) {#block_event_when_timer_greater_than}
+### `коли таймер > …` (Просунутий) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Спрацьовує, коли значення таймера перевищує поріг.
+Виконує свій скрипт, коли таймер програми перевищує значення (у секундах).
 
-- Тригер: час, що минув
-- Типове використання: відкладені дії, таймінг фаз
+- Для чого: відкладені дії, етапи за часом. Скинути таймер можна блоком **скинути таймер** (Датчики).
 
-### `Коли отримано повідомлення` (Гуру) {#block_event_when_message_recieved}
+### `коли я отримую …` (Гуру) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Запускає скрипт, коли отримано відповідне broadcast-повідомлення.
+Виконує свій скрипт, коли передано вибране повідомлення.
 
-- Тригер: канал повідомлення
-- Типове використання: синхронізація кількох скриптів
+- Для чого: узгоджувати кілька скриптів.
 
-### `Розіслати` (Гуру) {#block_event_broadcast}
+### `передати …` (Гуру) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Надсилає повідомлення всім скриптам, які слухають цей канал.
+Надсилає повідомлення кожному скрипту, що починається з **коли я отримую** для цього повідомлення, і одразу продовжує роботу.
 
-- Тригер: миттєве надсилання
-- Типове використання: повідомити інші скрипти без очікування
+- Для чого: дати іншим скриптам команду почати, не чекаючи на них.
 
-### `Розіслати і чекати` (Гуру) {#block_event_broadcast_and_wait}
+### `передати … і чекати` (Гуру) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Надсилає повідомлення і призупиняє цей скрипт, поки обробники не завершаться.
+Надсилає повідомлення й призупиняє цей скрипт, доки всі скрипти, що його отримали, не завершаться.
 
-- Тригер: надсилання + очікування
-- Типове використання: поетапні сценарії, де важлива послідовність
+- Для чого: покрокові послідовності, де важливий порядок.
 
-## Події хаба
+## Події хаба {#hub-events}
 
-### `Подія кнопки хаба` (Початківець) {#block_hubs_all_event_button_pressed}
+Ці блоки з’являються, коли їх підтримує хаб профілю. Для хабів Mould King їх немає.
+
+### `коли … кнопка …` (Початківець) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Спрацьовує, коли натискається головна кнопка хаба.
+Спрацьовує, коли кнопку на хабі натиснуто або відпущено.
 
-- Варіанти стану: `натиснуто`, `відпущено`, `змінено`
-- Примітка: доступні варіанти кнопок можуть відрізнятися залежно від моделі хаба.
+- Варіанти стану: `натиснута`, `відпущена`, `змінено`
+- Хаби: хаби LEGO Powered Up, WeDo 2.0 і Robot Inventor. Перелік кнопок залежить від хаба.
 
-### `Зміна підключення хаба` (Початківець) {#block_hubs_all_event_connection_changed}
+### `коли … є підключено / відключено` (Початківець) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Спрацьовує, коли змінюється стан підключення хаба (підключено/відключено).
+Спрацьовує, коли хаб підключається або від’єднується.
 
-- Тригер: зміна статусу зʼєднання
-- Типове використання: обробка перепідключення та безпечний fallback при втраті зв’язку
+- Для чого: безпечно зупинити модель, коли зв’язок втрачено, і відновити її стан, коли він повернеться.
 
-### `Зміна батареї хаба` (Початківець) {#block_hubs_all_event_battery_changed}
+### `коли … % батареї змінена` (Початківець) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Спрацьовує, коли змінюється повідомлений рівень заряду батареї хаба.
+Спрацьовує, коли змінюється рівень заряду, який повідомляє хаб.
 
-- Тригер: оновлення рівня батареї (для хабів, що передають ці дані)
-- Типове використання: логіка попередження про низький заряд і перемикання в еко-режим
+- Хаби: ті, що повідомляють рівень заряду.
+- Для чого: попередження про розряд батареї, перехід в енергоощадний режим.
 
-### `Зміна акселерометра хаба` (Гуру) {#block_hubs_all_event_accelerometer_changed}
+### `коли … дані акселерометра змінено` (Гуру) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Спрацьовує, коли змінюються значення прискорення.
+Спрацьовує, коли змінюються значення акселерометра хаба.
 
-### `Зміна нахилу хаба` (Початківець) {#block_hubs_all_event_tilt_changed}
+- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `коли … нахил … кут змінено` (Початківець) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Спрацьовує, коли змінюється значення нахилу.
+Спрацьовує, коли змінюється кут нахилу хаба.
 
-- Варіанти кута: `будь-яка`, `тангаж`, `крен`, `рискання`
-- Примітка: `рискання` доступне лише на хабах, які надають дані рискання.
+- Варіанти кута: `будь-який`, `тангаж`, `крен`, `рискування`
+- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `рискування` доступне лише на Technic Hub і Robot Inventor.
 
-### `Зміна орієнтації хаба` (Початківець) {#block_hubs_all_event_tilt_orientation_changed}
+### `коли … орієнтацію змінено` (Початківець) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Спрацьовує, коли змінюється стан орієнтації (наприклад, перед/вгору/вниз/ліворуч/праворуч).
+Спрацьовує, коли змінюється орієнтація хаба, тобто коли вгору повернуто іншу його сторону.
 
-## Події портових датчиків
+- Хаби: ті самі, що й для події нахилу.
 
-### `Подія датчика кольору Technic` (Початківець) {#block_hubs_all_event_port_technic_sensor_color}
+## Події датчиків {#sensor-events}
+
+Ці події зчитують датчик, підключений до порту хаба. Хаби: City Hub, Technic Hub, BOOST Move Hub і хаб MINDSTORMS Robot Inventor (не SBrick, BuWizz, WeDo 2.0 чи Mould King).
+
+### Датчик Technic: `коли колір …` (Початківець) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Спрацьовує, коли датчик кольору Technic повертає вибраний колір.
+Спрацьовує, коли датчик кольору Technic бачить вибраний колір.
 
-
-### `Подія датчика відстані Technic` (Початківець) {#block_hubs_all_event_port_technic_sensor_distance}
+### Датчик Technic: `коли … ближче, ніж / далі, ніж / точно на …` (Початківець) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Спрацьовує, коли значення відстані датчика Technic відповідають вибраній умові.
+Спрацьовує, коли відстань, виміряна датчиком відстані Technic, відповідає умові.
 
-- Варіанти порівняння: `ближче ніж`, `далі ніж`, `точно на`
-- Варіанти одиниць: `мм`, `см`, `дюйм`, `відсоток`
-- Примітка: доступні одиниці можуть залежати від режиму датчика та підключеного пристрою.
+- Варіанти порівняння: `ближче, ніж`, `далі, ніж`, `точно на`
+- Одиниці: `мм`, `см`, `дюймі`, `%`
 
-### `Подія датчика відстані BOOST` (Початківець) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Датчик BOOST: `коли … ближче, ніж / далі, ніж / точно на …` (Початківець) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Спрацьовує, коли датчик відстані BOOST досягає вибраного порога/умови.
+Спрацьовує, коли відстань, виміряна датчиком кольору й відстані BOOST, відповідає умові.
 
-- Варіанти порівняння: `ближче ніж`, `далі ніж`, `точно на`
-- Варіанти одиниць: `відсоток`, `см`, `дюйм`
+- Варіанти порівняння: `ближче, ніж`, `далі, ніж`, `точно на`
+- Одиниці: `%`, `см`, `дюймі`
 
-### `Подія датчика кольору BOOST` (Початківець) {#block_hubs_all_event_port_boost_sensor_color}
+### Датчик BOOST: `коли колір …` (Початківець) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Спрацьовує, коли датчик BOOST визначає вибраний колір/значення.
+Спрацьовує, коли датчик кольору й відстані BOOST бачить вибраний колір.

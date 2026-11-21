@@ -5,90 +5,102 @@ title: Firmware aktualisieren
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Firmware aktualisieren
+# Firmware aktualisieren {#firmware-updating}
 
-MOCPilot kann die Firmware unterstützter LEGO Powered Up Hubs aktualisieren, wenn eine neuere kompatible Version verfügbar ist.
+MOCPilot kann die Firmware unterstützter LEGO® Powered Up-Hubs aktualisieren, wenn eine neuere kompatible Version verfügbar ist.
 
-Eine Firmware-Aktualisierung kann erforderlich sein, damit ein Hub korrekt mit MOCPilot arbeitet. Neuere Firmware kann die Kompatibilität verbessern, das Verhalten des Hubs korrigieren und die erwarteten Funktionen dieses Modells verfügbar machen.
+Manche Hubs brauchen ein Update, bevor sie richtig mit MOCPilot funktionieren: Neuere Firmware behebt Fehler im Hub und bringt Funktionen mit, auf die die App angewiesen ist.
 
-## Die Firmware-Aktualisierung wird derzeit für diese Hubs unterstützt
+## Unterstützte Hubs {#supported-hubs}
 
-Die Firmware-Aktualisierung wird derzeit für diese Hubs unterstützt:
+MOCPilot kann diese Hubs aktualisieren:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Vor dem Start
+## Bevor Sie beginnen {#before-you-start}
 
-Stellen Sie vor dem Start sicher, dass der Hub und das Gerät mit MOCPilot ausreichend geladen sind.
+Achten Sie darauf, dass der Hub und Ihr Telefon, Tablet oder Computer genug Akkuladung haben.
 
-Lassen Sie den Hub während des gesamten Vorgangs eingeschaltet und halten Sie Telefon, Tablet oder Computer nahe am Hub, damit die Bluetooth-Verbindung stabil bleibt. Schließen Sie MOCPilot nicht, deaktivieren Sie Bluetooth nicht und schalten Sie den Hub während des Uploads nicht aus.
+Lassen Sie den Hub während des gesamten Updates eingeschaltet und halten Sie Ihr Gerät in seiner Nähe, damit die Bluetooth-Verbindung stabil bleibt. Schließen Sie MOCPilot nicht, schalten Sie Bluetooth nicht aus und schalten Sie den Hub nicht ab, während die Firmware hochgeladen wird.
 
 :::warning Wichtig
-Das Unterbrechen einer Firmware-Aktualisierung kann die Hub-Firmware in einem unvollständigen Zustand belassen. Dann kann eine Firmware-Wiederherstellung erforderlich sein, bevor der Hub wieder verwendet werden kann.
+Ein unterbrochenes Update kann den Hub mit unvollständiger Firmware zurücklassen. Dann muss die Firmware des Hubs eventuell wiederhergestellt werden, bevor Sie ihn wieder verwenden können.
 :::
 
-## Aktualisierung starten
+## Update starten {#starting-the-update}
 
-Beim Verbinden eines Hubs prüft MOCPilot die installierte Firmware-Version. Wenn eine neuere Version erforderlich ist, zeigt die App einen Dialog zur Firmware-Aktualisierung.
+Wenn Sie einen Hub verbinden, prüft MOCPilot seine Firmware-Version. Ist eine neuere Version erforderlich, zeigt die App den Dialog **Firmware-Update erforderlich**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Dialog „Firmware-Update erforderlich“" />
 
-Wählen Sie **Aktualisieren**, um die Firmware-Aktualisierung sofort zu starten.
+Wählen Sie **Aktualisieren**, um das Firmware-Update sofort zu starten.
 
-Wenn Sie jetzt nicht aktualisieren möchten, wählen Sie **Abbrechen**. Sie können die Aktualisierung später über das Kontextmenü des Hubs starten.
+Um später zu aktualisieren, wählen Sie **Abbrechen**. Sie können das Update jederzeit über das Hub-Menü starten.
 
-## Später über das Hub-Menü aktualisieren
+## Später über das Hub-Menü aktualisieren {#updating-later-from-the-hub-menu}
 
-So starten Sie die Firmware-Aktualisierung manuell:
+So starten Sie das Update selbst:
 
 1. Öffnen Sie **Meine Bluetooth-Hubs**.
 2. Suchen Sie den Hub, der aktualisiert werden muss.
-3. Öffnen Sie das Kontextmenü des Hubs.
+3. Öffnen Sie das Hub-Menü.
 4. Wählen Sie **Firmware aktualisieren**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Aktion „Firmware aktualisieren“ im Kontextmenü des Hubs" />
 
-## Während der Firmware-Aktualisierung
+## Während des Firmware-Updates {#during-the-firmware-update}
 
-Nach dem Start lädt MOCPilot die Firmware auf den Hub und zeigt den Fortschritt.
+MOCPilot lädt die Firmware auf den Hub und zeigt den Fortschritt an.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Fortschrittsanzeige des Firmware-Updates" />
 
-Warten Sie, bis der Upload abgeschlossen ist. Der Hub kann neu starten oder vorübergehend getrennt werden, während die neue Firmware angewendet wird.
+Warten Sie, bis der Upload abgeschlossen ist. Der Hub kann kurz neu starten oder die Verbindung trennen, während die neue Firmware übernommen wird.
 
-Nachdem die Firmware hochgeladen wurde, sucht MOCPilot erneut nach dem Hub. Halten Sie den Hub in der Nähe und warten Sie, bis die App die Verbindung wiederherstellt.
+Danach sucht MOCPilot erneut nach dem Hub. Halten Sie den Hub in der Nähe und warten Sie, bis sich die App wieder verbindet.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Firmware hochgeladen, Suche nach dem Hub" />
 
-## Aktualisierung abschließen
+## Update abschließen {#finishing-the-update}
 
-Wenn die Aktualisierung erfolgreich abgeschlossen ist, zeigt MOCPilot einen Bestätigungsdialog.
+Wenn das Update fertig ist, zeigt MOCPilot eine Bestätigung.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Dialog „Firmware-Update abgeschlossen“" />
 
-Wählen Sie **OK**. Der Hub verbindet sich erneut, und die Hub-Karte zeigt die aktualisierte Firmware-Version.
+Wählen Sie **OK**. Der Hub verbindet sich wieder, und seine Karte zeigt die neue Firmware-Version.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Hub-Karte mit der aktualisierten Firmware-Version" />
 
-Sie können den Hub nun weiter mit MOCPilot verwenden.
+Sie können den Hub jetzt weiter mit MOCPilot verwenden.
 
-## Wenn die Aktualisierung fehlschlägt
+## Wenn das Update fehlschlägt {#if-the-update-fails}
 
-Wenn die Aktualisierung nicht erfolgreich abgeschlossen wird, zeigt MOCPilot eine Fehlermeldung zur Firmware-Aktualisierung.
+Schlägt das Update fehl, zeigt MOCPilot eine Fehlermeldung.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Firmware aktualisieren" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Dialog „Firmware-Update fehlgeschlagen“" />
 
-Versuchen Sie zuerst, den Hub aus- und wieder einzuschalten und die Aktualisierung erneut auszuführen:
+Schalten Sie den Hub zuerst aus und wieder ein und führen Sie das Update erneut aus:
 
 1. Schalten Sie den Hub aus.
 2. Schalten Sie den Hub wieder ein.
-3. Halten Sie den Hub nahe bei Ihrem Gerät.
+3. Halten Sie den Hub nah an Ihrem Gerät.
 4. Verbinden Sie den Hub in MOCPilot.
-5. Starten Sie die Firmware-Aktualisierung erneut.
+5. Starten Sie das Firmware-Update erneut.
 
-Wenn der Hub nicht normal reagiert, kann eine Firmware-Wiederherstellung erforderlich sein. Folgen Sie der Anleitung [Hub-Firmware wiederherstellen](/docs/Application/Hubs/RecoveryHubFirmware/) für detaillierte Schritte.
+Reagiert der Hub danach immer noch nicht normal, muss seine Firmware eventuell wiederhergestellt werden: siehe [Firmware-Wiederherstellung des Hubs](/docs/Application/Hubs/RecoveryHubFirmware/).

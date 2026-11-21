@@ -5,142 +5,154 @@ title: Control
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Control
+# Control {#control}
 
-Blocurile de control gestionează fluxul de execuție: așteptare, bucle, ramificare și oprirea scripturilor.
+Blocurile de control decid cum rulează un script: așteptări, bucle, ramificații și oprire. Când profilul are huburi, această categorie conține și blocuri care conectează huburile și le schimbă setările.
 
-## Blocuri de așteptare
+## Blocuri de așteptare {#wait-blocks}
 
-### `Așteaptă` (Începător) {#block_control_wait_for}
+### `aștepta … secunde` (Începător) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pune în pauză scriptul curent pentru un timp specificat.
+Întrerupe scriptul pentru numărul dat de secunde.
 
-### `Așteaptă până când` (Avansat) {#block_control_wait_until}
+### `așteptați până la …` (Avansat) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pune în pauză scriptul curent până când o condiție devine adevărată.
+Întrerupe scriptul până când condiția devine adevărată.
 
-## Blocuri de buclă
+## Bucle {#loops}
 
-### `Repetă` (Avansat) {#block_control_repeat_for}
+### `repeta …` (Avansat) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Execută blocurile incluse de un număr fix de ori.
+Rulează blocurile din interior de numărul dat de ori (implicit 10).
 
-### `Repetă până când` (Avansat) {#block_control_repeat_until}
+### `repeta cât timp …` (Avansat) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Execută blocurile incluse în mod repetat până când o condiție devine adevărată.
+Rulează blocurile din interior iar și iar, până când condiția devine adevărată.
 
-### `La nesfârșit` (Avansat) {#block_control_repeat_forever}
+### `repeta mereu` (Avansat) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Execută blocurile incluse continuu până când programul sau scriptul este oprit.
+Rulează blocurile din interior în mod repetat, până când scriptul sau programul se oprește. Sub el nu se poate atașa nimic.
 
-## Blocuri de ramificare
+## Ramificații {#branches}
 
-### `Dacă` (Începător) {#block_control_if}
+### `dacă … atunci` (Începător) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Execută blocurile incluse doar atunci când condiția este adevărată.
+Rulează blocurile din interior doar când condiția este adevărată.
 
-### `Dacă / Altfel` (Avansat) {#block_control_if_else}
+### `dacă … atunci … altul` (Avansat) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Execută o ramură atunci când condiția este adevărată, altfel execută ramura alternativă.
+Rulează prima ramură când condiția este adevărată, iar a doua în caz contrar.
 
-### `Fă asta și asta` (Guru) {#block_control_do_this_and_this}
+### `fă aceasta … și asta` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Execută două stive de blocuri în secvență ca parte a unei singure operații de control.
+Rulează primul grup de blocuri, apoi pe al doilea și abia după aceea continuă cu blocurile de dedesubt.
 
-## Blocuri de oprire
+## Oprire {#stopping}
 
-### `Oprește` (Începător) {#block_control_stop}
+### `opri …` (Începător) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Oprește execuția scriptului (domeniul depinde de opțiunea selectată).
+Oprește scripturi; ce anume oprește depinde de opțiune.
 
-- Opțiuni de oprire: `toate`, `acest stack`, `și ieși din program`
+- `toate`: oprește toate scripturile.
+- `acest stivă`: oprește doar acest script.
+- `și închide programul`: oprește programul.
 
-### `Oprește celelalte stack-uri` (Guru) {#block_control_stop_other_stacks}
+### `opri alte stive` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Oprește toate celelalte stack-uri care rulează, permițând în același timp stack-ului curent să continue.
+Oprește toate celelalte scripturi care rulează; acesta continuă.
 
-## Blocuri utilitare hub/control
+## Blocuri pentru huburi {#hub-blocks}
 
-### `Setează conectarea` (Începător) {#block_hubs_control_set_connect}
+### `conecta / deconectează …` (Începător) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Controlează starea conexiunii hub-ului din logica fluxului de control.
+Conectează sau deconectează hubul selectat din program.
 
-- Opțiuni acțiune: `conectare`, `deconectare`
+- Opțiuni: `conecta`, `deconectează`
+- Huburi: toate.
 
-### `Setează configurația hubului` (Avansat) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Setează hubul selectat la unul dintre profilurile sale de configurație acceptate.
-
-- Disponibil doar pentru huburi care expun opțiuni de configurație.
-- Utilizare tipică: comută un hub configurabil, cum ar fi Technic Move Hub, la o altă configurație salvată înainte de rularea următoarelor blocuri.
-
-### `Configurația hubului` (Avansat) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Returnează configurația curentă a hubului selectat.
-
-- Tip: bloc raportor
-- Opțiuni format ieșire: `text`, `index`
-- Disponibil doar pentru huburi care expun opțiuni de configurație.
-- Returnează `NaN` când hubul selectat nu este conectat sau nu este disponibilă nicio configurație.
-
-### `Este conectat` (Începător) {#block_hubs_all_sensors_is_connected}
+### `… conectat` (Începător) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Returnează dacă hub-ul este conectat în prezent.
+Returnează `true` când hubul selectat este conectat.
 
-- Tip: bloc reporter boolean
+- Tip: bloc boolean
+- Huburi: toate.
 
-### `BuWizz 2 setează modul de putere` (Începător) {#block_hubs_buwizz_sensors_set_power_mode}
+### `seta … configurația la …` (Avansat) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Trece hubul la una dintre configurațiile sale.
+
+- Huburi: Technic Move Hub (deocamdată singurul hub cu configurații).
+- Utilizare tipică: treci hubul la altă configurație înainte de a rula blocurile următoare.
+
+### `obține … configurație ca …` (Avansat) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Returnează configurația curentă a hubului.
+
+- Tip: bloc raportor
+- Ieșire: `text` sau `index`
+- Huburi: Technic Move Hub.
+- Returnează `NaN` când hubul nu este conectat sau nu are nicio configurație.
+
+### `seta … mod de alimentare la …` (Începător) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Setează modul de putere al hub-ului BuWizz 2.
+Setează modul de putere al unui BuWizz 2.
 
-- Opțiuni mod: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Moduri: `Lentă`, `Normal`, `Rapidă`, `Ludicrous`
+- Huburi: BuWizz 2.
 
-### `BuWizz 2 obține modul de putere` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `obține … modul de putere ca …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Returnează modul de putere activ în prezent pentru BuWizz 2.
+Returnează modul de putere curent al unui BuWizz 2.
 
-- Opțiuni format ieșire: `text`, `index`
+- Ieșire: `text` sau `index`
+- Huburi: BuWizz 2.
 
-### `MouldKing setează canalul de control` (Avansat) {#block_hubs_mouldking_control_set_control_channel}
+### `seta … canal de control către …` (Avansat) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Setează canalul de control activ pentru hub/controller MouldKing suportat.
+Setează canalul de control al unui hub Mould King.
 
-- Opțiuni canal: `A`, `B`, `C`
+- Canale: `A`, `B`, `C`
+- Huburi: Mould King 4.0 și 6.0.
 
-### `MouldKing obține canalul de control` (Avansat) {#block_hubs_mouldking_control_get_control_channel}
+### `obține … canal de control ca …` (Avansat) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Returnează canalul de control activ curent pentru hub/controller MouldKing suportat.
+Returnează canalul de control curent al unui hub Mould King.
 
-- Opțiuni format ieșire: `text`, `index`
+- Ieșire: `text` sau `index`
+- Huburi: Mould King 4.0 și 6.0.

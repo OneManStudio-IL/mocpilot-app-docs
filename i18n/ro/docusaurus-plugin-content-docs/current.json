@@ -22,5 +22,53 @@
   "sidebar.tutorialSidebar.category.Hubs": {
     "message": "Huburi",
     "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.getting-started": {
+    "message": "Primii pași",
+    "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Tutoriale",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.profiles": {
+    "message": "Profiluri",
+    "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.dashboard": {
+    "message": "Tablou de bord",
+    "description": "The label for category 'Dashboard' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.themes": {
+    "message": "Teme",
+    "description": "The label for category 'Themes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.quick-links": {
+    "message": "Legături rapide",
+    "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Referința blocurilor",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.logic-blocks": {
+    "message": "Blocuri logice",
+    "description": "The label for category 'Logic Blocks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.block-reference": {
+    "message": "Referința blocurilor",
+    "description": "The label for category 'Block reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.hubs": {
+    "message": "Huburi",
+    "description": "The label for category 'Hubs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.account": {
+    "message": "Cont și MocPilot Pro",
+    "description": "The label for category 'Account and MocPilot Pro' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.help": {
+    "message": "Ajutor",
+    "description": "The label for category 'Help' in sidebar 'tutorialSidebar'"
   }
 }

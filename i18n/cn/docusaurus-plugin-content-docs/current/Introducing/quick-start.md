@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: 快速入门教程
+title: 快速入门
+description: "安装 MOCPilot、登录、创建第一个配置文件，几分钟内就能驾驶模型。"
 ---
 
-# 快速入门
+import Screenshot from '@site/src/components/Screenshot';
 
-本指南将帮助你第一次开始使用 MOCPilot。
+# 快速入门 {#quick-start}
 
-## 1. 登录或创建账户
+本指南将带你从安装应用一直到驾驶你的第一个模型。你需要一个受支持的集线器和一个电机；参见[支持的设备](/docs/Introducing/SupportedDevices)。
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. 安装应用 {#1-install-the-app}
 
-我们强烈建议使用账户。
+MOCPilot 可在 App Store（iPhone、iPad、Mac）、Google Play（Android）和 Microsoft Store（Windows）下载。下载链接可在 [mocpilot.com](https://mocpilot.com) 上找到。
 
-- 使用账户后，你的配置文件和设置会在所有设备间同步。
-- 不使用账户时，数据只保存在当前设备。
-- 如果在无账户模式下重装应用，你的配置文件和设置会丢失。
+## 2. 登录，或不使用账户继续 {#2-sign-in-or-continue-without-an-account}
 
-你仍然可以使用 **Continue without an account**，但不建议长期使用。
+首次启动时，应用会请你登录。你可以使用邮箱或登录名加密码、Google 或 Apple ID 登录，也可以创建新账户。
 
-## 2. 了解主菜单
+<Screenshot name="sign-in" alt="MOCPilot 登录界面" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+我们建议使用账户：
 
-底部导航包含 3 个主要部分：
+- 你的配置文件和设置会保存在服务器上，并在你的设备之间同步；
+- 更换或丢失设备后，可以找回你的数据；
+- 购买项目和 MocPilot Pro 在你的所有设备上都可使用。
 
-- **Profiles**：预置配置和个人配置。
-- **Settings**：应用选项和账户设置。
-- **Help**：支持、反馈和官方资源链接。
+也可以选择**无需账户继续**，但这样所有内容都只保存在这台设备上，删除应用后就会丢失。你可以稍后在**设置 → 账户**中登录。参见[账户](/docs/Application/Account/UserAccount)。
 
-## 3. 检查重要设置
+## 3. 熟悉界面 {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- 在**手机**上，底部栏有**个人资料**、**设置**和**帮助**（登录后还有**通知**）。
+- 在**平板**上，这些分区、**配置文件目录**和你的账户都在侧边栏中。
+- 在**电脑**上，使用顶部栏：左侧是菜单；右侧是账户、通知和设置。
 
-在 **Settings** 中，你可以管理：
+参见[手机、平板和桌面](/docs/Introducing/Layouts)。
 
-- 声音和震动
-- 保持屏幕常亮
-- 语言
-- 深色模式
-- 账户与同步选项
+## 4. 创建配置文件 {#4-create-a-profile}
 
-## 4. 预置配置（Prebuilt profiles）
+1. 在**我的配置文件**页面，轻点 **+** → **新建配置文件**（手机），或选择**新建配置文件**（平板和电脑，也可以用**文件 → 新建配置文件**）。
+2. 选择**程序类型**：
+   - **快速连接**：无需代码即可驾驶模型。最适合初次尝试。
+   - **逻辑积木**：需要事件、循环、条件和传感器时选择。
+3. 输入**名称**，如果愿意，还可以添加一张图片。
+4. 轻点**创建**。
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="新建配置文件页面，带有逻辑积木和快速连接两个磁贴" width={900} />
 
-你可以使用 **Prebuilt** 配置来：
+配置文件会在编辑器中打开。更多内容请参见[创建配置文件](/docs/Application/Profiles/CreateProfile)。
 
-- 快速控制 LEGO 及其他官方套装。
-- 通过现成积木代码学习实现技巧。
-
-:::warning Important
-预置配置可用于实验修改，但你的更改不会保存。下次打开时会恢复为原始状态。
+:::tip 想要现成的模型？
+打开**配置文件目录**（在配置文件页面中选择**在线搜索**），为你的套装安装官方配置文件。参见[目录与发布](/docs/Application/Profiles/Catalog)。
 :::
 
-按以下步骤使用预置配置：
+## 5. 添加集线器 {#5-add-your-hub}
 
-1. 打开目标预置配置。
+1. 在编辑器中打开**我的集线器**。
+2. 在空闲槽位中轻点**添加新集线器**，选择集线器型号，然后轻点**添加**。
+3. 打开集线器电源，按下它的按钮，等待 MOCPilot 找到它。
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="带有集线器槽位的“我的集线器”页面" width={900} />
 
-2. 连接 Hub。
+如果应用提示更新固件，请按照[固件更新](/docs/Application/Hubs/FirmwareUpdating)操作。更多内容请参见[添加并连接集线器](/docs/Application/Hubs/ConnectingHubs)。
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. 在仪表板上摆放控件 {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. 打开**仪表板**。
+2. 轻点 **+**（**添加控制器**），选择**操纵杆**，然后轻点**添加到仪表板**。
+3. 把它拖到你想要的位置。轻点它可以更改大小、颜色或行为。
 
-3. 选择仪表盘并按 **Play**。
+<Screenshot name="controller-palette" alt="添加控制器面板，已选中操纵杆" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+参见[添加和排列控件](/docs/Application/Dashboard/ArrangingControls)。
 
-## 5. 用户配置（User-owned profiles）
+## 7. 把控件连接到电机 {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**快速连接：**从**输入**中把操纵杆输入（例如 *JOY1 Y 轴*）拖到空行，再从**输出**中添加**电机**操作和**集线器**输出，然后轻点电机所插的端口。行上没有红框时，就表示设置完成。参见[快速连接](/docs/Application/Links/LinksIntroducing)。
 
-使用 **My** 页面创建你自己的配置。
+**逻辑积木：**添加一个*当程序启动时*积木、一个*永远重复*循环，以及一个读取操纵杆数值的*设置电机速度*积木。参见[逻辑积木](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing)和[示例](/docs/Application/BlockBuilder/Examples)。
 
-- 你可以创建并保存任意数量的个人配置。
-- 可以直接从该页面启动配置。
+## 8. 按下运行 {#8-press-run}
 
-按以下步骤使用用户配置：
+按下**运行**（▶）。移动操纵杆，电机就会转动。按下**停止**即可回到编辑状态。
 
-1. 创建或导入配置。
+就是这么简单。接下来：
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-你可以新建配置，也可以从设备中导入已创建的配置文件（`.dat`）。
-:::
-
-2. 新建配置。
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-输入所需配置名称。你也可以从相册为该配置选择图片。
-
-3. 向配置添加 Hub。
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-默认每个配置最多可添加 **2** 个 Hub。若要扩展到 **5** 个，需要购买额外 Hub 插槽。
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. 打开程序页面，通过连接积木创建模型所需逻辑。
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. 打开仪表盘并添加可连接 Hub 电机的屏幕控制器。
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. 按 **Play** 运行配置。
-
-现在你可以开始驾驶并持续优化你的配置。
-
-## 6. 需要帮助时
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-**Help** 页面可用于：
-
-- 打开快速入门教程
-- 提问
-- 报告 Bug
-- 打开 MOCPilot 官方链接和社区频道
+- 了解所有[控件类型](/docs/Application/Dashboard/ControlTypes)。
+- 用[主题](/docs/Application/Themes/ThemesOverview)给仪表板换个新外观。
+- 连接[游戏手柄](/docs/Application/Dashboard/Gamepad)。
+- 如果遇到问题，请参见[故障排除](/docs/Help/Troubleshooting)。

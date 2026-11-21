@@ -7,35 +7,33 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Variables
 
-Les variables stockent des valeurs qui peuvent être lues et mises à jour à travers les blocs et les scripts.
+Les variables stockent des valeurs que tous les scripts du programme peuvent lire et modifier. Créez, renommez et supprimez-les avec **Créer une variable**, **Renommer la variable** et **Supprimer la variable** en haut de la catégorie. Les blocs ci-dessous apparaissent dès que le programme contient au moins une variable.
 
-## Blocs de commande de variables
+## Modifier une variable {#changing-a-variable}
 
-### `Set variable to` (Débutant) {#block_variables_set_to}
+### `définir … à …` (Débutant) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Définit la variable sélectionnée à la valeur spécifiée.
+Donne une valeur à la variable sélectionnée.
 
-- Type : bloc de commande
-- Utilisation typique : initialiser un état, écraser une valeur précédente
+- Utilisation type : définir une valeur de départ, remplacer la valeur précédente.
 
-### `Change variable by` (Avancé) {#block_variables_change_by}
+### `changer … par …` (Avancé) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Ajoute la valeur spécifiée à la variable sélectionnée.
+Ajoute un nombre à la variable sélectionnée. Utilisez un nombre négatif pour soustraire.
 
-- Type : bloc de commande
-- Utilisation typique : compteurs, score, distance/temps accumulés
+- Utilisation type : compteurs, scores, cumul de distance ou de temps.
 
-## Bloc reporter de valeur de variable
+## Lire une variable {#reading-a-variable}
 
-### `Valeur de variable` (Débutant) {#block_variables_value}
+### Variable (Débutant) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Retourne la valeur actuelle de la variable sélectionnée.
+Chaque variable possède son propre bloc rapporteur, à son nom. Il renvoie la valeur actuelle de la variable.
 
-- Type : bloc reporter
-- Utilisation typique : utiliser la valeur de la variable dans des opérateurs, des conditions et des entrées de commandes
+- Utilisation type : placer la valeur dans des opérateurs, des conditions et les entrées d’autres blocs.
+- Le [Moniteur](/docs/Application/BlockBuilder/Editor#monitor) affiche les valeurs de toutes les variables pendant l’exécution du programme.

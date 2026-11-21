@@ -1,152 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Úvod do Bloků
+title: Seznámení s Logickými bloky
+description: "Logické bloky jsou vizuální editor blokového programování v MOCPilotu: události, cykly, podmínky, proměnné, senzory a zvuky."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Úvod do Bloků
+# Logické bloky {#logic-blocks}
 
-MOCPilot používá vizuální systém blokového programování, který vzhledem i chováním připomíná Scratch.
-Každý blok má konkrétní roli a platné kombinace určují řízení toku i toku dat ve skriptu.
-Využívá logiku přetahování a interakční vzory podobné Scratchi, aby bylo vytváření programů pohodlné a známé.
+**Logické bloky** jsou editor blokového programování v MOCPilotu. Programy skládáte spojováním bloků, podobně jako ve Scratchi: události, cykly, podmínky, proměnné, seznamy, vlastní bloky, zvuky a bloky pro motory, světla, senzory, ovládací prvky panelu a gamepad.
 
-:::warning Upozornění na kompatibilitu
-Jde o odlišný blokový systém s vlastní sadou bloků a vlastním chováním.
-Programy MOCPilot nejsou kompatibilní s projekty Scratch: programy MOCPilot nelze importovat do Scratch a programy Scratch nelze importovat do MOCPilot.
+Logické bloky zvolte, když váš model potřebuje logiku: roboty, automatické sekvence, reakce na senzory, kontroly při spuštění, hry. Pokud potřebujete jen propojit ovládací prvky s motory, jsou [Rychlá propojení](/docs/Application/Links/LinksIntroducing) rychlejší.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Program v Logických blocích" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Není to Scratch
+Logické bloky mají vlastní sadu bloků a vlastní chování. Programy z MOCPilotu nelze importovat do Scratche a projekty ze Scratche nelze importovat do MOCPilotu.
 :::
 
-## Tvary bloků a jejich význam
+## Editor v kostce {#the-editor-at-a-glance}
 
-### Startovní bloky (Hat)
+<Screenshot name="blocks-editor" alt="Editor Logických bloků s paletou a programem" width={900} />
+
+- **Paleta** obsahuje kategorie bloků: **Události**, **Ovládání**, **Senzory**, **Zvuky**, **Operátor**, **Proměnné**, **Seznamy** a **Moje bloky**. Další kategorie se objeví, když je váš profil potřebuje: **Motory** a **Světlo** (když je hub podporuje), **Simulátor** (když má panel pedály, převodovku nebo ruční brzdu), **Ovladače na obrazovce** a **Herní ovladač**.
+- **Programová plocha** je místo, kam přetahujete bloky a skládáte skripty.
+- Horní lišta obsahuje **Moje huby**, **Panel**, **Herní ovladač**, **Monitor**, **Nastavení editoru**, **AI tvůrce** a **Spustit/Zastavit**.
+
+Podrobnosti najdete v části [Práce v editoru](/docs/Application/BlockBuilder/Editor).
+
+## Jak program běží {#how-a-program-runs}
+
+- Skript začíná blokem **události** (blokem s čepicí): *když program začne*, *když je tlačítko … stisknuto*, *když obdržím …* a podobně.
+- Bloky připojené pod ním běží shora dolů.
+- Několik skriptů běží **současně**. Ke koordinaci použijte zprávy (*předat*).
+- **Cykly** (*opakovat vždy*, *opakovat*, *opakovat, dokud*) udržují skript v chodu; **podmínky** (*pokud*, *pokud … jinak*, *čekat, dokud*) rozhodují.
+- **Hodnotové** bloky (zaoblené) vracejí hodnoty a vejdou se do vstupů jiných bloků; **booleovské** bloky (špičaté) vracejí pro podmínky pravdu nebo nepravdu.
+- **Proměnné** a **seznamy** uchovávají hodnoty mezi bloky a skripty.
+
+## Tvary bloků {#block-shapes}
+
+### Bloky s čepicí {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Spustí skript při výskytu konkrétní události. Další bloky lze připojit pouze pod něj.
+Spustí skript, když se něco stane. Bloky k nim lze připojit jen zespodu.
 
 ---
 
-### Příkazové bloky (Stack)
+### Příkazové bloky {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Hlavní příkazové bloky, které provádějí akce.
+Hlavní příkazové bloky: každý z nich něco dělá.
 
 ---
 
-### C bloky
+### Bloky ve tvaru C {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-Řídicí bloky tvaru C, které obsahují vnořené blokové sekvence (cykly/podmínky).
+Bloky ve tvaru písmene C, které v sobě drží jiné bloky: cykly a podmínky.
 
 ---
 
-### Reportovací bloky (Reporter)
+### Hodnotové bloky {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Vrací hodnoty, například čísla nebo text.
+Vracejí hodnotu, například číslo nebo text.
 
 ---
 
-### Booleovské bloky
+### Booleovské bloky {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Vrací pouze `true` nebo `false`, obvykle se používají v podmínkách.
+Vracejí jen `true` nebo `false`. Obvykle se používají v podmínkách.
 
 ---
 
-### Ukončovací bloky (Cap)
+### Koncové bloky {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Ukončí skript a neumožní připojení bloků pod sebe.
+Ukončují skript: pod ně nelze nic připojit.
 
 ---
 
-### Bloková sekvence
+### Zásobník bloků {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-Bloková sekvence je řada propojených bloků, která běží jako jeden tok skriptu shora dolů.
-Sekvence obvykle začíná událostním blokem a následně provádí připojené bloky v daném pořadí.
+Zásobník je skupina spojených bloků, která běží jako jeden skript, shora dolů.
+Zásobník obvykle začíná blokem události, za kterým následují bloky, jež běží v pořadí.
 
 ---
 
-## Model běhu skriptu
 
-- Skript obvykle začíná událostním blokem.
-- Propojené stack bloky se spouštějí shora dolů.
-- Více skriptů může běžet paralelně.
-- Pro synchronizaci skriptů se používají bloky zpráv/vysílání.
-- Bloková sekvence je sada bloků propojených dohromady.
+## Huby, porty a ovládací prvky {#hubs-ports-and-controls}
 
-## Data a hodnoty
+- Bloky motorů a světel berou **Hub** a **Port**. Kategorie Motory a Světlo se objeví, jen když je některý hub v profilu podporuje, a některé bloky existují jen pro určité huby (například režimy výkonu BuWizz nebo funkce Technic Move Hubu). Popis každého bloku uvádí, se kterými huby funguje.
+- Bloky panelu odkazují na ovládací prvky podle názvu (**JOY1**, **BTN2**). Ovládací prvek nelze z panelu smazat, dokud ho bloky používají; nejprve tyto bloky odeberte.
+- Bloky gamepadu se objeví, když je na [stránce Herní ovladač](/docs/Application/Dashboard/Gamepad) zapnuté **Povolit bloky gamepadu**.
 
-- Reportovací bloky lze vnořovat do vstupů příkazů/podmínek.
-- Proměnné ukládají znovu použitelné hodnoty napříč bloky a skripty.
-- Seznamy ukládají uspořádané kolekce pro historii, fronty a vyhledávací data.
+## Úrovně bloků {#block-levels}
 
-## Události a časování
+Každý profil má **Úroveň bloků**: **Začátečník** ukazuje nejjednodušší bloky, **Pokročilý** přidává běžnou logiku a bloky zařízení a **Guru** ukazuje kompletní sadu. Zvolíte ji při vytváření profilu nebo později v Nastavení editoru. Tento přehled uvádí úroveň každého bloku vedle jeho názvu.
 
-- Událostní bloky reagují na vstup uživatele, stav hubu, senzory nebo zprávy.
-- Události založené na časovači a senzorech se mohou spouštět často.
-- Pro omezení rušivých opakovaných spuštění používejte prahy, filtrování nebo krátké čekání.
+## Doporučený postup {#recommended-workflow}
 
-## Hub, porty a ovladače
+1. Začněte jedním blokem události a krátkým skriptem; stiskněte **Spustit** a ověřte, že funguje.
+2. Včas zkontrolujte směry motorů a rozsahy hodnot (pomůže Monitor).
+3. Rozdělte program na malé skripty, které spolu komunikují zprávami; opakující se logiku přesuňte do [Mých bloků](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Přidejte zabezpečení: limity, zastavení, kontrolu při spuštění a plán pro případ, že se hub odpojí.
 
-- Hub bloky pracují v kontextu hubu a portu.
-- Některé bloky jsou dostupné jen pro konkrétní rodiny hubů/zařízení.
-- Bloky dashboardu a gamepadu poskytují vstupy za běhu a ovládání UI.
+## Časté chyby {#common-pitfalls}
 
-## Doporučený postup
+- Skript bez bloku události se nikdy nespustí.
+- Je vybraný špatný hub nebo port, takže se viditelně nic neděje.
+- Míchání textu, čísel a booleovských hodnot dává nečekané výsledky.
+- Velmi časté události bez filtrování (například událost senzoru při každé drobné změně) mohou program přetížit; použijte prahy nebo krátká čekání.
 
-1. Začněte jedním událostním blokem a minimálním skriptem.
-2. Včas ověřte směr a rozsahy motorů/senzorů.
-3. Opakovanou logiku oddělte pomocí zpráv a pomocných skriptů.
-4. Před finálním laděním přidejte ochrany (limity, zastavení, záložní hodnoty).
+## Přehled bloků {#block-reference}
 
-## Časté chyby
+- [Události](/docs/Application/BlockBuilder/Blocks/Events) · [Ovládání](/docs/Application/BlockBuilder/Blocks/Control) · [Operátor](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Proměnné](/docs/Application/BlockBuilder/Blocks/Variables) · [Seznamy](/docs/Application/BlockBuilder/Blocks/Lists) · [Moje bloky](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Motory](/docs/Application/BlockBuilder/Blocks/Motors) · [Světlo](/docs/Application/BlockBuilder/Blocks/Light) · [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors) · [Zvuky](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulátor](/docs/Application/BlockBuilder/Blocks/Simulator) · [Ovladače na obrazovce](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Herní ovladač](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Chybějící vstupní událostní blok znamená, že se skript nikdy nespustí.
-- Špatně zvolený hub/port způsobí, že neuvidíte žádný efekt.
-- Míchání typů hodnot (text/číslo/boolean) může vést k neplatné logice.
-- Události s vysokou frekvencí bez filtrování mohou přetížit chování programu.
+V aplikaci blok dlouze podržte (nebo na něj klikněte pravým tlačítkem) a zvolte **O bloku**; otevře se jeho popis zde.
 
-## Struktura dokumentace v této sekci
-
-Používejte stránky kategorií v tomto pořadí:
-
-- Světla
-- Motory
-- Senzory
-- Události
-- Ovládání
-- Operátory
-- Proměnné
-- Seznamy
-- Moje bloky
-- Ovladače dashboardu
-- Gamepad
+Hotové programy: [Příklady](/docs/Application/BlockBuilder/Examples).

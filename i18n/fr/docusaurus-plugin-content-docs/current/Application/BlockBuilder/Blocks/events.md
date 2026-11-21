@@ -7,141 +7,143 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Événements
 
-La catégorie **Événements** contient des blocs qui démarrent des scripts lorsqu’une condition se produit.
+La catégorie **Événements** contient les blocs qui lancent des scripts lorsqu’il se passe quelque chose, ainsi que les blocs qui envoient des messages entre scripts. Utilisez **Ajouter un message** et **Supprimer le message** en haut de la catégorie pour gérer les messages.
 
-## Événements principaux
+## Événements de base {#core-events}
 
-### `Quand le programme démarre` (Débutant) {#block_event_when_program_started}
+### `lorsque le programme commence` (Débutant) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Démarre ce script une seule fois lorsque le programme du profil commence.
+Exécute son script une fois, au démarrage du programme.
 
-- Déclencheur : lancement du programme
-- Utilisation typique : initialiser les variables, états par défaut des moteurs, sons de démarrage
+- Utilisation type : définir les valeurs de départ des variables, mettre les moteurs dans leur état initial, afficher un message « prêt ».
 
-### `Quand` (Avancé) {#block_event_when}
+### `quand …` (Avancé) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Exécute lorsque la condition sélectionnée devient vraie.
+Exécute son script lorsque la condition placée dans l’emplacement passe de faux à vrai. Pendant l’exécution du script, le bloc attend ; il ne se déclenche de nouveau qu’après que la condition est redevenue fausse puis vraie.
 
-- Déclencheur : basé sur une condition
-- Utilisation typique : logique conditionnelle selon l’état du programme
+- Utilisation type : réagir à un état, par exemple `quand minuteur > 5 et l’interrupteur est activé`.
 
-### `Quand le minuteur est supérieur à` (Avancé) {#block_event_when_timer_greater_than}
+### `lorsque le minuteur > …` (Avancé) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Exécute lorsque la valeur du minuteur dépasse un seuil.
+Exécute son script lorsque le minuteur du programme dépasse la valeur (en secondes).
 
-- Déclencheur : temps écoulé
-- Utilisation typique : actions différées, phases temporisées
+- Utilisation type : actions différées, phases chronométrées. Remettez le minuteur à zéro avec **réinitialiser le minuteur** (Capteurs).
 
-### `Quand message reçu` (Guru) {#block_event_when_message_recieved}
+### `quand je reçois …` (Gourou) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Démarre un script lorsqu’un message diffusé correspondant est reçu.
+Exécute son script lorsque le message sélectionné est transmis.
 
-- Déclencheur : canal de message
-- Utilisation typique : synchroniser plusieurs scripts
+- Utilisation type : coordonner plusieurs scripts.
 
-### `Diffuser` (Guru) {#block_event_broadcast}
+### `transmettre …` (Gourou) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Envoie un message à tous les scripts en écoute.
+Envoie un message à chaque script qui commence par **quand je reçois** pour ce message, et continue aussitôt.
 
-- Déclencheur : envoi immédiat
-- Utilisation typique : notifier d’autres scripts sans attendre
+- Utilisation type : demander à d’autres scripts de démarrer sans les attendre.
 
-### `Diffuser et attendre` (Guru) {#block_event_broadcast_and_wait}
+### `transmettre … et attendre` (Gourou) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Envoie un message et met en pause ce script jusqu’à la fin des scripts récepteurs.
+Envoie un message et met ce script en pause jusqu’à ce que tous les scripts qui l’ont reçu soient terminés.
 
-- Déclencheur : envoi + attente
-- Utilisation typique : flux séquentiels où l’ordre est important
+- Utilisation type : séquences pas à pas où l’ordre compte.
 
-## Événements du hub
+## Événements de hub {#hub-events}
 
-### `Bouton du hub pressé` (Débutant) {#block_hubs_all_event_button_pressed}
+Ces blocs apparaissent lorsqu’un hub du profil les prend en charge. Ils n’existent pas pour les hubs Mould King.
+
+### `quand … … bouton …` (Débutant) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Exécute lorsque le bouton principal du hub est pressé.
+S’exécute lorsqu’un bouton du hub est appuyé ou relâché.
 
-- Options d’état : `pressé`, `relâché`, `changé`
-- Remarque : les boutons disponibles peuvent varier selon le modèle de hub.
+- États possibles : `appuyé`, `relâché`, `changé`
+- Hubs : hubs LEGO Powered Up, WeDo 2.0 et Robot Inventor. La liste des boutons dépend du hub.
 
-### `Connexion du hub modifiée` (Débutant) {#block_hubs_all_event_connection_changed}
+### `quand … est connecté / déconnecté` (Débutant) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Exécute lorsque l’état de connexion du hub change.
+S’exécute lorsque le hub se connecte ou se déconnecte.
 
-- Déclencheur : changement de connexion
-- Utilisation typique : gestion de reconnexion et sécurité après perte de lien
+- Utilisation type : arrêter le modèle en toute sécurité quand la connexion est perdue, et rétablir son état quand elle revient.
 
-### `Batterie du hub modifiée` (Débutant) {#block_hubs_all_event_battery_changed}
+### `quand … % batterie modifiée` (Débutant) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Exécute lorsque le niveau de batterie change.
+S’exécute lorsque le niveau de batterie signalé par le hub change.
 
-- Déclencheur : mise à jour du niveau
-- Utilisation typique : avertissement batterie faible, économie d’énergie
+- Hubs : ceux qui signalent leur niveau de batterie.
+- Utilisation type : alerte de batterie faible, passage en mode économie d’énergie.
 
-### `Accéléromètre du hub modifié` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `quand … les données de l’accéléromètre ont changé` (Gourou) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Exécute lorsque les valeurs d’accélération changent.
+S’exécute lorsque les valeurs de l’accéléromètre du hub changent.
 
-### `Inclinaison du hub modifiée` (Débutant) {#block_hubs_all_event_tilt_changed}
+- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `quand … inclinaison … l’angle a changé` (Débutant) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Exécute lorsque l’inclinaison change.
+S’exécute lorsque l’angle d’inclinaison du hub change.
 
-- Options : `toutes`, `tangage`, `roulis`, `lacet`
-- Remarque : `lacet` dépend du hub.
+- Angles possibles : `n'importe`, `tangage`, `roulis`, `lacet`
+- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `lacet` n’est disponible que sur le Technic Hub et le Robot Inventor.
 
-### `Orientation du hub modifiée` (Débutant) {#block_hubs_all_event_tilt_orientation_changed}
+### `quand … l’orientation a changé` (Débutant) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Exécute lorsque l’orientation change (avant/haut/bas/gauche/droite).
+S’exécute lorsque l’orientation du hub change, c’est-à-dire lorsqu’une autre face du hub est tournée vers le haut.
 
-## Événements des capteurs (ports)
+- Hubs : les mêmes que pour l’événement d’inclinaison.
 
-### `Événement capteur de couleur Technic` (Débutant) {#block_hubs_all_event_port_technic_sensor_color}
+## Événements de capteur {#sensor-events}
+
+Ces événements lisent un capteur branché sur un port du hub. Hubs : City Hub, Technic Hub, BOOST Move Hub et le hub MINDSTORMS Robot Inventor (pas SBrick, BuWizz, WeDo 2.0 ni Mould King).
+
+### Capteur Technic : `quand la couleur est …` (Débutant) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Exécute lorsque le capteur détecte une couleur.
+S’exécute lorsque le capteur de couleur Technic voit la couleur sélectionnée.
 
-### `Événement capteur de distance Technic` (Débutant) {#block_hubs_all_event_port_technic_sensor_distance}
+### Capteur Technic : `quand … plus proche que / plus loin que / exactement à …` (Débutant) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Exécute lorsque la distance correspond à la condition.
+S’exécute lorsque la distance mesurée par le capteur de distance Technic remplit la condition.
 
-- Options : `plus proche que`, `plus loin que`, `exactement à`
+- Comparaisons possibles : `plus proche que`, `plus loin que`, `exactement à`
 - Unités : `mm`, `cm`, `pouces`, `%`
 
-### `Événement capteur de distance BOOST` (Débutant) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Capteur BOOST : `quand … plus proche que / plus loin que / exactement à …` (Débutant) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Exécute lorsque la distance atteint la condition.
+S’exécute lorsque la distance mesurée par le capteur de couleur et de distance BOOST remplit la condition.
 
-- Options : `plus proche que`, `plus loin que`, `exactement à`
+- Comparaisons possibles : `plus proche que`, `plus loin que`, `exactement à`
+- Unités : `%`, `cm`, `pouces`
 
-### `Événement capteur de couleur BOOST` (Débutant) {#block_hubs_all_event_port_boost_sensor_color}
+### Capteur BOOST : `quand la couleur est …` (Débutant) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Exécute lorsque le capteur détecte une couleur.
+S’exécute lorsque le capteur de couleur et de distance BOOST voit la couleur sélectionnée.

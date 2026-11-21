@@ -5,90 +5,102 @@ title: Laiteohjelmiston päivitys
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Laiteohjelmiston päivitys
+# Laiteohjelmiston päivitys {#firmware-updating}
 
-MOCPilot může aktualizovat firmware podporovaných hubů LEGO Powered Up, když je dostupná novější kompatibilní verze.
+MOCPilot voi päivittää tuettujen LEGO® Powered Up -hubien laiteohjelmiston, kun uudempi yhteensopiva versio on saatavilla.
 
-Aktualizace firmwaru může být nutná, aby hub správně fungoval s MOCPilot. Novější firmware může zlepšit kompatibilitu, opravit chování hubu a zpřístupnit funkce očekávané pro daný model.
+Jotkin hubit on päivitettävä, ennen kuin ne toimivat oikein MOCPilotin kanssa: uudempi laiteohjelmisto korjaa hubin virheitä ja tuo toimintoja, joita sovellus tarvitsee.
 
-## Aktualizace firmwaru je aktuálně podporována pro tyto huby
+## Tuetut hubit {#supported-hubs}
 
-Aktualizace firmwaru je aktuálně podporována pro tyto huby:
+MOCPilot voi päivittää nämä hubit:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Před spuštěním
+## Ennen kuin aloitat {#before-you-start}
 
-Před spuštěním aktualizace se ujistěte, že hub i zařízení s MOCPilot mají dostatek energie.
+Varmista, että hubissa ja puhelimessasi, tabletissasi tai tietokoneessasi on riittävästi virtaa.
 
-Po celou dobu nechte hub zapnutý a držte telefon, tablet nebo počítač blízko hubu, aby Bluetooth spojení zůstalo stabilní. Během nahrávání firmwaru nezavírejte MOCPilot, nevypínejte Bluetooth ani hub.
+Pidä hubi päällä koko päivityksen ajan ja laitteesi lähellä hubia, jotta Bluetooth-yhteys pysyy vakaana. Älä sulje MOCPilotia, kytke Bluetoothia pois tai sammuta hubia laiteohjelmiston siirron aikana.
 
 :::warning Tärkeää
-Přerušení aktualizace firmwaru může zanechat firmware hubu v neúplném stavu. V takovém případě může být před dalším použitím potřeba obnova firmwaru.
+Keskeytynyt päivitys voi jättää hubiin keskeneräisen laiteohjelmiston. Hubille voidaan silloin joutua tekemään laiteohjelmiston palautus, ennen kuin sitä voi taas käyttää.
 :::
 
-## Spuštění aktualizace
+## Päivityksen aloittaminen {#starting-the-update}
 
-Při připojení hubu MOCPilot zkontroluje nainstalovanou verzi firmwaru. Pokud je potřeba novější verze, aplikace zobrazí dialog aktualizace firmwaru.
+Kun yhdistät hubin, MOCPilot tarkistaa sen laiteohjelmiston version. Jos uudempi versio vaaditaan, sovellus näyttää **Laiteohjelmiston päivitys vaaditaan** -ikkunan.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Laiteohjelmiston päivitys vaaditaan -ikkuna" />
 
-Vyberte **Päivitä** pro okamžité spuštění aktualizace firmwaru.
+Valitse **Päivitä**, niin laiteohjelmiston päivitys alkaa heti.
 
-Pokud nechcete aktualizovat hned, vyberte **Peruuta**. Aktualizaci můžete spustit později z kontextové nabídky hubu.
+Jos haluat päivittää myöhemmin, valitse **Peruuta**. Voit aloittaa päivityksen hubin valikosta milloin tahansa.
 
-## Aktualizace později z nabídky hubu
+## Päivittäminen myöhemmin hubin valikosta {#updating-later-from-the-hub-menu}
 
-Ruční spuštění aktualizace firmwaru:
+Päivityksen aloittaminen itse:
 
-1. Otevřete **Omat Bluetooth-hubit**.
-2. Najděte hub, který potřebuje aktualizaci.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Päivitä laiteohjelmisto**.
+1. Avaa **Omat Bluetooth-keskitinlaitteet**.
+2. Etsi päivitettävä hubi.
+3. Avaa hubin valikko.
+4. Valitse **Päivitä laiteohjelmisto**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Päivitä laiteohjelmisto" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Päivitä laiteohjelmisto -toiminto hubin pikavalikossa" />
 
-## Během aktualizace firmwaru
+## Laiteohjelmiston päivityksen aikana {#during-the-firmware-update}
 
-Po spuštění aktualizace MOCPilot nahraje firmware do hubu a zobrazí průběh.
+MOCPilot siirtää laiteohjelmiston hubiin ja näyttää edistymisen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Laiteohjelmiston päivityksen edistymisnäkymä" />
 
-Počkejte na dokončení nahrávání. Hub se může při použití nové verze restartovat nebo dočasně odpojit.
+Odota, että siirto valmistuu. Hubi voi käynnistyä uudelleen tai katkaista yhteyden hetkeksi, kun uutta laiteohjelmistoa otetaan käyttöön.
 
-Po nahrání firmwaru MOCPilot znovu vyhledá hub. Držte hub poblíž a počkejte na opětovné připojení.
+Sen jälkeen MOCPilot hakee hubia uudelleen. Pidä hubi lähellä ja odota, että sovellus yhdistää uudelleen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Laiteohjelmisto siirretty, hubia haetaan" />
 
-## Dokončení aktualizace
+## Päivityksen viimeistely {#finishing-the-update}
 
-Po úspěšném dokončení aktualizace MOCPilot zobrazí potvrzení.
+Kun päivitys on valmis, MOCPilot näyttää vahvistuksen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Laiteohjelmiston päivitys valmis -ikkuna" />
 
-Vyberte **OK**. Hub se znovu připojí a karta hubu zobrazí aktualizovanou verzi firmwaru.
+Valitse **OK**. Hubi yhdistyy uudelleen, ja sen kortissa näkyy uusi laiteohjelmiston versio.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Hubin kortti, jossa näkyy päivitetty laiteohjelmiston versio" />
 
-Nyní můžete hub dál používat s MOCPilot.
+Voit nyt jatkaa hubin käyttöä MOCPilotin kanssa.
 
-## Pokud aktualizace selže
+## Jos päivitys epäonnistuu {#if-the-update-fails}
 
-Pokud se aktualizace nedokončí úspěšně, MOCPilot zobrazí zprávu o selhání aktualizace firmwaru.
+Jos päivitys epäonnistuu, MOCPilot näyttää virheilmoituksen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Laiteohjelmiston päivitys" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Laiteohjelmiston päivitys epäonnistui -ikkuna" />
 
-Nejprve zkuste hub vypnout a znovu zapnout a spustit aktualizaci znovu:
+Sammuta ensin hubi, käynnistä se uudelleen ja suorita päivitys uudelleen:
 
-1. Vypněte hub.
-2. Znovu zapněte hub.
-3. Držte hub blízko zařízení.
-4. Připojte hub v MOCPilot.
-5. Znovu spusťte aktualizaci firmwaru.
+1. Sammuta hubi.
+2. Käynnistä hubi uudelleen.
+3. Pidä hubi lähellä laitettasi.
+4. Yhdistä hubiin MOCPilotissa.
+5. Aloita laiteohjelmiston päivitys uudelleen.
 
-Pokud hub nereaguje normálně, může být potřeba obnova firmwaru. Postupujte podle návodu [Obnova firmwaru hubu](/docs/Application/Hubs/RecoveryHubFirmware/).
+Jos hubi ei vieläkään toimi normaalisti, se saattaa tarvita laiteohjelmiston palautuksen: katso [Hubin laiteohjelmiston palautus](/docs/Application/Hubs/RecoveryHubFirmware/).

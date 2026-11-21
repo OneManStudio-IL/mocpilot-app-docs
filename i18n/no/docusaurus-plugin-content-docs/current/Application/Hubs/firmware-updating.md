@@ -5,90 +5,102 @@ title: Fastvareoppdatering
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Fastvareoppdatering
+# Fastvareoppdatering {#firmware-updating}
 
-MOCPilot může aktualizovat firmware podporovaných hubů LEGO Powered Up, když je dostupná novější kompatibilní verze.
+MOCPilot kan oppdatere fastvaren på støttede LEGO® Powered Up-hubber når en nyere kompatibel versjon er tilgjengelig.
 
-Aktualizace firmwaru může být nutná, aby hub správně fungoval s MOCPilot. Novější firmware může zlepšit kompatibilitu, opravit chování hubu a zpřístupnit funkce očekávané pro daný model.
+Noen hubber må oppdateres før de fungerer riktig med MOCPilot: nyere fastvare retter feil i huben og legger til funksjonene appen er avhengig av.
 
-## Aktualizace firmwaru je aktuálně podporována pro tyto huby
+## Støttede hubber {#supported-hubs}
 
-Aktualizace firmwaru je aktuálně podporována pro tyto huby:
+MOCPilot kan oppdatere disse hubbene:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Před spuštěním
+## Før du begynner {#before-you-start}
 
-Před spuštěním aktualizace se ujistěte, že hub i zařízení s MOCPilot mají dostatek energie.
+Sørg for at både huben og telefonen, nettbrettet eller datamaskinen har nok batteri.
 
-Po celou dobu nechte hub zapnutý a držte telefon, tablet nebo počítač blízko hubu, aby Bluetooth spojení zůstalo stabilní. Během nahrávání firmwaru nezavírejte MOCPilot, nevypínejte Bluetooth ani hub.
+Hold huben påslått under hele oppdateringen, og hold enheten nær den slik at Bluetooth-tilkoblingen er stabil. Ikke lukk MOCPilot, slå av Bluetooth eller slå av huben mens fastvaren lastes opp.
 
 :::warning Viktig
-Přerušení aktualizace firmwaru může zanechat firmware hubu v neúplném stavu. V takovém případě může být před dalším použitím potřeba obnova firmwaru.
+En avbrutt oppdatering kan etterlate huben med ufullstendig fastvare. Da kan det hende at huben må gjenopprettes før du kan bruke den igjen.
 :::
 
-## Spuštění aktualizace
+## Start oppdateringen {#starting-the-update}
 
-Při připojení hubu MOCPilot zkontroluje nainstalovanou verzi firmwaru. Pokud je potřeba novější verze, aplikace zobrazí dialog aktualizace firmwaru.
+Når du kobler til en hub, sjekker MOCPilot fastvareversjonen. Hvis en nyere versjon kreves, viser appen dialogen **Fastvareoppdatering kreves**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Dialogen Fastvareoppdatering kreves" />
 
-Vyberte **Oppdater** pro okamžité spuštění aktualizace firmwaru.
+Velg **Oppdater** for å starte fastvareoppdateringen med en gang.
 
-Pokud nechcete aktualizovat hned, vyberte **Avbryt**. Aktualizaci můžete spustit později z kontextové nabídky hubu.
+Vil du oppdatere senere, velger du **Avbryt**. Du kan når som helst starte oppdateringen fra hubmenyen.
 
-## Aktualizace později z nabídky hubu
+## Oppdater senere fra hubmenyen {#updating-later-from-the-hub-menu}
 
-Ruční spuštění aktualizace firmwaru:
+Slik starter du oppdateringen selv:
 
-1. Otevřete **Mine Bluetooth-huber**.
-2. Najděte hub, který potřebuje aktualizaci.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Oppdater fastvare**.
+1. Åpne **Mine Bluetooth-hubber**.
+2. Finn huben som skal oppdateres.
+3. Åpne hubmenyen.
+4. Velg **Oppdater fastvare**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Oppdater fastvare" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Handlingen Oppdater fastvare i hubens hurtigmeny" />
 
-## Během aktualizace firmwaru
+## Under fastvareoppdateringen {#during-the-firmware-update}
 
-Po spuštění aktualizace MOCPilot nahraje firmware do hubu a zobrazí průběh.
+MOCPilot laster opp fastvaren til huben og viser fremdriften.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Skjermbilde med fremdriften for fastvareoppdateringen" />
 
-Počkejte na dokončení nahrávání. Hub se může při použití nové verze restartovat nebo dočasně odpojit.
+Vent til opplastingen er ferdig. Huben kan starte på nytt eller koble fra et øyeblikk mens den nye fastvaren tas i bruk.
 
-Po nahrání firmwaru MOCPilot znovu vyhledá hub. Držte hub poblíž a počkejte na opětovné připojení.
+Deretter søker MOCPilot etter huben igjen. Hold huben i nærheten og vent til appen kobler til på nytt.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Fastvaren er lastet opp, og appen søker etter huben" />
 
-## Dokončení aktualizace
+## Fullfør oppdateringen {#finishing-the-update}
 
-Po úspěšném dokončení aktualizace MOCPilot zobrazí potvrzení.
+Når oppdateringen er ferdig, viser MOCPilot en bekreftelse.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Dialog om at fastvareoppdateringen er fullført" />
 
-Vyberte **OK**. Hub se znovu připojí a karta hubu zobrazí aktualizovanou verzi firmwaru.
+Velg **OK**. Huben kobler til igjen, og kortet viser den nye fastvareversjonen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Hubkort som viser den oppdaterte fastvareversjonen" />
 
-Nyní můžete hub dál používat s MOCPilot.
+Nå kan du fortsette å bruke huben med MOCPilot.
 
-## Pokud aktualizace selže
+## Hvis oppdateringen mislykkes {#if-the-update-fails}
 
-Pokud se aktualizace nedokončí úspěšně, MOCPilot zobrazí zprávu o selhání aktualizace firmwaru.
+Hvis oppdateringen mislykkes, viser MOCPilot en feilmelding.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Fastvareoppdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Dialog om at fastvareoppdateringen mislyktes" />
 
-Nejprve zkuste hub vypnout a znovu zapnout a spustit aktualizaci znovu:
+Slå først huben av og på, og kjør oppdateringen på nytt:
 
-1. Vypněte hub.
-2. Znovu zapněte hub.
-3. Držte hub blízko zařízení.
-4. Připojte hub v MOCPilot.
-5. Znovu spusťte aktualizaci firmwaru.
+1. Slå av huben.
+2. Slå på huben igjen.
+3. Hold huben nær enheten din.
+4. Koble til huben i MOCPilot.
+5. Start fastvareoppdateringen på nytt.
 
-Pokud hub nereaguje normálně, může být potřeba obnova firmwaru. Postupujte podle návodu [Obnova firmwaru hubu](/docs/Application/Hubs/RecoveryHubFirmware/).
+Hvis huben fortsatt ikke svarer normalt, kan den trenge gjenoppretting av fastvaren: se [Gjenoppretting av hub-fastvare](/docs/Application/Hubs/RecoveryHubFirmware/).

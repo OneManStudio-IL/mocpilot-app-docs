@@ -1,151 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Lohkojen esittely
+title: Logiikkalohkot lyhyesti
+description: "Logiikkalohkot on MOCPilotin visuaalinen lohko-ohjelmointieditori: tapahtumat, silmukat, ehdot, muuttujat, anturit ja äänet."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Lohkojen esittely
+# Logiikkalohkot {#logic-blocks}
 
-MOCPilot käyttää visuaalista lohkopohjaista ohjelmointijärjestelmää, joka muistuttaa Scratchia.  
-Jokaisella lohkolla on oma tehtävänsä, ja niiden yhdistelmät määrittävät ohjaus- ja tietovirran skriptissä.  
-Järjestelmä perustuu vedä-ja-pudota -logiikkaan ja Scratch-tyyliseen käyttöön, mikä tekee ohjelmien rakentamisesta helppoa ja tuttua.
+**Logiikkalohkot** on MOCPilotin lohko-ohjelmointieditori. Ohjelmat rakennetaan napsauttamalla lohkoja yhteen, vähän kuin Scratchissa: tapahtumat, silmukat, ehdot, muuttujat, listat, omat lohkot, äänet sekä lohkot moottoreille, valoille, antureille, kojelaudan ohjaimille ja peliohjaimelle.
 
-:::warning Yhteensopivuushuomio
-Tämä on eri lohkojärjestelmä omilla lohkoillaan ja toiminnallisuudellaan.  
-MOCPilot-ohjelmat eivät ole yhteensopivia Scratch-projektien kanssa.
+Valitse Logiikkalohkot, kun mallisi tarvitsee logiikkaa: robotit, automaattiset sarjat, reaktiot antureihin, käynnistystarkistukset, pelit. Jos haluat vain yhdistää ohjaimet moottoreihin, [Pikalinkit](/docs/Application/Links/LinksIntroducing) on nopeampi.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Logiikkalohko-ohjelma" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Ei Scratch
+Logiikkalohkoilla on omat lohkonsa ja oma toimintansa. MOCPilot-ohjelmia ei voi tuoda Scratchiin eikä Scratch-projekteja MOCPilotiin.
 :::
 
-## Lohkojen muodot ja merkitys
+## Editori yhdellä silmäyksellä {#the-editor-at-a-glance}
 
-### Hat-lohkot
+<Screenshot name="blocks-editor" alt="Logiikkalohkojen editori paletteineen ja ohjelmineen" width={900} />
+
+- **Paletissa** ovat lohkoluokat: **Tapahtumat**, **Hallinta**, **Anturit**, **Äänet**, **Operaattori**, **Muuttujat**, **Listat** ja **Minun lohkot**. Muut luokat näkyvät, kun profiilisi tarvitsee niitä: **Moottorit** ja **Valo** (kun hubi tukee niitä), **Simulaattori** (kun kojelaudalla on polkimet, vaihteisto tai käsijarru), **Näytön ohjaimet** ja **Peliohjain**.
+- **Ohjelma-alueelle** vedetään lohkot ja rakennetaan skriptit.
+- Yläpalkissa ovat **Omat hubit**, **Kojelauta**, **Peliohjain**, **Seuranta**, **Editorin asetukset**, **Tekoälyrakentaja** ja **Suorita/Pysäytä**.
+
+Lisätietoja: [Työskentely editorissa](/docs/Application/BlockBuilder/Editor).
+
+## Miten ohjelma toimii {#how-a-program-runs}
+
+- Skripti alkaa **tapahtumalohkolla** (hattulohko): *kun ohjelma käynnistyy*, *kun nappia painetaan …*, *kun vastaanotan …* ja niin edelleen.
+- Sen alle liitetyt lohkot suoritetaan ylhäältä alas.
+- Useat skriptit toimivat **samanaikaisesti**. Koordinoi niitä viesteillä (*siirtää*).
+- **Silmukat** (*toistaa aina*, *toistaa*, *toistaa, kunnes*) pitävät skriptin käynnissä; **ehdot** (*jos*, *jos … muu*, *odota kunnes*) tekevät päätöksiä.
+- **Raportointilohkot** (pyöristetyt) palauttavat arvoja ja sopivat muiden lohkojen syötteisiin; **totuusarvolohkot** (kärkevät) palauttavat ehtoja varten tosi tai epätosi.
+- **Muuttujat** ja **listat** säilyttävät arvoja lohkojen ja skriptien välillä.
+
+## Lohkojen muodot {#block-shapes}
+
+### Hattulohkot {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Käynnistävät skriptin, kun tapahtuma tapahtuu. Lohkoja voi liittää vain alapuolelle.
+Käynnistävät skriptin, kun jotain tapahtuu. Lohkoja voi liittää vain niiden alle.
 
 ---
 
-### Stack-lohkot
+### Pinolohkot {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Päälohkoja, jotka suorittavat toimintoja.
+Tärkeimmät komentolohkot: kukin tekee jotakin.
 
 ---
 
-### C-lohkot
+### C-lohkot {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-C-muotoisia lohkoja, jotka sisältävät muita lohkoja (silmukat ja ehdot).
+C-kirjaimen muotoiset lohkot, joiden sisään mahtuu muita lohkoja: silmukat ja ehdot.
 
 ---
 
-### Reporter-lohkot
+### Raportointilohkot {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Palauttavat arvoja, kuten numeroita tai tekstiä.
+Palauttavat arvon, esimerkiksi luvun tai tekstin.
 
 ---
 
-### Boolean-lohkot
+### Totuusarvolohkot {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Palauttavat arvon `true` tai `false`, käytetään ehdoissa.
+Palauttavat vain arvon `true` tai `false`. Niitä käytetään yleensä ehdoissa.
 
 ---
 
-### Cap-lohkot
+### Päätöslohkot {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Päättävät skriptin eikä niiden alle voi liittää lohkoja.
+Päättävät skriptin: niiden alle ei voi liittää mitään.
 
 ---
 
-### Lohkopino
+### Lohkopino {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-Lohkopino on yhdistettyjen lohkojen ketju, joka suoritetaan ylhäältä alas yhtenä kokonaisuutena.
+Pino on joukko toisiinsa liitettyjä lohkoja, jotka suoritetaan yhtenä skriptinä ylhäältä alas.
+Pino alkaa yleensä tapahtumalohkolla, jota seuraavat järjestyksessä suoritettavat lohkot.
 
 ---
 
-## Skriptin suoritusmalli
 
-- Skripti alkaa yleensä tapahtumalohkosta.
-- Lohkot suoritetaan ylhäältä alas.
-- Useita skriptejä voi toimia samanaikaisesti.
-- Viestilohkoja käytetään synkronointiin.
-- Lohkopino on yhdistetty lohkojen ketju.
+## Hubit, portit ja ohjaimet {#hubs-ports-and-controls}
 
-## Data ja arvot
+- Moottori- ja valolohkot ottavat **hubin** ja **portin**. Moottorit- ja Valo-luokat näkyvät vain, kun jokin profiilin hubi tukee niitä, ja jotkin lohkot ovat olemassa vain tietyille hubeille (esimerkiksi BuWizzin tehotilat tai Technic Move Hubin toiminnot). Kunkin lohkon kuvauksessa kerrotaan, minkä hubien kanssa se toimii.
+- Kojelaudan lohkot viittaavat ohjaimiin nimellä (**JOY1**, **BTN2**). Ohjainta ei voi poistaa kojelaudalta, kun lohkot käyttävät sitä; poista ensin ne lohkot.
+- Peliohjainlohkot näkyvät, kun **Ota peliohjaimen lohkot käyttöön** on päällä [Peliohjain-sivulla](/docs/Application/Dashboard/Gamepad).
 
-- Reporter-lohkoja voidaan käyttää muiden lohkojen sisällä.
-- Muuttujat tallentavat arvoja.
-- Listat tallentavat järjestettyjä kokoelmia.
+## Lohkotasot {#block-levels}
 
-## Tapahtumat ja ajoitus
+Jokaisella profiililla on **lohkotaso**: **Aloittelija** näyttää yksinkertaisimmat lohkot, **Edistynyt** lisää yleiset logiikka- ja laitelohkot, ja **Guru** näyttää koko valikoiman. Valitse taso profiilia luodessasi tai myöhemmin Editorin asetuksista. Tässä hakemistossa kunkin lohkon taso näkyy sen nimen vieressä.
 
-- Tapahtumat reagoivat syötteisiin ja tilamuutoksiin.
-- Anturi- ja ajastintapahtumat voivat tapahtua usein.
-- Käytä suodattimia tai viiveitä hälyn vähentämiseksi.
+## Suositeltu työtapa {#recommended-workflow}
 
-## Hub, portit ja ohjaimet
+1. Aloita yhdellä tapahtumalohkolla ja lyhyellä skriptillä; paina **Suorita** ja tarkista, että se toimii.
+2. Tarkista moottorien suunnat ja arvoalueet ajoissa (Seuranta auttaa).
+3. Jaa ohjelma pieniin skripteihin, jotka viestivät keskenään viesteillä; siirrä toistuva logiikka [Minun lohkoihin](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Lisää turvallisuutta: rajoja, pysäytyksiä, käynnistystarkistus ja suunnitelma sen varalle, että hubin yhteys katkeaa.
 
-- Hub-lohkot ohjaavat laitetta ja portteja.
-- Osa lohkoista toimii vain tietyillä laitteilla.
-- Dashboard- ja peliohjainlohkot tarjoavat käyttöliittymän syötteet.
+## Yleisiä sudenkuoppia {#common-pitfalls}
 
-## Suositeltu työnkulku
+- Skripti ilman tapahtumalohkoa ei koskaan käynnisty.
+- Väärä hubi tai portti on valittu, joten mitään näkyvää ei tapahdu.
+- Tekstin, lukujen ja totuusarvojen sekoittaminen antaa odottamattomia tuloksia.
+- Hyvin tiheät tapahtumat ilman suodatusta (esimerkiksi anturitapahtuma jokaisesta pienestä muutoksesta) voivat ylikuormittaa ohjelman; käytä kynnyksiä tai lyhyitä odotuksia.
 
-1. Aloita yhdellä tapahtumalohkolla.
-2. Testaa moottorit ja anturit.
-3. Erota toistuva logiikka.
-4. Lisää suojaukset ennen viimeistelyä.
+## Lohkohakemisto {#block-reference}
 
-## Yleiset virheet
+- [Tapahtumat](/docs/Application/BlockBuilder/Blocks/Events) · [Hallinta](/docs/Application/BlockBuilder/Blocks/Control) · [Operaattorit](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Muuttujat](/docs/Application/BlockBuilder/Blocks/Variables) · [Listat](/docs/Application/BlockBuilder/Blocks/Lists) · [Minun lohkot](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Moottorit](/docs/Application/BlockBuilder/Blocks/Motors) · [Valo](/docs/Application/BlockBuilder/Blocks/Light) · [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors) · [Äänet](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulaattori](/docs/Application/BlockBuilder/Blocks/Simulator) · [Näytön ohjaimet](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Peliohjain](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Ei aloituslohkoa → skripti ei käynnisty.
-- Väärä portti → ei vaikutusta.
-- Väärät tietotyypit → virheellinen logiikka.
-- Liian usein laukeavat tapahtumat → epävakaus.
+Sovelluksessa voit painaa lohkoa pitkään (tai napsauttaa sitä hiiren oikealla painikkeella) ja valita **Tietoja lohkosta**, niin sen kuvaus avautuu täällä.
 
-## Dokumentaation rakenne
-
-Käytä sivuja tässä järjestyksessä:
-
-- Valo
-- Moottorit
-- Sensorit
-- Tapahtumat
-- Ohjaus
-- Operaattorit
-- Muuttujat
-- Listat
-- Omat lohkot
-- Ohjauspaneelin ohjaimet
-- Peliohjain
+Valmiita ohjelmia: [Esimerkit](/docs/Application/BlockBuilder/Examples).

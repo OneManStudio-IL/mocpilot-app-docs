@@ -1,108 +1,106 @@
 ---
 id: TechnicMoveHubConfigurations
-title: Konfigurace Technic Move Hub
+title: Konfigurace Technic Move Hubu
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Konfigurace Technic Move Hub
+# Konfigurace Technic Move Hubu {#technic-move-hub-configurations}
 
-## Přehled
+## Přehled {#overview}
 
-Technic Move Hub přinesl do rodiny LEGO Powered Up hubů jedinečnou funkci: hub může měnit své chování podle aktuálně použité konfigurace.
+Na rozdíl od ostatních hubů LEGO® Powered Up se Technic Move Hub chová různě podle toho, jaká konfigurace je do něj nahraná.
 
-MOCPilot umožňuje změnit konfiguraci Technic Move Hubu tak, aby se chování hubu shodovalo s oficiální LEGO sadou, kterou chcete ovládat.
+MOCPilot umí tuto konfiguraci změnit, aby hub odpovídal oficiální sadě LEGO, kterou chcete ovládat.
 
-## Podporované konfigurace
+## Podporované konfigurace {#supported-configurations}
 
-V tuto chvíli jsou známy tyto konfigurace Technic Move Hubu:
+MOCPilot zná tyto konfigurace:
 
 - **Porsche GT4 e-Performance**
 - **Lamborghini Revuelto**
 - **Batmobile™ Tumbler**
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Možnosti konfigurace Technic Move Hubu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Možnosti konfigurace Technic Move Hubu v bloku nastavení konfigurace hubu" />
 
-## Změna konfigurace z Moje Bluetooth huby
+## Změna konfigurace v Moje Bluetooth huby {#change-configuration-from-my-bluetooth-hubs}
 
-Konfiguraci můžete změnit ze stránky **Moje Bluetooth huby**:
+Konfiguraci na stránce **Moje Bluetooth huby** změníte takto:
 
 1. Otevřete **Moje Bluetooth huby**.
 2. Najděte Technic Move Hub.
-3. Otevřete kontextové menu hubu.
+3. Otevřete nabídku hubu.
 4. Vyberte **Vybrat konfiguraci**.
-5. Zvolte požadovanou konfiguraci.
-6. Potvrďte dialog rekonfigurace.
+5. Zvolte konfiguraci.
+6. Potvrďte v dialogu.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Kontextové menu Technic Move Hubu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Kontextová nabídka Technic Move Hubu s akcí Vybrat konfiguraci" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Podmenu konfigurace Technic Move Hubu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Podnabídka konfigurací Technic Move Hubu" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Potvrzovací dialog rekonfigurace Technic Move Hubu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Dialog pro potvrzení změny konfigurace Technic Move Hubu" />
 
 :::warning Důležité
-Změna konfigurace hubu nahraje do hubu podprogram a podobá se procesu aktualizace firmwaru.
+Změna konfigurace zapisuje do hubu program, podobně jako aktualizace firmwaru.
 
-Během celého procesu nechte hub zapnutý. Telefon, tablet nebo počítač mějte nabitý a blízko hubu, aby bylo připojení Bluetooth stabilní. Během změny konfigurace nezavírejte MOCPilot, nevypínejte Bluetooth ani hub.
+Po celou dobu nechte hub zapnutý a telefon, tablet nebo počítač zapnutý a blízko hubu, aby spojení přes Bluetooth zůstalo stabilní. Během změny konfigurace nezavírejte MOCPilot, nevypínejte Bluetooth ani hub.
 
-Přerušení změny konfigurace může poškodit firmware hubu. Pokud k tomu dojde, může být před dalším použitím nutná obnova firmwaru. V případě potřeby postupujte podle průvodce [obnovou firmwaru hubu](/docs/Application/Hubs/RecoveryHubFirmware/).
+Přerušená změna může poškodit firmware hubu. Hub pak může před dalším použitím potřebovat [obnovu firmwaru](/docs/Application/Hubs/RecoveryHubFirmware/).
 :::
 
-Během rekonfigurace hub nereaguje na běžné příkazy. Jeho LED bliká stupňovanou barevnou indikací, dokud proces neskončí. Po použití nové konfigurace se hub znovu inicializuje.
+Během změny konfigurace hub ignoruje běžné příkazy a jeho LED postupně mění barvy. Jakmile je nová konfigurace nahraná, hub se restartuje.
 
-## Konfigurační bloky
+## Bloky konfigurace {#configuration-blocks}
 
-MOCPilot také obsahuje bloky pro čtení a změnu konfigurace Technic Move Hubu během programu.
+Logické bloky umí konfiguraci číst a měnit za běhu programu.
 
-### Nastavit konfiguraci hubu
+### Nastavit konfiguraci hubu {#set-hub-configuration}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="Blok Nastavit konfiguraci hubu" />
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="Blok nastavení konfigurace hubu" />
 
-Blok **Nastavit konfiguraci hubu** změní vybraný hub na jeden z podporovaných konfiguračních profilů.
+Blok **Nastavit konfiguraci hubu** nahraje do vybraného hubu jednu z podporovaných konfigurací.
 
-- Výběr hubu: zvolí hub k rekonfiguraci.
-- Výběr konfigurace: zvolí cílovou konfiguraci.
+- Výběr hubu: určuje hub, který se má překonfigurovat.
+- Výběr konfigurace: určuje cílovou konfiguraci.
 - Dostupné konfigurace pro Technic Move Hub: **Porsche GT4 e-Performance**, **Lamborghini Revuelto** a **Batmobile™ Tumbler**.
 
-Viz [dokumentace bloku Nastavit konfiguraci hubu](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_set_hub_config).
+Viz [dokumentace bloku nastavení konfigurace hubu](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_set_hub_config).
 
-### Konfigurace hubu
+### Konfigurace hubu {#hub-configuration}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Blok Konfigurace hubu" />
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Hodnotový blok konfigurace hubu" />
 
-Blok **Konfigurace hubu** hlásí aktuální konfiguraci vybraného hubu.
+Blok **Konfigurace hubu** vrací aktuální konfiguraci vybraného hubu.
 
-- Výběr hubu: zvolí hub, který se má přečíst.
-- Formát výstupu: **textová hodnota** vrátí název konfigurace.
-- Formát výstupu: **index** vrátí pořadový index konfigurace, což je užitečné pro porovnávání v podmínkách.
+- Výběr hubu: určuje hub, ze kterého se čte.
+- Formát výstupu: **text** vrací název konfigurace.
+- Formát výstupu: **index** vrací index konfigurace, což se hodí pro porovnávání v podmínkách.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Možnosti formátu výstupu bloku Konfigurace hubu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Možnosti formátu výstupu bloku konfigurace hubu" />
 
-Viz [dokumentace bloku Konfigurace hubu](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_all_control_hub_config).
+Viz [dokumentace bloku konfigurace hubu](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_all_control_hub_config).
 
-### Napájecí pulz
+### Výkonový pulz {#power-pulse}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blok Napájecí pulz" />
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blok výkonového pulzu Technic Move Hubu" />
 
-Blok **Napájecí pulz** odešle vybranému Technic Move Hubu příkaz výkonového pulzu. Tento blok funguje pouze tehdy, když je Technic Move Hub nakonfigurován jako **Batmobile™ Tumbler**.
+Blok **Výkonový pulz** pošle vybranému Technic Move Hubu výkonový pulz. Funguje jen s konfigurací **Batmobile™ Tumbler**.
 
-Při spuštění hub krátce roztočí motory s maximálním dostupným výkonem a rychlostí, obvykle asi na 1-2 sekundy.
+Hub pak na krátkou dobu, asi 1–2 sekundy, pohání motory maximálním výkonem a rychlostí. V Rychlých propojeních odpovídá této funkci operace [Výkonový pulz](/docs/Application/Links/Blocks/OutputBlocks#op-pulse).
 
-Viz [dokumentace bloku Napájecí pulz](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
+Viz [dokumentace bloku výkonového pulzu](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
 
-## Změna konfigurace za běhu programu
+## Změna konfigurace za běhu programu {#change-configuration-during-program-runtime}
 
-Konfiguraci Technic Move Hubu je možné změnit také během běhu programu.
-
-Běžný postup je:
+Program může konfiguraci měnit i za běhu. Typický postup:
 
 1. Přečtěte aktuální konfiguraci hubu.
-2. Porovnejte ji s konfigurací požadovanou profilem.
-3. Pokud je konfigurace jiná, nastavte požadovanou konfiguraci.
-4. Po rekonfiguraci znovu přečtěte konfiguraci.
-5. Pokračujte pouze tehdy, když hub hlásí očekávanou konfiguraci.
-6. Pokud požadovaná konfigurace nebyla použita, odpojte hub nebo zastavte program.
+2. Porovnejte ji s konfigurací, kterou profil vyžaduje.
+3. Pokud se konfigurace liší, nastavte požadovanou konfiguraci.
+4. Po změně konfiguraci přečtěte znovu.
+5. Pokračujte, až když hub hlásí očekávanou konfiguraci.
+6. Pokud se požadovaná konfigurace nepoužila, odpojte se nebo zastavte program.
 
-Předpřipravený profil, který tento hub používá, může sloužit jako reference pro tento postup.
+Jak na to, ukazuje hotový profil pro tento hub.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_6.png')} alt="Příklad bloků pro změnu konfigurace Technic Move Hubu za běhu" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_6.png')} alt="Příklad bloků se změnou konfigurace Technic Move Hubu za běhu" />

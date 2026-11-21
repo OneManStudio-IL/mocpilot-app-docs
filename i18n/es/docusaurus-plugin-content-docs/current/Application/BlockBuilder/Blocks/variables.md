@@ -5,37 +5,35 @@ title: Variables
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Variables
+# Variables {#variables}
 
-Las variables almacenan valores que pueden leerse y actualizarse entre pilas de bloques y scripts.
+Las variables guardan valores que todos los scripts del programa pueden leer y cambiar. Créalas, renómbralas y elimínalas con **Crear una variable**, **Renombrar variable** y **Eliminar variable** en la parte superior de la categoría. Los bloques de abajo aparecen en cuanto el programa tiene al menos una variable.
 
-## Bloques de comando de variables
+## Modificar una variable {#changing-a-variable}
 
-### `Establecer variable a` (Principiante) {#block_variables_set_to}
+### `configurar … a …` (Principiante) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Establece la variable seleccionada al valor especificado.
+Asigna un valor a la variable seleccionada.
 
-- Tipo: bloque de comando
-- Uso típico: inicializar estado, sobrescribir valores anteriores
+- Uso típico: fijar un valor inicial, sustituir el valor anterior.
 
-### `Cambiar variable por` (Avanzado) {#block_variables_change_by}
+### `cambiar … por …` (Avanzado) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Añade la cantidad especificada a la variable seleccionada.
+Suma un número a la variable seleccionada. Usa un número negativo para restar.
 
-- Tipo: bloque de comando
-- Uso típico: contadores, puntuación, acumulación de distancia/tiempo
+- Uso típico: contadores, puntuaciones, ir sumando distancia o tiempo.
 
-## Bloque reportero de variable
+## Leer una variable {#reading-a-variable}
 
-### `Valor de variable` (Principiante) {#block_variables_value}
+### Variable (Principiante) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Devuelve el valor actual de la variable seleccionada.
+Cada variable tiene su propio bloque informador con su nombre. Devuelve el valor actual de la variable.
 
-- Tipo: bloque reportero
-- Uso típico: usar el valor dentro de operadores, condiciones o comandos
+- Uso típico: usar el valor en operadores, condiciones y entradas de otros bloques.
+- El [Monitor](/docs/Application/BlockBuilder/Editor#monitor) muestra los valores de todas las variables mientras se ejecuta el programa.

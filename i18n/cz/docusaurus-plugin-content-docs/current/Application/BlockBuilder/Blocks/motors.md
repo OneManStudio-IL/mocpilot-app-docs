@@ -5,132 +5,220 @@ title: Motory
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Motory
+# Motory {#motors}
 
-Bloky motorů slouží ke spuštění, zastavení, polohování a ladění motorů připojených k portům hubu.
+Bloky motorů spouštějí, zastavují a natáčejí motory připojené k portům hubu a ladí, jak se pohybují. Kategorie se objeví, když má některý hub v profilu porty pro motory. V každém bloku vybíráte hub a jeden nebo více portů.
 
-## Základní příkazové bloky motorů
+Některé bloky potřebují motor s vestavěným senzorem otáčení (enkodérem), například úhlové motory Technic, a hub, který ho umí řídit. Tyto bloky jsou označené „motory s enkodérem“. Nejsou k dispozici pro huby SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 a Mould King. Technic Move Hub má vlastní sadu bloků na konci této stránky.
 
-### `Spustit motor` (Začátečník) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Spustí vybraný motor.
+## Spouštění motorů {#running-motors}
 
-- Možnosti směru: `ve směru hodinových ručiček` / `proti směru hodinových ručiček`
+### `nastavit rychlost na …` (Pokročilý) {#block_hubs_all_motors_port_set_motor_speed}
 
-### `Zastavit motor` (Začátečník) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Zastaví vybraný motor.
-
-### `Spustit na` (Pokročilý) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Spustí vybraný motor na zadaný čas/úhel/otáčky podle nastavení bloku.
-
-- Možnosti směru: `ve směru hodinových ručiček` / `proti směru hodinových ručiček`
-- Možnosti jednotek: `otáčky`, `stupně`, `sekundy`
-
-### `Spustit motor rychlostí` (Začátečník) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Spustí motor s explicitně zadanou rychlostí.
-
-### `Spustit na rychlostí` (Pokročilý) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Spustí motor na cílové trvání/množství s explicitní rychlostí.
-
-- Možnosti jednotek: `otáčky`, `stupně`, `sekundy`
-
-### `Nastavit rychlost motoru` (Pokročilý) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Nastaví rychlost používanou souvisejícími bloky běhu motoru.
 
-## Bloky polohy a pohybu
+Nastaví rychlost (od −100 do 100 %), kterou na těchto portech používají bloky **spustit motor** a **běžet … po dobu**. Samotný blok motor nespustí.
 
-### `Přejít na pozici` (Pokročilý) {#block_hubs_all_motors_port_go_to_position}
+### `spustit motor …` (Začátečník) {#block_hubs_all_motors_port_start_motor}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+
+Spustí motor ve zvoleném směru rychlostí nastavenou blokem **nastavit rychlost na**.
+
+- Směr: ve směru nebo proti směru hodinových ručiček
+
+### `spustit motor na … % rychlost` (Začátečník) {#block_hubs_all_motors_port_start_motor_at_speed}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+
+Spustí motor zadanou rychlostí, od −100 do 100 %. Záporná rychlost ho otočí opačně.
+
+- Typické použití: jízda joystickem nebo posuvníkem: vložte hodnotu ovládacího prvku do slotu rychlosti.
+
+### `zastavit motor` (Začátečník) {#block_hubs_all_motors_port_stop_motor}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+
+Zastaví motor.
+
+### `běžet … po dobu …` (Pokročilý) {#block_hubs_all_motors_port_run_for}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+
+Nechá motor běžet ve zvoleném směru po zadaný počet otáček, stupňů nebo sekund.
+
+- Směr: ve směru nebo proti směru hodinových ručiček
+- Jednotky: `otáčky`, `stupně`, `sekundy`
+- Jen motory s enkodérem.
+
+### `běžet po dobu … na … % rychlost` (Pokročilý) {#block_hubs_all_motors_port_run_for_at_speed}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+
+Nechá motor běžet po zadaný počet otáček, stupňů nebo sekund zadanou rychlostí.
+
+- Jednotky: `otáčky`, `stupně`, `sekundy`
+- Jen motory s enkodérem.
+
+## Poloha {#position}
+
+### `jít … do polohy …` (Pokročilý) {#block_hubs_all_motors_port_go_to_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Přesune motor na cílovou absolutní pozici.
 
-- Možnosti cesty: `nejkratší cesta`, `ve směru hodinových ručiček`, `proti směru hodinových ručiček`
+Natočí motor do absolutní polohy (vůči vlastní nulové značce motoru).
 
-### `Přejít na relativní pozici` (Začátečník) {#block_hubs_all_motors_port_go_to_relative_position}
+- Cesta: `nejkratší cesta`, `ve směru hodinových ručiček`, `proti směru hodinových ručiček`
+- Jen motory s enkodérem.
+
+### `jít na relativní polohu … na … % rychlost` (Začátečník) {#block_hubs_all_motors_port_go_to_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Přesune motor o relativní posun.
 
-### `BuWizz 3 přejít na relativní pozici` (Začátečník) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+Natočí motor do polohy ve stupních, počítané od bodu nastaveného blokem **nastavit relativní polohu**.
+
+- Typické použití: řízení servem, kde hodnota joysticku určuje úhel.
+- Jen motory s enkodérem; u BuWizz 3 použijte blok níže.
+
+### `jít na relativní polohu …` (BuWizz 3) (Začátečník) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-Varianta relativního polohování pro BuWizz 3.
 
-### `Nastavit relativní pozici` (Začátečník) {#block_hubs_all_motors_port_set_relative_position}
+Verze předchozího bloku pro BuWizz 3, bez vstupu rychlosti.
+
+- Huby: BuWizz 3, s motory s enkodérem.
+
+### `nastavit relativní polohu …` (Začátečník) {#block_hubs_all_motors_port_set_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Nastaví referenci relativní pozice motoru.
 
-### `Kalibrovat řízení` (Začátečník) {#block_hubs_all_motors_port_calibrate_steering_rack}
+Prohlásí aktuální polohu motoru za zadanou hodnotu. Relativní polohy se počítají od ní.
+
+- Jen motory s enkodérem.
+
+### `kalibrovat ozubený hřeben … střed … stupně …` (Začátečník) {#block_hubs_all_motors_port_calibrate_steering_rack}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Kalibruje neutrální/referenční pozici hřebene řízení.
 
-## Bloky ladění a bezpečnosti motorů
+Najde střed a rozsah pohybu hřebenu řízení.
 
-### `Nastavit chování motoru při zastavení` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+- Motor otočí hřebenem do obou krajních poloh, změří, kam až může dojet, a výsledek uloží do dvou proměnných, které vložíte do slotů: polohu středu a rozsah ve stupních. Hřeben se zastaví uprostřed, ale jeho relativní poloha tam odpovídá hodnotě středu, ne 0, takže hned za tento blok přidejte **nastavit relativní polohu** 0; pak řiďte pomocí `rozsah × joystick / 100`.
+- Řízení musí mít na obou koncích pevné mechanické dorazy (konec hřebenu nebo převodů).
+- Jen motory s enkodérem.
+
+## Nastavení motoru {#motor-settings}
+
+### `nastavit motor na … při zastavení` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Nastaví režim zastavení motoru.
 
-- Možnosti režimu: `brzda`, `držet pozici`, `doběh`
+Určuje, co motor udělá, když se zastaví.
 
-### `Nastavit detekci zablokování` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+- `brzda`: zastaví rychle.
+- `udržet pozici`: aktivně drží svou polohu (užitečné pro řízení).
+- `plachtění`: volně doběhne.
+- Jen motory s enkodérem.
+
+### `zapnout detekci zablokování …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Zapíná nebo vypíná detekci zablokování.
 
-### `Nastavit zrychlení` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+Zapne nebo vypne detekci zablokování.
+
+- Huby: MINDSTORMS Robot Inventor.
+
+### `nastavit zrychlení na …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Nastaví profil/rychlost zrychlení motoru.
 
-### `Nastavit zpomalení` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+Určuje, jak rychle motor zrychluje.
+
+- Volby: `výchozí`, `rychlý`, `vyvážený`, `hladký`, `pomalý`, `velmi pomalý`
+- Jen motory s enkodérem.
+
+### `nastavit zpomalení na …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Nastaví profil/rychlost zpomalení motoru.
 
-## Reportovací bloky motorů
+Určuje, jak rychle motor zpomaluje.
 
-### `Pozice` (Začátečník) {#block_hubs_all_motors_port_position}
+- Volby: `výchozí`, `rychlý`, `vyvážený`, `hladký`, `pomalý`, `velmi pomalý`
+- Jen motory s enkodérem.
+
+## Hodnoty motoru {#motor-values}
+
+### `poloha` (Začátečník) {#block_hubs_all_motors_port_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Vrací aktuální pozici motoru.
 
-### `Relativní pozice` (Začátečník) {#block_hubs_all_motors_port_relative_position}
+Vrací absolutní polohu motoru.
+
+- Jen motory s enkodérem.
+
+### `relativní poloha` (Začátečník) {#block_hubs_all_motors_port_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Vrací aktuální relativní pozici.
 
-### `Rychlost` (Začátečník) {#block_hubs_all_motors_port_speed}
+Vrací relativní polohu motoru ve stupních.
+
+- Jen motory s enkodérem.
+
+### `rychlost` (Začátečník) {#block_hubs_all_motors_port_speed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
+
 Vrací aktuální rychlost motoru.
 
-### `Výkon` (Pokročilý) {#block_hubs_all_motors_port_power}
+### `výkon` (Pokročilý) {#block_hubs_all_motors_port_power}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Vrací aktuální hodnotu výkonu motoru.
 
-## Bloky motorů Technic Move
+Vrací aktuální výkon motoru.
 
-### `Spustit motory rychlostí` (Začátečník) {#block_hubs_technicmove_motors_start_motors_at_speed}
+- Huby: MINDSTORMS Robot Inventor.
+
+## Technic Move Hub {#technic-move-hub}
+
+Technic Move Hub pohání své vestavěné motory těmito bloky místo výše uvedených bloků pro porty.
+
+### `spustit motory na … % rychlost` (Začátečník) {#block_hubs_technicmove_motors_start_motors_at_speed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Spustí pohonné motory Technic Move zvolenou rychlostí.
 
-### `Napájecí pulz` (Začátečník) {#block_hubs_technicmove_motors_power_pulse}
+Spustí hnací motory zadanou rychlostí.
+
+### `výkonový impuls` (Začátečník) {#block_hubs_technicmove_motors_power_pulse}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Odešle příkaz napájecího pulzu do vybraného Technic Move Hubu.
 
-- Dostupné pouze pro Technic Move Hub.
-- Typické použití: krátce zesílit nebo probudit pohonný systém Technic Move před pokračováním dalšími bloky.
+Pošle hnacím motorům výkonový pulz.
 
-### `Zastavit motory` (Začátečník) {#block_hubs_technicmove_motors_stop_motors}
+- Typické použití: krátké posílení před dalšími bloky.
+
+### `zastavit motory` (Začátečník) {#block_hubs_technicmove_motors_stop_motors}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Zastaví pohonné motory Technic Move.
 
-### `Brzda` (Začátečník) {#block_hubs_technicmove_motors_brake}
+Zastaví hnací motory.
+
+### `nastavit brzdu motorů …` (Začátečník) {#block_hubs_technicmove_motors_brake}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Nastaví brzdné chování motorů Technic Move.
 
-- Možnosti brzdy: `vypnuto`, `povoleno`
+Zapne nebo vypne brzdu hnacích motorů.
 
-### `Nastavit hřeben řízení na` (Začátečník) {#block_hubs_technicmove_motors_set_steering_rack_to}
+- Volby: `vypnuto`, `povoleno`
+
+### `nastavit řízení na …` (Začátečník) {#block_hubs_technicmove_motors_set_steering_rack_to}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Nastaví cílovou pozici/hodnotu hřebene řízení.
 
-### `Kalibrovat hřeben řízení` (Začátečník) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+Natočí řízení do zadané polohy.
+
+### `kalibrovat řízení` (Začátečník) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Kalibruje hřeben řízení Technic Move pomocí interního algoritmu hubu.
+
+Zkalibruje řízení vlastním algoritmem hubu, který rozsah řízení najde automaticky.
+
+- Řízení musí mít pevné mechanické dorazy (například konce hřebenu řízení).

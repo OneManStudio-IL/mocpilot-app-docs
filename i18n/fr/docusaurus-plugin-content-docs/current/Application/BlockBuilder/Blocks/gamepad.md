@@ -1,105 +1,91 @@
 ---
 id: Gamepad
-title: Manette
+title: Manette de jeu
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Manette
-Les blocs de manette sont utilisés pour réagir aux entrées du contrôleur et lire les valeurs actuelles de la manette.
+# Manette de jeu
 
-## Blocs d’événement
+Les blocs de manette réagissent à une manette de jeu et lisent ses boutons, ses sticks et ses gâchettes. La catégorie apparaît lorsque **Activer les blocs de manette** est activé sur la [page Manette de jeu](/docs/Application/Dashboard/Gamepad). Les noms des boutons suivent la disposition de la manette : Xbox ou Sony.
 
-### `Quand le bouton de la manette est` (Débutant) {#block_gamepad_event_when_button_is}
+## Événements {#events}
+
+### `quand … est …` (Débutant) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Se déclenche lorsque le bouton sélectionné correspond à l’état configuré.
+S’exécute lorsque le bouton sélectionné est appuyé ou relâché.
 
-- Type : bloc événement
-- Boutons (Xbox) : `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Boutons (Sony) : `croix`, `cercle`, `carré`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Boutons (disposition Xbox) : `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Boutons (disposition Sony) : `croix`, `cercle`, `carré`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
 - États : `appuyé`, `relâché`
 
-### `Quand le D-pad de la manette est` (Débutant) {#block_gamepad_event_when_dpad_is}
+### `lorsque D-Pad … bouton …` (Débutant) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Se déclenche lorsque la direction/état du D-pad correspond à la condition sélectionnée.
+S’exécute lorsqu’un bouton de la croix directionnelle est appuyé ou relâché.
 
-- Type : bloc événement
 - Directions : `haut`, `bas`, `gauche`, `droite`
 - États : `appuyé`, `relâché`
 
-### `Quand le joystick de la manette est` (Débutant) {#block_gamepad_event_when_thumbstick_is}
+### `quand … joystick …` (Débutant) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Se déclenche lorsque la condition du joystick correspond aux options sélectionnées.
+S’exécute lorsqu’un stick est poussé dans une direction, déplacé ou relâché.
 
-Selon les options actuelles, ce bloc prend en charge :
+- Stick : `gauche`, `droite`
+- État : `haut`, `bas`, `gauche`, `droite`, `déplacé`, `relâché`
+- Utilisation type : réagir au mouvement du stick, et arrêter ou recentrer le modèle quand le stick est relâché.
 
-- Sélection du stick : `gauche` / `droite`
-- Direction/état : `haut`, `bas`, `gauche`, `droite`, `déplacé`, `relâché`
-- Type : bloc événement
-- Utilisation typique : réagir au mouvement directionnel ou au relâchement
+## Valeurs {#values}
 
-## Blocs de valeur
-
-### `Valeur du bouton de la manette (booléen)` (Débutant) {#block_gamepad_button_value_boolean}
+### `est-ce que … …` (Débutant) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Retourne l’état actuel du bouton sélectionné.
+Renvoie `true` lorsque le bouton sélectionné est dans l’état sélectionné.
 
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Boutons (Xbox) : `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Boutons (Sony) : `croix`, `cercle`, `carré`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Boutons (disposition Xbox) : `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Boutons (disposition Sony) : `croix`, `cercle`, `carré`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
 - États : `appuyé`, `relâché`
 
-### `Valeur du D-pad de la manette (booléen)` (Débutant) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … bouton …` (Débutant) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Retourne si la direction sélectionnée du D-pad est active.
+Renvoie `true` lorsque le bouton sélectionné de la croix directionnelle est dans l’état sélectionné.
 
-- Type : bloc valeur
-- Sortie : `true`/`false`
 - Directions : `haut`, `bas`, `gauche`, `droite`
 - États : `appuyé`, `relâché`
 
-### `Valeur du joystick de la manette (float)` (Débutant) {#block_gamepad_thumbstick_value_float}
+### `joystick … …` (Débutant) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Retourne la valeur numérique de l’axe du joystick.
+Renvoie la position d’un stick sur un axe.
 
-- Type : bloc valeur
-- Sortie : numérique (float)
-- Plage par défaut : `-1` à `1`
-- Plage optionnelle : `-100` à `100`
-- Sticks : `gauche`, `droite`
-- Axes : `axe x` / `axe y`
+- Stick : `gauche`, `droite`
+- Axe : `axe X`, `axe Y`
+- Plage : de `-1` à `1` par défaut, ou de `-100` à `100` si vous le choisissez dans **Plage de valeurs de la manette** sur la page Manette de jeu.
 
-### `Valeur de pression du trigger de la manette (float)` (Débutant) {#block_gamepad_trigger_pressure_value_float}
+### `… pression` (Débutant) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Retourne la valeur de pression du trigger sélectionné.
+Renvoie à quel point une gâchette est enfoncée.
 
-- Type : bloc valeur
-- Sortie : numérique (float)
-- Plage par défaut : `-1` à `1`
-- Plage optionnelle : `-100` à `100`
-- Triggers (Xbox) : `LT`, `RT`
-- Triggers (Sony) : `L2`, `R2`
+- Gâchettes (disposition Xbox) : `LT`, `RT`
+- Gâchettes (disposition Sony) : `L2`, `R2`
+- Plage : de `0` (relâchée) à `1` par défaut, ou de `0` à `100` avec la **Plage de valeurs de la manette** élargie.

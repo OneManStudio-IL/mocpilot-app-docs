@@ -5,233 +5,275 @@ title: センサー
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# センサー
+# センサー {#sensors}
 
-センサーブロックは、ハブやデバイスの状態を読み取り、条件分岐、イベント、制御ロジックにデータを提供します。
+センサーブロックは、スマートフォンやタブレットの状態、プログラムのタイマー、ハブ、ハブに接続したセンサーの値を読み取ります。読み取った値は、条件、イベント、計算に使えます。
 
-## デバイス・ハブセンサー
+このページの内容：
 
-### `ハブのバッテリー残量` (初級) {#block_hubs_all_sensors_battery_level}
+- [ハブの状態](#hub-state)：バッテリー、電圧、温度、電流、電源モード
+- [ハブのボタン、傾き、向き](#hub-tilt-and-orientation)
+- [ポートのセンサー](#sensors-on-ports)：任意のデバイス、Technic カラーセンサー、Technic 距離センサー、BOOST カラー＆距離センサー、WeDo 2.0 のセンサー
+- [このデバイス](#this-device)：MOCPilot を実行しているスマートフォン、タブレット、パソコン
+- [タイマー](#timer)
+
+## ハブの状態 {#hub-state}
+
+これらのブロックは Mould King のハブにはありません。Mould King のハブはデータを報告しないためです。
+
+### `… % バッテリー` (初心者) {#block_hubs_all_sensors_battery_level}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="block_hubs_all_sensors_battery_level.svg" />
-現在のハブのバッテリー残量を返します。
+ハブのバッテリー残量をパーセントで返します。
 
-### `ハブのバッテリー電圧` (上級) {#block_hubs_all_sensors_battery_voltage}
+### `… バッテリー電圧 (V)` (上級者) {#block_hubs_all_sensors_battery_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
-選択したハブのバッテリー電圧をボルト単位で返します。
+ハブのバッテリー電圧をボルトで返します。
 
-- タイプ: 数値レポーターブロック
-- バッテリー電圧を報告するハブでのみ使用できます。
-- 選択したハブが接続されていない場合は `NaN` を返します。
+- ハブ：BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- ハブが接続されていないときは `NaN` を返します。
 
-### `デバイスのバッテリー（%）` (初級) {#block_sensors_device_battery_level}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
-MOCPilotが動作している端末（スマートフォン／タブレット）のバッテリー残量（％）を返します。
-
-### `基板温度` (上級) {#block_hubs_all_sensors_board_temp}
+### `… 温度 (C°)` (上級者) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
-ハブの基板温度を返します。
+ハブの電子回路の温度を摂氏で返します。
 
-- `BuWizz 2` および `BuWizz 3` のみ対応
+- ハブ：BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
 
-### `ハブの加速度センサー` (達人) {#block_hubs_all_sensors_accelerometer}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
-選択したハブが報告する生の加速度センサーデータを返します。
-
-- 軸オプション: `x`, `y`, `z`
-
-### `ハブの加速度` (達人) {#block_hubs_all_sensors_acceleration}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
-選択したハブが報告する加速度データを返します。
-
-- 軸オプション: `x`, `y`, `z`
-
-### `ボタンが〜のとき` (初級) {#block_hubs_all_sensors_button_pressed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
-選択したハブボタンが指定状態と一致するかを判定します。
-
-- 状態オプション: `押された`, `離された`
-- ボタン例: `中央`
-- 注: 利用可能なボタンはハブにより異なります
-
-### `接続デバイスの種類` (初級) {#block_hubs_all_motors_port_device_type}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
-指定ポートに接続されているデバイスの種類を返します。
-
-- タイプ: レポーターブロック
-- 使用例: 接続機器に応じた処理分岐
-
-### `デバイス加速度センサー` (達人) {#block_sensors_device_accelerometer_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
-デバイスの加速度センサーの生データを返します。
-
-- 軸オプション: `x`, `y`, `z`
-
-### `デバイス加速度` (達人) {#block_sensors_device_acceleration_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
-デバイスの加速度データを返します。
-
-- 軸オプション: `x`, `y`, `z`
-
-## 姿勢・傾きセンサー
-
-### `デバイスの傾き` (上級) {#block_sensors_device_tilt_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
-MOCPilot を実行しているスマートフォン/タブレットの傾きデータを返します。
-
-- 軸オプション: `pitch`, `roll`
-
-### `傾き` (初級) {#block_hubs_all_sensors_tilt}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
-指定軸の傾き角度を返します。
-
-- 軸オプション: `ピッチ`, `ロール`, `ヨー`
-- 注: `ヨー`は対応ハブのみ
-
-### `向きを取得` (初級) {#block_hubs_sensors_get_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
-現在のハブの向きを返します。
-
-- 出力形式: `テキスト`, `インデックス`
-- 値: `前`, `上`, `右`, `後`, `下`, `左`
-
-### `向きが上か` (初級) {#block_hubs_all_sensors_is_orientation_up}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
-指定した向きが「上」と一致するかを判定します。
-
-- 向きオプション: `前`, `上`, `右`, `後`, `下`, `左`
-
-### `傾き基準を設定` (上級) {#block_hubs_sensors_set_tilt_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
-傾き・向きブロックの基準方向を設定します。
-
-- 向きオプション: `前`, `上`, `右`, `後`, `下`, `左`
-
-## タイマー・モーション
-
-### `タイマー` (上級) {#block_sensors_timer_value_float}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
-秒単位のタイマー値を返します。
-
-### `タイマーをリセット` (上級) {#block_sensors_timer_reset}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
-タイマーを0にリセットします。
-
-## ポートセンサー
-
-### `Technic 距離センサー` (初級) {#block_hubs_all_sensors_port_technic_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
-距離センサーの値を返します。
-
-- 単位: `mm`, `cm`, `インチ`, `%`
-
-### `Technic 距離が〜のとき` (初級) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
-距離条件を判定します。
-
-- 比較: `より近い`, `より遠い`, `正確に`
-- 単位: `mm`, `cm`, `インチ`, `%`
-
-### `Technic カラーセンサーのモード設定` (上級) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
-このブロックは Technic カラーセンサーを選択したモードに設定します。
-
-- 注意: カラーセンサーのモードを変更すると、プログラムに予期しない影響が出ることがあります。例えば、Technic カラーセンサーは `"環境光"` モードでは色や反射光を読み取れません。
-
-### `Technic 色センサー値` (初級) {#block_hubs_all_sensors_port_technic_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
-検出された色を返します。
-
-- 出力: `値`, `文字列`
-
-### `Technic 色が〜のとき` (初級) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
-指定した色と一致するかを判定します。
-
-### `Technic 反射光` (初級) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
-反射光の強さを返します。
-
-### `Technic 反射光が〜のとき` (初級) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
-反射光条件を判定します。
-
-- 比較: `<`, `=`, `>`
-
-### `Technic 環境光` (初級) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
-環境光の強さを返します。
-
-### `Technic 環境光が〜のとき` (初級) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
-環境光条件を判定します。
-
-- 比較: `<`, `=`, `>`
-
-### `Technic 生カラー` (初級) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-RGBチャンネルの値を返します。
-
-- チャンネル: `赤`, `緑`, `青`
-
-### `BOOST 距離センサー` (初級) {#block_hubs_all_sensors_port_boost_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
-距離を返します。
-
-- 単位: `%`, `cm`, `インチ`
-
-### `BOOST 距離が〜のとき` (初級) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
-距離条件を判定します。
-
-- 比較: `より近い`, `より遠い`, `正確に`
-
-### `BOOST 色センサー` (初級) {#block_hubs_all_sensors_port_boost_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
-検出された色を返します。
-
-### `BOOST 色かどうか` (初級) {#block_hubs_all_sensors_port_boost_sensor_is_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
-指定色と一致するかを判定します。
-
-### `BOOST 反射光` (初級) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-反射光の値を返します。
-
-### `BOOST 反射光が〜のとき` (初級) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
-反射光条件を判定します。
-
-### `Technic Move 電力モードを設定` (初級) {#block_hubs_technicmove_sensors_set_power_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
-電力モードを設定します。
-
-- モード: `通常`, `ブースト`
-
-### `BuWizz 出力電圧` (達人) {#block_hubs_buwizz_sensors_get_output_voltage}
+### `取得する … 出力電圧 (V)` (達人) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
-BuWizz ハブが報告する現在の出力電圧を返します。
+ハブが現在ポートに供給している電圧をボルトで返します。
 
-- 対応する BuWizz ハブでのみ使用できます。
+- ハブ：BuWizz 2。
 
-### `BuWizz ポート電流` (達人) {#block_hubs_buwizz_sensors_port_get_current}
+### `… 電流 (A)` (達人) {#block_hubs_buwizz_sensors_port_get_current}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
-選択した BuWizz ハブポートで報告される消費電流を返します。
+選択したポートに流れている電流をアンペアで返します。
 
-- 対応する BuWizz ハブとポートでのみ使用できます。
+- ハブ：BuWizz 2、BuWizz 3。
 
-### `WeDo 2 距離センサー` (初級) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
+### `電源モードを設定 …` (Technic Move Hub) (初心者) {#block_hubs_technicmove_sensors_set_power_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
+Technic Move Hub の電源モードを設定します。
+
+- モード：`通常`、`ブースト`
+- ハブ：Technic Move Hub。
+
+## ハブのボタン、傾き、向き {#hub-tilt-and-orientation}
+
+ボタンのブロックには、対応するハブが一覧で表示されます。傾きと向きのブロックは、BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor で使えます。
+
+### `です … … ボタン …` (初心者) {#block_hubs_all_sensors_button_pressed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
+選択したハブのボタンが選択した状態のとき、`true` を返します。
+
+- 状態：`押された`、`解放された`
+- ハブ：LEGO Powered Up のハブ、WeDo 2.0、Robot Inventor。ボタンの一覧はハブによって異なります（通常は `中心`）。
+
+### `… … 角度` (初心者) {#block_hubs_all_sensors_tilt}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
+ハブの傾き角度を返します。
+
+- 角度：`ピッチ`、`ロール`、`ヨー`
+- `ヨー` は Technic Hub と Robot Inventor でのみ使えます。
+
+### `… … 加速度計 (m/s²)` (達人) {#block_hubs_all_sensors_accelerometer}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
+ハブの加速度計の 1 軸の生の値を返します。
+
+- 軸：`x`、`y`、`z`
+
+### `… … 加速度 (m/s²)` (達人) {#block_hubs_all_sensors_acceleration}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
+ハブの 1 軸の加速度を返します。
+
+- 軸：`x`、`y`、`z`
+
+### `取得する … 向き …` (初心者) {#block_hubs_sensors_get_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
+ハブのどの面が上を向いているかを返します。
+
+- 出力：`テキスト` または `インデックス`
+- 値：`前`、`上部`、`右`、`後部`、`底`、`左`
+
+### `… 向き …` (初心者) {#block_hubs_all_sensors_is_orientation_up}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
+ハブの選択した面が上を向いているとき、`true` を返します。
+
+- 選択肢：`前`、`上部`、`右`、`後部`、`底`、`左`
+
+### `設定する … 傾斜方向に …` (上級者) {#block_hubs_sensors_set_tilt_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
+ハブがモデルにどの向きで取り付けられているかをハブに伝えます。傾きと向きは、その位置を基準に測られます。
+
+- 選択肢：`前`、`上部`、`右`、`後部`、`底`、`左`
+
+## ポートのセンサー {#sensors-on-ports}
+
+以下の Technic と BOOST のセンサーブロックは、City Hub、Technic Hub、BOOST Move Hub、MINDSTORMS Robot Inventor のハブで使えます（SBrick、BuWizz、WeDo 2.0、Mould King は非対応）。
+
+### ポートに接続した任意のデバイス {#any-port-device}
+
+#### `… デバイスタイプ` (初心者) {#block_hubs_all_motors_port_device_type}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
+選択したポートに接続されているデバイスの種類を返します。
+
+- ハブ：SBrick、SBrick Plus、BuWizz 2 を除く、ポートのあるすべてのハブ。
+- 主な用途：デバイス専用のブロックを実行する前に、何が接続されているかを確認する。
+
+### Technic カラーセンサー {#technic-color-sensor}
+
+#### Technic センサー：`モードを設定 …` (上級者) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
+Technic カラーセンサーを選択したモードに切り替えます。
+
+- モード：`デフォルト`、`環境`
+- モードを変えると、プログラムが思わぬ動きをすることがあります。`環境` モードでは、センサーは色や反射光を読み取れません。
+
+#### Technic センサー：`色 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
+Technic カラーセンサーが検出した色を返します。
+
+- 出力：`値`（数値）または `文字列`（色の名前）
+
+#### Technic センサー：`色である …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
+Technic カラーセンサーが選択した色を検出しているとき、`true` を返します。
+
+#### Technic センサー：`反射光（％）` (初心者) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
+表面が Technic カラーセンサーに反射して返す光の量をパーセントで返します。
+
+#### Technic センサー：`反射光 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
+反射光と値を選択した方法で比べ、条件を満たすとき `true` を返します。
+
+- 比較：`<`、`=`、`>`
+
+#### Technic センサー：`環境光（％）` (初心者) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
+周囲の明るさをパーセントで返します。
+
+#### Technic センサー：`環境光 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
+環境光と値を選択した方法で比べ、条件を満たすとき `true` を返します。
+
+- 比較：`<`、`=`、`>`
+
+#### Technic センサー：`生の値 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
+Technic カラーセンサーの 1 つの色チャンネルの生の値を返します。
+
+- チャンネル：`赤`、`緑`、`青`
+
+### Technic 距離センサー {#technic-distance-sensor}
+
+#### Technic センサー：`距離 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
+Technic 距離センサーで測った距離を返します。
+
+- 単位：`mm`、`cm`、`インチ`、`%`
+
+#### Technic センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
+Technic 距離センサーで測った距離が条件を満たすとき、`true` を返します。
+
+- 比較：`より近い`、`より遠い`、`正確に`
+- 単位：`mm`、`cm`、`インチ`、`%`
+
+### BOOST カラー＆距離センサー {#boost-color-and-distance-sensor}
+
+#### BOOST センサー：`色 …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
+BOOST カラー＆距離センサーが検出した色を返します。
+
+- 出力：`値`（数値）または `文字列`（色の名前）
+
+#### BOOST センサー：`色である …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_is_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
+BOOST センサーが選択した色を検出しているとき、`true` を返します。
+
+#### BOOST センサー：`距離 …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
+BOOST カラー＆距離センサーで測った距離を返します。
+
+- 単位：`%`、`cm`、`インチ`
+
+#### BOOST センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
+BOOST センサーで測った距離が条件を満たすとき、`true` を返します。
+
+- 比較：`より近い`、`より遠い`、`正確に`
+- 単位：`%`、`cm`、`インチ`
+
+#### BOOST センサー：`反射光（％）` (初心者) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
+表面が BOOST センサーに反射して返す光の量をパーセントで返します。
+
+#### BOOST センサー：`反射光 …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
+反射光と値を選択した方法で比べ、条件を満たすとき `true` を返します。
+
+- 比較：`<`、`=`、`>`
+
+### WeDo 2.0 のセンサー {#wedo-2-sensors}
+
+WeDo 2.0 ハブで使う WeDo 2.0 モーションセンサーと傾きセンサーです。
+
+#### WeDo 2.0 センサー：`距離 …` (初心者) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
-距離を返します。
+WeDo 2.0 モーションセンサーで測った距離を返します。
 
-### `WeDo 2 距離が条件のとき` (初級) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+- 単位：`%`、`cm`、`インチ`
+- ハブ：WeDo 2.0。
+
+#### WeDo 2.0 センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
-WeDo 2 距離センサーの距離条件をトリガー/チェックします。
+WeDo 2.0 モーションセンサーで測った距離が条件を満たすとき、`true` を返します。
 
-- 比較オプション: `closer than`, `farther than`, `exactly at`
-- 単位オプション: `%`, `cm`, `inch`
+- 比較：`より近い`、`より遠い`、`正確に`
+- 単位：`%`、`cm`、`インチ`
+- ハブ：WeDo 2.0。
 
-### `WeDo 2 傾き` (初級) {#block_hubs_all_sensors_port_wedo2_tilt}
+#### WeDo 2.0 センサー：`角度 …` / `方向として …` (初心者) {#block_hubs_all_sensors_port_wedo2_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
-傾き値を返します。
+WeDo 2.0 傾きセンサーのデータとして、傾き角度または傾いている方向を返します。
 
-- 軸: `ピッチ`, `ロール`
+- 角度：`ピッチ`、`ロール`
+- 方向の出力：`テキスト` または `数値`。方向：`中立`、`前方`、`後方`、`左`、`右`、`不明`
+- ハブ：WeDo 2.0。
+
+## このデバイス {#this-device}
+
+これらのブロックは、MOCPilot を実行しているスマートフォン、タブレット、パソコンの値を読み取ります。
+
+### `デバイス % バッテリー` (初心者) {#block_sensors_device_battery_level}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
+デバイスのバッテリー残量をパーセントで返します。
+
+### `デバイス … 角度` (上級者) {#block_sensors_device_tilt_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
+デバイスの傾き角度を返します。
+
+- 角度：`ピッチ`、`ロール`、`ヨー`
+- 主な用途：スマートフォンを傾けてモデルを操縦する。
+
+### `デバイス … 加速度計 (m/s²)` (達人) {#block_sensors_device_accelerometer_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
+デバイスの加速度計の 1 軸の生の値を m/s² で返します。
+
+- 軸：`x`、`y`、`z`
+
+### `デバイス … 加速度 (m/s²)` (達人) {#block_sensors_device_acceleration_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
+デバイスの 1 軸の加速度を m/s² で返します。
+
+- 軸：`x`、`y`、`z`
+
+## タイマー {#timer}
+
+### `タイマー` (上級者) {#block_sensors_timer_value_float}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
+プログラムの開始時、または最後の**タイマーをリセット**からの経過時間を秒で返します。
+
+### `タイマーをリセット` (上級者) {#block_sensors_timer_reset}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
+タイマーを 0 に戻します。

@@ -5,166 +5,158 @@ title: Operatori
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatori
+# Operatori {#operators}
 
-Operatorii sunt blocuri de tip Reporter și Boolean utilizate pentru calcule, comparații, logică și procesarea textului.
+Operatorii sunt blocuri raportor și booleene pentru calcule matematice, comparații, logică și text.
 
-## Operatori aritmetici
+## Matematică {#math}
 
-### `Plus` (Începător) {#block_operator_plus}
+### `… + …` (Începător) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Returnează suma a două valori.
+Returnează suma a două numere.
 
-### `Minus` (Începător) {#block_operator_minus}
+### `… − …` (Începător) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Returnează rezultatul scăderii a două valori.
+Scade al doilea număr din primul.
 
-### `Înmulțește` (Începător) {#block_operator_multiply}
+### `… × …` (Începător) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Returnează produsul a două valori.
+Returnează produsul a două numere.
 
-### `Împarte` (Începător) {#block_operator_divide}
+### `… ÷ …` (Începător) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Returnează rezultatul împărțirii a două valori.
+Împarte primul număr la al doilea.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+### `… mod …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Returnează restul după împărțire.
+Returnează restul împărțirii primului număr la al doilea.
 
-### `Rotunjește` (Guru) {#block_operator_round}
+### `rotunjire …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Rotunjește la cel mai apropiat număr întreg (de exemplu `2.6 -> 3`).
+Rotunjește un număr la cel mai apropiat număr întreg (de exemplu, `2.6` devine `3`).
 
-### `Matematică simplă` (Guru) {#block_operator_math_single}
+### `… de …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Aplică o funcție matematică cu un singur argument.
+Aplică o funcție unui număr. Unghiurile sunt în grade.
 
-Funcții disponibile:
+- `valoare absolută`: valoarea absolută
+- `întreg mai mic`: rotunjire în jos la un număr întreg
+- `întreg mai mare`: rotunjire în sus la un număr întreg
+- `rădăcina pătrată`: rădăcina pătrată
+- `sin`, `cos`, `tan`: sinusul, cosinusul și tangenta unui unghi
+- `asin`, `acos`, `atan`: funcțiile inverse; returnează un unghi
+- `ln`: logaritmul natural (în baza `e`)
+- `log`: logaritmul în baza 10
+- `e^`: `e` ridicat la puterea numărului
+- `10^`: `10` ridicat la puterea numărului
 
-- `valoare absolută`: valoare absolută
-- `întreg mai mic`: rotunjire în jos
-- `întreg mai mare`: rotunjire în sus
-- `rădăcina pătrată`: rădăcină pătrată
-- `sin`: sinus
-- `cos`: cosinus
-- `tan`: tangentă
-- `asin`: arcsinus
-- `acos`: arccosinus
-- `atan`: arctangentă
-- `ln`: logaritm natural (baza `e`)
-- `log`: logaritm în baza `10`
-- `e^`: ridică `e` la puterea valorii
-- `10^`: ridică `10` la puterea valorii
-
-### `Matematică pereche` (Guru) {#block_operator_math_pair}
+### `… de … și …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Aplică o funcție matematică cu doi argumenti.
+Aplică o funcție la două numere.
 
-Funcții disponibile:
+- `min`: cel mai mic dintre cele două
+- `max`: cel mai mare dintre cele două
+- `putere`: primul număr ridicat la puterea celui de-al doilea
+- `atan2`: unghiul punctului dat de cele două numere
+- `hypot`: lungimea ipotenuzei cu aceste două catete
+- `copysign`: primul număr cu semnul celui de-al doilea
 
-- `min`: valoarea mai mică
-- `max`: valoarea mai mare
-- `putere`: prima valoare la puterea celei de-a doua
-- `atan2`: unghi din pereche X/Y
-- `hypot`: lungimea ipotenuzei
-- `copysign`: valoare cu semnul celei de-a doua
-
-### `Alege aleator` (Guru) {#block_operator_pick_random}
+### `alege aleatoriu … la …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Returnează un număr aleator în intervalul selectat.
+Returnează un număr aleatoriu între cele două valori.
 
-## Operatori de comparație
+## Comparație {#comparison}
 
-### `Egal` (Începător) {#block_operator_equal}
+### `… = …` (Începător) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Returnează `true` când două valori sunt egale.
+Returnează `true` când cele două valori sunt egale.
 
-### `Diferit` (Avansat) {#block_operator_not_equal}
+### `… ≠ …` (Avansat) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Returnează `true` când două valori sunt diferite.
+Returnează `true` când cele două valori sunt diferite.
 
-### `Mai mare decât` (Începător) {#block_operator_greater_than}
+### `… > …` (Începător) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
 Returnează `true` când valoarea din stânga este mai mare decât cea din dreapta.
 
-### `Mai mic decât` (Începător) {#block_operator_less_than}
+### `… < …` (Începător) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
 Returnează `true` când valoarea din stânga este mai mică decât cea din dreapta.
 
-### `Este între` (Avansat) {#block_operator_is_in_between}
+### `este … între … și …` (Avansat) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Returnează `true` când o valoare este în intervalul specificat.
+Returnează `true` când numărul se află între cele două limite.
 
-## Operatori logici
+## Logică {#logic}
 
-### `Și` (Avansat) {#block_operator_and}
+### `… și …` (Avansat) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Returnează `true` doar dacă ambele condiții sunt `true`.
+Returnează `true` doar când ambele condiții sunt adevărate.
 
-### `Sau` (Avansat) {#block_operator_or}
+### `… sau …` (Avansat) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Returnează `true` dacă cel puțin o condiție este `true`.
+Returnează `true` când cel puțin una dintre condiții este adevărată.
 
-### `Nu` (Avansat) {#block_operator_not}
+### `nu …` (Avansat) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Inversează o valoare booleană.
+Transformă `true` în `false` și `false` în `true`.
 
-## Operatori text
+## Text {#text}
 
-### `Concatenează` (Avansat) {#block_operator_join}
+### `uni … …` (Avansat) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Concatenează două valori de tip text.
+Unește două bucăți de text într-una singură.
 
-### `Caracter la` (Guru) {#block_operator_letter_at}
+### `literă … de …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Returnează caracterul de la poziția selectată.
+Returnează litera din poziția dată a textului. Prima literă are numărul 1.
 
-### `Dimensiunea textului` (Avansat) {#block_operator_size_of_string}
+### `lungimea de …` (Avansat) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Returnează lungimea textului.
+Returnează numărul de caractere din text.
 
-### `Textul conține` (Guru) {#block_operator_string_contains}
+### `… conține …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Returnează `true` dacă textul conține subșirul specificat.
+Returnează `true` când primul text îl conține pe al doilea.

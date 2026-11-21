@@ -5,30 +5,33 @@ title: 我的模块
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# 我的模块
+# 我的模块 {#my-blocks}
 
-“我的模块”允许你定义自己的可复用自定义积木。
-这个分类在概念上类似传统编程中的函数：定义一次行为，多次调用。
+“我的模块”让你可以制作自己的可复用积木。
+它的作用类似于普通编程中的函数：只需描述一次行为，就能在任意多个地方使用。
 
-## 核心模块
+## 积木 {#the-blocks}
 
-### `创建一个块` (专家) {#block_my_block_define}
+### `定义 …`（大师） {#block_my_block_define}
 
-创建一个新的自定义积木定义。
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- 类型：定义/设置积木
-- 常见用途：将重复逻辑归纳到一个命名积木中
+按类别顶部的**创建一个块**即可创建新积木。随后程序区中会出现一个带有你积木名称的 `定义` 帽子积木：连接在它下面的积木就是你的积木要做的事情。
 
-### `MyBlock` (专家) {#block_my_block}
+- 典型用法：把重复的逻辑放进一个名称清晰的积木中。
 
-调用之前创建的自定义积木。
+### 你的积木（大师） {#block_my_block}
 
-- 类型：堆叠积木（自定义命令调用）
-- 常见用途：在多个位置复用同一逻辑，而无需复制整段积木堆
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## 可变参数示例
+你制作的每个积木都会以其名称出现在积木面板中。使用它时，会运行连接在其 `定义` 积木下的积木。
 
-这些示例展示了不同参数签名的自定义模块。
+- 类型：堆叠积木
+- 典型用法：在多个地方使用相同的逻辑，而无需复制积木堆。
+
+## 不同输入的示例 {#examples-with-different-inputs}
+
+带有不同输入组合的自定义积木：
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## 程序积木堆中的使用示例
+## 在程序中使用自定义积木 {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-该示例展示了在 `当程序启动时` 下方调用自定义积木，同时 `定义我的积木` 积木堆中包含可复用的电机逻辑。
+这里的自定义积木用在 `当程序启动时` 下面，而 `定义` 积木堆中包含它要运行的电机逻辑。
 
-- 典型流程：从事件积木堆中调用自定义积木
-- 优势：一次定义，多处调用
+- 常见做法：在事件脚本中使用你的积木。
+- 好处：定义一次，多处使用。
 
-## My Block 编辑器视图
+## 积木编辑器 {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Make a Block 编辑器用于设计自定义积木签名。
-你可以添加标签和输入（例如数字/文本输入与布尔输入），然后在积木定义堆中编写实现逻辑。
+在**创建一个块**编辑器中，你可以设计积木的外观：添加标签（**添加标签**）和输入（**添加输入**：*数字或文本*或*布尔值*）。在 `定义` 积木堆中，这些输入就像变量一样，保存传给该积木的值。
 
-## 为什么使用 My Blocks
+## 为什么要使用“我的模块” {#why-use-my-blocks}
 
-- 可复用性：写一次，多次调用。
-- 可读性：用一个语义明确的名称替代冗长重复的积木堆。
-- 可维护性：在一个位置更新逻辑，而不是修改多份副本。
-- 结构化：将大型程序拆分为更小的逻辑单元。
+- 复用：写一次，用多次。
+- 可读性：用一个有意义的名称代替冗长的重复积木堆。
+- 修改方便：只需在一处修正逻辑，而不必修改每个副本。
+- 结构清晰：把大型程序拆分成小的逻辑部分。
 
-## 说明
+## 注意事项 {#notes}
 
-- 自定义积木是项目级别，主要用于在同一配置/项目上下文中复用。
-- 建议使用能表达意图的命名，而不是实现细节命名。
+- 自定义积木属于配置文件，可以在该配置文件程序的任何地方使用。
+- 给积木起的名字应说明它做什么，而不是怎么做。
+- 调用自身的积木可能会无限循环；编辑器会对此发出警告。

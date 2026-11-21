@@ -1,146 +1,158 @@
 ---
 id: Control
-title: Sterowanie
+title: Kontrola
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Sterowanie
+# Kontrola
 
-Bloki sterowania zarządzają przepływem wykonywania: oczekiwaniem, pętlami, rozgałęzieniami oraz zatrzymywaniem skryptów.
+Bloki kontroli decydują o przebiegu skryptu: oczekiwanie, pętle, rozgałęzienia i zatrzymywanie. Gdy profil ma huby, w tej kategorii są też bloki, które łączą huby i zmieniają ich ustawienia.
 
-## Bloki oczekiwania
+## Bloki oczekiwania {#wait-blocks}
 
-### `Czekaj` (Początkujący) {#block_control_wait_for}
+### `czekać … sekundy` (Początkujący) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Wstrzymuje bieżący skrypt na określony czas.
+Wstrzymuje skrypt na podaną liczbę sekund.
 
-### `Czekaj aż` (Zaawansowany) {#block_control_wait_until}
+### `czekać aż …` (Zaawansowany) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Wstrzymuje bieżący skrypt, aż warunek stanie się prawdziwy.
+Wstrzymuje skrypt, dopóki warunek nie stanie się prawdziwy.
 
-## Bloki pętli
+## Pętle {#loops}
 
-### `Powtórz` (Zaawansowany) {#block_control_repeat_for}
+### `powtórzyć …` (Zaawansowany) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Uruchamia zagnieżdżone bloki określoną liczbę razy.
+Wykonuje bloki w swoim wnętrzu podaną liczbę razy (domyślnie 10).
 
-### `Powtarzaj aż` (Zaawansowany) {#block_control_repeat_until}
+### `powtarzać, dopóki …` (Zaawansowany) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Uruchamia zagnieżdżone bloki wielokrotnie, aż warunek stanie się prawdziwy.
+Wykonuje bloki w swoim wnętrzu raz za razem, dopóki warunek nie stanie się prawdziwy.
 
-### `Zawsze` (Zaawansowany) {#block_control_repeat_forever}
+### `powtarzać zawsze` (Zaawansowany) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Uruchamia zagnieżdżone bloki ciągle, aż program lub skrypt zostanie zatrzymany.
+Wykonuje bloki w swoim wnętrzu w kółko, aż skrypt lub program się zatrzyma. Pod nim nie można niczego dołączyć.
 
-## Bloki warunkowe
+## Rozgałęzienia {#branches}
 
-### `Jeżeli` (Początkujący) {#block_control_if}
+### `jeśli … wtedy` (Początkujący) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Uruchamia zagnieżdżone bloki tylko wtedy, gdy warunek jest spełniony.
+Wykonuje bloki w swoim wnętrzu tylko wtedy, gdy warunek jest prawdziwy.
 
-### `Jeżeli / W przeciwnym razie` (Zaawansowany) {#block_control_if_else}
+### `jeśli … wtedy … inne` (Zaawansowany) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Uruchamia jedną gałąź, gdy warunek jest spełniony, w przeciwnym razie uruchamia alternatywną gałąź.
+Wykonuje pierwszą gałąź, gdy warunek jest prawdziwy, a w przeciwnym razie drugą.
 
-### `Wykonaj to i to` (Guru) {#block_control_do_this_and_this}
+### `zrób to … i to` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Uruchamia dwa stosy bloków sekwencyjnie jako część jednej operacji sterowania.
+Wykonuje pierwszą grupę bloków, potem drugą i dopiero wtedy przechodzi do bloków pod nim.
 
-## Bloki zatrzymania
+## Zatrzymywanie {#stopping}
 
-### `Zatrzymaj` (Początkujący) {#block_control_stop}
+### `zatrzymać …` (Początkujący) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Zatrzymuje wykonywanie skryptu (zakres zależy od wybranej opcji zatrzymania).
+Zatrzymuje skrypty; co dokładnie zatrzymuje, zależy od opcji.
 
-- Opcje zatrzymania: `wszystko`, `ten stos`, `i zakończ program`
+- `wszystkie`: zatrzymuje wszystkie skrypty.
+- `ten stos`: zatrzymuje tylko ten skrypt.
+- `i zakończ program`: zatrzymuje program.
 
-### `Zatrzymaj inne stosy` (Guru) {#block_control_stop_other_stacks}
+### `zatrzymać inne stosy` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Zatrzymuje wszystkie inne uruchomione stosy, pozwalając bieżącemu stosowi kontynuować.
+Zatrzymuje wszystkie inne działające skrypty; ten działa dalej.
 
-## Bloki narzędziowe huba/sterowania
+## Bloki hubów {#hub-blocks}
 
-### `Ustaw połączenie` (Początkujący) {#block_hubs_control_set_connect}
+### `połącz / rozłącz …` (Początkujący) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Steruje stanem połączenia huba z poziomu logiki sterowania.
+Łączy wybrany hub z programem lub go rozłącza.
 
-- Opcje akcji: `połącz`, `rozłącz`
+- Opcje: `połącz`, `rozłącz`
+- Huby: wszystkie.
 
-### `Ustaw konfigurację huba` (Zaawansowany) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Ustawia wybrany hub na jeden z obsługiwanych profili konfiguracji.
-
-- Dostępne tylko dla hubów, które udostępniają opcje konfiguracji.
-- Typowe użycie: przełącz konfigurowalny hub, np. Technic Move Hub, na inną zapisaną konfigurację przed uruchomieniem kolejnych bloków.
-
-### `Konfiguracja huba` (Zaawansowany) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Zwraca bieżącą konfigurację wybranego huba.
-
-- Typ: blok raportujący
-- Opcje formatu wyjścia: `text`, `index`
-- Dostępne tylko dla hubów, które udostępniają opcje konfiguracji.
-- Zwraca `NaN`, gdy wybrany hub nie jest połączony lub żadna konfiguracja nie jest dostępna.
-
-### `Czy połączony` (Początkujący) {#block_hubs_all_sensors_is_connected}
+### `… połączony` (Początkujący) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Zwraca informację, czy hub jest aktualnie połączony.
+Zwraca `true`, gdy wybrany hub jest połączony.
 
-- Typ: blok raportujący (boolean)
+- Typ: blok logiczny
+- Huby: wszystkie.
 
-### `BuWizz 2 ustaw tryb mocy` (Początkujący) {#block_hubs_buwizz_sensors_set_power_mode}
+### `ustawić … konfigurację na …` (Zaawansowany) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Przełącza hub na jedną z jego konfiguracji.
+
+- Huby: Technic Move Hub (obecnie jedyny hub z konfiguracjami).
+- Typowe zastosowanie: przełączenie huba na inną konfigurację przed wykonaniem kolejnych bloków.
+
+### `pobierz … konfiguracja jako …` (Zaawansowany) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Zwraca bieżącą konfigurację huba.
+
+- Typ: blok raportujący
+- Wynik: `tekst` lub `indeks`
+- Huby: Technic Move Hub.
+- Zwraca `NaN`, gdy hub nie jest połączony lub nie ma konfiguracji.
+
+### `ustawić … tryb zasilania na …` (Początkujący) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Ustawia tryb mocy huba BuWizz 2.
+Ustawia tryb mocy BuWizz 2.
 
-- Opcje trybu: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Tryby: `Wolno`, `Normalny`, `Szybko`, `Ludicrous`
+- Huby: BuWizz 2.
 
-### `BuWizz 2 pobierz tryb mocy` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `pobierz … tryb zasilania jako …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Zwraca aktualnie aktywny tryb mocy BuWizz 2.
+Zwraca bieżący tryb mocy BuWizz 2.
 
-- Opcje formatu wyjścia: `tekst`, `indeks`
+- Wynik: `tekst` lub `indeks`
+- Huby: BuWizz 2.
 
-### `MouldKing ustaw kanał sterowania` (Zaawansowany) {#block_hubs_mouldking_control_set_control_channel}
+### `ustawić … kanał sterowania do …` (Zaawansowany) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Ustawia aktywny kanał sterowania dla obsługiwanego huba/kontrolera MouldKing.
+Ustawia kanał sterowania huba Mould King.
 
-- Opcje kanału: `A`, `B`, `C`
+- Kanały: `A`, `B`, `C`
+- Huby: Mould King 4.0 i 6.0.
 
-### `MouldKing pobierz kanał sterowania` (Zaawansowany) {#block_hubs_mouldking_control_get_control_channel}
+### `pobierz … kanał sterowania jako …` (Zaawansowany) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Zwraca aktualnie aktywny kanał sterowania dla obsługiwanego huba/kontrolera MouldKing.
+Zwraca bieżący kanał sterowania huba Mould King.
 
-- Opcje formatu wyjścia: `tekst`, `indeks`
+- Wynik: `tekst` lub `indeks`
+- Huby: Mould King 4.0 i 6.0.

@@ -5,140 +5,121 @@ title: Licht
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Licht
+# Licht {#light}
 
-Deze pagina beschrijft blokken uit de categorie Licht die worden gebruikt om LED’s en lichtuitgangen op ondersteunde hubs te bedienen.
+Lichtblokken sturen het statuslampje van de hub aan, lampen die op poorten zijn aangesloten en de lichtmatrix van ondersteunde hubs. De categorie verschijnt als een hub in het profiel iets heeft om te laten oplichten.
 
-## Algemene lichtblokken
+## Hub- en poortlampen {#hub-and-port-lights}
 
-### `Stel LED-kleur in` (Beginner) {#block_hubs_all_light_set_led_color}
+### `stel LED-kleur in op …` (Beginner) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Stelt de LED-kleur van de hub in met vooraf gedefinieerde kleuropties.
+Stelt de kleur van het statuslampje van de hub in.
 
-- Type: opdrachtblok
-- Typisch gebruik: status weergeven (gereed, actief, waarschuwing, fout)
+- Hubs: LEGO Powered Up-hubs (inclusief de Technic Move Hub), WeDo 2.0 en de MINDSTORMS Robot Inventor-hub.
+- Gebruikelijke toepassing: de toestand van het model tonen (klaar, actief, waarschuwing, fout).
 
-### `Licht instellen op` (Beginner) {#block_hubs_all_light_light_turn_to}
+### `inschakelen bij … % helderheid` (Beginner) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Stelt de geselecteerde lichtuitgang in op een doelhelderheid/waarde.
+Zet de lampen op de gekozen poort aan met de opgegeven helderheid.
 
-- Type: opdrachtblok
-- Typisch gebruik: koplamphelderheid, statusintensiteit
+- Hubs: alle hubs met poorten, behalve WeDo 2.0.
+- Gebruikelijke toepassing: koplampen, regelbare verlichting.
 
-### `Licht uitschakelen` (Beginner) {#block_hubs_all_light_light_turn_off}
+### `uitzetten` (Beginner) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Schakelt de geselecteerde lichtuitgang uit.
+Zet de lampen op de gekozen poort uit.
 
-- Type: opdrachtblok
-- Typisch gebruik: uitschakelprocedure, energiebesparend gedrag
+- Hubs: dezelfde als bij **inschakelen bij … % helderheid**.
 
-### `Technic Move licht instellen op` (Beginner) {#block_hubs_technicmove_light_light_turn_to}
+### `zet lichten aan …` (Beginner) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variant van `Licht instellen op` voor Technic Move hub/lichtdoel.
+Zet de lichten van een Technic Move Hub aan of uit.
 
-- Type: opdrachtblok
-- Typisch gebruik: instellen van het lichtniveau van de Move hub
+- Opties: `uit`, `ingeschakeld`
+- Hubs: Technic Move Hub.
 
-## Interne LED-matrixblokken
+## Lichtmatrix {#light-matrix}
 
-### `Lichtmatrix inschakelen` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_image}
+Deze blokken werken met de 5×5-lichtmatrix die in de MINDSTORMS Robot Inventor-hub zit.
+
+### `inschakelen …` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Geeft de geselecteerde afbeelding weer op de interne LED-matrix van de hub en gaat direct verder met het volgende blok in de stapel. De afbeelding blijft op het display staan totdat een ander blok de interne LED-matrix wijzigt of het programma stopt.
+Toont de gekozen afbeelding op de lichtmatrix en gaat meteen door naar het volgende blok. De afbeelding blijft staan tot een ander blok de matrix wijzigt of het programma stopt.
 
-- Type: opdrachtblok
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
-
-### `Op lichtmatrix schrijven` (Beginner) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `schrijven …` (Beginner) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Geeft een tekststring weer op de interne LED-matrix van de hub door één letter tegelijk te scrollen.
+Laat de tekst letter voor letter over de lichtmatrix lopen.
 
-- Type: opdrachtblok
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
-
-### `Matrixpixels uitschakelen` (Beginner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `pixels uitschakelen` (Beginner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Schakelt alle lichten op de interne LED-matrix van de hub uit.
+Zet alle pixels van de lichtmatrix uit.
 
-- Type: opdrachtblok
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
-
-### `Matrixpixel instellen` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `pixel instellen … x … y … helderheid …` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Stelt de helderheid van één pixel op de interne LED-matrix van de hub in. Alleen de geselecteerde pixel wordt bijgewerkt; de rest van het display blijft ongewijzigd. De pixelpositievakken gebruiken kolom- en rijwaarden, met pixel `1, 1` in de linkerbovenhoek.
+Stelt de helderheid van één pixel in; de rest van de matrix blijft zoals hij is. `x` is de kolom en `y` de rij; pixel `1, 1` zit in de linkerbovenhoek.
 
-- Type: opdrachtblok
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
-
-### `Matrixrichting draaien` (Gevorderd) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `oriëntatie draaien …` (Gevorderd) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Draait de richting van wat op de interne LED-matrix van de hub wordt weergegeven met de klok mee of tegen de klok in. Elke draaiing verandert de displayrichting met 90 graden en beïnvloedt de Licht-blokken die daarna worden uitgevoerd.
+Draait het beeld op de lichtmatrix 90 graden, met de klok mee of tegen de klok in. De nieuwe oriëntatie geldt voor de lichtblokken die daarna worden uitgevoerd.
 
-- Type: opdrachtblok
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
-
-### `Matrixrichting instellen` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `oriëntatie instellen op …` (Gevorderd) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Stelt de richting in van wat op de interne LED-matrix van de hub wordt weergegeven. De standaardrichting is rechtop, en de geselecteerde richting beïnvloedt de Licht-blokken die daarna worden uitgevoerd.
+Stelt de oriëntatie van het beeld op de lichtmatrix in. Standaard is dat `rechtop`; de nieuwe oriëntatie geldt voor de lichtblokken die daarna worden uitgevoerd.
 
-- Type: opdrachtblok
-- Orientatieopties: `rechtop`, `links`, `rechts`, `ondersteboven`
-- Opmerking: de geselecteerde hub moet een interne LED-matrix hebben.
+- Opties: `rechtop`, `links`, `rechts`, `ondersteboven`
 
-## Lichtblokken voor afstandssensor
+## Lampjes van de afstandssensor {#distance-sensor-lights}
 
-### `Afstandssensor laten oplichten` (Beginner) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `oplichten …` (Beginner) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Stelt de lichten op de geselecteerde afstandssensor in. Het blok kan afzonderlijke sensorlichten in- of uitschakelen en kan een lijstrapportageblok gebruiken om de helderheid van elk licht te regelen.
+Stuurt de lampjes rond de “ogen” van de afstandssensor op de gekozen poort aan. Je kunt elk lampje aan- of uitzetten, of een lijst in het vak zetten om de helderheid van elk lampje in te stellen.
 
-- Type: opdrachtblok
-- Opmerking: alleen beschikbaar voor de MINDSTORMS Robot Inventor hub.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## BuWizz 3 lichtblokken
+## Poort-leds van de BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 stel LED-kleur in` (Beginner) {#block_hubs_buwizz3_light_port_set_led_color}
+Deze blokken stellen de kleur in van de led naast een poort van de BuWizz 3.
+
+### `stel de poort-LED kleur in op …` (Beginner) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Stelt de LED-kleur in op de geselecteerde BuWizz 3-poort met ingebouwde kleuropties.
+Zet de poort-led op een van de vooraf ingestelde kleuren.
 
-- Type: opdrachtblok
-
-### `BuWizz 3 stel LED-kleur in (tekst)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Stelt de LED-kleur van BuWizz 3 in met een tekstwaarde.
-
-- Type: opdrachtblok
-- Typisch gebruik: dynamische kleurnamen vanuit variabelen
-
-### `BuWizz 3 stel LED-kleur in (RGB)` (Gevorderd) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `stel de poort-LED kleur in op … … …` (RGB) (Gevorderd) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Stelt de LED-kleur van BuWizz 3 in met expliciete RGB-kanalen.
+Stelt de kleur van de poort-led in op basis van waarden voor rood, groen en blauw.
 
-- Type: opdrachtblok
-- Typisch gebruik: volledige aangepaste kleurcontrole en verlopen
+- Gebruikelijke toepassing: elke gewenste kleur, vloeiende kleurovergangen.
+
+### `stel de poort-LED kleur in vanuit string …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Stelt de kleur van de poort-led in op basis van tekst.
+
+- Gebruikelijke toepassing: de kleur uit een variabele of een lijst halen.

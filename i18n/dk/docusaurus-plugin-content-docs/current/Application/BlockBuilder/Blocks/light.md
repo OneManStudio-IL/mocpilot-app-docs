@@ -5,140 +5,121 @@ title: Lys
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Lys
+# Lys {#light}
 
-Denne side dokumenterer blokke i kategorien Lys, som bruges til at styre LED'er og lysudgange på understøttede hubs.
+Lysblokke styrer hubbens statuslys, lys, der er tilsluttet porte, og lysmatrixen på understøttede hubs. Kategorien vises, når en hub i profilen har noget, der kan lyse.
 
-## Almindelige lysblokke
+## Lys på hub og porte {#hub-and-port-lights}
 
-### `Sæt LED-farve` (Begynder) {#block_hubs_all_light_set_led_color}
+### `sæt LED-farve til …` (Begynder) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Sætter hubbens LED-farve ved hjælp af foruddefinerede farvevalg.
+Indstiller farven på hubbens statuslys.
 
-- Type: kommandoblok
-- Typisk brug: vis status (klar, kører, advarsel, fejl)
+- Hubs: LEGO Powered Up-hubs (inklusive Technic Move Hub), WeDo 2.0 og MINDSTORMS Robot Inventor-hubben.
+- Typisk brug: vis modellens tilstand (klar, kører, advarsel, fejl).
 
-### `Tænd lys til` (Begynder) {#block_hubs_all_light_light_turn_to}
+### `tænde på … % lysstyrke` (Begynder) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Sætter den valgte lysudgang til en mållysstyrke/-værdi.
+Tænder lysene, der er tilsluttet den valgte port, med den angivne lysstyrke.
 
-- Type: kommandoblok
-- Typisk brug: forlysstyrke, statusintensitet
+- Hubs: alle hubs med porte undtagen WeDo 2.0.
+- Typisk brug: forlygter, justerbar belysning.
 
-### `Sluk lys` (Begynder) {#block_hubs_all_light_light_turn_off}
+### `sluk` (Begynder) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Slukker den valgte lysudgang.
+Slukker lysene, der er tilsluttet den valgte port.
 
-- Type: kommandoblok
-- Typisk brug: nedlukningssekvens, batteribesparende adfærd
+- Hubs: de samme som for **tænde på … % lysstyrke**.
 
-### `Technic Move tænd lys til` (Begynder) {#block_hubs_technicmove_light_light_turn_to}
+### `tænd lys …` (Begynder) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variant af `Tænd lys til` for Technic Move hub/lysmål.
+Tænder eller slukker lysene på en Technic Move Hub.
 
-- Type: kommandoblok
-- Typisk brug: indstil lysudgangsniveau for Move-hub
+- Valg: `off`, `aktiveret`
+- Hubs: Technic Move Hub.
 
-## Interne LED-matrixblokke
+## Lysmatrix {#light-matrix}
 
-### `Tænd lysmatrix` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_image}
+Disse blokke arbejder med den 5×5-lysmatrix, der er indbygget i MINDSTORMS Robot Inventor-hubben.
+
+### `tænd …` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Viser det valgte billede på hubbens interne LED-matrix og fortsætter straks til den næste blok i stakken. Billedet bliver på displayet, indtil en anden blok ændrer den interne LED-matrix, eller programmet stopper.
+Viser det valgte billede på lysmatrixen og går straks videre til næste blok. Billedet bliver vist, indtil en anden blok ændrer matrixen, eller programmet stopper.
 
-- Type: kommandoblok
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
-
-### `Skriv på lysmatrix` (Begynder) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `skriv …` (Begynder) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Viser en tekststreng på hubbens interne LED-matrix ved at rulle ét bogstav ad gangen.
+Ruller teksten hen over lysmatrixen ét bogstav ad gangen.
 
-- Type: kommandoblok
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
-
-### `Sluk matrixpixels` (Begynder) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `sluk pixels` (Begynder) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Slukker alle lys på hubbens interne LED-matrix.
+Slukker alle lysmatrixens pixels.
 
-- Type: kommandoblok
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
-
-### `Indstil matrixpixel` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `indstil pixel … x … y … lysstyrke …` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Indstiller lysstyrken for én pixel på hubbens interne LED-matrix. Kun den valgte pixel opdateres; resten af displayet forbliver uændret. Pixelpositionsfelterne bruger kolonne- og rækkeværdier, hvor pixel `1, 1` er i øverste venstre hjørne.
+Indstiller lysstyrken for én pixel; resten af matrixen forbliver uændret. `x` er kolonnen, og `y` er rækken; pixel `1, 1` sidder i øverste venstre hjørne.
 
-- Type: kommandoblok
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
-
-### `Roter matrixorientering` (Avanceret) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `roter orientering …` (Avanceret) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Roterer orienteringen af det, der vises på hubbens interne LED-matrix, med eller mod uret. Hver rotation ændrer displayorienteringen med 90 grader og påvirker de lysblokke, der køres efter den.
+Roterer billedet på lysmatrixen 90 grader med eller mod uret. Den nye orientering gælder for de Lys-blokke, der kører derefter.
 
-- Type: kommandoblok
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
-
-### `Indstil matrixorientering` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `indstil orientering til …` (Avanceret) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Indstiller orienteringen af det, der vises på hubbens interne LED-matrix. Standardorienteringen er opret, og den valgte orientering påvirker de lysblokke, der køres efter den.
+Indstiller orienteringen af billedet på lysmatrixen. Standard er `opretstående`; den nye orientering gælder for de Lys-blokke, der kører derefter.
 
-- Type: kommandoblok
-- Orienteringsmuligheder: `opret`, `venstre`, `højre`, `på hovedet`
-- Bemærk: Den valgte hub skal have en intern LED-matrix.
+- Valg: `opretstående`, `venstre`, `højre`, `på hovedet`
 
-## Lyseblokke til afstandssensor
+## Lys på afstandssensoren {#distance-sensor-lights}
 
-### `Afstandssensor lys op` (Begynder) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `tænd …` (Begynder) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Indstiller lysene på den valgte afstandssensor. Blokken kan tænde eller slukke individuelle sensorlys og kan bruge en listerapporterblok til at styre lysstyrken for hvert lys.
+Styrer lysene omkring »øjnene« på afstandssensoren på den valgte port. Du kan tænde eller slukke hvert lys eller sætte en liste ind i feltet for at indstille lysstyrken for hvert lys.
 
-- Type: kommandoblok
-- Bemærk: Kun tilgængelig for MINDSTORMS Robot Inventor-hubben.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## BuWizz 3-lysblokke
+## Port-LED'er på BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 sæt LED-farve` (Begynder) {#block_hubs_buwizz3_light_port_set_led_color}
+Disse blokke indstiller farven på LED'en ved siden af en port på BuWizz 3.
+
+### `sæt port LED farve til …` (Begynder) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Sætter LED-farven på den valgte BuWizz 3-port med indbyggede farvevalg.
+Indstiller port-LED'en til en af de foruddefinerede farver.
 
-- Type: kommandoblok
-
-### `BuWizz 3 sæt LED-farve (tekst)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Sætter BuWizz 3 LED-farven ved hjælp af en tekstbaseret farveværdi.
-
-- Type: kommandoblok
-- Typisk brug: dynamiske farvenavne fra variabler
-
-### `BuWizz 3 sæt LED-farve (RGB)` (Avanceret) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `sæt port LED farve til … … …` (RGB) (Avanceret) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Sætter BuWizz 3 LED-farven ved hjælp af eksplicitte RGB-kanaler.
+Indstiller port-LED'ens farve ud fra værdier for rød, grøn og blå.
 
-- Type: kommandoblok
-- Typisk brug: fuld brugerdefineret farvestyring og gradienter
+- Typisk brug: en hvilken som helst farve, bløde farveskift.
+
+### `sæt port LED farve fra streng …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Indstiller port-LED'ens farve ud fra tekst.
+
+- Typisk brug: hent farven fra en variabel eller en liste.

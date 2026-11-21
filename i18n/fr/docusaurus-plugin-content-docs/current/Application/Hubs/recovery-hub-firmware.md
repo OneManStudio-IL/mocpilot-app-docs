@@ -1,121 +1,133 @@
 ---
 id: RecoveryHubFirmware
-title: Restauration du firmware du hub
+title: Récupération du firmware du hub
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Restauration du firmware du hub
+# Récupération du firmware du hub
 
-Obnova firmwaru hubu se používá, když se hub po přerušené nebo neúspěšné aktualizaci firmwaru nemůže normálně spustit.
+La récupération du firmware remet en état un hub qui ne démarre plus normalement après une mise à jour du firmware interrompue ou ratée.
 
-Během obnovy MOCPilot opraví cestu firmwaru hubu, aby bylo možné hub znovu aktualizovat na nejnovější podporovanou verzi. Tento postup použijte pouze tehdy, když hub nereaguje běžně, MOCPilot hlásí režim obnovy nebo předchozí aktualizace selhala.
+MOCPilot transfère un firmware fonctionnel vers le hub pour qu’il puisse de nouveau fonctionner et être mis à jour. N’utilisez la récupération que si le hub ne répond pas normalement, si MOCPilot indique que le hub est en mode de récupération, ou après l’échec d’une mise à jour.
 
 :::warning Important
-Nechte hub zapnutý a držte zařízení blízko hubu po celou dobu obnovy. Odpojení Bluetooth, zavření MOCPilot, vyjmutí baterií nebo vypnutí hubu během nahrávání firmwaru může obnovu přerušit.
+Laissez le hub allumé et votre appareil près de lui pendant toute la récupération. Désactiver le Bluetooth, fermer MOCPilot, retirer les piles ou éteindre le hub pendant le transfert peut faire échouer la récupération.
 :::
 
-## Kdy je obnova potřeba
+## Quand une récupération est nécessaire {#when-recovery-is-required}
 
-Obnova firmwaru může být potřeba, pokud:
+Une récupération peut être nécessaire si :
 
-- Aktualizace firmwaru nebyla úspěšně dokončena.
-- Hub se už nepřipojuje jako běžný hub.
-- Hub se v MOCPilot zobrazí jako **LEGO Bootloader**.
-- MOCPilot rozpozná hub připojený v režimu obnovy firmwaru.
+- Une mise à jour du firmware ne s’est pas terminée correctement.
+- Le hub ne se connecte plus comme un hub normal.
+- Le hub apparaît sous le nom **LEGO Bootloader** dans MOCPilot.
+- MOCPilot détecte que le hub est connecté en mode de récupération du firmware.
 
-Před spuštěním obnovy zkontrolujte, že hub má dostatek energie. Pokud je to možné, nabijte také telefon, tablet nebo počítač s MOCPilot a zapněte Bluetooth.
+Avant de commencer, vérifiez que le hub a suffisamment de batterie, que votre téléphone, tablette ou ordinateur est chargé et que le Bluetooth est activé.
 
-## Podporované huby
+## Hubs pris en charge {#supported-hubs}
 
-Obnova firmwaru je podporována pro stejné huby jako aktualizace firmwaru:
+La récupération fonctionne avec les mêmes hubs que la mise à jour du firmware :
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Přepnutí Technic Hub, Boost Hub a City Hub do režimu obnovy
+## Mettre un Technic Hub, Boost Hub ou City Hub en mode de récupération {#put-a-technic-hub-boost-hub-or-city-hub-into-recovery-mode}
 
-Technic Hub, Boost Hub a malý City Hub používají připojení přes bootloader:
+Ces hubs se connectent via leur bootloader :
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte tlačítko, dokud LED hubu nezačne blikat fialově.
-4. Nepouštějte tlačítko, dokud LED bliká fialově.
-5. Stále držte tlačítko, otevřete **Mes hubs Bluetooth** v MOCPilot a připojte hub.
-6. Po připojení hubu v režimu bootloader můžete tlačítko pustit.
+1. Éteignez le hub.
+2. Appuyez sur le bouton vert et maintenez-le enfoncé.
+3. Maintenez le bouton jusqu’à ce que la LED du hub se mette à clignoter en violet.
+4. Ne relâchez pas le bouton tant que la LED clignote en violet.
+5. Tout en maintenant le bouton, ouvrez **Mes hubs Bluetooth** dans MOCPilot et connectez-vous au hub.
+6. Une fois le hub connecté en mode bootloader, vous pouvez relâcher le bouton.
 
-V režimu obnovy se hub může zobrazit jako **LEGO Bootloader** místo běžného názvu.
+En mode de récupération, le hub peut apparaître sous le nom **LEGO Bootloader** au lieu de son nom habituel.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Hub LEGO Bootloader dans la liste des hubs avec l’action de récupération du firmware" />
 
-## Přepnutí Technic Move Hub do režimu obnovy
+## Mettre un Technic Move Hub en mode de récupération {#put-a-technic-move-hub-into-recovery-mode}
 
-Technic Move Hub používá jinou sekvenci obnovy než ostatní podporované huby. Nepřipojuje se jako **LEGO Bootloader**. Tato sekvence načte tovární firmware **1.2.3**, který není určen jako finální firmware pro běžné používání.
+La récupération du Technic Move Hub se fait autrement : il ne se connecte pas sous le nom **LEGO Bootloader**. La séquence de bouton ci-dessous charge plutôt le firmware d’usine **1.2.3**, qui n’est pas prévu pour un usage quotidien.
 
-Obnova firmwaru Technic Move Hub:
+Pour restaurer son firmware :
 
-1. Vypněte hub.
-2. Stiskněte a držte zelené tlačítko.
-3. Držte zelené tlačítko přibližně jednu minutu.
-4. Pusťte tlačítko.
-5. Počkejte, dokud LED hubu nezačne blikat bíle.
-6. Otevřete **Mes hubs Bluetooth** v MOCPilot a připojte hub.
+1. Éteignez le hub.
+2. Appuyez sur le bouton vert et maintenez-le enfoncé.
+3. Maintenez le bouton vert pendant environ une minute.
+4. Relâchez le bouton.
+5. Attendez que la LED du hub se mette à clignoter en blanc.
+6. Ouvrez **Mes hubs Bluetooth** dans MOCPilot et connectez-vous au hub.
 
-Po připojení MOCPilot rozpozná tovární firmware a nabídne aktualizaci hubu na nejnovější dostupnou verzi. Spusťte aktualizaci firmwaru a počkejte na dokončení.
+Lorsque le hub se connecte, MOCPilot détecte le firmware d’usine et propose de le mettre à jour vers la dernière version. Lancez la mise à jour et attendez qu’elle se termine.
 
-## Spuštění obnovy z dialogu
+## Lancer la récupération depuis la boîte de dialogue {#start-recovery-from-the-dialog}
 
-Když MOCPilot rozpozná hub připojený v režimu obnovy firmwaru, zobrazí dialog obnovy.
+Lorsque MOCPilot détecte un hub connecté en mode de récupération, il affiche une boîte de dialogue de récupération.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Restauration du firmware du hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Boîte de dialogue Mode de récupération du hub détecté" />
 
-Vyberte **Restaurer** pro zahájení nahrávání firmwaru do hubu.
+Sélectionnez **Récupérer** pour lancer le transfert du firmware vers le hub.
 
-Pokud nejste připraveni obnovu spustit, vyberte **Annuler**. Obnovu můžete spustit později z kontextové nabídky hubu.
+Si vous n’êtes pas prêt, sélectionnez **Annuler**. Vous pourrez lancer la récupération plus tard depuis le menu du hub.
 
-## Spuštění obnovy z nabídky hubu
+## Lancer la récupération depuis le menu du hub {#start-recovery-from-the-hub-menu}
 
-Ruční spuštění obnovy:
+Pour lancer la récupération vous-même :
 
-1. Otevřete **Mes hubs Bluetooth**.
-2. Najděte hub zobrazený jako **LEGO Bootloader**.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Restaurer le firmware du hub**.
+1. Ouvrez **Mes hubs Bluetooth**.
+2. Repérez le hub affiché sous le nom **LEGO Bootloader**.
+3. Ouvrez le menu du hub.
+4. Sélectionnez **Récupérer le firmware du hub**.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Restaurer le firmware du hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Action Récupérer le firmware du hub dans le menu contextuel du hub" />
 
-## Během obnovy firmwaru
+## Pendant la récupération du firmware {#during-firmware-recovery}
 
-Po spuštění obnovy MOCPilot nahrává firmware do hubu a zobrazuje průběh na obrazovce.
+MOCPilot transfère le firmware vers le hub et affiche la progression.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Restauration du firmware du hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Écran de progression de la récupération du firmware" />
 
-Počkejte na dokončení. Nepřesouvejte hub daleko od zařízení, nezavírejte aplikaci, nevypínejte Bluetooth ani neodpojujte napájení hubu.
+Attendez la fin de l’opération. N’éloignez pas le hub de votre appareil, ne fermez pas l’application, ne désactivez pas le Bluetooth et ne coupez pas l’alimentation du hub.
 
-Hub se může během procesu několikrát restartovat nebo znovu připojit. To je očekávané. Nechte MOCPilot otevřený a počkejte na dokončení obnovy.
+Le hub peut redémarrer ou se reconnecter plusieurs fois. C’est normal : laissez MOCPilot ouvert et patientez.
 
-## Dokončení obnovy
+## Terminer la récupération {#finish-recovery}
 
-Po úspěšném dokončení obnovy MOCPilot zobrazí potvrzení.
+Une fois la récupération terminée, MOCPilot affiche une confirmation.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Restauration du firmware du hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Boîte de dialogue de fin de récupération du firmware" />
 
-Vyberte **OK**. Hub by se měl restartovat a připojit jako běžný hub místo **LEGO Bootloader**.
+Sélectionnez **OK**. Le hub doit redémarrer et se reconnecter comme un hub normal, et non plus sous le nom **LEGO Bootloader**.
 
-Po obnově zkontrolujte hub v **Mes hubs Bluetooth**. Pokud MOCPilot stále hlásí, že je potřeba aktualizace firmwaru, spusťte běžný postup [Mise à jour du firmware](/docs/Application/Hubs/FirmwareUpdating/).
+Vérifiez ensuite le hub dans **Mes hubs Bluetooth**. Si MOCPilot demande encore une mise à jour du firmware, effectuez une [mise à jour du firmware](/docs/Application/Hubs/FirmwareUpdating/) normale.
 
-## Pokud obnova selže
+## En cas d’échec de la récupération {#if-recovery-fails}
 
-Pokud se obnova nedokončí úspěšně:
+Si la récupération échoue :
 
-1. Držte hub blízko zařízení.
-2. Restartujte napájení hubu.
-3. Znovu přepněte hub do režimu obnovy.
-4. Připojte se k **LEGO Bootloader** v MOCPilot.
-5. Znovu spusťte **Restaurer le firmware du hub**.
+1. Gardez le hub près de votre appareil.
+2. Éteignez puis rallumez le hub.
+3. Remettez le hub en mode de récupération.
+4. Connectez-vous à **LEGO Bootloader** dans MOCPilot.
+5. Relancez **Récupérer le firmware du hub**.
 
-Pokud se chybová zpráva objeví znovu, zopakujte obnovu od začátku. Pokud hub nejde obnovit ani po několika pokusech, vyměňte nebo nabijte baterie a zkuste to znovu.
+Si l’erreur se reproduit, recommencez toute la procédure. Si plusieurs tentatives échouent, remplacez ou rechargez les piles et réessayez.

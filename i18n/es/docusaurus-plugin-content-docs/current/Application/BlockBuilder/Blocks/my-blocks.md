@@ -5,30 +5,33 @@ title: Mis bloques
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Mis bloques
+# Mis bloques {#my-blocks}
 
-Los bloques personalizados te permiten definir tus propios bloques reutilizables.
-Esta categoría es conceptualmente similar a crear una función en la programación tradicional: defines el comportamiento una vez y luego lo llamas muchas veces.
+Mis bloques te permite crear tus propios bloques reutilizables.
+Funciona como una función en la programación habitual: describes el comportamiento una vez y lo usas en tantos sitios como quieras.
 
-## Bloques principales
+## Los bloques {#the-blocks}
 
-### `Crear un bloque` (Guru) {#block_my_block_define}
+### `definir …` (Gurú) {#block_my_block_define}
 
-Crea una nueva definición de bloque personalizado.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Tipo: bloque de definición/configuración
-- Uso típico: agrupar lógica repetida en un bloque con nombre
+Pulsa **Crear un bloque** en la parte superior de la categoría para crear un bloque nuevo. El área del programa recibe entonces un bloque de sombrero `definir` con el nombre de tu bloque: los bloques que encajes debajo son lo que hace tu bloque.
 
-### `Mi bloque` (Guru) {#block_my_block}
+- Uso típico: reunir lógica repetida en un solo bloque con un nombre claro.
 
-Llama a un bloque personalizado previamente creado.
+### Tu bloque (Gurú) {#block_my_block}
 
-- Tipo: bloque de pila (llamada de comando personalizado)
-- Uso típico: reutilizar la misma lógica en múltiples lugares sin duplicar bloques
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Ejemplos con diferentes parámetros
+Cada bloque que creas aparece en la paleta con su nombre. Al usarlo se ejecutan los bloques encajados en su bloque `definir`.
 
-Estos ejemplos muestran bloques personalizados con distintas combinaciones de argumentos.
+- Tipo: bloque de pila
+- Uso típico: usar la misma lógica en varios sitios sin copiar pilas.
+
+## Ejemplos con distintas entradas {#examples-with-different-inputs}
+
+Bloques personalizados con distintos conjuntos de entradas:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Estos ejemplos muestran bloques personalizados con distintas combinaciones de ar
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Ejemplo de uso en una pila de programa
+## Usar un bloque personalizado en un programa {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Este ejemplo muestra una llamada a un bloque personalizado bajo `cuando el programa inicia`, mientras que la pila `definir mi bloque` contiene la lógica reutilizable del motor.
+Aquí el bloque personalizado se usa debajo de `cuando el programa comienza`, y la pila `definir` contiene la lógica del motor que ejecuta.
 
-- Flujo típico: llamar bloques personalizados desde eventos
-- Beneficio: una definición, múltiples usos
+- Patrón habitual: usar tus bloques en scripts de eventos.
+- Ventaja: una sola definición, muchos sitios donde se usa.
 
-## Vista del editor de bloques
+## El editor de bloques {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-El editor **Crear un bloque** se utiliza para diseñar la firma del bloque personalizado.  
-Puedes añadir etiquetas e inputs (por ejemplo números/texto y valores booleanos) y luego definir la lógica dentro de la pila del bloque.
+En el editor **Crear un bloque** diseñas el aspecto de tu bloque: añade etiquetas (**Agregar una etiqueta**) y entradas (**Agregar entrada**: *número o texto* o *booleano*). Dentro de la pila `definir`, las entradas funcionan como variables que contienen los valores que se pasan al bloque.
 
-## Por qué usar bloques personalizados
+## Por qué usar Mis bloques {#why-use-my-blocks}
 
 - Reutilización: escribe una vez, usa muchas veces.
-- Legibilidad: reemplaza bloques largos por un nombre claro.
-- Mantenimiento: actualiza la lógica en un solo lugar.
-- Estructura: divide programas grandes en partes más pequeñas.
+- Legibilidad: un nombre con sentido en lugar de largas pilas repetidas.
+- Cambios sencillos: corrige la lógica en un solo sitio en lugar de en cada copia.
+- Estructura: divide un programa grande en partes lógicas pequeñas.
 
-## Notas de uso
+## Notas {#notes}
 
-- Los bloques personalizados son a nivel de proyecto y se usan dentro del mismo contexto.
-- Usa nombres descriptivos que expliquen la intención, no la implementación.
+- Los bloques personalizados pertenecen al perfil y se pueden usar en cualquier parte de su programa.
+- Pon a los bloques nombres que digan qué hacen, no cómo lo hacen.
+- Un bloque que se llama a sí mismo puede repetirse sin fin; el editor te avisa de ello.

@@ -5,132 +5,170 @@ title: Motoren
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Motoren
+# Motoren {#motors}
 
-Motorblöcke dienen zum Starten, Stoppen, Positionieren und Feinabstimmen von Motoren an Hub-Ports.
+Motorblöcke starten, stoppen und positionieren Motoren an den Hub-Ports und stellen ein, wie sie sich bewegen. Die Kategorie erscheint, wenn ein Hub im Profil Motor-Ports hat. In jedem Block wählen Sie den Hub und einen oder mehrere Ports.
 
-## Grundlegende Motorbefehle
+Manche Blöcke brauchen einen Motor mit eingebautem Drehsensor (Encoder), etwa die Technic-Winkelmotoren, und einen Hub, der ihn steuern kann. Diese Blöcke sind mit „Encoder-Motoren“ gekennzeichnet. Für SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 und Mould-King-Hubs sind sie nicht verfügbar. Der Technic Move Hub hat eigene Blöcke am Ende dieser Seite.
 
-### `Motor starten` (Anfänger) {#block_hubs_all_motors_port_start_motor}
+## Motoren laufen lassen {#running-motors}
+
+### `Geschwindigkeit einstellen auf …` (Fortgeschritten) {#block_hubs_all_motors_port_set_motor_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
+Legt die Geschwindigkeit (von −100 bis 100 %) fest, die **Motor starten** und **laufen … für** an diesen Ports verwenden. Dieser Block startet den Motor nicht selbst.
+
+### `Motor starten …` (Anfänger) {#block_hubs_all_motors_port_start_motor}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Startet den ausgewählten Motor.
+Startet den Motor in der gewählten Richtung mit der Geschwindigkeit, die mit **Geschwindigkeit einstellen auf** festgelegt wurde.
 
-- Richtungsoptionen: `im Uhrzeigersinn` / `gegen den Uhrzeigersinn`
+- Richtung: im oder gegen den Uhrzeigersinn
+
+### `Motor starten bei … % Geschwindigkeit` (Anfänger) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Startet den Motor mit der angegebenen Geschwindigkeit von −100 bis 100 %. Eine negative Geschwindigkeit dreht ihn in die andere Richtung.
+
+- Typische Verwendung: mit einem Joystick oder Schieberegler fahren: Setzen Sie den Wert des Steuerelements in das Geschwindigkeitsfeld.
 
 ### `Motor stoppen` (Anfänger) {#block_hubs_all_motors_port_stop_motor}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Stoppt den ausgewählten Motor.
+Stoppt den Motor.
 
-### `Ausführen für` (Fortgeschritten) {#block_hubs_all_motors_port_run_for}
+### `laufen … für …` (Fortgeschritten) {#block_hubs_all_motors_port_run_for}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Lässt den ausgewählten Motor für angegebene Zeit/Winkel/Umdrehungen laufen.
+Lässt den Motor in der gewählten Richtung eine Anzahl Umdrehungen, Grad oder Sekunden laufen.
 
-- Richtungsoptionen: `im Uhrzeigersinn` / `gegen den Uhrzeigersinn`
-- Einheitenoptionen: `umdrehungen`, `grad`, `sekunden`
+- Richtung: im oder gegen den Uhrzeigersinn
+- Einheiten: `Umdrehungen`, `Grad`, `Sekunden`
+- Nur Encoder-Motoren.
 
-### `Motor starten mit Geschwindigkeit` (Anfänger) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Startet den Motor mit explizitem Geschwindigkeitswert.
-
-### `Ausführen für mit Geschwindigkeit` (Fortgeschritten) {#block_hubs_all_motors_port_run_for_at_speed}
+### `laufen für … bei … % Geschwindigkeit` (Fortgeschritten) {#block_hubs_all_motors_port_run_for_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Lässt den Motor für Zielzeit/Zielmenge mit expliziter Geschwindigkeit laufen.
+Lässt den Motor eine Anzahl Umdrehungen, Grad oder Sekunden mit der angegebenen Geschwindigkeit laufen.
 
-- Einheitenoptionen: `umdrehungen`, `grad`, `sekunden`
+- Einheiten: `Umdrehungen`, `Grad`, `Sekunden`
+- Nur Encoder-Motoren.
 
-### `Motorgeschwindigkeit setzen` (Fortgeschritten) {#block_hubs_all_motors_port_set_motor_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Setzt die Geschwindigkeit, die von zugehörigen Motorblöcken verwendet wird.
+## Position {#position}
 
-## Positions- und Bewegungsblöcke
-
-### `Gehe zu Position` (Fortgeschritten) {#block_hubs_all_motors_port_go_to_position}
+### `gehen … zur Position …` (Fortgeschritten) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Bewegt den Motor zur absoluten Zielposition.
+Dreht den Motor auf eine absolute Position (die eigene Nullmarke des Motors).
 
-- Pfadoptionen: `kürzester Weg`, `im Uhrzeigersinn`, `gegen den Uhrzeigersinn`
+- Weg: `kürzester Weg`, `im Uhrzeigersinn`, `gegen den Uhrzeigersinn`
+- Nur Encoder-Motoren.
 
-### `Gehe zu relativer Position` (Anfänger) {#block_hubs_all_motors_port_go_to_relative_position}
+### `zur relativen Position gehen … bei … % Geschwindigkeit` (Anfänger) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Bewegt den Motor um einen relativen Offset.
+Dreht den Motor auf eine Position in Grad, gezählt ab dem Punkt, der mit **relative Position einstellen** festgelegt wurde.
 
-### `BuWizz 3 gehe zu relativer Position` (Anfänger) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+- Typische Verwendung: Lenken mit einem Servo, wobei der Joystickwert den Winkel vorgibt.
+- Nur Encoder-Motoren; beim BuWizz 3 verwenden Sie den folgenden Block.
+
+### `zur relativen Position gehen …` (BuWizz 3) (Anfänger) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-Variante der relativen Positionierung für BuWizz 3.
+Die BuWizz-3-Version des obigen Blocks, ohne Geschwindigkeitseingabe.
 
-### `Relative Position setzen` (Anfänger) {#block_hubs_all_motors_port_set_relative_position}
+- Hubs: BuWizz 3, mit Encoder-Motoren.
+
+### `relative Position einstellen …` (Anfänger) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Setzt die Referenz der relativen Motorposition.
+Erklärt die aktuelle Position des Motors zum angegebenen Wert. Relative Positionen werden ab diesem Punkt gezählt.
 
-### `Lenkgestänge kalibrieren` (Anfänger) {#block_hubs_all_motors_port_calibrate_steering_rack}
+- Nur Encoder-Motoren.
+
+### `Zahnstange kalibrieren … Mitte … Grad …` (Anfänger) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Kalibriert die Neutral-/Referenzposition des Lenkgestänges.
+Ermittelt die Mitte und den Stellweg einer Lenkzahnstange.
 
-## Feinabstimmung und Sicherheit
+- Der Motor dreht die Zahnstange zu beiden Enden, misst, wie weit sie sich bewegen kann, und schreibt das Ergebnis in die beiden Variablen, die Sie in die Eingabefelder setzen: die Mittelposition und den Bereich in Grad. Die Zahnstange bleibt in der Mitte stehen, ihre relative Position dort entspricht aber dem Mittelwert, nicht 0; fügen Sie deshalb direkt nach diesem Block **relative Position einstellen** 0 hinzu und lenken Sie dann mit `range × joystick / 100`.
+- Die Lenkung muss an beiden Enden feste mechanische Anschläge haben (das Ende der Zahnstange oder des Getriebes).
+- Nur Encoder-Motoren.
 
-### `Motorverhalten bei Stopp setzen` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+## Motoreinstellungen {#motor-settings}
+
+### `Motor einstellen auf … beim Anhalten` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Setzt den Stoppmodus des Motors.
+Legt fest, was der Motor tut, wenn er stoppt.
 
-- Modusoptionen: `bremse`, `halte Position`, `auslaufen`
+- `Bremse`: hält schnell an.
+- `Position halten`: hält seine Position aktiv (nützlich für die Lenkung).
+- `ausrollen`: läuft frei aus.
+- Nur Encoder-Motoren.
 
-### `Blockiererkennung setzen` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `Blockierungserkennung aktivieren …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Aktiviert oder deaktiviert die Blockiererkennung.
+Schaltet die Blockiererkennung ein oder aus.
 
-### `Beschleunigung setzen` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+- Hubs: MINDSTORMS Robot Inventor.
+
+### `Beschleunigung einstellen auf …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Setzt das Beschleunigungsprofil des Motors.
+Legt fest, wie schnell der Motor beschleunigt.
 
-### `Verzögerung setzen` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+- Optionen: `Standard`, `schnell`, `ausgeglichen`, `sanft`, `langsam`, `sehr langsam`
+- Nur Encoder-Motoren.
+
+### `Verzögerung einstellen auf …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Setzt das Verzögerungsprofil des Motors.
+Legt fest, wie schnell der Motor abbremst.
 
-## Motor-Reporterblöcke
+- Optionen: `Standard`, `schnell`, `ausgeglichen`, `sanft`, `langsam`, `sehr langsam`
+- Nur Encoder-Motoren.
+
+## Motorwerte {#motor-values}
 
 ### `Position` (Anfänger) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Gibt die aktuelle Motorposition zurück.
+Liefert die absolute Position des Motors.
 
-### `Relative Position` (Anfänger) {#block_hubs_all_motors_port_relative_position}
+- Nur Encoder-Motoren.
+
+### `relative Position` (Anfänger) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Gibt die aktuelle relative Position zurück.
+Liefert die relative Position des Motors in Grad.
+
+- Nur Encoder-Motoren.
 
 ### `Geschwindigkeit` (Anfänger) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Gibt die aktuelle Motorgeschwindigkeit zurück.
+Liefert die aktuelle Geschwindigkeit des Motors.
 
 ### `Leistung` (Fortgeschritten) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Gibt den aktuellen Motorleistungswert zurück.
+Liefert die aktuelle Leistung des Motors.
 
-## Technic-Move-Motorblöcke
+- Hubs: MINDSTORMS Robot Inventor.
 
-### `Motoren starten mit Geschwindigkeit` (Anfänger) {#block_hubs_technicmove_motors_start_motors_at_speed}
+## Technic Move Hub {#technic-move-hub}
+
+Der Technic Move Hub steuert seine eingebauten Motoren mit diesen Blöcken statt mit den Port-Blöcken oben.
+
+### `Starte Motoren bei … % Geschwindigkeit` (Anfänger) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Startet die Technic-Move-Antriebsmotoren mit gewählter Geschwindigkeit.
+Startet die Antriebsmotoren mit der angegebenen Geschwindigkeit.
 
-### `Stromimpuls` (Anfänger) {#block_hubs_technicmove_motors_power_pulse}
+### `Leistungsimpuls` (Anfänger) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Sendet einen Stromimpuls-Befehl an den ausgewählten Technic Move Hub.
+Sendet einen Kraftimpuls an die Antriebsmotoren.
 
-- Nur verfügbar für Technic Move Hub.
-- Typische Verwendung: das Technic-Move-Antriebssystem kurz verstärken oder aufwecken, bevor die nächsten Blöcke ausgeführt werden.
+- Typische Verwendung: ein kurzer Schub vor den nächsten Blöcken.
 
 ### `Motoren stoppen` (Anfänger) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Stoppt die Technic-Move-Antriebsmotoren.
+Stoppt die Antriebsmotoren.
 
-### `Bremse` (Anfänger) {#block_hubs_technicmove_motors_brake}
+### `Setze die Motorbremse …` (Anfänger) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Setzt das Bremsverhalten der Technic-Move-Motoren.
+Schaltet die Bremse der Antriebsmotoren ein oder aus.
 
-- Bremsoptionen: `aus`, `ein`
+- Optionen: `aus`, `auf`
 
-### `Lenkgestänge setzen auf` (Anfänger) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `Setze die Lenkstange auf …` (Anfänger) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Setzt die Zielposition/-wert des Lenkgestänges.
+Dreht die Lenkung auf die angegebene Position.
 
-### `Lenkgestänge kalibrieren` (Anfänger) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `Lenkstangen kalibrieren` (Anfänger) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Kalibriert das Technic-Move-Lenkgestänge.
+Kalibriert die Lenkung mit dem eigenen Algorithmus des Hubs, der den Lenkbereich automatisch ermittelt.
+
+- Die Lenkung muss feste mechanische Anschläge haben (zum Beispiel die Enden der Lenkzahnstange).

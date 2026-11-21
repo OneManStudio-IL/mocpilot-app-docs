@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Tutorial de pornire rapidă
+title: Pornire rapidă
+description: "Instalează MOCPilot, conectează-te, creează primul profil și condu un model în câteva minute."
 ---
 
-# Pornire rapidă
+import Screenshot from '@site/src/components/Screenshot';
 
-Acest ghid te ajută să începi utilizarea MOCPilot pentru prima dată.
+# Pornire rapidă {#quick-start}
 
-## 1. Autentificare sau creare cont
+Acest ghid te duce de la instalarea aplicației până la condusul primului model. Ai nevoie de un hub acceptat cu un motor; vezi [Dispozitive acceptate](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Instalează aplicația {#1-install-the-app}
 
-Recomandăm cu tărie utilizarea unui cont.
+MOCPilot este disponibil în App Store (iPhone, iPad, Mac), Google Play (Android) și Microsoft Store (Windows). Linkurile le găsești pe [mocpilot.com](https://mocpilot.com).
 
-- Cu un cont, profilurile și setările se sincronizează pe toate dispozitivele tale.
-- Fără cont, datele rămân doar pe dispozitivul curent.
-- Dacă reinstalezi aplicația fără cont, vei pierde profilurile și setările.
+## 2. Conectează-te sau continuă fără cont {#2-sign-in-or-continue-without-an-account}
 
-Poți folosi în continuare **Continue without an account**, dar nu este recomandat pentru utilizare regulată.
+La prima pornire, aplicația îți cere să te conectezi. Folosește adresa de e-mail sau numele de utilizator și parola, Google sau Apple ID, ori creează un cont nou.
 
-## 2. Înțelege meniul principal
+<Screenshot name="sign-in" alt="Ecranul de conectare MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Îți recomandăm un cont:
 
-Navigarea de jos are 3 secțiuni principale:
+- profilurile și setările tale sunt păstrate pe server și sincronizate între dispozitive;
+- îți poți recupera datele dacă înlocuiești sau pierzi un dispozitiv;
+- achizițiile și MocPilot Pro funcționează pe toate dispozitivele tale.
 
-- **Profiles**: profiluri prebuilt și profiluri proprii.
-- **Settings**: opțiuni ale aplicației și setări de cont.
-- **Help**: suport, feedback și linkuri oficiale.
+Merge și **Continuați fără cont**, dar atunci totul rămâne doar pe acest dispozitiv și se pierde dacă ștergi aplicația. Te poți conecta mai târziu din **Setări → Cont**. Vezi [Cont](/docs/Application/Account/UserAccount).
 
-## 3. Verifică setările importante
+## 3. Orientează-te în aplicație {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- Pe **telefon**, bara inferioară conține **Profiluri**, **Setări** și **Ajutor** (și **Notificări** după ce te conectezi).
+- Pe **tabletă**, aceleași secțiuni, **Catalogul de profiluri** și contul tău se află în bara laterală.
+- Pe **computer**, folosește bara de sus: meniurile în stânga; Cont, Notificări și Setări în dreapta.
 
-În **Settings** poți gestiona:
+Vezi [Telefon, tabletă și desktop](/docs/Introducing/Layouts).
 
-- sunet și vibrații
-- menținerea ecranului aprins
-- limba
-- modul întunecat
-- opțiuni de cont și sincronizare
+## 4. Creează un profil {#4-create-a-profile}
 
-## 4. Profiluri prebuilt
+1. Pe pagina **Profilurile mele**, atinge **+** → **Profil nou** (telefon) sau alege **Profil nou** (tabletă și computer, ori **Fișier → Profil nou**).
+2. Alege **tipul de program**:
+   - **Legături rapide** dacă vrei să conduci un model fără cod. Cea mai bună alegere pentru început.
+   - **Blocuri logice** dacă vrei evenimente, bucle, condiții și senzori.
+3. Introdu un **nume** și, dacă vrei, adaugă o imagine.
+4. Atinge **Creează**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Pagina Profil nou cu dalele Blocuri logice și Legături rapide" width={900} />
 
-Folosește profilurile **Prebuilt** pentru a:
+Profilul se deschide în editor. Mai multe în [Creează un profil](/docs/Application/Profiles/CreateProfile).
 
-- controla rapid seturi oficiale LEGO și ale altor producători.
-- învăța tehnici din exemple gata făcute de cod pe blocuri.
-
-:::warning Important
-Profilurile prebuilt pot fi modificate pentru experimente, dar modificările nu se salvează. Profilul se resetează la următoarea deschidere.
+:::tip Vrei un model gata făcut?
+Deschide **Catalogul de profiluri** (**Caută online** pe pagina de profiluri) și instalează un profil oficial pentru setul tău. Vezi [Catalog și publicare](/docs/Application/Profiles/Catalog).
 :::
 
-Urmează această secvență pentru un profil prebuilt:
+## 5. Adaugă hubul {#5-add-your-hub}
 
-1. Deschide profilul prebuilt dorit.
+1. În editor, deschide **Huburile mele**.
+2. Atinge **Adaugă un nou hub** într-un slot liber, alege modelul hubului, apoi atinge **Adaugă**.
+3. Pornește hubul, apasă butonul lui și așteaptă până când MOCPilot îl găsește.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Pagina Huburile mele cu sloturile de hub" width={900} />
 
-2. Conectează hub-ul.
+Dacă aplicația cere o actualizare de firmware, urmează [Actualizarea firmware-ului](/docs/Application/Hubs/FirmwareUpdating). Mai multe în [Adaugă și conectează un hub](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Așază comenzi pe tabloul de bord {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Deschide **Tablou de bord**.
+2. Atinge **+** (**Adaugă controler**), alege un **Joystick** și atinge **Adaugă la tabloul de bord**.
+3. Trage-l unde vrei. Atinge-l ca să-i schimbi dimensiunea, culoarea sau comportamentul.
 
-3. Selectează dashboard-ul și apasă **Play**.
+<Screenshot name="controller-palette" alt="Paleta Adaugă controler cu joystickul selectat" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Vezi [Adaugă și aranjează comenzi](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Profiluri proprii
+## 7. Leagă comanda de un motor {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Legături rapide:** trage intrarea joystickului (de exemplu *JOY1 Axa Y*) din **Intrări** în rândul gol, adaugă operația **Motor** și ieșirea **Hub** din **Ieșiri**, apoi atinge portul la care este conectat motorul. Rândul este gata când nu mai are chenar roșu. Vezi [Legături rapide](/docs/Application/Links/LinksIntroducing).
 
-Folosește **My** pentru profilurile tale.
+**Blocuri logice:** adaugă un bloc *când începe programul*, o buclă *repetă mereu* și un bloc *setează viteza motorului* care preia valoarea joystickului. Vezi [Blocuri logice](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) și [exemplele](/docs/Application/BlockBuilder/Examples).
 
-- Poți crea oricâte profiluri dorești.
-- Poți porni orice profil direct din această pagină.
+## 8. Apasă Rulează {#8-press-run}
 
-Urmează această secvență pentru un profil propriu:
+Apasă **Rulează** (▶). Mișcă joystickul, iar motorul se rotește. Apasă **Oprește** ca să revii la editare.
 
-1. Creează sau importă un profil.
+Asta e tot. Mai departe:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Poți crea un profil nou sau poți importa de pe dispozitiv un fișier de profil deja creat (`.dat`).
-:::
-
-2. Creează un profil nou.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Introdu numele dorit al profilului. Opțional, poți alege o imagine din galerie.
-
-3. Adaugă hub-uri în profil.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Implicit, într-un profil pot fi adăugate până la **2 hub-uri**. Pentru extindere la **5**, trebuie cumpărate sloturi suplimentare.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Deschide pagina de program și construiește logica dorită conectând blocuri.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Deschide dashboard-ul pentru a adăuga controllere pe ecran care pot fi conectate la motoarele hub-ului.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Apasă **Play** pentru a rula profilul.
-
-Ești gata să conduci și să îmbunătățești profilul tău.
-
-## 6. Folosește Help când ai nevoie
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-Pagina **Help** este pentru:
-
-- deschiderea tutorialului de pornire rapidă
-- adresarea unei întrebări
-- raportarea unui bug
-- deschiderea linkurilor oficiale MOCPilot și a canalelor comunității
+- Descoperă toate [tipurile de comenzi](/docs/Application/Dashboard/ControlTypes).
+- Dă tabloului de bord un aspect nou cu [teme](/docs/Application/Themes/ThemesOverview).
+- Conectează un [gamepad](/docs/Application/Dashboard/Gamepad).
+- Dacă ceva nu funcționează, vezi [Depanare](/docs/Help/Troubleshooting).

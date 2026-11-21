@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Kom i gang – hurtigveiledning
+title: Hurtigstart
+description: "Installer MOCPilot, logg inn, opprett din første profil og kjør en modell på noen få minutter."
 ---
 
-# Hurtigstart
+import Screenshot from '@site/src/components/Screenshot';
 
-Denne guiden hjelper deg i gang med MOCPilot for første gang.
+# Hurtigstart {#quick-start}
 
-## 1. Logg inn eller opprett konto
+Denne veiledningen tar deg fra installasjon av appen til du kjører din første modell. Du trenger en støttet hub med en motor; se [Støttede enheter](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Installer appen {#1-install-the-app}
 
-Vi anbefaler sterkt å bruke en konto.
+MOCPilot finnes i App Store (iPhone, iPad, Mac), Google Play (Android) og Microsoft Store (Windows). Du finner lenkene på [mocpilot.com](https://mocpilot.com).
 
-- Med konto synkroniseres profiler og innstillinger mellom enhetene dine.
-- Uten konto lagres data kun på den aktuelle enheten.
-- Hvis du installerer appen på nytt uten konto, mister du profiler og innstillinger.
+## 2. Logg inn eller fortsett uten konto {#2-sign-in-or-continue-without-an-account}
 
-Du kan fortsatt bruke **Continue without an account**, men dette anbefales ikke for vanlig bruk.
+Første gang du starter appen, blir du bedt om å logge inn. Bruk e-post eller brukernavn og passord, Google eller Apple-ID, eller opprett en ny konto.
 
-## 2. Forstå hovedmenyen
+<Screenshot name="sign-in" alt="Påloggingsskjermen i MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Vi anbefaler en konto:
 
-Bunnnavigasjonen har 3 hovedseksjoner:
+- profilene og innstillingene dine lagres på serveren og synkroniseres mellom enhetene dine;
+- du kan få dataene tilbake hvis du bytter eller mister en enhet;
+- kjøp og MocPilot Pro fungerer på alle enhetene dine.
 
-- **Profiles**: forhåndsbygde og egne profiler.
-- **Settings**: appvalg og kontoinnstillinger.
-- **Help**: støtte, tilbakemeldinger og offisielle lenker.
+**Fortsett uten konto** fungerer også, men da blir alt bare liggende på denne enheten og går tapt hvis du fjerner appen. Du kan logge inn senere under **Innstillinger → Konto**. Se [Konto](/docs/Application/Account/UserAccount).
 
-## 3. Se gjennom viktige innstillinger
+## 3. Finn frem i appen {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- På en **telefon** har bunnlinjen **Profiler**, **Innstillinger** og **Hjelp** (og **Varsler** når du er logget inn).
+- På et **nettbrett** ligger de samme delene, **Profilkatalog** og kontoen din i sidelinjen.
+- På en **datamaskin** bruker du topplinjen: menyer til venstre; Konto, Varsler og Innstillinger til høyre.
 
-I **Settings** kan du administrere:
+Se [Telefon, nettbrett og datamaskin](/docs/Introducing/Layouts).
 
-- lyd og vibrasjon
-- hold skjermen på
-- språk
-- mørk modus
-- konto- og synkroniseringsvalg
+## 4. Opprett en profil {#4-create-a-profile}
 
-## 4. Forhåndsbygde profiler
+1. På siden **Mine profiler** trykker du **+** → **Ny profil** (telefon), eller velger **Ny profil** (nettbrett og datamaskin, eller **Fil → Ny profil**).
+2. Velg **programtype**:
+   - **Hurtigkoblinger** hvis du vil kjøre en modell uten kode. Best for et første forsøk.
+   - **Logikkblokker** hvis du vil ha hendelser, løkker, betingelser og sensorer.
+3. Skriv inn et **namn** og legg eventuelt til et bilde.
+4. Trykk **Opprett**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Siden Ny profil med flisene Logikkblokker og Hurtigkoblinger" width={900} />
 
-Bruk **Prebuilt**-profiler for å:
+Profilen åpnes i editoren. Mer i [Opprett en profil](/docs/Application/Profiles/CreateProfile).
 
-- styre LEGO og andre offisielle sett raskt.
-- lære teknikker fra ferdige blokkode-eksempler.
-
-:::warning Important
-Forhåndsbygde profiler kan endres for testing, men endringer lagres ikke. Profilen tilbakestilles neste gang den åpnes.
+:::tip Vil du ha en ferdig modell?
+Åpne **Profilkatalog** (**Søk på nett** på profilsiden) og installer en offisiell profil for settet ditt. Se [Katalog og publisering](/docs/Application/Profiles/Catalog).
 :::
 
-Følg denne rekkefølgen for en forhåndsbygd profil:
+## 5. Legg til huben {#5-add-your-hub}
 
-1. Åpne ønsket forhåndsbygd profil.
+1. Åpne **Mine hubber** i editoren.
+2. Trykk **Legg til en ny hub** i en ledig plass, velg hubmodellen og trykk **Legg til**.
+3. Slå på huben, trykk på knappen på den og vent til MOCPilot finner den.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Siden Mine hubber med hubplasser" width={900} />
 
-2. Koble til huben.
+Hvis appen ber om en fastvareoppdatering, følger du [Oppdatere fastvaren](/docs/Application/Hubs/FirmwareUpdating). Mer i [Legg til og koble til en hub](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Plasser kontroller på dashboardet {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Åpne **Dashboard**.
+2. Trykk **+** (**Legg til kontroller**), velg en **Joystick** og trykk **Legg til på dashboard**.
+3. Dra den dit du vil ha den. Trykk på den for å endre størrelse, farge eller oppførsel.
 
-3. Velg dashboard og trykk **Play**.
+<Screenshot name="controller-palette" alt="Paletten Legg til kontroller med joysticken valgt" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Se [Legg til og ordne kontroller](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Egne profiler
+## 7. Koble kontrollen til en motor {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Hurtigkoblinger:** dra joystick-inngangen (for eksempel *JOY1 Y-akse*) fra **Innganger** til den tomme raden, legg til handlingen **Motor** og utgangen **Hub** fra **Utganger**, og trykk så på porten motoren er koblet til. Raden er klar når den ikke har noen rød ramme. Se [Hurtigkoblinger](/docs/Application/Links/LinksIntroducing).
 
-Bruk **My** for dine egne profiler.
+**Logikkblokker:** legg til en *når programmet starter*-blokk, en *gjenta alltid*-løkke og en *sett hastighet til*-blokk som tar verdien fra joysticken. Se [Logikkblokker](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) og [eksemplene](/docs/Application/BlockBuilder/Examples).
 
-- Du kan opprette så mange profiler du vil.
-- Du kan starte en profil direkte fra denne siden.
+## 8. Trykk Kjør {#8-press-run}
 
-Følg denne rekkefølgen for en egen profil:
+Trykk **Kjør** (▶). Beveg joysticken, så går motoren. Trykk **Stopp** for å gå tilbake til redigering.
 
-1. Opprett eller importer en profil.
+Det var det. Videre:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Du kan opprette en ny profil eller importere en eksisterende profilfil (`.dat`) fra enheten din.
-:::
-
-2. Opprett en ny profil.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Skriv inn ønsket profilnavn. Du kan også velge et bilde fra galleriet.
-
-3. Legg til huber i profilen.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Som standard kan opptil **2 huber** legges til i en profil. For å utvide til **5** må ekstra hub-slots kjøpes.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Åpne programsiden og lag ønsket logikk ved å koble blokker.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Åpne dashboardet for å legge til skjermkontrollere som kan kobles til hub-motorer.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Trykk **Play** for å kjøre profilen.
-
-Du er klar til å kjøre og forbedre profilen videre.
-
-## 6. Bruk Help ved behov
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-På **Help**-siden kan du:
-
-- åpne hurtigstartveiledningen
-- stille et spørsmål
-- rapportere en feil
-- åpne offisielle MOCPilot-lenker og fellesskapskanaler
+- Lær alle [kontrolltypene](/docs/Application/Dashboard/ControlTypes).
+- Gi dashboardet et nytt utseende med [temaer](/docs/Application/Themes/ThemesOverview).
+- Koble til en [spillkontroller](/docs/Application/Dashboard/Gamepad).
+- Hvis noe ikke fungerer, se [Feilsøking](/docs/Help/Troubleshooting).

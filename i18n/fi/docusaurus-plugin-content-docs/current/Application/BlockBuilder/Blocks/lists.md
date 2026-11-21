@@ -5,74 +5,73 @@ title: Listat
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Listat
+# Listat {#lists}
 
-Listat tallentavat järjestettyjä arvojoukkoja, ja niitä käsitellään erityisillä listojen Reporter- ja Stack-lohkoilla.
+Lista tallentaa useita arvoja järjestyksessä. Listat luodaan, nimetään uudelleen ja poistetaan luokan yläreunan painikkeilla **Luo lista**, **Nimeä lista uudelleen** ja **Poista lista**. Alla olevat lohkot näkyvät, kun ohjelmassa on vähintään yksi lista. Kohteet numeroidaan alkaen 1:stä.
 
-## Listan muokkauslohkot
+## Listan muuttaminen {#changing-a-list}
 
-### `Lisää arvo listaan` (Edistynyt) {#block_lists_add}
+### `lisää … listaan …` (Edistynyt) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Lisää arvon valitun listan loppuun.
+Lisää arvon listan loppuun.
 
-### `Lisää kohtaan` (Guru) {#block_lists_insert_at}
+### `lisätä … kohtaan … listassa …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Lisää arvon valittuun kohtaan listassa.
+Lisää arvon annettuun kohtaan; sen jälkeiset kohteet siirtyvät yhden pykälän eteenpäin.
 
-### `Korvaa kohdassa` (Guru) {#block_lists_replace_at}
+### `korvata kohde … listassa … arvolla …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Korvaa valitun kohdan arvon uudella arvolla.
+Korvaa annetussa kohdassa olevan kohteen uudella arvolla.
 
-### `Poista` (Edistynyt) {#block_lists_delete}
+### `poistaa … listasta …` (Edistynyt) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Poistaa arvon valitusta kohdasta (tai valitun poistotavan mukaan).
+Poistaa annetussa kohdassa olevan kohteen.
 
-### `Tyhjennä lista` (Edistynyt) {#block_lists_clear_all}
+### `tyhjentää …` (Edistynyt) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Poistaa kaikki arvot listasta.
+Poistaa listasta kaikki kohteet.
 
-## Listan arvo- ja tarkistuslohkot
+## Listan lukeminen {#reading-a-list}
 
-### `Arvo kohdassa` (Edistynyt) {#block_lists_item_at}
+### `kohde … listasta …` (Edistynyt) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Palauttaa arvon valitusta kohdasta.
+Palauttaa annetussa kohdassa olevan kohteen.
 
-### `Arvon indeksi` (Guru) {#block_lists_index_of_value}
+### `indeksi … sisällä …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Palauttaa ensimmäisen vastaavan arvon indeksin.
+Palauttaa ensimmäisen arvoa vastaavan kohteen sijainnin tai `0`, jos sellaista ei ole.
 
-### `Sisältää arvon` (Guru) {#block_lists_contains_value}
+### `… sisältää …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Palauttaa, sisältääkö lista annetun arvon.
+Palauttaa arvon `true`, kun lista sisältää arvon.
 
-### `Listan koko` (Edistynyt) {#block_lists_size_of_value}
+### `koko …` (Edistynyt) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Palauttaa listan alkioiden määrän.
+Palauttaa listan kohteiden määrän.
 
-## Listan arvolohko
+### Lista (Edistynyt) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Palauttaa valitun listan nykyisen arvon.
+Jokaisella listalla on oma nimellään varustettu raportointilohko. Se palauttaa koko listan tekstinä.
 
-- Tyyppi: reporter-lohko
-- Esimerkkimuoto: `[item1,item2,item3]`
-- Tyypillinen käyttö: tarkastella listaa tai käyttää sitä muissa lohkoissa
+- Esimerkkitulos: `[item1,item2,item3]`; tyhjä lista antaa tyhjän tekstin.
+- Tyypillinen käyttö: listan näyttäminen näytössä tai sen välittäminen lohkoille, jotka hyväksyvät listan (esimerkiksi etäisyysanturin valojen **sytytä**-lohko).

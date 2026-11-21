@@ -5,30 +5,30 @@ title: Recuperación del firmware del hub
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Recuperación del firmware del hub
+# Recuperación del firmware del hub {#hub-firmware-recovery}
 
-La recuperación del firmware del hub se usa cuando un hub no puede iniciar normalmente después de una actualización de firmware interrumpida o fallida.
+La recuperación del firmware devuelve a la vida un hub que no puede arrancar con normalidad tras una actualización de firmware interrumpida o fallida.
 
-Durante la recuperación, MOCPilot restaura la ruta de firmware del hub para que pueda actualizarse de nuevo a la última versión compatible. Use este proceso solo si el hub no responde normalmente, si MOCPilot indica que está en modo de recuperación o si una actualización anterior falló.
+MOCPilot carga un firmware que funciona en el hub para que pueda arrancar y volver a actualizarse. Usa la recuperación solo cuando el hub no responda con normalidad, cuando MOCPilot indique que el hub está en modo de recuperación o tras una actualización fallida.
 
 :::warning Importante
-Mantenga el hub encendido y el dispositivo cerca del hub durante todo el proceso de recuperación. Desconectar Bluetooth, cerrar MOCPilot, retirar las pilas o apagar el hub mientras se carga el firmware puede hacer que la recuperación falle.
+Mantén el hub encendido y tu dispositivo cerca de él durante toda la recuperación. Si desactivas el Bluetooth, cierras MOCPilot, quitas las pilas o apagas el hub durante la carga, la recuperación puede fallar.
 :::
 
-## Cuándo se requiere recuperación
+## Cuándo hace falta la recuperación {#when-recovery-is-required}
 
-La recuperación de firmware puede ser necesaria si:
+Puede que necesites la recuperación si:
 
 - Una actualización de firmware no terminó correctamente.
 - El hub ya no se conecta como un hub normal.
-- El hub aparece en MOCPilot como **LEGO Bootloader**.
-- MOCPilot detecta que el hub está conectado en modo de recuperación de firmware.
+- El hub aparece como **LEGO Bootloader** en MOCPilot.
+- MOCPilot detecta que el hub está conectado en modo de recuperación del firmware.
 
-Antes de iniciar la recuperación, asegúrese de que el hub tenga suficiente batería. Si es posible, asegúrese también de que el teléfono, la tablet o el ordenador con MOCPilot esté cargado y tenga Bluetooth activado.
+Antes de empezar, asegúrate de que el hub tenga batería suficiente, de que tu teléfono, tableta u ordenador esté cargado y de que el Bluetooth esté activado.
 
-## Hubs compatibles
+## Hubs compatibles {#supported-hubs}
 
-La recuperación de firmware está disponible para los mismos hubs que la actualización de firmware:
+La recuperación funciona con los mismos hubs que la actualización del firmware:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
   <div style={{textAlign: 'center'}}>
@@ -49,85 +49,85 @@ La recuperación de firmware está disponible para los mismos hubs que la actual
   </div>
 </div>
 
-## Poner Technic Hub, Boost Hub y City Hub en modo de recuperación
+## Poner un Technic Hub, Boost Hub o City Hub en modo de recuperación {#put-a-technic-hub-boost-hub-or-city-hub-into-recovery-mode}
 
-Technic Hub, Boost Hub y el pequeño City Hub usan el flujo de conexión mediante bootloader:
+Estos hubs se conectan a través de su bootloader:
 
-1. Apague el hub.
-2. Mantenga pulsado el botón verde.
-3. Siga manteniendo el botón hasta que el LED del hub empiece a parpadear en morado.
-4. No suelte el botón mientras el LED parpadea en morado.
-5. Sin soltar el botón, abra **Mis hubs Bluetooth** en MOCPilot y conéctese al hub.
-6. Cuando el hub esté conectado en modo bootloader, puede soltar el botón.
+1. Apaga el hub.
+2. Mantén pulsado el botón verde.
+3. Sigue manteniéndolo hasta que el LED del hub empiece a parpadear en morado.
+4. No sueltes el botón mientras el LED parpadee en morado.
+5. Sin soltar el botón, abre **Mis hubs Bluetooth** en MOCPilot y conéctate al hub.
+6. Cuando el hub esté conectado en modo bootloader, ya puedes soltar el botón.
 
-En modo de recuperación, el hub puede aparecer como **LEGO Bootloader** en lugar de su nombre normal.
+En modo de recuperación, el hub puede aparecer como **LEGO Bootloader** en lugar de con su nombre habitual.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="LEGO Bootloader" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Hub LEGO Bootloader en la lista de hubs con la acción de recuperar el firmware" />
 
-## Poner Technic Move Hub en modo de recuperación
+## Poner un Technic Move Hub en modo de recuperación {#put-a-technic-move-hub-into-recovery-mode}
 
-Technic Move Hub usa una secuencia de recuperación distinta a la de los demás hubs compatibles. No se conecta como **LEGO Bootloader**. En su lugar, esta secuencia carga el firmware de fábrica **1.2.3**, que no está pensado como firmware final para uso normal.
+El Technic Move Hub se recupera de otra manera: no se conecta como **LEGO Bootloader**. En su lugar, la secuencia de botones de abajo carga el firmware de fábrica **1.2.3**, que no está pensado para el uso diario.
 
-Para restaurar el firmware de Technic Move Hub:
+Para restaurar su firmware:
 
-1. Apague el hub.
-2. Mantenga pulsado el botón verde.
-3. Mantenga pulsado el botón verde durante aproximadamente un minuto.
-4. Suelte el botón.
-5. Espere hasta que el LED del hub empiece a parpadear en blanco.
-6. Abra **Mis hubs Bluetooth** en MOCPilot y conéctese al hub.
+1. Apaga el hub.
+2. Mantén pulsado el botón verde.
+3. Sigue manteniendo el botón verde durante un minuto aproximadamente.
+4. Suelta el botón.
+5. Espera a que el LED del hub empiece a parpadear en blanco.
+6. Abre **Mis hubs Bluetooth** en MOCPilot y conéctate al hub.
 
-Después de conectarse, MOCPilot detectará el firmware de fábrica y ofrecerá actualizar el hub a la última versión disponible. Inicie la actualización de firmware y espere a que termine.
+Cuando el hub se conecte, MOCPilot detectará el firmware de fábrica y te ofrecerá actualizarlo a la última versión. Inicia la actualización y espera a que termine.
 
-## Iniciar la recuperación desde el diálogo
+## Iniciar la recuperación desde el diálogo {#start-recovery-from-the-dialog}
 
-Cuando MOCPilot detecta un hub conectado en modo de recuperación de firmware, muestra un diálogo de recuperación.
+Cuando MOCPilot detecta un hub conectado en modo de recuperación, muestra un diálogo de recuperación.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Recuperación del firmware del hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_1.png')} alt="Diálogo de hub detectado en modo de recuperación" />
 
-Seleccione **Recuperar** para empezar a cargar el firmware en el hub.
+Selecciona **Recuperar** para empezar a cargar el firmware en el hub.
 
-Si no está preparado para iniciar la recuperación, seleccione **Cancelar**. Puede iniciar la recuperación más tarde desde el menú contextual del hub.
+Si no estás listo, selecciona **Cancelar**. Puedes iniciar la recuperación más tarde desde el menú del hub.
 
-## Iniciar la recuperación desde el menú del hub
+## Iniciar la recuperación desde el menú del hub {#start-recovery-from-the-hub-menu}
 
-Para iniciar la recuperación manualmente:
+Para iniciar la recuperación tú mismo:
 
-1. Abra **Mis hubs Bluetooth**.
-2. Busque el hub que aparece como **LEGO Bootloader**.
-3. Abra el menú contextual del hub.
-4. Seleccione **Recuperar firmware del hub**.
+1. Abre **Mis hubs Bluetooth**.
+2. Busca el hub que aparece como **LEGO Bootloader**.
+3. Abre el menú del hub.
+4. Selecciona **Recuperar firmware del hub**.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Recuperar firmware del hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_2.png')} alt="Acción Recuperar firmware del hub en el menú contextual del hub" />
 
-## Durante la recuperación del firmware
+## Durante la recuperación del firmware {#during-firmware-recovery}
 
-Tras iniciar la recuperación, MOCPilot carga el firmware en el hub. La app muestra el progreso en pantalla.
+MOCPilot carga el firmware en el hub y muestra el progreso.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Recuperación del firmware del hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_3.png')} alt="Pantalla de progreso de la recuperación del firmware" />
 
-Espere hasta que el proceso termine. No aleje el hub del dispositivo, no cierre la app, no desactive Bluetooth ni quite la alimentación del hub.
+Espera a que termine. No alejes el hub de tu dispositivo, no cierres la app, no desactives el Bluetooth ni cortes la alimentación del hub.
 
-El hub puede reiniciarse o reconectarse varias veces durante el proceso. Es normal. Mantenga MOCPilot abierto y espere a que la recuperación termine.
+El hub puede reiniciarse o volver a conectarse varias veces. Es normal: deja MOCPilot abierto y espera.
 
-## Finalizar la recuperación
+## Finalizar la recuperación {#finish-recovery}
 
-Cuando la recuperación termina correctamente, MOCPilot muestra un diálogo de confirmación.
+Cuando termina la recuperación, MOCPilot muestra una confirmación.
 
-<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Recuperación del firmware del hub" />
+<img src={useBaseUrl('/img/hubs/firmware-recovery/fur_4.png')} alt="Diálogo de recuperación del firmware finalizada" />
 
-Seleccione **OK**. El hub debería reiniciarse y conectarse como un hub normal en lugar de **LEGO Bootloader**.
+Selecciona **Aceptar**. El hub debería reiniciarse y volver a conectarse como un hub normal en lugar de como **LEGO Bootloader**.
 
-Cuando termine la recuperación, compruebe el hub en **Mis hubs Bluetooth**. Si MOCPilot sigue indicando que se requiere una actualización de firmware, ejecute el proceso normal de [Actualización de firmware](/docs/Application/Hubs/FirmwareUpdating/).
+Después, comprueba el hub en **Mis hubs Bluetooth**. Si MOCPilot sigue pidiendo una actualización del firmware, ejecuta una [actualización del firmware](/docs/Application/Hubs/FirmwareUpdating/) normal.
 
-## Si la recuperación falla
+## Si la recuperación falla {#if-recovery-fails}
 
-Si la recuperación no termina correctamente:
+Si la recuperación falla:
 
-1. Mantenga el hub cerca de su dispositivo.
-2. Apague y encienda el hub.
-3. Ponga el hub de nuevo en modo de recuperación.
-4. Conéctese a **LEGO Bootloader** en MOCPilot.
-5. Inicie **Recuperar firmware del hub** de nuevo.
+1. Mantén el hub cerca de tu dispositivo.
+2. Apaga y enciende el hub.
+3. Vuelve a poner el hub en modo de recuperación.
+4. Conéctate a **LEGO Bootloader** en MOCPilot.
+5. Inicia de nuevo **Recuperar firmware del hub**.
 
-Si vuelve a aparecer el mensaje de error de actualización, repita el procedimiento de recuperación desde el principio. Si el hub sigue sin poder recuperarse tras varios intentos, cambie o recargue las pilas e inténtelo de nuevo.
+Si el error vuelve a aparecer, repite todo el procedimiento. Si fallan varios intentos, cambia o recarga las pilas e inténtalo de nuevo.

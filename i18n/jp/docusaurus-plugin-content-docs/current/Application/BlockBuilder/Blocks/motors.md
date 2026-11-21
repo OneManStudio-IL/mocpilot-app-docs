@@ -5,159 +5,170 @@ title: モーター
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# モーター
+# モーター {#motors}
 
-モーターブロックは、ハブのポートに接続されたモーターの開始、停止、位置制御、および動作調整に使用されます。
+モーターブロックは、ハブのポートにつないだモーターの起動・停止・位置決めを行い、動き方を調整します。このカテゴリーは、プロフィール内のハブにモーター用のポートがあるときに表示されます。どのブロックでも、ハブと 1 つ以上のポートを選びます。
 
-## 基本モーター制御ブロック
+一部のブロックには、Technic アンギュラーモーターのような回転センサー（エンコーダー）内蔵のモーターと、それを制御できるハブが必要です。これらのブロックには「エンコーダー付きモーター」と記載しています。SBrick、SBrick Plus、BuWizz 2、WeDo 2.0、Mould King のハブでは使えません。Technic Move Hub 専用のブロックは、このページの最後で紹介します。
 
-### `モーターを開始` (初級) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-選択したモーターを開始します。
+## モーターを動かす {#running-motors}
 
-- 方向オプション: `時計回り`, `反時計回り`
-
-### `モーターを停止` (初級) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-選択したモーターを停止します。
-
-### `〜の間動かす` (上級) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-指定した時間／角度／回転数の間モーターを動かします。
-
-- 方向オプション: `時計回り`, `反時計回り`
-- 単位オプション: `回転`, `度`, `秒`
-- 注: エンコーダ対応モーターが必要です。
-
-### `速度を指定してモーターを開始` (初級) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-指定した速度でモーターを開始します。
-
-### `速度を指定して〜の間動かす` (上級) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-指定した速度で一定時間／量モーターを動かします。
-
-- 単位オプション: `回転`, `度`, `秒`
-- 注: エンコーダ対応モーターが必要です。
-
-### `モーター速度を設定` (上級) {#block_hubs_all_motors_port_set_motor_speed}
+### `速度を設定 …` (上級者) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-他のモーターブロックで使用される速度を設定します。
+これらのポートで **モーターを起動** と **実行 … の間** が使う速度（−100～100 %）を設定します。このブロックだけではモーターは動き出しません。
 
-## 位置制御ブロック
+### `モーターを起動 …` (初心者) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+**速度を設定** で決めた速度で、選んだ方向にモーターを回し始めます。
 
-### `位置へ移動` (上級) {#block_hubs_all_motors_port_go_to_position}
+- 方向：時計回りまたは反時計回り
+
+### `モーターを起動（設定値） … 速度 %` (初心者) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+指定した速度（−100～100 %）でモーターを回し始めます。マイナスの速度では逆方向に回ります。
+
+- 主な使い方：ジョイスティックやスライダーで走らせる。コントロールの値を速度の欄に入れます。
+
+### `モーターを停止` (初心者) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+モーターを止めます。
+
+### `実行 … の間 …` (上級者) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+選んだ方向に、指定した回転数・角度・秒数だけモーターを回します。
+
+- 方向：時計回りまたは反時計回り
+- 単位：`回転`、`度`、`秒`
+- エンコーダー付きモーター専用です。
+
+### `の間実行 … で … 速度 %` (上級者) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+指定した速度で、指定した回転数・角度・秒数だけモーターを回します。
+
+- 単位：`回転`、`度`、`秒`
+- エンコーダー付きモーター専用です。
+
+## 位置 {#position}
+
+### `進む … 位置へ …` (上級者) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-指定した絶対位置へ移動します。
+モーターを絶対位置（モーター自体のゼロ位置が基準）まで回します。
 
-- 経路オプション: `最短`, `時計回り`, `反時計回り`
-- 注: エンコーダ対応モーターが必要です。
+- 経路：`最短経路`、`時計回り`、`反時計回り`
+- エンコーダー付きモーター専用です。
 
-### `相対位置へ移動` (初級) {#block_hubs_all_motors_port_go_to_relative_position}
+### `相対位置へ移動 … で … 速度 %` (初心者) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-現在位置からの相対量で移動します。
+**相対位置を設定** で決めた点を基準に、指定した角度（度）の位置までモーターを回します。
 
-- 注: エンコーダ対応モーターが必要です。
+- 主な使い方：サーボによるステアリング。ジョイスティックの値で角度を決めます。
+- エンコーダー付きモーター専用です。BuWizz 3 では次のブロックを使います。
 
-### `BuWizz 3 相対位置へ移動` (初級) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `相対位置へ移動 …` (BuWizz 3) (初心者) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-BuWizz 3用の相対位置移動ブロックです。
+上のブロックの BuWizz 3 版で、速度の入力欄はありません。
 
-- 注: エンコーダ対応モーターが必要です。
+- ハブ：BuWizz 3（エンコーダー付きモーター使用時）。
 
-### `相対位置を設定` (初級) {#block_hubs_all_motors_port_set_relative_position}
+### `相対位置を設定 …` (初心者) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-相対位置の基準を設定します。
+モーターの現在位置を指定した値とみなします。相対位置はこの値を基準に数えます。
 
-- 注: エンコーダ対応モーターが必要です。
+- エンコーダー付きモーター専用です。
 
-### `ステアリングをキャリブレーション` (初級) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `ラックをキャリブレーション … 中心 … 度 …` (初心者) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-ステアリングの基準位置をキャリブレーションします。
+ステアリングラックの中心と可動範囲を求めます。
 
-- 要件: エンコーダ対応モーターが必要です。
-- 機械条件: ステアリングの可動範囲に物理的制限が必要です。
-- 動作: 可動範囲を測定し、キャリブレーションデータを計算します。
-- 出力: 結果は引数として渡された変数に書き込まれます。
+- モーターがラックを両端まで動かして可動範囲を測り、欄に置いた 2 つの変数に結果を入れます。中心位置と、度単位の範囲です。ラックは中央で止まりますが、そこでの相対位置は 0 ではなく中心の値になります。そのため、このブロックの直後に **相対位置を設定** 0 を置いてください。あとは `範囲 × ジョイスティック / 100` でステアリングを操作します。
+- ステアリングの両端には、機械的なしっかりしたストッパー（ラックの端やギアの限界）が必要です。
+- エンコーダー付きモーター専用です。
 
-## モーター調整・安全ブロック
+## モーターの設定 {#motor-settings}
 
-### `停止時の動作を設定` (達人) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `モーターを設定 … 停止時` (達人) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-停止時の動作モードを設定します。
+モーターが止まるときの動作を選びます。
 
-- オプション: `ブレーキ`, `位置保持`, `惰性`
-- 注: エンコーダ対応モーターが必要です。
+- `ブレーキ`：すばやく止まります。
+- `位置を保持`：位置を積極的に保ちます（ステアリングに便利です）。
+- `慣性滑走`：惰性で回りながら止まります。
+- エンコーダー付きモーター専用です。
 
-### `スタック検出を設定` (達人) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `スタール検出を有効にする …` (達人) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-スタック（停止）検出を有効／無効にします。
+ストール（過負荷による停止）検出のオン／オフを切り替えます。
 
-- 注: MINDSTORMS Robot Inventorのみ対応
+- ハブ：MINDSTORMS Robot Inventor。
 
-### `加速を設定` (達人) {#block_hubs_all_motors_port_set_acceleration}
+### `加速度を設定 …` (達人) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-加速プロファイルを設定します。
+モーターがどのくらい速く加速するかを選びます。
 
-- オプション: `デフォルト`, `速い`, `バランス`, `スムーズ`, `遅い`, `とても遅い`
-- 注: エンコーダ対応モーターが必要です。
+- 選択肢：`デフォルト`、`速い`、`バランスの取れた`、`スムーズ`、`遅い`、`とても遅い`
+- エンコーダー付きモーター専用です。
 
-### `減速を設定` (達人) {#block_hubs_all_motors_port_set_deceleration}
+### `減速度を設定 …` (達人) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-減速プロファイルを設定します。
+モーターがどのくらい速く減速するかを選びます。
 
-- オプション: `デフォルト`, `速い`, `バランス`, `スムーズ`, `遅い`, `とても遅い`
-- 注: エンコーダ対応モーターが必要です。
+- 選択肢：`デフォルト`、`速い`、`バランスの取れた`、`スムーズ`、`遅い`、`とても遅い`
+- エンコーダー付きモーター専用です。
 
-## モーターレポーターブロック
+## モーターの値 {#motor-values}
 
-### `位置` (初級) {#block_hubs_all_motors_port_position}
+### `位置` (初心者) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-現在の位置を返します。
+モーターの絶対位置を返します。
 
-### `相対位置` (初級) {#block_hubs_all_motors_port_relative_position}
+- エンコーダー付きモーター専用です。
+
+### `相対位置` (初心者) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-現在の相対位置を返します。
+モーターの相対位置を度単位で返します。
 
-### `速度` (初級) {#block_hubs_all_motors_port_speed}
+- エンコーダー付きモーター専用です。
+
+### `速度` (初心者) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-現在の速度を返します。
+モーターの現在の速度を返します。
 
-### `出力` (上級) {#block_hubs_all_motors_port_power}
+### `電力` (上級者) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-現在の出力値を返します。
+モーターの現在のパワーを返します。
 
-- 注: MINDSTORMS Robot Inventorのみ対応
+- ハブ：MINDSTORMS Robot Inventor。
 
-## Technic Move モーターブロック
+## Technic Move Hub {#technic-move-hub}
 
-### `モーターを速度で開始` (初級) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Technic Move Hub は、上記のポート用ブロックではなく、以下のブロックで内蔵モーターを動かします。
+
+### `モーターを起動 … 速度 %` (初心者) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Technic Moveの駆動モーターを指定速度で開始します。
+駆動モーターを指定した速度で回し始めます。
 
-### `パワーパルス` (初級) {#block_hubs_technicmove_motors_power_pulse}
+### `パワーパルス` (初心者) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-選択した Technic Move Hub にパワーパルスコマンドを送信します。
+駆動モーターにパワーパルスを送ります。
 
-- Technic Move Hub でのみ使用できます。
-- 主な用途: 次のブロックへ進む前に、Technic Move の駆動システムを短時間ブーストまたは起動します。
+- 主な使い方：次のブロックの前に短くブーストをかける。
 
-### `モーターを停止` (初級) {#block_hubs_technicmove_motors_stop_motors}
+### `モーターを停止` (初心者) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Technic Moveの駆動モーターを停止します。
+駆動モーターを止めます。
 
-### `ブレーキ` (初級) {#block_hubs_technicmove_motors_brake}
+### `モーターのブレーキを設定 …` (初心者) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-ブレーキ動作を適用します。
+駆動モーターのブレーキをオン／オフします。
 
-- オプション: `オフ`, `オン`
+- 選択肢：`オフ`、`有効`
 
-### `ステアリングを〜に設定` (初級) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `ステアリングラックを設定 …` (初心者) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-ステアリング位置を設定します。
+ステアリングを指定した位置まで切ります。
 
-### `ステアリングをキャリブレーション` (初級) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `ステアリングラックをキャリブレーション` (初心者) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Technic Moveのステアリングをキャリブレーションします。
+ハブ独自のアルゴリズムでステアリングをキャリブレーションし、ステアリングの可動範囲を自動で求めます。
 
-- 注: モーター軸には物理的な可動制限が必要です。
+- ステアリングには、機械的なしっかりしたストッパー（ステアリングラックの端など）が必要です。

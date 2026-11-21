@@ -1,269 +1,415 @@
 ---
 id: DashboardControllers
-title: Contrôleurs du tableau de bord
+title: Contrôleurs à l'écran
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Contrôleurs du tableau de bord
+# Contrôleurs à l'écran
 
-Ces blocs sont utilisés pour lire les entrées utilisateur depuis les contrôles à l’écran, réagir aux actions de l’utilisateur et mettre à jour l’état de l’interface du tableau de bord.
+Ces blocs lisent les commandes du tableau de bord, réagissent quand vous les utilisez et modifient leur apparence. Ils se trouvent dans la catégorie **Contrôleurs à l'écran**, qui apparaît dès que le tableau de bord comporte une commande. Chaque type de commande ajoute ses propres blocs ; dans un bloc, vous choisissez la commande par son nom, par exemple *BTN1* ou *GEAR1*.
 
-## Blocs globaux des contrôleurs du tableau de bord
+Plages utilisées ci-dessous : la plupart des valeurs analogiques vont de 0 à 100, ou de −100 à 100 lorsque le zéro est au milieu.
 
-### `Définir la couleur du contrôleur` (Avancé) {#block_dashboard_controller_all_set_color}
+Sur cette page :
+
+- [Blocs pour toutes les commandes](#blocks-for-all-controls) : couleur, interactivité et sons
+- [Boutons et interrupteurs](#buttons-and-switches) : bouton, interrupteur, interrupteur à étapes
+- [Joysticks et croix directionnelles](#joysticks-and-d-pads)
+- [Curseurs et boutons rotatifs](#sliders-and-knobs) : curseur, bouton rotatif
+- [Moniteurs](#monitor-blocks)
+- [Volant et pédales](#steering-wheel-and-pedals)
+- [Autres commandes spéciales](#other-special-controls) : boîte de vitesses, frein à main, clignotants, manipulateur de traction
+
+## Blocs pour toutes les commandes {#blocks-for-all-controls}
+
+### `Couleur du contrôleur` (Avancé) {#block_dashboard_controller_all_set_color}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_all_set_color.svg')} alt="block_dashboard_controller_all_set_color.svg" />
 
-Modifie la couleur d’accentuation visuelle du contrôleur sélectionné.
+*définir [commande] couleur à [couleur]* : change la couleur d’accent d’une commande.
 
 - Type : bloc de commande
-- Utilisation typique : indiquer des états d’exécution ou modifier dynamiquement le style selon les conditions
+- Fonctionne avec les commandes qui ont une couleur d’accent (pas avec le volant ni les pédales)
+- Utilisation type : signaler un état, par exemple un bouton qui devient rouge quand la batterie est faible
 
-### `Définir l’interactivité du contrôleur` (Avancé) {#block_dashboard_controller_all_set_interactivity}
+### `Interactivité du contrôleur` (Avancé) {#block_dashboard_controller_all_set_interactivity}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_all_set_interactivity.svg')} alt="block_dashboard_controller_all_set_interactivity.svg" />
 
-Contrôle l’interactivité du contrôleur sélectionné.  
-Si l’interactivité est désactivée, le contrôleur ne réagit pas au toucher.
+*[activer / désactiver] [commande] interactivité* : une commande désactivée ne réagit pas au toucher.
 
 - Type : bloc de commande
-- Utilisation typique : verrouiller temporairement les contrôles pour la sécurité ou la logique
-- Options d’état : `activer`, `désactiver`
+- Utilisation type : bloquer une commande pendant un moment, par exemple l’accélérateur tant que la vérification au démarrage n’est pas terminée
 
-## Blocs de bouton
+### `Son d’une commande` (Débutant) {#block_dashboard_controller_sound}
 
-### `Événement bouton` (Débutant) {#block_dashboard_controller_button_event}
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_sound.svg')} alt="block_dashboard_controller_sound.svg" />
+
+*son [son] de [commande]* : l’un des sons d’une commande, pour les blocs de lecture de son de la catégorie **Sons**.
+
+- Type : bloc de valeur
+- Apparaît lorsque le tableau de bord comporte une commande avec des sons : le [volant](/docs/Application/Dashboard/SpecialControls#steering-wheel) (klaxons de voiture, de camion et de voiture de sport) ou les [pédales](/docs/Application/Dashboard/SpecialControls#pedals) (freins de voiture, de voiture de sport et de camion, bip de recul)
+- Le son n’est joué que si le réglage **Effets sonores** de la commande et le son de l’application sont activés
+
+## Boutons et interrupteurs {#buttons-and-switches}
+
+### Blocs de bouton {#button-blocks}
+
+#### `Événement du bouton` (Débutant) {#block_dashboard_controller_button_event}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_event.svg')} alt="block_dashboard_controller_button_event.svg" />
 
-Déclenché lorsque l’état du bouton change (appuyé/relâché).
+*lorsque le bouton [commande] est [appuyé / relâché]* : exécute le script lorsque le bouton est appuyé ou relâché.
 
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options d’état : `appuyé`, `relâché`
+- Type : bloc d’événement
 
-### `Valeur du bouton (booléen)` (Débutant) {#block_dashboard_controller_button_value_boolean}
+#### `Valeur du bouton (booléen)` (Débutant) {#block_dashboard_controller_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_value_boolean.svg')} alt="block_dashboard_controller_button_value_boolean.svg" />
 
-Retourne l’état actuel du bouton.
+*bouton [commande] [appuyé / relâché]* : indique si le bouton est appuyé ou relâché en ce moment.
 
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Options d’état : `appuyé`, `relâché`
+- Type : bloc de valeur, `true` / `false`
 
-## Blocs D-pad
+### Blocs d’interrupteur {#switch-blocks}
 
-### `Événement D-pad` (Débutant) {#block_dashboard_controller_dpad_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_event.svg')} alt="block_dashboard_controller_dpad_event.svg" />
-
-Déclenché lorsque la direction du D-pad change ou correspond à la direction configurée.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options de direction : `haut`, `bas`, `gauche`, `droite`
-- Options d’état : `appuyé`, `relâché`
-
-### `Valeur D-pad (booléen)` (Débutant) {#block_dashboard_controller_dpad_value_boolean}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_value_boolean.svg')} alt="block_dashboard_controller_dpad_value_boolean.svg" />
-
-Retourne si une direction du D-pad est active.
-
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Options de direction : `haut`, `bas`, `gauche`, `droite`
-- Options d’état : `appuyé`, `relâché`
-
-## Blocs joystick
-
-### `Événement joystick` (Débutant) {#block_dashboard_controller_joystick_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_event.svg')} alt="block_dashboard_controller_joystick_event.svg" />
-
-Déclenché lorsque la position du joystick change.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options d’état : `haut`, `bas`, `gauche`, `droite`, `déplacé`, `relâché`
-
-### `Valeur joystick (float)` (Débutant) {#block_dashboard_controller_joystick_value_float}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_float.svg')} alt="block_dashboard_controller_joystick_value_float.svg" />
-
-Retourne la valeur de l’axe du joystick.
-
-- Type : bloc valeur
-- Sortie : numérique (float)
-- Options d’axe : `axe x`, `axe y`
-
-### `Valeur du joystick (booléen)` (Débutant) {#block_dashboard_controller_joystick_value_boolean}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_boolean.svg')} alt="block_dashboard_controller_joystick_value_boolean.svg" />
-
-Indique si le joystick sélectionné est enfoncé ou relâché.
-
-- Type : bloc de valeur
-- Sortie : `true`/`false`
-- Options d'état : `enfoncé`, `relâché`
-
-## Blocs pédales
-
-### `Événement pédales` (Débutant) {#block_dashboard_controller_pedals_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_event.svg')} alt="block_dashboard_controller_pedals_event.svg" />
-
-Déclenché lorsque l’entrée des pédales change.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options : `toutes`, `frein`, `accélérateur`
-- Options d’état : `déplacé`, `appuyé`, `relâché`
-
-### `Valeur pédales (float)` (Débutant) {#block_dashboard_controller_pedals_value_float}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_float.svg')} alt="block_dashboard_controller_pedals_value_float.svg" />
-
-Retourne la valeur analogique des pédales.
-
-- Type : bloc valeur
-- Sortie : numérique (float)
-
-### `Valeur pédales (booléen)` (Débutant) {#block_dashboard_controller_pedals_value_boolean}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_boolean.svg')} alt="block_dashboard_controller_pedals_value_boolean.svg" />
-
-Retourne un état basé sur l’appui ou le relâchement d’une pédale.
-
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Options : `frein`, `accélérateur`
-- Options d’état : `appuyé`, `relâché`
-
-## Blocs curseur
-
-### `Événement curseur` (Débutant) {#block_dashboard_controller_slider_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_event.svg')} alt="block_dashboard_controller_slider_event.svg" />
-
-Déclenché lorsque la valeur du curseur change.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options d’état : `bas`, `haut`, `déplacé`, `relâché`
-
-### `Valeur curseur (float)` (Débutant) {#block_dashboard_controller_slider_value_float}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_value_float.svg')} alt="block_dashboard_controller_slider_value_float.svg" />
-
-Retourne la valeur actuelle du curseur.
-
-- Type : bloc valeur
-- Sortie : numérique (float)
-
-## Blocs stepper
-
-### `Événement stepper` (Débutant) {#block_dashboard_controller_stepper_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_event.svg')} alt="block_dashboard_controller_stepper_event.svg" />
-
-Déclenché lorsque la valeur change d’un pas.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options : `tous`, `reset`, `moins`, `plus`
-- Options d’état : `appuyé`, `relâché`
-
-### `Valeur stepper (float)` (Débutant) {#block_dashboard_controller_stepper_value_float}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_value_float.svg')} alt="block_dashboard_controller_stepper_value_float.svg" />
-
-Retourne la valeur actuelle.
-
-- Type : bloc valeur
-- Sortie : numérique (float)
-
-## Blocs volant
-
-### `Événement volant` (Débutant) {#block_dashboard_controller_steering_wheel_event}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_event.svg')} alt="block_dashboard_controller_steering_wheel_event.svg" />
-
-Déclenché lorsque la position du volant change.
-
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options d’état : `déplacé`, `appuyé`, `relâché`
-
-### `Valeur volant (float)` (Débutant) {#block_dashboard_controller_steering_wheel_value_float}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_value_float.svg')} alt="block_dashboard_controller_steering_wheel_value_float.svg" />
-
-Retourne la valeur actuelle du volant.
-
-- Type : bloc valeur
-- Sortie : numérique (float)
-
-### `Valeur volant (booléen)` (Débutant) {#block_dashboard_controller_steeringwheel_value_boolean}
-
-<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steeringwheel_value_boolean.svg')} alt="block_dashboard_controller_steeringwheel_value_boolean.svg" />
-
-Retourne l’état du volant (appuyé ou relâché).
-
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Options d’état : `déplacé`, `appuyé`, `relâché`
-
-## Blocs interrupteur
-
-### `Événement interrupteur` (Débutant) {#block_dashboard_controller_switch_event}
+#### `Événement de l’interrupteur` (Débutant) {#block_dashboard_controller_switch_event}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_switch_event.svg')} alt="block_dashboard_controller_switch_event.svg" />
 
-Déclenché lorsque l’état change.
+*lorsque l'interrupteur [commande] est basculé [activé / désactivé]* : exécute le script lorsque l’interrupteur est activé ou désactivé.
 
-- Type : bloc événement
-- Sortie : démarre le script connecté
-- Options : `activé`, `désactivé`
+- Type : bloc d’événement
 
-### `Valeur interrupteur (booléen)` (Débutant) {#block_dashboard_controller_switch_value_boolean}
+#### `Valeur de l’interrupteur (booléen)` (Débutant) {#block_dashboard_controller_switch_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_switch_value_boolean.svg')} alt="block_dashboard_controller_switch_value_boolean.svg" />
 
-Retourne l’état actuel.
+*interrupteur [commande] [activé / désactivé]* : indique si l’interrupteur est activé ou désactivé.
 
-- Type : bloc valeur
-- Sortie : `true`/`false`
-- Options : `activé`, `désactivé`
+- Type : bloc de valeur, `true` / `false`
 
-## Blocs moniteur
+### Blocs d’interrupteur à étapes {#stepper-blocks}
 
-### `Afficher sur le moniteur` (Débutant) {#block_dashboard_controller_monitor_show}
+Ces blocs fonctionnent avec l’interrupteur à étapes et l’interrupteur à étapes vertical.
+
+#### `Événement de l’interrupteur à étapes` (Débutant) {#block_dashboard_controller_stepper_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_event.svg')} alt="block_dashboard_controller_stepper_event.svg" />
+
+*lorsque l'interrupteur à étapes [commande] [n'importe / réinitialiser / moins / plus] est [appuyé / relâché]* : exécute le script lorsqu’un bouton de l’interrupteur à étapes est appuyé ou relâché (**n'importe** désigne n’importe lequel).
+
+- Type : bloc d’événement
+
+#### `Valeur de l’interrupteur à étapes (nombre)` (Débutant) {#block_dashboard_controller_stepper_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_value_float.svg')} alt="block_dashboard_controller_stepper_value_float.svg" />
+
+*interrupteur à étape [commande]* : le numéro de l’étape actuelle.
+
+- Type : bloc de valeur
+
+## Joysticks et croix directionnelles {#joysticks-and-d-pads}
+
+### Blocs de joystick {#joystick-blocks}
+
+#### `Événement du joystick` (Débutant) {#block_dashboard_controller_joystick_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_event.svg')} alt="block_dashboard_controller_joystick_event.svg" />
+
+*quand le joystick [commande] est [haut / bas / gauche / droite / déplacé / relâché]* : exécute le script lorsque le stick est poussé dans une direction, déplacé de quelque façon que ce soit ou relâché.
+
+- Type : bloc d’événement
+
+#### `Valeur du joystick (nombre)` (Débutant) {#block_dashboard_controller_joystick_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_float.svg')} alt="block_dashboard_controller_joystick_value_float.svg" />
+
+*joystick [commande] [axe X / axe Y]* : la position du stick sur un axe, de −100 à 100 ; le centre vaut 0.
+
+- Type : bloc de valeur
+
+#### `Valeur du joystick (booléen)` (Débutant) {#block_dashboard_controller_joystick_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_boolean.svg')} alt="block_dashboard_controller_joystick_value_boolean.svg" />
+
+*est un joystick [commande] [appuyé / relâché]* : indique si un doigt est posé sur le joystick.
+
+- Type : bloc de valeur, `true` / `false`
+
+### Blocs de croix directionnelle {#d-pad-blocks}
+
+#### `Événement de la croix directionnelle` (Débutant) {#block_dashboard_controller_dpad_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_event.svg')} alt="block_dashboard_controller_dpad_event.svg" />
+
+*quand la croix directionnelle [commande] [haut / bas / gauche / droite] bouton [appuyé / relâché]* : exécute le script lorsqu’un bouton de la croix directionnelle est appuyé ou relâché.
+
+- Type : bloc d’événement
+
+#### `Valeur de la croix directionnelle (booléen)` (Débutant) {#block_dashboard_controller_dpad_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_value_boolean.svg')} alt="block_dashboard_controller_dpad_value_boolean.svg" />
+
+*croix directionnelle [commande] [haut / bas / gauche / droite] bouton [appuyé / relâché]* : indique si un bouton de la croix directionnelle est appuyé ou relâché en ce moment.
+
+- Type : bloc de valeur, `true` / `false`
+
+## Curseurs et boutons rotatifs {#sliders-and-knobs}
+
+### Blocs de curseur {#slider-blocks}
+
+Ces blocs fonctionnent avec le curseur et le curseur vertical.
+
+#### `Événement du curseur` (Débutant) {#block_dashboard_controller_slider_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_event.svg')} alt="block_dashboard_controller_slider_event.svg" />
+
+*lorsque le curseur [commande] est [bas / haut / déplacé / relâché]* : exécute le script lorsque la poignée atteint l’extrémité basse ou haute, se déplace ou est relâchée.
+
+- Type : bloc d’événement
+
+#### `Valeur du curseur (nombre)` (Débutant) {#block_dashboard_controller_slider_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_value_float.svg')} alt="block_dashboard_controller_slider_value_float.svg" />
+
+*curseur [commande]* : la position de la poignée, de 0 à 100, ou de −100 à 100 avec **Valeurs négatives**.
+
+- Type : bloc de valeur
+
+### Blocs de bouton rotatif {#rotary-knob-blocks}
+
+Blocs du [bouton rotatif](/docs/Application/Dashboard/ControlTypes#rotary-knob) des thèmes payants.
+
+#### `Événement du bouton rotatif` (Débutant) {#block_dashboard_controller_rotary_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_rotary_event.svg')} alt="block_dashboard_controller_rotary_event.svg" />
+
+*quand bouton rotatif [commande] est [tourné / appuyé / relâché / tourné au minimum / tourné au maximum]* : exécute le script lorsque le bouton est tourné, touché, lâché ou atteint l’une de ses extrémités.
+
+- Type : bloc d’événement
+
+#### `Valeur du bouton rotatif (nombre)` (Débutant) {#block_dashboard_controller_rotary_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_rotary_value_float.svg')} alt="block_dashboard_controller_rotary_value_float.svg" />
+
+*valeur du bouton rotatif [commande]* : la position du bouton, de 0 à 100, ou de −100 à 100 avec **Zéro au centre (-100..100)**.
+
+- Type : bloc de valeur
+
+#### `Valeur du bouton rotatif (booléen)` (Débutant) {#block_dashboard_controller_rotary_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_rotary_value_boolean.svg')} alt="block_dashboard_controller_rotary_value_boolean.svg" />
+
+*bouton rotatif [commande] [appuyé / au minimum / au maximum] ?* : indique si un doigt est posé sur le bouton, ou si le bouton est à l’une de ses extrémités.
+
+- Type : bloc de valeur, `true` / `false`
+
+## Moniteurs {#monitor-blocks}
+
+Blocs des [moniteurs](/docs/Application/Dashboard/Indicators).
+
+### `Affichage sur le moniteur` (Débutant) {#block_dashboard_controller_monitor_show}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_show.svg')} alt="block_dashboard_controller_monitor_show.svg" />
 
-Affiche une information (texte ou valeur).
+*afficher [valeur] sur [commande] moniteur* : affiche un texte ou une valeur sur un **Moniteur**.
 
 - Type : bloc de commande
-- Utilisation typique : afficher niveau batterie, angle moteur, appareil connecté, etc.
+- Utilisation type : afficher le niveau de batterie, l’angle d’un moteur, l’appareil branché sur un port du hub ou le nom d’un mode
 
-### `Définir valeur du moniteur` (Débutant) {#block_dashboard_controller_monitor_set_value}
+### `Valeur du moniteur` (Débutant) {#block_dashboard_controller_monitor_set_value}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_set_value.svg')} alt="block_dashboard_controller_monitor_set_value.svg" />
 
-Définit une valeur entière pour un compteur.
+*définir [valeur] à [commande] moniteur* : règle la valeur d’un moniteur **Niveau de la batterie** ou **Vitesse**.
 
 - Type : bloc de commande
-- Utilisation typique : mettre à jour une valeur type compteur de vitesse
 
-### `Définir valeur d’inclinaison du moniteur` (Débutant) {#block_dashboard_controller_monitor_tilt_set_value}
+### `Valeur du moniteur d’inclinaison` (Débutant) {#block_dashboard_controller_monitor_tilt_set_value}
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_tilt_set_value.svg')} alt="block_dashboard_controller_monitor_tilt_set_value.svg" />
 
-Définit la valeur d’inclinaison (tangage/roulis).
+*définir [valeur] à [commande] [tangage / roulis] moniteur* : règle le tangage ou le roulis affiché sur un **Moniteur d'inclinaison**.
 
 - Type : bloc de commande
-- Utilisation typique : afficher l’inclinaison en temps réel
-- Axes : `tangage`, `roulis`
+
+## Volant et pédales {#steering-wheel-and-pedals}
+
+### Blocs du volant {#steering-wheel-blocks}
+
+Blocs du [volant](/docs/Application/Dashboard/SpecialControls#steering-wheel).
+
+#### `Événement du volant` (Débutant) {#block_dashboard_controller_steering_wheel_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_event.svg')} alt="block_dashboard_controller_steering_wheel_event.svg" />
+
+*lorsque le volant [commande] est [déplacé / appuyé / relâché]* : exécute le script lorsque le volant tourne, ou lorsque vous le touchez ou le lâchez.
+
+- Type : bloc d’événement
+
+#### `Valeur du volant (nombre)` (Débutant) {#block_dashboard_controller_steering_wheel_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_value_float.svg')} alt="block_dashboard_controller_steering_wheel_value_float.svg" />
+
+*volant [commande]* : l’angle de braquage, de −100 (à fond à gauche) à 100 (à fond à droite).
+
+- Type : bloc de valeur
+
+#### `Valeur du volant (booléen)` (Débutant) {#block_dashboard_controller_steeringwheel_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_steeringwheel_value_boolean.svg')} alt="block_dashboard_controller_steeringwheel_value_boolean.svg" />
+
+*volant [commande] [appuyé / relâché]* : indique si un doigt est posé sur le volant.
+
+- Type : bloc de valeur, `true` / `false`
+
+### Blocs des pédales {#pedals-blocks}
+
+Blocs des [pédales](/docs/Application/Dashboard/SpecialControls#pedals).
+
+#### `Événement des pédales` (Débutant) {#block_dashboard_controller_pedals_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_event.svg')} alt="block_dashboard_controller_pedals_event.svg" />
+
+*lorsque les pédales [commande] [n'importe / frein / accélération] est [déplacé / appuyé / relâché]* : exécute le script lorsqu’une pédale bouge, est enfoncée ou est relâchée.
+
+- Type : bloc d’événement
+
+#### `Valeur des pédales (nombre)` (Débutant) {#block_dashboard_controller_pedals_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_float.svg')} alt="block_dashboard_controller_pedals_value_float.svg" />
+
+*pédales [commande] [accélération / frein]* : l’enfoncement de l’accélérateur ou du frein, de 0 à 100.
+
+- Type : bloc de valeur
+
+#### `Valeur des pédales (booléen)` (Débutant) {#block_dashboard_controller_pedals_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_boolean.svg')} alt="block_dashboard_controller_pedals_value_boolean.svg" />
+
+*pédale [commande] [accélération / frein] [appuyé / relâché]* : indique si une pédale est enfoncée.
+
+- Type : bloc de valeur, `true` / `false`
+
+## Autres commandes spéciales {#other-special-controls}
+
+Blocs des autres [commandes spéciales](/docs/Application/Dashboard/SpecialControls).
+
+### Blocs de boîte de vitesses {#gearbox-blocks}
+
+Blocs des [boîtes de vitesses manuelle et automatique](/docs/Application/Dashboard/SpecialControls#gear-shifter). Valeurs des rapports : manuelle −1 = R, 0 = N, 1…6 = rapports avant ; automatique −2 = P, −1 = R, 0 = N, 1 = D.
+
+#### `Événement de la boîte de vitesses` (Débutant) {#block_dashboard_controller_gearbox_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_gearbox_event.svg')} alt="block_dashboard_controller_gearbox_event.svg" />
+
+*quand boîte de vitesses [commande] [change de rapport / monte un rapport / descend un rapport / passe au point mort / passe la marche arrière / passe en parking]* : exécute le script lorsque le rapport change. **Monte un rapport** et **descend un rapport** désignent un passage à une valeur plus haute ou plus basse.
+
+- Type : bloc d’événement
+
+#### `Rapport` (Débutant) {#block_dashboard_controller_gearbox_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_gearbox_value_float.svg')} alt="block_dashboard_controller_gearbox_value_float.svg" />
+
+*rapport [commande]* : le rapport engagé (voir les valeurs ci-dessus).
+
+- Type : bloc de valeur
+
+#### `État de la boîte de vitesses (booléen)` (Débutant) {#block_dashboard_controller_gearbox_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_gearbox_value_boolean.svg')} alt="block_dashboard_controller_gearbox_value_boolean.svg" />
+
+*boîte de vitesses [commande] [au point mort / en marche arrière / en marche avant / en parking] ?*
+
+- Type : bloc de valeur, `true` / `false`
+- **En marche avant** est vrai sur n’importe quel rapport avant de la boîte manuelle et en D sur la boîte automatique
+
+#### `Nombre de rapports` (Avancé) {#block_dashboard_controller_gearbox_gears}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_gearbox_gears.svg')} alt="block_dashboard_controller_gearbox_gears.svg" />
+
+*rapports de [commande]* : le réglage **Nombre de rapports** de la boîte de vitesses.
+
+- Type : bloc de valeur
+- Utilisation type : l’emplacement *de* du bloc *conduire* du Simulateur
+
+### Blocs du frein à main {#handbrake-blocks}
+
+Blocs du [frein à main](/docs/Application/Dashboard/SpecialControls#handbrake).
+
+#### `Événement du frein à main` (Débutant) {#block_dashboard_controller_handbrake_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_handbrake_event.svg')} alt="block_dashboard_controller_handbrake_event.svg" />
+
+*quand frein à main [commande] est [tiré / serré / déverrouillé / relâché]* : exécute le script lorsque le levier est tiré, verrouillé, déverrouillé ou lâché.
+
+- Type : bloc d’événement
+
+#### `Force du frein à main` (Débutant) {#block_dashboard_controller_handbrake_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_handbrake_value_float.svg')} alt="block_dashboard_controller_handbrake_value_float.svg" />
+
+*force du frein à main [commande]* : la course du levier, de 0 à 100.
+
+- Type : bloc de valeur
+
+#### `État du frein à main (booléen)` (Débutant) {#block_dashboard_controller_handbrake_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_handbrake_value_boolean.svg')} alt="block_dashboard_controller_handbrake_value_boolean.svg" />
+
+*frein à main [commande] [serré / déverrouillé / tiré] ?* **Tiré** est vrai tant que la force est supérieure à 0.
+
+- Type : bloc de valeur, `true` / `false`
+
+### Blocs des clignotants {#turn-signals-blocks}
+
+Blocs des [clignotants](/docs/Application/Dashboard/SpecialControls#turn-signals). Ils voient l’état stable des clignotants, sans le clignotement.
+
+#### `Événement des clignotants` (Débutant) {#block_dashboard_controller_turnsignals_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_turnsignals_event.svg')} alt="block_dashboard_controller_turnsignals_event.svg" />
+
+*quand clignotants [commande] [clignotant gauche / clignotant droit / feux] [s'allume / s'éteint]*
+
+- Type : bloc d’événement
+
+#### `État des clignotants (booléen)` (Débutant) {#block_dashboard_controller_turnsignals_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_turnsignals_value_boolean.svg')} alt="block_dashboard_controller_turnsignals_value_boolean.svg" />
+
+*clignotants [commande] [clignotant gauche / clignotant droit / feux] est allumé ?*
+
+- Type : bloc de valeur, `true` / `false`
+
+### Blocs du manipulateur de traction {#train-controller-blocks}
+
+Blocs du [manipulateur de traction](/docs/Application/Dashboard/SpecialControls#train-controller).
+
+#### `Événement du manipulateur de traction` (Débutant) {#block_dashboard_controller_train_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_train_event.svg')} alt="block_dashboard_controller_train_event.svg" />
+
+*quand manipulateur de traction [commande] [cran changé / cran augmenté / cran diminué / traction coupée / inverseur déplacé / levier relâché]* : **Traction coupée** signifie que le levier est revenu au cran 0.
+
+- Type : bloc d’événement
+
+#### `Valeur du manipulateur de traction (nombre)` (Débutant) {#block_dashboard_controller_train_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_train_value_float.svg')} alt="block_dashboard_controller_train_value_float.svg" />
+
+*manipulateur de traction [commande] [traction / cran de traction / inverseur]* :
+
+- **traction** : de −100 à 100, le cran en pourcentage avec le signe du sens de marche ;
+- **cran de traction** : de 0 à 8 ;
+- **inverseur** : 1 = marche avant, 0 = neutre, −1 = marche arrière.
+- Type : bloc de valeur
+
+#### `État du manipulateur de traction (booléen)` (Débutant) {#block_dashboard_controller_train_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_train_value_boolean.svg')} alt="block_dashboard_controller_train_value_boolean.svg" />
+
+*manipulateur de traction [commande] [en marche avant / en marche arrière / au point mort / au cran 0] ?*
+
+- Type : bloc de valeur, `true` / `false`

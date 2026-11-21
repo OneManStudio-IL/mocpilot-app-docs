@@ -5,87 +5,145 @@ title: Ereignisse
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Ereignisse
+# Ereignisse {#events}
 
-Die Kategorie **Ereignisse** enthält Blöcke, die Skripte starten, wenn eine Bedingung eintritt.
+Die Kategorie **Ereignisse** enthält die Blöcke, die Skripte starten, wenn etwas passiert, sowie die Blöcke, die Nachrichten zwischen Skripten senden. Mit **Nachricht hinzufügen** und **Nachricht löschen** oben in der Kategorie verwalten Sie die Nachrichten.
 
-## Grundlegende Ereignisse
+## Grundlegende Ereignisse {#core-events}
 
-### `Wenn Programm startet` (Anfänger) {#block_event_when_program_started}
+### `wenn das Programm startet` (Anfänger) {#block_event_when_program_started}
+
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
-Startet dieses Skript einmal beim Start des Profilprogramms.
 
-### `Wenn` (Fortgeschritten) {#block_event_when}
+Führt sein Skript einmal aus, wenn das Programm startet.
+
+- Typische Verwendung: Startwerte von Variablen setzen, Motoren in ihren Ausgangszustand bringen, eine „Bereit“-Meldung anzeigen.
+
+### `wenn …` (Fortgeschritten) {#block_event_when}
+
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
-Wird ausgeführt, wenn die ausgewählte Bedingung wahr wird.
 
-### `Wenn Timer größer als` (Fortgeschritten) {#block_event_when_timer_greater_than}
+Führt sein Skript aus, wenn die Bedingung im Eingabefeld von falsch zu wahr wechselt. Während das Skript läuft, wartet der Block; er löst erst wieder aus, nachdem die Bedingung falsch und dann erneut wahr geworden ist.
+
+- Typische Verwendung: auf einen Zustand reagieren, zum Beispiel `wenn Timer > 5 und Schalter ist an`.
+
+### `wenn der Timer > …` (Fortgeschritten) {#block_event_when_timer_greater_than}
+
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
-Wird ausgeführt, wenn der Timerwert einen Schwellwert überschreitet.
 
-### `Wenn Nachricht empfangen` (Guru) {#block_event_when_message_recieved}
+Führt sein Skript aus, wenn der Programm-Timer den Wert (in Sekunden) überschreitet.
+
+- Typische Verwendung: verzögerte Aktionen, zeitgesteuerte Phasen. Setzen Sie den Timer mit **Timer zurücksetzen** (Sensoren) zurück.
+
+### `wenn ich erhalte …` (Guru) {#block_event_when_message_recieved}
+
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
-Startet ein Skript, wenn eine passende Broadcast-Nachricht empfangen wird.
 
-### `Sende` (Guru) {#block_event_broadcast}
+Führt sein Skript aus, wenn die ausgewählte Nachricht gesendet wird.
+
+- Typische Verwendung: mehrere Skripte aufeinander abstimmen.
+
+### `übermitteln …` (Guru) {#block_event_broadcast}
+
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
-Sendet eine Nachricht an alle Skripte, die auf diese Nachricht hören.
 
-### `Sende und warte` (Guru) {#block_event_broadcast_and_wait}
+Sendet eine Nachricht an jedes Skript, das mit **wenn ich erhalte** für diese Nachricht beginnt, und macht sofort weiter.
+
+- Typische Verwendung: anderen Skripten den Start signalisieren, ohne auf sie zu warten.
+
+### `übermitteln … und warten` (Guru) {#block_event_broadcast_and_wait}
+
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
-Sendet eine Nachricht und pausiert dieses Skript, bis alle Empfänger fertig sind.
 
-## Hub-Ereignisse
+Sendet eine Nachricht und hält dieses Skript an, bis alle Skripte, die sie erhalten haben, fertig sind.
 
-### `Hub-Taste gedrückt` (Anfänger) {#block_hubs_all_event_button_pressed}
+- Typische Verwendung: schrittweise Abläufe, bei denen die Reihenfolge wichtig ist.
+
+## Hub-Ereignisse {#hub-events}
+
+Diese Blöcke erscheinen, wenn ein Hub im Profil sie unterstützt. Für Mould-King-Hubs gibt es sie nicht.
+
+### `wenn … … Taste …` (Anfänger) {#block_hubs_all_event_button_pressed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
-Wird bei Statusänderung der Haupttaste am Hub ausgelöst.
 
-- Statusoptionen: `gedrückt`, `losgelassen`, `geändert`
+Wird ausgeführt, wenn eine Taste am Hub gedrückt oder losgelassen wird.
 
-### `Hub-Verbindung geändert` (Anfänger) {#block_hubs_all_event_connection_changed}
+- Zustandsoptionen: `gedrückt`, `losgelassen`, `geändert`
+- Hubs: LEGO Powered Up-Hubs, WeDo 2.0 und Robot Inventor. Die Liste der Tasten hängt vom Hub ab.
+
+### `wenn … ist verbunden / getrennt` (Anfänger) {#block_hubs_all_event_connection_changed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
-Wird ausgelöst, wenn sich der Verbindungsstatus des Hubs ändert.
 
-### `Hub-Batterie geändert` (Anfänger) {#block_hubs_all_event_battery_changed}
+Wird ausgeführt, wenn sich der Hub verbindet oder die Verbindung trennt.
+
+- Typische Verwendung: das Modell bei Verbindungsverlust sicher anhalten und seinen Zustand wiederherstellen, wenn die Verbindung zurückkommt.
+
+### `wenn … % Batterie geändert` (Anfänger) {#block_hubs_all_event_battery_changed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
-Wird ausgelöst, wenn sich der gemeldete Batteriestand des Hubs ändert.
 
-### `Hub-Beschleunigung geändert` (Guru) {#block_hubs_all_event_accelerometer_changed}
+Wird ausgeführt, wenn sich der vom Hub gemeldete Akkustand ändert.
+
+- Hubs: solche, die ihren Akkustand melden.
+- Typische Verwendung: eine Warnung bei schwachem Akku, Umschalten in einen Stromsparmodus.
+
+### `wenn … Beschleunigungsdaten wurden geändert` (Guru) {#block_hubs_all_event_accelerometer_changed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
-Wird bei Änderung der Beschleunigungswerte ausgelöst.
 
-### `Hub-Neigung geändert` (Anfänger) {#block_hubs_all_event_tilt_changed}
+Wird ausgeführt, wenn sich die Werte des Beschleunigungssensors des Hubs ändern.
+
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `wenn … Neigung … Winkel wurde geändert` (Anfänger) {#block_hubs_all_event_tilt_changed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
-Wird bei Änderung des Neigungswerts ausgelöst.
 
-- Winkeloptionen: `beliebig`, `pitch`, `roll`, `yaw`
+Wird ausgeführt, wenn sich der Neigungswinkel des Hubs ändert.
 
-### `Hub-Orientierung geändert` (Anfänger) {#block_hubs_all_event_tilt_orientation_changed}
+- Winkeloptionen: `irgendein`, `Neigung`, `Roll`, `Gieren`
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
+
+### `wenn … Ausrichtung wurde geändert` (Anfänger) {#block_hubs_all_event_tilt_orientation_changed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
-Wird bei Orientierungsänderung ausgelöst.
 
-## Port-Sensor-Ereignisse
+Wird ausgeführt, wenn sich die Ausrichtung des Hubs ändert, also wenn eine andere Seite des Hubs nach oben zeigt.
 
-### `Technic Farbsensor-Ereignis` (Anfänger) {#block_hubs_all_event_port_technic_sensor_color}
+- Hubs: dieselben wie beim Neigungsereignis.
+
+## Sensorereignisse {#sensor-events}
+
+Diese Ereignisse lesen einen Sensor, der an einem Hub-Port angeschlossen ist. Hubs: City Hub, Technic Hub, BOOST Move Hub und der Hub von MINDSTORMS Robot Inventor (nicht SBrick, BuWizz, WeDo 2.0 oder Mould King).
+
+### Technic-Sensor: `wenn die Farbe ist …` (Anfänger) {#block_hubs_all_event_port_technic_sensor_color}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
-Wird ausgelöst, wenn der Technic-Farbsensor die gewählte Farbe liefert.
 
+Wird ausgeführt, wenn der Technic-Farbsensor die ausgewählte Farbe erkennt.
 
-### `Technic Distanzsensor-Ereignis` (Anfänger) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic-Sensor: `wenn … näher als / weiter als / genau bei …` (Anfänger) {#block_hubs_all_event_port_technic_sensor_distance}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
-Wird ausgelöst, wenn Distanzwerte des Technic-Sensors die Bedingung erfüllen.
+
+Wird ausgeführt, wenn der vom Technic-Abstandssensor gemessene Abstand die Bedingung erfüllt.
 
 - Vergleichsoptionen: `näher als`, `weiter als`, `genau bei`
-- Einheitenoptionen: `mm`, `cm`, `zoll`, `prozent`
+- Einheiten: `mm`, `cm`, `Zoll`, `%`
 
-### `BOOST Distanzsensor-Ereignis` (Anfänger) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST-Sensor: `wenn … näher als / weiter als / genau bei …` (Anfänger) {#block_hubs_all_event_port_boost_sensor_when_distance}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
-Wird ausgelöst, wenn der BOOST-Distanzsensor den gewählten Schwellwert erreicht.
+
+Wird ausgeführt, wenn der vom BOOST-Farb- und Abstandssensor gemessene Abstand die Bedingung erfüllt.
 
 - Vergleichsoptionen: `näher als`, `weiter als`, `genau bei`
-- Einheitenoptionen: `prozent`, `cm`, `zoll`
+- Einheiten: `%`, `cm`, `Zoll`
 
-### `BOOST Farbsensor-Ereignis` (Anfänger) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST-Sensor: `wenn die Farbe ist …` (Anfänger) {#block_hubs_all_event_port_boost_sensor_color}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
-Wird ausgelöst, wenn der BOOST-Sensor die gewählte Farbe erkennt.
+
+Wird ausgeführt, wenn der BOOST-Farb- und Abstandssensor die ausgewählte Farbe erkennt.

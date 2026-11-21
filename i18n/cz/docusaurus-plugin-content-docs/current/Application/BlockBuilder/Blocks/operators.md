@@ -1,128 +1,162 @@
 ---
 id: Operators
-title: Operátory
+title: Operátor
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operátory
+# Operátor {#operators}
 
-Operátory jsou reportovací a booleovské bloky používané pro výpočty, porovnání, logiku a práci s textem.
+Operátory jsou hodnotové a booleovské bloky pro matematiku, porovnávání, logiku a text.
 
-## Aritmetické operátory
+## Matematika {#math}
 
-### `Sčítání` (Začátečník) {#block_operator_plus}
+### `… + …` (Začátečník) {#block_operator_plus}
+
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
-Vrací součet dvou hodnot.
 
-### `Odčítání` (Začátečník) {#block_operator_minus}
+Vrací součet dvou čísel.
+
+### `… − …` (Začátečník) {#block_operator_minus}
+
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
-Vrací výsledek odčítání dvou hodnot.
 
-### `Násobení` (Začátečník) {#block_operator_multiply}
+Odečte druhé číslo od prvního.
+
+### `… × …` (Začátečník) {#block_operator_multiply}
+
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
-Vrací součin dvou hodnot.
 
-### `Dělení` (Začátečník) {#block_operator_divide}
+Vrací součin dvou čísel.
+
+### `… ÷ …` (Začátečník) {#block_operator_divide}
+
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
-Vrací výsledek dělení dvou hodnot.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+Vydělí první číslo druhým.
+
+### `… modulo …` (Guru) {#block_operator_modulus}
+
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
-Vrací zbytek po dělení.
 
-### `Zaokrouhlit` (Guru) {#block_operator_round}
+Vrací zbytek po dělení prvního čísla druhým.
+
+### `zaokrouhlit …` (Guru) {#block_operator_round}
+
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
-Zaokrouhlí na nejbližší celé číslo (např. `2.6 -> 3`).
 
-### `Math single` (Guru) {#block_operator_math_single}
+Zaokrouhlí číslo na nejbližší celé číslo (například z `2.6` se stane `3`).
+
+### `… z …` (Guru) {#block_operator_math_single}
+
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
-Použije matematickou funkci s jedním argumentem.
 
-Dostupné funkce:
+Použije funkci na jedno číslo. Úhly jsou ve stupních.
 
-- `absolutní hodnota`: absolutní hodnota čísla
-- `celé menší`: zaokrouhlení dolů na nejbližší celé číslo
-- `celé větší`: zaokrouhlení nahoru na nejbližší celé číslo
+- `absolutní hodnota`: absolutní hodnota
+- `celé menší`: zaokrouhlení dolů na celé číslo
+- `celé větší`: zaokrouhlení nahoru na celé číslo
 - `odmocnina`: druhá odmocnina
-- `sin`: sinus (podle úhlu)
-- `cos`: kosinus (podle úhlu)
-- `tan`: tangens (podle úhlu)
-- `asin`: arkus sinus
-- `acos`: arkus kosinus
-- `atan`: arkus tangens
-- `ln`: přirozený logaritmus (základ `e`)
-- `log`: logaritmus o základu `10`
-- `e^`: umocní `e` na hodnotu vstupu
-- `10^`: umocní `10` na hodnotu vstupu
+- `sin`, `cos`, `tan`: sinus, kosinus a tangens úhlu
+- `asin`, `acos`, `atan`: inverzní funkce; vracejí úhel
+- `ln`: přirozený logaritmus (o základu `e`)
+- `log`: dekadický logaritmus
+- `e^`: `e` umocněné na dané číslo
+- `10^`: `10` umocněné na dané číslo
 
-### `Math pair` (Guru) {#block_operator_math_pair}
+### `… z … a …` (Guru) {#block_operator_math_pair}
+
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
-Použije matematickou funkci se dvěma argumenty.
 
-Dostupné funkce:
+Použije funkci na dvě čísla.
 
-- `min`: menší ze dvou hodnot
-- `max`: větší ze dvou hodnot
-- `mocnina`: první hodnota umocněná na druhou
-- `atan2`: úhel z dvojice X/Y
-- `hypot`: délka přepony ze dvou složek
-- `copysign`: první hodnota se znaménkem druhé hodnoty
+- `min`: menší z obou
+- `max`: větší z obou
+- `mocnina`: první číslo umocněné na druhé
+- `atan2`: úhel bodu určeného oběma čísly
+- `hypot`: délka přepony s těmito dvěma odvěsnami
+- `copysign`: první číslo se znaménkem druhého
 
-### `Náhodné číslo` (Guru) {#block_operator_pick_random}
+### `vybrat náhodně … k …` (Guru) {#block_operator_pick_random}
+
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
-Vrací náhodné číslo ve zvoleném rozsahu.
 
-## Porovnávací operátory
+Vrací náhodné číslo mezi oběma hodnotami.
 
-### `Rovná se` (Začátečník) {#block_operator_equal}
+## Porovnávání {#comparison}
+
+### `… = …` (Začátečník) {#block_operator_equal}
+
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
-Vrací `true`, když jsou dvě hodnoty stejné.
 
-### `Nerovná se` (Pokročilý) {#block_operator_not_equal}
+Vrací `true`, když se obě hodnoty rovnají.
+
+### `… ≠ …` (Pokročilý) {#block_operator_not_equal}
+
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
-Vrací `true`, když dvě hodnoty nejsou stejné.
 
-### `Větší než` (Začátečník) {#block_operator_greater_than}
+Vrací `true`, když se obě hodnoty liší.
+
+### `… > …` (Začátečník) {#block_operator_greater_than}
+
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
+
 Vrací `true`, když je levá hodnota větší než pravá.
 
-### `Menší než` (Začátečník) {#block_operator_less_than}
+### `… < …` (Začátečník) {#block_operator_less_than}
+
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
+
 Vrací `true`, když je levá hodnota menší než pravá.
 
-### `Je mezi` (Pokročilý) {#block_operator_is_in_between}
+### `je … mezi … a …` (Pokročilý) {#block_operator_is_in_between}
+
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
-Vrací `true`, když je hodnota uvnitř zadaných mezí.
 
-## Booleovská logika
+Vrací `true`, když číslo leží mezi oběma mezemi.
 
-### `A` (Pokročilý) {#block_operator_and}
+## Logika {#logic}
+
+### `… a …` (Pokročilý) {#block_operator_and}
+
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
-Vrací `true` pouze tehdy, když jsou obě podmínky `true`.
 
-### `Nebo` (Pokročilý) {#block_operator_or}
+Vrací `true`, jen když jsou obě podmínky pravdivé.
+
+### `… nebo …` (Pokročilý) {#block_operator_or}
+
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
-Vrací `true`, když je alespoň jedna podmínka `true`.
 
-### `Ne` (Pokročilý) {#block_operator_not}
+Vrací `true`, když je pravdivá alespoň jedna z podmínek.
+
+### `ne …` (Pokročilý) {#block_operator_not}
+
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
-Neguje booleovskou hodnotu.
 
-## Textové operátory
+Změní `true` na `false` a `false` na `true`.
 
-### `Spojit` (Pokročilý) {#block_operator_join}
+## Text {#text}
+
+### `spojit … …` (Pokročilý) {#block_operator_join}
+
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
-Spojí dvě textové hodnoty.
 
-### `Písmeno na pozici` (Guru) {#block_operator_letter_at}
+Spojí dva kusy textu do jednoho.
+
+### `písmeno … z …` (Guru) {#block_operator_letter_at}
+
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
-Vrátí znak na vybrané pozici v textu.
 
-### `Délka řetězce` (Pokročilý) {#block_operator_size_of_string}
+Vrací písmeno na zadané pozici v textu. První písmeno má číslo 1.
+
+### `délka …` (Pokročilý) {#block_operator_size_of_string}
+
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
-Vrací délku řetězce.
 
-### `Řetězec obsahuje` (Guru) {#block_operator_string_contains}
+Vrací počet znaků v textu.
+
+### `… obsahuje …` (Guru) {#block_operator_string_contains}
+
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
-Vrací `true`, pokud text obsahuje zadaný podřetězec.
+
+Vrací `true`, když první text obsahuje druhý.

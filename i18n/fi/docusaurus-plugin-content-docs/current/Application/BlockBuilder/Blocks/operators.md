@@ -5,166 +5,158 @@ title: Operaattorit
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operaattorit
+# Operaattorit {#operators}
 
-Operaattorit ovat Reporter- ja Boolean-lohkoja, joita käytetään laskentaan, vertailuihin, logiikkaan ja tekstin käsittelyyn.
+Operaattorit ovat raportointi- ja totuusarvolohkoja laskutoimituksiin, vertailuihin, logiikkaan ja tekstiin.
 
-## Aritmeettiset operaattorit
+## Matematiikka {#math}
 
-### `Yhteenlasku` (Aloittelija) {#block_operator_plus}
+### `… + …` (Aloittelija) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Palauttaa kahden arvon summan.
+Palauttaa kahden luvun summan.
 
-### `Vähennys` (Aloittelija) {#block_operator_minus}
+### `… − …` (Aloittelija) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Palauttaa kahden arvon erotuksen.
+Vähentää toisen luvun ensimmäisestä.
 
-### `Kertolasku` (Aloittelija) {#block_operator_multiply}
+### `… × …` (Aloittelija) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Palauttaa kahden arvon tulon.
+Palauttaa kahden luvun tulon.
 
-### `Jakolasku` (Aloittelija) {#block_operator_divide}
+### `… ÷ …` (Aloittelija) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Palauttaa kahden arvon jakolaskun tuloksen.
+Jakaa ensimmäisen luvun toisella.
 
-### `Jakojäännös` (Guru) {#block_operator_modulus}
+### `… modulolla …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Palauttaa jakolaskun jakojäännöksen.
+Palauttaa jakojäännöksen, kun ensimmäinen luku jaetaan toisella.
 
-### `Pyöristä` (Guru) {#block_operator_round}
+### `pyöristää …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Pyöristää lähimpään kokonaislukuun (esimerkiksi `2.6 -> 3`).
+Pyöristää luvun lähimpään kokonaislukuun (esimerkiksi `2.6`:sta tulee `3`).
 
-### `Matematiikka (yksi arvo)` (Guru) {#block_operator_math_single}
+### `… luvusta …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Suorittaa yhden argumentin matemaattisen funktion.
+Soveltaa funktiota yhteen lukuun. Kulmat ovat asteina.
 
-Saatavilla olevat funktiot:
+- `absoluuttiarvo`: itseisarvo
+- `kokonaisluku pienempi`: pyöristys alaspäin kokonaislukuun
+- `kokonaisluku suurempi`: pyöristys ylöspäin kokonaislukuun
+- `neliöjuuri`: neliöjuuri
+- `sin`, `cos`, `tan`: kulman sini, kosini ja tangentti
+- `asin`, `acos`, `atan`: käänteisfunktiot; ne palauttavat kulman
+- `ln`: luonnollinen logaritmi (kantaluku `e`)
+- `log`: 10-kantainen logaritmi
+- `eˆ`: `e` korotettuna luvun osoittamaan potenssiin
+- `10ˆ`: `10` korotettuna luvun osoittamaan potenssiin
 
-- `abs`: luvun itseisarvo
-- `floor`: pyöristää alaspäin
-- `ceiling`: pyöristää ylöspäin
-- `sqrt`: neliöjuuri
-- `sin`: sini
-- `cos`: kosini
-- `tan`: tangentti
-- `asin`: arkussini
-- `acos`: arkuskosini
-- `atan`: arkustangentti
-- `ln`: luonnollinen logaritmi
-- `log`: kymmenkantainen logaritmi
-- `e^`: e potenssiin
-- `10^`: 10 potenssiin
-
-### `Matematiikka (kaksi arvoa)` (Guru) {#block_operator_math_pair}
+### `… luvuista … ja …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Suorittaa kahden argumentin matemaattisen funktion.
+Soveltaa funktiota kahteen lukuun.
 
-Saatavilla olevat funktiot:
+- `min`: pienempi kahdesta
+- `max`: suurempi kahdesta
+- `potenssi`: ensimmäinen luku korotettuna toisen osoittamaan potenssiin
+- `atan2`: kahden luvun määrittämän pisteen kulma
+- `hypot`: hypotenuusan pituus, kun kateetit ovat nämä kaksi lukua
+- `copysign`: ensimmäinen luku toisen luvun etumerkillä
 
-- `min`: pienempi arvo
-- `max`: suurempi arvo
-- `pow`: potenssi
-- `atan2`: kulma X/Y-arvoista
-- `hypot`: hypotenuusa
-- `copysign`: arvo toisen etumerkillä
-
-### `Satunnaisluku` (Guru) {#block_operator_pick_random}
+### `valitse satunnainen … – …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Palauttaa satunnaisluvun valitulta alueelta.
+Palauttaa satunnaisen luvun kahden arvon väliltä.
 
-## Vertailuoperaattorit
+## Vertailu {#comparison}
 
-### `Yhtäsuuri` (Aloittelija) {#block_operator_equal}
+### `… = …` (Aloittelija) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Palauttaa `true`, jos arvot ovat yhtä suuret.
+Palauttaa arvon `true`, kun arvot ovat yhtä suuret.
 
-### `Erisuuri` (Edistynyt) {#block_operator_not_equal}
+### `… ≠ …` (Edistynyt) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Palauttaa `true`, jos arvot eivät ole yhtä suuret.
+Palauttaa arvon `true`, kun arvot eroavat toisistaan.
 
-### `Suurempi kuin` (Aloittelija) {#block_operator_greater_than}
+### `… > …` (Aloittelija) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Palauttaa `true`, jos vasen arvo on suurempi.
+Palauttaa arvon `true`, kun vasen arvo on suurempi kuin oikea.
 
-### `Pienempi kuin` (Aloittelija) {#block_operator_less_than}
+### `… < …` (Aloittelija) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Palauttaa `true`, jos vasen arvo on pienempi.
+Palauttaa arvon `true`, kun vasen arvo on pienempi kuin oikea.
 
-### `On välillä` (Edistynyt) {#block_operator_is_in_between}
+### `on … välissä … ja …` (Edistynyt) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Palauttaa `true`, jos arvo on annetulla välillä.
+Palauttaa arvon `true`, kun luku on kahden rajan välissä.
 
-## Boolean-logiikkaoperaattorit
+## Logiikka {#logic}
 
-### `Ja` (Edistynyt) {#block_operator_and}
+### `… ja …` (Edistynyt) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Palauttaa `true`, jos molemmat ehdot ovat `true`.
+Palauttaa arvon `true` vain, kun molemmat ehdot ovat tosia.
 
-### `Tai` (Edistynyt) {#block_operator_or}
+### `… tai …` (Edistynyt) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Palauttaa `true`, jos vähintään yksi ehto on `true`.
+Palauttaa arvon `true`, kun vähintään yksi ehdoista on tosi.
 
-### `Ei` (Edistynyt) {#block_operator_not}
+### `ei …` (Edistynyt) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Kääntää boolean-arvon.
+Muuttaa arvon `true` arvoksi `false` ja arvon `false` arvoksi `true`.
 
-## Tekstioperaattorit
+## Teksti {#text}
 
-### `Yhdistä` (Edistynyt) {#block_operator_join}
+### `yhdistää … …` (Edistynyt) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Yhdistää kaksi tekstiä.
+Yhdistää kaksi tekstinpätkää yhdeksi.
 
-### `Kirjain kohdassa` (Guru) {#block_operator_letter_at}
+### `kirjain … tekstistä …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Palauttaa merkin valitusta kohdasta.
+Palauttaa tekstin annetussa kohdassa olevan kirjaimen. Ensimmäinen kirjain on numero 1.
 
-### `Tekstin pituus` (Edistynyt) {#block_operator_size_of_string}
+### `pituus …` (Edistynyt) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Palauttaa merkkijonon pituuden.
+Palauttaa tekstin merkkien määrän.
 
-### `Teksti sisältää` (Guru) {#block_operator_string_contains}
+### `… sisältää …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Palauttaa `true`, jos teksti sisältää annetun osan.
+Palauttaa arvon `true`, kun ensimmäinen teksti sisältää toisen.

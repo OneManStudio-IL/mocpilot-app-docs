@@ -5,37 +5,35 @@ title: Proměnné
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Proměnné
+# Proměnné {#variables}
 
-Proměnné ukládají hodnoty, které lze číst a měnit napříč blokovými sekvencemi a skripty.
+Proměnné uchovávají hodnoty, které může číst a měnit každý skript v programu. Vytváříte, přejmenováváte a mažete je tlačítky **Vytvořit proměnnou**, **Přejmenovat proměnnou** a **Smazat proměnnou** v horní části kategorie. Níže uvedené bloky se objeví, jakmile má program alespoň jednu proměnnou.
 
-## Příkazové bloky proměnných
+## Změna proměnné {#changing-a-variable}
 
-### `Nastavit proměnnou na` (Začátečník) {#block_variables_set_to}
+### `nastavit … k …` (Začátečník) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Nastaví vybranou proměnnou na zadanou hodnotu.
+Nastaví vybranou proměnnou na hodnotu.
 
-- Typ: příkazový blok
-- Typické použití: inicializace stavu, přepsání předchozí hodnoty
+- Typické použití: nastavit počáteční hodnotu, nahradit předchozí hodnotu.
 
-### `Změnit proměnnou o` (Pokročilý) {#block_variables_change_by}
+### `změnit … podle …` (Pokročilý) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Přičte zadanou hodnotu k vybrané proměnné.
+Přičte k vybrané proměnné číslo. Chcete-li odečítat, použijte záporné číslo.
 
-- Typ: příkazový blok
-- Typické použití: počítadla, skóre, kumulovaná vzdálenost/čas
+- Typické použití: počítadla, skóre, sčítání vzdálenosti nebo času.
 
-## Reportér hodnoty proměnné
+## Čtení proměnné {#reading-a-variable}
 
-### `Hodnota proměnné` (Začátečník) {#block_variables_value}
+### Proměnná (Začátečník) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Vrací aktuální hodnotu vybrané proměnné.
+Každá proměnná má vlastní hodnotový blok se svým názvem. Vrací aktuální hodnotu proměnné.
 
-- Typ: reportovací blok
-- Typické použití: použití hodnoty proměnné v operátorech, podmínkách a vstupech příkazů
+- Typické použití: vložit hodnotu do operátorů, podmínek a vstupů jiných bloků.
+- [Monitor](/docs/Application/BlockBuilder/Editor#monitor) za běhu programu ukazuje hodnoty všech proměnných.

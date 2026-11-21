@@ -1,108 +1,106 @@
 ---
 id: TechnicMoveHubConfigurations
-title: Technic Move Hub-configuraties
+title: Configuraties van de Technic Move Hub
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Technic Move Hub-configuraties
+# Configuraties van de Technic Move Hub {#technic-move-hub-configurations}
 
-## Overzicht
+## Overzicht {#overview}
 
-Technic Move Hub introduceerde een unieke functie binnen de LEGO Powered Up-hubfamilie: de hub kan zijn gedrag aanpassen op basis van de configuratie die op dat moment is toegepast.
+Anders dan andere LEGO® Powered Up-hubs gedraagt de Technic Move Hub zich verschillend, afhankelijk van de configuratie die erin geladen is.
 
-Met MOCPilot kun je de configuratie van Technic Move Hub wijzigen, zodat het gedrag van de hub overeenkomt met de officiële LEGO-set die je wilt bedienen.
+MOCPilot kan deze configuratie wijzigen, zodat de hub past bij de officiële LEGO-set die je wilt besturen.
 
-## Ondersteunde configuraties
+## Ondersteunde configuraties {#supported-configurations}
 
-Op dit moment zijn deze Technic Move Hub-configuraties bekend:
+MOCPilot kent deze configuraties:
 
 - **Porsche GT4 e-Performance**
 - **Lamborghini Revuelto**
 - **Batmobile™ Tumbler**
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Configuratieopties van Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Configuratieopties van de Technic Move Hub in het blok voor de hubconfiguratie" />
 
-## Configuratie wijzigen vanuit Mijn Bluetooth-hubs
+## Configuratie wijzigen via Mijn Bluetooth-hubs {#change-configuration-from-my-bluetooth-hubs}
 
-Je kunt de configuratie wijzigen vanaf de pagina **Mijn Bluetooth-hubs**:
+Zo wijzig je de configuratie op de pagina **Mijn Bluetooth-hubs**:
 
 1. Open **Mijn Bluetooth-hubs**.
 2. Zoek de Technic Move Hub.
-3. Open het contextmenu van de hub.
-4. Selecteer **Configuratie selecteren**.
-5. Kies de vereiste configuratie.
-6. Bevestig het dialoogvenster voor herconfiguratie.
+3. Open het hubmenu.
+4. Kies **Configuratie selecteren**.
+5. Kies de configuratie.
+6. Bevestig in het venster.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Contextmenu van Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Contextmenu van de Technic Move Hub met de actie Configuratie selecteren" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Configuratiesubmenu van Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Configuratiesubmenu van de Technic Move Hub" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Bevestigingsvenster voor herconfiguratie van Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Bevestigingsvenster voor het herconfigureren van de Technic Move Hub" />
 
 :::warning Belangrijk
-Bij het wijzigen van de hubconfiguratie wordt een subprogramma naar de hub geflasht; dit lijkt op een firmware-update.
+Bij het wijzigen van de configuratie wordt er een programma in de hub geschreven, net als bij een firmware-update.
 
-Houd de hub tijdens het hele proces ingeschakeld. Houd je telefoon, tablet of computer ingeschakeld en dicht bij de hub, zodat de Bluetooth-verbinding stabiel blijft. Sluit MOCPilot niet, schakel Bluetooth niet uit en zet de hub niet uit terwijl de configuratie wordt gewijzigd.
+Laat de hub tijdens het hele proces aan staan, en houd je telefoon, tablet of computer aan en dicht bij de hub, zodat de Bluetooth-verbinding stabiel blijft. Sluit MOCPilot niet, zet Bluetooth niet uit en schakel de hub niet uit terwijl de configuratie verandert.
 
-Het onderbreken van de configuratiewijziging kan de firmware van de hub beschadigen. Als dat gebeurt, kan firmwareherstel nodig zijn voordat de hub weer kan worden gebruikt. Volg indien nodig de gids voor [hubfirmware herstellen](/docs/Application/Hubs/RecoveryHubFirmware/).
+Een onderbroken wijziging kan de firmware van de hub beschadigen. De hub heeft dan mogelijk [firmwareherstel](/docs/Application/Hubs/RecoveryHubFirmware/) nodig voordat je hem weer kunt gebruiken.
 :::
 
-Tijdens de herconfiguratie reageert de hub niet op normale commando’s. De LED knippert met een stapsgewijze kleurindicatie totdat het proces klaar is. Nadat de nieuwe configuratie is toegepast, wordt de hub opnieuw geïnitialiseerd.
+Terwijl de configuratie verandert, negeert de hub gewone opdrachten en wisselt de led van kleur. Zodra de nieuwe configuratie geladen is, start de hub opnieuw op.
 
-## Configuratieblokken
+## Configuratieblokken {#configuration-blocks}
 
-MOCPilot bevat ook blokken om de configuratie van Technic Move Hub tijdens een programma te lezen en te wijzigen.
+Logicablokken kunnen de configuratie lezen en wijzigen terwijl een programma draait.
 
-### Hubconfiguratie instellen
+### Hubconfiguratie instellen {#set-hub-configuration}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="Blok Hubconfiguratie instellen" />
 
-Het blok **Hubconfiguratie instellen** wijzigt de geselecteerde hub naar een van de ondersteunde configuratieprofielen.
+Het blok **stel … configuratie naar …** laadt een van de ondersteunde configuraties in de geselecteerde hub.
 
-- Hubselector: kiest de hub die opnieuw wordt geconfigureerd.
-- Configuratieselector: kiest de doelconfiguratie.
-- Beschikbare configuraties voor Technic Move Hub: **Porsche GT4 e-Performance**, **Lamborghini Revuelto** en **Batmobile™ Tumbler**.
+- Hubkeuze: kiest de hub die je wilt herconfigureren.
+- Configuratiekeuze: kiest de gewenste configuratie.
+- Beschikbare configuraties voor de Technic Move Hub: **Porsche GT4 e-Performance**, **Lamborghini Revuelto** en **Batmobile™ Tumbler**.
 
 Zie de [documentatie van het blok Hubconfiguratie instellen](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_set_hub_config).
 
-### Hubconfiguratie
+### Hubconfiguratie {#hub-configuration}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Blok Hubconfiguratie" />
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Waardeblok Hubconfiguratie" />
 
-Het blok **Hubconfiguratie** meldt de huidige configuratie van de geselecteerde hub.
+Het blok **krijg … configuratie als …** geeft de huidige configuratie van de geselecteerde hub terug.
 
-- Hubselector: kiest de hub die wordt gelezen.
-- Uitvoerformaat: **tekst** geeft de configuratienaam terug.
-- Uitvoerformaat: **index** geeft de configuratie-index terug, handig voor vergelijkingen in voorwaarden.
+- Hubkeuze: kiest de hub die je wilt uitlezen.
+- Uitvoerformaat: **tekst** geeft de naam van de configuratie terug.
+- Uitvoerformaat: **index** geeft het nummer van de configuratie terug, handig om in voorwaarden te vergelijken.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Uitvoerformaatopties van het blok Hubconfiguratie" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Opties voor het uitvoerformaat van het blok Hubconfiguratie" />
 
 Zie de [documentatie van het blok Hubconfiguratie](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_all_control_hub_config).
 
-### Vermogenspuls
+### Vermogenspuls {#power-pulse}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blok Vermogenspuls" />
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blok krachtpuls van de Technic Move Hub" />
 
-Het blok **Vermogenspuls** stuurt een power-pulse-commando naar de geselecteerde Technic Move Hub. Dit blok werkt alleen wanneer de Technic Move Hub is geconfigureerd als **Batmobile™ Tumbler**.
+Het blok **krachtpuls** stuurt een vermogenspuls naar de geselecteerde Technic Move Hub. Het werkt alleen met de configuratie **Batmobile™ Tumbler**.
 
-Wanneer het wordt uitgevoerd, start de hub de motoren korte tijd met maximaal beschikbare kracht en snelheid, meestal ongeveer 1-2 seconden.
+De hub laat de motoren dan kort, ongeveer 1–2 seconden, op maximaal vermogen en maximale snelheid draaien. In Snelle koppelingen heet dezelfde functie de bewerking [Vermogenspuls](/docs/Application/Links/Blocks/OutputBlocks#op-pulse).
 
-Zie de [documentatie van het blok Vermogenspuls](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
+Zie de [documentatie van het blok krachtpuls](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
 
-## Configuratie wijzigen tijdens programmauitvoering
+## Configuratie wijzigen terwijl het programma draait {#change-configuration-during-program-runtime}
 
-Het is ook mogelijk om de configuratie van Technic Move Hub te wijzigen terwijl een programma draait.
-
-De gebruikelijke aanpak is:
+Een programma kan de configuratie ook wijzigen terwijl het draait. Een gebruikelijke aanpak:
 
 1. Lees de huidige hubconfiguratie.
-2. Vergelijk deze met de configuratie die het profiel vereist.
-3. Als de configuratie anders is, stel dan de vereiste configuratie in.
-4. Lees de configuratie opnieuw na de herconfiguratie.
-5. Ga alleen verder wanneer de hub de verwachte configuratie meldt.
-6. Koppel los of stop het programma als de vereiste configuratie niet is toegepast.
+2. Vergelijk die met de configuratie die het profiel nodig heeft.
+3. Is de configuratie anders, stel dan de vereiste configuratie in.
+4. Lees de configuratie na het herconfigureren opnieuw.
+5. Ga pas verder als de hub de verwachte configuratie meldt.
+6. Verbreek de verbinding of stop het programma als de vereiste configuratie niet is toegepast.
 
-Het vooraf gebouwde profiel dat deze hub gebruikt, kan als referentie voor deze aanpak dienen.
+Het kant-en-klare profiel voor deze hub laat zien hoe dat werkt.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_6.png')} alt="Blokvoorbeeld voor het wijzigen van de Technic Move Hub-configuratie tijdens uitvoering" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_6.png')} alt="Blokvoorbeeld waarin de configuratie van de Technic Move Hub tijdens het draaien wordt gewijzigd" />

@@ -7,140 +7,152 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Contrôle
 
-Les blocs de contrôle gèrent le flux d’exécution : attente, boucles, conditions et arrêt des scripts.
+Les blocs de contrôle déterminent le déroulement d’un script : attentes, boucles, branches et arrêt. Lorsque le profil comporte des hubs, cette catégorie contient aussi des blocs qui connectent les hubs et modifient leurs réglages.
 
-## Blocs d’attente
+## Blocs d’attente {#wait-blocks}
 
-### `Attendre` (Débutant) {#block_control_wait_for}
+### `attendre … secondes` (Débutant) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Met en pause le script courant pendant une durée spécifiée.
+Met le script en pause pendant le nombre de secondes indiqué.
 
-### `Attendre jusqu’à` (Avancé) {#block_control_wait_until}
+### `attendre jusqu'à …` (Avancé) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Met en pause le script courant jusqu’à ce qu’une condition devienne vraie.
+Met le script en pause jusqu’à ce que la condition devienne vraie.
 
-## Blocs de boucle
+## Boucles {#loops}
 
-### `Répéter` (Avancé) {#block_control_repeat_for}
+### `répéter …` (Avancé) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Exécute les blocs imbriqués un nombre fixe de fois.
+Exécute les blocs qu’il contient le nombre de fois indiqué (10 par défaut).
 
-### `Répéter jusqu’à` (Avancé) {#block_control_repeat_until}
+### `répéter tant que …` (Avancé) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Exécute les blocs imbriqués de manière répétée jusqu’à ce qu’une condition devienne vraie.
+Exécute en boucle les blocs qu’il contient jusqu’à ce que la condition devienne vraie.
 
-### `Toujours` (Avancé) {#block_control_repeat_forever}
+### `répéter toujours` (Avancé) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Exécute les blocs imbriqués en continu jusqu’à l’arrêt du programme ou du script.
+Exécute en boucle les blocs qu’il contient jusqu’à l’arrêt du script ou du programme. Rien ne peut être accroché en dessous.
 
-## Blocs conditionnels
+## Branches {#branches}
 
-### `Si` (Débutant) {#block_control_if}
+### `si … alors` (Débutant) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Exécute les blocs imbriqués uniquement si la condition est vraie.
+Exécute les blocs qu’il contient uniquement si la condition est vraie.
 
-### `Si / Sinon` (Avancé) {#block_control_if_else}
+### `si … alors … autre` (Avancé) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Exécute une branche si la condition est vraie, sinon exécute la branche alternative.
+Exécute la première branche si la condition est vraie, et la seconde dans le cas contraire.
 
-### `Faire ceci et cela` (Guru) {#block_control_do_this_and_this}
+### `fais ça … et ça` (Gourou) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Exécute deux piles de blocs en séquence dans une seule opération de contrôle.
+Exécute le premier groupe de blocs, puis le second, et seulement ensuite les blocs placés en dessous.
 
-## Blocs d’arrêt
+## Arrêt {#stopping}
 
-### `Arrêter` (Débutant) {#block_control_stop}
+### `arrêter …` (Débutant) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Arrête l’exécution du script (la portée dépend de l’option choisie).
+Arrête des scripts ; ce qui est arrêté dépend de l’option choisie.
 
-- Options d’arrêt : `tout`, `cette pile`, `et quitter le programme`
+- `tout` : arrête tous les scripts.
+- `cette pile` : arrête uniquement ce script.
+- `et quitter le programme` : arrête le programme.
 
-### `Arrêter les autres piles` (Guru) {#block_control_stop_other_stacks}
+### `arrêter les autres piles` (Gourou) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Arrête toutes les autres piles en cours d’exécution tout en laissant la pile actuelle continuer.
+Arrête tous les autres scripts en cours ; celui-ci continue.
 
-## Blocs utilitaires hub/contrôle
+## Blocs de hub {#hub-blocks}
 
-### `Définir connexion` (Débutant) {#block_hubs_control_set_connect}
+### `connecter / déconnecter …` (Débutant) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Contrôle l’état de connexion du hub depuis la logique de contrôle.
+Connecte ou déconnecte le hub sélectionné du programme.
 
-- Options d’action : `connecter`, `déconnecter`
+- Options : `connecter`, `déconnecter`
+- Hubs : tous.
 
-### `Définir la configuration du hub` (Avancé) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Règle le hub sélectionné sur l’un de ses profils de configuration pris en charge.
-
-- Disponible uniquement pour les hubs qui exposent des options de configuration.
-- Utilisation typique : basculer un hub configurable, comme Technic Move Hub, vers une autre configuration enregistrée avant d’exécuter les blocs suivants.
-
-### `Configuration du hub` (Avancé) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Renvoie la configuration actuelle du hub sélectionné.
-
-- Type : bloc rapporteur
-- Options de format de sortie : `text`, `index`
-- Disponible uniquement pour les hubs qui exposent des options de configuration.
-- Renvoie `NaN` lorsque le hub sélectionné n’est pas connecté ou qu’aucune configuration n’est disponible.
-
-### `Est connecté` (Débutant) {#block_hubs_all_sensors_is_connected}
+### `… connecté` (Débutant) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Retourne si le hub est actuellement connecté.
+Renvoie `true` lorsque le hub sélectionné est connecté.
 
-- Type : bloc reporter booléen
+- Type : bloc booléen
+- Hubs : tous.
 
-### `BuWizz 2 définir mode de puissance` (Débutant) {#block_hubs_buwizz_sensors_set_power_mode}
+### `définir … configuration vers …` (Avancé) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Fait passer le hub dans l’une de ses configurations.
+
+- Hubs : Technic Move Hub (le seul hub doté de configurations à ce jour).
+- Utilisation type : passer le hub dans une autre configuration avant l’exécution des blocs suivants.
+
+### `obtenir … configuration en …` (Avancé) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Renvoie la configuration actuelle du hub.
+
+- Type : bloc rapporteur
+- Sortie : `texte` ou `index`
+- Hubs : Technic Move Hub.
+- Renvoie `NaN` lorsque le hub n’est pas connecté ou n’a pas de configuration.
+
+### `définir … mode d'alimentation sur …` (Débutant) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Définit le mode de puissance du hub BuWizz 2.
+Règle le mode de puissance d’un BuWizz 2.
 
-- Options de mode : `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Modes : `Lente`, `Normal`, `Rapide`, `Ludicrous`
+- Hubs : BuWizz 2.
 
-### `BuWizz 2 obtenir mode de puissance` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `obtenir … mode de puissance comme …` (Gourou) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Retourne le mode de puissance actuellement actif du BuWizz 2.
+Renvoie le mode de puissance actuel d’un BuWizz 2.
 
-- Options de sortie : `texte`, `index`
+- Sortie : `texte` ou `index`
+- Hubs : BuWizz 2.
 
-### `MouldKing définir canal de contrôle` (Avancé) {#block_hubs_mouldking_control_set_control_channel}
+### `définir … canal de contrôle vers …` (Avancé) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Définit le canal de contrôle actif pour le hub/contrôleur MouldKing pris en charge.
+Règle le canal de contrôle d’un hub Mould King.
 
-- Options de canal : `A`, `B`, `C`
+- Canaux : `A`, `B`, `C`
+- Hubs : Mould King 4.0 et 6.0.
 
-### `MouldKing obtenir canal de contrôle` (Avancé) {#block_hubs_mouldking_control_get_control_channel}
+### `obtenir … canal de contrôle comme …` (Avancé) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Retourne le canal de contrôle actif pour le hub/contrôleur MouldKing pris en charge.
+Renvoie le canal de contrôle actuel d’un hub Mould King.
 
-- Options de sortie : `texte`, `index`
+- Sortie : `texte` ou `index`
+- Hubs : Mould King 4.0 et 6.0.

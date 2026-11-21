@@ -7,157 +7,168 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Moteurs
 
-Les blocs moteurs sont utilisés pour démarrer, arrêter, positionner et régler les moteurs connectés aux ports du hub.
+Les blocs de moteurs démarrent, arrêtent et positionnent les moteurs branchés sur les ports des hubs, et règlent leur façon de se déplacer. La catégorie apparaît lorsqu’un hub du profil possède des ports moteur. Dans chaque bloc, vous choisissez le hub et un ou plusieurs ports.
 
-## Blocs de commande principaux des moteurs
+Certains blocs nécessitent un moteur doté d’un capteur de rotation intégré (encodeur), comme les moteurs angulaires Technic, et un hub capable de le contrôler. Ces blocs portent la mention « moteurs à encodeur ». Ils ne sont pas disponibles pour les hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 et Mould King. Le Technic Move Hub dispose de ses propres blocs, présentés à la fin de cette page.
 
-### `Démarrer le moteur` (Débutant) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Démarre le moteur sélectionné.
+## Faire tourner les moteurs {#running-motors}
 
-- Options de direction : sens horaire / sens antihoraire
-
-### `Arrêter le moteur` (Débutant) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Arrête le moteur sélectionné.
-
-### `Exécuter pendant` (Avancé) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Fait fonctionner le moteur sélectionné pendant une durée/un angle/un nombre de rotations défini selon les paramètres du bloc.
-
-- Options de direction : sens horaire / sens antihoraire
-- Options d’unité : `rotations`, `degrés`, `secondes`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
-
-### `Démarrer le moteur à la vitesse` (Débutant) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Démarre le moteur avec une valeur de vitesse explicite.
-
-### `Exécuter pendant à la vitesse` (Avancé) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Fait fonctionner le moteur pendant une durée/quantité cible avec une vitesse explicite.
-
-- Options d’unité : `rotations`, `degrés`, `secondes`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
-
-### `Définir la vitesse du moteur` (Avancé) {#block_hubs_all_motors_port_set_motor_speed}
+### `définir la vitesse à …` (Avancé) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Définit la vitesse utilisée par les blocs d’exécution du moteur associés.
+Règle la vitesse (de −100 à 100 %) qu’utilisent **démarrer le moteur** et **exécuter … pendant** sur ces ports. Ce bloc ne démarre pas le moteur à lui seul.
 
-## Blocs de position et de mouvement
+### `démarrer le moteur …` (Débutant) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Démarre le moteur dans le sens choisi, à la vitesse réglée par **définir la vitesse à**.
 
-### `Aller à la position` (Avancé) {#block_hubs_all_motors_port_go_to_position}
+- Sens : dans le sens des aiguilles d’une montre ou dans le sens inverse
+
+### `démarrer le moteur à … % vitesse` (Débutant) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Démarre le moteur à la vitesse indiquée, de −100 à 100 %. Une vitesse négative le fait tourner dans l’autre sens.
+
+- Utilisation type : piloter depuis un joystick ou un curseur : placez la valeur de la commande dans l’emplacement de la vitesse.
+
+### `arrêter le moteur` (Débutant) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Arrête le moteur.
+
+### `exécuter … pendant …` (Avancé) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Fait tourner le moteur dans le sens choisi pendant un nombre de rotations, de degrés ou de secondes.
+
+- Sens : dans le sens des aiguilles d’une montre ou dans le sens inverse
+- Unités : `rotations`, `degrés`, `secondes`
+- Moteurs à encodeur uniquement.
+
+### `exécuter pendant … à … % vitesse` (Avancé) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Fait tourner le moteur pendant un nombre de rotations, de degrés ou de secondes, à la vitesse indiquée.
+
+- Unités : `rotations`, `degrés`, `secondes`
+- Moteurs à encodeur uniquement.
+
+## Position {#position}
+
+### `aller … à la position …` (Avancé) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Déplace le moteur vers une position absolue cible.
+Amène le moteur à une position absolue (le repère zéro propre au moteur).
 
-- Options de trajectoire : `chemin le plus court`, `sens horaire`, `sens antihoraire`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Trajet : `chemin le plus court`, `dans le sens des aiguilles d'une montre`, `dans le sens inverse des aiguilles d'une montre`
+- Moteurs à encodeur uniquement.
 
-### `Aller à la position relative` (Débutant) {#block_hubs_all_motors_port_go_to_relative_position}
+### `aller à la position relative … à … % vitesse` (Débutant) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Déplace le moteur d’un décalage relatif.
+Amène le moteur à une position, en degrés, comptée à partir du point fixé par **définir la position relative**.
 
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Utilisation type : direction par servo, où la valeur du joystick donne l’angle.
+- Moteurs à encodeur uniquement ; sur BuWizz 3, utilisez le bloc ci-dessous.
 
-### `BuWizz 3 aller à la position relative` (Débutant) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `aller à la position relative …` (BuWizz 3) (Débutant) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-Variante BuWizz 3 du bloc de positionnement relatif.
+La version BuWizz 3 du bloc ci-dessus, sans l’entrée de vitesse.
 
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Hubs : BuWizz 3, avec des moteurs à encodeur.
 
-### `Définir la position relative` (Débutant) {#block_hubs_all_motors_port_set_relative_position}
+### `définir la position relative …` (Débutant) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Définit la référence de position relative du moteur.
+Déclare que la position actuelle du moteur vaut la valeur indiquée. Les positions relatives sont comptées à partir de celle-ci.
 
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Moteurs à encodeur uniquement.
 
-### `Calibrer la crémaillère de direction` (Débutant) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `étalonner la crémaillère … centre … degrés …` (Débutant) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Calibre la position neutre/de référence de la crémaillère de direction.
+Trouve le centre et la course d’une crémaillère de direction.
 
-- Exigence : le moteur connecté au port sélectionné doit prendre en charge le suivi d’angle absolu/relatif (encodeur interne).
-- Exigence mécanique : le mouvement de l’axe de direction doit être physiquement limité à une plage valide (par exemple avec les butées de fin de course de la crémaillère/de l’engrenage).
-- Fonctionnement : le bloc balaie et mesure la plage de rotation disponible de la direction, puis calcule les données de calibration utilisées pour la configuration de la direction.
-- Comportement de sortie : les arguments du bloc écrivent les résultats dans les variables passées au bloc (comportement similaire à un passage par référence). Ces variables sont modifiées par le bloc et doivent être utilisées pour lire les résultats de calibration.
+- Le moteur pousse la crémaillère jusqu’aux deux extrémités, mesure jusqu’où elle peut aller et place le résultat dans les deux variables que vous mettez dans les emplacements : la position du centre et la plage en degrés. La crémaillère s’arrête au milieu, mais sa position relative à cet endroit vaut la valeur du centre et non 0 : ajoutez donc **définir la position relative** 0 juste après ce bloc, puis dirigez avec `plage × joystick / 100`.
+- La direction doit avoir des butées mécaniques franches aux deux extrémités (la fin de la crémaillère ou de l’engrenage).
+- Moteurs à encodeur uniquement.
 
-## Blocs de réglage et de sécurité du moteur
+## Réglages du moteur {#motor-settings}
 
-### `Définir le comportement du moteur à l’arrêt` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `régler le moteur sur … à l'arrêt` (Gourou) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Définit le mode d’arrêt du moteur (par exemple frein/maintien/libre selon les options disponibles).
+Choisit ce que fait le moteur lorsqu’il s’arrête.
 
-- Options du mode d’arrêt : `frein`, `maintenir la position`, `roue libre`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- `frein` : s’arrête rapidement.
+- `maintenir la position` : maintient activement sa position (utile pour la direction).
+- `roue libre` : ralentit librement.
+- Moteurs à encodeur uniquement.
 
-### `Définir la détection de blocage` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `activer la détection de blocage …` (Gourou) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
 Active ou désactive la détection de blocage.
 
-- Remarque : disponible uniquement pour le hub MINDSTORMS Robot Inventor.
+- Hubs : MINDSTORMS Robot Inventor.
 
-### `Définir l’accélération` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+### `définir l'accélération à …` (Gourou) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Définit le profil/taux d’accélération du moteur.
+Choisit la rapidité avec laquelle le moteur prend de la vitesse.
 
-- Options de profil : `par défaut`, `rapide`, `équilibré`, `fluide`, `lent`, `très lent`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Options : `par défaut`, `rapide`, `équilibré`, `doux`, `lent`, `très lent`
+- Moteurs à encodeur uniquement.
 
-### `Définir la décélération` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+### `définir la décélération à …` (Gourou) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Définit le profil/taux de décélération du moteur.
+Choisit la rapidité avec laquelle le moteur ralentit.
 
-- Options de profil : `par défaut`, `rapide`, `équilibré`, `fluide`, `lent`, `très lent`
-- Remarque : cette fonction nécessite un moteur connecté au port sélectionné qui prend en charge le contrôle basé sur l’encodeur.
+- Options : `par défaut`, `rapide`, `équilibré`, `doux`, `lent`, `très lent`
+- Moteurs à encodeur uniquement.
 
-## Blocs reporter du moteur
+## Valeurs du moteur {#motor-values}
 
-### `Position` (Débutant) {#block_hubs_all_motors_port_position}
+### `position` (Débutant) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Retourne la position actuelle du moteur.
+Renvoie la position absolue du moteur.
 
-### `Position relative` (Débutant) {#block_hubs_all_motors_port_relative_position}
+- Moteurs à encodeur uniquement.
+
+### `position relative` (Débutant) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Retourne la valeur actuelle de la position relative.
+Renvoie la position relative du moteur, en degrés.
 
-### `Vitesse` (Débutant) {#block_hubs_all_motors_port_speed}
+- Moteurs à encodeur uniquement.
+
+### `vitesse` (Débutant) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Retourne la vitesse actuelle du moteur.
+Renvoie la vitesse actuelle du moteur.
 
-### `Puissance` (Avancé) {#block_hubs_all_motors_port_power}
+### `puissance` (Avancé) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Retourne la valeur actuelle de puissance du moteur.
+Renvoie la puissance actuelle du moteur.
 
-- Remarque : disponible uniquement pour le hub MINDSTORMS Robot Inventor.
+- Hubs : MINDSTORMS Robot Inventor.
 
-## Blocs moteur Technic Move
+## Technic Move Hub {#technic-move-hub}
 
-### `Démarrer les moteurs à la vitesse` (Débutant) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Le Technic Move Hub pilote ses moteurs intégrés avec ces blocs au lieu des blocs de port ci-dessus.
+
+### `démarrer les moteurs à … % vitesse` (Débutant) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Démarre les moteurs d’entraînement Technic Move à la vitesse sélectionnée.
+Démarre les moteurs de propulsion à la vitesse indiquée.
 
-### `Impulsion de puissance` (Débutant) {#block_hubs_technicmove_motors_power_pulse}
+### `impulsion de puissance` (Débutant) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Envoie une commande d’impulsion de puissance au Technic Move Hub sélectionné.
+Envoie une impulsion de puissance aux moteurs de propulsion.
 
-- Disponible uniquement pour Technic Move Hub.
-- Utilisation typique : renforcer brièvement ou réveiller le système d’entraînement Technic Move avant de continuer avec les blocs suivants.
+- Utilisation type : un bref coup d’accélérateur avant les blocs suivants.
 
-### `Arrêter les moteurs` (Débutant) {#block_hubs_technicmove_motors_stop_motors}
+### `arrêter les moteurs` (Débutant) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Arrête les moteurs d’entraînement Technic Move.
+Arrête les moteurs de propulsion.
 
-### `Frein` (Débutant) {#block_hubs_technicmove_motors_brake}
+### `définir le frein des moteurs …` (Débutant) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Applique le comportement de freinage aux moteurs Technic Move.
+Active ou désactive le frein des moteurs de propulsion.
 
-- Options de frein : `éteint`, `activé`
+- Options : `éteint`, `activé`
 
-### `Définir la crémaillère de direction à` (Débutant) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `définir la crémaillère de direction sur …` (Débutant) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Définit la position/valeur cible de la crémaillère de direction.
+Tourne la direction jusqu’à la position indiquée.
 
-### `Calibrer la crémaillère de direction` (Débutant) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `calibrer crémaillère de direction` (Débutant) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Calibre la crémaillère de direction Technic Move à l’aide de l’algorithme interne du hub et de la détection automatique de la plage de direction.
+Étalonne la direction avec l’algorithme propre au hub, qui trouve automatiquement la plage de braquage.
 
-- Remarque : l’axe du moteur doit être mécaniquement limité (par exemple par un mécanisme de crémaillère de direction).
+- La direction doit avoir des butées mécaniques franches (par exemple les extrémités de la crémaillère).

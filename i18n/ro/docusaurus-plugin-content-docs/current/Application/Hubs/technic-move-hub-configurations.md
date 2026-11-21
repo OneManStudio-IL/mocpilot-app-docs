@@ -1,108 +1,106 @@
 ---
 id: TechnicMoveHubConfigurations
-title: Configurații Technic Move Hub
+title: Configurațiile Technic Move Hub
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Configurații Technic Move Hub
+# Configurațiile Technic Move Hub {#technic-move-hub-configurations}
 
-## Prezentare generală
+## Prezentare generală {#overview}
 
-Technic Move Hub a introdus o funcție unică în familia de huburi LEGO Powered Up: hubul își poate schimba comportamentul în funcție de configurația aplicată în prezent.
+Spre deosebire de alte huburi LEGO® Powered Up, Technic Move Hub se comportă diferit în funcție de configurația încărcată în el.
 
-MOCPilot îți permite să schimbi configurația Technic Move Hub astfel încât comportamentul hubului să corespundă setului LEGO oficial pe care vrei să îl controlezi.
+MOCPilot poate schimba această configurație, astfel încât hubul să corespundă setului LEGO oficial pe care vrei să-l controlezi.
 
-## Configurații acceptate
+## Configurații acceptate {#supported-configurations}
 
-În acest moment, sunt cunoscute aceste configurații Technic Move Hub:
+MOCPilot cunoaște aceste configurații:
 
 - **Porsche GT4 e-Performance**
 - **Lamborghini Revuelto**
 - **Batmobile™ Tumbler**
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Opțiuni de configurare pentru Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_4.png')} alt="Opțiunile de configurație Technic Move Hub în blocul de setare a configurației hubului" />
 
-## Schimbarea configurației din Huburile mele Bluetooth
+## Schimbarea configurației din Huburile mele Bluetooth {#change-configuration-from-my-bluetooth-hubs}
 
-Poți schimba configurația din pagina **Huburile mele Bluetooth**:
+Pentru a schimba configurația pe pagina **Huburile mele Bluetooth**:
 
 1. Deschide **Huburile mele Bluetooth**.
 2. Găsește Technic Move Hub.
-3. Deschide meniul contextual al hubului.
+3. Deschide meniul hubului.
 4. Selectează **Selectează configurația**.
-5. Alege configurația necesară.
-6. Confirmă dialogul de reconfigurare.
+5. Alege configurația.
+6. Confirmă în dialog.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Meniul contextual al Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_0.png')} alt="Meniul contextual al Technic Move Hub cu acțiunea Selectează configurația" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Submeniul de configurare al Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_1.png')} alt="Submeniul de configurații al Technic Move Hub" />
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Dialog de confirmare a reconfigurării Technic Move Hub" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_3.png')} alt="Dialogul de confirmare a reconfigurării Technic Move Hub" />
 
 :::warning Important
-Schimbarea configurației hubului scrie un subprogram în hub și este similară cu un proces de actualizare firmware.
+Schimbarea configurației scrie un program în hub, la fel ca o actualizare de firmware.
 
-Păstrează hubul pornit pe tot parcursul procesului. Ține telefonul, tableta sau computerul pornit și aproape de hub, astfel încât conexiunea Bluetooth să rămână stabilă. Nu închide MOCPilot, nu opri Bluetooth și nu opri hubul în timp ce configurația este schimbată.
+Ține hubul pornit pe toată durata procesului, iar telefonul, tableta sau computerul pornit și aproape de hub, ca legătura Bluetooth să rămână stabilă. Nu închide MOCPilot, nu dezactiva Bluetooth și nu opri hubul cât timp se schimbă configurația.
 
-Întreruperea schimbării configurației poate deteriora firmware-ul hubului. Dacă se întâmplă acest lucru, poate fi necesară recuperarea firmware-ului înainte ca hubul să poată fi folosit din nou. Urmează ghidul de [recuperare a firmware-ului hubului](/docs/Application/Hubs/RecoveryHubFirmware/) dacă este necesară recuperarea.
+O schimbare întreruptă poate deteriora firmware-ul hubului. În acest caz, hubul poate avea nevoie de [recuperarea firmware-ului](/docs/Application/Hubs/RecoveryHubFirmware/) înainte de a-l putea folosi din nou.
 :::
 
-În timpul reconfigurării, hubul nu răspunde la comenzi normale. LED-ul clipește cu o indicație colorată în pași până când procesul se termină. După aplicarea noii configurații, hubul este reinițializat.
+Cât timp se schimbă configurația, hubul ignoră comenzile obișnuite, iar LED-ul său trece prin mai multe culori. Când noua configurație este instalată, hubul se repornește.
 
-## Blocuri de configurare
+## Blocuri de configurație {#configuration-blocks}
 
-MOCPilot include și blocuri pentru citirea și schimbarea configurației Technic Move Hub în timpul unui program.
+Blocurile logice pot citi și schimba configurația în timp ce un program rulează.
 
-### Setează configurația hubului
+### Setarea configurației hubului {#set-hub-configuration}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="Blocul Setează configurația hubului" />
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="Blocul de setare a configurației hubului" />
 
-Blocul **Setează configurația hubului** schimbă hubul selectat la unul dintre profilurile sale de configurare acceptate.
+Blocul **Setează configurația hubului** încarcă în hubul selectat una dintre configurațiile acceptate.
 
-- Selector hub: alege hubul de reconfigurat.
-- Selector configurație: alege configurația țintă.
+- Selectorul de hub: alege hubul de reconfigurat.
+- Selectorul de configurație: alege configurația dorită.
 - Configurații disponibile pentru Technic Move Hub: **Porsche GT4 e-Performance**, **Lamborghini Revuelto** și **Batmobile™ Tumbler**.
 
-Consultă [documentația blocului Setează configurația hubului](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_set_hub_config).
+Consultă [documentația blocului de setare a configurației hubului](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_set_hub_config).
 
-### Configurația hubului
+### Configurația hubului {#hub-configuration}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Blocul Configurația hubului" />
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="Blocul raportor al configurației hubului" />
 
 Blocul **Configurația hubului** raportează configurația curentă a hubului selectat.
 
-- Selector hub: alege hubul de citit.
-- Format ieșire: **text** returnează numele configurației.
-- Format ieșire: **indice** returnează indicele configurației, util pentru comparații în condiții.
+- Selectorul de hub: alege hubul de citit.
+- Formatul de ieșire: **text** returnează numele configurației.
+- Formatul de ieșire: **index** returnează indexul configurației, util pentru comparații în condiții.
 
-<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Opțiuni de format de ieșire ale blocului Configurația hubului" />
+<img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_5.png')} alt="Opțiunile formatului de ieșire ale blocului de configurație a hubului" />
 
-Consultă [documentația blocului Configurația hubului](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_all_control_hub_config).
+Consultă [documentația blocului de configurație a hubului](/docs/Application/BlockBuilder/Blocks/Control/#block_hubs_all_control_hub_config).
 
-### Impuls de putere
+### Impulsul de putere {#power-pulse}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blocul Impuls de putere" />
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="Blocul de impuls de putere al Technic Move Hub" />
 
-Blocul **Impuls de putere** trimite o comandă de impuls de putere către Technic Move Hub selectat. Acest bloc funcționează numai când Technic Move Hub este configurat ca **Batmobile™ Tumbler**.
+Blocul **Impuls de putere** trimite un impuls de putere către Technic Move Hub selectat. Funcționează doar cu configurația **Batmobile™ Tumbler**.
 
-Când rulează, hubul pornește motoarele cu puterea și viteza maximă disponibile pentru o perioadă scurtă, de obicei aproximativ 1-2 secunde.
+Hubul acționează apoi motoarele la putere și viteză maximă pentru scurt timp, aproximativ 1–2 secunde. În Legături rapide, aceeași funcție este operația [Impuls de putere](/docs/Application/Links/Blocks/OutputBlocks#op-pulse).
 
-Consultă [documentația blocului Impuls de putere](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
+Consultă [documentația blocului de impuls de putere](/docs/Application/BlockBuilder/Blocks/Motors/#block_hubs_technicmove_motors_power_pulse).
 
-## Schimbarea configurației în timpul rulării programului
+## Schimbarea configurației în timpul rulării programului {#change-configuration-during-program-runtime}
 
-Este posibilă și schimbarea configurației Technic Move Hub în timpul rulării unui program.
-
-Abordarea obișnuită este:
+Un program poate schimba configurația și în timp ce rulează. O abordare tipică:
 
 1. Citește configurația curentă a hubului.
-2. Compar-o cu configurația cerută de profil.
-3. Dacă configurația este diferită, setează configurația cerută.
+2. Compară-o cu configurația cerută de profil.
+3. Dacă este diferită, setează configurația necesară.
 4. Citește din nou configurația după reconfigurare.
-5. Continuă numai când hubul raportează configurația așteptată.
-6. Deconectează sau oprește programul dacă configurația cerută nu a fost aplicată.
+5. Continuă doar când hubul raportează configurația așteptată.
+6. Deconectează sau oprește programul dacă configurația necesară nu a fost aplicată.
 
-Profilul predefinit care folosește acest hub poate fi folosit ca referință pentru această abordare.
+Profilul gata făcut pentru acest hub arată cum se face.
 
 <img src={useBaseUrl('/img/hubs/technic-move-hub-configurations/cfg_6.png')} alt="Exemplu de blocuri pentru schimbarea configurației Technic Move Hub în timpul rulării" />

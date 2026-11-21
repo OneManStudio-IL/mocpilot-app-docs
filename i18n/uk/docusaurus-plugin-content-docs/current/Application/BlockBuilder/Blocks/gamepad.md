@@ -5,101 +5,87 @@ title: Геймпад
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Геймпад
-Блоки геймпада використовуються для реакції на ввід контролера та читання поточних значень його стану.
+# Геймпад {#gamepad}
 
-## Блоки подій
+Блоки геймпада реагують на ігровий контролер і зчитують його кнопки, стіки та тригери. Категорія з’являється, коли ввімкнено **Увімкнути блоки геймпада** на [сторінці «Геймпад»](/docs/Application/Dashboard/Gamepad). Назви кнопок відповідають розкладці контролера: Xbox або Sony.
 
-### `Коли натиснута кнопка геймпада` (Початківець) {#block_gamepad_event_when_button_is}
+## Події {#events}
+
+### `коли … є …` (Початківець) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Спрацьовує, коли вибрана кнопка геймпада переходить у заданий стан.
+Спрацьовує, коли вибрану кнопку натиснуто або відпущено.
 
-- Тип: блок події
-- Варіанти кнопок (розкладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Варіанти кнопок (розкладка Sony): `хрест`, `коло`, `квадрат`, `трикутник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Варіанти стану: `натиснуто`, `відпущено`
+- Кнопки (розкладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Кнопки (розкладка Sony): `хрест`, `коло`, `квадрат`, `трикутник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Стани: `натиснута`, `відпущена`
 
-### `Коли D-pad геймпада` (Початківець) {#block_gamepad_event_when_dpad_is}
+### `коли D-Pad … кнопка …` (Початківець) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Спрацьовує, коли напрямок/стан D-pad відповідає вибраній умові.
+Спрацьовує, коли кнопку хрестовини натиснуто або відпущено.
 
-- Тип: блок події
-- Варіанти напрямку: `вгору`, `вниз`, `ліворуч`, `праворуч`
-- Варіанти стану: `натиснуто`, `відпущено`
+- Напрямки: `вгору`, `вниз`, `вліво`, `вправо`
+- Стани: `натиснута`, `відпущена`
 
-### `Коли стік геймпада` (Початківець) {#block_gamepad_event_when_thumbstick_is}
+### `коли … джойстик …` (Початківець) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Спрацьовує, коли стан стика відповідає вибраним параметрам.
+Спрацьовує, коли стік відхилено в певному напрямку, переміщено або відпущено.
 
-Блок підтримує:
+- Стік: `лівий`, `правий`
+- Стан: `вгору`, `вниз`, `вліво`, `вправо`, `переміщено`, `відпущена`
+- Для чого: реагувати на рух стіка, а коли стік відпущено, зупиняти модель або вирівнювати її по центру.
 
-- Вибір стика: `ліворуч` / `праворуч`
-- Вибір напряму/стану: `вгору`, `вниз`, `ліворуч`, `праворуч`, `переміщено`, `відпущено`
-- Тип: блок події
-- Типове використання: реакція на напрям руху стика або його відпускання
+## Значення {#values}
 
-## Блоки значень
-
-### `Стан кнопки геймпада (boolean)` (Початківець) {#block_gamepad_button_value_boolean}
+### `є … …` (Початківець) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Повертає поточний стан вибраної кнопки геймпада.
+Повертає `true`, коли вибрана кнопка у вибраному стані.
 
-- Тип: блок-репортер
-- Результат: `істина`/`хиба`
-- Варіанти кнопок (розкладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Варіанти кнопок (розкладка Sony): `хрест`, `коло`, `квадрат`, `трикутник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Варіанти стану: `натиснуто`, `відпущено`
+- Кнопки (розкладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Кнопки (розкладка Sony): `хрест`, `коло`, `квадрат`, `трикутник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Стани: `натиснута`, `відпущена`
 
-### `Стан кнопки D-pad геймпада (boolean)` (Початківець) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … кнопка …` (Початківець) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Повертає, чи активний вибраний напрямок D-pad.
+Повертає `true`, коли вибрана кнопка хрестовини у вибраному стані.
 
-- Тип: блок-репортер
-- Результат: `істина`/`хиба`
-- Варіанти напрямку: `вгору`, `вниз`, `ліворуч`, `праворуч`
-- Варіанти стану: `натиснуто`, `відпущено`
+- Напрямки: `вгору`, `вниз`, `вліво`, `вправо`
+- Стани: `натиснута`, `відпущена`
 
-### `Значення стика геймпада (float)` (Початківець) {#block_gamepad_thumbstick_value_float}
+### `джойстик … …` (Початківець) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Повертає числове значення осі стика.
+Повертає положення стіка вздовж однієї осі.
 
-- Тип: блок-репортер
-- Результат: числове значення (float)
-- Типовий діапазон: `-1` ... `1`
-- Додатковий діапазон у налаштуваннях геймпада: `-100` ... `100`
-- Варіанти стика: `ліворуч`, `праворуч`
-- Варіанти осі: `вісь X` / `вісь Y`
+- Стік: `лівий`, `правий`
+- Вісь: `вісь X`, `вісь Y`
+- Діапазон: типово від `-1` до `1` або від `-100` до `100`, якщо вибрати це в **Діапазон значень геймпада** на сторінці «Геймпад».
 
-### `Значення сили натискання тригера (float)` (Початківець) {#block_gamepad_trigger_pressure_value_float}
+### `… тиск` (Початківець) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Повертає значення сили натискання для вибраного тригера.
+Повертає, наскільки натиснуто тригер.
 
-- Тип: блок-репортер
-- Результат: числове значення (float)
-- Типовий діапазон: `-1` ... `1`
-- Додатковий діапазон у налаштуваннях геймпада: `-100` ... `100`
-- Варіанти тригера (розкладка Xbox): `LT`, `RT`
-- Варіанти тригера (розкладка Sony): `L2`, `R2`
+- Тригери (розкладка Xbox): `LT`, `RT`
+- Тригери (розкладка Sony): `L2`, `R2`
+- Діапазон: типово від `0` (відпущено) до `1` або від `0` до `100` з ширшим **Діапазон значень геймпада**.

@@ -5,140 +5,121 @@ title: Lumină
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Lumină
+# Lumină {#light}
 
-Această pagină documentează blocurile din categoria Lumină utilizate pentru a controla LED-urile și ieșirile de lumină pe hub-urile compatibile.
+Blocurile de lumină controlează lumina de stare a hubului, luminile conectate la porturi și matricea de lumini a huburilor care o au. Categoria apare când un hub din profil are ceva de aprins.
 
-## Blocuri comune de lumină
+## Luminile hubului și ale porturilor {#hub-and-port-lights}
 
-### `Setează culoarea LED-ului` (Începător) {#block_hubs_all_light_set_led_color}
+### `setează culoarea LED la …` (Începător) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Setează culoarea LED-ului hub-ului folosind opțiuni de culori predefinite.
+Setează culoarea luminii de stare a hubului.
 
-- Tip: bloc de comandă
-- Utilizare tipică: afișarea stării (gata, în execuție, avertizare, eroare)
+- Huburi: huburile LEGO Powered Up (inclusiv Technic Move Hub), WeDo 2.0 și hubul MINDSTORMS Robot Inventor.
+- Utilizare tipică: afișarea stării modelului (gata, în funcțiune, avertizare, eroare).
 
-### `Setează lumina la` (Începător) {#block_hubs_all_light_light_turn_to}
+### `porni la … % luminozitate` (Începător) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Setează ieșirea de lumină selectată la o valoare/inten­sitate țintă.
+Aprinde luminile conectate la portul selectat, cu luminozitatea dată.
 
-- Tip: bloc de comandă
-- Utilizare tipică: luminozitatea farurilor, intensitatea stării
+- Huburi: toate huburile cu porturi, cu excepția WeDo 2.0.
+- Utilizare tipică: faruri, iluminare reglabilă.
 
-### `Oprește lumina` (Începător) {#block_hubs_all_light_light_turn_off}
+### `opriți` (Începător) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Oprește ieșirea de lumină selectată.
+Stinge luminile conectate la portul selectat.
 
-- Tip: bloc de comandă
-- Utilizare tipică: secvență de oprire, economisire baterie
+- Huburi: aceleași ca pentru **porni la … % luminozitate**.
 
-### `Technic Move setează lumina la` (Începător) {#block_hubs_technicmove_light_light_turn_to}
+### `aprinde luminile …` (Începător) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variantă a blocului `Setează lumina la` pentru hub-ul/lumina Technic Move.
+Aprinde sau stinge luminile unui Technic Move Hub.
 
-- Tip: bloc de comandă
-- Utilizare tipică: setarea nivelului de lumină pentru hub-ul Move
+- Opțiuni: `oprit`, `activat`
+- Huburi: Technic Move Hub.
 
-## Blocuri pentru matricea LED internă
+## Matricea de lumini {#light-matrix}
 
-### `Pornește matricea de lumini` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_image}
+Aceste blocuri lucrează cu matricea de lumini 5×5 încorporată în hubul MINDSTORMS Robot Inventor.
+
+### `pornește …` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Afișează imaginea selectată pe matricea LED internă a hubului și trece imediat la următorul bloc din stivă. Imaginea rămâne pe afișaj până când un alt bloc modifică matricea LED internă sau programul se oprește.
+Afișează imaginea selectată pe matricea de lumini și trece imediat la blocul următor. Imaginea rămâne până când alt bloc modifică matricea sau programul se oprește.
 
-- Tip: bloc de comandă
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
-
-### `Scrie pe matricea de lumini` (Începător) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `scrie …` (Începător) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Afișează un șir de text pe matricea LED internă a hubului, derulând câte o literă pe rând.
+Derulează textul pe matricea de lumini, câte o literă.
 
-- Tip: bloc de comandă
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
-
-### `Oprește pixelii matricei` (Începător) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `oprește pixelii` (Începător) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Oprește toate luminile de pe matricea LED internă a hubului.
+Stinge toți pixelii matricei de lumini.
 
-- Tip: bloc de comandă
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
-
-### `Setează pixelul matricei` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `setează pixelul … x … y … luminozitate …` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Setează luminozitatea unui pixel pe matricea LED internă a hubului. Numai pixelul selectat este actualizat; restul afișajului rămâne neschimbat. Câmpurile de poziție ale pixelului folosesc valori de coloană și rând, cu pixelul `1, 1` în colțul din stânga sus.
+Setează luminozitatea unui singur pixel; restul matricei rămâne neschimbat. `x` este coloana, iar `y` este rândul; pixelul `1, 1` este în colțul din stânga sus.
 
-- Tip: bloc de comandă
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
-
-### `Rotește orientarea matricei` (Avansat) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `rotește orientarea …` (Avansat) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Rotește orientarea conținutului afișat pe matricea LED internă a hubului în sens orar sau antiorar. Fiecare rotație schimbă orientarea afișajului cu 90 de grade și afectează blocurile de Lumină rulate după ea.
+Rotește imaginea de pe matricea de lumini cu 90 de grade, în sens orar sau antiorar. Noua orientare se aplică blocurilor de lumină care rulează după el.
 
-- Tip: bloc de comandă
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
-
-### `Setează orientarea matricei` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `setează orientarea la …` (Avansat) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Setează orientarea conținutului afișat pe matricea LED internă a hubului. Orientarea implicită este verticală, iar orientarea selectată afectează blocurile de Lumină rulate după ea.
+Setează orientarea imaginii de pe matricea de lumini. Implicit este `vertical`; noua orientare se aplică blocurilor de lumină care rulează după el.
 
-- Tip: bloc de comandă
-- Opțiuni de orientare: `vertical`, `stânga`, `dreapta`, `cu susul în jos`
-- Notă: hubul selectat trebuie să aibă o matrice LED internă.
+- Opțiuni: `vertical`, `stânga`, `dreapta`, `cu susul în jos`
 
-## Blocuri de lumină pentru senzorul de distanță
+## Luminile senzorului de distanță {#distance-sensor-lights}
 
-### `Aprinde senzorul de distanță` (Începător) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `aprinde …` (Începător) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Setează luminile de pe senzorul de distanță selectat. Blocul poate porni sau opri luminile individuale ale senzorului și poate folosi un bloc reporter de listă pentru a controla luminozitatea fiecărei lumini.
+Controlează luminile din jurul „ochilor” senzorului de distanță de pe portul selectat. Poți aprinde sau stinge fiecare lumină ori poți pune o listă în câmp pentru a seta luminozitatea fiecărei lumini.
 
-- Tip: bloc de comandă
-- Notă: disponibil numai pentru hubul MINDSTORMS Robot Inventor.
+- Huburi: MINDSTORMS Robot Inventor.
 
-## Blocuri de lumină BuWizz 3
+## LED-urile porturilor BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 setează culoarea LED-ului` (Începător) {#block_hubs_buwizz3_light_port_set_led_color}
+Aceste blocuri setează culoarea LED-ului de lângă un port BuWizz 3.
+
+### `setează culoarea LED-ului portului la …` (Începător) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Setează culoarea LED-ului pe portul BuWizz 3 selectat folosind opțiuni de culori integrate.
+Setează LED-ul portului la una dintre culorile predefinite.
 
-- Tip: bloc de comandă
-
-### `BuWizz 3 setează culoarea LED-ului (text)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Setează culoarea LED-ului BuWizz 3 folosind o valoare de culoare sub formă de text.
-
-- Tip: bloc de comandă
-- Utilizare tipică: utilizarea dinamică a numelor de culori din variabile
-
-### `BuWizz 3 setează culoarea LED-ului (RGB)` (Avansat) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `setează culoarea LED-ului portului la … … …` (RGB) (Avansat) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Setează culoarea LED-ului BuWizz 3 folosind canale RGB explicite.
+Setează culoarea LED-ului portului din valori de roșu, verde și albastru.
 
-- Tip: bloc de comandă
-- Utilizare tipică: control complet al culorii și gradienți
+- Utilizare tipică: orice culoare vrei, schimbări line de culoare.
+
+### `setează culoarea LED-ului portului din șir …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Setează culoarea LED-ului portului dintr-un text.
+
+- Utilizare tipică: ia culoarea dintr-o variabilă sau dintr-o listă.

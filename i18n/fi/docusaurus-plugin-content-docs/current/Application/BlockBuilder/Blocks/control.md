@@ -1,146 +1,158 @@
 ---
 id: Control
-title: Ohjaus
+title: Hallinta
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Ohjaus
+# Hallinta {#control}
 
-Ohjauslohkot hallitsevat suorituksen kulkua: odotukset, silmukat, ehdot ja skriptien pysäytys.
+Hallintalohkot määräävät, miten skripti etenee: odottaminen, silmukat, haarat ja pysäyttäminen. Kun profiilissa on hubeja, tässä luokassa ovat myös lohkot, jotka yhdistävät hubeja ja muuttavat niiden asetuksia.
 
-## Odotuslohkot
+## Odotuslohkot {#wait-blocks}
 
-### `Odota` (Aloittelija) {#block_control_wait_for}
+### `odota … sekunnit` (Aloittelija) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pysäyttää nykyisen skriptin määritellyksi ajaksi.
+Keskeyttää skriptin annetuksi sekuntimääräksi.
 
-### `Odota kunnes` (Edistynyt) {#block_control_wait_until}
+### `odota kunnes …` (Edistynyt) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pysäyttää skriptin, kunnes ehto on tosi.
+Keskeyttää skriptin, kunnes ehto toteutuu.
 
-## Silmukkalohkot
+## Silmukat {#loops}
 
-### `Toista` (Edistynyt) {#block_control_repeat_for}
+### `toistaa …` (Edistynyt) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Suorittaa sisäiset lohkot tietyn määrän kertoja.
+Suorittaa sisällään olevat lohkot annetun määrän kertoja (oletuksena 10).
 
-### `Toista kunnes` (Edistynyt) {#block_control_repeat_until}
+### `toistaa, kunnes …` (Edistynyt) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Suorittaa lohkoja, kunnes ehto on tosi.
+Suorittaa sisällään olevia lohkoja yhä uudelleen, kunnes ehto toteutuu.
 
-### `Ikuisesti` (Edistynyt) {#block_control_repeat_forever}
+### `toistaa aina` (Edistynyt) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Suorittaa lohkoja jatkuvasti, kunnes ohjelma tai skripti pysäytetään.
+Suorittaa sisällään olevia lohkoja uudelleen ja uudelleen, kunnes skripti tai ohjelma pysähtyy. Sen alle ei voi liittää mitään.
 
-## Ehtolohkot
+## Haarat {#branches}
 
-### `Jos` (Aloittelija) {#block_control_if}
+### `jos … sitten` (Aloittelija) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Suorittaa lohkot vain, jos ehto on tosi.
+Suorittaa sisällään olevat lohkot vain, kun ehto on tosi.
 
-### `Jos / Muuten` (Edistynyt) {#block_control_if_else}
+### `jos … sitten … muu` (Edistynyt) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Suorittaa toisen haaran, jos ehto on tosi, muuten toisen.
+Suorittaa ensimmäisen haaran, kun ehto on tosi, ja muuten toisen haaran.
 
-### `Tee tämä ja tämä` (Guru) {#block_control_do_this_and_this}
+### `tee tämä … ja tämä` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Suorittaa kaksi lohkosarjaa peräkkäin yhtenä toimintona.
+Suorittaa ensimmäisen lohkoryhmän, sitten toisen ja jatkaa vasta sen jälkeen alla olevilla lohkoilla.
 
-## Pysäytyslohkot
+## Pysäyttäminen {#stopping}
 
-### `Pysäytä` (Aloittelija) {#block_control_stop}
+### `pysäytä …` (Aloittelija) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Pysäyttää skriptin suorittamisen (laajuus riippuu valinnasta).
+Pysäyttää skriptejä; mitä tarkalleen pysäytetään, riippuu valinnasta.
 
-- Vaihtoehdot: `kaikki`, `tämä pino`, `ja lopeta ohjelma`
+- `kaikki`: pysäyttää kaikki skriptit.
+- `tämä pino`: pysäyttää vain tämän skriptin.
+- `ja sulje ohjelma`: pysäyttää ohjelman.
 
-### `Pysäytä muut pinot` (Guru) {#block_control_stop_other_stacks}
+### `pysäytä muut pinot` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Pysäyttää kaikki muut käynnissä olevat pinot, mutta jatkaa nykyistä.
+Pysäyttää kaikki muut käynnissä olevat skriptit; tämä jatkaa toimintaansa.
 
-## Hubin ohjauslohkot
+## Hubilohkot {#hub-blocks}
 
-### `Aseta yhteys` (Aloittelija) {#block_hubs_control_set_connect}
+### `yhdistä / katkaise …` (Aloittelija) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Ohjaa hubin yhteystilaa.
+Yhdistää valitun hubin ohjelmaan tai katkaisee sen yhteyden.
 
 - Vaihtoehdot: `yhdistä`, `katkaise`
+- Hubit: kaikki.
 
-### `Aseta hubin määritys` (Edistynyt) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Asettaa valitun hubin yhteen sen tuetuista määritysprofiileista.
-
-- Käytettävissä vain hubeilla, jotka tarjoavat hubin määritysasetuksia.
-- Tyypillinen käyttö: vaihda määritettävä hubi, kuten Technic Move Hub, toiseen tallennettuun määritykseen ennen seuraavien lohkojen suorittamista.
-
-### `Hubin määritys` (Edistynyt) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Palauttaa valitun hubin nykyisen määrityksen.
-
-- Tyyppi: raporttilohko
-- Tulostusmuodon vaihtoehdot: `text`, `index`
-- Käytettävissä vain hubeilla, jotka tarjoavat hubin määritysasetuksia.
-- Palauttaa `NaN`, kun valittu hubi ei ole yhdistetty tai määritystä ei ole saatavilla.
-
-### `Onko yhdistetty` (Aloittelija) {#block_hubs_all_sensors_is_connected}
+### `… yhdistetty` (Aloittelija) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Palauttaa, onko hub yhdistetty.
+Palauttaa arvon `true`, kun valittu hubi on yhdistetty.
 
-- Tyyppi: boolean-arvo
+- Tyyppi: totuusarvolohko
+- Hubit: kaikki.
 
-### `BuWizz 2 aseta tehotila` (Aloittelija) {#block_hubs_buwizz_sensors_set_power_mode}
+### `aseta … kokoonpanoksi …` (Edistynyt) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Vaihtaa hubin johonkin sen kokoonpanoista.
+
+- Hubit: Technic Move Hub (tällä hetkellä ainoa hubi, jolla on kokoonpanoja).
+- Tyypillinen käyttö: vaihda hubi toiseen kokoonpanoon ennen seuraavien lohkojen suorittamista.
+
+### `hanki … kokoonpano muodossa …` (Edistynyt) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Palauttaa hubin nykyisen kokoonpanon.
+
+- Tyyppi: raportointilohko
+- Tulos: `teksti` tai `indeksi`
+- Hubit: Technic Move Hub.
+- Palauttaa `NaN`, kun hubia ei ole yhdistetty tai sillä ei ole kokoonpanoa.
+
+### `aseta … virta-asetus tilaksi …` (Aloittelija) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Asettaa BuWizz 2 -hubin tehotilan.
+Asettaa BuWizz 2:n tehotilan.
 
-- Tilat: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Tilat: `Hidas`, `Normaali`, `Nopea`, `Ludicrous`
+- Hubit: BuWizz 2.
 
-### `BuWizz 2 hae tehotila` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `hanki … virta-asetus kuten …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Palauttaa nykyisen tehotilan.
+Palauttaa BuWizz 2:n nykyisen tehotilan.
 
-- Muoto: `teksti`, `indeksi`
+- Tulos: `teksti` tai `indeksi`
+- Hubit: BuWizz 2.
 
-### `MouldKing aseta ohjauskanava` (Edistynyt) {#block_hubs_mouldking_control_set_control_channel}
+### `aseta … ohjauskanava kohteeseen …` (Edistynyt) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Asettaa aktiivisen ohjauskanavan.
+Asettaa Mould King -hubin ohjauskanavan.
 
 - Kanavat: `A`, `B`, `C`
+- Hubit: Mould King 4.0 ja 6.0.
 
-### `MouldKing hae ohjauskanava` (Edistynyt) {#block_hubs_mouldking_control_get_control_channel}
+### `hanki … ohjauskanava nimellä …` (Edistynyt) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Palauttaa aktiivisen ohjauskanavan.
+Palauttaa Mould King -hubin nykyisen ohjauskanavan.
 
-- Muoto: `teksti`, `indeksi`
+- Tulos: `teksti` tai `indeksi`
+- Hubit: Mould King 4.0 ja 6.0.

@@ -7,154 +7,168 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Silniki
 
-Bloki silników służą do uruchamiania, zatrzymywania, pozycjonowania oraz strojenia silników podłączonych do portów huba.
+Bloki silników uruchamiają, zatrzymują i ustawiają w pozycji silniki podłączone do portów huba oraz dostrajają ich ruch. Kategoria pojawia się, gdy hub w profilu ma porty silników. W każdym bloku wybierasz hub i jeden lub więcej portów.
 
-## Podstawowe bloki sterowania silnikiem
+Niektóre bloki wymagają silnika z wbudowanym czujnikiem obrotu (enkoderem), takiego jak silniki kątowe Technic, oraz huba, który potrafi nim sterować. Takie bloki oznaczono jako „silniki z enkoderem”. Nie są dostępne dla hubów SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 i Mould King. Technic Move Hub ma własny zestaw bloków, opisany na końcu tej strony.
 
-### `Uruchom silnik` (Początkujący) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Uruchamia wybrany silnik.
+## Uruchamianie silników {#running-motors}
 
-- Opcje kierunku: zgodnie z ruchem wskazówek zegara / przeciwnie do ruchu wskazówek zegara
-
-### `Zatrzymaj silnik` (Początkujący) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Zatrzymuje wybrany silnik.
-
-### `Uruchom na` (Zaawansowany) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Uruchamia wybrany silnik na określony czas/kąt/obrót zgodnie z ustawieniami bloku.
-
-- Opcje kierunku: zgodnie z ruchem wskazówek zegara / przeciwnie do ruchu wskazówek zegara
-- Opcje jednostek: `obroty`, `stopnie`, `sekundy`
-- Uwaga: wymaga silnika obsługującego enkoder.
-
-### `Uruchom silnik z prędkością` (Początkujący) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Uruchamia silnik z określoną prędkością.
-
-### `Uruchom na z prędkością` (Zaawansowany) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Uruchamia silnik na określony czas/wartość z określoną prędkością.
-
-- Opcje jednostek: `obroty`, `stopnie`, `sekundy`
-- Uwaga: wymaga silnika obsługującego enkoder.
-
-### `Ustaw prędkość silnika` (Zaawansowany) {#block_hubs_all_motors_port_set_motor_speed}
+### `ustaw prędkość na …` (Zaawansowany) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Ustawia prędkość używaną przez inne bloki sterujące silnikiem.
+Ustawia prędkość (od −100 do 100 %), z jaką na tych portach działają bloki **uruchom silnik** i **uruchom … przez**. Sam blok nie uruchamia silnika.
 
-## Bloki pozycjonowania i ruchu
+### `uruchom silnik …` (Początkujący) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Uruchamia silnik w wybranym kierunku z prędkością ustawioną blokiem **ustaw prędkość na**.
 
-### `Przejdź do pozycji` (Zaawansowany) {#block_hubs_all_motors_port_go_to_position}
+- Kierunek: zgodnie z ruchem wskazówek zegara lub przeciwnie
+
+### `uruchom silnik na … % prędkość` (Początkujący) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Uruchamia silnik z podaną prędkością, od −100 do 100 %. Ujemna prędkość obraca go w drugą stronę.
+
+- Typowe zastosowanie: jazda sterowana joystickiem lub suwakiem: wstaw wartość kontrolera do pola prędkości.
+
+### `zatrzymaj silnik` (Początkujący) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Zatrzymuje silnik.
+
+### `uruchom … przez …` (Zaawansowany) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Obraca silnik w wybranym kierunku przez podaną liczbę obrotów, stopni lub sekund.
+
+- Kierunek: zgodnie z ruchem wskazówek zegara lub przeciwnie
+- Jednostki: `obroty`, `stopnie`, `sekundy`
+- Tylko silniki z enkoderem.
+
+### `uruchom na … w … % prędkość` (Zaawansowany) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Obraca silnik przez podaną liczbę obrotów, stopni lub sekund z podaną prędkością.
+
+- Jednostki: `obroty`, `stopnie`, `sekundy`
+- Tylko silniki z enkoderem.
+
+## Pozycja {#position}
+
+### `iść … do pozycji …` (Zaawansowany) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Przesuwa silnik do docelowej pozycji absolutnej.
+Obraca silnik do pozycji absolutnej (własnego znacznika zera silnika).
 
-- Opcje ścieżki: `najkrótsza droga`, `zgodnie z ruchem wskazówek zegara`, `przeciwnie do ruchu wskazówek zegara`
-- Uwaga: wymaga silnika obsługującego enkoder.
+- Droga: `najkrótsza droga`, `zgodnie z ruchem wskazówek zegara`, `przeciwnie do ruchu wskazówek zegara`
+- Tylko silniki z enkoderem.
 
-### `Przejdź do pozycji względnej` (Początkujący) {#block_hubs_all_motors_port_go_to_relative_position}
+### `przejdź do względnej pozycji … w … % prędkość` (Początkujący) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Przesuwa silnik o względną wartość.
+Obraca silnik do pozycji podanej w stopniach, liczonej od punktu ustawionego blokiem **ustaw pozycję względną**.
 
-- Uwaga: wymaga silnika obsługującego enkoder.
+- Typowe zastosowanie: skręcanie serwem, gdy wartość joysticka określa kąt.
+- Tylko silniki z enkoderem; w BuWizz 3 użyj bloku poniżej.
 
-### `BuWizz 3 przejdź do pozycji względnej` (Początkujący) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `przejdź do względnej pozycji …` (BuWizz 3) (Początkujący) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-Wariant dla BuWizz 3.
+Wersja powyższego bloku dla BuWizz 3, bez pola prędkości.
 
-- Uwaga: wymaga silnika obsługującego enkoder.
+- Huby: BuWizz 3 z silnikami z enkoderem.
 
-### `Ustaw pozycję względną` (Początkujący) {#block_hubs_all_motors_port_set_relative_position}
+### `ustaw pozycję względną …` (Początkujący) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Ustawia odniesienie pozycji względnej silnika.
+Przyjmuje, że bieżąca pozycja silnika ma podaną wartość. Od niej liczone są pozycje względne.
 
-- Uwaga: wymaga silnika obsługującego enkoder.
+- Tylko silniki z enkoderem.
 
-### `Kalibruj przekładnię kierowniczą` (Początkujący) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `skalibruj zębatkę … środek … stopnie …` (Początkujący) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Kalibruje pozycję neutralną układu kierowniczego.
+Wyznacza środek i zakres ruchu zębatki układu kierowniczego.
 
-- Wymaganie: silnik musi obsługiwać enkoder.
-- Wymaganie mechaniczne: zakres ruchu musi być fizycznie ograniczony.
-- Działanie: blok wykonuje pomiar zakresu ruchu i oblicza dane kalibracyjne.
-- Wyjście: wyniki zapisywane są do przekazanych zmiennych.
+- Silnik przesuwa zębatkę do obu końców, mierzy, jak daleko może się przesunąć, i zapisuje wynik w dwóch zmiennych wstawionych do pól: pozycję środka i zakres w stopniach. Zębatka zatrzymuje się na środku, ale jej pozycja względna jest tam równa wartości środka, a nie 0, więc zaraz po tym bloku dodaj **ustaw pozycję względną** 0; potem skręcaj za pomocą `zakres × joystick / 100`.
+- Układ kierowniczy musi mieć twarde mechaniczne ograniczniki po obu stronach (koniec zębatki lub przekładni).
+- Tylko silniki z enkoderem.
 
-## Bloki strojenia i bezpieczeństwa
+## Ustawienia silnika {#motor-settings}
 
-### `Ustaw zachowanie silnika przy zatrzymaniu` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `ustaw silnik na … przy zatrzymaniu` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Ustawia tryb zatrzymania silnika.
+Określa, co robi silnik, gdy się zatrzymuje.
 
-- Opcje: `hamulec`, `utrzymaj pozycję`, `swobodny obrót`
+- `hamulec`: zatrzymuje się szybko.
+- `utrzymaj pozycję`: aktywnie utrzymuje swoją pozycję (przydatne przy skręcaniu).
+- `toczenie`: swobodnie wytraca prędkość.
+- Tylko silniki z enkoderem.
 
-### `Ustaw wykrywanie zablokowania` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `włącz wykrywanie zablokowania …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
 Włącza lub wyłącza wykrywanie zablokowania.
 
-- Uwaga: tylko dla MINDSTORMS Robot Inventor.
+- Huby: MINDSTORMS Robot Inventor.
 
-### `Ustaw przyspieszenie` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+### `ustaw przyspieszenie na …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Ustawia profil przyspieszenia.
+Określa, jak szybko silnik przyspiesza.
 
-- Opcje: `domyślny`, `szybki`, `zrównoważony`, `płynny`, `wolny`, `bardzo wolny`
+- Opcje: `domyślny`, `szybki`, `zrównoważony`, `gładki`, `wolny`, `bardzo wolny`
+- Tylko silniki z enkoderem.
 
-### `Ustaw hamowanie` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+### `ustaw spowolnienie na …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Ustawia profil zwalniania.
+Określa, jak szybko silnik zwalnia.
 
-- Opcje: `domyślny`, `szybki`, `zrównoważony`, `płynny`, `wolny`, `bardzo wolny`
+- Opcje: `domyślny`, `szybki`, `zrównoważony`, `gładki`, `wolny`, `bardzo wolny`
+- Tylko silniki z enkoderem.
 
-## Bloki raportujące silnika
+## Wartości silnika {#motor-values}
 
-### `Pozycja` (Początkujący) {#block_hubs_all_motors_port_position}
+### `pozycja` (Początkujący) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Zwraca aktualną pozycję silnika.
+Zwraca pozycję absolutną silnika.
 
-### `Pozycja względna` (Początkujący) {#block_hubs_all_motors_port_relative_position}
+- Tylko silniki z enkoderem.
+
+### `pozycja względna` (Początkujący) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Zwraca aktualną pozycję względną.
+Zwraca pozycję względną silnika w stopniach.
 
-### `Prędkość` (Początkujący) {#block_hubs_all_motors_port_speed}
+- Tylko silniki z enkoderem.
+
+### `prędkość` (Początkujący) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Zwraca aktualną prędkość silnika.
+Zwraca bieżącą prędkość silnika.
 
-### `Moc` (Zaawansowany) {#block_hubs_all_motors_port_power}
+### `moc` (Zaawansowany) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Zwraca aktualną moc silnika.
+Zwraca bieżącą moc silnika.
 
-- Uwaga: tylko dla MINDSTORMS Robot Inventor.
+- Huby: MINDSTORMS Robot Inventor.
 
-## Bloki silników Technic Move
+## Technic Move Hub {#technic-move-hub}
 
-### `Uruchom silniki z prędkością` (Początkujący) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Technic Move Hub napędza swoje wbudowane silniki tymi blokami zamiast powyższych bloków portów.
+
+### `uruchom silniki przy … % prędkość` (Początkujący) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Uruchamia silniki napędowe Technic Move.
+Uruchamia silniki napędu z podaną prędkością.
 
-### `Impuls mocy` (Początkujący) {#block_hubs_technicmove_motors_power_pulse}
+### `impuls mocy` (Początkujący) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Wysyła polecenie impulsu mocy do wybranego Technic Move Hub.
+Wysyła impuls mocy do silników napędu.
 
-- Dostępne tylko dla Technic Move Hub.
-- Typowe użycie: krótkie wzmocnienie lub wybudzenie układu napędowego Technic Move przed kontynuowaniem kolejnych bloków.
+- Typowe zastosowanie: krótkie przyspieszenie przed kolejnymi blokami.
 
-### `Zatrzymaj silniki` (Początkujący) {#block_hubs_technicmove_motors_stop_motors}
+### `zatrzymaj silniki` (Początkujący) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Zatrzymuje silniki napędowe.
+Zatrzymuje silniki napędu.
 
-### `Hamulec` (Początkujący) {#block_hubs_technicmove_motors_brake}
+### `ustaw hamulec silnika …` (Początkujący) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Włącza/wyłącza hamowanie.
+Włącza lub wyłącza hamulec silników napędu.
 
-- Opcje: `wyłącz`, `włącz`
+- Opcje: `wyłącz`, `włączone`
 
-### `Ustaw przekładnię kierowniczą na` (Początkujący) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `ustaw drążek kierowniczy na …` (Początkujący) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Ustawia docelową pozycję układu kierowniczego.
+Ustawia układ kierowniczy w podanej pozycji.
 
-### `Kalibruj przekładnię kierowniczą` (Początkujący) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `kalibruj drążek kierowniczy` (Początkujący) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Kalibruje układ kierowniczy Technic Move.
+Kalibruje układ kierowniczy własnym algorytmem huba, który automatycznie wyznacza zakres skrętu.
 
-- Uwaga: wymagane fizyczne ograniczenie zakresu ruchu.
+- Układ kierowniczy musi mieć twarde mechaniczne ograniczniki (na przykład końce zębatki).

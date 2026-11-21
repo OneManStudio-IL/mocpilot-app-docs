@@ -5,137 +5,121 @@ title: Світло
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Світло
+# Світло {#light}
 
-Сторінка описує блоки категорії **Light** для керування LED та світловими виходами на підтримуваних хабах.
+Блоки світла керують індикатором стану хаба, світлом, підключеним до портів, і світловою матрицею хабів, що її мають. Категорія з’являється, коли в хабі профілю є що засвітити.
 
-## Базові світлові блоки
+## Світло хаба й портів {#hub-and-port-lights}
 
-### `Встановити колір LED` (Початківець) {#block_hubs_all_light_set_led_color}
+### `встановити колір LED на …` (Початківець) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Встановлює колір LED хаба із попередньо заданих варіантів.
+Задає колір індикатора стану хаба.
 
-- Тип: командний блок
-- Типове використання: індикація стану (ready/running/warning/error)
+- Хаби: хаби LEGO Powered Up (зокрема Technic Move Hub), WeDo 2.0 і хаб MINDSTORMS Robot Inventor.
+- Для чого: показати стан моделі (готова, працює, попередження, помилка).
 
-### `Перемкнути світло на` (Початківець) {#block_hubs_all_light_light_turn_to}
+### `увімкнути на … % яскравість` (Початківець) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Встановлює вибраний світловий вихід у цільове значення яскравості/рівня.
+Вмикає світло, підключене до вибраного порту, із заданою яскравістю.
 
-- Тип: командний блок
-- Типове використання: яскравість фар, індикація інтенсивності
+- Хаби: усі хаби з портами, крім WeDo 2.0.
+- Для чого: фари, регульоване освітлення.
 
-### `Вимкнути світло` (Початківець) {#block_hubs_all_light_light_turn_off}
+### `вимкнути` (Початківець) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Вимикає вибраний світловий вихід.
+Вимикає світло, підключене до вибраного порту.
 
-- Тип: командний блок
-- Типове використання: вимкнення моделі, економія батареї
+- Хаби: ті самі, що й для **увімкнути на … % яскравість**.
 
-### `Technic Move: перемкнути світло на` (Початківець) {#block_hubs_technicmove_light_light_turn_to}
+### `увімкнути світло …` (Початківець) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Варіант `Перемкнути світло на` для цілі Technic Move.
+Вмикає або вимикає світло Technic Move Hub.
 
-- Тип: командний блок
+- Варіанти: `вимкнено`, `увімкнено`
+- Хаби: Technic Move Hub.
 
-## Блоки внутрішньої LED-матриці
+## Світлова матриця {#light-matrix}
 
-### `Увімкнути світлову матрицю` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_image}
+Ці блоки працюють зі світловою матрицею 5×5, вбудованою в хаб MINDSTORMS Robot Inventor.
+
+### `увімкнути …` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Показує вибране зображення на внутрішній LED-матриці хаба й одразу переходить до наступного блоку в стеку. Зображення залишається на дисплеї, доки інший блок не змінить внутрішню LED-матрицю або програма не зупиниться.
+Показує вибране зображення на світловій матриці й одразу переходить до наступного блока. Зображення залишається, доки інший блок не змінить матрицю або програма не зупиниться.
 
-- Тип: командний блок
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
-
-### `Написати на світловій матриці` (Початківець) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `написати …` (Початківець) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Показує текстовий рядок на внутрішній LED-матриці хаба, прокручуючи по одній літері за раз.
+Прокручує текст світловою матрицею, по одній літері.
 
-- Тип: командний блок
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
-
-### `Вимкнути пікселі матриці` (Початківець) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `вимкнути пікселі` (Початківець) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Вимикає всі світла на внутрішній LED-матриці хаба.
+Вимикає всі пікселі світлової матриці.
 
-- Тип: командний блок
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
-
-### `Встановити піксель матриці` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `встановити піксель … x … y … яскравість …` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Встановлює яскравість одного пікселя на внутрішній LED-матриці хаба. Оновлюється лише вибраний піксель; решта дисплея залишається без змін. Поля позиції пікселя використовують значення стовпця та рядка, а піксель `1, 1` розташований у верхньому лівому куті.
+Задає яскравість одного пікселя; решта матриці не змінюється. `x` — стовпець, `y` — рядок; піксель `1, 1` у лівому верхньому куті.
 
-- Тип: командний блок
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
-
-### `Повернути орієнтацію матриці` (Просунутий) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `повернути орієнтацію …` (Просунутий) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Повертає орієнтацію того, що відображається на внутрішній LED-матриці хаба, за годинниковою стрілкою або проти неї. Кожен поворот змінює орієнтацію дисплея на 90 градусів і впливає на світлові блоки, що виконуються після нього.
+Повертає зображення на світловій матриці на 90 градусів за годинниковою стрілкою або проти. Нова орієнтація діє для блоків світла, що виконуються після нього.
 
-- Тип: командний блок
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
-
-### `Встановити орієнтацію матриці` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `встановити орієнтацію …` (Просунутий) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Встановлює орієнтацію того, що відображається на внутрішній LED-матриці хаба. Типова орієнтація - вертикальна, а вибрана орієнтація впливає на світлові блоки, що виконуються після неї.
+Задає орієнтацію зображення на світловій матриці. Типово — `прямо`; нова орієнтація діє для блоків світла, що виконуються після нього.
 
-- Тип: командний блок
-- Варіанти орієнтації: `вертикально`, `ліворуч`, `праворуч`, `догори дриґом`
-- Примітка: вибраний хаб повинен мати внутрішню LED-матрицю.
+- Варіанти: `прямо`, `вліво`, `вправо`, `догори дриґом`
 
-## Світлові блоки датчика відстані
+## Світло датчика відстані {#distance-sensor-lights}
 
-### `Підсвітити датчик відстані` (Початківець) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `засвітити …` (Початківець) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Налаштовує світла на вибраному датчику відстані. Блок може вмикати або вимикати окремі світла датчика й може використовувати блок-репортер списку для керування яскравістю кожного світла.
+Керує світлом навколо «очей» датчика відстані на вибраному порту. Кожен вогник можна ввімкнути чи вимкнути або вставити в поле список, щоб задати яскравість кожного вогника.
 
-- Тип: командний блок
-- Примітка: доступно лише для хаба MINDSTORMS Robot Inventor.
+- Хаби: MINDSTORMS Robot Inventor.
 
-## Світлові блоки BuWizz 3
+## Світлодіоди портів BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3: встановити колір LED` (Початківець) {#block_hubs_buwizz3_light_port_set_led_color}
+Ці блоки задають колір світлодіода біля порту BuWizz 3.
+
+### `встановити колір LED порту на …` (Початківець) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Встановлює колір LED на вибраному порту BuWizz 3 з вбудованих варіантів.
+Встановлює світлодіод порту в один із наперед заданих кольорів.
 
-- Тип: командний блок
-
-### `BuWizz 3: встановити колір LED (рядок)` (Гуру) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Встановлює колір LED BuWizz 3 за текстовим значенням.
-
-- Тип: командний блок
-
-### `BuWizz 3: встановити колір LED (RGB)` (Просунутий) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `встановити колір LED порту на … … …` (RGB) (Просунутий) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Встановлює колір LED BuWizz 3 через канали RGB.
+Задає колір світлодіода порту значеннями червоного, зеленого й синього.
 
-- Тип: командний блок
+- Для чого: будь-який колір на ваш смак, плавні зміни кольору.
+
+### `встановити колір LED порту з рядка …` (Гуру) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Задає колір світлодіода порту з тексту.
+
+- Для чого: брати колір зі змінної або списку.

@@ -5,229 +5,275 @@ title: Sensoren
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Sensoren
+# Sensoren {#sensors}
 
-Sensorblöcke lesen Hub-/Gerätezustände und liefern Daten für Bedingungen, Ereignisse und Steuerungslogik.
+Sensorblöcke lesen den Zustand Ihres Telefons oder Tablets, den Programm-Timer, die Hubs und die daran angeschlossenen Sensoren. Verwenden Sie ihre Werte in Bedingungen, Ereignissen und Berechnungen.
 
-## Geräte- und Hub-Sensoren
+Auf dieser Seite:
 
-### `Hub-Batteriestand` (Anfänger) {#block_hubs_all_sensors_battery_level}
+- [Hub-Zustand](#hub-state): Akku, Spannung, Temperatur, Strom und Leistungsmodus
+- [Hub-Tasten, Neigung und Ausrichtung](#hub-tilt-and-orientation)
+- [Sensoren an Ports](#sensors-on-ports): beliebiges Gerät, Technic-Farbsensor, Technic-Abstandssensor, BOOST-Farb- und Abstandssensor, WeDo-2.0-Sensoren
+- [Dieses Gerät](#this-device): das Telefon, Tablet oder der Computer, auf dem MOCPilot läuft
+- [Timer](#timer)
+
+## Hub-Zustand {#hub-state}
+
+Für Mould-King-Hubs gibt es diese Blöcke nicht, da sie keine Daten melden.
+
+### `… % Batterie` (Anfänger) {#block_hubs_all_sensors_battery_level}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="block_hubs_all_sensors_battery_level.svg" />
-Gibt den aktuellen Hub-Batteriestand zurück.
+Liefert den Akkustand des Hubs in Prozent.
 
-### `Hub-Batteriespannung` (Fortgeschritten) {#block_hubs_all_sensors_battery_voltage}
+### `… Batteriespannung (V)` (Fortgeschritten) {#block_hubs_all_sensors_battery_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
-Gibt die Batteriespannung des ausgewählten Hubs in Volt zurück.
+Liefert die Akkuspannung des Hubs in Volt.
 
-- Typ: numerischer Reporterblock
-- Nur verfügbar für Hubs, die Batteriespannung melden.
-- Gibt `NaN` zurück, wenn der ausgewählte Hub nicht verbunden ist.
+- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Liefert `NaN`, wenn der Hub nicht verbunden ist.
 
-### `Gerätebatterie %` (Anfänger) {#block_sensors_device_battery_level}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
-Gibt den aktuellen Batteriestand des Smartphones/Tablets zurück, auf dem MOCPilot läuft.
-
-### `Board-Temperatur` (Fortgeschritten) {#block_hubs_all_sensors_board_temp}
+### `… Temperatur (C°)` (Fortgeschritten) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
-Gibt die Temperatur der Hub-Platine zurück.
+Liefert die Temperatur der Hub-Elektronik in Grad Celsius.
 
-- Nur verfügbar für `BuWizz 2` und `BuWizz 3`.
+- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
-### `Hub-Beschleunigungssensor` (Guru) {#block_hubs_all_sensors_accelerometer}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
-Gibt rohe Beschleunigungssensordaten des ausgewählten Hubs zurück.
+### `holen … Ausgangsspannung (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
+Liefert die Spannung, die der Hub gerade an seine Ports abgibt, in Volt.
 
-- Achsenoptionen: `x`, `y`, `z`
+- Hubs: BuWizz 2.
 
-### `Hub-Beschleunigung` (Guru) {#block_hubs_all_sensors_acceleration}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
-Gibt Beschleunigungsdaten des ausgewählten Hubs zurück.
+### `… Strom (A)` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
+Liefert den am ausgewählten Port fließenden Strom in Ampere.
 
-- Achsenoptionen: `x`, `y`, `z`
+- Hubs: BuWizz 2, BuWizz 3.
 
-### `Taste gedrückt` (Anfänger) {#block_hubs_all_sensors_button_pressed}
+### `Stromversorgungsmodus einstellen …` (Technic Move Hub) (Anfänger) {#block_hubs_technicmove_sensors_set_power_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
+Stellt den Leistungsmodus eines Technic Move Hub ein.
+
+- Modi: `normal`, `Boost`
+- Hubs: Technic Move Hub.
+
+## Hub-Tasten, Neigung und Ausrichtung {#hub-tilt-and-orientation}
+
+Beim Tastenblock sind die Hubs angegeben, mit denen er funktioniert. Die Neigungs- und Ausrichtungsblöcke funktionieren mit BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub und Robot Inventor.
+
+### `ist … … Taste …` (Anfänger) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
-Prüft, ob die ausgewählte Hub-Taste dem gewählten Zustand entspricht.
+Liefert `true`, wenn die ausgewählte Hub-Taste im ausgewählten Zustand ist.
 
-- Statusoptionen: `gedrückt`, `losgelassen`
-- Typische Tastenoption: `mitte` (hubabhängig)
+- Zustände: `gedrückt`, `losgelassen`
+- Hubs: LEGO Powered Up-Hubs, WeDo 2.0 und Robot Inventor. Die Liste der Tasten hängt vom Hub ab (meist `Mitte`).
 
-### `Gerätetyp` (Anfänger) {#block_hubs_all_motors_port_device_type}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
-Gibt den Typ des verbundenen Geräts am ausgewählten Port zurück.
-
-- Typ: Reporterblock
-
-### `Geräte-Beschleunigungssensor` (Guru) {#block_sensors_device_accelerometer_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
-Gibt rohe Beschleunigungssensorwerte des Geräts zurück.
-
-- Achsenoptionen: `x`, `y`, `z`
-
-### `Geräte-Beschleunigung` (Guru) {#block_sensors_device_acceleration_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
-Gibt Beschleunigungsdaten des Geräts zurück.
-
-- Achsenoptionen: `x`, `y`, `z`
-
-## Orientierungs- und Neigungssensoren
-
-### `Geräteneigung` (Fortgeschritten) {#block_sensors_device_tilt_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
-Gibt Neigungsdaten des Smartphones/Tablets zurück, auf dem MOCPilot läuft.
-
-- Achsenoptionen: `pitch`, `roll`
-
-### `Neigung` (Anfänger) {#block_hubs_all_sensors_tilt}
+### `… … Winkel` (Anfänger) {#block_hubs_all_sensors_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
-Gibt den Neigungswinkel für die gewählte Achse zurück.
+Liefert den Neigungswinkel des Hubs.
 
-- Achsenoptionen: `pitch`, `roll`, `yaw`
+- Winkel: `Neigung`, `Roll`, `Gieren`
+- `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
 
-### `Orientierung holen` (Anfänger) {#block_hubs_sensors_get_orientation}
+### `… … Beschleunigungssensor (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
+Liefert den Rohwert des Beschleunigungssensors des Hubs entlang einer Achse.
+
+- Achsen: `x`, `y`, `z`
+
+### `… … Beschleunigung (m/s²)` (Guru) {#block_hubs_all_sensors_acceleration}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
+Liefert die Beschleunigung des Hubs entlang einer Achse.
+
+- Achsen: `x`, `y`, `z`
+
+### `holen … Ausrichtung …` (Anfänger) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
-Gibt den aktuellen Orientierungszustand des Hubs zurück.
+Liefert, welche Seite des Hubs nach oben zeigt.
 
-- Ausgabeoptionen: `text`, `index`
-- Orientierungswerte: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
+- Ausgabe: `Text` oder `index`
+- Werte: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
 
-### `Ist Orientierung oben` (Anfänger) {#block_hubs_all_sensors_is_orientation_up}
+### `… Ausrichtung …` (Anfänger) {#block_hubs_all_sensors_is_orientation_up}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
-Prüft, ob die Hub-Orientierung der gewählten „oben“-Orientierung entspricht.
+Liefert `true`, wenn die ausgewählte Seite des Hubs nach oben zeigt.
 
-- Orientierungsoptionen: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
+- Optionen: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
 
-### `Neigungsorientierung setzen` (Fortgeschritten) {#block_hubs_sensors_set_tilt_orientation}
+### `setzen … Neigungsausrichtung auf …` (Fortgeschritten) {#block_hubs_sensors_set_tilt_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
-Konfiguriert die Orientierungsreferenz für Neigungs-/Orientierungsblöcke.
+Teilt dem Hub mit, wie er im Modell eingebaut ist, damit Neigung und Ausrichtung von dieser Lage aus gemessen werden.
 
-## Timer und Bewegung
+- Optionen: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
+
+## Sensoren an Ports {#sensors-on-ports}
+
+Die folgenden Technic- und BOOST-Sensorblöcke funktionieren mit City Hub, Technic Hub, BOOST Move Hub und dem Hub von MINDSTORMS Robot Inventor (nicht SBrick, BuWizz, WeDo 2.0 oder Mould King).
+
+### Beliebiges Gerät an einem Port {#any-port-device}
+
+#### `… Gerätetyp` (Anfänger) {#block_hubs_all_motors_port_device_type}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
+Liefert den Typ des Geräts, das am ausgewählten Port angeschlossen ist.
+
+- Hubs: alle Hubs mit Ports außer SBrick, SBrick Plus und BuWizz 2.
+- Typische Verwendung: prüfen, was angeschlossen ist, bevor gerätespezifische Blöcke laufen.
+
+### Technic-Farbsensor {#technic-color-sensor}
+
+#### Technic-Sensor: `Modus einstellen auf …` (Fortgeschritten) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
+Schaltet den Technic-Farbsensor in den ausgewählten Modus.
+
+- Modi: `Standard`, `Umgebung`
+- Ein Moduswechsel kann Ihr Programm auf unerwartete Weise beeinflussen: Im Modus `Umgebung` kann der Sensor weder Farben noch reflektiertes Licht lesen.
+
+#### Technic-Sensor: `Farbe …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
+Liefert die Farbe, die der Technic-Farbsensor erkennt.
+
+- Ausgabe: `Wert` (eine Zahl) oder `Zeichenkette` (der Farbname)
+
+#### Technic-Sensor: `ist Farbe …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
+Liefert `true`, wenn der Technic-Farbsensor die ausgewählte Farbe erkennt.
+
+#### Technic-Sensor: `reflektiertes Licht (%)` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
+Liefert, wie viel Licht die Oberfläche zum Technic-Farbsensor zurückwirft, in Prozent.
+
+#### Technic-Sensor: `reflektiertes Licht …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
+Liefert `true`, wenn der Vergleich des reflektierten Lichts mit dem Wert zutrifft.
+
+- Vergleich: `<`, `=`, `>`
+
+#### Technic-Sensor: `Umgebungslicht (%)` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
+Liefert die Helligkeit des Umgebungslichts in Prozent.
+
+#### Technic-Sensor: `Umgebungslicht …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
+Liefert `true`, wenn der Vergleich des Umgebungslichts mit dem Wert zutrifft.
+
+- Vergleich: `<`, `=`, `>`
+
+#### Technic-Sensor: `Rohwert …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
+Liefert den Rohwert eines Farbkanals des Technic-Farbsensors.
+
+- Kanäle: `rot`, `grün`, `blau`
+
+### Technic-Abstandssensor {#technic-distance-sensor}
+
+#### Technic-Sensor: `Entfernung …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
+Liefert den vom Technic-Abstandssensor gemessenen Abstand.
+
+- Einheiten: `mm`, `cm`, `Zoll`, `%`
+
+#### Technic-Sensor: `ist näher als / weiter als / genau bei …` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
+Liefert `true`, wenn der vom Technic-Abstandssensor gemessene Abstand die Bedingung erfüllt.
+
+- Vergleich: `näher als`, `weiter als`, `genau bei`
+- Einheiten: `mm`, `cm`, `Zoll`, `%`
+
+### BOOST-Farb- und Abstandssensor {#boost-color-and-distance-sensor}
+
+#### BOOST-Sensor: `Farbe …` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
+Liefert die Farbe, die der BOOST-Farb- und Abstandssensor erkennt.
+
+- Ausgabe: `Wert` (eine Zahl) oder `Zeichenkette` (der Farbname)
+
+#### BOOST-Sensor: `ist Farbe …` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_is_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
+Liefert `true`, wenn der BOOST-Sensor die ausgewählte Farbe erkennt.
+
+#### BOOST-Sensor: `Entfernung …` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
+Liefert den vom BOOST-Farb- und Abstandssensor gemessenen Abstand.
+
+- Einheiten: `%`, `cm`, `Zoll`
+
+#### BOOST-Sensor: `ist näher als / weiter als / genau bei …` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
+Liefert `true`, wenn der vom BOOST-Sensor gemessene Abstand die Bedingung erfüllt.
+
+- Vergleich: `näher als`, `weiter als`, `genau bei`
+- Einheiten: `%`, `cm`, `Zoll`
+
+#### BOOST-Sensor: `reflektiertes Licht (%)` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
+Liefert, wie viel Licht die Oberfläche zum BOOST-Sensor zurückwirft, in Prozent.
+
+#### BOOST-Sensor: `reflektiertes Licht …` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
+Liefert `true`, wenn der Vergleich des reflektierten Lichts mit dem Wert zutrifft.
+
+- Vergleich: `<`, `=`, `>`
+
+### WeDo-2.0-Sensoren {#wedo-2-sensors}
+
+Der Bewegungssensor und der Neigungssensor von WeDo 2.0, am WeDo-2.0-Hub.
+
+#### WeDo-2.0-Sensor: `Entfernung …` (Anfänger) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
+Liefert den vom WeDo-2.0-Bewegungssensor gemessenen Abstand.
+
+- Einheiten: `%`, `cm`, `Zoll`
+- Hubs: WeDo 2.0.
+
+#### WeDo-2.0-Sensor: `ist näher als / weiter als / genau bei …` (Anfänger) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
+Liefert `true`, wenn der vom WeDo-2.0-Bewegungssensor gemessene Abstand die Bedingung erfüllt.
+
+- Vergleich: `näher als`, `weiter als`, `genau bei`
+- Einheiten: `%`, `cm`, `Zoll`
+- Hubs: WeDo 2.0.
+
+#### WeDo-2.0-Sensor: `Winkel …` / `Richtung als …` (Anfänger) {#block_hubs_all_sensors_port_wedo2_tilt}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
+Liefert Daten des WeDo-2.0-Neigungssensors: einen Neigungswinkel oder die Richtung, in die er geneigt ist.
+
+- Winkel: `Neigung`, `Roll`
+- Richtungsausgabe: `Text` oder `Zahl`; Richtungen: `neutral`, `vorwärts`, `rückwärts`, `links`, `rechts`, `unbekannt`
+- Hubs: WeDo 2.0.
+
+## Dieses Gerät {#this-device}
+
+Diese Blöcke lesen das Telefon, Tablet oder den Computer, auf dem MOCPilot läuft.
+
+### `Gerät % Batterie` (Anfänger) {#block_sensors_device_battery_level}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
+Liefert den Akkustand des Geräts in Prozent.
+
+### `Gerät … Winkel` (Fortgeschritten) {#block_sensors_device_tilt_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
+Liefert den Neigungswinkel des Geräts.
+
+- Winkel: `Neigung`, `Roll`, `Gieren`
+- Typische Verwendung: das Modell durch Neigen des Telefons lenken.
+
+### `Gerät … Beschleunigungssensor (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
+Liefert den Rohwert des Beschleunigungssensors des Geräts entlang einer Achse, in m/s².
+
+- Achsen: `x`, `y`, `z`
+
+### `Gerät … Beschleunigung (m/s²)` (Guru) {#block_sensors_device_acceleration_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
+Liefert die Beschleunigung des Geräts entlang einer Achse, in m/s².
+
+- Achsen: `x`, `y`, `z`
+
+## Timer {#timer}
 
 ### `Timer` (Fortgeschritten) {#block_sensors_timer_value_float}
 <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
-Gibt den Timerwert in Sekunden zurück.
+Liefert die Zeit seit dem Programmstart oder seit dem letzten **Timer zurücksetzen**, in Sekunden.
 
 ### `Timer zurücksetzen` (Fortgeschritten) {#block_sensors_timer_reset}
 <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
-Setzt den Timer auf Null zurück.
-
-## Port-Sensorblöcke
-
-### `Technic Distanzsensor` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
-Gibt Distanzwerte eines Technic-Distanzsensors zurück.
-
-- Einheitenoptionen: `mm`, `cm`, `zoll`, `%`
-
-### `Technic wenn Distanz ist` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
-Prüft/auslöst Distanzbedingungen für den Technic-Distanzsensor.
-
-- Vergleichsoptionen: `näher als`, `weiter als`, `genau bei`
-- Einheitenoptionen: `mm`, `cm`, `zoll`, `%`
-
-### `Technic Sensor-Modus einstellen` (Fortgeschritten) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
-Dieser Block setzt den Technic-Farbsensor auf den ausgewählten Modus.
-
-- Hinweis: Das Ändern des Farbsensor-Modus kann dein Programm auf unerwartete Weise beeinflussen. Zum Beispiel kann der Technic-Farbsensor keine Farben oder reflektiertes Licht lesen, wenn er sich im Modus `"Umgebungslicht"` befindet.
-
-### `Technic Farbsensorwert` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
-Gibt den erkannten Farbwert des Technic-Sensors zurück.
-
-- Ausgabeoptionen: `wert`, `text`
-
-### `Technic wenn Farbe ist` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
-Prüft/auslöst, wenn die erkannte Farbe der gewählten Farbe entspricht.
-
-### `Technic reflektiertes Licht` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
-Gibt die Intensität des reflektierten Lichts zurück.
-
-### `Technic wenn reflektiertes Licht ist` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
-Prüft/auslöst für Schwellwert von reflektiertem Licht.
-
-### `Technic Umgebungslicht` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
-Gibt die Intensität des Umgebungslichts zurück.
-
-### `Technic wenn Umgebungslicht ist` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
-Prüft/auslöst für Schwellwert von Umgebungslicht.
-
-### `Technic Rohfarbe` (Anfänger) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Gibt Rohwerte der Farbkanäle des Technic-Sensors zurück.
-
-- Kanaloptionen: `rot`, `grün`, `blau`
-
-### `BOOST Distanzsensor` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
-Gibt Distanzwerte des BOOST-Sensors zurück.
-
-- Einheitenoptionen: `%`, `cm`, `zoll`
-
-### `BOOST wenn Distanz ist` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
-Prüft/auslöst Distanzbedingungen für BOOST.
-
-- Vergleichsoptionen: `näher als`, `weiter als`, `genau bei`
-- Einheitenoptionen: `%`, `cm`, `zoll`
-
-### `BOOST Sensorfarbe` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
-Gibt die vom BOOST-Sensor erkannte Farbe zurück.
-
-- Ausgabeoptionen: `wert`, `text`
-
-### `BOOST ist Farbe` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_is_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
-Prüft, ob der BOOST-Sensor aktuell die gewählte Farbe erkennt.
-
-### `BOOST reflektiertes Licht` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Gibt den Wert des reflektierten Lichts vom BOOST-Sensor zurück.
-
-### `BOOST wenn reflektiertes Licht ist` (Anfänger) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
-Prüft/auslöst für Schwellwert von reflektiertem Licht beim BOOST-Sensor.
-
-### `Technic Move Leistungsmodus setzen` (Anfänger) {#block_hubs_technicmove_sensors_set_power_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
-Setzt den Leistungsmodus von Technic Move.
-
-- Modusoptionen: `normal`, `boost`
-
-### `BuWizz-Ausgangsspannung` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
-Gibt die aktuelle Ausgangsspannung zurück, die ein BuWizz-Hub meldet.
-
-- Nur verfügbar für unterstützte BuWizz-Hubs.
-
-### `BuWizz-Portstrom` (Guru) {#block_hubs_buwizz_sensors_port_get_current}
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
-Gibt die Stromaufnahme zurück, die für den ausgewählten BuWizz-Hub-Port gemeldet wird.
-
-- Nur verfügbar für unterstützte BuWizz-Hubs und -Ports.
-
-### `WeDo 2 Distanz` (Anfänger) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
-Gibt Distanzwerte des WeDo-2-Distanzsensors zurück.
-
-- Einheitenoptionen: `%`, `cm`, `zoll`
-
-### `WeDo 2 wenn Abstand ist` (Anfänger) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
-Löst eine Abstandsbedingung für einen WeDo-2-Abstandssensor aus oder prüft sie.
-
-- Vergleichsoptionen: `closer than`, `farther than`, `exactly at`
-- Einheitenoptionen: `%`, `cm`, `inch`
-
-### `WeDo 2 Neigung` (Anfänger) {#block_hubs_all_sensors_port_wedo2_tilt}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
-Gibt Neigungswerte des WeDo-2-Neigungssensors zurück.
-
-- Achsenoptionen: `pitch`, `roll`
+Setzt den Timer auf null zurück.

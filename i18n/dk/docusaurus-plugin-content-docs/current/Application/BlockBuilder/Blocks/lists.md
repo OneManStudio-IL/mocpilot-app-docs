@@ -5,74 +5,73 @@ title: Lister
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Lister
+# Lister {#lists}
 
-Lister gemmer ordnede samlinger af værdier og håndteres via dedikerede liste-Reporter- og Stack-blokke.
+En liste gemmer flere værdier i rækkefølge. Du opretter, omdøber og sletter lister med **Opret en liste**, **Omdøb liste** og **Slet liste** øverst i kategorien. Blokkene nedenfor vises, så snart programmet har mindst én liste. Elementerne nummereres fra 1.
 
-## Liste ændrings-blokke
+## Ændring af en liste {#changing-a-list}
 
-### `Tilføj værdi til liste` (Avanceret) {#block_lists_add}
+### `tilføje … til …` (Avanceret) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Tilføjer en værdi til slutningen af den valgte liste.
+Tilføjer en værdi sidst i listen.
 
-### `Indsæt ved` (Guru) {#block_lists_insert_at}
+### `indsætte … ved … af …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Indsætter en værdi ved det valgte indeks i listen.
+Indsætter en værdi på den angivne position; elementerne efter den rykker én plads ned.
 
-### `Erstat ved` (Guru) {#block_lists_replace_at}
+### `erstatte vare … af … med …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Erstatter elementet ved det valgte indeks med en ny værdi.
+Erstatter elementet på den angivne position med en ny værdi.
 
-### `Slet` (Avanceret) {#block_lists_delete}
+### `slette … fra …` (Avanceret) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Sletter elementet ved det valgte indeks (eller valgt sletningstilstand).
+Sletter elementet på den angivne position.
 
-### `Ryd alle` (Avanceret) {#block_lists_clear_all}
+### `rydde …` (Avanceret) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Fjerner alle elementer fra den valgte liste.
+Fjerner alle elementer fra listen.
 
-## Liste værdi-/tjek-blokke
+## Aflæsning af en liste {#reading-a-list}
 
-### `Element ved` (Avanceret) {#block_lists_item_at}
+### `vare … af …` (Avanceret) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Returnerer værdien ved det valgte indeks.
+Returnerer elementet på den angivne position.
 
-### `Indeks for værdi` (Guru) {#block_lists_index_of_value}
+### `indeks af … i …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Returnerer indekset for den første matchende værdi i listen.
+Returnerer positionen for det første element, der er lig med værdien, eller `0`, hvis der ikke er noget.
 
-### `Indeholder værdi` (Guru) {#block_lists_contains_value}
+### `… indeholder …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Returnerer om listen indeholder en angiven værdi.
+Returnerer `true`, når listen indeholder værdien.
 
-### `Liste størrelse` (Avanceret) {#block_lists_size_of_value}
+### `størrelse af …` (Avanceret) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Returnerer antallet af elementer i den valgte liste.
+Returnerer antallet af elementer i listen.
 
-## Liste værdi-reporter
+### Liste (Avanceret) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Returnerer den aktuelle værdi af den valgte liste.
+Hver liste har sin egen rapporteringsblok med sit navn. Den returnerer hele listen som tekst.
 
-- Type: reporter-blok
-- Outputformat eksempel: `[item1,item2,item3]`
-- Typisk brug: inspicere listeindhold eller sende listen til kompatible blokke
+- Eksempel på output: `[item1,item2,item3]`; en tom liste giver tom tekst.
+- Typisk brug: vis listen på en monitor, eller send den videre til blokke, der accepterer en liste (for eksempel **tænd** til lysene på afstandssensoren).

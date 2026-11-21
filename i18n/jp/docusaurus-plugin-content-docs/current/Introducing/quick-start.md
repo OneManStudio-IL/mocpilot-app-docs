@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: クイックスタートチュートリアル
+title: クイックスタート
+description: "MOCPilot をインストールしてサインインし、最初のプロフィールを作って、数分でモデルを走らせましょう。"
 ---
 
-# クイックスタート
+import Screenshot from '@site/src/components/Screenshot';
 
-このガイドは、MOCPilot を初めて使うための手順です。
+# クイックスタート {#quick-start}
 
-## 1. サインインまたはアカウント作成
+このガイドでは、アプリのインストールから最初のモデルを走らせるまでを説明します。モーターをつないだ対応ハブが必要です。[対応デバイス](/docs/Introducing/SupportedDevices)を参照してください。
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. アプリをインストールする {#1-install-the-app}
 
-アカウントの利用を強くおすすめします。
+MOCPilot は App Store（iPhone、iPad、Mac）、Google Play（Android）、Microsoft Store（Windows）で入手できます。各ストアへのリンクは [mocpilot.com](https://mocpilot.com) にあります。
 
-- アカウントを使うと、プロフィールと設定がすべての端末で同期されます。
-- アカウントなしの場合、データは現在の端末にのみ保存されます。
-- アカウントなしでアプリを再インストールすると、プロフィールと設定は失われます。
+## 2. サインインするか、アカウントなしで続行する {#2-sign-in-or-continue-without-an-account}
 
-**Continue without an account** も使用できますが、通常利用には推奨しません。
+初回起動時に、アプリからサインインを求められます。メールアドレスまたはログイン名とパスワード、Google、Apple ID のいずれかでサインインするか、新しいアカウントを作成します。
 
-## 2. メインメニューを理解する
+<Screenshot name="sign-in" alt="MOCPilot のサインイン画面" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+アカウントの作成をおすすめします。
 
-下部ナビゲーションには 3 つの主要セクションがあります。
+- プロフィールと設定がサーバーに保存され、デバイス間で同期されます。
+- デバイスを買い替えたり紛失したりしても、データを取り戻せます。
+- 購入品と MocPilot Pro がすべてのデバイスで使えます。
 
-- **Profiles**: プリビルトプロフィールとユーザープロフィール。
-- **Settings**: アプリ設定とアカウント設定。
-- **Help**: サポート、フィードバック、公式リンク。
+**アカウントなしで続行** も可能ですが、その場合すべてのデータはこのデバイスだけに保存され、アプリを削除すると失われます。後から **設定 → アカウント** でサインインできます。[アカウント](/docs/Application/Account/UserAccount)を参照してください。
 
-## 3. 重要な設定を確認する
+## 3. 画面の構成を知る {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- **スマートフォン**では、下部バーに **プロフィール**、**設定**、**ヘルプ**（サインイン後は **通知** も）があります。
+- **タブレット**では、同じ項目に加えて **プロフィールカタログ** とアカウントがサイドバーにあります。
+- **パソコン**では上部バーを使います。左側にメニュー、右側にアカウント、通知、設定があります。
 
-**Settings** では次を管理できます。
+[スマートフォン、タブレット、デスクトップ](/docs/Introducing/Layouts)を参照してください。
 
-- サウンドとバイブレーション
-- 画面の常時点灯
-- 言語
-- ダークモード
-- アカウントと同期設定
+## 4. プロフィールを作成する {#4-create-a-profile}
 
-## 4. プリビルトプロフィール
+1. **私のプロフィール** ページで **+** → **新しいプロフィール** をタップします（スマートフォン）。タブレットとパソコンでは **新しいプロフィール** を選びます（または **ファイル → 新しいプロフィール**）。
+2. **プログラムの種類** を選びます。
+   - コードを書かずにモデルを操作したいなら **クイックリンク**。初めての方に最適です。
+   - イベント、ループ、条件、センサーを使いたいなら **ロジックブロック**。
+3. **名前** を入力し、必要なら画像を追加します。
+4. **作成** をタップします。
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="ロジックブロックとクイックリンクのタイルがある「新しいプロフィール」ページ" width={900} />
 
-**Prebuilt** プロフィールを使うと次が可能です。
+プロフィールがエディターで開きます。詳しくは[プロフィールの作成](/docs/Application/Profiles/CreateProfile)を参照してください。
 
-- LEGO や他社公式セットをすぐに操作する。
-- 完成済みブロックコードからテクニックを学ぶ。
-
-:::warning Important
-プリビルトプロフィールは実験的に変更できますが、変更は保存されません。次回開いたときに初期状態へリセットされます。
+:::tip 既製のモデルを使いたい場合
+**プロフィールカタログ**（プロフィールページの **オンラインで検索**）を開き、お持ちのセット用の公式プロフィールをインストールしましょう。[カタログと公開](/docs/Application/Profiles/Catalog)を参照してください。
 :::
 
-プリビルトプロフィールは次の手順で進めます。
+## 5. ハブを追加する {#5-add-your-hub}
 
-1. 使いたいプリビルトプロフィールを開きます。
+1. エディターで **マイハブ** を開きます。
+2. 空いているスロットで **新しいハブを追加** をタップし、ハブのモデルを選んで **追加** をタップします。
+3. ハブの電源を入れてボタンを押し、MOCPilot がハブを見つけるまで待ちます。
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="ハブスロットが並ぶ「マイハブ」ページ" width={900} />
 
-2. ハブを接続します。
+ファームウェアの更新を求められたら、[ファームウェアの更新](/docs/Application/Hubs/FirmwareUpdating)の手順に従ってください。詳しくは[ハブの追加と接続](/docs/Application/Hubs/ConnectingHubs)を参照してください。
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. ダッシュボードにコントロールを配置する {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. **ダッシュボード** を開きます。
+2. **+**（**コントローラーを追加**）をタップし、**ジョイスティック** を選んで **ダッシュボードに追加** をタップします。
+3. 好きな場所までドラッグします。タップすると、サイズ、色、動作を変更できます。
 
-3. ダッシュボードを選択して **Play** を押します。
+<Screenshot name="controller-palette" alt="ジョイスティックを選択した「コントローラーを追加」パレット" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+[コントロールの追加と配置](/docs/Application/Dashboard/ArrangingControls)を参照してください。
 
-## 5. ユーザープロフィール
+## 7. コントロールをモーターに結び付ける {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**クイックリンク：** **入力** からジョイスティックの入力（たとえば *JOY1 Y 軸*）を空の行にドラッグし、**出力** から **モーター** の動作と **ハブ** の出力を追加して、モーターをつないだポートをタップします。行に赤い枠がなくなれば準備完了です。[クイックリンク](/docs/Application/Links/LinksIntroducing)を参照してください。
 
-**My** では自分のプロフィールを作成できます。
+**ロジックブロック：** *プログラムが開始されたとき* ブロック、*いつも繰り返す* ループ、ジョイスティックの値を受け取る *モーターの速度を設定* ブロックを追加します。[ロジックブロック](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing)と[作例](/docs/Application/BlockBuilder/Examples)を参照してください。
 
-- 必要なだけプロフィールを作成できます。
-- このページから直接起動できます。
+## 8. 実行を押す {#8-press-run}
 
-ユーザープロフィールは次の手順で進めます。
+**実行**（▶）を押します。ジョイスティックを動かすと、モーターが回ります。**停止** を押すと編集に戻ります。
 
-1. プロフィールを作成またはインポートします。
+これで完了です。次のステップ：
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-新しいプロフィールを作成するか、既存のプロフィールファイル（`.dat`）を端末から選択してインポートできます。
-:::
-
-2. 新しいプロフィールを作成します。
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-希望するプロフィール名を入力します。必要に応じてギャラリーから画像を選択できます。
-
-3. プロフィールにハブを追加します。
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-デフォルトでは 1 つのプロフィールに最大 **2 台**のハブを追加できます。**5 台**まで拡張するには追加スロットの購入が必要です。
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. プログラムページを開き、ブロックを接続してモデル用のロジックを作成します。
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. ダッシュボードを開き、ハブモーターに接続できる画面コントローラーを追加します。
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. **Play** を押してプロフィールを実行します。
-
-これで走行を開始し、プロフィールを改善していけます。
-
-## 6. ヘルプを使う
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-**Help** ページでは次ができます。
-
-- クイックスタートチュートリアルを開く
-- 質問する
-- バグを報告する
-- MOCPilot の公式リンクとコミュニティチャネルを開く
+- すべての[コントロールの種類](/docs/Application/Dashboard/ControlTypes)を知る。
+- [テーマ](/docs/Application/Themes/ThemesOverview)でダッシュボードの見た目を変える。
+- [ゲームパッド](/docs/Application/Dashboard/Gamepad)を接続する。
+- うまく動かないときは、[トラブルシューティング](/docs/Help/Troubleshooting)を参照してください。

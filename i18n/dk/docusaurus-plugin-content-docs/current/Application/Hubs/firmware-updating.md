@@ -5,90 +5,102 @@ title: Firmwareopdatering
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Firmwareopdatering
+# Firmwareopdatering {#firmware-updating}
 
-MOCPilot může aktualizovat firmware podporovaných hubů LEGO Powered Up, když je dostupná novější kompatibilní verze.
+MOCPilot kan opdatere firmwaren på understøttede LEGO® Powered Up-hubs, når der findes en nyere kompatibel version.
 
-Aktualizace firmwaru může být nutná, aby hub správně fungoval s MOCPilot. Novější firmware může zlepšit kompatibilitu, opravit chování hubu a zpřístupnit funkce očekávané pro daný model.
+Nogle hubs skal opdateres, før de fungerer korrekt med MOCPilot: Nyere firmware retter fejl i hubben og tilføjer de funktioner, appen er afhængig af.
 
-## Aktualizace firmwaru je aktuálně podporována pro tyto huby
+## Understøttede hubs {#supported-hubs}
 
-Aktualizace firmwaru je aktuálně podporována pro tyto huby:
+MOCPilot kan opdatere disse hubs:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} /><div><strong>City Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} /><div><strong>Boost Hub</strong></div></div>
-  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} /><div><strong>Technic Move Hub</strong></div></div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: '140px'}} />
+    <div><strong>City Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/boost_hub_p.webp')} alt="Boost Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Boost Hub</strong></div>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: '140px'}} />
+    <div><strong>Technic Move Hub</strong></div>
+  </div>
 </div>
 
-## Před spuštěním
+## Før du starter {#before-you-start}
 
-Před spuštěním aktualizace se ujistěte, že hub i zařízení s MOCPilot mají dostatek energie.
+Sørg for, at hubben og din telefon, tablet eller computer har tilstrækkeligt med strøm på batteriet.
 
-Po celou dobu nechte hub zapnutý a držte telefon, tablet nebo počítač blízko hubu, aby Bluetooth spojení zůstalo stabilní. Během nahrávání firmwaru nezavírejte MOCPilot, nevypínejte Bluetooth ani hub.
+Hold hubben tændt under hele opdateringen, og hold din enhed tæt på den, så Bluetooth-forbindelsen forbliver stabil. Luk ikke MOCPilot, slå ikke Bluetooth fra, og sluk ikke hubben, mens firmwaren uploades.
 
 :::warning Vigtigt
-Přerušení aktualizace firmwaru může zanechat firmware hubu v neúplném stavu. V takovém případě může být před dalším použitím potřeba obnova firmwaru.
+En afbrudt opdatering kan efterlade hubben med ufuldstændig firmware. Hubben kan så kræve gendannelse af firmwaren, før du kan bruge den igen.
 :::
 
-## Spuštění aktualizace
+## Start opdateringen {#starting-the-update}
 
-Při připojení hubu MOCPilot zkontroluje nainstalovanou verzi firmwaru. Pokud je potřeba novější verze, aplikace zobrazí dialog aktualizace firmwaru.
+Når du forbinder en hub, tjekker MOCPilot dens firmwareversion. Kræves der en nyere version, viser appen dialogen **Firmwareopdatering kræves**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Dialogen Firmwareopdatering kræves" />
 
-Vyberte **Opdater** pro okamžité spuštění aktualizace firmwaru.
+Vælg **Opdater** for at starte firmwareopdateringen med det samme.
 
-Pokud nechcete aktualizovat hned, vyberte **Annuller**. Aktualizaci můžete spustit později z kontextové nabídky hubu.
+Vil du opdatere senere, så vælg **Annuller**. Du kan til enhver tid starte opdateringen fra hubmenuen.
 
-## Aktualizace později z nabídky hubu
+## Opdater senere fra hubmenuen {#updating-later-from-the-hub-menu}
 
-Ruční spuštění aktualizace firmwaru:
+Sådan starter du selv opdateringen:
 
-1. Otevřete **Mine Bluetooth-hubs**.
-2. Najděte hub, který potřebuje aktualizaci.
-3. Otevřete kontextovou nabídku hubu.
-4. Vyberte **Opdater firmware**.
+1. Åbn **Mine Bluetooth-hubs**.
+2. Find den hub, der skal opdateres.
+3. Åbn hubmenuen.
+4. Vælg **Opdater firmware**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Opdater firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Handlingen Opdater firmware i hubbens kontekstmenu" />
 
-## Během aktualizace firmwaru
+## Under firmwareopdateringen {#during-the-firmware-update}
 
-Po spuštění aktualizace MOCPilot nahraje firmware do hubu a zobrazí průběh.
+MOCPilot uploader firmwaren til hubben og viser fremskridtet.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Skærmen med fremskridt for firmwareopdateringen" />
 
-Počkejte na dokončení nahrávání. Hub se může při použití nové verze restartovat nebo dočasně odpojit.
+Vent, til uploaden er færdig. Hubben kan genstarte eller miste forbindelsen et øjeblik, mens den nye firmware tages i brug.
 
-Po nahrání firmwaru MOCPilot znovu vyhledá hub. Držte hub poblíž a počkejte na opětovné připojení.
+Derefter søger MOCPilot efter hubben igen. Hold hubben i nærheden, og vent på, at appen forbinder igen.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Firmwaren er uploadet, og der søges efter hubben" />
 
-## Dokončení aktualizace
+## Afslut opdateringen {#finishing-the-update}
 
-Po úspěšném dokončení aktualizace MOCPilot zobrazí potvrzení.
+Når opdateringen er færdig, viser MOCPilot en bekræftelse.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Dialog om, at firmwareopdateringen er færdig" />
 
-Vyberte **OK**. Hub se znovu připojí a karta hubu zobrazí aktualizovanou verzi firmwaru.
+Vælg **OK**. Hubben forbindes igen, og dens kort viser den nye firmwareversion.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Hubkort med den opdaterede firmwareversion" />
 
-Nyní můžete hub dál používat s MOCPilot.
+Du kan nu fortsætte med at bruge hubben med MOCPilot.
 
-## Pokud aktualizace selže
+## Hvis opdateringen mislykkes {#if-the-update-fails}
 
-Pokud se aktualizace nedokončí úspěšně, MOCPilot zobrazí zprávu o selhání aktualizace firmwaru.
+Mislykkes opdateringen, viser MOCPilot en fejlmeddelelse.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Firmwareopdatering" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Dialog om, at firmwareopdateringen mislykkedes" />
 
-Nejprve zkuste hub vypnout a znovu zapnout a spustit aktualizaci znovu:
+Sluk og tænd først hubben, og kør opdateringen igen:
 
-1. Vypněte hub.
-2. Znovu zapněte hub.
-3. Držte hub blízko zařízení.
-4. Připojte hub v MOCPilot.
-5. Znovu spusťte aktualizaci firmwaru.
+1. Sluk hubben.
+2. Tænd hubben igen.
+3. Hold hubben tæt på din enhed.
+4. Forbind til hubben i MOCPilot.
+5. Start firmwareopdateringen igen.
 
-Pokud hub nereaguje normálně, může být potřeba obnova firmwaru. Postupujte podle návodu [Obnova firmwaru hubu](/docs/Application/Hubs/RecoveryHubFirmware/).
+Reagerer hubben stadig ikke normalt, kan den have brug for gendannelse af firmwaren: se [Gendannelse af hub-firmware](/docs/Application/Hubs/RecoveryHubFirmware/).

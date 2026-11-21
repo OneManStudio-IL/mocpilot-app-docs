@@ -5,159 +5,220 @@ title: 电机
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# 电机
+# 电机 {#motors}
 
-电机积木用于启动、停止、定位和调节连接到主控端口的电机。
+电机积木用于启动、停止连接在集线器端口上的电机并控制其位置，还可以调整电机的运动方式。当配置文件中有带电机端口的集线器时，就会出现这个类别。在每个积木中，你都要选择集线器以及一个或多个端口。
 
-## 核心电机命令积木
+有些积木需要带内置旋转传感器（编码器）的电机（例如 Technic 角度电机），以及能够控制它的集线器。这些积木标有“编码器电机”。它们不适用于 SBrick、SBrick Plus、BuWizz 2、WeDo 2.0 和 Mould King 集线器。Technic Move Hub 有自己的一套积木，列在本页末尾。
 
-### `启动电机` (初级) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-启动所选电机。
+## 运行电机 {#running-motors}
 
-- 方向选项：顺时针 / 逆时针
+### `设置速度为 …`（进阶） {#block_hubs_all_motors_port_set_motor_speed}
 
-### `停止电机` (初级) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-停止所选电机。
-
-### `运行指定量` (高级) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-根据积木设置，让所选电机按指定时间/角度/圈数运行。
-
-- 方向选项：顺时针 / 逆时针
-- 单位选项：`圈数`、`角度`、`秒`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
-
-### `以速度启动电机` (初级) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-使用明确的速度值启动电机。
-
-### `以速度运行指定量` (高级) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-以明确的速度值，让电机运行指定时长/数量。
-
-- 单位选项：`圈数`、`角度`、`秒`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
-
-### `设置电机速度` (高级) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-设置相关电机运行积木所使用的速度。
 
-## 位置与运动积木
+设置这些端口上**启动电机**和**运行 … 持续 …**所使用的速度（−100 到 100 %）。这个积木本身不会启动电机。
 
-### `前往位置` (高级) {#block_hubs_all_motors_port_go_to_position}
+### `启动电机 …`（初学者） {#block_hubs_all_motors_port_start_motor}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+
+按所选方向、以**设置速度为**设定的速度启动电机。
+
+- 方向：顺时针或逆时针
+
+### `启动电机于 … 速度 %`（初学者） {#block_hubs_all_motors_port_start_motor_at_speed}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+
+以指定速度（−100 到 100 %）启动电机。速度为负时电机反向转动。
+
+- 典型用法：用操纵杆或滑块驾驶：把控件的数值放进速度插槽。
+
+### `停止电机`（初学者） {#block_hubs_all_motors_port_stop_motor}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+
+停止电机。
+
+### `运行 … 持续 …`（进阶） {#block_hubs_all_motors_port_run_for}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+
+让电机按所选方向运行一定的圈数、度数或秒数。
+
+- 方向：顺时针或逆时针
+- 单位：`旋转`、`度`、`秒`
+- 仅限编码器电机。
+
+### `运行持续 … 在 … 速度 %`（进阶） {#block_hubs_all_motors_port_run_for_at_speed}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+
+让电机以指定速度运行一定的圈数、度数或秒数。
+
+- 单位：`旋转`、`度`、`秒`
+- 仅限编码器电机。
+
+## 位置 {#position}
+
+### `前进 … 到位置 …`（进阶） {#block_hubs_all_motors_port_go_to_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-将电机移动到目标绝对位置。
 
-- 路径选项：`最短路径`、`顺时针`、`逆时针`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+让电机转到一个绝对位置（电机自身的零点标记）。
 
-### `前往相对位置` (初级) {#block_hubs_all_motors_port_go_to_relative_position}
+- 路径：`最短路径`、`顺时针`、`逆时针`
+- 仅限编码器电机。
+
+### `移动到相对位置 … 在 … 速度 %`（初学者） {#block_hubs_all_motors_port_go_to_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-按相对偏移量移动电机。
 
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+让电机转到一个以度为单位的位置，该位置从**设置相对位置**设定的点开始计算。
 
-### `BuWizz 3 前往相对位置` (初级) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+- 典型用法：用舵机转向，由操纵杆的数值给出角度。
+- 仅限编码器电机；BuWizz 3 请使用下面的积木。
+
+### `移动到相对位置 …`（BuWizz 3）（初学者） {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-BuWizz 3 的相对定位积木版本。
 
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+上面那个积木的 BuWizz 3 版本，没有速度输入。
 
-### `设置相对位置` (初级) {#block_hubs_all_motors_port_set_relative_position}
+- 集线器：BuWizz 3，配合编码器电机使用。
+
+### `设置相对位置 …`（初学者） {#block_hubs_all_motors_port_set_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-设置电机相对位置参考点。
 
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+把电机的当前位置声明为指定的值。相对位置从这里开始计算。
 
-### `校准转向齿条` (初级) {#block_hubs_all_motors_port_calibrate_steering_rack}
+- 仅限编码器电机。
+
+### `校准齿条 … 中心 … 度 …`（初学者） {#block_hubs_all_motors_port_calibrate_steering_rack}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-校准转向齿条的中位/参考位置。
 
-- 要求：连接在所选端口上的电机必须支持绝对/相对角度跟踪（内置编码器）。
-- 机械要求：转向轴运动必须在有效范围内有物理限位（例如通过齿条/齿轮端点限位）。
-- 工作方式：该积木会扫描并测量可用转向旋转范围，然后计算用于转向配置的校准数据。
-- 输出行为：积木参数会把结果写入传入的变量（类似函数按引用传参）。这些变量会被积木修改，可用于读取校准结果。
+找出转向齿条的中心和行程。
 
-## 电机调节与安全积木
+- 电机会把齿条转到两端，测量它能移动多远，并把结果存入你放在插槽中的两个变量：中心位置和以度为单位的范围。齿条会停在中间，但此时它的相对位置等于中心值而不是 0，所以请在这个积木之后紧接着添加**设置相对位置** 0；然后用 `范围 × 操纵杆 / 100` 来转向。
+- 转向机构两端必须有坚固的机械限位（齿条末端或齿轮传动的末端）。
+- 仅限编码器电机。
 
-### `设置停止时电机行为` (专家) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+## 电机设置 {#motor-settings}
+
+### `设置电机为 … 停止时`（大师） {#block_hubs_all_motors_port_set_motor_to_at_stop}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-设置电机停止模式（例如根据可用选项选择刹车/保持/滑行）。
 
-- 停止模式选项：`刹车`、`保持位置`、`滑行`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+选择电机停止时的行为。
 
-### `设置堵转检测` (专家) {#block_hubs_all_motors_port_set_motors_stall_detection}
+- `刹车`：快速停止。
+- `保持位置`：主动保持当前位置（适合转向）。
+- `惯性滑行`：自由减速停转。
+- 仅限编码器电机。
+
+### `启用卡死检测 …`（大师） {#block_hubs_all_motors_port_set_motors_stall_detection}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-启用或禁用堵转检测。
 
-- 说明：仅适用于 MINDSTORMS Robot Inventor 主控。
+开启或关闭卡死检测。
 
-### `设置加速度` (专家) {#block_hubs_all_motors_port_set_acceleration}
+- 集线器：MINDSTORMS Robot Inventor。
+
+### `设置加速度为 …`（大师） {#block_hubs_all_motors_port_set_acceleration}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-设置电机加速度曲线/速率。
 
-- 曲线选项：`默认`、`快速`、`平衡`、`平滑`、`慢速`、`很慢`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+选择电机加速的快慢。
 
-### `设置减速度` (专家) {#block_hubs_all_motors_port_set_deceleration}
+- 选项：`默认`、`快`、`均衡`、`平滑`、`慢`、`很慢`
+- 仅限编码器电机。
+
+### `设置减速度为 …`（大师） {#block_hubs_all_motors_port_set_deceleration}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-设置电机减速度曲线/速率。
 
-- 曲线选项：`默认`、`快速`、`平衡`、`平滑`、`慢速`、`很慢`
-- 说明：此功能要求所选端口上的电机支持基于编码器的控制。
+选择电机减速的快慢。
 
-## 电机数值积木
+- 选项：`默认`、`快`、`均衡`、`平滑`、`慢`、`很慢`
+- 仅限编码器电机。
 
-### `位置` (初级) {#block_hubs_all_motors_port_position}
+## 电机数值 {#motor-values}
+
+### `位置`（初学者） {#block_hubs_all_motors_port_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-返回当前电机位置。
 
-### `相对位置` (初级) {#block_hubs_all_motors_port_relative_position}
+返回电机的绝对位置。
+
+- 仅限编码器电机。
+
+### `相对位置`（初学者） {#block_hubs_all_motors_port_relative_position}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-返回当前相对位置值。
 
-### `速度` (初级) {#block_hubs_all_motors_port_speed}
+返回电机的相对位置，以度为单位。
+
+- 仅限编码器电机。
+
+### `速度`（初学者） {#block_hubs_all_motors_port_speed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-返回当前电机速度。
 
-### `功率` (高级) {#block_hubs_all_motors_port_power}
+返回电机的当前速度。
+
+### `功率`（进阶） {#block_hubs_all_motors_port_power}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-返回当前电机功率值。
 
-- 说明：仅适用于 MINDSTORMS Robot Inventor 主控。
+返回电机的当前功率。
 
-## Technic Move 电机积木
+- 集线器：MINDSTORMS Robot Inventor。
 
-### `以速度启动电机组` (初级) {#block_hubs_technicmove_motors_start_motors_at_speed}
+## Technic Move Hub {#technic-move-hub}
+
+Technic Move Hub 使用这些积木（而不是上面的端口积木）来驱动其内置电机。
+
+### `以此启动电机 … 速度 %`（初学者） {#block_hubs_technicmove_motors_start_motors_at_speed}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-以所选速度启动 Technic Move 驱动电机。
 
-### `电源脉冲` (初级) {#block_hubs_technicmove_motors_power_pulse}
+以指定速度启动驱动电机。
+
+### `动力脉冲`（初学者） {#block_hubs_technicmove_motors_power_pulse}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-向所选 Technic Move Hub 发送电源脉冲命令。
 
-- 仅适用于 Technic Move Hub。
-- 典型用途：在继续运行后续积木前，短暂增强或唤醒 Technic Move 驱动系统。
+向驱动电机发送一次动力脉冲。
 
-### `停止电机组` (初级) {#block_hubs_technicmove_motors_stop_motors}
+- 典型用法：在后续积木运行前短暂加速。
+
+### `停止电机`（初学者） {#block_hubs_technicmove_motors_stop_motors}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-停止 Technic Move 驱动电机。
 
-### `刹车` (初级) {#block_hubs_technicmove_motors_brake}
+停止驱动电机。
+
+### `设置电机刹车 …`（初学者） {#block_hubs_technicmove_motors_brake}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-对 Technic Move 电机应用刹车行为。
 
-- 刹车选项：`关`、`开`
+开启或关闭驱动电机的刹车。
 
-### `将转向齿条设为` (初级) {#block_hubs_technicmove_motors_set_steering_rack_to}
+- 选项：`关`、`开`
+
+### `设置转向架为 …`（初学者） {#block_hubs_technicmove_motors_set_steering_rack_to}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-设置转向齿条目标位置/数值。
 
-### `校准转向齿条` (初级) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+把转向转到指定位置。
+
+### `校准转向架`（初学者） {#block_hubs_technicmove_motors_calibrate_steering_rack}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-使用主控内部校准算法和自动转向范围检测来校准 Technic Move 转向齿条。
 
-- 说明：电机轴必须具备机械限位（例如通过转向齿条机构实现）。
+用集线器自带的算法校准转向，自动找出转向范围。
+
+- 转向机构必须有坚固的机械限位（例如转向齿条的两端）。

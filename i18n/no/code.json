@@ -490,23 +490,23 @@
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(åpnes i ny fane)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
-    "message": "Search docs",
+    "message": "Søk i dokumentasjonen",
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "Still et nytt spørsmål …",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "Svarer …",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "search",
+    "message": "søk",
     "description": "The hint for the search box enter key text"
   },
   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
@@ -514,83 +514,83 @@
     "description": "The hint for the Ask AI search box enter key text"
   },
   "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "Search",
+    "message": "Søk",
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Tilbake til søk etter nøkkelord",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Tilbake til søk etter nøkkelord",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Nylige samtaler",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "Fjern denne samtalen fra historikken",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "Spør AI: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "Svarene genereres av AI, som kan ta feil. Kontroller svarene.",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Relaterte kilder",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "Tenker …",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "Copy",
+    "message": "Kopier",
     "description": "The text for copy button"
   },
   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "Copied!",
+    "message": "Kopiert!",
     "description": "The text for copy button when copied"
   },
   "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "Copy",
+    "message": "Kopier",
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Liker",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "Liker ikke",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "Takk for tilbakemeldingen!",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "Søker …",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "Søker etter ",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "Søkte etter",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Send spørsmål",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "Tilbake til søket",
     "description": "The back to search text for footer"
   },
   "Build It. Drive It. Control Everything.": {
@@ -598,5 +598,45 @@
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Lag egne profiler for å styre LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motorer, sensorer og kompatible Bluetooth-enheter fra én kraftig app."
+  },
+  "howItWorks.profile": {
+    "message": "Profil = én modell",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Dashboard",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "kontroller på skjermen",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Program",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Logikkblokker eller Hurtigkoblinger",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Hubber",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "motorer, lys, sensorer",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Spillkontroller",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ Kjør starter programmet",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "over Bluetooth",
+    "description": "How it works diagram"
   }
 }

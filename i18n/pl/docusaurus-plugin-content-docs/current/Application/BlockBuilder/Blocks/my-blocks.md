@@ -7,28 +7,31 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Moje bloki
 
-Moje bloki pozwalają definiować własne, wielokrotnego użytku bloki.  
-Ta kategoria jest koncepcyjnie podobna do tworzenia funkcji w tradycyjnym programowaniu: definiujesz działanie raz, a następnie wywołujesz je wielokrotnie.
+Moje bloki pozwalają tworzyć własne bloki wielokrotnego użytku.
+Działają jak funkcja w zwykłym programowaniu: zachowanie opisujesz raz i używasz go w dowolnie wielu miejscach.
 
-## Podstawowe bloki My Blocks
+## Bloki {#the-blocks}
 
-### `Utwórz blok` (Guru) {#block_my_block_define}
+### `zdefiniować …` (Guru) {#block_my_block_define}
 
-Tworzy nową definicję własnego bloku.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Typ: blok definicji/konfiguracji
-- Typowe użycie: grupowanie powtarzalnej logiki w jednym nazwanym bloku
+Naciśnij **Stwórz blok** na górze kategorii, aby utworzyć nowy blok. W obszarze programu pojawi się wtedy blok-czapka `zdefiniować` z nazwą Twojego bloku: bloki dołączone pod nim określają, co robi Twój blok.
 
-### `MyBlock` (Guru) {#block_my_block}
+- Typowe zastosowanie: zebranie powtarzającej się logiki w jednym bloku o jasnej nazwie.
 
-Wywołuje wcześniej utworzony blok niestandardowy.
+### Twój blok (Guru) {#block_my_block}
 
-- Typ: blok stosu (wywołanie własnego polecenia)
-- Typowe użycie: ponowne wykorzystanie tej samej logiki w wielu miejscach bez duplikowania bloków
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Przykłady wariantów
+Każdy utworzony blok pojawia się w palecie pod swoją nazwą. Użycie go uruchamia bloki dołączone do jego bloku `zdefiniować`.
 
-Te przykłady pokazują własne bloki z różnymi zestawami argumentów.
+- Typ: blok poleceń
+- Typowe zastosowanie: użycie tej samej logiki w kilku miejscach bez kopiowania stosów.
+
+## Przykłady z różnymi polami {#examples-with-different-inputs}
+
+Własne bloki z różnymi zestawami pól:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Te przykłady pokazują własne bloki z różnymi zestawami argumentów.
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Przykład użycia w stosie programu
+## Użycie własnego bloku w programie {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Ten przykład pokazuje wywołanie własnego bloku pod `gdy program się uruchomi`, podczas gdy stos `definiuj mój blok` zawiera logikę wielokrotnego użycia (np. sterowanie silnikiem).
+Tutaj własny blok jest użyty pod blokiem `gdy program się uruchamia`, a stos `zdefiniować` zawiera logikę silnika, którą ten blok wykonuje.
 
-- Typowy przepływ: wywoływanie bloków własnych z poziomu bloków zdarzeń
-- Zaleta: jedna definicja, wiele miejsc użycia
+- Typowy wzorzec: używaj swoich bloków w skryptach zdarzeń.
+- Korzyść: jedna definicja, wiele miejsc użycia.
 
-## Widok edytora My Blocks
+## Edytor bloku {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Edytor „Utwórz blok” służy do projektowania sygnatury własnego bloku.  
-Możesz dodawać etykiety i pola wejściowe (np. liczby/tekst oraz wartości logiczne), a następnie zdefiniować logikę działania w stosie definicji bloku.
+W edytorze **Stwórz blok** projektujesz wygląd swojego bloku: dodajesz etykiety (**Dodaj etykietę**) i pola (**Dodaj wejście**: *liczba lub tekst* albo *boolean*). Wewnątrz stosu `zdefiniować` pola działają jak zmienne, które przechowują wartości przekazane do bloku.
 
-## Dlaczego warto używać My Blocks
+## Po co używać Moich bloków {#why-use-my-blocks}
 
-- Wielokrotne użycie: napisz raz, używaj wiele razy.
-- Czytelność: zastąp długie powtarzalne sekwencje jednym znaczącym blokiem.
-- Łatwość utrzymania: aktualizuj logikę w jednym miejscu zamiast wielu kopii.
-- Struktura: dziel duże programy na mniejsze logiczne części.
+- Wielokrotne użycie: piszesz raz, używasz wiele razy.
+- Czytelność: jedna sensowna nazwa zamiast długich, powtarzających się stosów.
+- Łatwe zmiany: poprawiasz logikę w jednym miejscu, a nie w każdej kopii.
+- Struktura: duży program dzielisz na małe, logiczne części.
 
-## Uwagi
+## Uwagi {#notes}
 
-- Własne bloki są dostępne na poziomie projektu i przeznaczone do użycia w ramach tego samego profilu/projektu.
-- Preferuj opisowe nazwy, które wyjaśniają cel, a nie szczegóły implementacji.
+- Własne bloki należą do profilu i można ich używać w dowolnym miejscu jego programu.
+- Nadawaj blokom nazwy, które mówią, co robią, a nie jak to robią.
+- Blok, który wywołuje sam siebie, może się zapętlić w nieskończoność; edytor ostrzega przed tym.

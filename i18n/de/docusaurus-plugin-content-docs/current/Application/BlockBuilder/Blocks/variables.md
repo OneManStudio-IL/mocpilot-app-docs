@@ -5,37 +5,35 @@ title: Variablen
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Variablen
+# Variablen {#variables}
 
-Variablen speichern Werte, die über Blockstapel und Skripte hinweg gelesen und aktualisiert werden können.
+Variablen speichern Werte, die jedes Skript im Programm lesen und ändern kann. Mit **Eine Variable erstellen**, **Variable umbenennen** und **Variable löschen** oben in der Kategorie erstellen, benennen und löschen Sie sie. Die folgenden Blöcke erscheinen, sobald das Programm mindestens eine Variable hat.
 
-## Variablen-Befehlsblöcke
+## Eine Variable ändern {#changing-a-variable}
 
-### `Setze Variable auf` (Anfänger) {#block_variables_set_to}
+### `setze … auf …` (Anfänger) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Setzt die ausgewählte Variable auf den angegebenen Wert.
+Setzt die ausgewählte Variable auf einen Wert.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Zustand initialisieren, vorherigen Wert überschreiben
+- Typische Verwendung: einen Startwert setzen, den bisherigen Wert ersetzen.
 
-### `Ändere Variable um` (Fortgeschritten) {#block_variables_change_by}
+### `ändern … durch …` (Fortgeschritten) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Addiert den angegebenen Betrag zur ausgewählten Variable.
+Addiert eine Zahl zur ausgewählten Variablen. Mit einer negativen Zahl wird subtrahiert.
 
-- Typ: Befehlsblock
-- Typische Verwendung: Zähler, Punktestand, kumulierte Strecke/Zeit
+- Typische Verwendung: Zähler, Punktestände, Aufsummieren von Strecke oder Zeit.
 
-## Variablenwert-Reporter
+## Eine Variable lesen {#reading-a-variable}
 
-### `Variablenwert` (Anfänger) {#block_variables_value}
+### Variable (Anfänger) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Gibt den aktuellen Wert der ausgewählten Variable zurück.
+Jede Variable hat einen eigenen Werteblock mit ihrem Namen. Er liefert den aktuellen Wert der Variablen.
 
-- Typ: Reporterblock
-- Typische Verwendung: Variablenwert in Operatoren, Bedingungen und Befehls-Eingaben nutzen
+- Typische Verwendung: den Wert in Operatoren, Bedingungen und die Eingabefelder anderer Blöcke einsetzen.
+- Der [Monitor](/docs/Application/BlockBuilder/Editor#monitor) zeigt die Werte aller Variablen, während das Programm läuft.

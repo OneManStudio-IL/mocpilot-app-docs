@@ -5,110 +5,154 @@ title: Steuerung
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Steuerung
+# Steuerung {#control}
 
-Steuerungsblöcke verwalten den Ausführungsfluss: Warten, Schleifen, Verzweigung und Stoppen von Skripten.
+Steuerungsblöcke legen fest, wie ein Skript abläuft: Warten, Schleifen, Verzweigungen und Stoppen. Wenn das Profil Hubs enthält, finden Sie in dieser Kategorie auch Blöcke, die Hubs verbinden und ihre Einstellungen ändern.
 
-## Warteblöcke
+## Warteblöcke {#wait-blocks}
 
-### `Warte` (Anfänger) {#block_control_wait_for}
+### `warten … Sekunden` (Anfänger) {#block_control_wait_for}
+
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
-Pausiert das aktuelle Skript für eine angegebene Zeit.
 
-### `Warte bis` (Fortgeschritten) {#block_control_wait_until}
+Hält das Skript für die angegebene Anzahl Sekunden an.
+
+### `warten bis …` (Fortgeschritten) {#block_control_wait_until}
+
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
-Pausiert das aktuelle Skript, bis eine Bedingung wahr wird.
 
-## Schleifenblöcke
+Hält das Skript an, bis die Bedingung wahr wird.
 
-### `Wiederhole` (Fortgeschritten) {#block_control_repeat_for}
+## Schleifen {#loops}
+
+### `wiederholen …` (Fortgeschritten) {#block_control_repeat_for}
+
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
-Führt verschachtelte Blöcke eine feste Anzahl von Malen aus.
 
-### `Wiederhole bis` (Fortgeschritten) {#block_control_repeat_until}
+Führt die Blöcke darin so oft aus wie angegeben (standardmäßig 10-mal).
+
+### `wiederholen, solange …` (Fortgeschritten) {#block_control_repeat_until}
+
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
-Wiederholt verschachtelte Blöcke, bis eine Bedingung wahr ist.
 
-### `Fortlaufend` (Fortgeschritten) {#block_control_repeat_forever}
+Führt die Blöcke darin immer wieder aus, bis die Bedingung wahr wird.
+
+### `immer wiederholen` (Fortgeschritten) {#block_control_repeat_forever}
+
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
-Führt verschachtelte Blöcke dauerhaft aus, bis Programm oder Skript gestoppt wird.
 
-## Verzweigungsblöcke
+Führt die Blöcke darin immer wieder aus, bis das Skript oder das Programm stoppt. Darunter lässt sich nichts anhängen.
 
-### `Wenn` (Anfänger) {#block_control_if}
+## Verzweigungen {#branches}
+
+### `wenn … dann` (Anfänger) {#block_control_if}
+
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
-Führt verschachtelte Blöcke nur bei wahrer Bedingung aus.
 
-### `Wenn / Sonst` (Fortgeschritten) {#block_control_if_else}
+Führt die Blöcke darin nur aus, wenn die Bedingung wahr ist.
+
+### `wenn … dann … sonst` (Fortgeschritten) {#block_control_if_else}
+
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
-Führt einen Zweig aus, wenn die Bedingung wahr ist, sonst den alternativen Zweig.
 
-### `Tu dies und dies` (Guru) {#block_control_do_this_and_this}
+Führt den ersten Zweig aus, wenn die Bedingung wahr ist, andernfalls den zweiten.
+
+### `mach das … und das` (Guru) {#block_control_do_this_and_this}
+
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
-Führt zwei Blockstapel nacheinander in einer Steuerungsoperation aus.
 
-## Stoppblöcke
+Führt die erste Blockgruppe aus, dann die zweite, und erst danach geht es mit den Blöcken darunter weiter.
 
-### `Stop` (Anfänger) {#block_control_stop}
+## Stoppen {#stopping}
+
+### `anhalten …` (Anfänger) {#block_control_stop}
+
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
-Stoppt die Skriptausführung (Bereich abhängig von der gewählten Stopp-Option).
 
-- Stopp-Optionen: `alles`, `dieser Stapel`, `und Programm beenden`
+Stoppt Skripte; was genau gestoppt wird, hängt von der Option ab.
 
-### `Andere Stapel stoppen` (Guru) {#block_control_stop_other_stacks}
+- `alle`: stoppt alle Skripte.
+- `dieser Stapel`: stoppt nur dieses Skript.
+- `und Programm beenden`: stoppt das Programm.
+
+### `andere Stapel stoppen` (Guru) {#block_control_stop_other_stacks}
+
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
-Stoppt alle anderen laufenden Stapel, während der aktuelle Stapel weiterläuft.
 
-## Hub-/Steuerungs-Utility-Blöcke
+Stoppt alle anderen laufenden Skripte; dieses läuft weiter.
 
-### `Verbindung setzen` (Anfänger) {#block_hubs_control_set_connect}
+## Hub-Blöcke {#hub-blocks}
+
+### `verbinden / trennen …` (Anfänger) {#block_hubs_control_set_connect}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
-Steuert den Verbindungsstatus des Hubs aus der Skriptlogik.
 
-- Aktionsoptionen: `verbinden`, `trennen`
+Verbindet den ausgewählten Hub mit dem Programm oder trennt ihn.
 
-### `Hub-Konfiguration setzen` (Fortgeschritten) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Setzt den ausgewählten Hub auf eines seiner unterstützten Konfigurationsprofile.
+- Optionen: `verbinden`, `trennen`
+- Hubs: alle.
 
-- Nur verfügbar für Hubs, die Hub-Konfigurationsoptionen bereitstellen.
-- Typische Verwendung: einen konfigurierbaren Hub, zum Beispiel Technic Move Hub, vor den nächsten Blöcken auf eine andere gespeicherte Konfiguration umschalten.
+### `… verbunden` (Anfänger) {#block_hubs_all_sensors_is_connected}
 
-### `Hub-Konfiguration` (Fortgeschritten) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Gibt die aktuelle Konfiguration des ausgewählten Hubs zurück.
-
-- Typ: Reporterblock
-- Ausgabeformatoptionen: `text`, `index`
-- Nur verfügbar für Hubs, die Hub-Konfigurationsoptionen bereitstellen.
-- Gibt `NaN` zurück, wenn der ausgewählte Hub nicht verbunden ist oder keine Konfiguration verfügbar ist.
-
-### `Ist verbunden` (Anfänger) {#block_hubs_all_sensors_is_connected}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
-Gibt zurück, ob der Hub aktuell verbunden ist.
 
-- Typ: boolescher Reporterblock
+Liefert `true`, wenn der ausgewählte Hub verbunden ist.
 
-### `BuWizz 2 Leistungsmodus setzen` (Anfänger) {#block_hubs_buwizz_sensors_set_power_mode}
+- Typ: boolescher Block
+- Hubs: alle.
+
+### `setzen … Konfiguration auf …` (Fortgeschritten) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Schaltet den Hub auf eine seiner Konfigurationen um.
+
+- Hubs: Technic Move Hub (derzeit der einzige Hub mit Konfigurationen).
+- Typische Verwendung: den Hub auf eine andere Konfiguration umschalten, bevor die nächsten Blöcke laufen.
+
+### `holen … Konfiguration als …` (Fortgeschritten) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Liefert die aktuelle Konfiguration des Hubs.
+
+- Typ: Werteblock
+- Ausgabe: `Text` oder `index`
+- Hubs: Technic Move Hub.
+- Liefert `NaN`, wenn der Hub nicht verbunden ist oder keine Konfiguration hat.
+
+### `setzen … Stromversorgungsmodus auf …` (Anfänger) {#block_hubs_buwizz_sensors_set_power_mode}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
-Setzt den Leistungsmodus des BuWizz-2-Hubs.
 
-- Modusoptionen: `Slow`, `Normal`, `Fast`, `Ludicrous`
+Stellt den Leistungsmodus eines BuWizz 2 ein.
 
-### `BuWizz 2 Leistungsmodus abfragen` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+- Modi: `Langsam`, `Normal`, `Schnell`, `Ludicrous`
+- Hubs: BuWizz 2.
+
+### `holen … Leistungsmodus als …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
-Gibt den aktuell aktiven Leistungsmodus von BuWizz 2 zurück.
 
-- Ausgabeoptionen: `text`, `index`
+Liefert den aktuellen Leistungsmodus eines BuWizz 2.
 
-### `MouldKing Steuerkanal setzen` (Fortgeschritten) {#block_hubs_mouldking_control_set_control_channel}
+- Ausgabe: `Text` oder `index`
+- Hubs: BuWizz 2.
+
+### `setzen … Steuerkanal zu …` (Fortgeschritten) {#block_hubs_mouldking_control_set_control_channel}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
-Setzt den aktiven Steuerkanal für unterstützte MouldKing-Hubs/Controller.
 
-- Kanaloptionen: `A`, `B`, `C`
+Stellt den Steuerkanal eines Mould-King-Hubs ein.
 
-### `MouldKing Steuerkanal abfragen` (Fortgeschritten) {#block_hubs_mouldking_control_get_control_channel}
+- Kanäle: `A`, `B`, `C`
+- Hubs: Mould King 4.0 und 6.0.
+
+### `holen … Steuerkanal als …` (Fortgeschritten) {#block_hubs_mouldking_control_get_control_channel}
+
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
-Gibt den aktuell aktiven Steuerkanal für unterstützte MouldKing-Hubs/Controller zurück.
 
-- Ausgabeoptionen: `text`, `index`
+Liefert den aktuellen Steuerkanal eines Mould-King-Hubs.
+
+- Ausgabe: `Text` oder `index`
+- Hubs: Mould King 4.0 und 6.0.

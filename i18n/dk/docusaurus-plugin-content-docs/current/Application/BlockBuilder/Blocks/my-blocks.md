@@ -1,34 +1,37 @@
 ---
 id: MyBlocks
-title: Mine Blokke
+title: Mine blokke
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Mine blokke
+# Mine blokke {#my-blocks}
 
-Mine blokke giver dig mulighed for at definere dine egne genanvendelige blokke.
-Denne kategori svarer konceptuelt til at oprette en funktion i traditionel programmering: definér adfærd én gang, og kald den mange gange.
+Med Mine blokke kan du lave dine egne blokke, som kan genbruges.
+Det fungerer som en funktion i almindelig programmering: Du beskriver opførslen én gang og bruger den så mange steder, du vil.
 
-## Grundlæggende Mine blokke
+## Blokkene {#the-blocks}
 
-### `Lav en blok` (Guru) {#block_my_block_define}
+### `definere …` (Guru) {#block_my_block_define}
 
-Opretter en ny brugerdefineret blokdefinition.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Type: definitions-/opsætningsblok
-- Typisk brug: samle gentaget logik i én navngiven blok
+Tryk på **Opret blok** øverst i kategorien for at oprette en ny blok. Programområdet får så en `definere`-hatteblok med din bloks navn: De blokke, du sætter fast under den, er det, din blok gør.
 
-### `Min blok` (Guru) {#block_my_block}
+- Typisk brug: saml gentaget logik i én blok med et tydeligt navn.
 
-Kalder en tidligere oprettet brugerdefineret blok.
+### Din blok (Guru) {#block_my_block}
 
-- Type: stack-blok (brugerdefineret kommando-kald)
-- Typisk brug: genbruge den samme logik flere steder uden at duplikere blokke
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Variadiske eksempler
+Hver blok, du laver, vises i paletten under sit navn. Når du bruger den, kører de blokke, der er sat fast under dens `definere`-blok.
 
-Disse eksempler viser brugerdefinerede Mine blokke med forskellige argument-signaturer.
+- Type: stakblok
+- Typisk brug: brug den samme logik flere steder uden at kopiere stakke.
+
+## Eksempler med forskellige input {#examples-with-different-inputs}
+
+Brugerdefinerede blokke med forskellige sæt input:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ Disse eksempler viser brugerdefinerede Mine blokke med forskellige argument-sign
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Eksempel på brug i programstak
+## Brug af en brugerdefineret blok i et program {#using-a-custom-block-in-a-program}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-Dette eksempel viser et kald til en brugerdefineret blok under `når programmet starter`, mens stakken `definér min blok` indeholder den genanvendelige motorlogik.
+Her bruges den brugerdefinerede blok under `når programmet starter`, og `definere`-stakken indeholder den motorlogik, den kører.
 
-- Typisk flow: kald brugerdefineret blok fra event-stakke
-- Fordel: én definition, mange kaldesteder
+- Almindeligt mønster: brug dine blokke i hændelsesscripts.
+- Fordel: én definition, mange steder, der bruger den.
 
-## Mine blokke editor-visning
+## Blokeditoren {#the-block-editor}
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-Editoren **Lav en blok** bruges til at designe signaturen for din brugerdefinerede blok.
-Du kan tilføje labels og inputs (for eksempel tal/tekst og boolske inputs) og derefter definere implementeringslogik i blokdefinitions-stakken.
+I editoren **Opret blok** bestemmer du, hvordan din blok ser ud: Tilføj etiketter (**Tilføj etiket**) og input (**Tilføj input**: *tal eller tekst* eller *boolean*). Inde i `definere`-stakken fungerer inputtene som variabler, der indeholder de værdier, der sendes til blokken.
 
-## Hvorfor bruge Mine blokke
+## Hvorfor bruge Mine blokke {#why-use-my-blocks}
 
-- Genanvendelighed: skriv én gang, brug mange gange.
-- Læsbarhed: erstat lange gentagne blokke med ét meningsfuldt navn.
-- Vedligeholdelse: opdatér logik ét sted i stedet for mange kopier.
-- Struktur: opdel store programmer i mindre logiske enheder.
+- Genbrug: skriv én gang, brug mange gange.
+- Læsbarhed: ét meningsfuldt navn i stedet for lange gentagne stakke.
+- Nemme ændringer: ret logikken ét sted i stedet for i hver kopi.
+- Struktur: del et stort program op i små logiske dele.
 
-## Brugsnoter
+## Bemærkninger {#notes}
 
-- Brugerdefinerede blokke er på projektniveau og beregnet til genbrug inden for samme profil-/projektkontekst.
-- Brug beskrivende navne, der forklarer formålet, ikke implementeringsdetaljer.
+- Brugerdefinerede blokke hører til profilen og kan bruges overalt i dens program.
+- Giv blokkene navne, der siger, hvad de gør, ikke hvordan de gør det.
+- En blok, der kalder sig selv, kan køre i ring for evigt; editoren advarer dig om det.

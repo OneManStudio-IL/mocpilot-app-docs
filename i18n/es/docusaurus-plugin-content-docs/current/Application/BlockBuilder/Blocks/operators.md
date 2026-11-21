@@ -5,166 +5,158 @@ title: Operadores
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operadores
+# Operadores {#operators}
 
-Los operadores son bloques de tipo Reporter y Booleano utilizados para cálculos, comparaciones, lógica y procesamiento de texto.
+Los operadores son bloques informadores y booleanos para matemáticas, comparaciones, lógica y texto.
 
-## Operadores aritméticos
+## Matemáticas {#math}
 
-### `Suma` (Principiante) {#block_operator_plus}
+### `… + …` (Principiante) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Devuelve la suma de dos valores.
+Devuelve la suma de dos números.
 
-### `Resta` (Principiante) {#block_operator_minus}
+### `… − …` (Principiante) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Devuelve la resta de dos valores.
+Resta el segundo número del primero.
 
-### `Multiplicar` (Principiante) {#block_operator_multiply}
+### `… × …` (Principiante) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Devuelve el producto de dos valores.
+Devuelve el producto de dos números.
 
-### `Dividir` (Principiante) {#block_operator_divide}
+### `… ÷ …` (Principiante) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Devuelve el resultado de la división de dos valores.
+Divide el primer número entre el segundo.
 
-### `Módulo` (Guru) {#block_operator_modulus}
+### `… por módulo …` (Gurú) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Devuelve el resto de una división.
+Devuelve el resto de dividir el primer número entre el segundo.
 
-### `Redondear` (Guru) {#block_operator_round}
+### `redondear …` (Gurú) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Redondea al entero más cercano (por ejemplo `2.6 -> 3`).
+Redondea un número al entero más cercano (por ejemplo, `2.6` pasa a ser `3`).
 
-### `Función matemática (una entrada)` (Guru) {#block_operator_math_single}
+### `… de …` (Gurú) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Aplica una función matemática de un solo argumento.
-
-Funciones disponibles:
+Aplica una función a un número. Los ángulos se expresan en grados.
 
 - `valor absoluto`: valor absoluto
-- `entero menor`: redondear hacia abajo
-- `entero mayor`: redondear hacia arriba
+- `entero menor`: redondear hacia abajo a un número entero
+- `entero mayor`: redondear hacia arriba a un número entero
 - `raíz cuadrada`: raíz cuadrada
-- `sin`: seno
-- `cos`: coseno
-- `tan`: tangente
-- `asin`: arcoseno
-- `acos`: arcocoseno
-- `atan`: arcotangente
+- `sin`, `cos`, `tan`: seno, coseno y tangente de un ángulo
+- `asin`, `acos`, `atan`: las funciones inversas; devuelven un ángulo
 - `ln`: logaritmo natural (base `e`)
-- `log`: logaritmo base `10`
-- `e^`: `e` elevado a la potencia
-- `10^`: `10` elevado a la potencia
+- `log`: logaritmo en base 10
+- `e^`: `e` elevado al número
+- `10^`: `10` elevado al número
 
-### `Función matemática (dos entradas)` (Guru) {#block_operator_math_pair}
+### `… de … y …` (Gurú) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Aplica una función matemática de dos argumentos.
+Aplica una función a dos números.
 
-Funciones disponibles:
+- `mín`: el menor de los dos
+- `máx`: el mayor de los dos
+- `potencia`: el primer número elevado al segundo
+- `atan2`: el ángulo del punto definido por los dos números
+- `hypot`: la longitud de la hipotenusa con estos dos catetos
+- `copysign`: el primer número con el signo del segundo
 
-- `mín`: menor valor
-- `máx`: mayor valor
-- `potencia`: potencia
-- `atan2`: ángulo a partir de X/Y
-- `hypot`: hipotenusa
-- `copysign`: valor con signo de otro
-
-### `Número aleatorio` (Guru) {#block_operator_pick_random}
+### `elegir aleatorio … a …` (Gurú) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Devuelve un número aleatorio dentro del rango seleccionado.
+Devuelve un número aleatorio entre los dos valores.
 
-## Operadores de comparación
+## Comparación {#comparison}
 
-### `Igual` (Principiante) {#block_operator_equal}
+### `… = …` (Principiante) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Devuelve `true` si los valores son iguales.
+Devuelve `true` cuando los dos valores son iguales.
 
-### `Distinto` (Avanzado) {#block_operator_not_equal}
+### `… ≠ …` (Avanzado) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Devuelve `true` si los valores son diferentes.
+Devuelve `true` cuando los dos valores son distintos.
 
-### `Mayor que` (Principiante) {#block_operator_greater_than}
+### `… > …` (Principiante) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Devuelve `true` si el valor izquierdo es mayor.
+Devuelve `true` cuando el valor de la izquierda es mayor que el de la derecha.
 
-### `Menor que` (Principiante) {#block_operator_less_than}
+### `… < …` (Principiante) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Devuelve `true` si el valor izquierdo es menor.
+Devuelve `true` cuando el valor de la izquierda es menor que el de la derecha.
 
-### `Está entre` (Avanzado) {#block_operator_is_in_between}
+### `está … entre … y …` (Avanzado) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Devuelve `true` si el valor está dentro del rango.
+Devuelve `true` cuando el número está entre los dos límites.
 
-## Operadores lógicos
+## Lógica {#logic}
 
-### `Y` (Avanzado) {#block_operator_and}
+### `… y …` (Avanzado) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Devuelve `true` solo si ambas condiciones son verdaderas.
+Devuelve `true` solo cuando ambas condiciones se cumplen.
 
-### `O` (Avanzado) {#block_operator_or}
+### `… o …` (Avanzado) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Devuelve `true` si al menos una condición es verdadera.
+Devuelve `true` cuando se cumple al menos una de las condiciones.
 
-### `No` (Avanzado) {#block_operator_not}
+### `no …` (Avanzado) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Invierte un valor booleano.
+Convierte `true` en `false` y `false` en `true`.
 
-## Operadores de texto
+## Texto {#text}
 
-### `Unir` (Avanzado) {#block_operator_join}
+### `unir … …` (Avanzado) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Concatena dos textos.
+Une dos fragmentos de texto en uno.
 
-### `Letra en` (Guru) {#block_operator_letter_at}
+### `letra … de …` (Gurú) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Devuelve el carácter en una posición específica.
+Devuelve la letra de la posición indicada del texto. La primera letra es la número 1.
 
-### `Longitud de texto` (Avanzado) {#block_operator_size_of_string}
+### `longitud de …` (Avanzado) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Devuelve la longitud del texto.
+Devuelve el número de caracteres del texto.
 
-### `Texto contiene` (Guru) {#block_operator_string_contains}
+### `… contiene …` (Gurú) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Devuelve `true` si el texto contiene una subcadena.
+Devuelve `true` cuando el primer texto contiene el segundo.

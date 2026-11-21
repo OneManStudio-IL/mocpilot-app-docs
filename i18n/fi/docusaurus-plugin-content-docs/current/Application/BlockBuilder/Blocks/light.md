@@ -5,140 +5,121 @@ title: Valo
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Valo
+# Valo {#light}
 
-Tällä sivulla kuvataan Valo-kategorian lohkot, joita käytetään LEDien ja valojen ohjaamiseen tuetuissa hubeissa.
+Valolohkot ohjaavat hubin tilavaloa, portteihin kytkettyjä valoja ja tuettujen hubien valomatriisia. Luokka näkyy, kun jossakin profiilin hubissa on jotain sytytettävää.
 
-## Yleiset valolohkot
+## Hubin ja porttien valot {#hub-and-port-lights}
 
-### `Aseta LED-väri` (Aloittelija) {#block_hubs_all_light_set_led_color}
+### `aseta LED-väri …` (Aloittelija) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Asettaa hubin LEDin värin valmiista vaihtoehdoista.
+Asettaa hubin tilavalon värin.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: tilan näyttäminen (valmis, käynnissä, varoitus, virhe)
+- Hubit: LEGO Powered Up -hubit (myös Technic Move Hub), WeDo 2.0 ja MINDSTORMS Robot Inventor -hubi.
+- Tyypillinen käyttö: mallin tilan näyttäminen (valmis, käynnissä, varoitus, virhe).
 
-### `Aseta valo` (Aloittelija) {#block_hubs_all_light_light_turn_to}
+### `käynnistä kohdassa … % kirkkaus` (Aloittelija) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Asettaa valitun valon kirkkauden tai arvon.
+Sytyttää valittuun porttiin kytketyt valot annetulla kirkkaudella.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: ajovalot, tilan kirkkaus
+- Hubit: kaikki hubit, joissa on portteja, paitsi WeDo 2.0.
+- Tyypillinen käyttö: ajovalot, säädettävä valaistus.
 
-### `Sammuta valo` (Aloittelija) {#block_hubs_all_light_light_turn_off}
+### `sammuta` (Aloittelija) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Sammuttaa valitun valon.
+Sammuttaa valittuun porttiin kytketyt valot.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: sammutus, virransäästö
+- Hubit: samat kuin lohkolla **käynnistä kohdassa … % kirkkaus**.
 
-### `Technic Move aseta valo` (Aloittelija) {#block_hubs_technicmove_light_light_turn_to}
+### `kytke valot päälle …` (Aloittelija) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-`Aseta valo` -lohkon versio Technic Move -hubille.
+Sytyttää tai sammuttaa Technic Move Hubin valot.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: Move-hubin valon säätö
+- Vaihtoehdot: `pois`, `käytössä`
+- Hubit: Technic Move Hub.
 
-## Sisäisen LED-matriisin lohkot
+## Valomatriisi {#light-matrix}
 
-### `Kytke valomatriisi päälle` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_image}
+Nämä lohkot toimivat MINDSTORMS Robot Inventor -hubin sisäänrakennetun 5×5-valomatriisin kanssa.
+
+### `kytke päälle …` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Näyttää valitun kuvan hubin sisäisessä LED-matriisissa ja jatkaa heti pinon seuraavaan lohkoon. Kuva pysyy näytöllä, kunnes toinen lohko muuttaa sisäistä LED-matriisia tai ohjelma pysähtyy.
+Näyttää valitun kuvan valomatriisissa ja siirtyy heti seuraavaan lohkoon. Kuva pysyy, kunnes jokin toinen lohko muuttaa matriisia tai ohjelma pysähtyy.
 
-- Tyyppi: komentolohko
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
-
-### `Kirjoita valomatriisiin` (Aloittelija) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `kirjoita …` (Aloittelija) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Näyttää tekstijonon hubin sisäisessä LED-matriisissa vierittämällä yhden kirjaimen kerrallaan.
+Vierittää tekstin valomatriisin poikki kirjain kerrallaan.
 
-- Tyyppi: komentolohko
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
-
-### `Sammuta matriisin pikselit` (Aloittelija) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `sammuta pikselit` (Aloittelija) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Sammuttaa kaikki valot hubin sisäisestä LED-matriisista.
+Sammuttaa valomatriisin kaikki pikselit.
 
-- Tyyppi: komentolohko
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
-
-### `Aseta matriisin pikseli` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `aseta pikseli … x … y … kirkkaus …` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Asettaa yhden pikselin kirkkauden hubin sisäisessä LED-matriisissa. Vain valittu pikseli päivitetään; muu näyttö säilyy ennallaan. Pikselin sijaintikentät käyttävät sarake- ja riviarvoja, ja pikseli `1, 1` on vasemmassa yläkulmassa.
+Asettaa yhden pikselin kirkkauden; muu matriisi pysyy ennallaan. `x` on sarake ja `y` rivi; pikseli `1, 1` on vasemmassa yläkulmassa.
 
-- Tyyppi: komentolohko
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
-
-### `Kierrä matriisin suuntaa` (Edistynyt) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `kierrä suuntaa …` (Edistynyt) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Kiertää hubin sisäisessä LED-matriisissa näkyvän sisällön suuntaa myötä- tai vastapäivään. Jokainen kierto muuttaa näytön suuntaa 90 astetta ja vaikuttaa sen jälkeen ajettaviin Valo-lohkoihin.
+Kiertää valomatriisin kuvaa 90 astetta myötä- tai vastapäivään. Uusi suunta koskee sen jälkeen suoritettavia Valo-lohkoja.
 
-- Tyyppi: komentolohko
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
-
-### `Aseta matriisin suunta` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `aseta suunta …` (Edistynyt) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Asettaa hubin sisäisessä LED-matriisissa näkyvän sisällön suunnan. Oletussuunta on pystyssä, ja valittu suunta vaikuttaa sen jälkeen ajettaviin Valo-lohkoihin.
+Asettaa valomatriisin kuvan suunnan. Oletuksena se on `oikein päin`; uusi suunta koskee sen jälkeen suoritettavia Valo-lohkoja.
 
-- Tyyppi: komentolohko
-- Asentovaihtoehdot: `pystyssä`, `vasen`, `oikea`, `ylösalaisin`
-- Huomautus: valitussa hubissa on oltava sisäinen LED-matriisi.
+- Vaihtoehdot: `oikein päin`, `vasen`, `oikea`, `ylösalaisin`
 
-## Etäisyysanturin valolohkot
+## Etäisyysanturin valot {#distance-sensor-lights}
 
-### `Sytytä etäisyysanturi` (Aloittelija) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `sytytä …` (Aloittelija) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Asettaa valot valitussa etäisyysanturissa. Lohko voi sytyttää tai sammuttaa yksittäisiä anturin valoja ja käyttää listaraportterilohkoa kunkin valon kirkkauden ohjaamiseen.
+Ohjaa valitussa portissa olevan etäisyysanturin ”silmien” ympärillä olevia valoja. Voit sytyttää tai sammuttaa jokaisen valon tai asettaa paikkaan listan, jolla määrität kunkin valon kirkkauden.
 
-- Tyyppi: komentolohko
-- Huomautus: saatavilla vain MINDSTORMS Robot Inventor -hubille.
+- Hubit: MINDSTORMS Robot Inventor.
 
-## BuWizz 3 -valolohkot
+## BuWizz 3:n porttien LEDit {#buwizz-3-port-leds}
 
-### `BuWizz 3 aseta LED-väri` (Aloittelija) {#block_hubs_buwizz3_light_port_set_led_color}
+Nämä lohkot asettavat BuWizz 3:n portin vieressä olevan LEDin värin.
+
+### `aseta portin LED-väri …` (Aloittelija) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Asettaa LED-värin valitussa BuWizz 3 -portissa.
+Asettaa portin LEDiin jonkin valmiista väreistä.
 
-- Tyyppi: komentolohko
-
-### `BuWizz 3 aseta LED-väri (teksti)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Asettaa LED-värin tekstiarvon avulla.
-
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: dynaamiset värit muuttujista
-
-### `BuWizz 3 aseta LED-väri (RGB)` (Edistynyt) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `aseta portin LED-väri … … …` (RGB) (Edistynyt) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Asettaa LED-värin RGB-arvoilla.
+Asettaa portin LEDin värin punaisen, vihreän ja sinisen arvoista.
 
-- Tyyppi: komentolohko
-- Tyypillinen käyttö: tarkka väriohjaus ja gradientit
+- Tyypillinen käyttö: mikä tahansa haluamasi väri, pehmeät värinvaihdot.
+
+### `aseta portin LED-väri merkkijonosta …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Asettaa portin LEDin värin tekstistä.
+
+- Tyypillinen käyttö: värin ottaminen muuttujasta tai listasta.

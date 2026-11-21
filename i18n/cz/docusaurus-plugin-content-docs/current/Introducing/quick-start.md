@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Rychlý úvodní návod
+title: Rychlý start
+description: "Nainstalujte MOCPilot, přihlaste se, vytvořte první profil a za pár minut řiďte model."
 ---
 
-# Rychlý start
+import Screenshot from '@site/src/components/Screenshot';
 
-Tento návod vám pomůže začít s MOCPilotem poprvé.
+# Rychlý start {#quick-start}
 
-## 1. Přihlášení nebo vytvoření účtu
+Tento návod vás provede od instalace aplikace až k řízení prvního modelu. Potřebujete podporovaný hub s motorem; viz [Podporovaná zařízení](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. Nainstalujte aplikaci {#1-install-the-app}
 
-Doporučujeme používat účet.
+MOCPilot je k dispozici v App Storu (iPhone, iPad, Mac), na Google Play (Android) a v Microsoft Storu (Windows). Odkazy najdete na [mocpilot.com](https://mocpilot.com).
 
-- S účtem se vaše profily a nastavení synchronizují mezi zařízeními.
-- Bez účtu jsou data uložena pouze v aktuálním zařízení.
-- Po přeinstalaci aplikace v režimu bez účtu o profily i nastavení přijdete.
+## 2. Přihlaste se, nebo pokračujte bez účtu {#2-sign-in-or-continue-without-an-account}
 
-Možnost **Continue without an account** je dostupná, ale pro běžné použití ji nedoporučujeme.
+Při prvním spuštění vás aplikace požádá o přihlášení. Použijte e-mail nebo přihlašovací jméno a heslo, Google nebo Apple ID, případně si vytvořte nový účet.
 
-## 2. Hlavní menu
+<Screenshot name="sign-in" alt="Přihlašovací obrazovka MOCPilotu" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Účet doporučujeme:
 
-Spodní navigace má 3 hlavní části:
+- vaše profily a nastavení se ukládají na server a synchronizují mezi vašimi zařízeními;
+- když zařízení vyměníte nebo ztratíte, můžete svá data získat zpět;
+- nákupy a MocPilot Pro fungují na všech vašich zařízeních.
 
-- **Profiles**: předpřipravené a vlastní profily.
-- **Settings**: nastavení aplikace a účtu.
-- **Help**: podpora, zpětná vazba a oficiální odkazy.
+Funguje i **Pokračovat bez účtu**, ale pak všechno zůstane jen v tomto zařízení a po odinstalování aplikace o to přijdete. Přihlásit se můžete později v **Nastavení → Účet**. Viz [Účet](/docs/Application/Account/UserAccount).
 
-## 3. Důležitá nastavení
+## 3. Zorientujte se {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- Na **telefonu** obsahuje spodní lišta **Profily**, **Nastavení** a **Nápověda** (a po přihlášení **Oznámení**).
+- Na **tabletu** jsou stejné sekce, **Katalog profilů** a váš účet v bočním panelu.
+- Na **počítači** použijte horní lištu: nabídky vlevo; Účet, Oznámení a Nastavení vpravo.
 
-V **Settings** můžete spravovat:
+Viz [Telefon, tablet a počítač](/docs/Introducing/Layouts).
 
-- zvuk a vibrace
-- ponechat obrazovku zapnutou
-- jazyk
-- tmavý režim
-- účet a synchronizaci
+## 4. Vytvořte profil {#4-create-a-profile}
 
-## 4. Předpřipravené profily
+1. Na stránce **Moje profily** klepněte na **+** → **Nový profil** (telefon), nebo zvolte **Nový profil** (tablet a počítač, případně **Soubor → Nový profil**).
+2. Zvolte **typ programu**:
+   - **Rychlá propojení**, pokud chcete řídit model bez kódu. Nejlepší pro první pokus.
+   - **Logické bloky**, pokud chcete události, cykly, podmínky a senzory.
+3. Zadejte **název** a případně přidejte obrázek.
+4. Klepněte na **Vytvořit**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Stránka Nový profil s dlaždicemi Logické bloky a Rychlá propojení" width={900} />
 
-**Prebuilt** profily můžete použít pro:
+Profil se otevře v editoru. Více v článku [Vytvoření profilu](/docs/Application/Profiles/CreateProfile).
 
-- rychlé ovládání LEGO a dalších oficiálních setů
-- naučení technik z hotových blokových programů
-
-:::warning Important
-Předpřipravené profily lze upravovat pro testování, ale změny se neukládají. Při dalším otevření se profil obnoví do původního stavu.
+:::tip Chcete hotový model?
+Otevřete **Katalog profilů** (**Hledat online** na stránce profilů) a nainstalujte oficiální profil pro svou stavebnici. Viz [Katalog a publikování](/docs/Application/Profiles/Catalog).
 :::
 
-Postup pro předpřipravený profil:
+## 5. Přidejte hub {#5-add-your-hub}
 
-1. Otevřete požadovaný profil.
+1. V editoru otevřete **Moje huby**.
+2. Ve volném slotu klepněte na **Přidat nový hub**, zvolte model hubu a klepněte na **Přidat**.
+3. Zapněte hub, stiskněte jeho tlačítko a počkejte, až ho MOCPilot najde.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Stránka Moje huby se sloty pro huby" width={900} />
 
-2. Připojte hub.
+Pokud aplikace požádá o aktualizaci firmwaru, postupujte podle článku [Aktualizace firmwaru](/docs/Application/Hubs/FirmwareUpdating). Více v článku [Přidání a připojení hubu](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Rozmístěte ovládací prvky na panel {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Otevřete **Panel**.
+2. Klepněte na **+** (**Přidat ovladač**), zvolte **Joystick** a klepněte na **Přidat na panel**.
+3. Přetáhněte ho, kam potřebujete. Klepnutím na něj změníte jeho velikost, barvu nebo chování.
 
-3. Otevřete dashboard a stiskněte **Play**.
+<Screenshot name="controller-palette" alt="Paleta Přidat ovladač s vybraným joystickem" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Viz [Přidání a uspořádání ovládacích prvků](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Vlastní profily
+## 7. Propojte ovládací prvek s motorem {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Rychlá propojení:** přetáhněte vstup joysticku (například *JOY1 Osa Y*) ze sekce **Vstupy** do prázdného řádku, přidejte operaci **Motor** a výstup **Hub** ze sekce **Výstupy** a pak klepněte na port, do kterého je zapojený motor. Řádek je připravený, když nemá červený rámeček. Viz [Rychlá propojení](/docs/Application/Links/LinksIntroducing).
 
-V **My** profilech vytváříte vlastní řešení.
+**Logické bloky:** přidejte blok *když program začne*, cyklus *opakovat vždy* a blok *nastavit rychlost na*, který přebírá hodnotu joysticku. Viz [Logické bloky](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) a [příklady](/docs/Application/BlockBuilder/Examples).
 
-- Můžete vytvořit libovolný počet profilů.
-- Profil lze spustit přímo z této stránky.
+## 8. Stiskněte Spustit {#8-press-run}
 
-Postup pro vlastní profil:
+Stiskněte **Spustit** (▶). Pohněte joystickem a motor se roztočí. Stisknutím **Zastavit** se vrátíte k úpravám.
 
-1. Vytvořte nebo importujte profil.
+A je to. Co dál:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Můžete vytvořit nový profil nebo importovat existující soubor profilu (`.dat`) ze zařízení.
-:::
-
-2. Vytvořte nový profil.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Zadejte název profilu. Volitelně můžete z galerie vybrat obrázek profilu.
-
-3. Přidejte huby do profilu.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Ve výchozím stavu lze k profilu přidat až **2** huby. Pro rozšíření až na **5** je nutné dokoupit další sloty.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Otevřete stránku programu a vytvořte požadovanou logiku propojením bloků.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Otevřete dashboard a přidejte ovladače propojené s motory hubu.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Stiskněte **Play** pro spuštění profilu.
-
-Teď můžete jezdit a profil dál vylepšovat.
-
-## 6. Když potřebujete pomoc
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-Na stránce **Help** můžete:
-
-- otevřít rychlý návod
-- položit otázku
-- nahlásit chybu
-- otevřít oficiální odkazy a komunitní kanály MOCPilot
+- Seznamte se se všemi [typy ovládacích prvků](/docs/Application/Dashboard/ControlTypes).
+- Dejte panelu nový vzhled pomocí [motivů](/docs/Application/Themes/ThemesOverview).
+- Připojte [herní ovladač](/docs/Application/Dashboard/Gamepad).
+- Pokud něco nefunguje, podívejte se do článku [Řešení problémů](/docs/Help/Troubleshooting).

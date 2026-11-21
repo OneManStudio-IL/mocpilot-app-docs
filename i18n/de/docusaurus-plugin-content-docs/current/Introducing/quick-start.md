@@ -1,131 +1,91 @@
 ---
 id: QuickStart
-title: Schnellstart-Anleitung
+title: Schnellstart
+description: "MOCPilot installieren, anmelden, das erste Profil erstellen und in wenigen Minuten ein Modell steuern."
 ---
 
-# Schnellstart
+import Screenshot from '@site/src/components/Screenshot';
 
-Diese Anleitung hilft dir beim ersten Start mit MOCPilot.
+# Schnellstart {#quick-start}
 
-## 1. Anmelden oder Konto erstellen
+Diese Anleitung führt Sie von der Installation der App bis zum Steuern Ihres ersten Modells. Sie benötigen einen unterstützten Hub mit einem Motor; siehe [Unterstützte Geräte](/docs/Introducing/SupportedDevices).
 
-<img src={require('@site/static/img/quick-start/sign-in.png').default} alt="Sign in screen" width="420" />
+## 1. App installieren {#1-install-the-app}
 
-Wir empfehlen dringend, ein Konto zu verwenden.
+MOCPilot gibt es im App Store (iPhone, iPad, Mac), bei Google Play (Android) und im Microsoft Store (Windows). Die Links finden Sie auf [mocpilot.com](https://mocpilot.com).
 
-- Mit Konto werden Profile und Einstellungen zwischen deinen Geräten synchronisiert.
-- Ohne Konto bleiben die Daten nur auf dem aktuellen Gerät.
-- Bei einer Neuinstallation im Modus ohne Konto gehen Profile und Einstellungen verloren.
+## 2. Anmelden oder ohne Konto fortfahren {#2-sign-in-or-continue-without-an-account}
 
-Du kannst **Continue without an account** verwenden, für die regelmäßige Nutzung ist das aber nicht empfohlen.
+Beim ersten Start fordert die App Sie zur Anmeldung auf. Melden Sie sich mit E-Mail oder Login und Passwort, mit Google oder Apple ID an, oder erstellen Sie ein neues Konto.
 
-## 2. Hauptmenü verstehen
+<Screenshot name="sign-in" alt="Der Anmeldebildschirm von MOCPilot" width={900} />
 
-<img src={require('@site/static/img/quick-start/bottom-navigation.jpeg').default} alt="Bottom navigation menu with Profiles, Settings, and Help" width="420" />
+Wir empfehlen ein Konto:
 
-Die untere Navigation hat 3 Hauptbereiche:
+- Ihre Profile und Einstellungen werden auf dem Server gespeichert und zwischen Ihren Geräten synchronisiert;
+- Sie erhalten Ihre Daten zurück, wenn Sie ein Gerät ersetzen oder verlieren;
+- Käufe und MocPilot Pro funktionieren auf all Ihren Geräten.
 
-- **Profiles**: vorgefertigte und eigene Profile.
-- **Settings**: App- und Kontoeinstellungen.
-- **Help**: Support, Feedback und offizielle Links.
+**Ohne Konto fortfahren** geht auch, dann bleibt aber alles nur auf diesem Gerät und geht verloren, wenn Sie die App entfernen. Sie können sich später unter **Einstellungen → Konto** anmelden. Siehe [Konto](/docs/Application/Account/UserAccount).
 
-## 3. Wichtige Einstellungen prüfen
+## 3. Sich zurechtfinden {#3-find-your-way-around}
 
-<img src={require('@site/static/img/quick-start/settings-main.png').default} alt="Settings page" width="420" />
+- Auf einem **Smartphone** enthält die untere Leiste **Profile**, **Einstellungen** und **Hilfe** (und **Benachrichtigungen**, sobald Sie angemeldet sind).
+- Auf einem **Tablet** finden Sie dieselben Bereiche, den **Profilkatalog** und Ihr Konto in der Seitenleiste.
+- Auf einem **Computer** verwenden Sie die obere Leiste: links die Menüs, rechts Konto, Benachrichtigungen und Einstellungen.
 
-In **Settings** kannst du verwalten:
+Siehe [Smartphone, Tablet und Desktop](/docs/Introducing/Layouts).
 
-- Ton und Vibration
-- Bildschirm aktiv halten
-- Sprache
-- Dunkelmodus
-- Konto- und Sync-Optionen
+## 4. Profil erstellen {#4-create-a-profile}
 
-## 4. Vorgefertigte Profile
+1. Tippen Sie auf der Seite **Meine Profile** auf **+** → **Neues Profil** (Smartphone) oder wählen Sie **Neues Profil** (Tablet und Computer, oder **Datei → Neues Profil**).
+2. Wählen Sie den **Programmtyp**:
+   - **Schnellverknüpfungen**, wenn Sie ein Modell ganz ohne Code steuern möchten. Ideal für den ersten Versuch.
+   - **Logikblöcke**, wenn Sie Ereignisse, Schleifen, Bedingungen und Sensoren nutzen möchten.
+3. Geben Sie einen **Namen** ein und fügen Sie bei Bedarf ein Bild hinzu.
+4. Tippen Sie auf **Erstellen**.
 
-<img src={require('@site/static/img/quick-start/prebuilt-profiles.png').default} alt="Prebuilt profiles" width="420" />
+<Screenshot name="create-profile-tiles" alt="Seite „Neues Profil“ mit den Kacheln Logikblöcke und Schnellverknüpfungen" width={900} />
 
-Nutze **Prebuilt** Profile, um:
+Das Profil wird im Editor geöffnet. Mehr dazu unter [Ein Profil erstellen](/docs/Application/Profiles/CreateProfile).
 
-- LEGO und andere offizielle Sets schnell zu steuern
-- Techniken aus fertigen Blockprogrammen zu lernen
-
-:::warning Important
-Vorgefertigte Profile können zu Testzwecken geändert werden, aber Änderungen werden nicht gespeichert. Beim nächsten Öffnen wird das Profil zurückgesetzt.
+:::tip Lieber ein fertiges Modell?
+Öffnen Sie den **Profilkatalog** (**Online suchen** auf der Profilseite) und installieren Sie ein offizielles Profil für Ihr Set. Siehe [Katalog und Veröffentlichen](/docs/Application/Profiles/Catalog).
 :::
 
-Ablauf für ein vorgefertigtes Profil:
+## 5. Hub hinzufügen {#5-add-your-hub}
 
-1. Gewünschtes Prebuilt-Profil öffnen.
+1. Öffnen Sie im Editor **Meine Hubs**.
+2. Tippen Sie in einem freien Slot auf **Neuen Hub hinzufügen**, wählen Sie Ihr Hub-Modell und tippen Sie auf **Hinzufügen**.
+3. Schalten Sie den Hub ein, drücken Sie seine Taste und warten Sie, bis MOCPilot ihn findet.
 
-<img src={require('@site/static/img/quick-start/prebuilt-blocks.png').default} alt="Prebuilt profile with advanced block program" width="1100" />
+<Screenshot name="my-hubs" alt="Seite „Meine Hubs“ mit Hub-Slots" width={900} />
 
-2. Hub verbinden.
+Falls die App ein Firmware-Update verlangt, folgen Sie [Firmware aktualisieren](/docs/Application/Hubs/FirmwareUpdating). Mehr dazu unter [Einen Hub hinzufügen und verbinden](/docs/Application/Hubs/ConnectingHubs).
 
-<img src={require('@site/static/img/quick-start/connect-hub-flow.png').default} alt="Connect to LEGO Technic Move Hub instructions" width="1100" />
+## 6. Steuerelemente auf dem Dashboard platzieren {#6-place-controls-on-the-dashboard}
 
-<img src={require('@site/static/img/quick-start/hubs-connected.png').default} alt="Bluetooth hub connected and ready" width="1100" />
+1. Öffnen Sie das **Dashboard**.
+2. Tippen Sie auf **+** (**Controller hinzufügen**), wählen Sie einen **Joystick** und tippen Sie auf **Zum Dashboard hinzufügen**.
+3. Ziehen Sie ihn an die gewünschte Stelle. Tippen Sie darauf, um Größe, Farbe oder Verhalten zu ändern.
 
-3. Dashboard auswählen und **Play** drücken.
+<Screenshot name="controller-palette" alt="Palette „Controller hinzufügen“ mit ausgewähltem Joystick" width={900} />
 
-<img src={require('@site/static/img/quick-start/control-screen.png').default} alt="Prebuilt profile control dashboard with steering wheel and pedals" width="1100" />
+Siehe [Steuerelemente hinzufügen und anordnen](/docs/Application/Dashboard/ArrangingControls).
 
-## 5. Eigene Profile
+## 7. Steuerelement mit einem Motor verbinden {#7-connect-the-control-to-a-motor}
 
-<img src={require('@site/static/img/quick-start/my-profiles.png').default} alt="My profiles" width="420" />
+**Schnellverknüpfungen:** Ziehen Sie den Joystick-Eingang (zum Beispiel *JOY1 Y-Achse*) aus **Eingänge** in die leere Zeile, fügen Sie die Aktion **Motor** und den Ausgang **Hub** aus **Ausgänge** hinzu und tippen Sie dann auf den Port, an dem Ihr Motor angeschlossen ist. Die Zeile ist fertig, wenn sie keinen roten Rahmen mehr hat. Siehe [Schnellverknüpfungen](/docs/Application/Links/LinksIntroducing).
 
-In **My** erstellst du deine eigenen Profile.
+**Logikblöcke:** Fügen Sie einen Block *wenn das Programm startet*, eine Schleife *immer wiederholen* und einen Block *Geschwindigkeit einstellen auf* hinzu, der den Joystick-Wert übernimmt. Siehe [Logikblöcke](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) und die [Beispiele](/docs/Application/BlockBuilder/Examples).
 
-- Du kannst beliebig viele eigene Profile anlegen.
-- Ein Profil kann direkt von dieser Seite gestartet werden.
+## 8. Start drücken {#8-press-run}
 
-Ablauf für ein eigenes Profil:
+Drücken Sie **Start** (▶). Bewegen Sie den Joystick, und der Motor dreht sich. Mit **Stopp** kehren Sie zum Bearbeiten zurück.
 
-1. Profil erstellen oder importieren.
+Das war's. Als Nächstes:
 
-<img src={require('@site/static/img/quick-start/user-create-or-import.jpg').default} alt="Create new or import profile menu" width="420" />
-
-:::info Important
-Du kannst ein neues Profil erstellen oder eine vorhandene Profildatei (`.dat`) von deinem Gerät importieren.
-:::
-
-2. Neues Profil erstellen.
-
-<img src={require('@site/static/img/quick-start/user-create-page.png').default} alt="Create my own profile page" width="420" />
-
-Gewünschten Profilnamen eingeben. Optional kannst du ein Bild aus deiner Galerie auswählen.
-
-3. Hubs zum Profil hinzufügen.
-
-<img src={require('@site/static/img/quick-start/user-hubs-page.png').default} alt="My Bluetooth hubs page for user profile" width="1100" />
-
-:::info Important
-Standardmäßig können bis zu **2** Hubs hinzugefügt werden. Für bis zu **5** Hubs müssen zusätzliche Slots gekauft werden.
-:::
-
-<img src={require('@site/static/img/quick-start/user-hub-selection.png').default} alt="Hub selection page" width="1100" />
-
-<img src={require('@site/static/img/quick-start/user-hub-connecting.png').default} alt="Hub connecting screen" width="1100" />
-
-4. Programmseite öffnen und gewünschte Logik durch Verbinden von Blöcken erstellen.
-
-<img src={require('@site/static/img/quick-start/user-program-blocks.png').default} alt="User profile program page with connected blocks" width="1100" />
-
-5. Dashboard öffnen und On-Screen-Controller hinzufügen, die mit Hub-Motoren verbunden sind.
-
-<img src={require('@site/static/img/quick-start/user-dashboard-controllers.png').default} alt="User profile dashboard with controllers" width="1100" />
-
-6. Mit **Play** Profil starten.
-
-Du kannst jetzt fahren und dein Profil weiter verbessern.
-
-## 6. Hilfe
-
-<img src={require('@site/static/img/quick-start/help-page.png').default} alt="Help page" width="420" />
-
-Auf der **Help**-Seite kannst du:
-
-- das Quick-Start-Tutorial öffnen
-- eine Frage stellen
-- einen Fehler melden
-- offizielle MOCPilot-Links und Community-Kanäle öffnen
+- Lernen Sie alle [Steuerelementtypen](/docs/Application/Dashboard/ControlTypes) kennen.
+- Geben Sie dem Dashboard mit [Themes](/docs/Application/Themes/ThemesOverview) ein neues Aussehen.
+- Verbinden Sie ein [Gamepad](/docs/Application/Dashboard/Gamepad).
+- Wenn etwas nicht funktioniert, lesen Sie [Fehlerbehebung](/docs/Help/Troubleshooting).

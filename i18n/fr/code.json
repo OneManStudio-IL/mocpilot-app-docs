@@ -465,7 +465,7 @@
     "message": "Commencer"
   },
   "Supported devices": {
-    "message": "Appareils supportés"
+    "message": "Appareils compatibles"
   },
   "Download the MOCPilot": {
     "message": "Télécharger MOCPilot"
@@ -486,11 +486,11 @@
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "supportedDevices.largeHub.notAvailableIOS": {
-    "message": "Non disponible sur iOS",
+    "message": "Non disponible sur iPhone et iPad",
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(s’ouvre dans un nouvel onglet)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
@@ -598,5 +598,45 @@
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Créez des profils personnalisés pour contrôler LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, les moteurs, les capteurs et les appareils Bluetooth compatibles depuis une seule application puissante."
+  },
+  "howItWorks.profile": {
+    "message": "Profil = un modèle",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Tableau de bord",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "commandes à l’écran",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Programme",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Blocs logiques ou Liens rapides",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Hubs",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "moteurs, lumières, capteurs",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Manette de jeu",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ « Lancer » exécute le programme",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "via Bluetooth",
+    "description": "How it works diagram"
   }
 }

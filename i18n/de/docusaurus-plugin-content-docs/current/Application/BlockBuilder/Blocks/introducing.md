@@ -1,152 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Einführung In Blöcke
+title: Logikblöcke im Überblick
+description: "Logikblöcke ist der visuelle Blockprogrammier-Editor von MOCPilot: Ereignisse, Schleifen, Bedingungen, Variablen, Sensoren und Töne."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Einführung In Blöcke
+# Logikblöcke {#logic-blocks}
 
-MOCPilot verwendet ein visuelles Block-Programmiersystem, das Scratch ähnlich ist.
-Jeder Block hat eine bestimmte Rolle, und gültige Kombinationen definieren den Kontroll- und Datenfluss im Skript.
-Per Drag-and-Drop und Scratch-ähnlichen Interaktionsmustern lassen sich Programme bequem und vertraut erstellen.
+**Logikblöcke** ist der Editor für Blockprogrammierung in MOCPilot. Sie erstellen Programme, indem Sie Blöcke zusammenstecken, ganz ähnlich wie in Scratch: Ereignisse, Schleifen, Bedingungen, Variablen, Listen, eigene Blöcke, Töne sowie Blöcke für Motoren, Lichter, Sensoren, Dashboard-Steuerelemente und das Gamepad.
 
-:::warning Kompatibilitätshinweis
-Dies ist ein anderes Blocksystem mit eigenem Blocksatz und eigenem Verhalten.
-MOCPilot-Programme sind nicht mit Scratch-Projekten kompatibel: MOCPilot-Programme können nicht in Scratch importiert werden, und Scratch-Programme können nicht in MOCPilot importiert werden.
+Wählen Sie Logikblöcke, wenn Ihr Modell Logik braucht: Roboter, automatische Abläufe, Reaktionen auf Sensoren, Startprüfungen, Spiele. Wenn Sie nur Steuerelemente mit Motoren verbinden möchten, sind [Schnellverknüpfungen](/docs/Application/Links/LinksIntroducing) schneller.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Programm in den Logikblöcken" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Kein Scratch
+Logikblöcke hat einen eigenen Blocksatz und ein eigenes Verhalten. Sie können MOCPilot-Programme nicht in Scratch importieren und Scratch-Projekte nicht in MOCPilot.
 :::
 
-## Blockformen und Bedeutung
+## Der Editor auf einen Blick {#the-editor-at-a-glance}
 
-### Hutblöcke
+<Screenshot name="blocks-editor" alt="Editor der Logikblöcke mit Palette und einem Programm" width={900} />
+
+- Die **Palette** listet die Blockkategorien auf: **Ereignisse**, **Steuerung**, **Sensoren**, **Töne**, **Operator**, **Variablen**, **Listen** und **Meine Blöcke**. Weitere Kategorien erscheinen, wenn Ihr Profil sie braucht: **Motoren** und **Licht** (wenn ein Hub sie unterstützt), **Simulator** (wenn das Dashboard Pedale, ein Getriebe oder eine Handbremse hat), **Bildschirm-Controller** und **Gamepad**.
+- Im **Programmbereich** ziehen Sie Blöcke hinein und bauen Skripte.
+- Die obere Leiste enthält **Meine Hubs**, **Dashboard**, **Gamepad**, **Monitor**, **Editor-Einstellungen**, den **KI-Builder** und **Start/Stopp**.
+
+Einzelheiten unter [Arbeiten im Editor](/docs/Application/BlockBuilder/Editor).
+
+## Wie ein Programm abläuft {#how-a-program-runs}
+
+- Ein Skript beginnt mit einem **Ereignis**-Block (einem Hutblock): *wenn das Programm startet*, *wenn der Knopf … gedrückt*, *wenn ich erhalte …* und so weiter.
+- Die darunter angehängten Blöcke laufen von oben nach unten.
+- Mehrere Skripte laufen **gleichzeitig**. Mit Nachrichten (*übermitteln*) stimmen Sie sie aufeinander ab.
+- **Schleifen** (*immer wiederholen*, *wiederholen*, *wiederholen, solange*) halten ein Skript in Gang; **Bedingungen** (*wenn*, *wenn … sonst*, *warten bis*) treffen Entscheidungen.
+- **Werteblöcke** (abgerundet) liefern Werte und passen in die Eingabefelder anderer Blöcke; **boolesche** Blöcke (spitz) liefern wahr oder falsch für Bedingungen.
+- **Variablen** und **Listen** speichern Werte zwischen Blöcken und Skripten.
+
+## Blockformen {#block-shapes}
+
+### Hutblöcke {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Starten ein Skript, wenn ein bestimmtes Ereignis eintritt. Blöcke können nur darunter angehängt werden.
+Starten ein Skript, wenn etwas passiert. Blöcke können nur darunter angehängt werden.
 
 ---
 
-### Stapelblöcke
+### Stapelblöcke {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Haupt-Befehlsblöcke, die Aktionen ausführen.
+Die wichtigsten Befehlsblöcke: Jeder davon tut etwas.
 
 ---
 
-### C-Blöcke
+### C-Blöcke {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-C-förmige Steuerblöcke mit verschachtelten Blockstapeln (Schleifen/Bedingungen).
+C-förmige Blöcke, die andere Blöcke in sich aufnehmen: Schleifen und Bedingungen.
 
 ---
 
-### Reporterblöcke
+### Werteblöcke {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Geben Werte wie Zahlen oder Text zurück.
+Liefern einen Wert, etwa eine Zahl oder einen Text.
 
 ---
 
-### Boolesche Blöcke
+### Boolesche Blöcke {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Geben nur `true` oder `false` zurück und werden typischerweise in Bedingungen verwendet.
+Liefern nur `true` oder `false`. Sie werden meist in Bedingungen verwendet.
 
 ---
 
-### Endblöcke
+### Abschlussblöcke {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Beenden Skripte und erlauben keine Blöcke darunter.
+Beenden ein Skript: Darunter lässt sich nichts anhängen.
 
 ---
 
-### Blockstapel
+### Blockstapel {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-Ein Blockstapel ist eine Folge verbundener Blöcke, die als ein Skriptfluss von oben nach unten ausgeführt wird.
-Stapel beginnen meist mit einem Ereignisblock und führen dann die angehängten Blöcke der Reihe nach aus.
+Ein Stapel ist eine Gruppe verbundener Blöcke, die als ein Skript von oben nach unten läuft.
+Ein Stapel beginnt meist mit einem Ereignisblock, gefolgt von den Blöcken, die der Reihe nach ausgeführt werden.
 
 ---
 
-## Ausführungsmodell von Skripten
 
-- Ein Skript startet normalerweise mit einem Ereignisblock.
-- Verbundene Stapelblöcke laufen von oben nach unten.
-- Mehrere Skripte können parallel laufen.
-- Nachrichten-/Broadcast-Blöcke werden zur Synchronisierung verwendet.
-- Ein Blockstapel ist eine Folge miteinander verbundener Blöcke.
+## Hubs, Ports und Steuerelemente {#hubs-ports-and-controls}
 
-## Daten und Werte
+- Motor- und Lichtblöcke erhalten einen **Hub** und einen **Port**. Die Kategorien Motoren und Licht erscheinen nur, wenn ein Hub im Profil sie unterstützt, und manche Blöcke gibt es nur für bestimmte Hubs (zum Beispiel die Leistungsmodi des BuWizz oder Funktionen des Technic Move Hub). Die Beschreibung jedes Blocks nennt die Hubs, mit denen er funktioniert.
+- Dashboard-Blöcke verweisen über den Namen auf Steuerelemente (**JOY1**, **BTN2**). Solange Blöcke ein Steuerelement verwenden, können Sie es nicht vom Dashboard löschen; entfernen Sie zuerst diese Blöcke.
+- Gamepad-Blöcke erscheinen, wenn auf der [Gamepad-Seite](/docs/Application/Dashboard/Gamepad) **Gamepad-Blöcke aktivieren** eingeschaltet ist.
 
-- Reporterblöcke können in Befehls-/Bedingungseingaben verschachtelt werden.
-- Variablen speichern wiederverwendbare Werte über Blöcke und Skripte hinweg.
-- Listen speichern geordnete Sammlungen für Verlauf, Warteschlangen und Nachschlagewerte.
+## Blockstufen {#block-levels}
 
-## Ereignisse und Timing
+Jedes Profil hat eine **Blockstufe**: **Anfänger** zeigt die einfachsten Blöcke, **Fortgeschritten** fügt gängige Logik- und Geräteblöcke hinzu, und **Guru** zeigt den vollständigen Satz. Sie wählen sie beim Erstellen des Profils oder später in den Editor-Einstellungen. Diese Referenz zeigt die Stufe jedes Blocks neben seinem Namen.
 
-- Ereignisblöcke reagieren auf Benutzereingaben, Hub-Status, Sensoren oder Nachrichten.
-- Zeitgeber- und sensorbasierte Ereignisse können häufig auslösen.
-- Verwenden Sie Schwellenwerte, Filterung oder kurze Wartezeiten, um wiederholte Auslöser zu reduzieren.
+## Empfohlene Vorgehensweise {#recommended-workflow}
 
-## Hub, Ports und Controller
+1. Beginnen Sie mit einem Ereignisblock und einem kurzen Skript; drücken Sie **Start** und prüfen Sie, ob es funktioniert.
+2. Prüfen Sie Motorrichtungen und Wertebereiche frühzeitig (ein Monitor hilft dabei).
+3. Teilen Sie das Programm in kleine Skripte auf, die über Nachrichten miteinander sprechen; verschieben Sie wiederholte Logik in [Meine Blöcke](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Sorgen Sie für Sicherheit: Grenzen, Stopps, eine Startprüfung und einen Plan für den Fall, dass ein Hub die Verbindung verliert.
 
-- Hub-Blöcke arbeiten im Hub- und Port-Kontext.
-- Einige Blöcke sind nur für bestimmte Hub-Familien/Geräte verfügbar.
-- Dashboard- und Gamepad-Blöcke liefern Laufzeiteingaben und UI-Steuerung.
+## Häufige Fehler {#common-pitfalls}
 
-## Empfohlener Ablauf
+- Ein Skript ohne Ereignisblock startet nie.
+- Der falsche Hub oder Port ist ausgewählt, deshalb passiert sichtbar nichts.
+- Wer Text, Zahlen und boolesche Werte mischt, erhält unerwartete Ergebnisse.
+- Sehr häufige Ereignisse ohne Filterung (zum Beispiel ein Sensorereignis bei jeder winzigen Änderung) können das Programm überlasten; verwenden Sie Schwellenwerte oder kurze Wartezeiten.
 
-1. Beginnen Sie mit einem Ereignisblock und einem minimalen Skript.
-2. Prüfen Sie frühzeitig Richtung und Bereiche von Motoren/Sensoren.
-3. Lagern Sie wiederholte Logik mit Nachrichten und Hilfsskripten aus.
-4. Fügen Sie vor dem finalen Tuning Schutzmechanismen hinzu (Grenzen, Stopps, Fallback-Werte).
+## Blockreferenz {#block-reference}
 
-## Häufige Fehler
+- [Ereignisse](/docs/Application/BlockBuilder/Blocks/Events) · [Steuerung](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Variablen](/docs/Application/BlockBuilder/Blocks/Variables) · [Listen](/docs/Application/BlockBuilder/Blocks/Lists) · [Meine Blöcke](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Motoren](/docs/Application/BlockBuilder/Blocks/Motors) · [Licht](/docs/Application/BlockBuilder/Blocks/Light) · [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors) · [Töne](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Bildschirm-Controller](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Fehlt der Ereignis-Einstiegsblock, startet das Skript nie.
-- Eine falsche Hub-/Port-Auswahl führt zu keinem sichtbaren Effekt.
-- Das Mischen von Werttypen (Text/Zahl/Boolean) kann zu ungültiger Logik führen.
-- Hochfrequente Ereignisse ohne Filterung können das Verhalten überlasten.
+Halten Sie in der App einen Block gedrückt (oder klicken Sie ihn mit der rechten Maustaste an) und wählen Sie **Über den Block**, um seine Beschreibung hier zu öffnen.
 
-## Dokumentationsstruktur in diesem Abschnitt
-
-Verwenden Sie die Kategorieseiten in dieser Reihenfolge:
-
-- Licht
-- Motoren
-- Sensoren
-- Ereignisse
-- Steuerung
-- Operatoren
-- Variablen
-- Listen
-- Meine Blöcke
-- Dashboard-Controller
-- Gamepad
+Fertige Programme: [Beispiele](/docs/Application/BlockBuilder/Examples).

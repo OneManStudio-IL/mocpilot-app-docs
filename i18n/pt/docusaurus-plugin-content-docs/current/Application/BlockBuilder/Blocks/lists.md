@@ -5,74 +5,73 @@ title: Listas
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Listas
+# Listas {#lists}
 
-Listas armazenam coleções ordenadas de valores e são manipuladas por blocos específicos do tipo Repórter e Pilha.
+Uma lista guarda vários valores em ordem. Crie, renomeie e exclua listas com **Criar uma lista**, **Renomear lista** e **Excluir lista** no topo da categoria. Os blocos abaixo aparecem assim que o programa tem pelo menos uma lista. Os itens são numerados a partir de 1.
 
-## Blocos de modificação de listas
+## Alterar uma lista {#changing-a-list}
 
-### `Adicionar valor à lista` (Avançado) {#block_lists_add}
+### `adicionar … para …` (Avançado) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Adiciona um valor ao final da lista selecionada.
+Adiciona um valor ao final da lista.
 
-### `Inserir em` (Guru) {#block_lists_insert_at}
+### `inserir … em … de …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Insere um valor no índice selecionado da lista.
+Insere um valor na posição indicada; os itens seguintes descem uma posição.
 
-### `Substituir em` (Guru) {#block_lists_replace_at}
+### `substituir item … de … com …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Substitui o item no índice selecionado por um novo valor.
+Substitui o item na posição indicada por um novo valor.
 
-### `Excluir` (Avançado) {#block_lists_delete} 
+### `excluir … de …` (Avançado) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Remove o item no índice selecionado (ou conforme o modo de exclusão escolhido).
+Exclui o item na posição indicada.
 
-### `Limpar tudo` (Avançado) {#block_lists_clear_all}
+### `limpar …` (Avançado) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Remove todos os itens da lista selecionada.
+Remove todos os itens da lista.
 
-## Blocos de valor/verificação de listas
+## Ler uma lista {#reading-a-list}
 
-### `Item em` (Avançado) {#block_lists_item_at}
+### `item … de …` (Avançado) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Retorna o valor no índice selecionado.
+Retorna o item na posição indicada.
 
-### `Índice do valor` (Guru) {#block_lists_index_of_value}
+### `índice de … em …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Retorna o índice da primeira ocorrência do valor correspondente na lista.
+Retorna a posição do primeiro item igual ao valor, ou `0` quando não há nenhum.
 
-### `Contém valor` (Guru) {#block_lists_contains_value}
+### `… contém …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Retorna se a lista contém um valor específico.
+Retorna `true` quando a lista contém o valor.
 
-### `Tamanho da lista` (Avançado) {#block_lists_size_of_value}
+### `tamanho de …` (Avançado) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Retorna o número de itens na lista selecionada.
+Retorna o número de itens da lista.
 
-## Bloco repórter de lista
+### Lista (Avançado) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Retorna o valor atual da lista selecionada.
+Cada lista tem o seu próprio bloco repórter com o nome dela. Ele retorna a lista inteira como texto.
 
-- Tipo: bloco repórter
-- Exemplo de saída: `[item1,item2,item3]`
-- Uso típico: inspecionar o conteúdo atual da lista ou passar o valor da lista para blocos compatíveis
+- Exemplo de saída: `[item1,item2,item3]`; uma lista vazia dá um texto vazio.
+- Uso típico: mostrar a lista em um monitor ou passá-la a blocos que aceitam uma lista (por exemplo, **acender** para as luzes do sensor de distância).

@@ -68,7 +68,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
+    "message": "Navigačná cesta",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.colorToggle.ariaLabel": {
@@ -490,107 +490,107 @@
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(otvorí sa na novej karte)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
-    "message": "Search docs",
+    "message": "Hľadať v dokumentácii",
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "Položte ďalšiu otázku…",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "Odpovedám…",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "search",
+    "message": "hľadať",
     "description": "The hint for the search box enter key text"
   },
   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
-    "message": "enter",
+    "message": "odoslať",
     "description": "The hint for the Ask AI search box enter key text"
   },
   "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "Search",
+    "message": "Hľadať",
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Späť na vyhľadávanie podľa slov",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Späť na vyhľadávanie podľa slov",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Nedávne konverzácie",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "Odstrániť túto konverzáciu z histórie",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "Opýtať sa AI: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "Odpovede generuje AI, ktorá sa môže mýliť. Overujte si ich.",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Súvisiace zdroje",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "Premýšľam…",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "Copy",
+    "message": "Kopírovať",
     "description": "The text for copy button"
   },
   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "Copied!",
+    "message": "Skopírované!",
     "description": "The text for copy button when copied"
   },
   "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "Copy",
+    "message": "Kopírovať",
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Páči sa mi",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "Nepáči sa mi",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "Ďakujeme za spätnú väzbu!",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "Hľadám…",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "Hľadám: ",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "Nájdené pre",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Odoslať otázku",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "Späť na vyhľadávanie",
     "description": "The back to search text for footer"
   },
   "Build It. Drive It. Control Everything.": {
@@ -598,5 +598,45 @@
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Vytvárajte vlastné profily na ovládanie LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motorov, senzorov a kompatibilných Bluetooth zariadení z jednej výkonnej aplikácie."
+  },
+  "howItWorks.profile": {
+    "message": "Profil = jeden model",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Panel",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "ovládacie prvky na obrazovke",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Program",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Logické bloky alebo Rýchle prepojenia",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Huby",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "motory, svetlá, senzory",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Herný ovládač",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ „Spustiť“ spustí program",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "cez Bluetooth",
+    "description": "How it works diagram"
   }
 }

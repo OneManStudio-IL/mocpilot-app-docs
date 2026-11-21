@@ -5,159 +5,170 @@ title: Мотори
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Мотори
+# Мотори {#motors}
 
-Моторні блоки використовуються для запуску, зупинки, позиціювання та налаштування моторів, підключених до портів хаба.
+Блоки моторів запускають, зупиняють і повертають у потрібну позицію мотори, підключені до портів хаба, а також налаштовують їхній рух. Категорія з’являється, коли хаб профілю має порти для моторів. У кожному блоці вибираються хаб і один або кілька портів.
 
-## Основні командні блоки моторів
+Деяким блокам потрібен мотор із вбудованим датчиком обертання (енкодером), наприклад кутові мотори Technic, і хаб, що вміє ним керувати. Такі блоки позначено «мотори з енкодером». Їх немає для хабів SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 і Mould King. Technic Move Hub має власний набір блоків — його описано наприкінці сторінки.
 
-### `Запустити мотор` (Початківець) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Запускає вибраний мотор.
+## Запуск моторів {#running-motors}
 
-- Варіанти напряму: за годинниковою стрілкою / проти годинникової стрілки
-
-### `Зупинити мотор` (Початківець) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Зупиняє вибраний мотор.
-
-### `Запустити на` (Просунутий) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Запускає вибраний мотор на вказаний час/кут/оберти залежно від налаштувань блоку.
-
-- Варіанти напряму: за годинниковою стрілкою / проти годинникової стрілки
-- Варіанти одиниць: `оберти`, `градуси`, `секунди`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
-
-### `Запустити мотор зі швидкістю` (Початківець) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Запускає мотор із явно заданою швидкістю.
-
-### `Запустити на зі швидкістю` (Просунутий) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Запускає мотор на задану тривалість/величину з явно заданою швидкістю.
-
-- Варіанти одиниць: `оберти`, `градуси`, `секунди`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
-
-### `Встановити швидкість мотора` (Просунутий) {#block_hubs_all_motors_port_set_motor_speed}
+### `встановити швидкість на …` (Просунутий) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Встановлює швидкість, яку використовують пов’язані блоки запуску мотора.
+Задає швидкість (від −100 до 100 %), з якою на цих портах працюють **запустити мотор** і **запустити … протягом**. Сам блок мотор не запускає.
 
-## Блоки позиціювання та руху
+### `запустити мотор …` (Початківець) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Запускає мотор у вибраному напрямку зі швидкістю, заданою блоком **встановити швидкість на**.
 
-### `Перейти до позиції` (Просунутий) {#block_hubs_all_motors_port_go_to_position}
+- Напрямок: за годинниковою стрілкою або проти
+
+### `запустити мотор на … % швидкість` (Початківець) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Запускає мотор із заданою швидкістю від −100 до 100 %. Від’ємна швидкість обертає його в інший бік.
+
+- Для чого: рух від джойстика чи повзунка — підставте значення елемента в поле швидкості.
+
+### `зупинити мотор` (Початківець) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Зупиняє мотор.
+
+### `запустити … протягом …` (Просунутий) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Обертає мотор у вибраному напрямку задану кількість обертів, градусів або секунд.
+
+- Напрямок: за годинниковою стрілкою або проти
+- Одиниці: `оберти`, `градуси`, `секунди`
+- Лише мотори з енкодером.
+
+### `запустити на … на … % швидкість` (Просунутий) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Обертає мотор задану кількість обертів, градусів або секунд із заданою швидкістю.
+
+- Одиниці: `оберти`, `градуси`, `секунди`
+- Лише мотори з енкодером.
+
+## Позиція {#position}
+
+### `йти … до позиції …` (Просунутий) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Переміщує мотор у цільову абсолютну позицію.
+Повертає мотор в абсолютну позицію (відносно власної нульової позначки мотора).
 
-- Варіанти шляху: `найкоротший шлях`, `за годинниковою стрілкою`, `проти годинникової стрілки`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Шлях: `найкоротший шлях`, `за годинниковою стрілкою`, `проти годинникової стрілки`
+- Лише мотори з енкодером.
 
-### `Перейти до відносної позиції` (Початківець) {#block_hubs_all_motors_port_go_to_relative_position}
+### `перейти до відносної позиції … на … % швидкість` (Початківець) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Переміщує мотор на відносне зміщення.
+Повертає мотор у позицію в градусах, відраховану від точки, заданої блоком **встановити відносну позицію**.
 
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Для чого: кермування серво, коли значення джойстика задає кут.
+- Лише мотори з енкодером; для BuWizz 3 використовуйте блок нижче.
 
-### `BuWizz 3: перейти до відносної позиції` (Початківець) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `перейти до відносної позиції …` (BuWizz 3) (Початківець) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-Варіант блоку відносного позиціювання для BuWizz 3.
+Версія попереднього блока для BuWizz 3, без поля швидкості.
 
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Хаби: BuWizz 3, з моторами з енкодером.
 
-### `Встановити відносну позицію` (Початківець) {#block_hubs_all_motors_port_set_relative_position}
+### `встановити відносну позицію …` (Початківець) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Встановлює опорне значення відносної позиції мотора.
+Оголошує поточну позицію мотора рівною заданому значенню. Від неї відраховуються відносні позиції.
 
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Лише мотори з енкодером.
 
-### `Калібрувати рульову рейку` (Початківець) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `калібрувати рейку … центр … градуси …` (Початківець) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Калібрує нейтральну/опорну позицію рульової рейки.
+Знаходить центр і хід рульової рейки.
 
-- Вимога: мотор на вибраному порту має підтримувати абсолютне/відносне відстеження кута (вбудований енкодер).
-- Механічна вимога: вісь керма має бути фізично обмежена в допустимому діапазоні (наприклад, кінцевими положеннями рейки/передачі).
-- Як працює: блок проходить доступний діапазон повороту, вимірює його та обчислює калібрувальні дані для налаштування кермування.
-- Поведінка виходу: аргументи блоку записують результати у змінні, передані в блок (поведінка подібна до pass-by-reference); ці змінні змінюються всередині блоку і використовуються для читання результатів калібрування.
+- Мотор доводить рейку до обох кінців, вимірює, наскільки далеко вона може зайти, і записує результат у дві змінні, які ви вставили в поля: позицію центру й діапазон у градусах. Рейка зупиняється посередині, але її відносна позиція там дорівнює значенню центру, а не 0, тож одразу після цього блока додайте **встановити відносну позицію** 0; далі кермуйте за формулою `діапазон × джойстик / 100`.
+- Рульовий механізм повинен мати жорсткі механічні упори з обох боків (кінець рейки або передачі).
+- Лише мотори з енкодером.
 
-## Блоки налаштування і безпеки мотора
+## Налаштування мотора {#motor-settings}
 
-### `Встановити поведінку мотора при зупинці` (Гуру) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `встановити мотор на … при зупинці` (Гуру) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Встановлює режим зупинки мотора (наприклад гальмо/утримання/накат залежно від доступних варіантів).
+Визначає, що робить мотор під час зупинки.
 
-- Варіанти режиму зупинки: `гальмо`, `утримувати позицію`, `накат`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- `гальмо`: швидко зупиняється.
+- `утримати позицію`: активно утримує позицію (корисно для керма).
+- `вільний рух`: вільно зупиняється за інерцією.
+- Лише мотори з енкодером.
 
-### `Встановити виявлення заклинювання` (Гуру) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `увімкнути виявлення блокування …` (Гуру) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
 Вмикає або вимикає виявлення заклинювання.
 
-- Примітка: доступно лише для хаба MINDSTORMS Robot Inventor.
+- Хаби: MINDSTORMS Robot Inventor.
 
-### `Встановити прискорення` (Гуру) {#block_hubs_all_motors_port_set_acceleration}
+### `встановити прискорення на …` (Гуру) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Встановлює профіль/швидкість прискорення мотора.
+Визначає, як швидко мотор розганяється.
 
-- Варіанти профілю: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Варіанти: `за замовчуванням`, `швидкий`, `збалансований`, `плавний`, `повільний`, `дуже повільний`
+- Лише мотори з енкодером.
 
-### `Встановити уповільнення` (Гуру) {#block_hubs_all_motors_port_set_deceleration}
+### `встановити уповільнення на …` (Гуру) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Встановлює профіль/швидкість уповільнення мотора.
+Визначає, як швидко мотор сповільнюється.
 
-- Варіанти профілю: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
-- Примітка: ця функція потребує мотор на вибраному порту з підтримкою енкодерного керування.
+- Варіанти: `за замовчуванням`, `швидкий`, `збалансований`, `плавний`, `повільний`, `дуже повільний`
+- Лише мотори з енкодером.
 
-## Репортер-блоки моторів
+## Значення мотора {#motor-values}
 
-### `Позиція` (Початківець) {#block_hubs_all_motors_port_position}
+### `позиція` (Початківець) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Повертає поточну позицію мотора.
+Повертає абсолютну позицію мотора.
 
-### `Відносна позиція` (Початківець) {#block_hubs_all_motors_port_relative_position}
+- Лише мотори з енкодером.
+
+### `відносна позиція` (Початківець) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Повертає поточне значення відносної позиції.
+Повертає відносну позицію мотора в градусах.
 
-### `Швидкість` (Початківець) {#block_hubs_all_motors_port_speed}
+- Лише мотори з енкодером.
+
+### `швидкість` (Початківець) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
 Повертає поточну швидкість мотора.
 
-### `Потужність` (Просунутий) {#block_hubs_all_motors_port_power}
+### `потужність` (Просунутий) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Повертає поточне значення потужності мотора.
+Повертає поточну потужність мотора.
 
-- Примітка: доступно лише для хаба MINDSTORMS Robot Inventor.
+- Хаби: MINDSTORMS Robot Inventor.
 
-## Моторні блоки Technic Move
+## Technic Move Hub {#technic-move-hub}
 
-### `Запустити мотори зі швидкістю` (Початківець) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Technic Move Hub керує своїми вбудованими моторами цими блоками замість наведених вище блоків портів.
+
+### `запустити мотори при … % швидкість` (Початківець) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Запускає привідні мотори Technic Move з вибраною швидкістю.
+Запускає ходові мотори із заданою швидкістю.
 
-### `Імпульс живлення` (Початківець) {#block_hubs_technicmove_motors_power_pulse}
+### `силовий імпульс` (Початківець) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Надсилає команду імпульсу живлення до вибраного Technic Move Hub.
+Надсилає силовий імпульс ходовим моторам.
 
-- Доступно лише для Technic Move Hub.
-- Типове використання: коротко підсилити або пробудити приводну систему Technic Move перед продовженням наступних блоків.
+- Для чого: короткий ривок перед наступними блоками.
 
-### `Зупинити мотори` (Початківець) {#block_hubs_technicmove_motors_stop_motors}
+### `зупинити мотори` (Початківець) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Зупиняє привідні мотори Technic Move.
+Зупиняє ходові мотори.
 
-### `Гальмо` (Початківець) {#block_hubs_technicmove_motors_brake}
+### `встановити гальмо моторів …` (Початківець) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Застосовує гальмівну поведінку до моторів Technic Move.
+Вмикає або вимикає гальмо ходових моторів.
 
-- Варіанти гальма: `вимкнено`, `увімкнено`
+- Варіанти: `вимкнено`, `увімкнено`
 
-### `Встановити рульову рейку в` (Початківець) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `встановити рульову рейку на …` (Початківець) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Встановлює цільову позицію/значення рульової рейки.
+Повертає кермо в задану позицію.
 
-### `Калібрувати рульову рейку` (Початківець) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `калібрувати рульову рейку` (Початківець) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Калібрує рульову рейку Technic Move за внутрішнім алгоритмом хаба з автоматичним визначенням діапазону керма.
+Калібрує кермо власним алгоритмом хаба, який автоматично знаходить діапазон керма.
 
-- Примітка: вісь мотора має бути механічно обмежена (наприклад, механізмом рульової рейки).
+- Рульовий механізм повинен мати жорсткі механічні упори (наприклад, кінці рульової рейки).

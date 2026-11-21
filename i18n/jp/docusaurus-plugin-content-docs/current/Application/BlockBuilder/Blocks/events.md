@@ -5,145 +5,145 @@ title: イベント
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# イベント
+# イベント {#events}
 
-**イベント**カテゴリには、特定の条件が発生したときにスクリプトを開始するブロックが含まれます。
+**イベント**カテゴリには、何かが起きたときにスクリプトを開始するブロックと、スクリプト間でメッセージを送るブロックがあります。メッセージの管理には、カテゴリ上部の**メッセージを追加**と**メッセージを削除**を使います。
 
-## 基本イベント
+## 基本のイベント {#core-events}
 
-### `プログラム開始時` (初級) {#block_event_when_program_started}
+### `プログラムが開始されたとき` (初心者) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-プロファイルのプログラムが開始されたときに、このスクリプトを一度だけ実行します。
+プログラムの開始時に、スクリプトを 1 回実行します。
 
-- トリガー: プログラム起動
-- 使用例: 変数の初期化、モーターの初期状態設定、起動音の再生
+- 主な用途：変数の初期値を設定する、モーターを初期状態にする、「準備完了」のメッセージを表示する。
 
-### `〜のとき` (上級) {#block_event_when}
+### `いつ …` (上級者) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-選択した条件が真になったときに実行されます。
+スロットの条件が偽から真に変わったときに、スクリプトを実行します。スクリプトの実行中、ブロックは待機します。条件がいったん偽になり、再び真になったときにだけ、もう一度動作します。
 
-- トリガー: 条件ベース
-- 使用例: 実行中の状態に応じた分岐処理
+- 主な用途：状態に反応する。例：`いつ タイマー > 5 かつ スイッチ 有効`
 
-### `タイマーが〜より大きいとき` (上級) {#block_event_when_timer_greater_than}
+### `いつ タイマー > …` (上級者) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-タイマーの値が指定値を超えたときに実行されます。
+プログラムのタイマーが指定した値（秒）を超えたときに、スクリプトを実行します。
 
-- トリガー: 経過時間
-- 使用例: 遅延処理、時間ベースのフェーズ制御
+- 主な用途：遅れて行う動作、時間で区切ったフェーズ。タイマーは**タイマーをリセット**（センサー）でリセットします。
 
-### `メッセージを受信したとき` (達人) {#block_event_when_message_recieved}
+### `受信したとき …` (達人) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-一致するブロードキャストメッセージを受信したときにスクリプトを開始します。
+選択したメッセージが送られたときに、スクリプトを実行します。
 
-- トリガー: メッセージチャンネル
-- 使用例: 複数スクリプトの同期
+- 主な用途：複数のスクリプトを連携させる。
 
-### `ブロードキャスト` (達人) {#block_event_broadcast}
+### `伝える …` (達人) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-そのメッセージを待機しているすべてのスクリプトに送信します。
+そのメッセージの**受信したとき**で始まるすべてのスクリプトにメッセージを送り、すぐに次へ進みます。
 
-- トリガー: 即時送信
-- 使用例: 他のスクリプトへ通知（待機なし）
+- 主な用途：ほかのスクリプトの終了を待たずに開始させる。
 
-### `ブロードキャストして待機` (達人) {#block_event_broadcast_and_wait}
+### `伝える … そして待つ` (達人) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-メッセージを送信し、受信側の処理が完了するまでこのスクリプトを一時停止します。
+メッセージを送り、受け取ったすべてのスクリプトが終わるまで、このスクリプトを一時停止します。
 
-- トリガー: 即時送信＋待機
-- 使用例: 実行順序が重要な処理フロー
+- 主な用途：順番が大切な段階的な処理。
 
-## ハブイベント
+## ハブのイベント {#hub-events}
 
-### `ハブボタンが押されたとき` (初級) {#block_hubs_all_event_button_pressed}
+これらのブロックは、プロフィール内のハブが対応している場合に表示されます。Mould King のハブにはありません。
+
+### `いつ … … ボタン …` (初心者) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-ハブのメインボタンが押されたときに実行されます。
+ハブのボタンが押されたとき、または離されたときに実行します。
 
-- 状態オプション: `押された`, `離された`, `変更された`
-- 注: 利用可能なボタンはハブモデルによって異なります。
+- 状態の選択肢：`押された`、`解放された`、`変更された`
+- ハブ：LEGO Powered Up のハブ、WeDo 2.0、Robot Inventor。ボタンの一覧はハブによって異なります。
 
-### `ハブ接続が変更されたとき` (初級) {#block_hubs_all_event_connection_changed}
+### `いつ … です 接続済み / 切断済み` (初心者) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-ハブの接続状態が変化したときに実行されます（接続／切断）。
+ハブが接続されたとき、または切断されたときに実行します。
 
-- トリガー: 接続状態の変化
-- 使用例: 再接続処理や安全なフォールバック動作
+- 主な用途：接続が切れたらモデルを安全に止め、つながったら元の状態に戻す。
 
-### `ハブバッテリーが変化したとき` (初級) {#block_hubs_all_event_battery_changed}
+### `いつ … % バッテリーが変更されました` (初心者) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-ハブのバッテリーレベルが変化したときに実行されます。
+ハブが報告するバッテリー残量が変わったときに実行します。
 
-- トリガー: バッテリー更新
-- 使用例: 低電力警告や省電力モードへの切替
+- ハブ：バッテリー残量を報告するハブ。
+- 主な用途：バッテリー低下の警告、省電力モードへの切り替え。
 
-### `ハブ加速度が変化したとき` (達人) {#block_hubs_all_event_accelerometer_changed}
+### `いつ … 加速度センサーのデータが変更されました` (達人) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-加速度の値が変化したときに実行されます。
+ハブの加速度計の値が変わったときに実行します。
 
-### `ハブ傾きが変化したとき` (初級) {#block_hubs_all_event_tilt_changed}
+- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。
+
+### `いつ … 傾き … 角度が変更されました` (初心者) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-傾きの値が変化したときに実行されます。
+ハブの傾き角度が変わったときに実行します。
 
-- 角度オプション: `任意`, `ピッチ`, `ロール`, `ヨー`
-- 注: `ヨー`は対応ハブのみ利用可能
+- 角度の選択肢：`任意`、`ピッチ`、`ロール`、`ヨー`
+- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。`ヨー` は Technic Hub と Robot Inventor でのみ使えます。
 
-### `ハブ向きが変化したとき` (初級) {#block_hubs_all_event_tilt_orientation_changed}
+### `いつ … 向きが変更されました` (初心者) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-向き（前／上／下／左／右）が変化したときに実行されます。
+ハブの向きが変わったとき、つまりハブの別の面が上を向いたときに実行します。
 
-## センサーポートイベント
+- ハブ：傾きのイベントと同じです。
 
-### `Technic カラーセンサーイベント` (初級) {#block_hubs_all_event_port_technic_sensor_color}
+## センサーのイベント {#sensor-events}
+
+これらのイベントは、ハブのポートに接続したセンサーの値を読み取ります。ハブ：City Hub、Technic Hub、BOOST Move Hub、MINDSTORMS Robot Inventor のハブ（SBrick、BuWizz、WeDo 2.0、Mould King は非対応）。
+
+### Technic センサー：`色が …` (初心者) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Technicカラーセンサーが指定した色を検出したときに実行されます。
+Technic カラーセンサーが選択した色を検出したときに実行します。
 
-### `Technic 距離センサーイベント` (初級) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic センサー：`いつ … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-距離センサーの値が条件に一致したときに実行されます。
+Technic 距離センサーで測った距離が条件を満たしたときに実行します。
 
-- 比較オプション: `より近い`, `より遠い`, `正確に`
-- 単位オプション: `mm`, `cm`, `インチ`, `%`
-- 注: 単位はセンサーモードに依存
+- 比較の選択肢：`より近い`、`より遠い`、`正確に`
+- 単位：`mm`、`cm`、`インチ`、`%`
 
-### `BOOST 距離センサーイベント` (初級) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST センサー：`いつ … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-BOOST距離センサーが条件に達したときに実行されます。
+BOOST カラー＆距離センサーで測った距離が条件を満たしたときに実行します。
 
-- 比較オプション: `より近い`, `より遠い`, `正確に`
-- 単位オプション: `%`, `cm`, `インチ`
+- 比較の選択肢：`より近い`、`より遠い`、`正確に`
+- 単位：`%`、`cm`、`インチ`
 
-### `BOOST カラーセンサーイベント` (初級) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST センサー：`色が …` (初心者) {#block_hubs_all_event_port_boost_sensor_color}
 
-<img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_dashboard_controller_boost_sensor_color.svg" />
+<img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-BOOSTセンサーが指定された色または値を検出したときに実行されます。
+BOOST カラー＆距離センサーが選択した色を検出したときに実行します。

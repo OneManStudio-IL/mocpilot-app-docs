@@ -5,155 +5,170 @@ title: Moottorit
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Moottorit
+# Moottorit {#motors}
 
-Moottorilohkoja käytetään käynnistämään, pysäyttämään, asemointiin ja säätämään hubin portteihin liitettyjä moottoreita.
+Moottorilohkot käynnistävät, pysäyttävät ja asemoivat hubin portteihin kytkettyjä moottoreita ja säätävät niiden liikettä. Luokka näkyy, kun jossakin profiilin hubissa on moottoriportteja. Jokaisessa lohkossa valitaan hubi ja yksi tai useampi portti.
 
-## Perusmoottorikomennot
+Jotkin lohkot tarvitsevat moottorin, jossa on sisäänrakennettu kiertoanturi (kulma-anturi), kuten Technic-kulmamoottorit, sekä hubin, joka osaa ohjata sitä. Nämä lohkot on merkitty ”kulma-anturilliset moottorit”. Ne eivät ole käytettävissä SBrick-, SBrick Plus-, BuWizz 2-, WeDo 2.0- eikä Mould King -hubeissa. Technic Move Hubilla on omat lohkonsa tämän sivun lopussa.
 
-### `Käynnistä moottori` (Aloittelija) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Käynnistää valitun moottorin.
+## Moottorien käyttäminen {#running-motors}
 
-- Suuntavaihtoehdot: myötäpäivään / vastapäivään
-
-### `Pysäytä moottori` (Aloittelija) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Pysäyttää valitun moottorin.
-
-### `Suorita ajan verran` (Edistynyt) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Suorittaa moottoria määritetyn ajan/kulman/pyörähdyksen ajan.
-
-- Suuntavaihtoehdot: myötäpäivään / vastapäivään
-- Yksiköt: `kierrokset`, `asteet`, `sekunnit`
-- Huom: vaatii encoder-tuetun moottorin.
-
-### `Käynnistä moottori nopeudella` (Aloittelija) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Käynnistää moottorin annetulla nopeudella.
-
-### `Suorita ajan verran nopeudella` (Edistynyt) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Suorittaa moottoria annetun ajan määrän tietyllä nopeudella.
-
-- Yksiköt: `kierrokset`, `asteet`, `sekunnit`
-- Huom: vaatii encoder-tuetun moottorin.
-
-### `Aseta moottorin nopeus` (Edistynyt) {#block_hubs_all_motors_port_set_motor_speed}
+### `aseta nopeus …` (Edistynyt) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Asettaa nopeuden, jota muut moottorilohkot käyttävät.
+Asettaa nopeuden (−100…100 %), jota **käynnistä moottori** ja **aja … ajaksi** käyttävät näissä porteissa. Tämä lohko ei itse käynnistä moottoria.
 
-## Asema ja liike
+### `käynnistä moottori …` (Aloittelija) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Käynnistää moottorin valittuun suuntaan **aseta nopeus** -lohkolla asetetulla nopeudella.
 
-### `Siirry sijaintiin` (Edistynyt) {#block_hubs_all_motors_port_go_to_position}
+- Suunta: myötäpäivään tai vastapäivään
+
+### `käynnistä moottori … % nopeus` (Aloittelija) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Käynnistää moottorin annetulla nopeudella −100…100 %. Negatiivinen nopeus pyörittää sitä toiseen suuntaan.
+
+- Tyypillinen käyttö: ajaminen ohjainsauvalla tai liukusäätimellä: aseta ohjaimen arvo nopeuden paikkaan.
+
+### `pysäytä moottori` (Aloittelija) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Pysäyttää moottorin.
+
+### `aja … ajaksi …` (Edistynyt) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Pyörittää moottoria valittuun suuntaan tietyn määrän kierroksia, asteita tai sekunteja.
+
+- Suunta: myötäpäivään tai vastapäivään
+- Yksiköt: `kierrokset`, `astetta`, `sekunnit`
+- Vain kulma-anturilliset moottorit.
+
+### `aja ajan … … % nopeus` (Edistynyt) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Pyörittää moottoria tietyn määrän kierroksia, asteita tai sekunteja annetulla nopeudella.
+
+- Yksiköt: `kierrokset`, `astetta`, `sekunnit`
+- Vain kulma-anturilliset moottorit.
+
+## Asento {#position}
+
+### `mene … asemaan …` (Edistynyt) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Siirtää moottorin absoluuttiseen sijaintiin.
+Kääntää moottorin absoluuttiseen asentoon (moottorin oman nollamerkin suhteen).
 
-- Polkuvaihtoehdot: `lyhin reitti`, `myötäpäivään`, `vastapäivään`
-- Huom: vaatii encoder-tuetun moottorin.
+- Reitti: `lyhin reitti`, `myötäpäivään`, `vastapäivään`
+- Vain kulma-anturilliset moottorit.
 
-### `Siirry suhteelliseen sijaintiin` (Aloittelija) {#block_hubs_all_motors_port_go_to_relative_position}
+### `mene suhteelliseen asentoon … … % nopeus` (Aloittelija) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Siirtää moottoria suhteellisella siirtymällä.
+Kääntää moottorin asentoon, joka lasketaan asteina **aseta suhteellinen sijainti** -lohkolla asetetusta kohdasta.
 
-- Huom: vaatii encoder-tuetun moottorin.
+- Tyypillinen käyttö: servo-ohjaus, jossa ohjainsauvan arvo antaa kulman.
+- Vain kulma-anturilliset moottorit; BuWizz 3:lla käytä alla olevaa lohkoa.
 
-### `BuWizz 3 siirry suhteelliseen sijaintiin` (Aloittelija) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `mene suhteelliseen asentoon …` (BuWizz 3) (Aloittelija) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-BuWizz 3 -versio suhteellisesta liikkeestä.
+Yllä olevan lohkon BuWizz 3 -versio ilman nopeussyötettä.
 
-- Huom: vaatii encoder-tuetun moottorin.
+- Hubit: BuWizz 3 kulma-anturillisilla moottoreilla.
 
-### `Aseta suhteellinen sijainti` (Aloittelija) {#block_hubs_all_motors_port_set_relative_position}
+### `aseta suhteellinen sijainti …` (Aloittelija) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Asettaa suhteellisen sijainnin nollapisteen.
+Määrittää moottorin nykyisen asennon annetuksi arvoksi. Suhteelliset asennot lasketaan siitä.
 
-- Huom: vaatii encoder-tuetun moottorin.
+- Vain kulma-anturilliset moottorit.
 
-### `Kalibroi ohjaustanko` (Aloittelija) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `kalibroi hammasratas … keskusta … astetta …` (Aloittelija) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Kalibroi ohjauksen nollapisteen.
+Etsii ohjaustangon keskikohdan ja liikeradan.
 
-- Vaatimus: moottorin tulee tukea kulman mittausta (encoder).
-- Mekaaninen vaatimus: liikealueen tulee olla rajoitettu.
-- Toiminta: mittaa liikealueen ja laskee kalibroinnin.
-- Tuloste: tallentaa tulokset muuttujille.
+- Moottori kääntää tangon molempiin päihin, mittaa, kuinka pitkälle se pääsee, ja tallentaa tuloksen kahteen paikkoihin asettamaasi muuttujaan: keskiasentoon ja liikealueeseen asteina. Tanko pysähtyy keskelle, mutta sen suhteellinen asento siinä on keskikohdan arvo eikä 0, joten lisää heti tämän lohkon perään **aseta suhteellinen sijainti** 0; ohjaa sitten kaavalla `alue × ohjainsauva / 100`.
+- Ohjauksessa täytyy olla kiinteät mekaaniset rajoittimet molemmissa päissä (tangon tai välityksen pää).
+- Vain kulma-anturilliset moottorit.
 
-## Säätö ja turvallisuus
+## Moottorin asetukset {#motor-settings}
 
-### `Aseta moottorin pysäytyskäyttäytyminen` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `aseta moottori … pysähdyksissä` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Asettaa pysäytystilan.
+Valitsee, mitä moottori tekee pysähtyessään.
 
-- Vaihtoehdot: `jarru`, `pidä`, `vapaa`
-- Huom: vaatii encoder-tuetun moottorin.
+- `jarru`: pysähtyy nopeasti.
+- `pidä asento`: pitää aktiivisesti asentonsa (hyödyllinen ohjauksessa).
+- `vapaa rullaus`: pyörii vapaasti pysähdyksiin.
+- Vain kulma-anturilliset moottorit.
 
-### `Aseta jumituksen tunnistus` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `ota käyttöön jumiutumisen tunnistus …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Ottaa käyttöön tai poistaa jumituksen tunnistuksen.
+Kytkee jumiutumisen tunnistuksen päälle tai pois.
 
-- Huom: vain MINDSTORMS Robot Inventor.
+- Hubit: MINDSTORMS Robot Inventor.
 
-### `Aseta kiihtyvyys` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+### `aseta kiihtyvyys …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Asettaa kiihtyvyysprofiilin.
+Valitsee, kuinka nopeasti moottori kiihtyy.
 
 - Vaihtoehdot: `oletus`, `nopea`, `tasapainoinen`, `pehmeä`, `hidas`, `erittäin hidas`
+- Vain kulma-anturilliset moottorit.
 
-### `Aseta hidastuvuus` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+### `aseta hidastuvuus …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Asettaa hidastuvuusprofiilin.
+Valitsee, kuinka nopeasti moottori hidastuu.
 
 - Vaihtoehdot: `oletus`, `nopea`, `tasapainoinen`, `pehmeä`, `hidas`, `erittäin hidas`
+- Vain kulma-anturilliset moottorit.
 
-## Moottorin arvolohkot
+## Moottorin arvot {#motor-values}
 
-### `Sijainti` (Aloittelija) {#block_hubs_all_motors_port_position}
+### `sijainti` (Aloittelija) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Palauttaa moottorin sijainnin.
+Palauttaa moottorin absoluuttisen asennon.
 
-### `Suhteellinen sijainti` (Aloittelija) {#block_hubs_all_motors_port_relative_position}
+- Vain kulma-anturilliset moottorit.
+
+### `suhteellinen sijainti` (Aloittelija) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Palauttaa suhteellisen sijainnin.
+Palauttaa moottorin suhteellisen asennon asteina.
 
-### `Nopeus` (Aloittelija) {#block_hubs_all_motors_port_speed}
+- Vain kulma-anturilliset moottorit.
+
+### `nopeus` (Aloittelija) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Palauttaa nopeuden.
+Palauttaa moottorin nykyisen nopeuden.
 
-### `Teho` (Edistynyt) {#block_hubs_all_motors_port_power}
+### `teho` (Edistynyt) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Palauttaa tehon.
+Palauttaa moottorin nykyisen tehon.
 
-- Huom: vain MINDSTORMS Robot Inventor.
+- Hubit: MINDSTORMS Robot Inventor.
 
-## Technic Move -moottorilohkot
+## Technic Move Hub {#technic-move-hub}
 
-### `Käynnistä moottorit nopeudella` (Aloittelija) {#block_hubs_technicmove_motors_start_motors_at_speed}
+Technic Move Hub käyttää sisäänrakennettuja moottoreitaan näillä lohkoilla yllä olevien porttilohkojen sijaan.
+
+### `käynnistä moottorit … % nopeus` (Aloittelija) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Käynnistää ajomoottorit.
+Käynnistää ajomoottorit annetulla nopeudella.
 
-### `Tehopulssi` (Aloittelija) {#block_hubs_technicmove_motors_power_pulse}
+### `tehopulssi` (Aloittelija) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Lähettää tehopulssikomennon valitulle Technic Move Hubille.
+Lähettää ajomoottoreille tehopulssin.
 
-- Käytettävissä vain Technic Move Hubille.
-- Tyypillinen käyttö: tehosta tai herätä Technic Move -ajojärjestelmä hetkeksi ennen seuraavia lohkoja.
+- Tyypillinen käyttö: lyhyt lisäpotku ennen seuraavia lohkoja.
 
-### `Pysäytä moottorit` (Aloittelija) {#block_hubs_technicmove_motors_stop_motors}
+### `pysäytä moottorit` (Aloittelija) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Pysäyttää moottorit.
+Pysäyttää ajomoottorit.
 
-### `Jarru` (Aloittelija) {#block_hubs_technicmove_motors_brake}
+### `aseta moottorien jarru …` (Aloittelija) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Asettaa jarrun.
+Kytkee ajomoottorien jarrun päälle tai pois.
 
-- Vaihtoehdot: `pois`, `päällä`
+- Vaihtoehdot: `pois`, `käytössä`
 
-### `Aseta ohjaus` (Aloittelija) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `aseta ohjausrata …` (Aloittelija) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Asettaa ohjauksen arvon.
+Kääntää ohjauksen annettuun asentoon.
 
-### `Kalibroi ohjaus` (Aloittelija) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `kalibroi ohjausrata` (Aloittelija) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Kalibroi ohjauksen.
+Kalibroi ohjauksen hubin omalla algoritmilla, joka löytää ohjausalueen automaattisesti.
+
+- Ohjauksessa täytyy olla kiinteät mekaaniset rajoittimet (esimerkiksi ohjaustangon päät).

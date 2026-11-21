@@ -5,134 +5,145 @@ title: Udalosti
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Udalosti
+# Udalosti {#events}
 
-Kategória **Udalosti** obsahuje bloky, ktoré spúšťajú skripty, keď nastane určitá podmienka.
+Kategória **Udalosti** obsahuje bloky, ktoré spúšťajú skripty, keď sa niečo stane, a bloky, ktoré posielajú správy medzi skriptmi. Na správu správ slúžia tlačidlá **Pridať správu** a **Odstrániť správu** hore v kategórii.
 
-## Základné udalosti
+## Základné udalosti {#core-events}
 
-### `Keď sa program spustí` (Začiatočník) {#block_event_when_program_started}
+### `keď program začne` (Začiatočník) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Spustí tento skript raz pri začiatku programu.
+Spustí svoj skript raz, pri štarte programu.
 
-- Spúšťač: spustenie programu
-- Typické použitie: inicializácia premenných, predvolené stavy motorov, štartovacie zvuky
+- Typické použitie: nastaviť počiatočné hodnoty premenných, uviesť motory do východiskového stavu, zobraziť správu „pripravené“.
 
-### `Keď` (Pokročilý) {#block_event_when}
+### `keď …` (Pokročilý) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Spustí sa, keď sa vybraná podmienka stane pravdivou.
+Spustí svoj skript, keď sa podmienka v políčku zmení z nepravdy na pravdu. Kým skript beží, blok čaká; znova sa spustí, až keď sa podmienka stane nepravdivou a potom opäť pravdivou.
 
-- Spúšťač: podmienka
-- Typické použitie: vetvenie logiky podľa aktuálneho stavu
+- Typické použitie: reakcia na stav, napríklad `keď časovač > 5 a spínač je zapnutý`.
 
-### `Keď časovač je väčší ako` (Pokročilý) {#block_event_when_timer_greater_than}
+### `keď časovač > …` (Pokročilý) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Spustí sa, keď hodnota časovača prekročí nastavený limit.
+Spustí svoj skript, keď časovač programu prekročí hodnotu (v sekundách).
 
-- Spúšťač: uplynutý čas
-- Typické použitie: oneskorené akcie, časované fázy
+- Typické použitie: oneskorené akcie, časované fázy. Časovač vynulujete blokom **resetovať časovač** (Senzory).
 
-### `Keď je prijatá správa` (Guru) {#block_event_when_message_recieved}
+### `keď prijmem …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Spustí skript po prijatí zodpovedajúcej správy.
+Spustí svoj skript, keď sa odošle vybraná správa.
 
-- Spúšťač: správa
-- Typické použitie: synchronizácia viacerých skriptov
+- Typické použitie: koordinácia viacerých skriptov.
 
-### `Vysielaj správu` (Guru) {#block_event_broadcast}
+### `odovzdať …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Odošle správu všetkým skriptom, ktoré ju sledujú.
+Pošle správu každému skriptu, ktorý začína blokom **keď prijmem** pre túto správu, a hneď pokračuje.
 
-- Spúšťač: okamžité odoslanie
-- Typické použitie: informovanie iných skriptov bez čakania
+- Typické použitie: povedať iným skriptom, aby začali, bez čakania na ne.
 
-### `Vysielaj správu a čakaj` (Guru) {#block_event_broadcast_and_wait}
+### `odovzdať … a čakať` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Odošle správu a pozastaví tento skript, kým ostatné skripty nedokončia vykonávanie.
+Pošle správu a pozastaví tento skript, kým sa nedokončia všetky skripty, ktoré ju prijali.
 
-- Spúšťač: odoslanie + čakanie
-- Typické použitie: riadené sekvencie, kde záleží na poradí
+- Typické použitie: postupnosti krok za krokom, v ktorých záleží na poradí.
 
-## Udalosti hubu
+## Udalosti hubov {#hub-events}
 
-### `Tlačidlo hubu` (Začiatočník) {#block_hubs_all_event_button_pressed}
+Tieto bloky sa zobrazia, keď ich podporuje niektorý hub v profile. Pre huby Mould King neexistujú.
+
+### `keď … … tlačidlo …` (Začiatočník) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Spustí sa pri zmene stavu tlačidla hubu.
+Spustí sa, keď sa tlačidlo na hube stlačí alebo pustí.
 
 - Možnosti stavu: `stlačené`, `uvoľnené`, `zmenené`
-- Poznámka: dostupné tlačidlá závisia od modelu hubu.
+- Huby: huby LEGO Powered Up, WeDo 2.0 a Robot Inventor. Zoznam tlačidiel závisí od hubu.
 
-### `Zmena pripojenia hubu` (Začiatočník) {#block_hubs_all_event_connection_changed}
+### `keď … je pripojené / odpojené` (Začiatočník) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Spustí sa pri zmene stavu pripojenia hubu.
+Spustí sa, keď sa hub pripojí alebo odpojí.
 
-- Spúšťač: zmena pripojenia
-- Typické použitie: opätovné pripojenie, bezpečné správanie pri výpadku
+- Typické použitie: bezpečne zastaviť model pri strate spojenia a obnoviť jeho stav, keď sa spojenie vráti.
 
-### `Zmena batérie hubu` (Začiatočník) {#block_hubs_all_event_battery_changed}
+### `keď … % batéria zmenená` (Začiatočník) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Spustí sa pri zmene úrovne batérie hubu.
+Spustí sa, keď sa zmení úroveň batérie hlásená hubom.
 
-- Spúšťač: aktualizácia batérie
-- Typické použitie: varovanie pri nízkej batérii
+- Huby: tie, ktoré hlásia úroveň batérie.
+- Typické použitie: upozornenie na slabú batériu, prepnutie do úsporného režimu.
 
-### `Zmena akcelerometra` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `keď … údaje akcelerometra boli zmenené` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Spustí sa pri zmene hodnôt zrýchlenia.
+Spustí sa, keď sa zmenia hodnoty akcelerometra hubu.
 
-### `Zmena náklonu` (Začiatočník) {#block_hubs_all_event_tilt_changed}
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `keď … náklon … uhol bol zmenený` (Začiatočník) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Spustí sa pri zmene náklonu.
+Spustí sa, keď sa zmení uhol náklonu hubu.
 
-- Možnosti osi: `akýkoľvek`, `náklon`, `rotácia`, `yaw`
+- Možnosti uhla: `akýkoľvek`, `klonenie`, `náklon`, `vybočenie`
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `vybočenie` je k dispozícii iba na Technic Hube a Robot Inventor.
 
-### `Zmena orientácie` (Začiatočník) {#block_hubs_all_event_tilt_orientation_changed}
+### `keď … orientácia bola zmenená` (Začiatočník) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Spustí sa pri zmene orientácie hubu.
+Spustí sa, keď sa zmení orientácia hubu, teda keď je hore iná strana hubu.
 
-## Udalosti senzorov portu
+- Huby: rovnaké ako pri udalosti náklonu.
 
-### `Udalosť farby Technic` (Začiatočník) {#block_hubs_all_event_port_technic_sensor_color}
+## Udalosti senzorov {#sensor-events}
+
+Tieto udalosti čítajú senzor pripojený k portu hubu. Huby: City Hub, Technic Hub, BOOST Move Hub a hub MINDSTORMS Robot Inventor (nie SBrick, BuWizz, WeDo 2.0 ani Mould King).
+
+### Senzor Technic: `keď je farba …` (Začiatočník) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Spustí sa, keď senzor farby deteguje vybranú farbu.
+Spustí sa, keď farebný senzor Technic uvidí vybranú farbu.
 
-### `Udalosť vzdialenosti Technic` (Začiatočník) {#block_hubs_all_event_port_technic_sensor_distance}
+### Senzor Technic: `keď … bližšie ako / ďalej ako / presne na …` (Začiatočník) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Spustí sa, keď vzdialenosť splní podmienku.
+Spustí sa, keď vzdialenosť nameraná senzorom vzdialenosti Technic splní podmienku.
 
-- Porovnania: `bližšie ako`, `ďalej ako`, `presne na`
+- Možnosti porovnania: `bližšie ako`, `ďalej ako`, `presne na`
 - Jednotky: `mm`, `cm`, `palce`, `%`
 
-### `Udalosť vzdialenosti BOOST` (Začiatočník) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### Senzor BOOST: `keď … bližšie ako / ďalej ako / presne na …` (Začiatočník) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Spustí sa pri splnení podmienky vzdialenosti BOOST senzora.
+Spustí sa, keď vzdialenosť nameraná senzorom farby a vzdialenosti BOOST splní podmienku.
+
+- Možnosti porovnania: `bližšie ako`, `ďalej ako`, `presne na`
+- Jednotky: `%`, `cm`, `palce`
+
+### Senzor BOOST: `keď je farba …` (Začiatočník) {#block_hubs_all_event_port_boost_sensor_color}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
+
+Spustí sa, keď senzor farby a vzdialenosti BOOST uvidí vybranú farbu.

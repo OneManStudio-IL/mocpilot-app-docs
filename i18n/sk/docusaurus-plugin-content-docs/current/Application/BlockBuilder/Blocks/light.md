@@ -5,140 +5,121 @@ title: Svetlo
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Svetlo
+# Svetlo {#light}
 
-Táto stránka dokumentuje bloky kategórie Svetlo, ktoré sa používajú na ovládanie LED diód a svetelných výstupov na podporovaných huboch.
+Bloky svetla ovládajú stavové svetlo hubu, svetlá pripojené k portom a svetelnú maticu podporovaných hubov. Kategória sa zobrazí, keď má niektorý hub v profile čo rozsvietiť.
 
-## Základné bloky svetla
+## Svetlá hubu a portov {#hub-and-port-lights}
 
-### `Nastav farbu LED` (Začiatočník) {#block_hubs_all_light_set_led_color}
+### `nastaviť farbu LED na …` (Začiatočník) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Nastaví farbu LED na hube pomocou preddefinovaných farebných možností.
+Nastaví farbu stavového svetla hubu.
 
-- Typ: príkazový blok  
-- Typické použitie: zobrazenie stavu (pripravené, beží, upozornenie, chyba)  
+- Huby: huby LEGO Powered Up (vrátane Technic Move Hubu), WeDo 2.0 a hub MINDSTORMS Robot Inventor.
+- Typické použitie: zobraziť stav modelu (pripravený, beží, upozornenie, chyba).
 
-### `Nastav svetlo na` (Začiatočník) {#block_hubs_all_light_light_turn_to}
+### `zapnúť na … % jas` (Začiatočník) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Nastaví vybraný svetelný výstup na cieľový jas/hodnotu.
+Rozsvieti svetlá pripojené k vybranému portu so zadaným jasom.
 
-- Typ: príkazový blok  
-- Typické použitie: jas svetiel, intenzita indikácie  
+- Huby: všetky huby s portami okrem WeDo 2.0.
+- Typické použitie: svetlomety, nastaviteľné osvetlenie.
 
-### `Vypni svetlo` (Začiatočník) {#block_hubs_all_light_light_turn_off}
+### `vypnúť` (Začiatočník) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Vypne vybraný svetelný výstup.
+Zhasne svetlá pripojené k vybranému portu.
 
-- Typ: príkazový blok  
-- Typické použitie: vypínanie, úspora batérie  
+- Huby: rovnaké ako pri bloku **zapnúť na … % jas**.
 
-### `Technic Move nastav svetlo na` (Začiatočník) {#block_hubs_technicmove_light_light_turn_to}
+### `zapnúť svetlá …` (Začiatočník) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variant bloku `Nastav svetlo na` pre Technic Move hub/svetlo.
+Zapne alebo vypne svetlá Technic Move Hubu.
 
-- Typ: príkazový blok  
-- Typické použitie: nastavenie úrovne svetla na Move hube  
+- Možnosti: `vyp.`, `zap.`
+- Huby: Technic Move Hub.
 
-## Bloky internej LED matice
+## Svetelná matica {#light-matrix}
 
-### `Zapnúť svetelnú maticu` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_image}
+Tieto bloky pracujú so svetelnou maticou 5×5 zabudovanou v hube MINDSTORMS Robot Inventor.
+
+### `zapnúť …` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Zobrazí vybraný obrázok na internej LED matici hubu a okamžite pokračuje ďalším blokom v zásobníku. Obrázok zostane na displeji, kým iný blok nezmení internú LED maticu alebo kým sa program nezastaví.
+Zobrazí na svetelnej matici vybraný obrázok a hneď prejde na ďalší blok. Obrázok zostane, kým maticu nezmení iný blok alebo kým sa program nezastaví.
 
-- Typ: príkazový blok
-- Poznámka: vybraný hub musí mať internú LED maticu.
-
-### `Písať na svetelnú maticu` (Začiatočník) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `napísať …` (Začiatočník) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Zobrazí textový reťazec na internej LED matici hubu posúvaním jedného písmena naraz.
+Posúva text po svetelnej matici, po jednom písmene.
 
-- Typ: príkazový blok
-- Poznámka: vybraný hub musí mať internú LED maticu.
-
-### `Vypnúť pixely matice` (Začiatočník) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `vypnúť pixely` (Začiatočník) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Vypne všetky svetlá na internej LED matici hubu.
+Zhasne všetky pixely svetelnej matice.
 
-- Typ: príkazový blok
-- Poznámka: vybraný hub musí mať internú LED maticu.
-
-### `Nastaviť pixel matice` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `nastaviť pixel … x … y … jas …` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Nastaví jas jedného pixelu na internej LED matici hubu. Aktualizuje sa iba vybraný pixel; zvyšok displeja zostane nezmenený. Polia polohy pixelu používajú hodnoty stĺpca a riadka, pričom pixel `1, 1` je v ľavom hornom rohu.
+Nastaví jas jedného pixelu; zvyšok matice zostane nezmenený. `x` je stĺpec a `y` je riadok; pixel `1, 1` je v ľavom hornom rohu.
 
-- Typ: príkazový blok
-- Poznámka: vybraný hub musí mať internú LED maticu.
-
-### `Otočiť orientáciu matice` (Pokročilý) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `otočiť orientáciu …` (Pokročilý) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Otočí orientáciu toho, čo sa zobrazuje na internej LED matici hubu, v smere alebo proti smeru hodinových ručičiek. Každé otočenie zmení orientáciu displeja o 90 stupňov a ovplyvní svetelné bloky spustené po ňom.
+Otočí obraz na svetelnej matici o 90 stupňov v smere alebo proti smeru hodinových ručičiek. Nová orientácia platí pre bloky svetla, ktoré sa vykonajú po ňom.
 
-- Typ: príkazový blok
-- Poznámka: vybraný hub musí mať internú LED maticu.
-
-### `Nastaviť orientáciu matice` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `nastaviť orientáciu na …` (Pokročilý) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Nastaví orientáciu toho, čo sa zobrazuje na internej LED matici hubu. Predvolená orientácia je vzpriamená a vybraná orientácia ovplyvní svetelné bloky spustené po nej.
+Nastaví orientáciu obrazu na svetelnej matici. Predvolene je `vzpriamene`; nová orientácia platí pre bloky svetla, ktoré sa vykonajú po ňom.
 
-- Typ: príkazový blok
-- Možnosti orientácie: `vzpriamene`, `vľavo`, `vpravo`, `hore nohami`
-- Poznámka: vybraný hub musí mať internú LED maticu.
+- Možnosti: `vzpriamene`, `vľavo`, `vpravo`, `hore nohami`
 
-## Bloky svetiel senzora vzdialenosti
+## Svetlá senzora vzdialenosti {#distance-sensor-lights}
 
-### `Rozsvietiť senzor vzdialenosti` (Začiatočník) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `rozsvietiť …` (Začiatočník) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Nastaví svetlá na vybranom senzore vzdialenosti. Blok môže zapnúť alebo vypnúť jednotlivé svetlá senzora a môže použiť reportovací blok zoznamu na ovládanie jasu každého svetla.
+Ovláda svetlá okolo „očí“ senzora vzdialenosti na vybranom porte. Každé svetlo môžete zapnúť alebo vypnúť, prípadne do políčka vložiť zoznam a nastaviť jas každého svetla.
 
-- Typ: príkazový blok
-- Poznámka: dostupné iba pre hub MINDSTORMS Robot Inventor.
+- Huby: MINDSTORMS Robot Inventor.
 
-## Bloky svetla BuWizz 3
+## LED portov BuWizz 3 {#buwizz-3-port-leds}
 
-### `BuWizz 3 nastav farbu LED` (Začiatočník) {#block_hubs_buwizz3_light_port_set_led_color}
+Tieto bloky nastavujú farbu LED vedľa portu hubu BuWizz 3.
+
+### `nastaviť farbu LED portu na …` (Začiatočník) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Nastaví farbu LED na vybranom porte BuWizz 3 pomocou vstavaných farebných možností.
+Nastaví LED portu na jednu z preddefinovaných farieb.
 
-- Typ: príkazový blok  
-
-### `BuWizz 3 nastav farbu LED (text)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Nastaví farbu LED BuWizz 3 pomocou textovej hodnoty farby.
-
-- Typ: príkazový blok  
-- Typické použitie: dynamické názvy farieb z premenných  
-
-### `BuWizz 3 nastav farbu LED (RGB)` (Pokročilý) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `nastaviť farbu LED portu na … … …` (RGB) (Pokročilý) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Nastaví farbu LED BuWizz 3 pomocou explicitných RGB kanálov.
+Nastaví farbu LED portu z hodnôt červenej, zelenej a modrej.
 
-- Typ: príkazový blok  
-- Typické použitie: úplné prispôsobenie farieb a gradientov  
+- Typické použitie: ľubovoľná farba, plynulé zmeny farieb.
+
+### `nastaviť farbu LED portu zo stringu …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Nastaví farbu LED portu z textu.
+
+- Typické použitie: vziať farbu z premennej alebo zoznamu.

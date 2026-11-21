@@ -5,37 +5,35 @@ title: Variabili
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Variabili
+# Variabili {#variables}
 
-Le variabili memorizzano valori che possono essere letti e aggiornati tra blocchi e script.
+Le variabili memorizzano valori che tutti gli script del programma possono leggere e modificare. Creale, rinominale ed eliminale con **Creare una variabile**, **Rinomina variabile** ed **Eliminare variabile** in cima alla categoria. I blocchi qui sotto compaiono non appena il programma ha almeno una variabile.
 
-## Blocchi di comando delle variabili
+## Modificare una variabile {#changing-a-variable}
 
-### `Imposta variabile a` (Principiante) {#block_variables_set_to}
+### `impostare … a …` (Principiante) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
-Imposta la variabile selezionata al valore specificato.
+Imposta la variabile selezionata su un valore.
 
-- Tipo: blocco di comando
-- Utilizzo tipico: inizializzare uno stato, sovrascrivere un valore precedente
+- Uso tipico: impostare un valore iniziale, sostituire il valore precedente.
 
-### `Cambia variabile di` (Avanzato) {#block_variables_change_by}
+### `cambiare … da …` (Avanzato) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 
-Aggiunge il valore specificato alla variabile selezionata.
+Aggiunge un numero alla variabile selezionata. Usa un numero negativo per sottrarre.
 
-- Tipo: blocco di comando
-- Utilizzo tipico: contatori, punteggio, distanza/tempo accumulati
+- Uso tipico: contatori, punteggi, somma di distanze o tempi.
 
-## Blocco reporter del valore della variabile
+## Leggere una variabile {#reading-a-variable}
 
-### `Valore variabile` (Principiante) {#block_variables_value}
+### Variabile (Principiante) {#block_variables_value}
 
 <img src={useBaseUrl('/img/blocks/variable.svg')} alt="variable.svg" />
 
-Restituisce il valore corrente della variabile selezionata.
+Ogni variabile ha un proprio blocco valore con il suo nome. Restituisce il valore attuale della variabile.
 
-- Tipo: blocco reporter
-- Utilizzo tipico: usare il valore della variabile all’interno di operatori, condizioni e input dei comandi
+- Uso tipico: inserire il valore negli operatori, nelle condizioni e negli spazi di altri blocchi.
+- Il [Monitor](/docs/Application/BlockBuilder/Editor#monitor) mostra i valori di tutte le variabili mentre il programma è in esecuzione.

@@ -1,19 +1,19 @@
 ---
 id: FirmwareUpdating
-title: Actualización de firmware
+title: Actualización del firmware
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Actualización de firmware
+# Actualización del firmware {#firmware-updating}
 
-MOCPilot puede actualizar el firmware de los hubs LEGO Powered Up compatibles cuando hay una versión compatible más reciente disponible.
+MOCPilot puede actualizar el firmware de los hubs LEGO® Powered Up compatibles cuando hay disponible una versión compatible más reciente.
 
-Las actualizaciones de firmware pueden ser necesarias para que un hub funcione correctamente con MOCPilot. Un firmware más reciente puede mejorar la compatibilidad, corregir el comportamiento del hub y permitir que la app use las funciones esperadas para ese modelo.
+Algunos hubs necesitan una actualización para funcionar correctamente con MOCPilot: el firmware nuevo corrige errores del hub y añade las funciones en las que se apoya la app.
 
-## Hubs compatibles
+## Hubs compatibles {#supported-hubs}
 
-La actualización de firmware está disponible actualmente para estos hubs:
+MOCPilot puede actualizar estos hubs:
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', margin: '16px 0 24px'}}>
   <div style={{textAlign: 'center'}}>
@@ -34,73 +34,73 @@ La actualización de firmware está disponible actualmente para estos hubs:
   </div>
 </div>
 
-## Antes de empezar
+## Antes de empezar {#before-you-start}
 
-Antes de iniciar la actualización, asegúrese de que el hub y el dispositivo que ejecuta MOCPilot tengan suficiente batería.
+Asegúrate de que el hub y tu teléfono, tableta u ordenador tengan batería suficiente.
 
-Mantenga el hub encendido durante todo el proceso. Mantenga el teléfono, la tablet o el ordenador cerca del hub para que la conexión Bluetooth permanezca estable. No cierre MOCPilot, no desactive Bluetooth ni apague el hub mientras se carga el firmware.
+Mantén el hub encendido durante toda la actualización y el dispositivo cerca de él para que la conexión Bluetooth sea estable. No cierres MOCPilot, no desactives el Bluetooth ni apagues el hub mientras se carga el firmware.
 
 :::warning Importante
-Interrumpir una actualización de firmware puede dejar el firmware del hub en un estado incompleto. Si ocurre, el hub puede necesitar recuperación de firmware antes de volver a usarse.
+Una actualización interrumpida puede dejar el hub con un firmware incompleto. En ese caso, puede que el hub necesite una recuperación del firmware antes de poder usarlo de nuevo.
 :::
 
-## Iniciar la actualización
+## Iniciar la actualización {#starting-the-update}
 
-Al conectar un hub, MOCPilot comprueba la versión de firmware instalada. Si la app detecta que se necesita una versión más reciente, muestra un diálogo de actualización de firmware.
+Al conectar un hub, MOCPilot comprueba la versión de su firmware. Si se necesita una versión más reciente, la app muestra el diálogo **Se requiere actualización de firmware**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_1.png')} alt="Diálogo de actualización de firmware requerida" />
 
-Seleccione **Actualizar** para iniciar la actualización de firmware inmediatamente.
+Selecciona **Actualizar** para iniciar la actualización del firmware de inmediato.
 
-Si no desea actualizar ahora, seleccione **Cancelar**. Puede iniciar la actualización más tarde desde el menú contextual del hub.
+Para actualizar más tarde, selecciona **Cancelar**. Puedes iniciar la actualización desde el menú del hub en cualquier momento.
 
-## Actualizar más tarde desde el menú del hub
+## Actualizar más tarde desde el menú del hub {#updating-later-from-the-hub-menu}
 
-Para iniciar la actualización de firmware manualmente:
+Para iniciar la actualización tú mismo:
 
-1. Abra **Mis hubs Bluetooth**.
-2. Busque el hub que necesita actualizarse.
-3. Abra el menú contextual del hub.
-4. Seleccione **Actualizar firmware**.
+1. Abre **Mis hubs Bluetooth**.
+2. Busca el hub que necesita la actualización.
+3. Abre el menú del hub.
+4. Selecciona **Actualizar firmware**.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Actualizar firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_2.png')} alt="Acción Actualizar firmware en el menú contextual del hub" />
 
-## Durante la actualización de firmware
+## Durante la actualización del firmware {#during-the-firmware-update}
 
-Tras iniciar la actualización, MOCPilot carga el firmware en el hub y muestra el progreso.
+MOCPilot carga el firmware en el hub y muestra el progreso.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_3.png')} alt="Pantalla de progreso de la actualización del firmware" />
 
-Espere hasta que la carga termine. El hub puede reiniciarse o desconectarse temporalmente mientras se aplica el nuevo firmware.
+Espera a que termine la carga. Es posible que el hub se reinicie o se desconecte un momento mientras se aplica el nuevo firmware.
 
-Después de cargar el firmware, MOCPilot vuelve a buscar el hub. Mantenga el hub cerca y espere a que la app se reconecte.
+Después, MOCPilot vuelve a buscar el hub. Mantén el hub cerca y espera a que la app se reconecte.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_4.png')} alt="Firmware cargado y búsqueda del hub" />
 
-## Finalizar la actualización
+## Finalizar la actualización {#finishing-the-update}
 
-Cuando la actualización termina correctamente, MOCPilot muestra un diálogo de confirmación.
+Cuando termina la actualización, MOCPilot muestra una confirmación.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_5.png')} alt="Diálogo de actualización del firmware finalizada" />
 
-Seleccione **OK**. El hub se reconectará y la tarjeta del hub mostrará la versión de firmware actualizada.
+Selecciona **Aceptar**. El hub se vuelve a conectar y su tarjeta muestra la nueva versión del firmware.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_6.png')} alt="Tarjeta del hub con la versión de firmware actualizada" />
 
-Ahora puede seguir usando el hub con MOCPilot.
+Ya puedes seguir usando el hub con MOCPilot.
 
-## Si la actualización falla
+## Si la actualización falla {#if-the-update-fails}
 
-Si la actualización no termina correctamente, MOCPilot muestra un mensaje de error de actualización de firmware.
+Si la actualización falla, MOCPilot muestra un mensaje de error.
 
-<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Actualización de firmware" />
+<img src={useBaseUrl('/img/hubs/firmware-updating/fu_7.png')} alt="Diálogo de error en la actualización del firmware" />
 
-Primero, apague y encienda el hub y ejecute la actualización de nuevo:
+Primero, apaga y enciende el hub y vuelve a ejecutar la actualización:
 
-1. Apague el hub.
-2. Encienda el hub de nuevo.
-3. Mantenga el hub cerca de su dispositivo.
-4. Conecte el hub en MOCPilot.
-5. Inicie de nuevo la actualización de firmware.
+1. Apaga el hub.
+2. Vuelve a encender el hub.
+3. Mantén el hub cerca de tu dispositivo.
+4. Conéctate al hub en MOCPilot.
+5. Inicia de nuevo la actualización del firmware.
 
-Si el hub no responde normalmente, puede ser necesaria la recuperación de firmware. Siga la guía [Recuperación del firmware del hub](/docs/Application/Hubs/RecoveryHubFirmware/) para obtener instrucciones detalladas.
+Si el hub sigue sin responder con normalidad, puede que necesite una recuperación del firmware: consulta [Recuperación del firmware del hub](/docs/Application/Hubs/RecoveryHubFirmware/).

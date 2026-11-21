@@ -5,115 +5,145 @@ title: Tapahtumat
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Tapahtumat
+# Tapahtumat {#events}
 
-**Tapahtumat**-kategoria sisältää lohkoja, jotka käynnistävät skriptejä, kun ehto toteutuu.
+**Tapahtumat**-luokassa ovat lohkot, jotka käynnistävät skriptejä, kun jotain tapahtuu, sekä lohkot, jotka lähettävät viestejä skriptien välillä. Viestejä hallitaan luokan yläreunan painikkeilla **Lisää viesti** ja **Poista viesti**.
 
-## Perustapahtumat
+## Perustapahtumat {#core-events}
 
-### `Kun ohjelma käynnistyy` (Aloittelija) {#block_event_when_program_started}
+### `kun ohjelma käynnistyy` (Aloittelija) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Käynnistää skriptin kerran ohjelman alussa.
+Suorittaa skriptinsä kerran, kun ohjelma käynnistyy.
 
-- Laukaisin: ohjelman käynnistys
-- Tyypillinen käyttö: alustukset, oletusarvot
+- Tyypillinen käyttö: muuttujien alkuarvojen asettaminen, moottorien asettaminen alkutilaan, ”valmis”-viestin näyttäminen.
 
-### `Kun` (Edistynyt) {#block_event_when}
+### `kun …` (Edistynyt) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Suorittaa, kun ehto on tosi.
+Suorittaa skriptinsä, kun paikassa oleva ehto muuttuu epätodesta todeksi. Skriptin käydessä lohko odottaa; se laukeaa uudelleen vasta, kun ehto on muuttunut epätodeksi ja sitten taas todeksi.
 
-- Laukaisin: ehto
+- Tyypillinen käyttö: reagointi tilaan, esimerkiksi `kun ajastin > 5 ja kytkin on päällä`.
 
-### `Kun ajastin suurempi kuin` (Edistynyt) {#block_event_when_timer_greater_than}
+### `kun ajastin > …` (Edistynyt) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Suorittaa, kun ajastin ylittää arvon.
+Suorittaa skriptinsä, kun ohjelman ajastin ylittää arvon (sekunteina).
 
-### `Kun viesti vastaanotettu` (Guru) {#block_event_when_message_recieved}
+- Tyypillinen käyttö: viivästetyt toiminnot, ajastetut vaiheet. Nollaa ajastin lohkolla **nollaa ajastin** (Anturit).
+
+### `kun vastaanotan …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Käynnistää skriptin viestin saapuessa.
+Suorittaa skriptinsä, kun valittu viesti lähetetään.
 
-### `Lähetä viesti` (Guru) {#block_event_broadcast}
+- Tyypillinen käyttö: useiden skriptien koordinointi.
+
+### `siirtää …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Lähettää viestin muille skripteille.
+Lähettää viestin jokaiselle skriptille, joka alkaa kyseisen viestin **kun vastaanotan** -lohkolla, ja jatkaa heti.
 
-### `Lähetä viesti ja odota` (Guru) {#block_event_broadcast_and_wait}
+- Tyypillinen käyttö: muiden skriptien käynnistäminen odottamatta niitä.
+
+### `siirtää … ja odota` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Lähettää viestin ja odottaa.
+Lähettää viestin ja keskeyttää tämän skriptin, kunnes kaikki viestin vastaanottaneet skriptit ovat päättyneet.
 
-## Hub-tapahtumat
+- Tyypillinen käyttö: vaiheittaiset sarjat, joissa järjestyksellä on väliä.
 
-### `Hubin painike painettu` (Aloittelija) {#block_hubs_all_event_button_pressed}
+## Hubin tapahtumat {#hub-events}
+
+Nämä lohkot näkyvät, kun jokin profiilin hubi tukee niitä. Mould King -hubeille niitä ei ole.
+
+### `kun … … painike …` (Aloittelija) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Suorittaa, kun painike painetaan.
+Suoritetaan, kun hubin painiketta painetaan tai se vapautetaan.
 
-- Tilat: `painettu`, `vapautettu`, `muuttunut`
+- Tilavaihtoehdot: `painettu`, `vapautettu`, `muutettu`
+- Hubit: LEGO Powered Up -hubit, WeDo 2.0 ja Robot Inventor. Painikkeiden luettelo riippuu hubista.
 
-### `Hubin yhteys muuttui` (Aloittelija) {#block_hubs_all_event_connection_changed}
+### `kun … on yhdistetty / yhteys katkaistu` (Aloittelija) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Suorittaa, kun yhteys muuttuu.
+Suoritetaan, kun hubi yhdistyy tai sen yhteys katkeaa.
 
-### `Hubin akku muuttui` (Aloittelija) {#block_hubs_all_event_battery_changed}
+- Tyypillinen käyttö: mallin pysäyttäminen turvallisesti yhteyden katketessa ja sen tilan palauttaminen, kun yhteys palaa.
+
+### `kun … % akku muuttui` (Aloittelija) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Suorittaa, kun akun tila muuttuu.
+Suoritetaan, kun hubin ilmoittama akun taso muuttuu.
 
-### `Hubin kiihtyvyys muuttui` (Guru) {#block_hubs_all_event_accelerometer_changed}
+- Hubit: ne, jotka ilmoittavat akkunsa tason.
+- Tyypillinen käyttö: varoitus vähäisestä akusta, siirtyminen virransäästötilaan.
+
+### `kun … kiihtyvyysanturin tiedot muuttuivat` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Suorittaa, kun kiihtyvyys muuttuu.
+Suoritetaan, kun hubin kiihtyvyysanturin arvot muuttuvat.
 
-### `Hubin kallistus muuttui` (Aloittelija) {#block_hubs_all_event_tilt_changed}
+- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `kun … kallistus … kulma muuttui` (Aloittelija) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Suorittaa, kun kallistus muuttuu.
+Suoritetaan, kun hubin kallistuskulma muuttuu.
 
-### `Hubin suunta muuttui` (Aloittelija) {#block_hubs_all_event_tilt_orientation_changed}
+- Kulmavaihtoehdot: `mikä tahansa`, `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll), `kallistus` (kierto, yaw)
+- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. Kierto (yaw) on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
+
+### `kun … suunta muuttui` (Aloittelija) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Suorittaa, kun suunta muuttuu.
+Suoritetaan, kun hubin suunta muuttuu eli kun hubin eri sivu osoittaa ylöspäin.
 
-## Anturitapahtumat
+- Hubit: samat kuin kallistustapahtumassa.
 
-### `Technic-värianturi tapahtuma` (Aloittelija) {#block_hubs_all_event_port_technic_sensor_color}
+## Anturitapahtumat {#sensor-events}
+
+Nämä tapahtumat lukevat hubin porttiin kytkettyä anturia. Hubit: City Hub, Technic Hub, BOOST Move Hub ja MINDSTORMS Robot Inventor -hubi (ei SBrick, BuWizz, WeDo 2.0 eikä Mould King).
+
+### Technic-anturi: `kun väri on …` (Aloittelija) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Suorittaa, kun väri havaitaan.
+Suoritetaan, kun Technic-värianturi näkee valitun värin.
 
-### `Technic-etäisyysanturi tapahtuma` (Aloittelija) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic-anturi: `kun … lähempänä kuin / kauempana kuin / täsmälleen kohdalla …` (Aloittelija) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Suorittaa, kun etäisyys täyttää ehdon.
+Suoritetaan, kun Technic-etäisyysanturin mittaama etäisyys täyttää ehdon.
 
-### `BOOST-etäisyysanturi tapahtuma` (Aloittelija) {#block_hubs_all_event_port_boost_sensor_when_distance}
+- Vertailuvaihtoehdot: `lähempänä kuin`, `kauempana kuin`, `täsmälleen kohdalla`
+- Yksiköt: `mm`, `cm`, `tuuma`, `%`
+
+### BOOST-anturi: `kun … lähempänä kuin / kauempana kuin / täsmälleen kohdalla …` (Aloittelija) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Suorittaa, kun etäisyys saavutetaan.
+Suoritetaan, kun BOOST-väri- ja etäisyysanturin mittaama etäisyys täyttää ehdon.
 
-### `BOOST-värianturi tapahtuma` (Aloittelija) {#block_hubs_all_event_port_boost_sensor_color}
+- Vertailuvaihtoehdot: `lähempänä kuin`, `kauempana kuin`, `täsmälleen kohdalla`
+- Yksiköt: `%`, `cm`, `tuuma`
+
+### BOOST-anturi: `kun väri on …` (Aloittelija) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Suorittaa, kun väri havaitaan.
+Suoritetaan, kun BOOST-väri- ja etäisyysanturi näkee valitun värin.

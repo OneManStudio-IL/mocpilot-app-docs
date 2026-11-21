@@ -1,150 +1,149 @@
 ---
 id: Events
-title: Hændelser
+title: Begivenheder
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Hændelser
+# Begivenheder {#events}
 
-Kategorien **Hændelser** indeholder blokke, der starter scripts, når en betingelse opstår.
+Kategorien **Begivenheder** indeholder de blokke, der starter scripts, når noget sker, samt de blokke, der sender beskeder mellem scripts. Brug **Tilføj besked** og **Slet besked** øverst i kategorien til at administrere beskeder.
 
-## Grundlæggende hændelser
+## Grundlæggende hændelser {#core-events}
 
-### `Når program starter` (Begynder) {#block_event_when_program_started}
+### `når programmet starter` (Begynder) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Starter dette script én gang, når profilens program starter.
+Kører sit script én gang, når programmet starter.
 
-- Trigger: programstart
-- Typisk brug: initialisere variabler, standard-motortilstande, opstartslyde
+- Typisk brug: sæt startværdier for variabler, sæt motorerne i deres starttilstand, vis en »klar«-besked.
 
-### `Når` (Avanceret) {#block_event_when}
+### `når …` (Avanceret) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Kører når en valgt betingelse bliver sand.
+Kører sit script, når betingelsen i feltet skifter fra falsk til sand. Mens scriptet kører, venter blokken; den udløses først igen, når betingelsen er blevet falsk og derefter sand igen.
 
-- Trigger: betingelsesbaseret
-- Typisk brug: forgrene logik ud fra runtime-tilstand
+- Typisk brug: reager på en tilstand, for eksempel `når timeren > 5 og kontakten er tændt`.
 
-### `Når timer er større end` (Avanceret) {#block_event_when_timer_greater_than}
+### `når timeren > …` (Avanceret) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Kører når timerværdien passerer en tærskel.
+Kører sit script, når programmets timer overstiger værdien (i sekunder).
 
-- Trigger: forløbet tid
-- Typisk brug: forsinkede handlinger, tidsstyrede faser
+- Typisk brug: forsinkede handlinger, tidsstyrede faser. Nulstil timeren med **nulstil timer** (Sensorer).
 
-### `Når besked modtages` (Guru) {#block_event_when_message_recieved}
+### `når jeg modtager …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Starter et script, når en matchende broadcast-besked modtages.
+Kører sit script, når den valgte besked bliver sendt.
 
-- Trigger: beskedkanal
-- Typisk brug: synkronisere flere scripts
+- Typisk brug: koordiner flere scripts.
 
-### `Broadcast` (Guru) {#block_event_broadcast}
+### `overføre …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Sender en besked til alle scripts, der lytter efter den besked.
+Sender en besked til alle scripts, der starter med **når jeg modtager** for den besked, og fortsætter med det samme.
 
-- Trigger: øjeblikkelig afsendelse
-- Typisk brug: give besked til andre scripts uden at vente
+- Typisk brug: få andre scripts til at starte uden at vente på dem.
 
-### `Broadcast og vent` (Guru) {#block_event_broadcast_and_wait}
+### `overføre … og vent` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Sender en besked og pauser dette script, indtil modtagere er færdige.
+Sender en besked og sætter dette script på pause, indtil alle de scripts, der modtog den, er færdige.
 
-- Trigger: øjeblikkelig afsendelse + vent
-- Typisk brug: trinvis flow hvor rækkefølge betyder noget
+- Typisk brug: trinvise sekvenser, hvor rækkefølgen betyder noget.
 
-## Hub-hændelser
+## Hubhændelser {#hub-events}
 
-### `Hub-knap trykket` (Begynder) {#block_hubs_all_event_button_pressed}
+Disse blokke vises, når en hub i profilen understøtter dem. De findes ikke til Mould King-hubs.
+
+### `når … … knap …` (Begynder) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Kører når hovedknappen på hubben ændrer tilstand.
+Kører, når en knap på hubben trykkes ned eller slippes.
 
-- Tilstandsmuligheder: `trykket`, `frigivet`, `ændret`
-- Bemærk: tilgængelige knapmuligheder kan variere efter hub-model (forskellige hubs kan have forskellige knapsæt).
+- Tilstande: `trykket`, `sluppet`, `ændret`
+- Hubs: LEGO Powered Up-hubs, WeDo 2.0 og Robot Inventor. Listen over knapper afhænger af hubben.
 
-### `Hub-forbindelse ændret` (Begynder) {#block_hubs_all_event_connection_changed}
+### `når … er tilsluttet / afbrudt` (Begynder) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Kører når hubbens forbindelsestilstand ændres (forbundet eller frakoblet).
+Kører, når hubben forbindes eller mister forbindelsen.
 
-- Trigger: ændring af hub-forbindelsesstatus
-- Typisk brug: håndtering af genforbindelse og sikker fallback-adfærd efter forbindelsestab
+- Typisk brug: stop modellen sikkert, når forbindelsen mistes, og genskab dens tilstand, når forbindelsen kommer tilbage.
 
-### `Hub-batteri ændret` (Begynder) {#block_hubs_all_event_battery_changed}
+### `når … % batteri ændret` (Begynder) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Kører når det rapporterede batteriniveau for hubben ændres.
+Kører, når det batteriniveau, hubben rapporterer, ændrer sig.
 
-- Trigger: opdatering af batteriniveau (for hubs der rapporterer batteritilstand)
-- Typisk brug: lav-batteri-advarsler og skift til strømbesparende tilstand
+- Hubs: dem, der rapporterer deres batteriniveau.
+- Typisk brug: en advarsel om lavt batteri, skift til en strømbesparende tilstand.
 
-### `Hub-accelerometer ændret` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `når … accelerometerdata er ændret` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Kører når accelerationsværdier ændres.
+Kører, når hubbens accelerometerværdier ændrer sig.
 
-### `Hub-tilt ændret` (Begynder) {#block_hubs_all_event_tilt_changed}
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `når … hældning … vinkel ændret` (Begynder) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Kører når tilt-værdi ændres.
+Kører, når hubbens hældningsvinkel ændrer sig.
 
-- Vinkelmuligheder: `enhver`, `hældning`, `rulning`, `gyring`
-- Bemærk: `gyring` er kun tilgængelig på hubs, der leverer yaw-data.
+- Vinkler: `enhver`, `hældning`, `rulning`, `gyring`
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `gyring` findes kun på Technic Hub og Robot Inventor.
 
-### `Hub-orientering ændret` (Begynder) {#block_hubs_all_event_tilt_orientation_changed}
+### `når … orientering ændret` (Begynder) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Kører når orienteringstilstand ændres (f.eks. foran/op/ned/venstre/højre).
+Kører, når hubbens orientering ændrer sig, det vil sige, når en anden side af hubben vender opad.
 
-## Sensorport-hændelser
+- Hubs: de samme som for hældningshændelsen.
 
-### `Technic farvesensor-hændelse` (Begynder) {#block_hubs_all_event_port_technic_sensor_color}
+## Sensorhændelser {#sensor-events}
+
+Disse hændelser læser en sensor, der er tilsluttet en port på hubben. Hubs: City Hub, Technic Hub, BOOST Move Hub og MINDSTORMS Robot Inventor-hubben (ikke SBrick, BuWizz, WeDo 2.0 eller Mould King).
+
+### Technic-sensor: `når farven er …` (Begynder) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Kører når Technic-farvesensoren rapporterer en valgt farve.
+Kører, når Technic-farvesensoren ser den valgte farve.
 
-
-### `Technic afstandssensor-hændelse` (Begynder) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic-sensor: `når … nærmere end / længere end / præcis ved …` (Begynder) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Kører når Technic-afstandssensorens værdier matcher den valgte betingelse.
+Kører, når den afstand, Technic-afstandssensoren måler, opfylder betingelsen.
 
-- Sammenligningsmuligheder: `nærmere end`, `længere end`, `præcis ved`
-- Enhedsmuligheder: `mm`, `cm`, `tommer`, `%`
-- Bemærk: tilgængelige enheder kan afhænge af sensortilstand og tilsluttet enhed.
+- Sammenligninger: `nærmere end`, `længere end`, `præcis ved`
+- Enheder: `mm`, `cm`, `tommer`, `%`
 
-### `BOOST sensorafstand-hændelse` (Begynder) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST-sensor: `når … nærmere end / længere end / præcis ved …` (Begynder) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Kører når BOOST-afstandssensoren når den valgte tærskel/betingelse.
+Kører, når den afstand, BOOST-farve- og afstandssensoren måler, opfylder betingelsen.
 
-- Sammenligningsmuligheder: `nærmere end`, `længere end`, `præcis ved`
-- Enhedsmuligheder: `%`, `cm`, `tommer`
+- Sammenligninger: `nærmere end`, `længere end`, `præcis ved`
+- Enheder: `%`, `cm`, `tommer`
 
-### `BOOST sensorfarve-hændelse` (Begynder) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST-sensor: `når farven er …` (Begynder) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Kører når BOOST-sensoren registrerer en valgt farve.
+Kører, når BOOST-farve- og afstandssensoren ser den valgte farve.

@@ -5,97 +5,87 @@ title: Gamepad
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gamepad
-Gamepad-Blöcke reagieren auf Controller-Eingaben und lesen aktuelle Gamepad-Zustandswerte.
+# Gamepad {#gamepad}
 
-## Ereignisblöcke
+Gamepad-Blöcke reagieren auf einen Gamecontroller und lesen seine Tasten, Sticks und Trigger. Die Kategorie erscheint, wenn auf der [Gamepad-Seite](/docs/Application/Dashboard/Gamepad) **Gamepad-Blöcke aktivieren** eingeschaltet ist. Die Tastennamen folgen dem Layout des Controllers: Xbox oder Sony.
 
-### `Wenn Gamepad-Taste ist` (Anfänger) {#block_gamepad_event_when_button_is}
+## Ereignisse {#events}
+
+### `wenn … ist …` (Anfänger) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Wird ausgelöst, wenn die ausgewählte Gamepad-Taste dem konfigurierten Zustand entspricht.
+Wird ausgeführt, wenn die ausgewählte Taste gedrückt oder losgelassen wird.
 
-- Typ: Ereignisblock
-- Tastenoptionen (Xbox-Layout): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Tastenoptionen (Sony-Layout): `kreuz`, `kreis`, `quadrat`, `dreieck`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Statusoptionen: `gedrückt`, `losgelassen`
+- Tasten (Xbox-Layout): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Tasten (Sony-Layout): `Kreuz`, `Kreis`, `Quadrat`, `Dreieck`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Zustände: `gedrückt`, `losgelassen`
 
-### `Wenn Gamepad-D-Pad ist` (Anfänger) {#block_gamepad_event_when_dpad_is}
+### `wenn D-Pad … Taste …` (Anfänger) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Wird ausgelöst, wenn Richtung/Zustand des D-Pads der Bedingung entspricht.
+Wird ausgeführt, wenn eine Taste des Steuerkreuzes gedrückt oder losgelassen wird.
 
-- Typ: Ereignisblock
-- Richtungsoptionen: `oben`, `unten`, `links`, `rechts`
-- Statusoptionen: `gedrückt`, `losgelassen`
+- Richtungen: `hoch`, `runter`, `links`, `rechts`
+- Zustände: `gedrückt`, `losgelassen`
 
-### `Wenn Gamepad-Stick ist` (Anfänger) {#block_gamepad_event_when_thumbstick_is}
+### `wenn … Stick …` (Anfänger) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Wird ausgelöst, wenn die Stick-Bedingung den gewählten Optionen entspricht.
+Wird ausgeführt, wenn ein Stick in eine Richtung gedrückt, bewegt oder losgelassen wird.
 
-- Stickauswahl: `links` / `rechts`
-- Richtungs-/Statusauswahl: `oben`, `unten`, `links`, `rechts`, `bewegt`, `losgelassen`
+- Stick: `links`, `rechts`
+- Zustand: `hoch`, `runter`, `links`, `rechts`, `bewegt`, `losgelassen`
+- Typische Verwendung: auf Stickbewegungen reagieren und das Modell anhalten oder zentrieren, wenn der Stick losgelassen wird.
 
-## Werteblöcke
+## Werte {#values}
 
-### `Gamepad-Tastenwert (boolean)` (Anfänger) {#block_gamepad_button_value_boolean}
+### `ist … …` (Anfänger) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Gibt den aktuellen Zustand der ausgewählten Gamepad-Taste zurück.
+Liefert `true`, wenn die ausgewählte Taste im ausgewählten Zustand ist.
 
-- Typ: Werteblock
-- Ausgabe: `true`/`false`
-- Tastenoptionen (Xbox-Layout): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Tastenoptionen (Sony-Layout): `kreuz`, `kreis`, `quadrat`, `dreieck`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Statusoptionen: `gedrückt`, `losgelassen`
+- Tasten (Xbox-Layout): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Tasten (Sony-Layout): `Kreuz`, `Kreis`, `Quadrat`, `Dreieck`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Zustände: `gedrückt`, `losgelassen`
 
-### `Gamepad-D-Pad-Tastenwert (boolean)` (Anfänger) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … Taste …` (Anfänger) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Gibt zurück, ob die gewählte D-Pad-Richtung aktuell aktiv ist.
+Liefert `true`, wenn die ausgewählte Taste des Steuerkreuzes im ausgewählten Zustand ist.
 
-- Typ: Werteblock
-- Ausgabe: `true`/`false`
-- Richtungsoptionen: `oben`, `unten`, `links`, `rechts`
-- Statusoptionen: `gedrückt`, `losgelassen`
+- Richtungen: `hoch`, `runter`, `links`, `rechts`
+- Zustände: `gedrückt`, `losgelassen`
 
-### `Gamepad-Stickwert (float)` (Anfänger) {#block_gamepad_thumbstick_value_float}
+### `Stick … …` (Anfänger) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Gibt den numerischen Stick-Achsenwert zurück.
+Liefert die Stellung eines Sticks entlang einer Achse.
 
-- Typ: Werteblock
-- Ausgabe: numerisch (float)
-- Standardbereich: `-1` bis `1`
-- Optionaler Bereich in Gamepad-Einstellungen: `-100` bis `100`
-- Stickoptionen: `links`, `rechts`
-- Achsenoptionen: `x-axis`, `y-axis`
+- Stick: `links`, `rechts`
+- Achse: `X-Achse`, `Y-Achse`
+- Bereich: standardmäßig von `-1` bis `1` oder von `-100` bis `100`, wenn Sie das auf der Gamepad-Seite unter **Wertebereich des Gamepads** wählen.
 
-### `Gamepad-Triggerdruck-Wert (float)` (Anfänger) {#block_gamepad_trigger_pressure_value_float}
+### `… Druck` (Anfänger) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Gibt den Trigger-Druckwert für den ausgewählten Trigger zurück.
+Liefert, wie weit ein Trigger gedrückt ist.
 
-- Typ: Werteblock
-- Ausgabe: numerisch (float)
-- Standardbereich: `-1` bis `1`
-- Optionaler Bereich in Gamepad-Einstellungen: `-100` bis `100`
-- Triggeroptionen (Xbox-Layout): `LT`, `RT`
-- Triggeroptionen (Sony-Layout): `L2`, `R2`
+- Trigger (Xbox-Layout): `LT`, `RT`
+- Trigger (Sony-Layout): `L2`, `R2`
+- Bereich: standardmäßig von `0` (losgelassen) bis `1` oder von `0` bis `100` mit dem größeren **Wertebereich des Gamepads**.

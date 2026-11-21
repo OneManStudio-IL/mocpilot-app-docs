@@ -1,170 +1,162 @@
 ---
 id: Operators
-title: Operatoren
+title: Operator
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Operatoren
+# Operator {#operators}
 
-Operatoren sind Reporter- und boolesche Blöcke für Berechnungen, Vergleiche, Logik und Textverarbeitung.
+Operatoren sind Werte- und boolesche Blöcke für Mathematik, Vergleiche, Logik und Text.
 
-## Arithmetische Operatoren
+## Mathematik {#math}
 
-### `Plus` (Anfänger) {#block_operator_plus}
+### `… + …` (Anfänger) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Gibt die Summe zweier Werte zurück.
+Liefert die Summe zweier Zahlen.
 
-### `Minus` (Anfänger) {#block_operator_minus}
+### `… − …` (Anfänger) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Gibt das Ergebnis der Subtraktion zweier Werte zurück.
+Zieht die zweite Zahl von der ersten ab.
 
-### `Multiplizieren` (Anfänger) {#block_operator_multiply}
+### `… × …` (Anfänger) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Gibt das Produkt zweier Werte zurück.
+Liefert das Produkt zweier Zahlen.
 
-### `Dividieren` (Anfänger) {#block_operator_divide}
+### `… ÷ …` (Anfänger) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Gibt das Ergebnis der Division zweier Werte zurück.
+Teilt die erste Zahl durch die zweite.
 
-### `Modulo` (Guru) {#block_operator_modulus}
+### `… modulo …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Gibt den Rest einer Division zurück.
+Liefert den Rest der Division der ersten Zahl durch die zweite.
 
-### `Runden` (Guru) {#block_operator_round}
+### `runden …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Rundet auf die nächste ganze Zahl (z. B. `2.6 -> 3`).
+Rundet eine Zahl auf die nächste ganze Zahl (zum Beispiel wird aus `2.6` die `3`).
 
-### `Math single` (Guru) {#block_operator_math_single}
+### `… von …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Wendet eine mathematische Funktion mit einem Argument an.
+Wendet eine Funktion auf eine Zahl an. Winkel sind in Grad angegeben.
 
-Verfügbare Funktionen:
-
-- `absoluter Wert`: absoluter Wert einer Zahl
-- `abrunden`: auf die nächstkleinere ganze Zahl runden
-- `aufrunden`: auf die nächstgrößere ganze Zahl runden
-- `Wurzel`: Quadratwurzel
-- `sin`: Sinus (winkelbasiert)
-- `cos`: Kosinus (winkelbasiert)
-- `tan`: Tangens (winkelbasiert)
-- `asin`: Arkussinus
-- `acos`: Arkuskosinus
-- `atan`: Arkustangens
+- `Betrag`: Absolutwert
+- `ganzzahliger kleiner`: auf eine ganze Zahl abrunden
+- `ganzzahliger größer`: auf eine ganze Zahl aufrunden
+- `Quadratwurzel`: Quadratwurzel
+- `sin`, `cos`, `tan`: Sinus, Kosinus und Tangens eines Winkels
+- `asin`, `acos`, `atan`: die Umkehrfunktionen; sie liefern einen Winkel
 - `ln`: natürlicher Logarithmus (Basis `e`)
-- `log`: Logarithmus zur Basis `10`
-- `e^`: `e` hoch Eingabewert
-- `10^`: `10` hoch Eingabewert
+- `log`: Zehnerlogarithmus
+- `e^`: `e` hoch die Zahl
+- `10^`: `10` hoch die Zahl
 
-### `Math pair` (Guru) {#block_operator_math_pair}
+### `… von … und …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Wendet eine mathematische Funktion mit zwei Argumenten an.
+Wendet eine Funktion auf zwei Zahlen an.
 
-Verfügbare Funktionen:
+- `min`: die kleinere der beiden
+- `max`: die größere der beiden
+- `Potenz`: die erste Zahl hoch die zweite
+- `atan2`: der Winkel des Punkts, der durch die beiden Zahlen gegeben ist
+- `hypot`: die Länge der Hypotenuse mit diesen beiden Seiten
+- `copysign`: die erste Zahl mit dem Vorzeichen der zweiten
 
-- `min`: der kleinere von zwei Werten
-- `max`: der größere von zwei Werten
-- `Potenz`: erster Wert hoch zweiter Wert
-- `atan2`: Winkel aus X/Y-Wertepaar
-- `hypot`: Hypotenusenlänge aus zwei Komponenten
-- `copysign`: erster Wert mit Vorzeichen des zweiten Werts
-
-### `Zufallszahl` (Guru) {#block_operator_pick_random}
+### `zufällig wählen … bis …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Gibt eine Zufallszahl im gewählten Bereich zurück.
+Liefert eine Zufallszahl zwischen den beiden Werten.
 
-## Vergleichsoperatoren
+## Vergleich {#comparison}
 
-### `Gleich` (Anfänger) {#block_operator_equal}
+### `… = …` (Anfänger) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Gibt `true` zurück, wenn zwei Werte gleich sind.
+Liefert `true`, wenn die beiden Werte gleich sind.
 
-### `Ungleich` (Fortgeschritten) {#block_operator_not_equal}
+### `… ≠ …` (Fortgeschritten) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Gibt `true` zurück, wenn zwei Werte ungleich sind.
+Liefert `true`, wenn die beiden Werte verschieden sind.
 
-### `Größer als` (Anfänger) {#block_operator_greater_than}
+### `… > …` (Anfänger) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Gibt `true` zurück, wenn der linke Wert größer als der rechte ist.
+Liefert `true`, wenn der linke Wert größer als der rechte ist.
 
-### `Kleiner als` (Anfänger) {#block_operator_less_than}
+### `… < …` (Anfänger) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Gibt `true` zurück, wenn der linke Wert kleiner als der rechte ist.
+Liefert `true`, wenn der linke Wert kleiner als der rechte ist.
 
-### `Ist zwischen` (Fortgeschritten) {#block_operator_is_in_between}
+### `ist … zwischen … und …` (Fortgeschritten) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Gibt `true` zurück, wenn ein Wert innerhalb der angegebenen Grenzen liegt.
+Liefert `true`, wenn die Zahl zwischen den beiden Grenzen liegt.
 
-## Boolesche Logikoperatoren
+## Logik {#logic}
 
-### `Und` (Fortgeschritten) {#block_operator_and}
+### `… und …` (Fortgeschritten) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Gibt nur dann `true` zurück, wenn beide Bedingungen `true` sind.
+Liefert `true` nur, wenn beide Bedingungen wahr sind.
 
-### `Oder` (Fortgeschritten) {#block_operator_or}
+### `… oder …` (Fortgeschritten) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Gibt `true` zurück, wenn mindestens eine Bedingung `true` ist.
+Liefert `true`, wenn mindestens eine der Bedingungen wahr ist.
 
-### `Nicht` (Fortgeschritten) {#block_operator_not}
+### `nicht …` (Fortgeschritten) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Invertiert einen booleschen Wert.
+Macht aus `true` ein `false` und aus `false` ein `true`.
 
-## Textoperatoren
+## Text {#text}
 
-### `Verbinden` (Fortgeschritten) {#block_operator_join}
+### `verbinden … …` (Fortgeschritten) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Verknüpft zwei Textwerte.
+Verbindet zwei Textstücke zu einem.
 
-### `Buchstabe an Position` (Guru) {#block_operator_letter_at}
+### `Buchstabe … von …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Gibt das Zeichen an einer gewählten Position im Text zurück.
+Liefert den Buchstaben an der angegebenen Position im Text. Der erste Buchstabe hat die Nummer 1.
 
-### `Länge von Text` (Fortgeschritten) {#block_operator_size_of_string}
+### `Länge von …` (Fortgeschritten) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Gibt die Textlänge zurück.
+Liefert die Anzahl der Zeichen im Text.
 
-### `Text enthält` (Guru) {#block_operator_string_contains}
+### `… enthält …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Gibt `true` zurück, wenn der Text die angegebene Teilzeichenfolge enthält.
+Liefert `true`, wenn der erste Text den zweiten enthält.

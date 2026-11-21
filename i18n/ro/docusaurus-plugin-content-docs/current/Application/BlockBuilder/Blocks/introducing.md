@@ -1,152 +1,154 @@
 ---
 id: BlocksIntroducing
-title: Introducere în blocuri
+title: Prezentarea Blocurilor logice
+description: "Blocuri logice este editorul vizual de programare cu blocuri din MOCPilot: evenimente, bucle, condiții, variabile, senzori și sunete."
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
-# Introducere în blocuri
+# Blocuri logice {#logic-blocks}
 
-MOCPilot utilizează un sistem de programare vizuală bazat pe blocuri, similar ca aspect și comportament cu Scratch.
-Fiecare bloc are un rol specific, iar combinațiile valide definesc fluxul de control și fluxul de date într-un script.  
-Sistemul folosește logică drag-and-drop și modele de interacțiune similare cu Scratch pentru a oferi un mod convenabil și familiar de a construi programe.
+**Blocuri logice** este editorul de programare cu blocuri din MOCPilot. Construiește programe îmbinând blocuri, la fel ca în Scratch: evenimente, bucle, condiții, variabile, liste, blocuri proprii, sunete și blocuri pentru motoare, lumini, senzori, comenzile din tabloul de bord și gamepad.
 
-:::warning Notă de compatibilitate
-Acesta este un sistem diferit de blocuri, cu propriul set de blocuri și comportament.  
-Programele MOCPilot nu sunt compatibile cu proiectele Scratch: programele MOCPilot nu pot fi importate în Scratch, iar programele Scratch nu pot fi importate în MOCPilot.
+Alege Blocuri logice când modelul are nevoie de logică: roboți, secvențe automate, reacții la senzori, verificări la pornire, jocuri. Dacă doar trebuie să legi comenzi de motoare, [Legături rapide](/docs/Application/Links/LinksIntroducing) este mai rapid.
+
+<img src={useBaseUrl('/img/illustrations/editor_blocks.svg')} alt="Program în Blocuri logice" style={{width: '100%', maxWidth: 720}} />
+
+:::warning Nu este Scratch
+Blocuri logice are propriul set de blocuri și propriul comportament. Nu poți importa programe MOCPilot în Scratch și nici proiecte Scratch în MOCPilot.
 :::
 
-## Forme de blocuri și semnificația lor
+## Editorul pe scurt {#the-editor-at-a-glance}
 
-### Blocuri Hat
+<Screenshot name="blocks-editor" alt="Editorul Blocuri logice cu paleta și un program" width={900} />
+
+- **Paleta** conține categoriile de blocuri: **Evenimente**, **Control**, **Senzori**, **Sunete**, **Operator**, **Variabile**, **Liste** și **Blocurile mele**. Alte categorii apar când profilul are nevoie de ele: **Motoare** și **Lumină** (când un hub le acceptă), **Simulator** (când tabloul de bord are pedale, cutie de viteze sau frână de mână), **Controlere pe ecran** și **Gamepad**.
+- **Zona programului** este locul unde tragi blocurile și construiește scripturile.
+- Bara de sus conține **Huburile mele**, **Tablou de bord**, **Gamepad**, **Monitor**, **Setări editor**, **Constructor AI** și **Rulează/Oprește**.
+
+Detalii în [Lucrul în editor](/docs/Application/BlockBuilder/Editor).
+
+## Cum rulează un program {#how-a-program-runs}
+
+- Un script începe cu un bloc de **eveniment** (un bloc „pălărie”): *când începe programul*, *când butonul … apăsat*, *când primesc …* și așa mai departe.
+- Blocurile atașate sub el rulează de sus în jos.
+- Mai multe scripturi rulează **în același timp**. Folosește mesaje (*transmite*) ca să le coordonezi.
+- **Buclele** (*repeta mereu*, *repeta*, *repeta cât timp*) mențin un script în funcțiune; **condițiile** (*dacă*, *dacă … altul*, *așteptați până la*) iau decizii.
+- Blocurile **raportor** (rotunjite) returnează valori și se potrivesc în intrările altor blocuri; blocurile **booleene** (ascuțite) returnează adevărat sau fals pentru condiții.
+- **Variabilele** și **listele** păstrează valori între blocuri și scripturi.
+
+## Formele blocurilor {#block-shapes}
+
+### Blocuri pălărie {#hat-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
   <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 </div>
 
-Pornește un script atunci când apare un anumit eveniment. Blocurile pot fi atașate doar dedesubt.
+Pornesc un script când se întâmplă ceva. Poți atașa blocuri doar sub ele.
 
 ---
 
-### Blocuri Stack
+### Blocuri de comandă {#stack-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
 </div>
 
-Blocuri principale de comandă care execută acțiuni.
+Principalele blocuri de comandă: fiecare face ceva.
 
 ---
 
-### Blocuri C
+### Blocuri C {#c-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 </div>
 
-Blocuri de control în formă de C care conțin stive de blocuri imbricate (bucle/condiții).
+Blocuri în formă de C care conțin alte blocuri: bucle și condiții.
 
 ---
 
-### Blocuri Reporter
+### Blocuri raportor {#reporter-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 </div>
 
-Returnează valori precum numere sau șiruri de caractere.
+Returnează o valoare, de exemplu un număr sau un text.
 
 ---
 
-### Blocuri Booleene
+### Blocuri booleene {#boolean-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
   <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 </div>
 
-Returnează doar `true` sau `false`, utilizate de obicei în condiții.
+Returnează doar `true` sau `false`. De obicei le folosești în condiții.
 
 ---
 
-### Blocuri Cap
+### Blocuri de încheiere {#cap-blocks}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
   <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 </div>
 
-Încheie scripturile și nu permit atașarea altor blocuri dedesubt.
+Încheie un script: sub ele nu se mai poate atașa nimic.
 
 ---
 
-### Stivă de blocuri
+### Stivă de blocuri {#block-stack}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks_stack.svg')} alt="blocks_stack.svg" />
 </div>
 
-O stivă de blocuri este o secvență de blocuri conectate care rulează ca un singur flux de script de sus în jos.  
-Stivele încep de obicei cu un bloc de eveniment și apoi execută blocurile atașate în ordine.
+O stivă este un grup de blocuri conectate care rulează ca un singur script, de sus în jos.
+De obicei, o stivă începe cu un bloc de eveniment, urmat de blocurile care rulează pe rând.
 
 ---
 
-## Modelul de execuție al scriptului
 
-- Un script începe de obicei de la un bloc de eveniment.
-- Blocurile conectate se execută de sus în jos.
-- Mai multe scripturi pot rula în paralel.
-- Blocurile de mesaj/broadcast sunt utilizate pentru sincronizarea scripturilor.
-- O stivă de blocuri este o secvență de blocuri conectate între ele.
+## Huburi, porturi și comenzi {#hubs-ports-and-controls}
 
-## Date și valori
+- Blocurile pentru motoare și lumini primesc un **hub** și un **port**. Categoriile Motoare și Lumină apar doar când un hub din profil le acceptă, iar unele blocuri există doar pentru anumite huburi (de exemplu, modurile de putere BuWizz sau funcțiile Technic Move Hub). Descrierea fiecărui bloc spune cu ce huburi funcționează.
+- Blocurile tabloului de bord se referă la comenzi după nume (**JOY1**, **BTN2**). Nu poți șterge o comandă din tabloul de bord cât timp o folosesc blocuri; elimină mai întâi acele blocuri.
+- Blocurile gamepadului apar când **Activează blocurile gamepad-ului** este activat pe [pagina Gamepad](/docs/Application/Dashboard/Gamepad).
 
-- Blocurile reporter pot fi imbricate în intrările blocurilor de comandă sau condiții.
-- Variabilele stochează valori reutilizabile între blocuri și scripturi.
-- Listele stochează colecții ordonate pentru istoric, cozi și date de tip lookup.
+## Niveluri de blocuri {#block-levels}
 
-## Evenimente și temporizare
+Fiecare profil are un **Nivel blocuri**: **Începător** afișează cele mai simple blocuri, **Avansat** adaugă blocurile uzuale de logică și pentru dispozitive, iar **Guru** afișează setul complet. Îl alegi când creezi profilul sau mai târziu în Setări editor. Această referință arată nivelul fiecărui bloc lângă numele lui.
 
-- Blocurile de eveniment reacționează la inputul utilizatorului, starea hub-ului, senzori sau mesaje.
-- Evenimentele bazate pe timer și senzori pot fi declanșate frecvent.
-- Folosește praguri, filtrare sau mici întârzieri pentru a reduce declanșările repetitive.
+## Mod de lucru recomandat {#recommended-workflow}
 
-## Hub, porturi și controlere
+1. Începe cu un bloc de eveniment și un script scurt; apasă **Rulează** și verifică că funcționează.
+2. Verifică din timp sensurile motoarelor și intervalele valorilor (un Monitor ajută).
+3. Împarte programul în scripturi mici care comunică prin mesaje; mută logica repetată în [Blocurile mele](/docs/Application/BlockBuilder/Blocks/MyBlocks).
+4. Adaugă siguranță: limite, opriri, o verificare la pornire și un plan pentru cazul în care un hub se deconectează.
 
-- Blocurile de hub țintesc contextul hub-ului și al porturilor.
-- Unele blocuri sunt disponibile doar pentru anumite familii de hub-uri/dispozitive.
-- Blocurile de dashboard și gamepad oferă input în runtime și control UI.
+## Greșeli frecvente {#common-pitfalls}
 
-## Flux de lucru recomandat
+- Un script fără bloc de eveniment nu pornește niciodată.
+- Este selectat hubul sau portul greșit, așa că nu se întâmplă nimic vizibil.
+- Amestecarea textului, numerelor și valorilor booleene dă rezultate neașteptate.
+- Evenimentele foarte dese, fără filtrare (de exemplu, un eveniment de senzor la fiecare schimbare minusculă), pot supraîncărca programul; folosește praguri sau așteptări scurte.
 
-1. Începe cu un bloc de eveniment și un script minim.
-2. Verifică direcția și intervalele motoarelor/senzorilor din timp.
-3. Extrage logica repetitivă folosind mesaje și scripturi auxiliare.
-4. Adaugă măsuri de siguranță (limite, opriri, valori fallback) înainte de reglajul final.
+## Referința blocurilor {#block-reference}
 
-## Capcane frecvente
+- [Evenimente](/docs/Application/BlockBuilder/Blocks/Events) · [Control](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
+- [Variabile](/docs/Application/BlockBuilder/Blocks/Variables) · [Liste](/docs/Application/BlockBuilder/Blocks/Lists) · [Blocurile mele](/docs/Application/BlockBuilder/Blocks/MyBlocks)
+- [Motoare](/docs/Application/BlockBuilder/Blocks/Motors) · [Lumină](/docs/Application/BlockBuilder/Blocks/Light) · [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sunete](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Controlere pe ecran](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
-- Lipsa unui bloc de eveniment înseamnă că scriptul nu pornește.
-- Selectarea greșită a hub-ului/portului duce la lipsa efectului vizibil.
-- Amestecarea tipurilor de valori (text/număr/boolean) poate produce logică invalidă.
-- Evenimentele cu frecvență mare fără filtrare pot supraîncărca comportamentul.
+În aplicație, ține apăsat (sau fă clic dreapta pe) un bloc și alege **Despre bloc** ca să-i deschizi descrierea aici.
 
-## Structura documentației în această secțiune
-
-Folosește paginile de categorie în această ordine:
-
-- Lumină
-- Motoare
-- Senzori
-- Evenimente
-- Control
-- Operatori
-- Variabile
-- Liste
-- Blocurile mele
-- Controale Dashboard
-- Gamepad
+Programe gata făcute: [Exemple](/docs/Application/BlockBuilder/Examples).

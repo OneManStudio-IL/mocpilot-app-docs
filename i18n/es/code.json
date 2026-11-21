@@ -490,7 +490,7 @@
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(se abre en una pestaña nueva)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
@@ -598,5 +598,45 @@
   },
   "Create custom profiles to control LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motors, sensors, and compatible Bluetooth devices from one powerful app.": {
     "message": "Crea perfiles personalizados para controlar LEGO® Powered Up, Technic, BuWizz, SBrick, Mould King, motores, sensores y dispositivos Bluetooth compatibles desde una sola app potente."
+  },
+  "howItWorks.profile": {
+    "message": "Perfil = un modelo",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboard": {
+    "message": "Panel",
+    "description": "How it works diagram"
+  },
+  "howItWorks.dashboardSub": {
+    "message": "controles en la pantalla",
+    "description": "How it works diagram"
+  },
+  "howItWorks.program": {
+    "message": "Programa",
+    "description": "How it works diagram"
+  },
+  "howItWorks.programSub": {
+    "message": "Bloques lógicos o Enlaces rápidos",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubs": {
+    "message": "Hubs",
+    "description": "How it works diagram"
+  },
+  "howItWorks.hubsSub": {
+    "message": "motores, luces, sensores",
+    "description": "How it works diagram"
+  },
+  "howItWorks.gamepad": {
+    "message": "Gamepad",
+    "description": "How it works diagram"
+  },
+  "howItWorks.play": {
+    "message": "▶ «Ejecutar» inicia el programa",
+    "description": "How it works diagram"
+  },
+  "howItWorks.bluetooth": {
+    "message": "por Bluetooth",
+    "description": "How it works diagram"
   }
 }

@@ -5,102 +5,87 @@ title: Gamepad
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gamepad
-Gamepad-blokken worden gebruikt om te reageren op controllerinvoer en de huidige gamepadstatuswaarden uit te lezen.
+# Gamepad {#gamepad}
 
-## Gebeurtenisblokken
+Gamepadblokken reageren op een gamecontroller en lezen de knoppen, sticks en triggers uit. De categorie verschijnt als **Gamepad-blokken inschakelen** aan staat op de [Gamepad-pagina](/docs/Application/Dashboard/Gamepad). De knopnamen volgen de indeling van de controller: Xbox of Sony.
 
-### `Wanneer gamepad-knop is` (Beginner) {#block_gamepad_event_when_button_is}
+## Gebeurtenissen {#events}
+
+### `wanneer … is …` (Beginner) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Wordt geactiveerd wanneer de geselecteerde gamepad-knop overeenkomt met de ingestelde status.
+Wordt uitgevoerd als de gekozen knop wordt ingedrukt of losgelaten.
 
-- Type: gebeurtenisblok
-- Knopopties (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Knopopties (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Statusopties: `ingedrukt`, `vrijgegeven`
+- Knoppen (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Knoppen (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Toestanden: `ingedrukt`, `vrijgegeven`
 
-### `Wanneer gamepad D-pad is` (Beginner) {#block_gamepad_event_when_dpad_is}
+### `wanneer D-Pad … knop is …` (Beginner) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Wordt geactiveerd wanneer de D-pad richting/status overeenkomt met de geselecteerde voorwaarde.
+Wordt uitgevoerd als een knop van het richtingspad wordt ingedrukt of losgelaten.
 
-- Type: gebeurtenisblok
-- Richtingsopties: `boven`, `onder`, `links`, `rechts`
-- Statusopties: `ingedrukt`, `vrijgegeven`
+- Richtingen: `omhoog`, `omlaag`, `links`, `rechts`
+- Toestanden: `ingedrukt`, `vrijgegeven`
 
-### `Wanneer gamepad thumbstick is` (Beginner) {#block_gamepad_event_when_thumbstick_is}
+### `wanneer … stick …` (Beginner) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Wordt geactiveerd wanneer de thumbstickvoorwaarde overeenkomt met de geselecteerde opties.
+Wordt uitgevoerd als een stick in een richting wordt geduwd, bewogen of losgelaten.
 
-Op basis van de huidige opties ondersteunt dit blok:
+- Stick: `links`, `rechts`
+- Toestand: `omhoog`, `omlaag`, `links`, `rechts`, `bewogen`, `vrijgegeven`
+- Gebruikelijke toepassing: reageren op stickbewegingen, en het model stoppen of centreren als de stick wordt losgelaten.
 
-- Stickselectie: `links` / `rechts`
-- Richting/status: `boven`, `onder`, `links`, `rechts`, `bewogen`, `vrijgegeven`
+## Waarden {#values}
 
-- Type: gebeurtenisblok
-- Typisch gebruik: reageren op richtingbeweging of loslaten van de stick
-
-## Waardeblokken
-
-### `Gamepad knopwaarde (boolean)` (Beginner) {#block_gamepad_button_value_boolean}
+### `is … …` (Beginner) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Geeft de huidige status van de geselecteerde gamepad-knop terug.
+Geeft `true` terug als de gekozen knop in de gekozen toestand is.
 
-- Type: waarde-blok
-- Output: `true`/`false`
-- Knopopties (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Knopopties (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Statusopties: `ingedrukt`, `vrijgegeven`
+- Knoppen (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Knoppen (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Toestanden: `ingedrukt`, `vrijgegeven`
 
-### `Gamepad D-pad knopwaarde (boolean)` (Beginner) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … knop …` (Beginner) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Geeft aan of de geselecteerde D-pad richting momenteel actief is.
+Geeft `true` terug als de gekozen knop van het richtingspad in de gekozen toestand is.
 
-- Type: waarde-blok
-- Output: `true`/`false`
-- Richtingsopties: `boven`, `onder`, `links`, `rechts`
-- Statusopties: `ingedrukt`, `vrijgegeven`
+- Richtingen: `omhoog`, `omlaag`, `links`, `rechts`
+- Toestanden: `ingedrukt`, `vrijgegeven`
 
-### `Gamepad thumbstick waarde (float)` (Beginner) {#block_gamepad_thumbstick_value_float}
+### `stick … …` (Beginner) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Geeft de numerieke waarde van de thumbstick-as terug.
+Geeft de positie van een stick langs één as terug.
 
-- Type: waarde-blok
-- Output: numeriek (float)
-- Standaardbereik: `-1` tot `1`
-- Optioneel bereik in gamepadinstellingen: `-100` tot `100`
-- Stickopties: `links`, `rechts`
-- Asopties: `X-as` / `Y-as`
+- Stick: `links`, `rechts`
+- As: `X-as`, `Y-as`
+- Bereik: standaard van `-1` tot `1`, of van `-100` tot `100` als je dat kiest bij **Bereik van gamepadwaarden** op de Gamepad-pagina.
 
-### `Gamepad triggerdruk waarde (float)` (Beginner) {#block_gamepad_trigger_pressure_value_float}
+### `… druk` (Beginner) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Geeft de drukwaarde van de geselecteerde trigger terug.
+Geeft terug hoe ver een trigger is ingedrukt.
 
-- Type: waarde-blok
-- Output: numeriek (float)
-- Standaardbereik: `-1` tot `1`
-- Optioneel bereik in gamepadinstellingen: `-100` tot `100`
-- Triggeropties (Xbox-indeling): `LT`, `RT`
-- Triggeropties (Sony-indeling): `L2`, `R2`
+- Triggers (Xbox-indeling): `LT`, `RT`
+- Triggers (Sony-indeling): `L2`, `R2`
+- Bereik: standaard van `0` (losgelaten) tot `1`, of van `0` tot `100` met het bredere **Bereik van gamepadwaarden**.

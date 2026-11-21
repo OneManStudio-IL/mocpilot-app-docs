@@ -5,142 +5,154 @@ title: Kontrol
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Kontrol
+# Kontrol {#control}
 
-Kontrolblokke styrer udførelsesflow: venten, løkker, forgrening og stop af scripts.
+Kontrolblokke bestemmer, hvordan et script kører: pauser, løkker, forgreninger og stop. Når profilen har hubs, indeholder kategorien også blokke, der forbinder hubs og ændrer deres indstillinger.
 
-## Venteblokke
+## Venteblokke {#wait-blocks}
 
-### `Vent` (Begynder) {#block_control_wait_for}
+### `vent … sekunder` (Begynder) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pauser det aktuelle script i en angivet tid.
+Sætter scriptet på pause i det angivne antal sekunder.
 
-### `Vent indtil` (Avanceret) {#block_control_wait_until}
+### `vent indtil …` (Avanceret) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pauser det aktuelle script, indtil en betingelse bliver sand.
+Sætter scriptet på pause, indtil betingelsen bliver sand.
 
-## Løkkeblokke
+## Løkker {#loops}
 
-### `Gentag` (Avanceret) {#block_control_repeat_for}
+### `gentage …` (Avanceret) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Kører indlejrede blokke et fast antal gange.
+Kører blokkene inden i den det angivne antal gange (10 som standard).
 
-### `Gentag indtil` (Avanceret) {#block_control_repeat_until}
+### `gentag, indtil …` (Avanceret) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Kører indlejrede blokke gentagne gange, indtil en betingelse bliver sand.
+Kører blokkene inden i den igen og igen, indtil betingelsen bliver sand.
 
-### `For evigt` (Avanceret) {#block_control_repeat_forever}
+### `gentag altid` (Avanceret) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Kører indlejrede blokke kontinuerligt, indtil programmet eller scriptet stoppes.
+Kører blokkene inden i den igen og igen, indtil scriptet eller programmet stopper. Der kan ikke sættes noget fast under den.
 
-## Forgreningsblokke
+## Forgreninger {#branches}
 
-### `Hvis` (Begynder) {#block_control_if}
+### `hvis … så` (Begynder) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Kører indlejrede blokke kun når betingelsen er sand.
+Kører kun blokkene inden i den, når betingelsen er sand.
 
-### `Hvis / Ellers` (Avanceret) {#block_control_if_else}
+### `hvis … så … ellers` (Avanceret) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Kører én gren når betingelsen er sand, ellers køres den alternative gren.
+Kører den første gren, når betingelsen er sand, og ellers den anden gren.
 
-### `Gør dette og dette` (Guru) {#block_control_do_this_and_this}
+### `gør dette … og dette` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Kører to blokstakke sekventielt som del af én kontrolflow-operation.
+Kører den første gruppe blokke, derefter den anden og fortsætter først derefter med blokkene under den.
 
-## Stopblokke
+## Stop {#stopping}
 
-### `Stop` (Begynder) {#block_control_stop}
+### `stop …` (Begynder) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Stopper script-udførelse (omfang afhænger af valgt stopmulighed).
+Stopper scripts; hvad den præcis stopper, afhænger af valget.
 
-- Stopmuligheder: `all`, `this stack`, `and exit program`
+- `alle`: stopper alle scripts.
+- `denne stak`: stopper kun dette script.
+- `og afslut program`: stopper programmet.
 
-### `Stop andre stakke` (Guru) {#block_control_stop_other_stacks}
+### `stop andre stakke` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Stopper alle andre kørende stakke, mens den aktuelle stak fortsætter.
+Stopper alle andre kørende scripts; dette fortsætter.
 
-## Hub-/kontrol-hjælpeblokke
+## Hubblokke {#hub-blocks}
 
-### `Sæt forbindelse` (Begynder) {#block_hubs_control_set_connect}
+### `forbinde / afbryd …` (Begynder) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Styrer hub-forbindelsestilstand fra kontrolflow-logik.
+Forbinder eller afbryder den valgte hub fra programmet.
 
-- Handlingsmuligheder: `forbinde`, `afbryd`
+- Valg: `forbinde`, `afbryd`
+- Hubs: alle.
 
-### `Indstil hub-konfiguration` (Avanceret) {#block_hubs_set_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-Indstiller den valgte hub til en af dens understøttede konfigurationsprofiler.
-
-- Kun tilgængelig for hubs, der tilbyder hub-konfigurationer.
-- Typisk brug: skift en konfigurerbar hub, f.eks. Technic Move Hub, til en anden gemt konfiguration før de næste blokke køres.
-
-### `Hub-konfiguration` (Avanceret) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Returnerer den aktuelle konfiguration for den valgte hub.
-
-- Type: reporterblok
-- Outputformatvalg: `text`, `index`
-- Kun tilgængelig for hubs, der tilbyder hub-konfigurationer.
-- Returnerer `NaN`, når den valgte hub ikke er tilsluttet, eller ingen konfiguration er tilgængelig.
-
-### `Er forbundet` (Begynder) {#block_hubs_all_sensors_is_connected}
+### `… tilsluttet` (Begynder) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Returnerer om hubben aktuelt er forbundet.
+Returnerer `true`, når den valgte hub er forbundet.
 
-- Type: boolesk reporterblok
+- Type: boolesk blok
+- Hubs: alle.
 
-### `BuWizz 2 sæt strømtilstand` (Begynder) {#block_hubs_buwizz_sensors_set_power_mode}
+### `sæt … konfiguration til …` (Avanceret) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Skifter hubben til en af dens konfigurationer.
+
+- Hubs: Technic Move Hub (i dag den eneste hub med konfigurationer).
+- Typisk brug: skift hubben til en anden konfiguration, før de næste blokke kører.
+
+### `hent … konfiguration som …` (Avanceret) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Returnerer hubbens aktuelle konfiguration.
+
+- Type: rapporteringsblok
+- Output: `tekst` eller `indeks`
+- Hubs: Technic Move Hub.
+- Returnerer `NaN`, når hubben ikke er forbundet eller ikke har nogen konfiguration.
+
+### `sæt … strømtilstand til …` (Begynder) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Sætter strømtilstand for BuWizz 2-hub.
+Indstiller strømtilstanden på en BuWizz 2.
 
-- Tilstandsmuligheder: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Tilstande: `Langsom`, `Normal`, `Hurtig`, `Ludicrous`
+- Hubs: BuWizz 2.
 
-### `BuWizz 2 hent strømtilstand` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `hent … strømtilstand som …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Returnerer den aktuelt aktive BuWizz 2-strømtilstand.
+Returnerer den aktuelle strømtilstand på en BuWizz 2.
 
-- Outputformat-muligheder: tekst, indeks
+- Output: `tekst` eller `indeks`
+- Hubs: BuWizz 2.
 
-### `MouldKing sæt kontrolkanal` (Avanceret) {#block_hubs_mouldking_control_set_control_channel}
+### `sæt … kontrolkanal til …` (Avanceret) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Sætter aktiv kontrolkanal for understøttet MouldKing-hub/controller.
+Indstiller kontrolkanalen på en Mould King-hub.
 
-- Kanalmuligheder: `A`, `B`, `C`
+- Kanaler: `A`, `B`, `C`
+- Hubs: Mould King 4.0 og 6.0.
 
-### `MouldKing hent kontrolkanal` (Avanceret) {#block_hubs_mouldking_control_get_control_channel}
+### `hent … kontrolkanal som …` (Avanceret) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Returnerer den aktuelle aktive kontrolkanal for understøttet MouldKing-hub/controller.
+Returnerer den aktuelle kontrolkanal på en Mould King-hub.
 
-- Outputformat-muligheder: tekst, indeks
+- Output: `tekst` eller `indeks`
+- Hubs: Mould King 4.0 og 6.0.

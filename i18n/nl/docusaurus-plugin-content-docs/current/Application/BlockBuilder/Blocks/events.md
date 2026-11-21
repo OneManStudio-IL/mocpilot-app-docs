@@ -5,145 +5,145 @@ title: Gebeurtenissen
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Gebeurtenissen
+# Gebeurtenissen {#events}
 
-De categorie **Gebeurtenissen** bevat blokken die scripts starten wanneer een voorwaarde optreedt.
+De categorie **Gebeurtenissen** bevat de blokken die scripts starten als er iets gebeurt, plus de blokken die berichten tussen scripts versturen. Met **Bericht toevoegen** en **Bericht verwijderen** bovenaan de categorie beheer je berichten.
 
-## Kerngebeurtenissen
+## Basisgebeurtenissen {#core-events}
 
-### `Wanneer programma gestart` (Beginner) {#block_event_when_program_started}
+### `wanneer het programma start` (Beginner) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Start dit script één keer wanneer het profielprogramma begint.
+Voert het script één keer uit, als het programma start.
 
-- Trigger: programmastart
-- Typisch gebruik: initialiseren van variabelen, standaard motorstatussen, opstartgeluiden
+- Gebruikelijke toepassing: beginwaarden van variabelen instellen, motoren in hun begintoestand zetten, een melding “klaar” tonen.
 
-### `Wanneer` (Gevorderd) {#block_event_when}
+### `wanneer …` (Gevorderd) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Wordt uitgevoerd wanneer een geselecteerde voorwaarde waar wordt.
+Voert het script uit als de voorwaarde in het vak van onwaar naar waar gaat. Terwijl het script draait, wacht het blok; het reageert pas weer nadat de voorwaarde eerst onwaar en daarna opnieuw waar is geworden.
 
-- Trigger: voorwaarde-gebaseerd
-- Typisch gebruik: logica vertakken op basis van runtime-status
+- Gebruikelijke toepassing: reageren op een toestand, bijvoorbeeld `wanneer timer > 5 en schakelaar is aan`.
 
-### `Wanneer timer groter dan` (Gevorderd) {#block_event_when_timer_greater_than}
+### `wanneer de timer > …` (Gevorderd) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Wordt uitgevoerd wanneer de timerwaarde een drempel overschrijdt.
+Voert het script uit als de programmatimer boven de waarde (in seconden) komt.
 
-- Trigger: verstreken tijd
-- Typisch gebruik: vertraagde acties, tijdgebaseerde fasen
+- Gebruikelijke toepassing: vertraagde acties, getimede fasen. Zet de timer terug met **reset timer** (Sensoren).
 
-### `Wanneer bericht ontvangen` (Guru) {#block_event_when_message_recieved}
+### `wanneer ik ontvang …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Start een script wanneer een overeenkomend broadcastbericht wordt ontvangen.
+Voert het script uit als het gekozen bericht wordt doorgegeven.
 
-- Trigger: berichtkanaal
-- Typisch gebruik: synchronisatie van meerdere scripts
+- Gebruikelijke toepassing: meerdere scripts op elkaar afstemmen.
 
-### `Broadcast` (Guru) {#block_event_broadcast}
+### `doorgeven …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Stuurt een bericht naar alle scripts die naar dat bericht luisteren.
+Stuurt een bericht naar elk script dat begint met **wanneer ik ontvang** voor dat bericht, en gaat meteen verder.
 
-- Trigger: directe verzending
-- Typisch gebruik: andere scripts informeren zonder te wachten
+- Gebruikelijke toepassing: andere scripts laten starten zonder erop te wachten.
 
-### `Broadcast en wacht` (Guru) {#block_event_broadcast_and_wait}
+### `doorgeven … en wachten` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Stuurt een bericht en pauzeert dit script totdat de luisteraars klaar zijn.
+Stuurt een bericht en pauzeert dit script tot alle scripts die het ontvingen klaar zijn.
 
-- Trigger: directe verzending + wachten
-- Typisch gebruik: gefaseerde workflows waarbij volgorde belangrijk is
+- Gebruikelijke toepassing: stapsgewijze reeksen waarbij de volgorde telt.
 
-## Hubgebeurtenissen
+## Hubgebeurtenissen {#hub-events}
 
-### `Hubknop ingedrukt` (Beginner) {#block_hubs_all_event_button_pressed}
+Deze blokken verschijnen als een hub in het profiel ze ondersteunt. Voor Mould King-hubs bestaan ze niet.
+
+### `wanneer … … knop …` (Beginner) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Wordt uitgevoerd wanneer de hoofdknop op de hub wordt ingedrukt.
+Wordt uitgevoerd als een knop op de hub wordt ingedrukt of losgelaten.
 
-- Statusopties: `ingedrukt`, `vrijgegeven`, `gewijzigd`
-- Opmerking: beschikbare knopopties kunnen verschillen per hubmodel (verschillende hubs kunnen verschillende knoppen hebben).
+- Toestanden: `ingedrukt`, `vrijgegeven`, `gewijzigd`
+- Hubs: LEGO Powered Up-hubs, WeDo 2.0 en Robot Inventor. Welke knoppen er zijn, hangt af van de hub.
 
-### `Hubverbinding gewijzigd` (Beginner) {#block_hubs_all_event_connection_changed}
+### `wanneer … verbonden / verbinding verbroken` (Beginner) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Wordt uitgevoerd wanneer de verbindingsstatus van de hub verandert (verbonden of losgekoppeld).
+Wordt uitgevoerd als de hub verbinding maakt of de verbinding verliest.
 
-- Trigger: wijziging van hubverbindingsstatus
-- Typisch gebruik: herverbindingslogica en veilige fallback na verbindingsverlies
+- Gebruikelijke toepassing: het model veilig stoppen als de verbinding wegvalt, en de toestand herstellen als die terugkomt.
 
-### `Hubbatterij gewijzigd` (Beginner) {#block_hubs_all_event_battery_changed}
+### `wanneer … % batterij gewijzigd` (Beginner) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Wordt uitgevoerd wanneer het batterijniveau van de hub verandert.
+Wordt uitgevoerd als het batterijniveau dat de hub meldt verandert.
 
-- Trigger: batterij-update (voor hubs die batterijniveau rapporteren)
-- Typisch gebruik: waarschuwingen voor lage batterij en energiebesparende modus
+- Hubs: hubs die hun batterijniveau melden.
+- Gebruikelijke toepassing: een waarschuwing bij een bijna lege batterij, overschakelen naar een energiebesparende modus.
 
-### `Hubversnelling gewijzigd` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `wanneer … versnellingsmetergegevens zijn gewijzigd` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Wordt uitgevoerd wanneer versnellingswaarden veranderen.
+Wordt uitgevoerd als de waarden van de versnellingsmeter van de hub veranderen.
 
-### `Hubkanteling gewijzigd` (Beginner) {#block_hubs_all_event_tilt_changed}
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `wanneer … kanteling … hoek gewijzigd` (Beginner) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Wordt uitgevoerd wanneer de kantelwaarde verandert.
+Wordt uitgevoerd als de kantelhoek van de hub verandert.
 
 - Hoekopties: `elke`, `helling`, `rol`, `gieren`
-- Opmerking: `gieren` is alleen beschikbaar op hubs die gier-data leveren.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `gieren` is alleen beschikbaar op de Technic Hub en Robot Inventor.
 
-### `Huboriëntatie gewijzigd` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
+### `wanneer … oriëntatie gewijzigd` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Wordt uitgevoerd wanneer de oriëntatiestatus verandert (bijvoorbeeld voor/omhoog/omlaag/links/rechts).
+Wordt uitgevoerd als de oriëntatie van de hub verandert, dus als er een andere kant van de hub naar boven wijst.
 
-## Sensorpoort gebeurtenissen
+- Hubs: dezelfde als bij de kantelgebeurtenis.
 
-### `Technic kleursensor gebeurtenis` (Beginner) {#block_hubs_all_event_port_technic_sensor_color}
+## Sensorgebeurtenissen {#sensor-events}
+
+Deze gebeurtenissen lezen een sensor uit die op een hubpoort is aangesloten. Hubs: City Hub, Technic Hub, BOOST Move Hub en de MINDSTORMS Robot Inventor-hub (niet SBrick, BuWizz, WeDo 2.0 of Mould King).
+
+### Technic-sensor: `wanneer de kleur is …` (Beginner) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Wordt uitgevoerd wanneer de Technic kleursensor een geselecteerde kleur detecteert.
+Wordt uitgevoerd als de Technic-kleursensor de gekozen kleur ziet.
 
-### `Technic afstandssensor gebeurtenis` (Beginner) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic-sensor: `wanneer … dichterbij dan / verder dan / precies op …` (Beginner) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Wordt uitgevoerd wanneer de waarden van de Technic afstandssensor voldoen aan de geselecteerde voorwaarde.
+Wordt uitgevoerd als de afstand die de Technic-afstandssensor meet aan de voorwaarde voldoet.
 
-- Vergelijkopties: `dichterbij dan`, `verder dan`, `precies op`
-- Eenheidsopties: `mm`, `cm`, `duim`, `%`
-- Opmerking: beschikbare eenheden kunnen afhangen van de sensormodus en het aangesloten apparaat.
+- Vergelijkingsopties: `dichterbij dan`, `verder dan`, `precies op`
+- Eenheden: `mm`, `cm`, `duim`, `%`
 
-### `BOOST afstandssensor gebeurtenis` (Beginner) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST-sensor: `wanneer … dichterbij dan / verder dan / precies op …` (Beginner) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Wordt uitgevoerd wanneer de BOOST afstandssensor de gekozen drempel/voorwaarde bereikt.
+Wordt uitgevoerd als de afstand die de BOOST-kleur- en afstandssensor meet aan de voorwaarde voldoet.
 
-- Vergelijkopties: `dichterbij dan`, `verder dan`, `precies op`
-- Eenheidsopties: `%`, `cm`, `duim`
+- Vergelijkingsopties: `dichterbij dan`, `verder dan`, `precies op`
+- Eenheden: `%`, `cm`, `duim`
 
-### `BOOST kleursensor gebeurtenis` (Beginner) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST-sensor: `wanneer de kleur is …` (Beginner) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Wordt uitgevoerd wanneer de BOOST sensor een geselecteerde kleur/waarde detecteert.
+Wordt uitgevoerd als de BOOST-kleur- en afstandssensor de gekozen kleur ziet.
