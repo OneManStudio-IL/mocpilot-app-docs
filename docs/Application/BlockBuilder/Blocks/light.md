@@ -7,138 +7,119 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Light
 
-This page documents Light category blocks used to control LEDs and light outputs on supported hubs.
+Light blocks control the hub's status light, lights connected to ports and the light matrix of supported hubs. The category appears when a hub in the profile has something to light.
 
-## Common light blocks
+## Hub and port lights
 
-### `Set LED color` (Beginner) {#block_hubs_all_light_set_led_color}
+### `set LED color to …` (Beginner) {#block_hubs_all_light_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_led_color.svg')} alt="block_hubs_all_light_set_led_color.svg" />
 
-Sets hub LED color using predefined color options.
+Sets the color of the hub's status light.
 
-- Type: command block
-- Typical use: show state (ready, running, warning, error)
+- Hubs: LEGO Powered Up hubs (including Technic Move Hub), WeDo 2.0 and the MINDSTORMS Robot Inventor hub.
+- Typical use: show the model's state (ready, running, warning, error).
 
-### `Light turn to` (Beginner) {#block_hubs_all_light_light_turn_to}
+### `turn on at … % brightness` (Beginner) {#block_hubs_all_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_to.svg')} alt="block_hubs_all_light_light_turn_to.svg" />
 
-Sets selected light output to a target brightness/value.
+Turns on the lights connected to the selected port at the given brightness.
 
-- Type: command block
-- Typical use: headlight brightness, status intensity
+- Hubs: all hubs with ports, except WeDo 2.0.
+- Typical use: headlights, adjustable lighting.
 
-### `Light turn off` (Beginner) {#block_hubs_all_light_light_turn_off}
+### `turn off` (Beginner) {#block_hubs_all_light_light_turn_off}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_light_turn_off.svg')} alt="block_hubs_all_light_light_turn_off.svg" />
 
-Turns selected light output off.
+Turns off the lights connected to the selected port.
 
-- Type: command block
-- Typical use: shutdown sequence, battery-saving behavior
+- Hubs: the same as for **turn on at … % brightness**.
 
-### `Technic Move light turn to` (Beginner) {#block_hubs_technicmove_light_light_turn_to}
+### `turn lights …` (Beginner) {#block_hubs_technicmove_light_light_turn_to}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Variant of `Light turn to` for Technic Move hub/light target.
+Turns the lights of a Technic Move Hub on or off.
 
-- Type: command block
-- Typical use: set Move hub light output level
+- Options: `off`, `on`
+- Hubs: Technic Move Hub.
 
-## Internal LED matrix blocks
+## Light matrix
 
-### `Turn on light matrix` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_image}
+These blocks work with the 5×5 light matrix built into the MINDSTORMS Robot Inventor hub.
+
+### `turn on …` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_image}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_image.svg')} alt="block_hubs_all_light_set_internal_led_matrix_image.svg" />
 
-Displays the selected image on the hub's internal LED matrix and immediately continues to the next block in the stack. The image stays on the display until another block changes the internal LED matrix or the program stops.
+Shows the selected image on the light matrix and moves on to the next block right away. The image stays until another block changes the matrix or the program stops.
 
-- Type: command block
-- Note: the selected hub must have an internal LED matrix.
-
-### `Write on light matrix` (Beginner) {#block_hubs_all_light_set_internal_led_matrix_text}
+### `write …` (Beginner) {#block_hubs_all_light_set_internal_led_matrix_text}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_text.svg')} alt="block_hubs_all_light_set_internal_led_matrix_text.svg" />
 
-Displays a text string on the hub's internal LED matrix by scrolling one letter at a time.
+Scrolls the text across the light matrix, one letter at a time.
 
-- Type: command block
-- Note: the selected hub must have an internal LED matrix.
-
-### `Turn off matrix pixels` (Beginner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
+### `turn off pixels` (Beginner) {#block_hubs_all_light_turn_off_internal_led_matrix_pixels}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg')} alt="block_hubs_all_light_turn_off_internal_led_matrix_pixels.svg" />
 
-Turns off all lights on the hub's internal LED matrix.
+Turns off all the pixels of the light matrix.
 
-- Type: command block
-- Note: the selected hub must have an internal LED matrix.
-
-### `Set matrix pixel` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_pixel}
+### `set pixel … x … y … brightness …` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_pixel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_pixel.svg')} alt="block_hubs_all_light_set_internal_led_matrix_pixel.svg" />
 
-Sets the brightness of one pixel on the hub's internal LED matrix. Only the selected pixel is updated; the rest of the display remains unchanged. Pixel position fields use column and row values, with pixel `1, 1` at the top-left corner.
+Sets the brightness of one pixel; the rest of the matrix stays as it is. `x` is the column and `y` is the row; pixel `1, 1` is in the top-left corner.
 
-- Type: command block
-- Note: the selected hub must have an internal LED matrix.
-
-### `Rotate matrix orientation` (Advanced) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
+### `rotate orientation …` (Advanced) {#block_hubs_all_light_rotate_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_rotate_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_rotate_internal_led_matrix_orientation.svg" />
 
-Rotates the orientation of what is displayed on the hub's internal LED matrix clockwise or counterclockwise. Each rotation changes the display orientation by 90 degrees and affects Light blocks that run after it.
+Rotates the picture on the light matrix by 90 degrees, clockwise or counterclockwise. The new orientation applies to the Light blocks that run after it.
 
-- Type: command block
-- Note: the selected hub must have an internal LED matrix.
-
-### `Set matrix orientation` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_orientation}
+### `set orientation to …` (Advanced) {#block_hubs_all_light_set_internal_led_matrix_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_set_internal_led_matrix_orientation.svg')} alt="block_hubs_all_light_set_internal_led_matrix_orientation.svg" />
 
-Sets the orientation of what is displayed on the hub's internal LED matrix. The default orientation is upright, and the selected orientation affects Light blocks that run after it.
+Sets the orientation of the picture on the light matrix. It's `upright` by default; the new orientation applies to the Light blocks that run after it.
 
-- Type: command block
-- Orientation options: `upright`, `left`, `right`, `upside down`
-- Note: the selected hub must have an internal LED matrix.
+- Options: `upright`, `left`, `right`, `upside down`
 
-## Distance Sensor light blocks
+## Distance Sensor lights
 
-### `Distance Sensor light up` (Beginner) {#block_hubs_all_light_port_distance_sensor_light_up}
+### `light up …` (Beginner) {#block_hubs_all_light_port_distance_sensor_light_up}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_distance_sensor_light_up.svg')} alt="block_hubs_all_light_port_distance_sensor_light_up.svg" />
 
-Sets the lights on the selected Distance Sensor. The block can turn individual sensor lights on or off, and can use a list reporter block to control the brightness of each light.
+Controls the lights around the "eyes" of the Distance Sensor on the selected port. You can turn each light on or off, or put a list in the slot to set the brightness of each light.
 
-- Type: command block
-- Note: available only for the MINDSTORMS Robot Inventor hub.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## BuWizz 3 light blocks
+## BuWizz 3 port LEDs
 
-### `BuWizz 3 set LED color` (Beginner) {#block_hubs_buwizz3_light_port_set_led_color}
+These blocks set the color of the LED next to a BuWizz 3 port.
+
+### `set port LED color to …` (Beginner) {#block_hubs_buwizz3_light_port_set_led_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color.svg')} alt="block_hubs_buwizz3_light_port_set_led_color.svg" />
 
-Sets LED color on selected BuWizz 3 port with built-in color options.
+Sets the port LED to one of the predefined colors.
 
-- Type: command block
-
-### `BuWizz 3 set LED color (string)` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
-
-Sets BuWizz 3 LED color using text color value.
-
-- Type: command block
-- Typical use: dynamic color names from variables
-
-### `BuWizz 3 set LED color (RGB)` (Advanced) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
+### `set port LED color to … … …` (RGB) (Advanced) {#block_hubs_buwizz3_light_port_set_led_color_rgb}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_rgb.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_rgb.svg" />
 
-Sets BuWizz 3 LED color using explicit RGB channels.
+Sets the port LED color from red, green and blue values.
 
-- Type: command block
-- Typical use: full custom color control and gradients
+- Typical use: any color you like, smooth color changes.
+
+### `set port LED color from string …` (Guru) {#block_hubs_buwizz3_light_port_set_led_color_string}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_light_port_set_led_color_string.svg')} alt="block_hubs_buwizz3_light_port_set_led_color_string.svg" />
+
+Sets the port LED color from text.
+
+- Typical use: take the color from a variable or a list.

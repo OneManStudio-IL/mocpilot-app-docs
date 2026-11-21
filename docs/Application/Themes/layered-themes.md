@@ -6,7 +6,7 @@ description: "How MOCPilot layered themes are built from image layers, and what 
 
 # Layered themes
 
-The paid themes use the **layered** format. A layered control is drawn from several stacked layers instead of one picture:
+The paid themes and the [special controls](/docs/Application/Dashboard/SpecialControls) use the **layered** format. A layered control is drawn from several stacked layers instead of one picture:
 
 - **image** layers: the body, bezel, glass and shadows, prepared with their effects;
 - **shapes and arcs**: rings, scales and progress arcs that move with the value;

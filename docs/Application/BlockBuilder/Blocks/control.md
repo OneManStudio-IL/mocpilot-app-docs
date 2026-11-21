@@ -7,142 +7,152 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Control
 
-Control blocks manage execution flow: waiting, loops, branching, and stopping scripts.
+Control blocks decide how a script runs: waiting, loops, branches and stopping. When the profile has hubs, this category also holds blocks that connect hubs and change their settings.
 
 ## Wait blocks
 
-### `Wait` (Beginner) {#block_control_wait_for}
+### `wait … seconds` (Beginner) {#block_control_wait_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_for.svg')} alt="block_control_wait_for.svg" />
 
-Pauses the current script for a specified time.
+Pauses the script for the given number of seconds.
 
-### `Wait until` (Advanced) {#block_control_wait_until}
+### `wait until …` (Advanced) {#block_control_wait_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_wait_until.svg')} alt="block_control_wait_until.svg" />
 
-Pauses the current script until a condition becomes true.
+Pauses the script until the condition becomes true.
 
-## Loop blocks
+## Loops
 
-### `Repeat` (Advanced) {#block_control_repeat_for}
+### `repeat …` (Advanced) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
-Runs nested blocks a fixed number of times.
+Runs the blocks inside it the given number of times (10 by default).
 
-### `Repeat until` (Advanced) {#block_control_repeat_until}
+### `repeat until …` (Advanced) {#block_control_repeat_until}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_until.svg')} alt="block_control_repeat_until.svg" />
 
-Runs nested blocks repeatedly until a condition becomes true.
+Runs the blocks inside it again and again until the condition becomes true.
 
-### `Forever` (Advanced) {#block_control_repeat_forever}
+### `forever` (Advanced) {#block_control_repeat_forever}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_forever.svg')} alt="block_control_repeat_forever.svg" />
 
-Runs nested blocks continuously until the program or script is stopped.
+Runs the blocks inside it over and over until the script or the program stops. Nothing can be attached below it.
 
-## Branch blocks
+## Branches
 
-### `If` (Beginner) {#block_control_if}
+### `if … then` (Beginner) {#block_control_if}
 
 <img src={useBaseUrl('/img/blocks/block_control_if.svg')} alt="block_control_if.svg" />
 
-Runs nested blocks only when the condition is true.
+Runs the blocks inside it only when the condition is true.
 
-### `If / Else` (Advanced) {#block_control_if_else}
+### `if … then … else` (Advanced) {#block_control_if_else}
 
 <img src={useBaseUrl('/img/blocks/block_control_if_else.svg')} alt="block_control_if_else.svg" />
 
-Runs one branch when the condition is true, otherwise runs the alternative branch.
+Runs the first branch when the condition is true, and the second branch otherwise.
 
-### `Do this and this` (Guru) {#block_control_do_this_and_this}
+### `do this … and this` (Guru) {#block_control_do_this_and_this}
 
 <img src={useBaseUrl('/img/blocks/block_control_do_this_and_this.svg')} alt="block_control_do_this_and_this.svg" />
 
-Runs two block stacks in sequence as part of one control flow operation.
+Runs the first group of blocks, then the second one, and only then continues with the blocks below it.
 
-## Stop blocks
+## Stopping
 
-### `Stop` (Beginner) {#block_control_stop}
+### `stop …` (Beginner) {#block_control_stop}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop.svg')} alt="block_control_stop.svg" />
 
-Stops script execution (scope depends on selected stop option).
+Stops scripts; what exactly it stops depends on the option.
 
-- Stop options: `all`, `this stack`, `and exit program`
+- `all`: stops all scripts.
+- `this stack`: stops only this script.
+- `and exit program`: stops the program.
 
-### `Stop other stacks` (Guru) {#block_control_stop_other_stacks}
+### `stop other stacks` (Guru) {#block_control_stop_other_stacks}
 
 <img src={useBaseUrl('/img/blocks/block_control_stop_other_stacks.svg')} alt="block_control_stop_other_stacks.svg" />
 
-Stops all other running stacks while allowing the current stack to continue.
+Stops every other running script; this one keeps going.
 
-## Hub/control utility blocks
+## Hub blocks
 
-### `Set connect` (Beginner) {#block_hubs_control_set_connect}
+### `connect / disconnect …` (Beginner) {#block_hubs_control_set_connect}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_control_set_connect.svg')} alt="block_hubs_control_set_connect.svg" />
 
-Controls hub connection state from control flow logic.
+Connects or disconnects the selected hub from the program.
 
-- Action options: `connect`, `disconnect`
+- Options: `connect`, `disconnect`
+- Hubs: all.
 
-### `Set hub configuration` (Advanced) {#block_hubs_set_hub_config}
-
-<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
-
-Sets the selected hub to one of its supported configuration profiles.
-
-- Available only for hubs that expose hub configuration options.
-- Typical use: switch a configurable hub, such as Technic Move Hub, to a different stored configuration before running the next blocks.
-
-### `Hub configuration` (Advanced) {#block_hubs_all_control_hub_config}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
-Returns the current configuration of the selected hub.
-
-- Type: reporter block
-- Output format options: `text`, `index`
-- Available only for hubs that expose hub configuration options.
-- Returns `NaN` when the selected hub is not connected or no configuration is available.
-
-### `Is connected` (Beginner) {#block_hubs_all_sensors_is_connected}
+### `… connected` (Beginner) {#block_hubs_all_sensors_is_connected}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_connected.svg')} alt="block_hubs_all_sensors_is_connected.svg" />
 
-Returns whether the hub is currently connected.
+Returns `true` when the selected hub is connected.
 
-- Type: boolean reporter block
+- Type: Boolean block
+- Hubs: all.
 
-### `BuWizz 2 set power mode` (Beginner) {#block_hubs_buwizz_sensors_set_power_mode}
+### `set … configuration to …` (Advanced) {#block_hubs_set_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
+
+Switches the hub to one of its configurations.
+
+- Hubs: Technic Move Hub (the only hub with configurations today).
+- Typical use: switch the hub to another configuration before the next blocks run.
+
+### `get … configuration as …` (Advanced) {#block_hubs_all_control_hub_config}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_control_hub_config.svg')} alt="block_hubs_all_control_hub_config.svg" />
+
+Returns the hub's current configuration.
+
+- Type: reporter block
+- Output: `text` or `index`
+- Hubs: Technic Move Hub.
+- Returns `NaN` when the hub isn't connected or has no configuration.
+
+### `set … power mode to …` (Beginner) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
-Sets BuWizz 2 hub power mode.
+Sets the power mode of a BuWizz 2.
 
-- Mode options: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Modes: `Slow`, `Normal`, `Fast`, `Ludicrous`
+- Hubs: BuWizz 2.
 
-### `BuWizz 2 get power mode` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
+### `get … power mode as …` (Guru) {#block_hubs_buwizz_sensors_get_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_power_mode.svg')} alt="block_hubs_buwizz_sensors_get_power_mode.svg" />
 
-Returns the currently active BuWizz 2 power mode.
+Returns the current power mode of a BuWizz 2.
 
-- Output format options: `text`, `index`
+- Output: `text` or `index`
+- Hubs: BuWizz 2.
 
-### `MouldKing set control channel` (Advanced) {#block_hubs_mouldking_control_set_control_channel}
+### `set … control channel to …` (Advanced) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 
-Sets active control channel for supported MouldKing hub/controller.
+Sets the control channel of a Mould King hub.
 
-- Channel options: `A`, `B`, `C`
+- Channels: `A`, `B`, `C`
+- Hubs: Mould King 4.0 and 6.0.
 
-### `MouldKing get control channel` (Advanced) {#block_hubs_mouldking_control_get_control_channel}
+### `get … control channel as …` (Advanced) {#block_hubs_mouldking_control_get_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_get_control_channel.svg')} alt="block_hubs_mouldking_control_get_control_channel.svg" />
 
-Returns current active control channel for supported MouldKing hub/controller.
+Returns the current control channel of a Mould King hub.
 
-- Output format options: `text`, `index`
+- Output: `text` or `index`
+- Hubs: Mould King 4.0 and 6.0.

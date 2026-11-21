@@ -1,41 +1,58 @@
 ---
 id: Examples
 title: Examples
-description: "Logic Blocks example programs for driving, steering, lights, battery warning and sensors."
+description: "Logic Blocks example programs for driving, steering, lights, sounds, battery warnings and sensors."
 ---
 
 # Examples
 
-Short programs to start from. Block names are as in the [block reference](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing#block-reference). Indentation means "inside" a C block.
+Short programs to start from. Block names follow the [block reference](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing#block-reference); values in brackets are the hub, the port or a reporter block placed in a slot. Indented lines go inside a C block.
 
 ## Drive with a joystick
 
-Dashboard: **JOY1**. Motor on port A.
+Dashboard: joystick **JOY1**. Drive motor on port A.
 
 ```text
-When program started
-Forever
-    Set motor speed  (Hub 1, port A)  ←  joystick JOY1 y-axis
+when program starts
+forever
+    start motor at (joystick JOY1 y-axis) % speed  (Hub 1, port A)
 ```
 
 ## Steer with a servo
 
-Steering motor (angular) on port B. Calibrate once, then follow the joystick.
+Steering motor (an angular motor) on port B. Set its current position as the center, then follow the joystick: `× 0.9` turns the joystick's −100…100 into −90…90 degrees.
 
 ```text
-When program started
-Calibrate steering rack  (Hub 1, port B)
-Forever
-    Go to relative position  (Hub 1, port B)  ←  joystick JOY1 x-axis × 0.9
+when program starts
+set relative position to 0  (Hub 1, port B)
+forever
+    go to relative position (joystick JOY1 x-axis × 0.9) at 100 % speed  (Hub 1, port B)
+```
+
+For a steering rack with end stops, calibrate it first (see [Motors](/docs/Application/BlockBuilder/Blocks/Motors#block_hubs_all_motors_port_calibrate_steering_rack)). `center` and `range` are variables. After calibration the rack stands in the middle, but its relative position there is the center value, not 0, so set it to 0 before steering:
+
+```text
+when program starts
+calibrate rack (center) center (range) degrees  (Hub 1, port B)
+set relative position to 0  (Hub 1, port B)
+forever
+    go to relative position ((range × joystick JOY1 x-axis) ÷ 100) at 100 % speed  (Hub 1, port B)
 ```
 
 ## Lights on a switch
 
 ```text
-When switch SWCH1 is toggled on
-    Light turn to 100 %  (Hub 1, port C)
-When switch SWCH1 is toggled off
-    Light turn off  (Hub 1, port C)
+when switch SWCH1 is toggled on
+    turn on at 100 % brightness  (Hub 1, port C)
+when switch SWCH1 is toggled off
+    turn off  (Hub 1, port C)
+```
+
+## Horn button
+
+```text
+when button BTN1 is pressed
+    sound Car horn play until done
 ```
 
 ## Battery warning
@@ -43,38 +60,38 @@ When switch SWCH1 is toggled off
 Monitor **MNTR1**; the button turns red when the battery is low.
 
 ```text
-When program started
-Forever
-    Show  (Hub battery level (Hub 1))  on MNTR1 monitor
-    If  Hub battery level (Hub 1) < 20
-        Set BTN1 color to red
-    Wait 5 seconds
+when program starts
+forever
+    show (Hub 1 % battery) on MNTR1 monitor
+    if (Hub 1 % battery) < 20 then
+        set BTN1 color to red
+    wait 5 seconds
 ```
 
 ## Stop before an obstacle
 
-Technic distance sensor on port D, drive motor on port A.
+Technic Distance Sensor on port D, drive motor on port A.
 
 ```text
-When program started
-Forever
-    If  Technic distance sensor (Hub 1, port D) < 10
-        Stop motor  (Hub 1, port A)
-        Set LED color  (Hub 1)  red
-    Else
-        Set motor speed  (Hub 1, port A)  ←  slider SLDR1
-        Set LED color  (Hub 1)  green
+when program starts
+forever
+    if (distance cm  (Hub 1, port D)) < 10 then
+        stop motor  (Hub 1, port A)
+        set LED color to red  (Hub 1)
+    else
+        start motor at (slider SLDR1) % speed  (Hub 1, port A)
+        set LED color to green  (Hub 1)
 ```
 
-## Gearbox on a step switch
+## Speed limit on a stepper
 
-Step switch **STPR1** with 4 steps limits the top speed.
+Stepper **STPR1** with 4 steps limits the top speed.
 
 ```text
-When program started
-Forever
-    Set variable (speed limit) to  (stepper STPR1 × 25)
-    Set motor speed  (Hub 1, port A)  ←  pedals PDL1 value × speed limit / 100
+when program starts
+forever
+    set (speed limit) to (stepper STPR1 × 25)
+    start motor at (joystick JOY1 y-axis × speed limit / 100) % speed  (Hub 1, port A)
 ```
 
 `speed limit` is a variable (**Variables → Make a variable**).
@@ -84,23 +101,27 @@ Forever
 Lock the throttle until both hubs are connected.
 
 ```text
-When program started
-Set JOY1 interactivity  disable
-Wait until  (Is connected (Hub 1))  and  (Is connected (Hub 2))
-Show "Ready" on MNTR1 monitor
-Set JOY1 interactivity  enable
+when program starts
+set JOY1 interactivity disable
+wait until (Hub 1 connected) and (Hub 2 connected)
+show "Ready" on MNTR1 monitor
+set JOY1 interactivity enable
 ```
 
 ## Gamepad
 
+Set **Gamepad values range** to −100…100 on the [Gamepad page](/docs/Application/Dashboard/Gamepad) and turn on **Enable gamepad blocks**.
+
 ```text
-When program started
-Forever
-    Set motor speed  (Hub 1, port A)  ←  gamepad thumbstick left y
-    Go to relative position  (Hub 1, port B)  ←  gamepad thumbstick right x × 0.9
+when program starts
+forever
+    start motor at (stick left y-axis) % speed  (Hub 1, port A)
+    go to relative position (stick right x-axis × 0.9) at 100 % speed  (Hub 1, port B)
 ```
 
-Turn on **Enable gamepad blocks** on the [Gamepad page](/docs/Application/Dashboard/Gamepad) first.
+## Car with pedals
+
+For a car driven with pedals, a gearbox and a handbrake, see the [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator).
 
 ## More
 

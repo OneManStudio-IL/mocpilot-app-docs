@@ -7,72 +7,71 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Lists
 
-Lists store ordered collections of values and are manipulated by dedicated list Reporter and Stack blocks.
+A list stores several values in order. Create, rename and delete lists with **Make a list**, **Rename list** and **Delete list** at the top of the category. The blocks below appear once the program has at least one list. Items are numbered from 1.
 
-## List mutation blocks
+## Changing a list
 
-### `Add value to list` (Advanced) {#block_lists_add}
+### `add … to …` (Advanced) {#block_lists_add}
 
 <img src={useBaseUrl('/img/blocks/block_lists_add.svg')} alt="block_lists_add.svg" />
 
-Appends a value to the end of selected list.
+Adds a value to the end of the list.
 
-### `Insert at` (Guru) {#block_lists_insert_at}
+### `insert … at … of …` (Guru) {#block_lists_insert_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_insert_at.svg')} alt="block_lists_insert_at.svg" />
 
-Inserts a value at selected index in the list.
+Inserts a value at the given position; the items after it move down by one.
 
-### `Replace at` (Guru) {#block_lists_replace_at}
+### `replace item … of … with …` (Guru) {#block_lists_replace_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_replace_at.svg')} alt="block_lists_replace_at.svg" />
 
-Replaces item at selected index with new value.
+Replaces the item at the given position with a new value.
 
-### `Delete` (Advanced) {#block_lists_delete}
+### `delete … from …` (Advanced) {#block_lists_delete}
 
 <img src={useBaseUrl('/img/blocks/block_lists_delete.svg')} alt="block_lists_delete.svg" />
 
-Deletes item at selected index (or selected delete mode).
+Deletes the item at the given position.
 
-### `Clear all` (Advanced) {#block_lists_clear_all}
+### `clear …` (Advanced) {#block_lists_clear_all}
 
 <img src={useBaseUrl('/img/blocks/block_lists_clear_all.svg')} alt="block_lists_clear_all.svg" />
 
-Removes all items from selected list.
+Removes all items from the list.
 
-## List value/check blocks
+## Reading a list
 
-### `Item at` (Advanced) {#block_lists_item_at}
+### `item … of …` (Advanced) {#block_lists_item_at}
 
 <img src={useBaseUrl('/img/blocks/block_lists_item_at.svg')} alt="block_lists_item_at.svg" />
 
-Returns value at selected index.
+Returns the item at the given position.
 
-### `Index of value` (Guru) {#block_lists_index_of_value}
+### `index of … in …` (Guru) {#block_lists_index_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_index_of_value.svg')} alt="block_lists_index_of_value.svg" />
 
-Returns index of the first matching value in list.
+Returns the position of the first item equal to the value, or `0` when there is none.
 
-### `Contains value` (Guru) {#block_lists_contains_value}
+### `… contains …` (Guru) {#block_lists_contains_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_contains_value.svg')} alt="block_lists_contains_value.svg" />
 
-Returns whether list contains a specified value.
+Returns `true` when the list contains the value.
 
-### `Size of list` (Advanced) {#block_lists_size_of_value}
+### `size of …` (Advanced) {#block_lists_size_of_value}
 
 <img src={useBaseUrl('/img/blocks/block_lists_size_of_value.svg')} alt="block_lists_size_of_value.svg" />
 
-Returns number of items in selected list.
+Returns the number of items in the list.
 
-## List value reporter
+### List (Advanced) {#block_lists_value}
 
 <img src={useBaseUrl('/img/blocks/list.svg')} alt="list.svg" />
 
-Returns the current value of the selected list.
+Each list has its own reporter block with its name. It returns the whole list as text.
 
-- Type: reporter block
-- Output format example: `[item1,item2,item3]`
-- Typical use: inspect current list content or pass the list value into compatible blocks
+- Output example: `[item1,item2,item3]`; an empty list gives empty text.
+- Typical use: show the list on a monitor, or pass it to blocks that accept a list (for example, **light up** for the Distance Sensor lights).

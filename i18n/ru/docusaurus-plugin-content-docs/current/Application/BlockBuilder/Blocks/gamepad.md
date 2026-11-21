@@ -6,101 +6,86 @@ title: Геймпад
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Геймпад
-Блоки Gamepad используются для реакции на ввод контроллера и чтения текущих значений состояния.
 
-## Событийные блоки
+Блоки геймпада реагируют на игровой контроллер и читают его кнопки, стики и триггеры. Категория появляется, когда на [странице «Геймпад»](/docs/Application/Dashboard/Gamepad) включён параметр **Включить блоки геймпада**. Названия кнопок зависят от раскладки контроллера: Xbox или Sony.
 
-### `Когда кнопка геймпада` (Новичок) {#block_gamepad_event_when_button_is}
+## События
+
+### `когда … является …` (Новичок) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is_sony.svg')} alt="block_gamepad_event_when_button_is_sony.svg" />
 </div>
 
-Срабатывает, когда выбранная кнопка геймпада соответствует выбранному состоянию.
+Срабатывает, когда выбранную кнопку нажимают или отпускают.
 
-- Тип: событийный блок
-- Кнопки (Xbox-раскладка): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Кнопки (Sony-раскладка): `крест`, `круг`, `квадрат`, `треугольник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Варианты состояния: `нажата`, `отпущена`
+- Кнопки (раскладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Кнопки (раскладка Sony): `cross`, `circle`, `square`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Состояния: `нажата`, `отпущен`
 
-### `Когда D-pad геймпада` (Новичок) {#block_gamepad_event_when_dpad_is}
+### `когда D-Pad … кнопка …` (Новичок) {#block_gamepad_event_when_dpad_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_dpad_is.svg')} alt="block_gamepad_event_when_dpad_is.svg" />
 
-Срабатывает, когда направление/состояние D-pad соответствует выбранному условию.
+Срабатывает, когда кнопку крестовины нажимают или отпускают.
 
-- Тип: событийный блок
-- Варианты направления: `вверх`, `вниз`, `влево`, `вправо`
-- Варианты состояния: `нажата`, `отпущена`
+- Направления: `вверх`, `вниз`, `влево`, `вправо`
+- Состояния: `нажата`, `отпущен`
 
-### `Когда стик геймпада` (Новичок) {#block_gamepad_event_when_thumbstick_is}
+### `когда … джойстик …` (Новичок) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
-Срабатывает, когда условие по стику соответствует выбранным параметрам.
+Срабатывает, когда стик отклоняют в какую-то сторону, двигают или отпускают.
 
-При текущих параметрах блок поддерживает:
+- Стик: `левый`, `правый`
+- Состояние: `вверх`, `вниз`, `влево`, `вправо`, `перемещён`, `отпущен`
+- Для чего: реагировать на движение стика, а когда его отпустили — остановить модель или вернуть руль в центр.
 
-- Выбор стика: `влево` / `вправо`
-- Выбор направления/состояния: `вверх`, `вниз`, `влево`, `вправо`, `движение`, `отпущена`
+## Значения
 
-- Тип: событийный блок
-- Типичное применение: реакция на направление, движение или отпускание стика
-
-## Блоки значений
-
-### `Значение кнопки геймпада (boolean)` (Новичок) {#block_gamepad_button_value_boolean}
+### `является … …` (Новичок) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean_sony.svg')} alt="block_gamepad_button_value_boolean_sony.svg" />
 </div>
 
-Возвращает текущее состояние выбранной кнопки геймпада.
+Возвращает `true`, если выбранная кнопка находится в выбранном состоянии.
 
-- Тип: блок значения
-- Выход: `истина`/`ложь`
-- Кнопки (Xbox-раскладка): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
-- Кнопки (Sony-раскладка): `крест`, `круг`, `квадрат`, `треугольник`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Варианты состояния: `нажата`, `отпущена`
+- Кнопки (раскладка Xbox): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
+- Кнопки (раскладка Sony): `cross`, `circle`, `square`, `triangle`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
+- Состояния: `нажата`, `отпущен`
 
-### `Значение кнопки D-pad геймпада (boolean)` (Новичок) {#block_gamepad_dpad_button_value_boolean}
+### `D-Pad … кнопка …` (Новичок) {#block_gamepad_dpad_button_value_boolean}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_dpad_button_value_boolean.svg')} alt="block_gamepad_dpad_button_value_boolean.svg" />
 
-Возвращает, активно ли выбранное направление D-pad.
+Возвращает `true`, если выбранная кнопка крестовины находится в выбранном состоянии.
 
-- Тип: блок значения
-- Выход: `истина`/`ложь`
-- Варианты направления: `вверх`, `вниз`, `влево`, `вправо`
-- Варианты состояния: `нажата`, `отпущена`
+- Направления: `вверх`, `вниз`, `влево`, `вправо`
+- Состояния: `нажата`, `отпущен`
 
-### `Значение стика геймпада (float)` (Новичок) {#block_gamepad_thumbstick_value_float}
+### `джойстик … …` (Новичок) {#block_gamepad_thumbstick_value_float}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_thumbstick_value_float.svg')} alt="block_gamepad_thumbstick_value_float.svg" />
 
-Возвращает числовое значение оси стика.
+Возвращает положение стика по одной оси.
 
-- Тип: блок значения
-- Выход: число (float)
-- Диапазон по умолчанию: `-1` до `1`
-- Опциональный диапазон в настройках gamepad: `-100` до `100`
-- Варианты стика: `влево`, `вправо`
-- Варианты оси: `ось X` / `ось Y`
+- Стик: `левый`, `правый`
+- Ось: `ось X`, `ось Y`
+- Диапазон: по умолчанию от `-1` до `1`, а если выбрать это в параметре **Диапазон значений геймпада** на странице «Геймпад» — от `-100` до `100`.
 
-### `Значение силы нажатия триггера геймпада (float)` (Новичок) {#block_gamepad_trigger_pressure_value_float}
+### `… давление` (Новичок) {#block_gamepad_trigger_pressure_value_float}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float.svg')} alt="block_gamepad_trigger_pressure_value_float.svg" />
   <img src={useBaseUrl('/img/blocks/block_gamepad_trigger_pressure_value_float_sony.svg')} alt="block_gamepad_trigger_pressure_value_float_sony.svg" />
 </div>
 
-Возвращает значение силы нажатия выбранного триггера.
+Возвращает, насколько нажат триггер.
 
-- Тип: блок значения
-- Выход: число (float)
-- Диапазон по умолчанию: `-1` до `1`
-- Опциональный диапазон в настройках gamepad: `-100` до `100`
-- Варианты триггера (Xbox-раскладка): `LT`, `RT`
-- Варианты триггера (Sony-раскладка): `L2`, `R2`
+- Триггеры (раскладка Xbox): `LT`, `RT`
+- Триггеры (раскладка Sony): `L2`, `R2`
+- Диапазон: по умолчанию от `0` (отпущен) до `1`, а с широким **Диапазоном значений геймпада** — от `0` до `100`.

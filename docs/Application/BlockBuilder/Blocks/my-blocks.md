@@ -7,28 +7,31 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # My Blocks
 
-My Blocks let you define your own custom reusable block.
-This category is conceptually similar to creating a function in traditional programming: define behavior once, then call it many times.
+My Blocks let you make your own reusable blocks.
+It works like a function in ordinary programming: you describe the behavior once and use it in as many places as you like.
 
-## Core My Blocks
+## The blocks
 
-### `Make a Block` (Guru) {#block_my_block_define}
+### `define …` (Guru) {#block_my_block_define}
 
-Creates a new custom block definition.
+<img src={useBaseUrl('/img/blocks/block_my_block_define.svg')} alt="block_my_block_define.svg" />
 
-- Type: definition/setup block
-- Typical use: group repeated logic into one named block
+Press **Make a Block** at the top of the category to create a new block. The program area then gets a `define` hat block with your block's name: the blocks you attach below it are what your block does.
 
-### `MyBlock` (Guru) {#block_my_block}
+- Typical use: put repeated logic into one block with a clear name.
 
-Calls a previously created custom block.
+### Your block (Guru) {#block_my_block}
 
-- Type: stack block (custom command call)
-- Typical use: reuse the same logic in multiple places without duplicating block stacks
+<img src={useBaseUrl('/img/blocks/block_my_block.svg')} alt="block_my_block.svg" />
 
-## Variadic examples
+Every block you make appears in the palette under its name. Using it runs the blocks attached to its `define` block.
 
-These examples show custom My Blocks with different argument signatures.
+- Type: stack block
+- Typical use: use the same logic in several places without copying stacks.
+
+## Examples with different inputs
+
+Custom blocks with different sets of inputs:
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758091855.svg')} alt="block_myblock_1775758091855.svg" />
@@ -40,30 +43,30 @@ These examples show custom My Blocks with different argument signatures.
   <img src={useBaseUrl('/img/blocks/block_myblock_1775758145135.svg')} alt="block_myblock_1775758145135.svg" />
 </div>
 
-## Example usage in program stack
+## Using a custom block in a program
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-usage-example.png')} alt="my-blocks-usage-example.png" />
 
-This example shows a custom block call attached under `when program starts`, while the `define my block` stack contains the reusable motor logic.
+Here the custom block is used under `when program starts`, and the `define` stack holds the motor logic it runs.
 
-- Typical flow: call custom block from event stacks
-- Benefit: one definition, many call sites
+- Usual pattern: use your blocks in event scripts.
+- Benefit: one definition, many places that use it.
 
-## My Block editor view
+## The block editor
 
 <img src={useBaseUrl('/img/my-blocks/my-blocks-editor-cropped.png')} alt="my-blocks-editor-cropped.png" />
 
-The Make a Block editor is used to design your custom block signature.
-You can add labels and inputs (for example number/text and boolean inputs), then define implementation logic in the block definition stack.
+In the **Make a Block** editor you design what your block looks like: add labels (**Add a label**) and inputs (**Add an input**: *number or text* or *boolean*). Inside the `define` stack, the inputs work like variables that hold the values passed to the block.
 
 ## Why use My Blocks
 
-- Reusability: write once, call many times.
-- Readability: replace long repeated stacks with one meaningful name.
-- Maintainability: update logic in one place instead of many copies.
-- Structure: split large programs into smaller logical units.
+- Reuse: write once, use many times.
+- Readability: one meaningful name instead of long repeated stacks.
+- Easy changes: fix the logic in one place instead of in every copy.
+- Structure: split a large program into small logical parts.
 
 ## Notes
 
-- Custom blocks are project-level and intended for reuse inside the same profile/project context.
-- Prefer descriptive names that explain intent, not implementation details.
+- Custom blocks belong to the profile and can be used anywhere in its program.
+- Give blocks names that say what they do, not how they do it.
+- A block that calls itself can loop forever; the editor warns you about it.

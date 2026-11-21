@@ -44,7 +44,7 @@ export default function HowItWorks() {
         <Arrow x1={526} y1={168} x2={477} y2={168} />
         <Node x={40} y={225} w={190} h={52} title={t('gamepad', 'Gamepad')} sub="" color="#8a8a96" />
         <Arrow x1={180} y1={225} x2={300} y2={202} />
-        <text x="380" y="250" textAnchor="middle" fontSize="13" fill="var(--ifm-font-color-base)" opacity="0.75">{t('play', '▶ Play runs the program')}</text>
+        <text x="380" y="250" textAnchor="middle" fontSize="13" fill="var(--ifm-font-color-base)" opacity="0.75">{t('play', '▶ Run starts the program')}</text>
         <text x="625" y="250" textAnchor="middle" fontSize="13" fill="var(--ifm-font-color-base)" opacity="0.75">{t('bluetooth', 'over Bluetooth')}</text>
       </svg>
     </div>

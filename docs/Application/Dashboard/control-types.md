@@ -1,12 +1,12 @@
 ---
 id: ControlTypes
 title: Control types
-description: "Joystick, directional pad, sliders, buttons, switches, step switches, monitors, steering wheel and pedals."
+description: "Joystick, directional pad, sliders, rotary knob, buttons, switches, step switches, monitors and special controls."
 ---
 
 # Control types
 
-Every [theme](/docs/Application/Themes/ThemesOverview) draws the same set of control types in its own style. The free **Basic** theme has the first nine types; paid themes add three monitors; steering wheels and pedals are special products.
+Every [theme](/docs/Application/Themes/ThemesOverview) draws the same set of control types in its own style. The free **Basic** theme has nine of them; every paid theme adds the **Rotary knob** and three graphic monitors. Steering wheels, pedals, gear shifters and the other [special controls](/docs/Application/Dashboard/SpecialControls) are separate products.
 
 | Control | Name on the dashboard | Gives the program | Available in |
 |---|---|---|---|
@@ -14,6 +14,7 @@ Every [theme](/docs/Application/Themes/ThemesOverview) draws the same set of con
 | Directional Pad | DPAD | up / down / left / right buttons | all themes |
 | Slider | SLDR | a value | all themes |
 | Ver. slider | VSLDR | a value | all themes |
+| Rotary knob | DIAL | a value | paid themes |
 | Button | BTN | pressed / released | all themes |
 | Switch | SWCH | on / off | all themes |
 | Step switch | STPR | a step number | all themes |
@@ -22,39 +23,51 @@ Every [theme](/docs/Application/Themes/ThemesOverview) draws the same set of con
 | Battery level | MNTBT | shows a level | paid themes |
 | Speedometer | MNTSP | shows a speed | paid themes |
 | Tilt monitor | MNTLT | shows pitch and roll | paid themes |
-| Steering wheel | SW | a steering value | special product |
-| Pedals | PDL | throttle and brake | special product |
+| Steering wheel, pedals, gearboxes, handbrake, turn signals, train controller | STWHEEL, PDLS, GEAR, GEARA, HBRK, STALK, TRTHR | see [Special controls](/docs/Application/Dashboard/SpecialControls) | special products |
+
+The name on the dashboard gets a number: the first joystick is **JOY1**, the second **JOY2**.
 
 ## Joystick
 
 A stick that springs back to the centre. It gives an **X** (left/right) and a **Y** (up/down) value; the centre is zero.
 
-- **Axes type**: **Both axes (X, Y)**, **Only horizontal (X)** or **Only vertical (Y)**. A one-axis joystick is easier to use for throttle or steering alone.
-- Typical use: Y for driving, X for steering; or one joystick per track of a tank.
+- **Axes type**: **Both axes (X, Y)**, **Only horizontal (X)** or **Only vertical (Y)**. A one-axis joystick is easier to use when it only drives or only steers.
+- Typical use: Y for driving and X for steering, or one joystick per track of a tank.
 
 ## Directional Pad
 
-Four buttons: up, down, left, right. Each one is pressed or released. In Quick Links a D-pad axis gives −1, 0 or +1 (**Up / down** or **Left / right**), handy for step-by-step movements like a crane hook.
+Four buttons: up, down, left and right. Each one is either pressed or released. In Quick Links a D-pad axis gives −1, 0 or +1 (**Up / down** or **Left / right**), which is handy for step-by-step movements such as a crane hook.
 
 ## Slider and Ver. slider
 
-A handle that moves along a track: horizontal or vertical.
+A handle that moves along a horizontal or vertical track.
 
-- **Return to zero**: the handle springs back when released (like a throttle), or stays where you leave it (like a speed setting for a train).
-- **Negative values**: the zero is in the middle, so the slider gives negative and positive values (forward and reverse).
+- **Return to zero**: the handle springs back when you let go (like a throttle) instead of staying where you leave it (like the speed setting of a train).
+- **Negative values**: zero is in the middle, so the slider gives negative and positive values (reverse and forward).
 - **Step value**: the slider moves in steps.
+
+## Rotary knob {#rotary-knob}
+
+A round knob, like a volume control, in the **Sliders** group of every paid theme. Turn it with one finger around its centre: it turns about 135° each way and stays where you leave it.
+
+- **Detent steps (0 = smooth)** (0–24): with steps, the knob clicks from one detent to the next.
+- **Centre zero (-100..100)**: the knob gives −100 to 100 with zero in the middle, instead of 0 to 100.
+- Blocks: *when rotary … is turned / pressed / released / turned to minimum / turned to maximum*, *rotary value …*, *is rotary … pressed / at minimum / at maximum?* See [Dashboard controllers](/docs/Application/BlockBuilder/Blocks/DashboardControllers#rotary-knob-blocks).
+- In Quick Links the knob works like a [slider](/docs/Application/Links/Blocks/InputBlocks#controller-knob).
+
+The Basic theme has no rotary knob. Since every paid theme has one, **Change theme** switches a knob to the look of another theme.
 
 ## Button
 
-Pressed while you hold it, released when you let go. Use it for a horn, a short movement, or with a **Toggle** block in Quick Links to make it switch something on and off.
+Pressed while you hold it, released when you let go. Use it for a horn or a short movement, or with the **Toggle** block in Quick Links to switch something on and off.
 
 ## Switch
 
-Stays on or off: tap to change. Use it for lights, modes, a winch lock.
+Stays on or off: tap it to change. Use it for lights, modes or a winch lock.
 
 ## Step switch and Ver. step switch
 
-A **−** / **+** control that counts steps, like a gearbox or train speed levels.
+A **−** / **+** control that counts steps, like gears or the speed levels of a train.
 
 - **Steps count**: 1 to 100 (default 10).
 - **Negative values**: allows steps below zero (reverse levels).
@@ -62,31 +75,18 @@ A **−** / **+** control that counts steps, like a gearbox or train speed level
 
 ## Monitor
 
-Shows text or a number from the program: speed, battery, a mode name, a sensor value.
+Shows text or a number from the program: speed, battery, the name of a mode, a sensor value.
 
-- **Text layout** single or multi-line, **Text overflow** (Clip, Wrap, Marquee, Scroll), **Maximum lines**, scrolling options, **Text alignment** and **Text scale**.
+- **Text layout** (single or multiple lines), **Text overflow** (Clip, Wrap, Marquee, Scroll), **Maximum lines**, scrolling options, **Text alignment** and **Text scale**.
 
 ## Battery level, Speedometer, Tilt monitor
 
 Graphic indicators in the paid themes. The program sets their value: a hub's battery, a motor's speed, the tilt of a hub. **Tilt monitor** has **Invert pitching** and **Invert rolling**. See [Indicators and monitors](/docs/Application/Dashboard/Indicators).
 
-## Steering wheel
+## Special controls
 
-A wheel you turn with a finger, in three styles: **Supercar**, **Heavy truck** and **Off-road vehicle**.
-
-- **Steering wheel angle** (20–120°): how far the wheel turns on screen; it does not change the value sent to the program.
-- **Sound effects**.
-
-## Pedals
-
-Accelerator and brake pedals, in the same three styles.
-
-- **Engine inertia** (0–200): how slowly the speed builds up and fades, like a heavy vehicle.
-- **Reverse speed** (10–100): how fast the model reverses.
-- **Sound effects**.
-
-Steering wheel and pedals are special products: buy them separately or get them with [MocPilot Pro](/docs/Application/Account/Pro).
+A steering wheel, pedals, a manual or automatic gearbox, a handbrake, a turn signal stalk and a train controller. Each is a separate product with many looks. See [Special controls](/docs/Application/Dashboard/SpecialControls).
 
 ## Interactivity
 
-Every interactive control has **Interactivity** (on by default). A non-interactive control does not react to touches; the program can switch interactivity on and off, for example to block the throttle until a startup check is done.
+Every interactive control has **Interactivity** (on by default). A non-interactive control doesn't react to touches. The program can switch interactivity on and off, for example to block the throttle until a startup check is done.

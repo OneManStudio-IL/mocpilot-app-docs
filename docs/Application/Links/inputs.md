@@ -1,79 +1,67 @@
 ---
 id: Inputs
 title: Inputs
-description: "Quick Links inputs: dashboard controls, the gamepad, hub buttons and hub sensors."
+description: "Quick Links inputs: dashboard controls, the simulated vehicle, the gamepad, hub buttons and hub sensors."
 ---
+
+import Screenshot from '@site/src/components/Screenshot';
 
 # Inputs
 
-An input starts every row. The **Inputs** tab of the palette lists:
+Every row starts with an input. The **Inputs** tab of the palette lists:
 
-- one block per **dashboard control** (joysticks and D-pads: one block per axis);
-- one **Gamepad** block;
-- one **Hub** block per hub of the profile (except Mould King, which has no sensors or buttons).
+- one block per **dashboard control**; controls with several channels (joystick and D-pad axes, steering wheel, pedals, gear shifter, handbrake, turn signals) get one block per channel;
+- the **Vehicle** blocks, when the dashboard has pedals, a gear shifter or a handbrake;
+- the **Gamepad** block, when gamepad blocks are turned on;
+- one **Hub** block per hub of the profile (except Mould King, which has no buttons or sensors).
 
-If the tab is empty: "Add controllers on the dashboard or hubs in My Hubs: they appear here".
+If the tab is empty, it says "Add controllers on the dashboard or hubs in My Hubs: they appear here".
 
-## Controller
+<Screenshot name="links-palette-inputs" alt="The Inputs tab of the Quick Links palette" width={900} />
 
-A control from your dashboard, referred to by its name: **JOY1**, **SLDR1**, **BTN2**…
+Every setting and value of each input is listed in the [Input blocks](/docs/Application/Links/Blocks/InputBlocks) reference.
 
-| Control | Channel | Signal |
-|---|---|---|
-| Joystick | **X axis** or **Y axis** | value −1…1 |
-| Slider | — | value |
-| Wheel (steering wheel) | — | value −1…1 |
-| Pedals | — | value (accelerator, brake) |
-| D-pad | **Up / down** or **Left / right** | −1, 0 or +1 |
-| Button | — | on while pressed |
-| Switch | — | on / off |
-| Stepper (step switch) | — | the current step |
+## Dashboard controls
 
-Settings: **Controller** (which control) and **Channel** (axis or direction).
+A [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller) block takes a control from your dashboard by its name (**JOY1**, **SLDR1**, **BTN2**…) and, if the control has several, the **Channel** you want:
 
-When you add, rename or change a control on the dashboard, the palette and the rows update automatically. If you change a joystick to "Only horizontal", rows using its Y axis report "… does not move along this axis".
+| Control | What the row gets |
+|---|---|
+| [Joystick](/docs/Application/Links/Blocks/InputBlocks#controller-joystick) | **X axis** or **Y axis**, −1…1 |
+| [Slider](/docs/Application/Links/Blocks/InputBlocks#controller-slider), [train controller](/docs/Application/Links/Blocks/InputBlocks#controller-train), [rotary knob](/docs/Application/Links/Blocks/InputBlocks#controller-knob) | its position |
+| [Steering wheel](/docs/Application/Links/Blocks/InputBlocks#controller-wheel) | **Steering angle** −1…1 or **Horn** |
+| [Pedals](/docs/Application/Links/Blocks/InputBlocks#controller-pedals) | **Accelerator pedal** or **Brake pedal**, 0…1 |
+| [Gear shifter](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Gear** or **Direction (R − / forward +)** |
+| [Handbrake](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handbrake locked** (on/off) or **Handbrake force** |
+| [Turn signals](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Turn signals (left − / right +)**, **Left turn signal**, **Right turn signal** or **Light** |
+| [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Up / down** or **Left / right**: −1, 0 or +1 |
+| [Button](/docs/Application/Links/Blocks/InputBlocks#controller-button) | on while pressed |
+| [Switch](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | on / off |
+| [Step switch](/docs/Application/Links/Blocks/InputBlocks#controller-stepper) | the current step |
+
+When you add, rename or change a control on the dashboard, the palette and the rows follow automatically. If you set a joystick to **Only horizontal**, rows that use its Y axis report "… does not move along this axis".
+
+## Drive like a real car
+
+The steering wheel, pedals, gear shifter and handbrake give their raw positions: a pedal row runs the motor exactly as far as the pedal is pressed. For a model that behaves like a car (it speeds up with inertia, coasts, brakes and reverses in R), use the [Vehicle](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) input instead. It reads the pedals, the gear shifter and the handbrake together and gives the vehicle's **Speed**, **Engine speed (rpm)**, **Braking** or **On the handbrake**:
+
+- *Vehicle (Speed)* → *Motor* → drive motors;
+- *Steering wheel (Steering angle)* → *Servo* → steering;
+- *Vehicle (Braking)* → *Light* → brake lights;
+- *Turn signals (Left turn signal)* → *Light* → left indicator lamp.
 
 ## Gamepad
 
-One block for the whole gamepad; choose the **Input**:
+One [Gamepad](/docs/Application/Links/Blocks/InputBlocks#src-gamepad) block covers the whole controller; choose a stick, trigger or button in **Input**. Turn on **Enable gamepad blocks** on the [Gamepad page](/docs/Application/Dashboard/Gamepad) first. The labels follow **Gamepad buttons layout** (Xbox or PlayStation).
 
-- **Sticks**: Left stick Y, Left stick X, Right stick Y, Right stick X (value −1…1);
-- **Triggers**: RT, LT (PlayStation: R2, L2) (value);
-- **Face buttons**: A, B, X, Y (PlayStation: Cross, Circle, Square, Triangle) (on/off);
-- **Bumpers**: LB, RB (PlayStation: L1, R1) (on/off);
-- **D-pad**: Up, Down, Left, Right (on/off).
+## Hub buttons and sensors
 
-Labels follow **Gamepad buttons layout** on the [Gamepad page](/docs/Application/Dashboard/Gamepad). Turn on **Enable gamepad blocks** there first.
+A [Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) input reads a hub's button or one of its sensors: battery, tilt, acceleration, motor speed and position, distance and colour sensors on the ports, and more. The list shows only what that hub can report. For tilt and acceleration, set **Hub orientation** to match how the hub sits in the model.
 
-## Hub
-
-A hub can be an input too: its buttons and sensors. Settings: **Hub**, **Button or sensor**, **Port** (for devices on ports) and **Hub orientation** (for tilt and acceleration: how the hub is mounted in the model). Only what this hub supports is listed.
-
-| Button or sensor | Unit | Notes |
-|---|---|---|
-| **Button 1, 2…** | on/off | the hub button; buttons of the LEGO® Powered Up remote |
-| **Battery** | % | |
-| **Battery voltage** | V | |
-| **Output voltage** | V | BuWizz 2.0 |
-| **Temperature** | °C | |
-| **Tilt pitch / roll / yaw** | ° | built-in tilt sensor |
-| **Acceleration X / Y / Z** | m/s² | |
-| **Motor speed** | % | port |
-| **Motor angle** | ° | relative, port |
-| **Motor position** | ° | absolute (angular motors), port |
-| **Motor power** | % | port, Robot Inventor |
-| **Motor current** | A | port |
-| **Distance sensor** | | port |
-| **Color sensor** | | port |
-| **Reflected light / Ambient light** | % | port |
-| **Tilt sensor pitch / roll** | ° | WeDo 2.0 / BOOST tilt sensor on a port |
-| **Power mode** | 1–4 | BuWizz 2.0 |
-| **Connected** | on/off | whether the hub is connected |
-
-The value travels along the row scaled to −1…1. A **Monitor** indicator placed directly after a sensor shows the real value with its unit, such as "7.85 V" or "−12°".
+The value travels along the row scaled to −1…1. A text **Monitor** right after a sensor shows the real value with its unit, such as "7.85 V" or "−12°".
 
 Typical uses:
 
 - *Battery* → *Indicator* (Battery level);
-- *Distance sensor* → *Threshold* (Below 20 %) → *Motor for time*: back off when something is close;
+- *Distance sensor* → *Threshold* (Below, 20 %) → *Motor for time*: back off when something gets close;
 - *Button 1* (Powered Up remote) → *Motor*: drive with the physical remote.

@@ -7,144 +7,143 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Events
 
-The **Events** category contains blocks that start scripts when a condition happens.
+The **Events** category holds the blocks that start scripts when something happens, plus the blocks that send messages between scripts. Use **Add message** and **Delete message** at the top of the category to manage messages.
 
 ## Core events
 
-### `When program started` (Beginner) {#block_event_when_program_started}
+### `when program starts` (Beginner) {#block_event_when_program_started}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_program_started.svg')} alt="block_event_when_program_started.svg" />
 
-Starts this script once when the profile program begins.
+Runs its script once, when the program starts.
 
-- Trigger: program launch
-- Typical use: initialize variables, default motor states, startup sounds
+- Typical use: set starting values of variables, put motors in their starting state, show a "ready" message.
 
-### `When` (Advanced) {#block_event_when}
+### `when …` (Advanced) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
-Runs when a selected condition becomes true.
+Runs its script when the condition in the slot changes from false to true. While the script runs, the block waits; it fires again only after the condition has become false and then true once more.
 
-- Trigger: condition-based
-- Typical use: branch logic based on runtime state
+- Typical use: react to a state, for example `when timer > 5 and switch is on`.
 
-### `When timer greater than` (Advanced) {#block_event_when_timer_greater_than}
+### `when timer > …` (Advanced) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
-Runs when timer value passes a threshold.
+Runs its script when the program timer goes above the value (in seconds).
 
-- Trigger: elapsed time
-- Typical use: delayed actions, timed phases
+- Typical use: delayed actions, timed phases. Reset the timer with **reset timer** (Sensors).
 
-### `When message received` (Guru) {#block_event_when_message_recieved}
+### `when I receive …` (Guru) {#block_event_when_message_recieved}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_message_recieved.svg')} alt="block_event_when_message_recieved.svg" />
 
-Starts a script when a matching broadcast message is received.
+Runs its script when the selected message is broadcast.
 
-- Trigger: message channel
-- Typical use: synchronize multiple scripts
+- Typical use: coordinate several scripts.
 
-### `Broadcast` (Guru) {#block_event_broadcast}
+### `broadcast …` (Guru) {#block_event_broadcast}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast.svg')} alt="block_event_broadcast.svg" />
 
-Sends a message to all scripts listening for that message.
+Sends a message to every script that starts with **when I receive** for that message, and continues right away.
 
-- Trigger: immediate send
-- Typical use: notify other scripts without waiting
+- Typical use: tell other scripts to start without waiting for them.
 
-### `Broadcast and wait` (Guru) {#block_event_broadcast_and_wait}
+### `broadcast … and wait` (Guru) {#block_event_broadcast_and_wait}
 
 <img src={useBaseUrl('/img/blocks/block_event_broadcast_and_wait.svg')} alt="block_event_broadcast_and_wait.svg" />
 
-Sends a message and pauses this script until listeners complete.
+Sends a message and pauses this script until all the scripts that received it have finished.
 
-- Trigger: immediate send + wait
-- Typical use: staged flows where order matters
+- Typical use: step-by-step sequences where order matters.
 
 ## Hub events
 
-### `Hub button pressed` (Beginner) {#block_hubs_all_event_button_pressed}
+These blocks appear when a hub in the profile supports them. They don't exist for Mould King hubs.
+
+### `when … … button …` (Beginner) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
-Runs when the main button on the hub is pressed.
+Runs when a button on the hub is pressed or released.
 
 - State options: `pressed`, `released`, `changed`
-- Note: available button options may differ by hub model (different hubs can expose different button sets).
+- Hubs: LEGO Powered Up hubs, WeDo 2.0 and Robot Inventor. The list of buttons depends on the hub.
 
-### `Hub connection changed` (Beginner) {#block_hubs_all_event_connection_changed}
+### `when … is connected / disconnected` (Beginner) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
-Runs when the hub connection state changes (connected or disconnected).
+Runs when the hub connects or disconnects.
 
-- Trigger: hub connection status change
-- Typical use: reconnection handling and safe fallback behavior after link loss
+- Typical use: stop the model safely when the connection is lost, and restore its state when it comes back.
 
-### `Hub battery changed` (Beginner) {#block_hubs_all_event_battery_changed}
+### `when … % battery changed` (Beginner) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
-Runs when reported hub battery level changes.
+Runs when the battery level reported by the hub changes.
 
-- Trigger: battery level update (for hubs that report battery state)
-- Typical use: low-battery warning logic and power-saving mode switching
+- Hubs: those that report their battery level.
+- Typical use: a low-battery warning, switching to a power-saving mode.
 
-### `Hub accelerometer changed` (Guru) {#block_hubs_all_event_accelerometer_changed}
+### `when … accelerometer data changed` (Guru) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
-Runs when acceleration values change.
+Runs when the hub's accelerometer values change.
 
-### `Hub tilt changed` (Beginner) {#block_hubs_all_event_tilt_changed}
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+
+### `when … tilt … angle changed` (Beginner) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
-Runs when tilt value changes.
+Runs when the hub's tilt angle changes.
 
 - Angle options: `any`, `pitch`, `roll`, `yaw`
-- Note: `yaw` is available only on hubs that provide yaw data.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `yaw` is available only on the Technic Hub and Robot Inventor.
 
-### `Hub orientation changed` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
+### `when … orientation changed` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
-Runs when orientation state changes (for example, front/up/down/left/right).
+Runs when the hub's orientation changes, that is, when a different side of the hub faces up.
 
-## Sensor port events
+- Hubs: the same as for the tilt event.
 
-### `Technic color sensor event` (Beginner) {#block_hubs_all_event_port_technic_sensor_color}
+## Sensor events
+
+These events read a sensor connected to a hub port. Hubs: City Hub, Technic Hub, BOOST Move Hub and the MINDSTORMS Robot Inventor hub (not SBrick, BuWizz, WeDo 2.0 or Mould King).
+
+### Technic sensor: `when color is …` (Beginner) {#block_hubs_all_event_port_technic_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_color.svg')} alt="block_hubs_all_event_port_technic_sensor_color.svg" />
 
-Runs when the Technic color sensor reports a selected color.
+Runs when the Technic Color Sensor sees the selected color.
 
-
-### `Technic distance sensor event` (Beginner) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic sensor: `when … closer than / farther than / exactly at …` (Beginner) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
-Runs when Technic distance sensor values match the selected condition.
+Runs when the distance measured by the Technic Distance Sensor meets the condition.
 
-- Compare options: `closer than`, `farther than`, `exactly at`
-- Unit options: `mm`, `cm`, `inch`, `%`
-- Note: available units can depend on sensor mode and connected device.
+- Comparison options: `closer than`, `farther than`, `exactly at`
+- Units: `mm`, `cm`, `inch`, `%`
 
-### `BOOST sensor distance event` (Beginner) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST sensor: `when … closer than / farther than / exactly at …` (Beginner) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
-Runs when the BOOST distance sensor reaches the chosen threshold/condition.
+Runs when the distance measured by the BOOST Color & Distance Sensor meets the condition.
 
-- Compare options: `closer than`, `farther than`, `exactly at`
-- Unit options: `%`, `cm`, `inch`
+- Comparison options: `closer than`, `farther than`, `exactly at`
+- Units: `%`, `cm`, `inch`
 
-### `BOOST sensor color event` (Beginner) {#block_hubs_all_event_port_boost_sensor_color}
+### BOOST sensor: `when color is …` (Beginner) {#block_hubs_all_event_port_boost_sensor_color}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
-Runs when the BOOST sensor detects a selected color/value.
+Runs when the BOOST Color & Distance Sensor sees the selected color.

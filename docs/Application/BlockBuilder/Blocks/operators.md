@@ -7,164 +7,156 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Operators
 
-Operators are Reporter and Boolean blocks used for calculations, comparisons, logic, and string processing.
+Operators are reporter and Boolean blocks for math, comparisons, logic and text.
 
-## Arithmetic operators
+## Math
 
-### `Plus` (Beginner) {#block_operator_plus}
+### `… + …` (Beginner) {#block_operator_plus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_plus.svg')} alt="block_operator_plus.svg" />
 
-Returns the sum of two values.
+Returns the sum of two numbers.
 
-### `Minus` (Beginner) {#block_operator_minus}
+### `… − …` (Beginner) {#block_operator_minus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_minus.svg')} alt="block_operator_minus.svg" />
 
-Returns the subtraction result of two values.
+Subtracts the second number from the first.
 
-### `Multiply` (Beginner) {#block_operator_multiply}
+### `… × …` (Beginner) {#block_operator_multiply}
 
 <img src={useBaseUrl('/img/blocks/block_operator_multiply.svg')} alt="block_operator_multiply.svg" />
 
-Returns the product of two values.
+Returns the product of two numbers.
 
-### `Divide` (Beginner) {#block_operator_divide}
+### `… ÷ …` (Beginner) {#block_operator_divide}
 
 <img src={useBaseUrl('/img/blocks/block_operator_divide.svg')} alt="block_operator_divide.svg" />
 
-Returns the division result of two values.
+Divides the first number by the second.
 
-### `Modulus` (Guru) {#block_operator_modulus}
+### `… mod …` (Guru) {#block_operator_modulus}
 
 <img src={useBaseUrl('/img/blocks/block_operator_modulus.svg')} alt="block_operator_modulus.svg" />
 
-Returns the remainder after division.
+Returns the remainder after dividing the first number by the second.
 
-### `Round` (Guru) {#block_operator_round}
+### `round …` (Guru) {#block_operator_round}
 
 <img src={useBaseUrl('/img/blocks/block_operator_round.svg')} alt="block_operator_round.svg" />
 
-Rounds to nearest integer (for example `2.6 -> 3`).
+Rounds a number to the nearest whole number (for example, `2.6` becomes `3`).
 
-### `Math single` (Guru) {#block_operator_math_single}
+### `… of …` (Guru) {#block_operator_math_single}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_single.svg')} alt="block_operator_math_single.svg" />
 
-Applies a single-argument math function.
+Applies a function to one number. Angles are in degrees.
 
-Available functions:
-
-- `abs`: absolute value of a number
-- `floor`: round down to nearest integer
-- `ceiling`: round up to nearest integer
+- `abs`: absolute value
+- `floor`: round down to a whole number
+- `ceiling`: round up to a whole number
 - `sqrt`: square root
-- `sin`: sine (angle-based)
-- `cos`: cosine (angle-based)
-- `tan`: tangent (angle-based)
-- `asin`: inverse sine
-- `acos`: inverse cosine
-- `atan`: inverse tangent
+- `sin`, `cos`, `tan`: sine, cosine and tangent of an angle
+- `asin`, `acos`, `atan`: the inverse functions; they return an angle
 - `ln`: natural logarithm (base `e`)
-- `log`: logarithm base `10`
-- `e^`: raise `e` to power of input
-- `10^`: raise `10` to power of input
+- `log`: base-10 logarithm
+- `e^`: `e` raised to the power of the number
+- `10^`: `10` raised to the power of the number
 
-### `Math pair` (Guru) {#block_operator_math_pair}
+### `… of … and …` (Guru) {#block_operator_math_pair}
 
 <img src={useBaseUrl('/img/blocks/block_operator_math_pair.svg')} alt="block_operator_math_pair.svg" />
 
-Applies a two-argument math function.
+Applies a function to two numbers.
 
-Available functions:
+- `min`: the smaller of the two
+- `max`: the larger of the two
+- `pow`: the first number raised to the power of the second
+- `atan2`: the angle of the point given by the two numbers
+- `hypot`: the length of the hypotenuse with these two sides
+- `copysign`: the first number with the sign of the second
 
-- `min`: smaller of two values
-- `max`: larger of two values
-- `pow`: first value raised to second value power
-- `atan2`: angle from X/Y pair
-- `hypot`: hypotenuse length from two components
-- `copysign`: first value with sign of second value
-
-### `Pick random` (Guru) {#block_operator_pick_random}
+### `pick random … to …` (Guru) {#block_operator_pick_random}
 
 <img src={useBaseUrl('/img/blocks/block_operator_pick_random.svg')} alt="block_operator_pick_random.svg" />
 
-Returns a random number in the selected range.
+Returns a random number between the two values.
 
-## Comparison operators
+## Comparison
 
-### `Equal` (Beginner) {#block_operator_equal}
+### `… = …` (Beginner) {#block_operator_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_equal.svg')} alt="block_operator_equal.svg" />
 
-Returns `true` when two values are equal.
+Returns `true` when the two values are equal.
 
-### `Not equal` (Advanced) {#block_operator_not_equal}
+### `… ≠ …` (Advanced) {#block_operator_not_equal}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not_equal.svg')} alt="block_operator_not_equal.svg" />
 
-Returns `true` when two values are not equal.
+Returns `true` when the two values are different.
 
-### `Greater than` (Beginner) {#block_operator_greater_than}
+### `… > …` (Beginner) {#block_operator_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_greater_than.svg')} alt="block_operator_greater_than.svg" />
 
-Returns `true` when left value is greater than right value.
+Returns `true` when the left value is greater than the right one.
 
-### `Less than` (Beginner) {#block_operator_less_than}
+### `… < …` (Beginner) {#block_operator_less_than}
 
 <img src={useBaseUrl('/img/blocks/block_operator_less_than.svg')} alt="block_operator_less_than.svg" />
 
-Returns `true` when left value is less than right value.
+Returns `true` when the left value is less than the right one.
 
-### `Is in between` (Advanced) {#block_operator_is_in_between}
+### `is … in between … and …` (Advanced) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 
-Returns `true` when a value is inside specified bounds.
+Returns `true` when the number lies between the two limits.
 
-## Boolean logic operators
+## Logic
 
-### `And` (Advanced) {#block_operator_and}
+### `… and …` (Advanced) {#block_operator_and}
 
 <img src={useBaseUrl('/img/blocks/block_operator_and.svg')} alt="block_operator_and.svg" />
 
-Returns `true` only when both conditions are `true`.
+Returns `true` only when both conditions are true.
 
-### `Or` (Advanced) {#block_operator_or}
+### `… or …` (Advanced) {#block_operator_or}
 
 <img src={useBaseUrl('/img/blocks/block_operator_or.svg')} alt="block_operator_or.svg" />
 
-Returns `true` when at least one condition is `true`.
+Returns `true` when at least one of the conditions is true.
 
-### `Not` (Advanced) {#block_operator_not}
+### `not …` (Advanced) {#block_operator_not}
 
 <img src={useBaseUrl('/img/blocks/block_operator_not.svg')} alt="block_operator_not.svg" />
 
-Inverts a boolean value.
+Turns `true` into `false` and `false` into `true`.
 
-## Text operators
+## Text
 
-### `Join` (Advanced) {#block_operator_join}
+### `join … …` (Advanced) {#block_operator_join}
 
 <img src={useBaseUrl('/img/blocks/block_operator_join.svg')} alt="block_operator_join.svg" />
 
-Concatenates two text values.
+Joins two pieces of text into one.
 
-### `Letter at` (Guru) {#block_operator_letter_at}
+### `letter … of …` (Guru) {#block_operator_letter_at}
 
 <img src={useBaseUrl('/img/blocks/block_operator_letter_at.svg')} alt="block_operator_letter_at.svg" />
 
-Returns character at a selected position in text.
+Returns the letter at the given position in the text. The first letter is number 1.
 
-### `Size of string` (Advanced) {#block_operator_size_of_string}
+### `length of …` (Advanced) {#block_operator_size_of_string}
 
 <img src={useBaseUrl('/img/blocks/block_operator_size_of_string.svg')} alt="block_operator_size_of_string.svg" />
 
-Returns string length.
+Returns the number of characters in the text.
 
-### `String contains` (Guru) {#block_operator_string_contains}
+### `… contains …` (Guru) {#block_operator_string_contains}
 
 <img src={useBaseUrl('/img/blocks/block_operator_string_contains.svg')} alt="block_operator_string_contains.svg" />
 
-Returns `true` if text contains specified substring.
+Returns `true` when the first text contains the second one.

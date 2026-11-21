@@ -21,7 +21,17 @@ const sidebars = {
         'Introducing/QuickStart',
         'Introducing/Layouts',
         'Introducing/SupportedDevices',
+        'Introducing/SystemRequirements',
         'Introducing/WebEditor',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Tutorials',
+      key: 'tutorials',
+      items: [
+        'Tutorials/FirstCarLinks',
+        'Tutorials/FirstCarBlocks',
       ],
     },
     {
@@ -34,6 +44,8 @@ const sidebars = {
         'Application/Profiles/ManageProfiles',
         'Application/Profiles/Catalog',
         'Application/Profiles/PlayMode',
+        'Application/Profiles/AiBuilder',
+        'Application/Profiles/RemoteControl',
       ],
     },
     {
@@ -44,6 +56,7 @@ const sidebars = {
         'Application/Dashboard/DashboardOverview',
         'Application/Dashboard/ArrangingControls',
         'Application/Dashboard/ControlTypes',
+        'Application/Dashboard/SpecialControls',
         'Application/Dashboard/ControlProperties',
         'Application/Dashboard/Indicators',
         'Application/Dashboard/Gamepad',
@@ -73,6 +86,16 @@ const sidebars = {
         'Application/Links/HubsAndPorts',
         'Application/Links/Problems',
         'Application/Links/Examples',
+        {
+          type: 'category',
+          label: 'Blocks reference',
+          key: 'links-blocks-reference',
+          items: [
+            'Application/Links/Blocks/InputBlocks',
+            'Application/Links/Blocks/ProcessingBlocks',
+            'Application/Links/Blocks/OutputBlocks',
+          ],
+        },
       ],
     },
     {
@@ -97,6 +120,8 @@ const sidebars = {
             'Application/BlockBuilder/Blocks/Motors',
             'Application/BlockBuilder/Blocks/Light',
             'Application/BlockBuilder/Blocks/Sensors',
+            'Application/BlockBuilder/Blocks/Sounds',
+            'Application/BlockBuilder/Blocks/Simulator',
             'Application/BlockBuilder/Blocks/DashboardControllers',
             'Application/BlockBuilder/Blocks/Gamepad',
           ],
@@ -131,7 +156,7 @@ const sidebars = {
       type: 'category',
       label: 'Help',
       key: 'help',
-      items: ['Help/Troubleshooting', 'Help/FAQ'],
+      items: ['Help/Troubleshooting', 'Help/BluetoothPermissions', 'Help/FAQ', 'Help/Glossary'],
     },
   ],
 };

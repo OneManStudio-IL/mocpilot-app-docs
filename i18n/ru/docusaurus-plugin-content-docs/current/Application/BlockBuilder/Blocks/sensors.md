@@ -7,239 +7,273 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Датчики
 
-Блоки датчиков считывают состояние хаба/устройства и дают данные для условий, событий и логики управления.
+Блоки датчиков читают состояние телефона или планшета, таймер программы, хабы и подключённые к ним датчики. Их значения используют в условиях, событиях и вычислениях.
 
-## Датчики Устройства И Хаба
+На этой странице:
 
-### `Уровень батареи хаба` (Новичок) {#block_hubs_all_sensors_battery_level}
+- [Состояние хаба](#hub-state): батарея, напряжение, температура, ток и режим питания
+- [Кнопки, наклон и ориентация хаба](#hub-tilt-and-orientation)
+- [Датчики на портах](#sensors-on-ports): любое устройство, датчик цвета Technic, датчик расстояния Technic, датчик цвета и расстояния BOOST, датчики WeDo 2.0
+- [Это устройство](#this-device): телефон, планшет или компьютер, на котором работает MOCPilot
+- [Таймер](#timer)
+
+## Состояние хаба {#hub-state}
+
+У хабов Mould King этих блоков нет: такие хабы не передают никаких данных.
+
+### `… % батареи` (Новичок) {#block_hubs_all_sensors_battery_level}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_level.svg')} alt="block_hubs_all_sensors_battery_level.svg" />
-Возвращает текущий уровень батареи хаба.
+Возвращает заряд батареи хаба в процентах.
 
-### `Напряжение батареи хаба` (Продвинутый) {#block_hubs_all_sensors_battery_voltage}
+### `… напряжение батареи (V)` (Продвинутый) {#block_hubs_all_sensors_battery_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
-Возвращает напряжение батареи выбранного хаба в вольтах.
+Возвращает напряжение батареи хаба в вольтах.
 
-- Тип: числовой блок-репортер
-- Доступно только для хабов, которые сообщают напряжение батареи.
-- Возвращает `NaN`, когда выбранный хаб не подключен.
+- Хабы: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Возвращает `NaN`, если хаб не подключён.
 
-### `Батарея устройства %` (Новичок) {#block_sensors_device_battery_level}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
-Возвращает текущий уровень батареи телефона/планшета, на котором запущен MOCPilot (в процентах).
-
-### `Температура платы` (Продвинутый) {#block_hubs_all_sensors_board_temp}
+### `… температура (C°)` (Продвинутый) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
-Возвращает температуру платы хаба.
+Возвращает температуру электроники хаба в градусах Цельсия.
 
-- Доступно только для `BuWizz 2` и `BuWizz 3`.
+- Хабы: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
-### `Акселерометр хаба` (Гуру) {#block_hubs_all_sensors_accelerometer}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
-Возвращает необработанные данные акселерометра, сообщаемые выбранным хабом.
-
-- Оси: `x`, `y`, `z`
-
-### `Ускорение хаба` (Гуру) {#block_hubs_all_sensors_acceleration}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
-Возвращает данные ускорения, сообщаемые выбранным хабом.
-
-- Оси: `x`, `y`, `z`
-
-### `Кнопка нажата` (Новичок) {#block_hubs_all_sensors_button_pressed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
-Проверяет, соответствует ли выбранная кнопка хаба выбранному состоянию.
-
-- Варианты состояния: `нажата`, `отпущена`
-- Типичный вариант кнопки: `center` (зависит от хаба)
-
-- Примечание: доступные варианты кнопок могут отличаться в зависимости от модели хаба (разные хабы могут предоставлять разные наборы кнопок).
-
-### `Тип устройства` (Новичок) {#block_hubs_all_motors_port_device_type}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
-Возвращает тип подключенного устройства для выбранного порта.
-
-- Тип: репортер-блок
-- Типичное использование: определить, какое устройство подключено, перед запуском логики, зависящей от устройства
-
-### `Акселерометр устройства` (Гуру) {#block_sensors_device_accelerometer_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
-Возвращает сырые значения акселерометра устройства.
-
-- Варианты осей: `x`, `y`, `z`
-
-### `Ускорение устройства` (Гуру) {#block_sensors_device_acceleration_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
-Возвращает данные ускорения с датчиков устройства.
-
-- Варианты осей: `x`, `y`, `z`
-
-## Датчики Ориентации И Наклона
-
-### `Наклон устройства` (Продвинутый) {#block_sensors_device_tilt_sensor_data}
-<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
-Возвращает данные наклона телефона/планшета, на котором запущен MOCPilot.
-
-- Оси: `pitch`, `roll`
-
-### `Наклон` (Новичок) {#block_hubs_all_sensors_tilt}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
-Возвращает угол наклона по выбранной оси.
-
-- Варианты осей: `тангаж`, `крен`, `рыскание`
-- Примечание: `рыскание` доступно только на хабах, которые предоставляют данные рыскания.
-
-### `Получить ориентацию` (Новичок) {#block_hubs_sensors_get_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
-Возвращает текущее состояние ориентации хаба.
-
-- Варианты формата вывода: `текст`, `индекс`
-- Значения ориентации: `Перед`, `Верх`, `Право`, `Зад`, `Низ`, `Лево`
-
-### `Ориентация сверху` (Новичок) {#block_hubs_all_sensors_is_orientation_up}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
-Проверяет, соответствует ли ориентация хаба выбранной ориентации «вверх».
-
-- Варианты ориентации: `Перед`, `Верх`, `Право`, `Зад`, `Низ`, `Лево`
-
-### `Задать ориентацию наклона` (Продвинутый) {#block_hubs_sensors_set_tilt_orientation}
-<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
-Настраивает опорную ориентацию, используемую блоками наклона/ориентации.
-
-- Варианты ориентации: `Перед`, `Верх`, `Право`, `Зад`, `Низ`, `Лево`
-
-## Таймер И Датчики Движения
-
-### `Таймер` (Продвинутый) {#block_sensors_timer_value_float}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
-Возвращает значение таймера в секундах.
-
-### `Сбросить таймер` (Продвинутый) {#block_sensors_timer_reset}
-<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
-Сбрасывает таймер в ноль.
-
-## Блоки Датчиков Портов
-
-### `Technic датчик расстояния` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
-Возвращает значения расстояния с датчика расстояния Technic.
-
-- Варианты единиц: `мм`, `см`, `дюйм`, `процент`
-
-### `Technic когда расстояние` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
-Срабатывает/проверяет условие расстояния для датчика расстояния Technic.
-
-- Варианты сравнения: `ближе чем`, `дальше чем`, `ровно`
-- Варианты единиц: `мм`, `см`, `дюйм`, `процент`
-
-### `Technic установить режим датчика цвета` (Продвинутый) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
-Этот блок устанавливает датчик цвета Technic в выбранный режим.
-
-- Примечание: Изменение режима датчика цвета может неожиданно повлиять на вашу программу. Например, датчик цвета Technic не может считывать цвета или отражённый свет, когда он находится в режиме `"окружающий"`.
-
-### `Technic значение цвета` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
-Возвращает определенное значение цвета с датчика расстояния Technic.
-
-- Варианты вывода: `значение`, `строка`
-
-### `Technic когда цвет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
-Срабатывает/проверяет, когда определенный цвет совпадает с выбранным цветом.
-
-### `Technic отраженный свет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
-Возвращает интенсивность отраженного света.
-
-### `Technic когда отраженный свет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
-Срабатывает/проверяет пороговое условие отраженного света.
-
-- Варианты сравнения: `<`, `=`, `>`
-
-### `Technic внешний свет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
-Возвращает интенсивность внешнего света.
-
-### `Technic когда внешний свет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
-Срабатывает/проверяет пороговое условие внешнего света.
-
-- Варианты сравнения: `<`, `=`, `>`
-
-### `Technic сырой цвет` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Возвращает значение сырого цветового канала датчика Technic.
-
-- Варианты канала: `красный`, `зелёный`, `синий`
-
-### `BOOST датчик расстояния` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
-Возвращает расстояние с датчика расстояния BOOST.
-
-- Варианты единиц: `процент`, `см`, `дюйм`
-
-### `BOOST когда расстояние` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
-Срабатывает/проверяет условие расстояния для датчика расстояния BOOST.
-
-- Варианты сравнения: `ближе чем`, `дальше чем`, `ровно`
-- Варианты единиц: `процент`, `см`, `дюйм`
-
-### `BOOST датчик цвета` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
-Возвращает цвет, определенный датчиком BOOST.
-
-- Варианты вывода: `значение`, `строка`
-
-### `BOOST это цвет` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_is_color}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
-Проверяет, определяет ли датчик BOOST выбранный цвет в текущий момент.
-
-### `BOOST отраженный свет` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Возвращает значение отраженного света с датчика BOOST.
-
-### `BOOST когда отраженный свет` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
-Срабатывает/проверяет пороговое условие отраженного света для датчика BOOST.
-
-- Варианты сравнения: `<`, `=`, `>`
-
-### `Technic Move режим мощности` (Новичок) {#block_hubs_technicmove_sensors_set_power_mode}
-<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
-Устанавливает режим мощности Technic Move.
-
-- Варианты режима: `обычный`, `буст`
-
-### `Выходное напряжение BuWizz` (Гуру) {#block_hubs_buwizz_sensors_get_output_voltage}
+### `получить … выходное напряжение (В)` (Гуру) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
-Возвращает текущее выходное напряжение, сообщаемое хабом BuWizz.
+Возвращает напряжение, которое хаб сейчас подаёт на порты, в вольтах.
 
-- Доступно только для поддерживаемых хабов BuWizz.
+- Хабы: BuWizz 2.
 
-### `Ток порта BuWizz` (Гуру) {#block_hubs_buwizz_sensors_port_get_current}
+### `… ток (A)` (Гуру) {#block_hubs_buwizz_sensors_port_get_current}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_port_get_current.svg')} alt="block_hubs_buwizz_sensors_port_get_current.svg" />
-Возвращает потребляемый ток, сообщаемый для выбранного порта хаба BuWizz.
+Возвращает ток на выбранном порту в амперах.
 
-- Доступно только для поддерживаемых хабов и портов BuWizz.
+- Хабы: BuWizz 2, BuWizz 3.
 
-### `WeDo 2 расстояние` (Новичок) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
+### `установить режим питания …` (Technic Move Hub) (Новичок) {#block_hubs_technicmove_sensors_set_power_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_technicmove_sensors_set_power_mode.svg')} alt="block_hubs_technicmove_sensors_set_power_mode.svg" />
+Задаёт режим питания Technic Move Hub.
+
+- Режимы: `нормальный`, `турбо`
+- Хабы: Technic Move Hub.
+
+## Кнопки, наклон и ориентация хаба {#hub-tilt-and-orientation}
+
+Для блока кнопки указано, с какими хабами он работает. Блоки наклона и ориентации работают с BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub и Robot Inventor.
+
+### `является … кнопка …` (Новичок) {#block_hubs_all_sensors_button_pressed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
+Возвращает `true`, если выбранная кнопка хаба находится в выбранном состоянии.
+
+- Состояния: `нажата`, `отпущен`
+- Хабы: LEGO Powered Up, WeDo 2.0 и Robot Inventor. Набор кнопок зависит от хаба (обычно `center`).
+
+### `… … угол` (Новичок) {#block_hubs_all_sensors_tilt}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
+Возвращает угол наклона хаба.
+
+- Углы: `тангаж`, `крен`, `рысканье`
+- `рысканье` есть только у Technic Hub и Robot Inventor.
+
+### `… … акселерометр (м/с²)` (Гуру) {#block_hubs_all_sensors_accelerometer}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
+Возвращает «сырые» показания акселерометра хаба по одной оси.
+
+- Оси: `x`, `y`, `z`
+
+### `… … ускорение (м/с²)` (Гуру) {#block_hubs_all_sensors_acceleration}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_acceleration.svg')} alt="block_hubs_all_sensors_acceleration.svg" />
+Возвращает ускорение хаба по одной оси.
+
+- Оси: `x`, `y`, `z`
+
+### `получить … ориентация …` (Новичок) {#block_hubs_sensors_get_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
+Возвращает, какой стороной хаб обращён вверх.
+
+- Результат: `текст` или `индекс`
+- Значения: `Front`, `Top`, `Right`, `Back`, `Bottom`, `Left`
+
+### `… ориентация …` (Новичок) {#block_hubs_all_sensors_is_orientation_up}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_is_orientation_up.svg')} alt="block_hubs_all_sensors_is_orientation_up.svg" />
+Возвращает `true`, если вверх обращена выбранная сторона хаба.
+
+- Варианты: `Front`, `Top`, `Right`, `Back`, `Bottom`, `Left`
+
+### `установить … ориентация наклона в …` (Продвинутый) {#block_hubs_sensors_set_tilt_orientation}
+<img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
+Сообщает хабу, как он установлен в модели, чтобы наклон и ориентация отсчитывались от этого положения.
+
+- Варианты: `Front`, `Top`, `Right`, `Back`, `Bottom`, `Left`
+
+## Датчики на портах {#sensors-on-ports}
+
+Блоки датчиков Technic и BOOST ниже работают с City Hub, Technic Hub, BOOST Move Hub и хабом MINDSTORMS Robot Inventor (не с SBrick, BuWizz, WeDo 2.0 и Mould King).
+
+### Любое устройство на порту {#any-port-device}
+
+#### `… тип устройства` (Новичок) {#block_hubs_all_motors_port_device_type}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
+Возвращает тип устройства, подключённого к выбранному порту.
+
+- Хабы: все хабы с портами, кроме SBrick, SBrick Plus и BuWizz 2.
+- Для чего: проверить, что подключено, прежде чем запускать блоки для конкретного устройства.
+
+### Датчик цвета Technic {#technic-color-sensor}
+
+#### Датчик Technic: `установить режим на …` (Продвинутый) {#block_hubs_all_sensors_port_technic_sensor_set_mode}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_set_mode.svg')} alt="block_hubs_all_sensors_port_technic_sensor_set_mode.svg" />
+Переключает датчик цвета Technic в выбранный режим.
+
+- Режимы: `по умолчанию`, `окружающий`
+- Смена режима может неожиданно повлиять на программу: в режиме `окружающий` датчик не различает цвета и не измеряет отражённый свет.
+
+#### Датчик Technic: `цвет …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_color.svg" />
+Возвращает цвет, который видит датчик цвета Technic.
+
+- Результат: `значение` (число) или `строка` (название цвета)
+
+#### Датчик Technic: `является цветом …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_color_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_color_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_color_is.svg" />
+Возвращает `true`, если датчик цвета Technic видит выбранный цвет.
+
+#### Датчик Technic: `отражённый свет (%)` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_reflected_light.svg" />
+Возвращает, сколько света поверхность отражает обратно в датчик цвета Technic, в процентах.
+
+#### Датчик Technic: `отражённый свет …` (сравнение) (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_reflected_light_is.svg" />
+Возвращает `true`, если отражённый свет соотносится с заданным значением так, как выбрано.
+
+- Сравнение: `<`, `=`, `>`
+
+#### Датчик Technic: `окружающий свет (%)` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_ambient_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_ambient_light.svg')} alt="block_hubs_all_sensors_port_technic_sensor_ambient_light.svg" />
+Возвращает яркость окружающего света в процентах.
+
+#### Датчик Technic: `окружающий свет …` (сравнение) (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_ambient_light_is.svg" />
+Возвращает `true`, если окружающий свет соотносится с заданным значением так, как выбрано.
+
+- Сравнение: `<`, `=`, `>`
+
+#### Датчик Technic: `сырое значение …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
+Возвращает «сырое» значение одного цветового канала датчика цвета Technic.
+
+- Каналы: `красный`, `зеленый`, `синий`
+
+### Датчик расстояния Technic {#technic-distance-sensor}
+
+#### Датчик Technic: `расстояние …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_distance.svg')} alt="block_hubs_all_sensors_port_technic_sensor_distance.svg" />
+Возвращает расстояние, измеренное датчиком расстояния Technic.
+
+- Единицы: `мм`, `см`, `дюймы`, `%`
+
+#### Датчик Technic: `является ближе чем / дальше чем / точно в …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
+Возвращает `true`, если расстояние, измеренное датчиком расстояния Technic, отвечает условию.
+
+- Сравнение: `ближе чем`, `дальше чем`, `точно в`
+- Единицы: `мм`, `см`, `дюймы`, `%`
+
+### Датчик цвета и расстояния BOOST {#boost-color-and-distance-sensor}
+
+#### Датчик BOOST: `цвет …` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_color.svg" />
+Возвращает цвет, который видит датчик цвета и расстояния BOOST.
+
+- Результат: `значение` (число) или `строка` (название цвета)
+
+#### Датчик BOOST: `является цветом …` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_is_color}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_is_color.svg')} alt="block_hubs_all_sensors_port_boost_sensor_is_color.svg" />
+Возвращает `true`, если датчик BOOST видит выбранный цвет.
+
+#### Датчик BOOST: `расстояние …` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_distance.svg" />
+Возвращает расстояние, измеренное датчиком цвета и расстояния BOOST.
+
+- Единицы: `%`, `см`, `дюймы`
+
+#### Датчик BOOST: `является ближе чем / дальше чем / точно в …` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
+Возвращает `true`, если расстояние, измеренное датчиком BOOST, отвечает условию.
+
+- Сравнение: `ближе чем`, `дальше чем`, `точно в`
+- Единицы: `%`, `см`, `дюймы`
+
+#### Датчик BOOST: `отражённый свет (%)` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
+Возвращает, сколько света поверхность отражает обратно в датчик BOOST, в процентах.
+
+#### Датчик BOOST: `отражённый свет …` (сравнение) (Новичок) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />
+Возвращает `true`, если отражённый свет соотносится с заданным значением так, как выбрано.
+
+- Сравнение: `<`, `=`, `>`
+
+### Датчики WeDo 2.0 {#wedo-2-sensors}
+
+Датчик движения и датчик наклона WeDo 2.0 на хабе WeDo 2.0.
+
+#### Датчик WeDo 2.0: `расстояние …` (Новичок) {#block_hubs_all_sensors_port_wedo2_sensor_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_distance.svg" />
-Возвращает расстояние с датчика расстояния WeDo 2.
+Возвращает расстояние, измеренное датчиком движения WeDo 2.0.
 
-- Варианты единиц: `процент`, `см`, `дюйм`
+- Единицы: `%`, `см`, `дюймы`
+- Хабы: WeDo 2.0.
 
-### `WeDo 2 когда расстояние` (Новичок) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+#### Датчик WeDo 2.0: `является ближе чем / дальше чем / точно в …` (Новичок) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
-Запускает/проверяет условие расстояния для датчика расстояния WeDo 2.
+Возвращает `true`, если расстояние, измеренное датчиком движения WeDo 2.0, отвечает условию.
 
-- Варианты сравнения: `closer than`, `farther than`, `exactly at`
-- Единицы: `%`, `cm`, `inch`
+- Сравнение: `ближе чем`, `дальше чем`, `точно в`
+- Единицы: `%`, `см`, `дюймы`
+- Хабы: WeDo 2.0.
 
-### `WeDo 2 наклон` (Новичок) {#block_hubs_all_sensors_port_wedo2_tilt}
+#### Датчик WeDo 2.0: `угол …` / `направление как …` (Новичок) {#block_hubs_all_sensors_port_wedo2_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
-Возвращает значение наклона с датчика наклона WeDo 2.
+Возвращает данные датчика наклона WeDo 2.0: угол наклона или направление, в котором он наклонён.
 
-- Варианты осей: `тангаж`, `крен`
+- Углы: `тангаж`, `крен`
+- Направление: результат `текст` или `число`; значения `нейтральный`, `вперёд`, `назад`, `влево`, `вправо`, `неизвестно`
+- Хабы: WeDo 2.0.
+
+## Это устройство {#this-device}
+
+Эти блоки читают телефон, планшет или компьютер, на котором работает MOCPilot.
+
+### `устройство % батареи` (Новичок) {#block_sensors_device_battery_level}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_battery_level.svg')} alt="block_sensors_device_battery_level.svg" />
+Возвращает заряд батареи устройства в процентах.
+
+### `устройство … угол` (Продвинутый) {#block_sensors_device_tilt_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
+Возвращает угол наклона устройства.
+
+- Углы: `тангаж`, `крен`, `рысканье`
+- Для чего: рулить моделью, наклоняя телефон.
+
+### `устройство … акселерометр (м/с²)` (Гуру) {#block_sensors_device_accelerometer_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_accelerometer_sensor_data.svg')} alt="block_sensors_device_accelerometer_sensor_data.svg" />
+Возвращает «сырые» показания акселерометра устройства по одной оси, в м/с².
+
+- Оси: `x`, `y`, `z`
+
+### `устройство … ускорение (м/с²)` (Гуру) {#block_sensors_device_acceleration_sensor_data}
+<img src={useBaseUrl('/img/blocks/block_sensors_device_acceleration_sensor_data.svg')} alt="block_sensors_device_acceleration_sensor_data.svg" />
+Возвращает ускорение устройства по одной оси, в м/с².
+
+- Оси: `x`, `y`, `z`
+
+## Таймер {#timer}
+
+### `таймер` (Продвинутый) {#block_sensors_timer_value_float}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_value_float.svg')} alt="block_sensors_timer_value_float.svg" />
+Возвращает время в секундах с запуска программы или с последнего **сбросить таймер**.
+
+### `сбросить таймер` (Продвинутый) {#block_sensors_timer_reset}
+<img src={useBaseUrl('/img/blocks/block_sensors_timer_reset.svg')} alt="block_sensors_timer_reset.svg" />
+Обнуляет таймер.

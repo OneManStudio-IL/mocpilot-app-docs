@@ -7,157 +7,168 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Motors
 
-Motor blocks are used to start, stop, position, and tune motors connected to hub ports.
+Motor blocks start, stop and position motors connected to hub ports, and tune how they move. The category appears when a hub in the profile has motor ports. In every block you pick the hub and one or more ports.
 
-## Core motor command blocks
+Some blocks need a motor with a built-in rotation sensor (encoder), such as the Technic angular motors, and a hub that can control it. These blocks are marked "encoder motors". They aren't available for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 and Mould King hubs. The Technic Move Hub has its own set of blocks at the end of this page.
 
-### `Start motor` (Beginner) {#block_hubs_all_motors_port_start_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
-Starts selected motor.
+## Running motors
 
-- Direction options: clockwise / counterclockwise
-
-### `Stop motor` (Beginner) {#block_hubs_all_motors_port_stop_motor}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
-Stops selected motor.
-
-### `Run for` (Advanced) {#block_hubs_all_motors_port_run_for}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
-Runs selected motor for specified time/angle/rotation based on block settings.
-
-- Direction options: clockwise / counterclockwise
-- Unit options: `rotations`, `degrees`, `seconds`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
-
-### `Start motor at speed` (Beginner) {#block_hubs_all_motors_port_start_motor_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
-Starts motor with explicit speed value.
-
-### `Run for at speed` (Advanced) {#block_hubs_all_motors_port_run_for_at_speed}
-<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
-Runs motor for a target duration/amount with explicit speed.
-
-- Unit options: `rotations`, `degrees`, `seconds`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
-
-### `Set motor speed` (Advanced) {#block_hubs_all_motors_port_set_motor_speed}
+### `set speed to …` (Advanced) {#block_hubs_all_motors_port_set_motor_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_speed.svg')} alt="block_hubs_all_motors_port_set_motor_speed.svg" />
-Sets speed used by related motor run blocks.
+Sets the speed (from −100 to 100 %) that **start motor** and **run … for** use on these ports. This block doesn't start the motor by itself.
 
-## Position and movement blocks
+### `start motor …` (Beginner) {#block_hubs_all_motors_port_start_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor.svg')} alt="block_hubs_all_motors_port_start_motor.svg" />
+Starts the motor in the selected direction at the speed set by **set speed to**.
 
-### `Go to position` (Advanced) {#block_hubs_all_motors_port_go_to_position}
+- Direction: clockwise or counterclockwise
+
+### `start motor at … % speed` (Beginner) {#block_hubs_all_motors_port_start_motor_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_start_motor_at_speed.svg')} alt="block_hubs_all_motors_port_start_motor_at_speed.svg" />
+Starts the motor at the given speed, from −100 to 100 %. A negative speed turns it the other way.
+
+- Typical use: drive from a joystick or a slider: put the control's value into the speed slot.
+
+### `stop motor` (Beginner) {#block_hubs_all_motors_port_stop_motor}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_stop_motor.svg')} alt="block_hubs_all_motors_port_stop_motor.svg" />
+Stops the motor.
+
+### `run … for …` (Advanced) {#block_hubs_all_motors_port_run_for}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for.svg')} alt="block_hubs_all_motors_port_run_for.svg" />
+Runs the motor in the selected direction for a number of rotations, degrees or seconds.
+
+- Direction: clockwise or counterclockwise
+- Units: `rotations`, `degrees`, `seconds`
+- Encoder motors only.
+
+### `run for … at … % speed` (Advanced) {#block_hubs_all_motors_port_run_for_at_speed}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_run_for_at_speed.svg')} alt="block_hubs_all_motors_port_run_for_at_speed.svg" />
+Runs the motor for a number of rotations, degrees or seconds at the given speed.
+
+- Units: `rotations`, `degrees`, `seconds`
+- Encoder motors only.
+
+## Position
+
+### `go … to position …` (Advanced) {#block_hubs_all_motors_port_go_to_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_position.svg')} alt="block_hubs_all_motors_port_go_to_position.svg" />
-Moves motor to target absolute position.
+Turns the motor to an absolute position (the motor's own zero mark).
 
-- Path options: `shortest path`, `clockwise`, `counterclockwise`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Path: `shortest path`, `clockwise`, `counterclockwise`
+- Encoder motors only.
 
-### `Go to relative position` (Beginner) {#block_hubs_all_motors_port_go_to_relative_position}
+### `go to relative position … at … % speed` (Beginner) {#block_hubs_all_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_go_to_relative_position.svg')} alt="block_hubs_all_motors_port_go_to_relative_position.svg" />
-Moves motor by a relative offset.
+Turns the motor to a position, in degrees, counted from the point set by **set relative position to**.
 
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Typical use: steering with a servo, where the joystick value gives the angle.
+- Encoder motors only; on BuWizz 3 use the block below.
 
-### `BuWizz 3 go to relative position` (Beginner) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
+### `go to relative position …` (BuWizz 3) (Beginner) {#block_hubs_buwizz3_motors_port_go_to_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz3_motors_port_go_to_relative_position.svg')} alt="block_hubs_buwizz3_motors_port_go_to_relative_position.svg" />
-BuWizz 3 variant of relative positioning block.
+The BuWizz 3 version of the block above, without the speed input.
 
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Hubs: BuWizz 3, with encoder motors.
 
-### `Set relative position` (Beginner) {#block_hubs_all_motors_port_set_relative_position}
+### `set relative position to …` (Beginner) {#block_hubs_all_motors_port_set_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_relative_position.svg')} alt="block_hubs_all_motors_port_set_relative_position.svg" />
-Sets motor relative-position reference.
+Declares the motor's current position to be the given value. Relative positions are counted from it.
 
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Encoder motors only.
 
-### `Calibrate steering rack` (Beginner) {#block_hubs_all_motors_port_calibrate_steering_rack}
+### `calibrate rack … center … degrees …` (Beginner) {#block_hubs_all_motors_port_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
-Calibrates steering rack neutral/reference position.
+Finds the center and the travel of a steering rack.
 
-- Requirement: the motor connected to the selected port must support absolute/relative angle tracking (internal encoder).
-- Mechanical requirement: steering axis movement must be physically limited to a valid range (for example with steering rack/gearing end limits).
-- How it works: the block sweeps and measures the available steering rotation range, then computes calibration data used for steering configuration.
-- Output behavior: block arguments write results into variables passed to the block (function-like pass-by-reference behavior). Those variables are mutated by the block and should be used to read calibration results.
+- The motor turns the rack to both ends, measures how far it can go and puts the result into the two variables you place in the slots: the center position and the range in degrees. The rack stops in the middle, but its relative position there equals the center value, not 0, so add **set relative position to** 0 right after this block; then steer with `range × joystick / 100`.
+- The steering must have hard mechanical stops at both ends (the end of the rack or the gearing).
+- Encoder motors only.
 
-## Motor tuning and safety blocks
+## Motor settings
 
-### `Set motor behavior at stop` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `set motor to … at stop` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
-Sets motor stop mode (for example brake/hold/float based on available options).
+Chooses what the motor does when it stops.
 
-- Stop mode options: `brake`, `hold position`, `coast`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- `brake`: stops quickly.
+- `hold position`: actively holds its position (useful for steering).
+- `coast`: spins down freely.
+- Encoder motors only.
 
-### `Set stall detection` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
+### `turn stall detection …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Enables or disables stall detection.
+Turns stall detection on or off.
 
-- Note: available only for the MINDSTORMS Robot Inventor hub.
+- Hubs: MINDSTORMS Robot Inventor.
 
-### `Set acceleration` (Guru) {#block_hubs_all_motors_port_set_acceleration}
+### `set acceleration to …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
-Sets motor acceleration profile/rate.
+Chooses how quickly the motor speeds up.
 
-- Profile options: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Options: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
+- Encoder motors only.
 
-### `Set deceleration` (Guru) {#block_hubs_all_motors_port_set_deceleration}
+### `set deceleration to …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
-Sets motor deceleration profile/rate.
+Chooses how quickly the motor slows down.
 
-- Profile options: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
-- Note: this feature requires a motor on the selected port that supports encoder-based control.
+- Options: `default`, `fast`, `balanced`, `smooth`, `slow`, `very slow`
+- Encoder motors only.
 
-## Motor reporter blocks
+## Motor values
 
-### `Position` (Beginner) {#block_hubs_all_motors_port_position}
+### `position` (Beginner) {#block_hubs_all_motors_port_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_position.svg')} alt="block_hubs_all_motors_port_position.svg" />
-Returns current motor position.
+Returns the motor's absolute position.
 
-### `Relative position` (Beginner) {#block_hubs_all_motors_port_relative_position}
+- Encoder motors only.
+
+### `relative position` (Beginner) {#block_hubs_all_motors_port_relative_position}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_relative_position.svg')} alt="block_hubs_all_motors_port_relative_position.svg" />
-Returns current relative position value.
+Returns the motor's relative position, in degrees.
 
-### `Speed` (Beginner) {#block_hubs_all_motors_port_speed}
+- Encoder motors only.
+
+### `speed` (Beginner) {#block_hubs_all_motors_port_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_speed.svg')} alt="block_hubs_all_motors_port_speed.svg" />
-Returns current motor speed.
+Returns the motor's current speed.
 
-### `Power` (Advanced) {#block_hubs_all_motors_port_power}
+### `power` (Advanced) {#block_hubs_all_motors_port_power}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
-Returns current motor power value.
+Returns the motor's current power.
 
-- Note: available only for the MINDSTORMS Robot Inventor hub.
+- Hubs: MINDSTORMS Robot Inventor.
 
-## Technic Move motor blocks
+## Technic Move Hub
 
-### `Start motors at speed` (Beginner) {#block_hubs_technicmove_motors_start_motors_at_speed}
+The Technic Move Hub drives its built-in motors with these blocks instead of the port blocks above.
+
+### `start motors at … % speed` (Beginner) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />
-Starts Technic Move drive motors at selected speed.
+Starts the drive motors at the given speed.
 
-### `Power pulse` (Beginner) {#block_hubs_technicmove_motors_power_pulse}
+### `power pulse` (Beginner) {#block_hubs_technicmove_motors_power_pulse}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_power_pulse.svg')} alt="block_hubs_technicmove_motors_power_pulse.svg" />
-Sends a power pulse command to the selected Technic Move Hub.
+Sends a power pulse to the drive motors.
 
-- Available only for Technic Move Hub.
-- Typical use: briefly boost or wake the Technic Move drive system before continuing with the next blocks.
+- Typical use: a short boost before the next blocks.
 
-### `Stop motors` (Beginner) {#block_hubs_technicmove_motors_stop_motors}
+### `stop motors` (Beginner) {#block_hubs_technicmove_motors_stop_motors}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_stop_motors.svg')} alt="block_hubs_technicmove_motors_stop_motors.svg" />
-Stops Technic Move drive motors.
+Stops the drive motors.
 
-### `Brake` (Beginner) {#block_hubs_technicmove_motors_brake}
+### `set motors brake …` (Beginner) {#block_hubs_technicmove_motors_brake}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_brake.svg')} alt="block_hubs_technicmove_motors_brake.svg" />
-Applies brake behavior to Technic Move motors.
+Turns the drive motors' brake on or off.
 
-- Brake options: `off`, `on`
+- Options: `off`, `on`
 
-### `Set steering rack to` (Beginner) {#block_hubs_technicmove_motors_set_steering_rack_to}
+### `set steering rack to …` (Beginner) {#block_hubs_technicmove_motors_set_steering_rack_to}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_set_steering_rack_to.svg')} alt="block_hubs_technicmove_motors_set_steering_rack_to.svg" />
-Sets steering rack target position/value.
+Turns the steering to the given position.
 
-### `Calibrate steering rack` (Beginner) {#block_hubs_technicmove_motors_calibrate_steering_rack}
+### `calibrate steering rack` (Beginner) {#block_hubs_technicmove_motors_calibrate_steering_rack}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_calibrate_steering_rack.svg')} alt="block_hubs_technicmove_motors_calibrate_steering_rack.svg" />
-Calibrates the Technic Move steering rack using the hub's internal calibration algorithm and automatic steering range detection.
+Calibrates the steering with the hub's own algorithm, which finds the steering range automatically.
 
-- Note: the motor axis must be mechanically limited (for example, by a steering rack mechanism).
+- The steering must have hard mechanical stops (for example, the ends of the steering rack).

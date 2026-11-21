@@ -7,6 +7,10 @@
     "message": "Начало работы",
     "description": "The label for category 'Getting started' in sidebar 'tutorialSidebar'"
   },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "Пошаговые руководства",
+    "description": "The label for category 'Tutorials' in sidebar 'tutorialSidebar'"
+  },
   "sidebar.tutorialSidebar.category.profiles": {
     "message": "Профили",
     "description": "The label for category 'Profiles' in sidebar 'tutorialSidebar'"
@@ -22,6 +26,10 @@
   "sidebar.tutorialSidebar.category.quick-links": {
     "message": "Быстрые связи",
     "description": "The label for category 'Quick Links' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.links-blocks-reference": {
+    "message": "Справочник блоков",
+    "description": "The label for category 'Blocks reference' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.logic-blocks": {
     "message": "Логические блоки",

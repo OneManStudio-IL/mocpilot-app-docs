@@ -15,38 +15,37 @@ A **profile** is everything MOCPilot knows about one model: its hubs, its dashbo
 ## Where profiles come from
 
 - **Your own profiles**, created with **New Profile**. See [Create a profile](/docs/Application/Profiles/CreateProfile).
-- **Profiles from the catalog**: official profiles for LEGO® sets made by the MOCPilot team and community profiles from other builders. Installing one adds your own copy to the list. See [Catalog and publishing](/docs/Application/Profiles/Catalog).
+- **Profiles from the catalog**: official profiles for LEGO® sets made by the MOCPilot team, and community profiles from other builders. Installing one adds your own copy to the list. See [Catalog and publishing](/docs/Application/Profiles/Catalog).
 - **Imported profiles**: `.dat` files someone shared with you. See [Manage profiles](/docs/Application/Profiles/ManageProfiles#import-a-profile).
 
-All of them live in the same list.
+They all live in the same list.
 
 ## The profile list
 
-The page is called **Profiles** on a phone and **My profiles** on a tablet or computer.
+The page is called **My profiles**.
 
 - **Search** finds profiles by name, hashtag, author, hub, set number or year.
 - **Sort and filter** sorts by **Newest sets**, **Oldest sets**, **Name (A–Z)**, **Name (Z–A)**, **Author (A–Z)**, **Author (Z–A)** or **Hubs used**. **Only my profiles** hides profiles installed from the catalog.
-- **Filter by hashtags** shows only profiles with the chosen hashtags.
-- **Grid** / **Column** switches the card view (tablet and computer).
-- **Favorite** profiles are always shown first.
+- **Filter by hashtags** (tablet and computer) shows only profiles with the hashtags you choose.
+- **Favorite** profiles always come first.
 
-A card shows the profile picture and name and, when known, the set number, release year and parts count. **Update available** means a new version of a catalog profile can be installed.
+A card shows the profile's picture and name and, when known, the set number, release year and parts count. **Update available** means you can install a new version of a catalog profile.
 
 ## Profile actions
 
-| Action | Phone and tablet | Computer |
-|---|---|---|
-| Open (launch) | tap the card | double-click the card, or **Launch** |
-| Edit name, picture, hashtags, description | **Edit** on the card | **Edit…** |
-| Add to favorites | in **Edit profile** | **Add to Favorites** |
-| Share as a file | **Share** | **Share…** |
-| Update from the catalog | **Update** | **Update** |
-| Publish to the catalog | in **Edit profile** | in **Edit profile** or **Publish Profile** |
-| Delete | **Slide to delete the profile** in **Edit profile** | **Delete Profile** in **Edit profile** |
+| Action | Phone | Tablet | Computer |
+|---|---|---|---|
+| Open (launch) | **Launch** on the card | double-tap the card, or select it and tap **Launch** | double-click the card, or **Launch** |
+| Edit name, picture, hashtags, description | **Edit** on the card | **Edit** | **Edit…** |
+| Add to favorites | in **Edit Profile** | **Add to Favorites** | **Add to Favorites** |
+| Share as a file | **Share** on the card | **Share** | **Share…** |
+| Update from the catalog | **Update** | **Update** | **Update** |
+| Send to the catalog | in **Edit Profile** | in **Edit Profile** | in **Edit Profile** |
+| Delete | **Slide to delete the profile** in **Edit Profile** | the same, or **Delete Profile** in the card's menu | **Delete Profile** in **Edit Profile** or in the card's menu |
 
 ## Two kinds of programs
 
-Each profile uses one of two program editors, chosen when it is created:
+Each profile uses one of two program editors, chosen when you create it:
 
 - **Quick Links**: rows that connect controls to motors and lights, no code. See [Quick Links](/docs/Application/Links/LinksIntroducing).
 - **Logic Blocks**: a block program with events, loops, conditions and variables. See [Logic Blocks](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing).

@@ -16,7 +16,7 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Навигация по странице списка блогов",
+    "message": "Навигация по страницам блога",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -28,15 +28,15 @@
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Навигация по странице поста блога",
+    "message": "Навигация по записям блога",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Следующий пост",
+    "message": "Следующая запись",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Предыдущий пост",
+    "message": "Предыдущая запись",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
@@ -44,7 +44,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Переключение между темным и светлым режимом (сейчас используется {mode})",
+    "message": "Переключение между тёмным и светлым режимом (сейчас: {mode})",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
@@ -91,7 +91,7 @@
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Это документация {siteTitle} для версии {versionLabel}, которая уже не поддерживается.",
+    "message": "Это документация {siteTitle} для версии {versionLabel}, которая больше не поддерживается.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
@@ -159,11 +159,11 @@
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "warning",
+    "message": "внимание",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Навигация по последним постам в блоге",
+    "message": "Навигация по последним записям блога",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.CodeBlock.copied": {
@@ -183,15 +183,15 @@
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
+    "message": "Развернуть раздел «{label}»",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "Свернуть раздел «{label}»",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
+    "message": "Главное меню",
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
@@ -199,7 +199,7 @@
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Пожалуйста, обратитесь к владельцу сайта, с которого вы перешли на эту ссылку, чтобы сообщить ему, что ссылка не работает.",
+    "message": "Если вы перешли сюда по ссылке с другого сайта, сообщите его владельцу, что ссылка не работает.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -223,19 +223,19 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Свернуть сайдбар",
+    "message": "Свернуть боковую панель",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Свернуть сайдбар",
+    "message": "Свернуть боковую панель",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Боковая панель документации",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Главная страница",
+    "message": "Главная",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -243,11 +243,11 @@
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Развернуть сайдбар",
+    "message": "Развернуть боковую панель",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Развернуть сайдбар",
+    "message": "Развернуть боковую панель",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -319,7 +319,7 @@
     "description": "Message when the page is not found"
   },
   "notfound.message2": {
-    "message": "Вы пытались перейти по адресу",
+    "message": "Вы пытались открыть адрес",
     "description": "Message that informs the user of the attempted access"
   },
   "notfound.goBack": {
@@ -340,26 +340,26 @@
     "message": "Скачать MOCPilot"
   },
   "You can download the app from the official stores:": {
-    "message": "Вы можете скачать приложение из официальных магазинов:"
+    "message": "Приложение можно скачать в официальных магазинах:"
   },
   "supportedDevices.largeHub.notAvailableIOS": {
-    "message": "Недоступно на iOS",
+    "message": "Недоступен на iPhone и iPad",
     "description": "Shown in supported hubs table for Large Hub"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "системный режим",
     "description": "The name for the system color mode"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(откроется в новой вкладке)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "Развернуть список",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "Свернуть список",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.SearchBar.seeAll": {
@@ -410,35 +410,35 @@
     "description": "The label and ARIA label for search box cancel button"
   },
   "theme.SearchModal.searchBox.placeholderText": {
-    "message": "Search docs",
+    "message": "Поиск по документации",
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "Задайте другой вопрос…",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "Отвечаем…",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "search",
+    "message": "найти",
     "description": "The hint for the search box enter key text"
   },
   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
-    "message": "enter",
+    "message": "ввод",
     "description": "The hint for the Ask AI search box enter key text"
   },
   "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "Search",
+    "message": "Поиск",
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Назад к поиску по словам",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Назад к поиску по словам",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentSearchesTitle": {
@@ -454,7 +454,7 @@
     "description": "The title for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
-    "message": "Удалить запись из историю",
+    "message": "Удалить запрос из истории",
     "description": "The title for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
@@ -462,15 +462,15 @@
     "description": "The title for favorite searches"
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
-    "message": "Удалить запись из избранное",
+    "message": "Удалить запрос из избранного",
     "description": "The title for remove favorite search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Недавние разговоры",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "Удалить разговор из истории",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.errorScreen.titleText": {
@@ -482,55 +482,55 @@
     "description": "The help text for error screen"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "Спросить ИИ: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "Ответы генерирует ИИ, и он может ошибаться. Проверяйте ответы.",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Связанные источники",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "Думаем…",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "Copy",
+    "message": "Копировать",
     "description": "The text for copy button"
   },
   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "Copied!",
+    "message": "Скопировано!",
     "description": "The text for copy button when copied"
   },
   "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "Copy",
+    "message": "Копировать",
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Нравится",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "Не нравится",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "Спасибо за отзыв!",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "Ищем…",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "Ищем: ",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "Найдено по запросу",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.selectText": {
@@ -538,7 +538,7 @@
     "description": "The select text for footer"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Отправить вопрос",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
@@ -550,11 +550,11 @@
     "description": "The navigate text for footer"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
-    "message": "Клавиша стрелка вверх",
+    "message": "Клавиша «стрелка вверх»",
     "description": "The ARIA label for navigate up key in footer"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
-    "message": "Клавиша стрелка вниз",
+    "message": "Клавиша «стрелка вниз»",
     "description": "The ARIA label for navigate down key in footer"
   },
   "theme.SearchModal.footer.closeText": {
@@ -570,7 +570,7 @@
     "description": "The 'Powered by' text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "Назад к поиску",
     "description": "The back to search text for footer"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
@@ -632,7 +632,7 @@
     "description": "How it works diagram"
   },
   "howItWorks.play": {
-    "message": "▶ Запуск выполняет программу",
+    "message": "▶ «Запустить» выполняет программу",
     "description": "How it works diagram"
   },
   "howItWorks.bluetooth": {

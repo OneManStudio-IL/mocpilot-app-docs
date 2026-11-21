@@ -30,10 +30,10 @@ A **hub** is the Bluetooth brick of your model: motors, lights and sensors plug 
 | LEGO® Remote Control (88010) | its buttons are inputs |
 | LEGO® WeDo 2.0 Smart Hub | 2 ports |
 | LEGO® Large Hub / Robot Inventor (88016) | 6 ports, light matrix; not on iPhone and iPad |
-| BuWizz 2.0 | power modes |
-| BuWizz 3.0 Pro | port colour LEDs |
-| SBrick, SBrick Plus | speed control, no positions |
-| Mould King 4.0, 6.0 | commands only, control channels |
+| BuWizz 2.0 | 4 ports, power modes |
+| BuWizz 3.0 Pro | 6 ports, port colour LEDs |
+| SBrick, SBrick Plus | 4 ports, speed control, no position control |
+| Mould King 4.0, 6.0 | 4 or 6 ports, commands only, control channels |
 
 Full list with motors and sensors: [Supported devices](/docs/Introducing/SupportedDevices).
 
@@ -46,11 +46,11 @@ Each profile has **5 hub slots**:
 
 Purchased slots belong to your account and work in all your profiles.
 
-Limits for Mould King: only one Mould King type per profile, up to 3 Mould King 4.0 or 1 Mould King 6.0 (they share the phone's Bluetooth advertising transmitter).
+Mould King limits: one Mould King type per profile, with up to 3 Mould King 4.0 or 1 Mould King 6.0 (they share the phone's Bluetooth advertising transmitter).
 
 ## Hubs in the program
 
-- In **Quick Links**, every hub of the profile appears in the palette as a **Hub** output (and a **Hub** input for its buttons and sensors). Operations a hub cannot do are not shown for it. See [Hub block and ports](/docs/Application/Links/HubsAndPorts).
+- In **Quick Links**, every hub of the profile appears in the palette as a **Hub** output, and as a **Hub** input for its buttons and sensors. Operations that no hub of the profile can do are not offered. See [Hub block and ports](/docs/Application/Links/HubsAndPorts).
 - In **Logic Blocks**, motor, light and sensor blocks take the hub slot and port. See [Motors](/docs/Application/BlockBuilder/Blocks/Motors).
 
 ## Read more
