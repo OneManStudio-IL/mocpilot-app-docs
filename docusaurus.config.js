@@ -3,7 +3,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 
 const isDeploy = process.env.GITHUB_ACTIONS === 'true';
-const sProjectName = "mocpilot-app";
+const sProjectName = "mocpilot-app-docs";
 
 // Automatically switch baseUrl depend on running environment
 const sBaseUrl = isDeploy ? `/${sProjectName}/` : '/';
