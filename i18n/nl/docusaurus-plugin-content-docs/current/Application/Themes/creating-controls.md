@@ -12,7 +12,7 @@ Elk bedieningselement dat je toevoegt, begint bij een thema. Je kunt het configu
 
 ## Configureren vóór het toevoegen {#configure-before-adding}
 
-1. Open **Controller toevoegen** (**+** op het dashboard).
+1. Open **Controller toevoegen** (**+** op het dashboard, **+ Controller** op een computer).
 2. Kies een soort bedieningselement en een stijl in de strook met stijlen.
 3. Gebruik bij **Configureren** de tabbladen **Stijl** en **Instellingen**: grootte (het palet toont die als “B x H punten”), accentkleur, pictogram, opties van het thema, werking.
 4. Tik op **Toevoegen aan dashboard**.

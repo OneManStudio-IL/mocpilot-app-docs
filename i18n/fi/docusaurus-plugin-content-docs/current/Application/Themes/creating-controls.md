@@ -12,7 +12,7 @@ Jokainen lisäämäsi ohjain perustuu teemaan. Voit määrittää sen ennen lis�
 
 ## Määritä ennen lisäämistä {#configure-before-adding}
 
-1. Avaa **Lisää ohjain** (kojelaudan **+**).
+1. Avaa **Lisää ohjain** (kojelaudan **+**, tietokoneella **+ Ohjain**).
 2. Valitse ohjaintyyppi ja ulkoasu ulkoasunauhasta.
 3. Käytä kohdassa **Määritä** välilehtiä **Tyyli** ja **Asetukset**: koko (paletti näyttää sen muodossa ”L x K pistettä”), korosteväri, ikoni, teeman asetukset, toiminta.
 4. Napauta **Lisää kojelautaan**.

@@ -15,13 +15,13 @@ Un profilo ha due modalità:
 
 ## Avviare e fermare {#start-and-stop}
 
-Premi **Avvia** (▶) nell'editor o sulla dashboard (computer: **Programma → Avvia**, ⌘R / Ctrl+R). Premi **Ferma** (■) per tornare alla modifica (⌘. / Ctrl+.).
+Premi **Avvia** (▶) all'estremità destra della barra superiore dell'editor; su smartphone o tablet ce l'ha anche la dashboard. Su un computer, **Avvia** è il pulsante arancione nell'editor (anche **Programma → Avvia**, ⌘R / Ctrl+R). Premi **Ferma** (■) per tornare alla modifica (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Dashboard mentre il programma è in esecuzione" width={900} />
 
 Mentre il programma è in esecuzione:
 
-- i punti della griglia della dashboard e i pulsanti per aggiungere controlli e per le impostazioni sono nascosti;
+- i punti della griglia della dashboard sono nascosti, così come i suoi pulsanti di modifica (su un computer sono disattivati);
 - i controlli rispondono al tocco e al gamepad;
 - monitor e indicatori mostrano valori in tempo reale;
 - nei Collegamenti rapidi, l'editor mostra i valori in tempo reale tra i blocchi di ogni riga e le righe non si possono modificare;
@@ -33,7 +33,7 @@ Aprendo un profilo, lo smartphone passa in orizzontale a schermo intero, così l
 
 ## Prima di premere Avvia {#before-you-press-run}
 
-- Accendi gli hub e controlla in **I miei hub** che siano collegati (il badge sul pulsante mostra quanti lo sono).
+- Accendi gli hub e controlla in **I miei hub** che siano collegati (il numero sul pulsante **I miei hub**, **Hub** su un computer, mostra quanti lo sono).
 - Nei Collegamenti rapidi, controlla il pulsante **Problemi**: un «!» rosso significa che alcune righe non possono essere eseguite. Vedi [Esecuzione e risoluzione dei problemi](/docs/Application/Links/Problems).
 - Per la prima prova, metti il modello su un supporto o tienilo lontano dal bordo del tavolo.
 

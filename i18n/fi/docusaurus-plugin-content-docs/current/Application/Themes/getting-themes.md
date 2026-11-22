@@ -10,7 +10,7 @@ Erillistä kauppanäkymää ei ole: selaat ja ostat teemoja juuri siellä, miss�
 
 ## Kokeile teemaa {#try-a-theme}
 
-1. Avaa kojelauta ja napauta **+** (**Lisää ohjain**).
+1. Avaa kojelauta ja napauta **+** (**Lisää ohjain**; tietokoneella **+ Ohjain**).
 2. Valitse ohjaintyyppi, esimerkiksi ohjainsauva. Ulkoasunauha näyttää sen jokaisessa teemassa; erikoisohjaimet ovat kohdassa **Ajoneuvo ja erikois**.
 3. Napauta ulkoasua nähdäksesi sen suuressa esikatselussa ja kokeillaksesi sitä. Kokeile kohdassa **Määritä** värejä, kokoja ja asetuksia.
 

@@ -41,7 +41,7 @@ O tipo de programa não pode ser alterado depois. Mais em [Criar um perfil](/doc
 
 ## 2. Adicione e conecte o hub {#add-the-hub}
 
-1. No editor, toque em **Meus hubs**.
+1. No editor, toque em **Meus hubs** (**Hubs** na barra superior, no computador).
 2. Toque em **Adicionar um novo hub** em um slot livre, escolha o Technic Hub na lista e toque em **Adicionar**.
 3. Ligue o hub e pressione o botão dele. O MOCPilot o encontra e se conecta; o hub fica no slot.
 4. Se aparecer a janela **Atualização de firmware necessária**, toque em **Atualizar** e mantenha o hub ligado e por perto até a atualização terminar. Veja [Atualização de firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mais em [Adicionar e conectar um hub](/docs/Application/Hubs/ConnectingHubs).
 
 ## 3. Coloque os controles no painel {#dashboard}
 
-1. Abra o **Painel** e toque em **+** (**Adicionar controlador**).
+1. Abra o **Painel** e toque em **+** (**Adicionar controlador**; no computador, **+ Controlador**).
 2. No grupo **Joysticks**, escolha **Joystick** e toque em **Adicionar ao painel**. Ele recebe o nome **JOY1**. Deixe **Tipo de eixos** em **Ambos os eixos (X, Y)**: para cima e para baixo acelera, para a esquerda e para a direita esterça.
 3. Toque em **+** de novo. Em **Botões e interruptores**, escolha **Botão** e toque em **Adicionar ao painel**. Ele recebe o nome **BTN1**.
 4. Arraste o joystick para o lado esquerdo e o botão para o lado direito, onde ficarão seus polegares. Toque em um controle para mudar o tamanho (**S**, **M** ou **L**) ou o visual.
@@ -100,7 +100,7 @@ Sem batentes? Use **Manual**: alinhe as rodas com a mão, toque em **Definir com
 
 <Screenshot name="tutorial-car-links-rows" alt="As três linhas prontas do carro: tração, direção e luzes" width={900} />
 
-Quando as três linhas estiverem prontas, o botão **Problemas** na barra superior mostra um visto verde. Um “!” vermelho indica quantos problemas faltam resolver; toque nele e depois em um problema para ir até a linha. Veja [Executar e corrigir problemas](/docs/Application/Links/Problems).
+Quando as três linhas estiverem prontas, o botão **Problemas** na barra superior (logo antes de **Executar**) mostra um visto verde. Um “!” vermelho indica quantos problemas faltam resolver; toque nele e depois em um problema para ir até a linha. Veja [Executar e corrigir problemas](/docs/Application/Links/Problems).
 
 ## 5. Execute e teste {#run}
 

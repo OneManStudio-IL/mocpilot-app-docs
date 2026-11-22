@@ -15,7 +15,7 @@ Handkontrollen fungerar tillsammans med instrumentpanelen; du kan använda båda
 ## Ansluta en handkontroll {#connect-a-gamepad}
 
 1. Parkoppla handkontrollen med din telefon, surfplatta eller dator i systemets Bluetooth-inställningar (eller anslut den med USB).
-2. Öppna en profil och tryck på **Handkontroll** i redigeraren.
+2. Öppna en profil och gå till **Handkontroll**: i redigerarens övre fält på en dator, under **Mer** på en telefon eller surfplatta (där står det **Handkontroll (ansluten)** när systemet ser en handkontroll).
 3. Sidhuvudet visar **Handkontroll: (namn)**. ”Gamepad is not connected” betyder att systemet ännu inte ser den.
 
 <Screenshot name="gamepad" alt="Sidan Handkontroll" width={900} />

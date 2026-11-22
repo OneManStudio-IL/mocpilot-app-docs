@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Éditeur du tableau de bord
-description: "Le tableau de bord de MOCPilot : le champ, la grille, la barre d'outils, l'arrière-plan et l'annulation."
+description: "Le tableau de bord de MOCPilot : le champ, la grille, la barre supérieure, l'arrière-plan et l'annulation."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Le **tableau de bord** est l'écran depuis lequel vous pilotez votre modèle : joysticks, curseurs, boutons, moniteurs et autres commandes. Chaque profil a un tableau de bord.
 
-Ouvrez-le avec le bouton **Tableau de bord** de l'éditeur (⌘2 / Ctrl+2 sur un ordinateur).
+Ouvrez-le avec le bouton **Tableau de bord** de la barre supérieure de l'éditeur (⌘2 / Ctrl+2 sur un ordinateur). Sur un téléphone à écran étroit, il se trouve dans **Plus**.
 
 - **Téléphone et tablette** : le tableau de bord s'ouvre en plein écran au-dessus de l'éditeur.
 - **Ordinateur** : le tableau de bord s'ouvre dans sa propre fenêtre **Tableau de bord**, que vous pouvez garder à côté du programme.
@@ -24,19 +24,32 @@ Ouvrez-le avec le bouton **Tableau de bord** de l'éditeur (⌘2 / Ctrl+2 sur un
 - En mode édition, une **grille de points** de 40 × 20 cases s'affiche. Les commandes s'alignent sur la grille.
 - Les commandes ne peuvent pas se chevaucher. Si une commande ne rentre pas, elle revient à sa place.
 
-## Barre d'outils {#toolbar}
+## Barre supérieure {#toolbar}
+
+**Téléphone et tablette**
 
 | Bouton | Ce qu'il fait |
 |---|---|
 | ← | retour à l'éditeur de programme |
 | Annuler / Rétablir | annule et rétablit les modifications du tableau de bord |
-| **+** (Ajouter un contrôleur) | ouvre la palette des contrôleurs ; voir [Ajouter et disposer des commandes](/docs/Application/Dashboard/ArrangingControls) |
+| **Sélectionner** | sélectionner plusieurs commandes pour les verrouiller, les déverrouiller, les supprimer ou les modifier ensemble ; **Terminé** met fin à la sélection |
 | ⚙ (Paramètres du tableau de bord) | options d'arrière-plan et de grille (voir ci-dessous) |
+| **+** (Ajouter un contrôleur, avec un anneau orange) | ouvre la palette des contrôleurs ; voir [Ajouter et disposer des commandes](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Lancer** / **Arrêter** : démarre et arrête le programme |
 
-Sur un ordinateur, la fenêtre du Tableau de bord a aussi des menus : **Fichier** (Fermer le profil, Ouvrir dans une fenêtre séparée, Paramètres du tableau de bord…), **Édition** (Annuler, Rétablir, Ajouter un contrôleur…) et **Affichage** (Blocs ⌘1, Tableau de bord ⌘2).
-
 Pendant l'exécution du programme, les boutons d'édition sont masqués.
+
+**Ordinateur et éditeur web**
+
+La barre supérieure ressemble à celle de l'éditeur :
+
+- **À gauche** : **Accueil** (ferme le profil), les menus **Fichier**, **Édition** et **Affichage**, puis **Annuler** et **Rétablir**.
+- **Au milieu** : le nom du profil et **Blocs** (ou **Liens** dans un profil Liens rapides, ⌘1 / Ctrl+1) pour revenir au programme. Le tableau de bord lui-même n'a pas de bouton ici : c'est la page sur laquelle vous êtes.
+- **À droite** : **Sélectionner**, **Paramètres du tableau de bord** (⚙) et le bouton orange **+ Contrôleur** (Ajouter un contrôleur). Dans une fenêtre étroite, le nom du profil et le bouton **Blocs** se masquent, et **+ Contrôleur** ne garde que son **+**.
+
+Il n'y a pas de **Lancer** dans la barre du tableau de bord sur un ordinateur : lancez et arrêtez le programme depuis l'éditeur (⌘R / Ctrl+R, ⌘. / Ctrl+.). Pendant l'exécution, **Sélectionner**, **Paramètres du tableau de bord** et **+ Contrôleur** sont indisponibles.
+
+Menus : **Fichier** (Fermer le profil, Ouvrir dans une fenêtre séparée), **Édition** (Annuler, Rétablir) et **Affichage** (Blocs ⌘1, Tableau de bord ⌘2). Dans la fenêtre séparée du Tableau de bord, la barre affiche le titre de la fenêtre au lieu d'**Accueil**, **Fichier** contient **Fermer la fenêtre**, et il n'y a ni menu **Affichage** ni bouton **Blocs**.
 
 ## Annuler et rétablir {#undo-and-redo}
 

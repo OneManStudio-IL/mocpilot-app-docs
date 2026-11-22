@@ -41,7 +41,7 @@ Het programmatype kan later niet worden gewijzigd. Meer in [Een profiel maken](/
 
 ## 2. Voeg de hub toe en verbind hem {#add-the-hub}
 
-1. Tik in de editor op **Mijn hubs**.
+1. Tik in de editor op **Mijn hubs** (**Hubs** in de bovenbalk op een computer).
 2. Tik in een vrij slot op **Nieuwe hub toevoegen**, kies de Technic Hub in de lijst en tik op **Toevoegen**.
 3. Zet de hub aan en druk op de knop ervan. MOCPilot vindt hem en maakt verbinding; de hub blijft in het slot.
 4. Verschijnt het venster **Firmware-update vereist**, tik dan op **Bijwerken** en houd de hub aan en dichtbij tot de update klaar is. Zie [Firmware bijwerken](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Meer in [Een hub toevoegen en verbinden](/docs/Application/Hubs/ConnectingHubs).
 
 ## 3. Zet de bedieningselementen op het dashboard {#dashboard}
 
-1. Open **Dashboard** en tik op **+** (**Controller toevoegen**).
+1. Open **Dashboard** en tik op **+** (**Controller toevoegen**; op een computer **+ Controller**).
 2. Kies in de groep **Joysticks** de **Joystick** en tik op **Toevoegen aan dashboard**. Hij heet **JOY1**. Laat **As-type** op **Beide assen (X, Y)** staan: omhoog en omlaag rijdt, links en rechts stuurt.
 3. Tik opnieuw op **+**. Kies in **Knoppen en schakelaars** de **Knop** en tik op **Toevoegen aan dashboard**. Hij heet **BTN1**.
 4. Sleep de joystick naar de linkerkant en de knop naar de rechterkant, waar je duimen zitten. Tik op een bedieningselement om de grootte (**S**, **M** of **L**) of het uiterlijk te wijzigen.
@@ -100,7 +100,7 @@ Geen eindaanslagen? Gebruik **Handmatig**: zet de wielen met de hand recht, tik 
 
 <Screenshot name="tutorial-car-links-rows" alt="De drie voltooide rijen van de auto: rijden, sturen en lampen" width={900} />
 
-Als alle drie de rijen klaar zijn, toont de knop **Problemen** in de bovenbalk een groen vinkje. Een rood “!” geeft aan hoeveel problemen er nog zijn; tik erop en daarna op een probleem om naar de rij te springen. Zie [Uitvoeren en problemen oplossen](/docs/Application/Links/Problems).
+Als alle drie de rijen klaar zijn, toont de knop **Problemen** in de bovenbalk (vlak voor **Start**) een groen vinkje. Een rood “!” geeft aan hoeveel problemen er nog zijn; tik erop en daarna op een probleem om naar de rij te springen. Zie [Uitvoeren en problemen oplossen](/docs/Application/Links/Problems).
 
 ## 5. Starten en testen {#run}
 

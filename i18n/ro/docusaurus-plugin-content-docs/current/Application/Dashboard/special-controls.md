@@ -26,7 +26,7 @@ Comenzile speciale arată și funcționează ca cele reale: un volan, pedale, un
 
 ## Adaugă o comandă specială {#add-a-special-control}
 
-1. Deschide tabloul de bord și atinge **+** (**Adaugă controler**).
+1. Deschide tabloul de bord și atinge **+** (**Adaugă controler**; pe computer, **+ Controler**).
 2. În lista tipurilor de comenzi, derulează până la **Vehicul și speciale** și selectează o comandă.
 3. Banda de aspecte afișează toate aspectele ei. Alege unul, apoi configurează comanda în **Configurează**.
 4. Atinge **Adaugă la tabloul de bord**. Pentru o comandă pe care nu o deții încă, atinge **Cumpără** sau **Totul cu MocPilot Pro**.

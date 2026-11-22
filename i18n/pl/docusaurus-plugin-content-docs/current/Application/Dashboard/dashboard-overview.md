@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Edytor panelu
-description: "Panel MOCPilot: pole, siatka, pasek narzędzi, tło i cofanie zmian."
+description: "Panel MOCPilot: pole, siatka, górny pasek, tło i cofanie zmian."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Panel** to ekran, z którego sterujesz modelem: joysticki, suwaki, przyciski, monitory i inne elementy sterujące. Każdy profil ma jeden panel.
 
-Otwórz go przyciskiem **Panel** w edytorze (na komputerze ⌘2 / Ctrl+2).
+Otwórz go przyciskiem **Panel** na górnym pasku edytora (na komputerze ⌘2 / Ctrl+2). Na telefonie z wąskim ekranem jest on w menu **Więcej**.
 
 - **Telefon i tablet**: panel otwiera się na pełnym ekranie nad edytorem.
 - **Komputer**: panel otwiera się we własnym oknie **Panel**, więc możesz trzymać go obok programu.
@@ -24,19 +24,32 @@ Otwórz go przyciskiem **Panel** w edytorze (na komputerze ⌘2 / Ctrl+2).
 - W trybie edycji widoczna jest **siatka kropek** o wymiarach 40 × 20 komórek. Elementy sterujące przyciągają się do siatki.
 - Elementy sterujące nie mogą na siebie nachodzić. Jeśli element się nie mieści, wraca na swoje miejsce.
 
-## Pasek narzędzi {#toolbar}
+## Górny pasek {#toolbar}
+
+**Telefon i tablet**
 
 | Przycisk | Co robi |
 |---|---|
 | ← | powrót do edytora programu |
 | Cofnij / Ponów | cofa i ponawia zmiany na panelu |
-| **+** (Dodaj kontroler) | otwiera paletę kontrolerów; zobacz [Dodawanie i rozmieszczanie elementów sterujących](/docs/Application/Dashboard/ArrangingControls) |
+| **Wybierz** | zaznacza kilka elementów sterujących, aby je razem zablokować, odblokować, usunąć lub edytować; **Gotowe** kończy zaznaczanie |
 | ⚙ (Ustawienia panelu) | opcje tła i siatki (niżej) |
+| **+** (Dodaj kontroler, z pomarańczowym pierścieniem) | otwiera paletę kontrolerów; zobacz [Dodawanie i rozmieszczanie elementów sterujących](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Uruchom** / **Zatrzymaj**: uruchamia i zatrzymuje program |
 
-Na komputerze okno Panelu ma też menu: **Plik** (Zamknij profil, Otwórz w osobnym oknie, Ustawienia panelu…), **Edycja** (Cofnij, Ponów, Dodaj kontroler…) i **Widok** (Bloki ⌘1, Panel ⌘2).
-
 Podczas działania programu przyciski edycji są ukryte.
+
+**Komputer i edytor webowy**
+
+Górny pasek wygląda tak jak w edytorze:
+
+- **Po lewej**: **Ekran główny** (zamyka profil), menu **Plik**, **Edycja** i **Widok**, a dalej **Cofnij** i **Ponów**.
+- **Pośrodku**: nazwa profilu i **Bloki** (albo **Połączenia** w profilu Szybkich połączeń, ⌘1 / Ctrl+1), aby wrócić do programu. Sam panel nie ma tu przycisku: to strona, na której jesteś.
+- **Po prawej**: **Wybierz**, **Ustawienia panelu** (⚙) i pomarańczowy przycisk **+ Kontroler** (Dodaj kontroler). W wąskim oknie nazwa profilu i przycisk **Bloki** się chowają, a z **+ Kontroler** zostaje tylko **+**.
+
+Na komputerze pasek panelu nie ma przycisku **Uruchom**: uruchamiaj i zatrzymuj program w edytorze (⌘R / Ctrl+R, ⌘. / Ctrl+.). Gdy program działa, **Wybierz**, **Ustawienia panelu** i **+ Kontroler** są niedostępne.
+
+Menu: **Plik** (Zamknij profil, Otwórz w osobnym oknie), **Edycja** (Cofnij, Ponów) i **Widok** (Bloki ⌘1, Panel ⌘2). W osobnym oknie Panelu pasek zamiast **Ekranu głównego** pokazuje tytuł okna, menu **Plik** ma polecenie **Zamknij okno**, a menu **Widok** i przycisku **Bloki** nie ma.
 
 ## Cofanie i ponawianie {#undo-and-redo}
 

@@ -41,7 +41,7 @@ Der Programmtyp lässt sich später nicht ändern. Mehr dazu unter [Ein Profil e
 
 ## 2. Hub hinzufügen und verbinden {#add-the-hub}
 
-1. Tippen Sie im Editor auf **Meine Hubs**.
+1. Tippen Sie im Editor auf **Meine Hubs** (auf einem Computer **Hubs** in der oberen Leiste).
 2. Tippen Sie in einem freien Slot auf **Neuen Hub hinzufügen**, wählen Sie den Technic Hub in der Liste und tippen Sie auf **Hinzufügen**.
 3. Schalten Sie den Hub ein und drücken Sie seine Taste. MOCPilot findet ihn und verbindet sich; der Hub bleibt im Slot.
 4. Erscheint der Dialog **Firmware-Update erforderlich**, tippen Sie auf **Aktualisieren** und lassen Sie den Hub eingeschaltet und in der Nähe, bis das Update abgeschlossen ist. Siehe [Firmware aktualisieren](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mehr dazu unter [Einen Hub hinzufügen und verbinden](/docs/Application/Hubs/Con
 
 ## 3. Steuerelemente auf dem Dashboard platzieren {#dashboard}
 
-1. Öffnen Sie das **Dashboard** und tippen Sie auf **+** (**Controller hinzufügen**).
+1. Öffnen Sie das **Dashboard** und tippen Sie auf **+** (**Controller hinzufügen**; auf einem Computer **+ Controller**).
 2. Wählen Sie in der Gruppe **Joysticks** den **Joystick** und tippen Sie auf **Zum Dashboard hinzufügen**. Er heißt **JOY1**. Lassen Sie **Achsentyp** auf **Beide Achsen (X, Y)**: Hoch und runter fährt, links und rechts lenkt.
 3. Tippen Sie erneut auf **+**. Wählen Sie unter **Tasten und Schalter** die **Taste** und tippen Sie auf **Zum Dashboard hinzufügen**. Sie heißt **BTN1**.
 4. Ziehen Sie den Joystick nach links und die Taste nach rechts, dorthin, wo Ihre Daumen sein werden. Tippen Sie auf ein Steuerelement, um seine Größe (**S**, **M** oder **L**) oder sein Aussehen zu ändern.
@@ -100,7 +100,7 @@ Keine Endanschläge? Verwenden Sie **Manuell**: Stellen Sie die Räder von Hand 
 
 <Screenshot name="tutorial-car-links-rows" alt="Die drei fertigen Zeilen des Autos: Antrieb, Lenkung und Licht" width={900} />
 
-Wenn alle drei Zeilen fertig sind, zeigt die Schaltfläche **Probleme** in der oberen Leiste einen grünen Haken. Ein rotes „!“ zeigt an, wie viele Probleme noch übrig sind; tippen Sie darauf und dann auf ein Problem, um zur Zeile zu springen. Siehe [Ausführen und Probleme beheben](/docs/Application/Links/Problems).
+Wenn alle drei Zeilen fertig sind, zeigt die Schaltfläche **Probleme** in der oberen Leiste (direkt vor **Start**) einen grünen Haken. Ein rotes „!“ zeigt an, wie viele Probleme noch übrig sind; tippen Sie darauf und dann auf ein Problem, um zur Zeile zu springen. Siehe [Ausführen und Probleme beheben](/docs/Application/Links/Problems).
 
 ## 5. Starten und testen {#run}
 

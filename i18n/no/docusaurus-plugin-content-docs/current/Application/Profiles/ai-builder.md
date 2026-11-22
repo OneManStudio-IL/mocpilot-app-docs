@@ -17,7 +17,7 @@ AI-byggeren er en del av [MocPilot Pro](/docs/Application/Account/Pro) og funger
 ## Åpne AI-byggeren {#open-the-ai-builder}
 
 1. Åpne en profil for redigering.
-2. Trykk på **AI-bygger**-knappen (ikonet med gnister) i topplinjen. På en datamaskin kan du også trykke ⇧⌘I / Ctrl+Shift+I.
+2. På en datamaskin trykker du på **AI-bygger**-knappen (ikonet med gnister) til høyre i topplinjen, eller ⇧⌘I / Ctrl+Shift+I; i et smalt vindu ligger den under **Mer** (⋯). På telefon og nettbrett trykker du **Mer** → **AI-bygger**.
 3. Skriv forespørselen din i **Hva skal AI-en bygge eller endre?** og trykk **Send** (eller Enter; Shift+Enter gir en ny linje).
 
 Uten MocPilot Pro viser knappen hva AI-byggeren gjør, med **Skaff MocPilot Pro** og **Ikke nå**.

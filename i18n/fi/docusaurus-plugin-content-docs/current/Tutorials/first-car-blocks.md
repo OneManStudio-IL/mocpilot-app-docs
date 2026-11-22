@@ -145,7 +145,7 @@ Painikkeen sijaan **Kytkin** tekee tästä vielä yksinkertaisempaa: *kun kytkin
 
 ## 7. Suorita ja seuraa Seurantaa {#monitor}
 
-Kun jokin ei toimi odotetusti, katso arvoja. Yläpalkin [Seuranta](/docs/Application/BlockBuilder/Editor#monitor) näyttää jokaisen muuttujan ohjelman ollessa käynnissä.
+Kun jokin ei toimi odotetusti, katso arvoja. [Seuranta](/docs/Application/BlockBuilder/Editor#monitor) (tietokoneella yläpalkissa, puhelimessa tai tabletissa kohdassa **Lisää toimintoja**) näyttää jokaisen muuttujan ohjelman ollessa käynnissä.
 
 1. Luo muuttuja `kaasu`.
 2. Tallenna silmukassa ohjainsauvan arvo siihen ja käytä muuttujaa moottorin nopeutena:

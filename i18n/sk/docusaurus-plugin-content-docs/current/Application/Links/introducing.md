@@ -38,7 +38,7 @@ Priame výstupy (Indikátor, LED hubu, LED matica, Kalibrovať servá) nepotrebu
 
 - **Riadky** vypĺňajú obrazovku a posúvajú sa zvisle. Nové riadky začínajú v poslednom, prázdnom riadku („Nový riadok: vstup“).
 - **Paleta** dole má tri karty: **Vstupy**, **Spracovanie** a **Výstupy**. Zostavuje sa z vášho profilu: každý ovládač panela a každý hub v Mojich huboch sa v nej zobrazí automaticky, herný ovládač sa objaví, keď sú zapnuté bloky gamepadu, a operácia sa zobrazí iba vtedy, ak ju dokáže vykonať niektorý hub profilu.
-- Tlačidlo **Problémy** na hornej lište ukazuje zelenú značku, keď sú všetky riadky pripravené, alebo červený „!“ s počtom problémov.
+- Stav riadkov na hornej lište, hneď pred **Spustiť**, ukazuje zelenú značku, keď sú všetky riadky pripravené, alebo červený „!“ s počtom problémov. Na počítači je pri ňom aj text **Všetky riadky sú pripravené** alebo **Problémy: N**.
 
 ## Zostavenie riadku {#build-a-row}
 
@@ -71,7 +71,7 @@ Stlačte **Spustiť**. Kým program beží, každý spoj ukazuje **aktuálnu hod
 
 ## Späť {#undo}
 
-**Späť** a **Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z alebo plávajúce tlačidlá) vrátia až 100 krokov. Počas behu programu nie sú k dispozícii.
+**Späť** a **Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z alebo tlačidlá na hornej lište) vrátia až 100 krokov. Počas behu programu nie sú k dispozícii.
 
 ## Ďalšie informácie {#read-more}
 

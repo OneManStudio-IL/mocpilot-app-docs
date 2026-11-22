@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Een bedieningselement toevoegen {#add-a-control}
 
-1. Tik op het dashboard op **+** (**Controller toevoegen**). Op een computer opent het palet in een eigen venster.
+1. Tik op het dashboard op **+** (**Controller toevoegen**); klik op een computer op **+ Controller** rechts in de bovenbalk. Op een computer opent het palet in een eigen venster, met **Controller toevoegen** in het midden van de bovenbalk.
 2. Kies een soort bedieningselement in de lijst. De soorten zijn gegroepeerd: **Joysticks**, **Schuifregelaars**, **Knoppen en schakelaars**, **Monitoren**, daarna **Voertuig & speciaal** voor de [speciale bedieningselementen](/docs/Application/Dashboard/SpecialControls) en **Mijn ontwerpen** voor de ontwerpen die je hebt opgeslagen. Typ in **Bedieningen zoeken** om snel een bedieningselement te vinden.
 3. De strook met stijlen toont de gekozen soort in elk [thema](/docs/Application/Themes/ThemesOverview) (bij een speciaal bedieningselement alle stijlen daarvan). Tik op een stijl om hem in het grote voorbeeld te zien; je kunt hem daar meteen uitproberen.
 4. Stel het bedieningselement in bij **Configureren**: de tabbladen **Stijl** en **Instellingen** en de grootte.
-5. Tik op **Toevoegen aan dashboard**. Op een computer kun je meerdere bedieningselementen achter elkaar toevoegen.
+5. Tik op **Toevoegen aan dashboard** (op een computer de oranje knop rechts in de bovenbalk van het palet). Op een computer kun je meerdere bedieningselementen achter elkaar toevoegen.
 
 <Screenshot name="controller-palette" alt="Het palet Controller toevoegen" width={900} />
 

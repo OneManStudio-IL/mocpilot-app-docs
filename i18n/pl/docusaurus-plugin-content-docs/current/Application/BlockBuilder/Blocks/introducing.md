@@ -25,7 +25,7 @@ Bloki logiczne mają własny zestaw bloków i własne zachowanie. Nie można imp
 
 - **Paleta** zawiera kategorie bloków: **Wydarzenia**, **Kontrola**, **Czujniki**, **Dźwięki**, **Operator**, **Zmienne**, **Listy** i **Moje bloki**. Inne kategorie pojawiają się, gdy potrzebuje ich Twój profil: **Silniki** i **Światło** (gdy obsługuje je hub), **Symulator** (gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny), **Kontrolery ekranowe nawigacyjnego** i **Gamepad**.
 - **Obszar programu** to miejsce, do którego przeciągasz bloki i w którym budujesz skrypty.
-- Na górnym pasku są **Moje huby**, **Panel**, **Gamepad**, **Monitor**, **Ustawienia edytora**, **Kreator AI** oraz **Uruchom/Zatrzymaj**.
+- Na górnym pasku są **Cofnij** i **Ponów**, **Panel**, **Moje huby**, **Gamepad**, panele boczne **Kreator AI**, [**Plecak**](/docs/Application/BlockBuilder/Backpack) i **Monitor**, **Więcej** (z **Ustawieniami edytora**) oraz **Uruchom/Zatrzymaj**. Na telefonie lub tablecie panele boczne i Gamepad są w menu **Więcej**.
 
 Szczegóły: [Praca w edytorze](/docs/Application/BlockBuilder/Editor).
 

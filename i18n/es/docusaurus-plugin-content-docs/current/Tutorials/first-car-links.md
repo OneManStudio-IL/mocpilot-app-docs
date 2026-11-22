@@ -41,7 +41,7 @@ El tipo de programa no se puede cambiar después. Más información en [Crear un
 
 ## 2. Añade y conecta el hub {#add-the-hub}
 
-1. En el editor, toca **Mis hubs**.
+1. En el editor, toca **Mis hubs** (**Hubs** en la barra superior en un ordenador).
 2. Toca **Agregar un nuevo Hub** en una ranura libre, elige el Technic Hub en la lista y toca **Añadir**.
 3. Enciende el hub y pulsa su botón. MOCPilot lo encuentra y se conecta; el hub se queda en la ranura.
 4. Si aparece el diálogo **Se requiere actualización de firmware**, toca **Actualizar** y mantén el hub encendido y cerca hasta que termine la actualización. Consulta [Actualizar el firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Más información en [Añadir y conectar un hub](/docs/Application/Hubs/Connecti
 
 ## 3. Coloca los controles en el panel {#dashboard}
 
-1. Abre el **Panel** y toca **+** (**Añadir controlador**).
+1. Abre el **Panel** y toca **+** (**Añadir controlador**; en un ordenador, **+ Controlador**).
 2. En el grupo **Joysticks**, elige **Joystick** y toca **Añadir al panel**. Se llama **JOY1**. Deja **Tipo de ejes** en **Ambos ejes (X, Y)**: arriba y abajo servirán para acelerar, izquierda y derecha para girar.
 3. Vuelve a tocar **+**. En **Botones e interruptores**, elige **Botón** y toca **Añadir al panel**. Se llama **BTN1**.
 4. Arrastra el joystick a la izquierda y el botón a la derecha, donde tendrás los pulgares. Toca un control para cambiar su tamaño (**S**, **M** o **L**) o su apariencia.
@@ -100,7 +100,7 @@ En modo **Auto**, cada vez que arranca el programa, el motor de dirección gira 
 
 <Screenshot name="tutorial-car-links-rows" alt="Las tres filas terminadas del coche: tracción, dirección y luces" width={900} />
 
-Cuando las tres filas están listas, el botón **Problemas** de la barra superior muestra una marca verde. Un «!» rojo indica cuántos problemas quedan; tócalo y luego toca un problema para ir a la fila. Consulta [Ejecución y solución de problemas](/docs/Application/Links/Problems).
+Cuando las tres filas están listas, el botón **Problemas** de la barra superior (justo antes de **Ejecutar**) muestra una marca verde. Un «!» rojo indica cuántos problemas quedan; tócalo y luego toca un problema para ir a la fila. Consulta [Ejecución y solución de problemas](/docs/Application/Links/Problems).
 
 ## 5. Ejecuta y prueba {#run}
 

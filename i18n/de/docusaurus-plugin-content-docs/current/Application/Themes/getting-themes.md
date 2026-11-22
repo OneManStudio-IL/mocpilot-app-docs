@@ -10,7 +10,7 @@ Einen eigenen Store-Bildschirm gibt es nicht: Sie stöbern und kaufen Themes gen
 
 ## Ein Theme ausprobieren {#try-a-theme}
 
-1. Öffnen Sie das Dashboard und tippen Sie auf **+** (**Controller hinzufügen**).
+1. Öffnen Sie das Dashboard und tippen Sie auf **+** (**Controller hinzufügen**; auf einem Computer **+ Controller**).
 2. Wählen Sie einen Steuerelementtyp, zum Beispiel einen Joystick. Der Streifen mit den Varianten zeigt ihn in jedem Theme; die Spezial-Steuerelemente finden Sie unter **Fahrzeug & Spezial**.
 3. Tippen Sie auf eine Variante, um sie in der großen Vorschau zu sehen und auszuprobieren. Probieren Sie unter **Konfigurieren** Farben, Größen und Optionen aus.
 

@@ -17,7 +17,7 @@ L'Assistente IA fa parte di [MocPilot Pro](/docs/Application/Account/Pro) e funz
 ## Aprire l'Assistente IA {#open-the-ai-builder}
 
 1. Apri un profilo da modificare.
-2. Premi il pulsante **Assistente IA** (l'icona con le scintille) nella barra superiore. Su un computer puoi anche premere ⇧⌘I / Ctrl+Maiusc+I.
+2. Su un computer, premi il pulsante **Assistente IA** (l'icona con le scintille) a destra della barra superiore, oppure ⇧⌘I / Ctrl+Maiusc+I; in una finestra stretta si trova in **Altro** (⋯). Su smartphone o tablet, tocca **Altro** → **Assistente IA**.
 3. Scrivi la tua richiesta in **Cosa deve creare o modificare l'IA?** e premi **Invia** (o Invio; Maiusc+Invio va a capo).
 
 Senza MocPilot Pro, il pulsante mostra cosa fa l'Assistente IA, con **Ottieni MocPilot Pro** e **Non ora**.

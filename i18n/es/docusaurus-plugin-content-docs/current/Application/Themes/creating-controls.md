@@ -12,7 +12,7 @@ Cada control que añades parte de un tema. Puedes configurarlo antes de añadirl
 
 ## Configurar antes de añadir {#configure-before-adding}
 
-1. Abre **Añadir controlador** (**+** en el panel).
+1. Abre **Añadir controlador** (**+** en el panel, **+ Controlador** en un ordenador).
 2. Selecciona un tipo de control y una apariencia en la tira de apariencias.
 3. En **Configurar**, usa las pestañas **Estilo** y **Configuración**: tamaño (la paleta lo muestra como «An x Al puntos»), color de acento, icono, opciones del tema y comportamiento.
 4. Toca **Añadir al panel**.

@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Arbeiten im Editor
-description: "Palette, Blöcke ziehen, Zoom, Kontextmenüs, Rückgängig, Monitor, Editor-Einstellungen und der KI-Builder in den Logikblöcken."
+description: "Obere Leiste, Palette, Blöcke ziehen, Zoom, Kontextmenüs, Rückgängig, Monitor, Rucksack, Editor-Einstellungen und der KI-Builder in den Logikblöcken."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Arbeiten im Editor {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="Editor der Logikblöcke" width={900} />
+
+## Obere Leiste {#top-bar}
+
+- **Computer und Web-Editor**: links **Startseite** und die Menüs, daneben **Rückgängig** und **Wiederholen**. In der Mitte: der Profilname sowie **Dashboard**, **Hubs** und **Gamepad**. Rechts: **KI-Builder**, [**Rucksack**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **Mehr** (⋯), **Fernsteuerung** und die orange Schaltfläche **Start**. In einem schmalen Fenster wandern die Schaltflächen, die nicht mehr passen, unter **Mehr**; dort finden Sie immer auch **Editor-Einstellungen…**.
+- **Smartphone und Tablet**: links **Startseite**; rechts **Rückgängig**, **Wiederholen**, **Dashboard**, **Meine Hubs**, **Fernsteuerung**, **Mehr** und **Start / Stopp**. Unter **Mehr** finden Sie **KI-Builder**, **Rucksack**, **Monitor**, **Gamepad** und **Editor-Einstellungen**.
+
+Wie sich die Leiste in einem schmalen Fenster zusammenfaltet, lesen Sie unter [Smartphone, Tablet und Desktop](/docs/Introducing/Layouts#editor-top-bar).
 
 ## Palette und Programmbereich {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ Halten Sie einen Block gedrückt (auf einem Touchscreen) oder klicken Sie ihn mi
 - **Bearbeiten**: seine Werte ändern;
 - **Duplizieren**;
 - **Block löschen** / **Lösche N Blöcke**;
+- **Zum Rucksack hinzufügen**: den Block mit allem, was daran hängt, im [Rucksack](/docs/Application/BlockBuilder/Backpack) aufbewahren;
 - **Über den Block**: öffnet die Beschreibung des Blocks in dieser Dokumentation;
 - **Block als SVG exportieren** / **Alle Blöcke als SVG exportieren**: ein Bild für eine Anleitung oder einen Forenbeitrag speichern.
 
@@ -40,7 +48,7 @@ Ein Block, der mit einem Dashboard-Steuerelement verknüpft ist, lässt sich ers
 
 ## Rückgängig und Wiederholen {#undo-and-redo}
 
-Verwenden Sie **Bearbeiten → Rückgängig / Wiederholen** (⌘Z / ⇧⌘Z, Strg+Z / Strg+Umschalt+Z) oder die schwebenden Schaltflächen.
+Verwenden Sie **Bearbeiten → Rückgängig / Wiederholen** (⌘Z / ⇧⌘Z, Strg+Z / Strg+Umschalt+Z) oder die Schaltflächen **Rückgängig** und **Wiederholen** in der oberen Leiste (auf einem Computer neben den Menüs).
 
 - Ein Ziehvorgang ist ein Schritt; schnelle Änderungen desselben Werts werden zu einem Schritt zusammengefasst.
 - Rückgängig funktioniert auch, während das Programm läuft.
@@ -50,11 +58,17 @@ Verwenden Sie **Bearbeiten → Rückgängig / Wiederholen** (⌘Z / ⇧⌘Z, Str
 
 ## Monitor {#monitor}
 
-**Monitor** (⇧⌘M / Strg+Umschalt+M) zeigt die aktuellen Werte von Variablen und Listen, während das Programm läuft. Auf einem Computer können Sie ihn in einem eigenen Fenster öffnen. Bei der Fehlersuche ist er eine große Hilfe.
+**Monitor** (⇧⌘M / Strg+Umschalt+M, **Ansicht → Monitor**) zeigt die aktuellen Werte von Variablen und Listen, während das Programm läuft. Seine Schaltfläche befindet sich auf einem Computer in der oberen Leiste, auf Smartphone und Tablet unter **Mehr**. Auf einem Computer können Sie ihn in einem eigenen Fenster öffnen. Bei der Fehlersuche ist er eine große Hilfe.
 
 <Screenshot name="blocks-monitor" alt="Monitor mit Variablen und einer Liste während der Programmausführung" width={900} />
 
+## Rucksack {#backpack}
+
+Der **Rucksack** (⇧⌘B / Strg+Umschalt+B, **Ansicht → Rucksack**) bewahrt Blockstapel auf, die Sie in jedem Profil wiederverwenden können: Wählen Sie im Menü eines Blocks **Zum Rucksack hinzufügen** und tippen Sie dann auf das Element oder ziehen Sie es, um es in ein beliebiges Programm einzufügen. Seine Schaltfläche befindet sich in der oberen Leiste neben **Monitor** oder unter **Mehr**. Siehe [Rucksack](/docs/Application/BlockBuilder/Backpack).
+
 ## Editor-Einstellungen {#editor-settings}
+
+Sie öffnen sie über **Mehr → Editor-Einstellungen** in der oberen Leiste (auf einem Computer auch über **Programm → Editor-Einstellungen…**).
 
 - **Block per Klick starten**: Ein Klick auf einen Block führt ihn aus, sodass Sie ihn einzeln testen können; ist das Programm gestoppt, wird es dabei auch gestartet.
 - **Programm mittig öffnen**: Wenn Sie ein Profil öffnen, wird das Programm in 100 % in der Mitte der Arbeitsfläche angezeigt (oder ab seiner oberen linken Ecke, wenn es größer ist), egal wo Sie es beim Bearbeiten zuletzt hatten. Das gilt für alle Profile auf diesem Gerät.
@@ -75,7 +89,7 @@ Die Stufe wird im Profil gespeichert. Blöcke, die bereits im Programm sind, fun
 
 ## KI-Builder {#ai-builder}
 
-Mit [MocPilot Pro](/docs/Application/Account/Pro) richtet der **KI-Builder** (die Schaltfläche mit den Funken, ⇧⌘I / Strg+Umschalt+I) Hubs, Dashboard und Programm anhand einer Beschreibung ein, die Sie eintippen oder sprechen, und ändert das Profil anschließend nach Ihren Wünschen. Er funktioniert in Profilen mit Logikblöcken und mit Schnellverknüpfungen. Siehe [KI-Builder](/docs/Application/Profiles/AiBuilder).
+Mit [MocPilot Pro](/docs/Application/Account/Pro) richtet der **KI-Builder** (die Schaltfläche mit den Funken in der oberen Leiste, auf Smartphone und Tablet **Mehr → KI-Builder**, ⇧⌘I / Strg+Umschalt+I) Hubs, Dashboard und Programm anhand einer Beschreibung ein, die Sie eintippen oder sprechen, und ändert das Profil anschließend nach Ihren Wünschen. Er funktioniert in Profilen mit Logikblöcken und mit Schnellverknüpfungen. Siehe [KI-Builder](/docs/Application/Profiles/AiBuilder).
 
 ### So erhalten Sie ein gutes Ergebnis {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Nennen Sie den Hub, sagen Sie, was an jedem Port angeschlossen ist und was es tu
 |---|---|
 | Datei | Profil schließen (⌘W) |
 | Bearbeiten | Rückgängig, Wiederholen, Neue Variable…, Neue Liste…, Neue Nachricht…, Neuer Block… |
-| Ansicht | Blockpalette, Vergrößern, Verkleinern, Originalgröße |
-| Programm | Start (⌘R), Stopp (⌘.) |
+| Ansicht | Blockpalette (⌘P), [Rucksack](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Vergrößern, Verkleinern, Originalgröße |
+| Programm | Start (⌘R), Stopp (⌘.), Editor-Einstellungen… |
+
+Unter Windows verwenden Sie Strg statt ⌘ und Umschalt statt ⇧.

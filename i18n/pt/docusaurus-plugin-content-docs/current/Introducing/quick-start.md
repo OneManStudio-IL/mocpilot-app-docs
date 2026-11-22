@@ -55,7 +55,7 @@ Abra o **Catálogo de perfis** (**Pesquisar online** na página de perfis) e ins
 
 ## 5. Adicione seu hub {#5-add-your-hub}
 
-1. No editor, abra **Meus hubs**.
+1. No editor, abra **Meus hubs** (**Hubs** na barra superior, no computador).
 2. Toque em **Adicionar um novo hub** em um slot livre, escolha o modelo do seu hub e toque em **Adicionar**.
 3. Ligue o hub, pressione o botão dele e espere o MOCPilot encontrá-lo.
 
@@ -66,7 +66,7 @@ Se o app pedir uma atualização de firmware, siga [Atualização de firmware](/
 ## 6. Posicione controles no painel {#6-place-controls-on-the-dashboard}
 
 1. Abra o **Painel**.
-2. Toque em **+** (**Adicionar controlador**), escolha um **Joystick** e toque em **Adicionar ao painel**.
+2. Toque em **+** (**Adicionar controlador**; no computador, **+ Controlador**), escolha um **Joystick** e toque em **Adicionar ao painel**.
 3. Arraste-o para onde quiser. Toque nele para mudar o tamanho, a cor ou o comportamento.
 
 <Screenshot name="controller-palette" alt="Paleta Adicionar controlador com o joystick selecionado" width={900} />

@@ -38,7 +38,7 @@ As saídas diretas (Indicador, LED do hub, Matriz de LEDs, Calibrar servos) não
 
 - As **linhas** ocupam a tela e rolam na vertical. As novas linhas começam na última linha, vazia ("Nova linha: entrada").
 - A **paleta** na parte de baixo tem três abas: **Entradas**, **Processamento** e **Saídas**. Ela é montada a partir do seu perfil: cada controle do painel e cada hub em Meus hubs aparece automaticamente, o gamepad aparece quando os blocos de gamepad estão ativados, e uma operação só aparece se algum hub do perfil souber executá-la.
-- O botão **Problemas** na barra superior mostra um visto verde quando todas as linhas estão prontas, ou um "!" vermelho com o número de problemas.
+- O estado das linhas na barra superior, logo antes de **Executar**, mostra um visto verde quando todas as linhas estão prontas, ou um "!" vermelho com o número de problemas. No computador, ele também diz **Todas as linhas estão prontas** ou **Problemas: N**.
 
 ## Montar uma linha {#build-a-row}
 
@@ -71,7 +71,7 @@ Pressione **Executar**. Enquanto o programa é executado, cada encaixe mostra o 
 
 ## Desfazer {#undo}
 
-**Desfazer** e **Refazer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z ou os botões flutuantes) voltam até 100 passos. Eles não ficam disponíveis enquanto o programa é executado.
+**Desfazer** e **Refazer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z ou os botões na barra superior) voltam até 100 passos. Eles não ficam disponíveis enquanto o programa é executado.
 
 ## Saiba mais {#read-more}
 

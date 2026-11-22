@@ -145,7 +145,7 @@ Med en **Brytare** i stället för knappen blir det ännu enklare: *när switch 
 
 ## 7. Kör och titta i Monitor {#monitor}
 
-När något inte fungerar som väntat ska du titta på värdena. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) i det övre fältet visar alla variabler medan programmet körs.
+När något inte fungerar som väntat ska du titta på värdena. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (i det övre fältet på en dator, under **Mer** på en telefon eller surfplatta) visar alla variabler medan programmet körs.
 
 1. Skapa en variabel `gas`.
 2. Spara joystickens värde i den i loopen och använd variabeln som motorns hastighet:

@@ -15,7 +15,7 @@ La manette fonctionne en complément du tableau de bord ; vous pouvez utiliser l
 ## Connecter une manette {#connect-a-gamepad}
 
 1. Associez la manette à votre téléphone, votre tablette ou votre ordinateur dans les réglages Bluetooth du système (ou branchez-la en USB).
-2. Ouvrez un profil et touchez **Manette de jeu** dans l'éditeur.
+2. Ouvrez un profil et allez dans **Manette de jeu** : dans la barre supérieure de l'éditeur sur un ordinateur, dans **Plus** sur un téléphone ou une tablette (l'élément indique **Manette de jeu (connectée)** quand le système voit une manette).
 3. L'en-tête de la page affiche **Manette : (nom)**. « La manette n'est pas connectée » signifie que le système ne la voit pas encore.
 
 <Screenshot name="gamepad" alt="La page Manette de jeu" width={900} />

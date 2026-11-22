@@ -10,7 +10,7 @@ Il n'y a pas d'écran de boutique à part : vous parcourez et achetez les thème
 
 ## Essayer un thème {#try-a-theme}
 
-1. Ouvrez le tableau de bord et touchez **+** (**Ajouter un contrôleur**).
+1. Ouvrez le tableau de bord et touchez **+** (**Ajouter un contrôleur** ; sur un ordinateur, **+ Contrôleur**).
 2. Sélectionnez un type de commande, par exemple un joystick. Le bandeau des apparences le montre dans chaque thème ; les commandes spéciales se trouvent dans **Véhicule et spéciaux**.
 3. Touchez une apparence pour la voir dans le grand aperçu et l'essayer. Dans **Configurer**, essayez les couleurs, les tailles et les options.
 

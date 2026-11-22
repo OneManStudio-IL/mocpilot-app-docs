@@ -55,7 +55,7 @@ Das Profil wird im Editor geöffnet. Mehr dazu unter [Ein Profil erstellen](/doc
 
 ## 5. Hub hinzufügen {#5-add-your-hub}
 
-1. Öffnen Sie im Editor **Meine Hubs**.
+1. Öffnen Sie im Editor **Meine Hubs** (auf einem Computer **Hubs** in der oberen Leiste).
 2. Tippen Sie in einem freien Slot auf **Neuen Hub hinzufügen**, wählen Sie Ihr Hub-Modell und tippen Sie auf **Hinzufügen**.
 3. Schalten Sie den Hub ein, drücken Sie seine Taste und warten Sie, bis MOCPilot ihn findet.
 
@@ -66,7 +66,7 @@ Falls die App ein Firmware-Update verlangt, folgen Sie [Firmware aktualisieren](
 ## 6. Steuerelemente auf dem Dashboard platzieren {#6-place-controls-on-the-dashboard}
 
 1. Öffnen Sie das **Dashboard**.
-2. Tippen Sie auf **+** (**Controller hinzufügen**), wählen Sie einen **Joystick** und tippen Sie auf **Zum Dashboard hinzufügen**.
+2. Tippen Sie auf **+** (**Controller hinzufügen**; auf einem Computer **+ Controller**), wählen Sie einen **Joystick** und tippen Sie auf **Zum Dashboard hinzufügen**.
 3. Ziehen Sie ihn an die gewünschte Stelle. Tippen Sie darauf, um Größe, Farbe oder Verhalten zu ändern.
 
 <Screenshot name="controller-palette" alt="Palette „Controller hinzufügen“ mit ausgewähltem Joystick" width={900} />

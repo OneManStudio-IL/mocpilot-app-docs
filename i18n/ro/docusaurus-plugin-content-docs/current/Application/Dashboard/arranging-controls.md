@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Adaugă o comandă {#add-a-control}
 
-1. Pe tabloul de bord, atinge **+** (**Adaugă controler**). Pe computer, paleta se deschide în fereastră proprie.
+1. Pe tabloul de bord, atinge **+** (**Adaugă controler**); pe computer, fă clic pe **+ Controler** în dreapta barei de sus. Pe computer, paleta se deschide în fereastră proprie, cu **Adaugă controler** în mijlocul barei ei de sus.
 2. Alege un tip de comandă din listă. Tipurile sunt grupate: **Joysticks**, **Glisoare**, **Butoane și comutatoare**, **Monitoare**, apoi **Vehicul și speciale** pentru [comenzile speciale](/docs/Application/Dashboard/SpecialControls) și **Designurile mele** pentru designurile pe care le-ai salvat. Ca să găsești rapid o comandă, scrie în **Caută comenzi**.
 3. Banda de aspecte arată tipul selectat în fiecare [temă](/docs/Application/Themes/ThemesOverview) (pentru o comandă specială, toate aspectele ei). Atinge un aspect ca să-l vezi în previzualizarea mare; îl poți încerca chiar acolo.
 4. Configurează comanda în **Configurează**: filele **Stil** și **Setări** și dimensiunea.
-5. Atinge **Adaugă la tabloul de bord**. Pe computer poți adăuga mai multe comenzi la rând.
+5. Atinge **Adaugă la tabloul de bord** (pe computer, butonul portocaliu din dreapta barei de sus a paletei). Pe computer poți adăuga mai multe comenzi la rând.
 
 <Screenshot name="controller-palette" alt="Paleta Adaugă controler" width={900} />
 

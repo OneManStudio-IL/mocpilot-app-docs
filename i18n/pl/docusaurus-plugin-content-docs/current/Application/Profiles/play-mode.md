@@ -15,13 +15,13 @@ Profil ma dwa tryby:
 
 ## Uruchamianie i zatrzymywanie {#start-and-stop}
 
-Naciśnij **Uruchom** (▶) w edytorze lub na panelu (komputer: **Program → Uruchom**, ⌘R / Ctrl+R). Naciśnij **Zatrzymaj** (■), aby wrócić do edycji (⌘. / Ctrl+.).
+Naciśnij **Uruchom** (▶) na prawym końcu górnego paska edytora; na telefonie lub tablecie ten przycisk ma też panel. Na komputerze **Uruchom** to pomarańczowy przycisk w edytorze (także **Program → Uruchom**, ⌘R / Ctrl+R). Naciśnij **Zatrzymaj** (■), aby wrócić do edycji (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Panel podczas działania programu" width={900} />
 
 Podczas działania programu:
 
-- kropki siatki panelu oraz przyciski dodawania i ustawień są ukryte;
+- kropki siatki panelu są ukryte, podobnie jak jego przyciski edycji (na komputerze są one niedostępne);
 - elementy sterujące reagują na dotyk i na gamepad;
 - monitory i wskaźniki pokazują bieżące wartości;
 - w Szybkich połączeniach edytor pokazuje bieżące wartości między blokami każdego wiersza, a wierszy nie można edytować;
@@ -33,7 +33,7 @@ Otwarcie profilu przełącza telefon w poziomy tryb pełnoekranowy, dzięki czem
 
 ## Zanim naciśniesz Uruchom {#before-you-press-run}
 
-- Włącz huby i sprawdź w **Moje huby**, czy są połączone (plakietka na przycisku pokazuje, ile ich jest).
+- Włącz huby i sprawdź w **Moje huby**, czy są połączone (liczba na przycisku **Moje huby**, na komputerze **Huby**, pokazuje, ile ich jest).
 - W Szybkich połączeniach sprawdź przycisk **Problemy**: czerwony „!” oznacza, że niektórych wierszy nie da się uruchomić. Zobacz [Uruchamianie i naprawianie problemów](/docs/Application/Links/Problems).
 - Przy pierwszej próbie postaw model na podstawce albo trzymaj go z dala od krawędzi stołu.
 

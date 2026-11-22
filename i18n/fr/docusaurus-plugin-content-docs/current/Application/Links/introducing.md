@@ -38,7 +38,7 @@ Les sorties directes (Indicateur, LED du hub, Matrice de LED, Étalonner les ser
 
 - Les **lignes** occupent l’écran et défilent verticalement. Les nouvelles lignes commencent dans la dernière ligne, vide (« Nouvelle ligne : entrée »).
 - La **palette** en bas comporte trois onglets : **Entrées**, **Traitement** et **Sorties**. Elle est construite à partir de votre profil : chaque commande du tableau de bord et chaque hub de Mes hubs y apparaissent automatiquement, la manette apparaît quand les blocs de manette sont activés, et une opération n’apparaît que si un hub du profil sait l’exécuter.
-- Le bouton **Problèmes** de la barre du haut affiche une coche verte quand toutes les lignes sont prêtes, ou un « ! » rouge avec le nombre de problèmes.
+- L’état des lignes dans la barre du haut, juste avant **Lancer**, affiche une coche verte quand toutes les lignes sont prêtes, ou un « ! » rouge avec le nombre de problèmes. Sur un ordinateur, il indique aussi **Toutes les lignes sont prêtes** ou **Problèmes : N**.
 
 ## Construire une ligne {#build-a-row}
 
@@ -71,7 +71,7 @@ Appuyez sur **Lancer**. Pendant l’exécution du programme, chaque jointure aff
 
 ## Annuler {#undo}
 
-**Annuler** et **Rétablir** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Maj+Z, ou les boutons flottants) permettent de revenir jusqu’à 100 étapes en arrière. Ils ne sont pas disponibles pendant l’exécution du programme.
+**Annuler** et **Rétablir** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Maj+Z, ou les boutons de la barre du haut) permettent de revenir jusqu’à 100 étapes en arrière. Ils ne sont pas disponibles pendant l’exécution du programme.
 
 ## En savoir plus {#read-more}
 

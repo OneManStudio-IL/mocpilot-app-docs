@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Dashboard-editoren
-description: "MOCPilot-dashboardet: feltet, rutenettet, verktøylinjen, bakgrunnen og angre."
+description: "MOCPilot-dashboardet: feltet, rutenettet, topplinjen, bakgrunnen og angre."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Dashboardet** er skjermen du kjører modellen fra: joysticker, skyveknapper, knapper, monitorer og andre kontroller. Hver profil har ett dashboard.
 
-Du åpner det med **Dashboard**-knappen i editoren (⌘2 / Ctrl+2 på en datamaskin).
+Du åpner det med **Dashboard**-knappen i topplinjen i editoren (⌘2 / Ctrl+2 på en datamaskin). På en telefon med smal skjerm ligger den under **Mer**.
 
 - **Telefon og nettbrett**: dashboardet åpnes i fullskjerm over editoren.
 - **Datamaskin**: dashboardet åpnes i sitt eget **Dashboard**-vindu, slik at du kan ha det ved siden av programmet.
@@ -24,19 +24,32 @@ Du åpner det med **Dashboard**-knappen i editoren (⌘2 / Ctrl+2 på en datamas
 - I redigeringsmodus vises et **prikkrutenett** på 40 × 20 ruter. Kontrollene legger seg etter rutenettet.
 - Kontroller kan ikke overlappe. Hvis en kontroll ikke får plass, går den tilbake dit den var.
 
-## Verktøylinje {#toolbar}
+## Topplinje {#toolbar}
+
+**Telefon og nettbrett**
 
 | Knapp | Hva den gjør |
 |---|---|
 | ← | tilbake til programeditoren |
 | Angre / Gjør om | angrer og gjør om endringer på dashboardet |
-| **+** (Legg til kontroller) | åpner kontrollpaletten; se [Legg til og ordne kontroller](/docs/Application/Dashboard/ArrangingControls) |
+| **Velg** | velg flere kontroller og lås, lås opp, slett eller rediger dem samlet; **Ferdig** avslutter |
 | ⚙ (Dashboardinnstillinger) | alternativer for bakgrunn og rutenett (nedenfor) |
+| **+** (Legg til kontroller, med en oransje ring) | åpner kontrollpaletten; se [Legg til og ordne kontroller](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Kjør** / **Stopp**: starter og stopper programmet |
 
-På en datamaskin har Dashboard-vinduet også menyer: **Fil** (Lukk profil, Åpne i eget vindu, Dashboardinnstillinger…), **Rediger** (Angre, Gjør om, Legg til kontroller…) og **Vis** (Blokker ⌘1, Dashboard ⌘2).
-
 Mens programmet kjører, er redigeringsknappene skjult.
+
+**Datamaskin og webeditor**
+
+Topplinjen ser ut som i editoren:
+
+- **Venstre**: **Hjem** (lukker profilen), menyene **Fil**, **Rediger** og **Vis**, deretter **Angre** og **Gjør om**.
+- **Midten**: profilnavnet og **Blokker** (eller **Koblinger** i en Hurtigkoblinger-profil, ⌘1 / Ctrl+1) for å gå tilbake til programmet. Selve dashboardet har ingen knapp her: det er siden du er på.
+- **Høyre**: **Velg**, **Dashboardinnstillinger** (⚙) og den oransje **+ Kontroller**-knappen (Legg til kontroller). I et smalt vindu skjules profilnavnet og **Blokker**-knappen, og **+ Kontroller** beholder bare **+**.
+
+Det finnes ingen **Kjør** i topplinjen på dashboardet på en datamaskin: kjør og stopp programmet fra editoren (⌘R / Ctrl+R, ⌘. / Ctrl+.). Mens det kjører, er **Velg**, **Dashboardinnstillinger** og **+ Kontroller** utilgjengelige.
+
+Menyer: **Fil** (Lukk profil, Åpne i eget vindu), **Rediger** (Angre, Gjør om) og **Vis** (Blokker ⌘1, Dashboard ⌘2). I det separate Dashboard-vinduet viser linjen vindustittelen i stedet for **Hjem**, **Fil** har **Lukk vindu**, og det finnes verken **Vis**-meny eller **Blokker**-knapp.
 
 ## Angre og gjør om {#undo-and-redo}
 

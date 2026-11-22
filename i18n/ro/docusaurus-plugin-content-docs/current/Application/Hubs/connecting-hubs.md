@@ -12,7 +12,7 @@ Un hub se adaugă o singură dată într-un profil. După aceea, MOCPilot se con
 
 ## Adaugă un hub {#add-a-hub}
 
-1. Deschide profilul și atinge **Huburile mele** (⇧⌘H / Ctrl+Shift+H). Pagina **Huburile mele Bluetooth** afișează sloturile.
+1. Deschide profilul și atinge **Huburile mele** (pe computer, **Huburi** în bara de sus sau ⇧⌘H / Ctrl+Shift+H). Pagina **Huburile mele Bluetooth** afișează sloturile.
 2. Atinge **Adaugă un nou hub** într-un slot liber.
 3. Alege hubul din listă. Filtrul din partea de sus afișează **Toate**, **LEGO**, **SBrick**, **BuWizz** sau **Mould King**. Atinge **Adaugă**.
 4. Urmează pașii de pe ecran: **Apasă butonul de pe hub** și **Așteaptă ca scanarea să găsească hubul**. Atinge **Pornește scanarea** pentru a căuta din nou.
@@ -35,7 +35,7 @@ Butonul **Conectează** de pe un slot conectează hubul. Meniul slotului conțin
 - **Selectează canalul: A / B / C**: canalul de control Mould King;
 - **Șterge hub-ul**: elimină hubul din profil.
 
-Butonul **Huburile mele** din editor arată câte huburi sunt conectate.
+Butonul **Huburile mele** din editor (**Huburi** pe computer) arată câte huburi sunt conectate.
 
 ## Monitorul hubului {#hub-monitor}
 

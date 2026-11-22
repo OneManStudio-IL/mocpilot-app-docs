@@ -12,7 +12,7 @@ Hver kontroll du legger til, tar utgangspunkt i et tema. Du kan konfigurere den 
 
 ## Konfigurer før du legger til {#configure-before-adding}
 
-1. Åpne **Legg til kontroller** (**+** på dashboardet).
+1. Åpne **Legg til kontroller** (**+** på dashboardet, **+ Kontroller** på en datamaskin).
 2. Velg en kontrolltype og et utseende i utseendestripen.
 3. Under **Konfigurer** bruker du fanene **Stil** og **Innstillinger**: størrelse (paletten viser den som «B x H prikker»), aksentfarge, ikon, temaalternativer, oppførsel.
 4. Trykk **Legg til på dashboard**.

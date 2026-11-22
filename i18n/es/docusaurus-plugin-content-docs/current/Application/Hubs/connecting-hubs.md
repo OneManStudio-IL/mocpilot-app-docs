@@ -12,7 +12,7 @@ Un hub se añade al perfil una sola vez. Después, MOCPilot se conecta a él cad
 
 ## Añadir un hub {#add-a-hub}
 
-1. Abre el perfil y toca **Mis hubs** (⇧⌘H / Ctrl+Shift+H). La página **Mis hubs Bluetooth** muestra las ranuras.
+1. Abre el perfil y toca **Mis hubs** (en un ordenador, **Hubs** en la barra superior o ⇧⌘H / Ctrl+Shift+H). La página **Mis hubs Bluetooth** muestra las ranuras.
 2. Toca **Agregar un nuevo Hub** en una ranura libre.
 3. Elige tu hub en la lista. El filtro de arriba muestra **Todo**, **LEGO**, **SBrick**, **BuWizz** o **Mould King**. Toca **Añadir**.
 4. Sigue los pasos en pantalla: **Pulsa el botón del hub** y **Espera a que la búsqueda encuentre el hub**. Toca **Iniciar escaneo** para buscar de nuevo.
@@ -35,7 +35,7 @@ El botón **Conectar** de una ranura conecta el hub. El menú de la ranura conti
 - **Seleccionar canal: A / B / C**: el canal de control de Mould King;
 - **Eliminar hub**: quita el hub del perfil.
 
-El botón **Mis hubs** del editor muestra cuántos hubs están conectados.
+El botón **Mis hubs** del editor (**Hubs** en un ordenador) muestra cuántos hubs están conectados.
 
 ## Monitor del hub {#hub-monitor}
 

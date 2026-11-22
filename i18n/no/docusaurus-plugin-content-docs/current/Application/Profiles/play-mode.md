@@ -15,13 +15,13 @@ En profil har to moduser:
 
 ## Start og stopp {#start-and-stop}
 
-Trykk **Kjør** (▶) i editoren eller på dashboardet (datamaskin: **Program → Kjør**, ⌘R / Ctrl+R). Trykk **Stopp** (■) for å gå tilbake til redigering (⌘. / Ctrl+.).
+Trykk **Kjør** (▶) helt til høyre i topplinjen i editoren; på telefon og nettbrett har dashboardet den også. På en datamaskin er **Kjør** den oransje knappen i editoren (også **Program → Kjør**, ⌘R / Ctrl+R). Trykk **Stopp** (■) for å gå tilbake til redigering (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Dashboardet mens programmet kjører" width={900} />
 
 Mens programmet kjører:
 
-- er rutenettprikkene på dashboardet og knappene for å legge til og for innstillinger skjult;
+- er rutenettprikkene på dashboardet skjult, og det samme er redigeringsknappene (på en datamaskin er de utilgjengelige);
 - reagerer kontrollene på berøring og på spillkontrolleren;
 - viser monitorer og indikatorer sanntidsverdier;
 - viser editoren i Hurtigkoblinger sanntidsverdier mellom blokkene i hver rad, og radene kan ikke redigeres;
@@ -33,7 +33,7 @@ Når du åpner en profil, bytter en telefon til liggende format i fullskjerm, sl
 
 ## Før du trykker Kjør {#before-you-press-run}
 
-- Slå på hubbene og sjekk i **Mine hubber** at de er tilkoblet (merket på knappen viser hvor mange som er det).
+- Slå på hubbene og sjekk i **Mine hubber** at de er tilkoblet (tallet på **Mine hubber**-knappen, **Hubber** på en datamaskin, viser hvor mange som er det).
 - I Hurtigkoblinger sjekker du **Problemer**-knappen: et rødt «!» betyr at noen rader ikke kan kjøres. Se [Kjøre og rette problemer](/docs/Application/Links/Problems).
 - Første gang setter du modellen på et stativ eller holder den unna bordkanten.
 

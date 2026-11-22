@@ -145,7 +145,7 @@ Med en **Bryter** i stedet for knappen blir det enda enklere: *når bryter … e
 
 ## 7. Kjør og følg med i Monitor {#monitor}
 
-Når noe ikke fungerer som forventet, ser du på verdiene. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) i topplinjen viser alle variabler mens programmet kjører.
+Når noe ikke fungerer som forventet, ser du på verdiene. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (i topplinjen på en datamaskin, under **Mer** på telefon og nettbrett) viser alle variabler mens programmet kjører.
 
 1. Lag en variabel `gass`.
 2. I løkken lagrer du joystickverdien i den og bruker variabelen som motorhastighet:

@@ -26,7 +26,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Pridanie špeciálneho ovládacieho prvku {#add-a-special-control}
 
-1. Otvorte panel a ťuknite na **+** (**Pridať ovládač**).
+1. Otvorte panel a ťuknite na **+** (**Pridať ovládač**; na počítači **+ Ovládač**).
 2. V zozname typov ovládacích prvkov prejdite na **Vozidlo a špeciálne** a vyberte ovládací prvok.
 3. Pás vzhľadov ukazuje všetky jeho vzhľady. Vyberte jeden a potom ovládací prvok nastavte v časti **Konfigurovať**.
 4. Ťuknite na **Pridať na panel**. Pri ovládacom prvku, ktorý ešte nevlastníte, ťuknite na **Kúpiť** alebo **Všetko s MocPilot Pro**.

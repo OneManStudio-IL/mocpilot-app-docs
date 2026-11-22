@@ -26,7 +26,7 @@ Specjalne elementy sterujące wyglądają i działają jak prawdziwe: kierownica
 
 ## Dodawanie specjalnego elementu sterującego {#add-a-special-control}
 
-1. Otwórz panel i stuknij **+** (**Dodaj kontroler**).
+1. Otwórz panel i stuknij **+** (**Dodaj kontroler**; na komputerze **+ Kontroler**).
 2. Na liście typów elementów przewiń do grupy **Pojazd i specjalne** i wybierz element.
 3. Pasek wyglądów pokazuje wszystkie jego wyglądy. Wybierz jeden, a potem skonfiguruj element w sekcji **Konfiguruj**.
 4. Stuknij **Dodaj do panelu**. W przypadku elementu, którego jeszcze nie posiadasz, stuknij **Kup** lub **Wszystko z MocPilot Pro**.

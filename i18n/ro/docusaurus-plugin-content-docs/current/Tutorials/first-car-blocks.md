@@ -145,7 +145,7 @@ Cu un **Comutator** în locul butonului e și mai simplu: *când comutator … e
 
 ## 7. Rulează și urmărește Monitorul {#monitor}
 
-Când ceva nu merge cum te aștepți, uită-te la valori. [Monitorul](/docs/Application/BlockBuilder/Editor#monitor) din bara de sus arată fiecare variabilă cât timp programul rulează.
+Când ceva nu merge cum te aștepți, uită-te la valori. [Monitorul](/docs/Application/BlockBuilder/Editor#monitor) (în bara de sus pe computer, în **Mai mult** pe telefon sau tabletă) arată fiecare variabilă cât timp programul rulează.
 
 1. Creează o variabilă `accelerație`.
 2. În buclă, salvează în ea valoarea joystickului și folosește variabila pentru viteza motorului:

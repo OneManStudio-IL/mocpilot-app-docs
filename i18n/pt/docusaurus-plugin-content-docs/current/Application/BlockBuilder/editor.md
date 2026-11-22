@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Trabalhar no editor
-description: "Paleta, arrastar blocos, zoom, menus de contexto, desfazer, Monitor, Configurações do editor e o Construtor com IA nos Blocos lógicos."
+description: "Barra superior, paleta, arrastar blocos, zoom, menus de contexto, desfazer, Monitor, Mochila, Configurações do editor e o Construtor com IA nos Blocos lógicos."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Trabalhar no editor {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="Editor dos Blocos lógicos" width={900} />
+
+## Barra superior {#top-bar}
+
+- **Computador e editor web**: **Início** e os menus à esquerda, com **Desfazer** e **Refazer** ao lado. No meio: o nome do perfil e **Painel**, **Hubs** e **Gamepad**. À direita: **Construtor com IA**, [**Mochila**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **Mais** (⋯), **Controle remoto** e o botão laranja **Executar**. Em uma janela estreita, os botões que não cabem vão para **Mais**; ele sempre tem **Configurações do editor…**.
+- **Celular e tablet**: **Início** à esquerda; à direita **Desfazer**, **Refazer**, **Painel**, **Meus hubs**, **Controle remoto**, **Mais** e **Executar / Parar**. **Mais** tem o **Construtor com IA**, a **Mochila**, o **Monitor**, o **Gamepad** e as **Configurações do editor**.
+
+Veja [Celular, tablet e desktop](/docs/Introducing/Layouts#editor-top-bar) para saber como a barra se recolhe em uma janela estreita.
 
 ## Paleta e área do programa {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ Toque e segure (em tela sensível ao toque) ou clique com o botão direito em um
 - **Editar**: alterar os valores dele;
 - **Duplicar**;
 - **Excluir bloco** / **Excluir N blocos**;
+- **Adicionar à mochila**: guarda o bloco e tudo o que está encaixado nele na [Mochila](/docs/Application/BlockBuilder/Backpack);
 - **Sobre o bloco**: abre a descrição do bloco nesta documentação;
 - **Exportar bloco como SVG** / **Exportar todos os blocos como SVG**: salva uma imagem para um tutorial ou uma postagem em fórum.
 
@@ -40,7 +48,7 @@ Um bloco ligado a um controle do painel só pode ser excluído depois que você 
 
 ## Desfazer e refazer {#undo-and-redo}
 
-Use **Editar → Desfazer / Refazer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) ou os botões flutuantes.
+Use **Editar → Desfazer / Refazer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) ou os botões **Desfazer** e **Refazer** na barra superior (ao lado dos menus, no computador).
 
 - Um arraste é um passo; edições rápidas do mesmo valor se juntam em um só passo.
 - Desfazer funciona mesmo com o programa em execução.
@@ -50,11 +58,17 @@ Use **Editar → Desfazer / Refazer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) ou
 
 ## Monitor {#monitor}
 
-O **Monitor** (⇧⌘M / Ctrl+Shift+M) mostra os valores atuais das variáveis e listas enquanto o programa é executado. No computador, você pode abri-lo em uma janela separada. Ele ajuda muito na hora de procurar um erro.
+O **Monitor** (⇧⌘M / Ctrl+Shift+M, **Exibir → Monitor**) mostra os valores atuais das variáveis e listas enquanto o programa é executado. O botão dele fica na barra superior no computador e em **Mais** no celular ou tablet. No computador, você pode abri-lo em uma janela separada. Ele ajuda muito na hora de procurar um erro.
 
 <Screenshot name="blocks-monitor" alt="Monitor mostrando variáveis e uma lista enquanto o programa é executado" width={900} />
 
+## Mochila {#backpack}
+
+A **Mochila** (⇧⌘B / Ctrl+Shift+B, **Exibir → Mochila**) guarda pilhas de blocos para reutilizar em qualquer perfil: escolha **Adicionar à mochila** no menu de um bloco e depois toque no item ou arraste-o para inseri-lo em qualquer programa. O botão dela fica ao lado do **Monitor** na barra superior, ou em **Mais**. Veja [Mochila](/docs/Application/BlockBuilder/Backpack).
+
 ## Configurações do editor {#editor-settings}
+
+Abra-as em **Mais → Configurações do editor** na barra superior (no computador, também em **Programa → Configurações do editor…**).
 
 - **Iniciar bloco ao clicar**: clicar em um bloco o executa, para você testá-lo isoladamente; se o programa estiver parado, isso também o inicia.
 - **Abrir o programa ao centro**: ao abrir um perfil, o programa aparece em 100% no centro da área (ou a partir do canto superior esquerdo, quando é maior), não importa onde você o deixou durante a edição. Isso vale para todos os perfis neste dispositivo.
@@ -75,7 +89,7 @@ O nível fica salvo no perfil. Os blocos que já estão no programa continuam fu
 
 ## Construtor com IA {#ai-builder}
 
-Com o [MocPilot Pro](/docs/Application/Account/Pro), o **Construtor com IA** (o botão com brilhos, ⇧⌘I / Ctrl+Shift+I) configura os hubs, o painel e o programa a partir de uma descrição que você digita ou fala, e depois altera o perfil conforme você pedir. Ele funciona em perfis de Blocos lógicos e de Ligações rápidas. Veja [Construtor com IA](/docs/Application/Profiles/AiBuilder).
+Com o [MocPilot Pro](/docs/Application/Account/Pro), o **Construtor com IA** (o botão com brilhos na barra superior, **Mais → Construtor com IA** no celular ou tablet, ⇧⌘I / Ctrl+Shift+I) configura os hubs, o painel e o programa a partir de uma descrição que você digita ou fala, e depois altera o perfil conforme você pedir. Ele funciona em perfis de Blocos lógicos e de Ligações rápidas. Veja [Construtor com IA](/docs/Application/Profiles/AiBuilder).
 
 ### Como obter um bom resultado {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Diga o nome do hub, o que está ligado em cada porta e o que deve fazer, e como 
 |---|---|
 | Arquivo | Fechar perfil (⌘W) |
 | Editar | Desfazer, Refazer, Nova variável…, Nova lista…, Nova mensagem…, Novo bloco… |
-| Exibir | Paleta de blocos, Aumentar zoom, Diminuir zoom, Tamanho real |
-| Programa | Executar (⌘R), Parar (⌘.) |
+| Exibir | Paleta de blocos (⌘P), [Mochila](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Aumentar zoom, Diminuir zoom, Tamanho real |
+| Programa | Executar (⌘R), Parar (⌘.), Configurações do editor… |
+
+No Windows, use Ctrl em vez de ⌘ e Shift em vez de ⇧.

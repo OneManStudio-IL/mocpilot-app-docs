@@ -12,7 +12,7 @@ Každý ovládací prvek, který přidáte, vychází z nějakého motivu. Před
 
 ## Konfigurace před přidáním {#configure-before-adding}
 
-1. Otevřete **Přidat ovladač** (**+** na panelu).
+1. Otevřete **Přidat ovladač** (**+** na panelu, na počítači **+ Ovladač**).
 2. Vyberte typ ovládacího prvku a v pásu stylů jeho styl.
 3. V části **Konfigurovat** použijte karty **Styl** a **Nastavení**: velikost (paleta ji ukazuje jako „Š x V teček“), akcentová barva, ikona, možnosti motivu, chování.
 4. Klepněte na **Přidat na panel**.

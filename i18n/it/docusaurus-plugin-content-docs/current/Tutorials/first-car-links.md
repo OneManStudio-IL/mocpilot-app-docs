@@ -41,7 +41,7 @@ Il tipo di programma non si può cambiare in seguito. Maggiori dettagli in [Crea
 
 ## 2. Aggiungi e collega l'hub {#add-the-hub}
 
-1. Nell'editor, tocca **I miei hub**.
+1. Nell'editor, tocca **I miei hub** (**Hub** nella barra superiore su un computer).
 2. Tocca **Aggiungi un nuovo hub** in uno slot libero, scegli il Technic Hub nell'elenco e tocca **Aggiungi**.
 3. Accendi l'hub e premi il suo pulsante. MOCPilot lo trova e si collega; l'hub resta nello slot.
 4. Se compare la finestra **Aggiornamento firmware richiesto**, tocca **Aggiorna** e tieni l'hub acceso e vicino finché l'aggiornamento non è terminato. Vedi [Aggiornamento del firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Maggiori dettagli in [Aggiungere e collegare un hub](/docs/Application/Hubs/Conn
 
 ## 3. Disponi i controlli sulla dashboard {#dashboard}
 
-1. Apri **Dashboard** e tocca **+** (**Aggiungi controller**).
+1. Apri **Dashboard** e tocca **+** (**Aggiungi controller**; su un computer, **+ Controller**).
 2. Nel gruppo **Joystick**, scegli **Joystick** e tocca **Aggiungi alla dashboard**. Il suo nome è **JOY1**. Lascia **Tipo di assi** su **Entrambi gli assi (X, Y)**: su e giù serviranno per avanzare, sinistra e destra per sterzare.
 3. Tocca di nuovo **+**. In **Pulsanti e interruttori**, scegli **Bottone** e tocca **Aggiungi alla dashboard**. Il suo nome è **BTN1**.
 4. Trascina il joystick sul lato sinistro e il pulsante sul lato destro, dove si troveranno i tuoi pollici. Tocca un controllo per cambiarne la dimensione (**S**, **M** o **L**) o l'aspetto.
@@ -100,7 +100,7 @@ Niente finecorsa? Usa **Manuale**: raddrizza le ruote a mano, tocca **Imposta co
 
 <Screenshot name="tutorial-car-links-rows" alt="Le tre righe finite dell'auto: trazione, sterzo e luci" width={900} />
 
-Quando tutte e tre le righe sono pronte, il pulsante **Problemi** nella barra superiore mostra un segno di spunta verde. Un «!» rosso indica quanti problemi restano; toccalo e poi tocca un problema per andare alla riga. Vedi [Esecuzione e risoluzione dei problemi](/docs/Application/Links/Problems).
+Quando tutte e tre le righe sono pronte, il pulsante **Problemi** nella barra superiore (subito prima di **Avvia**) mostra un segno di spunta verde. Un «!» rosso indica quanti problemi restano; toccalo e poi tocca un problema per andare alla riga. Vedi [Esecuzione e risoluzione dei problemi](/docs/Application/Links/Problems).
 
 ## 5. Avvia e prova {#run}
 

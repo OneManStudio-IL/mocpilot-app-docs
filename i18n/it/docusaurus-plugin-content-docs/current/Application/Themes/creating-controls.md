@@ -12,7 +12,7 @@ Ogni controllo che aggiungi parte da un tema. Puoi configurarlo prima di aggiung
 
 ## Configurare prima di aggiungere {#configure-before-adding}
 
-1. Apri **Aggiungi controller** (**+** sulla dashboard).
+1. Apri **Aggiungi controller** (**+** sulla dashboard, **+ Controller** su un computer).
 2. Seleziona un tipo di controllo e un aspetto nella striscia degli aspetti.
 3. In **Configura**, usa le schede **Stile** e **Impostazioni**: dimensione (la tavolozza la mostra come «L x A punti»), colore di accento, icona, opzioni del tema, comportamento.
 4. Tocca **Aggiungi alla dashboard**.

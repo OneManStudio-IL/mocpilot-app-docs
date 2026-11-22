@@ -10,7 +10,7 @@ Nu există un ecran separat de magazin: răsfoiești și cumperi teme chiar acol
 
 ## Încearcă o temă {#try-a-theme}
 
-1. Deschide tabloul de bord și atinge **+** (**Adaugă controler**).
+1. Deschide tabloul de bord și atinge **+** (**Adaugă controler**; pe computer, **+ Controler**).
 2. Selectează un tip de comandă, de exemplu un joystick. Banda de aspecte îl afișează în fiecare temă; comenzile speciale se află în **Vehicul și speciale**.
 3. Atinge un aspect ca să-l vezi în previzualizarea mare și să-l încerci. În **Configurează**, încearcă culorile, dimensiunile și opțiunile.
 

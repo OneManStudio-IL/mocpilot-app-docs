@@ -17,7 +17,7 @@ Constructorul AI face parte din [MocPilot Pro](/docs/Application/Account/Pro) ș
 ## Deschide constructorul AI {#open-the-ai-builder}
 
 1. Deschide un profil pentru editare.
-2. Apasă butonul **Constructor AI** (pictograma cu scântei) din bara de sus. Pe computer poți apăsa și ⇧⌘I / Ctrl+Shift+I.
+2. Pe computer, apasă butonul **Constructor AI** (pictograma cu scântei) din dreapta barei de sus sau ⇧⌘I / Ctrl+Shift+I; într-o fereastră îngustă se află în **Mai mult** (⋯). Pe telefon sau tabletă, atinge **Mai mult** → **Constructor AI**.
 3. Scrie cererea în **Ce ar trebui să creeze sau să modifice AI-ul?** și apasă **Trimite** (sau Enter; Shift+Enter începe un rând nou).
 
 Fără MocPilot Pro, butonul arată ce face constructorul AI, cu **Obține MocPilot Pro** și **Nu acum**.

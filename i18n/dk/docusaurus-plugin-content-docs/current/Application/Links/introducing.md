@@ -38,7 +38,7 @@ Direkte output (Indikator, Hub-LED, LED-matrix, Kalibrer servoer) kræver ingen 
 
 - **Rækkerne** fylder skærmen og rulles lodret. Nye rækker starter i den sidste, tomme række (»Ny række: input«).
 - **Paletten** nederst har tre faner: **Input**, **Behandling** og **Output**. Den bygges ud fra din profil: hver kontrol på dashboardet og hver hub under Mine hubs vises automatisk, spilcontrolleren vises, når spilcontrollerblokkene er slået til, og en handling vises kun, hvis en hub i profilen kan udføre den.
-- Knappen **Problemer** i den øverste bjælke viser et grønt flueben, når alle rækker er klar, eller et rødt »!« med antallet af problemer.
+- Rækkernes status i den øverste bjælke, lige før **Kør**, viser et grønt flueben, når alle rækker er klar, eller et rødt »!« med antallet af problemer. På en computer står der også **Alle rækker er klar** eller **Problemer: N**.
 
 ## Byg en række {#build-a-row}
 
@@ -71,7 +71,7 @@ Tryk på **Kør**. Mens programmet kører, viser hver samling den **aktuelle væ
 
 ## Fortryd {#undo}
 
-**Fortryd** og **Gentag** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller de svævende knapper) går op til 100 trin tilbage. De er ikke tilgængelige, mens programmet kører.
+**Fortryd** og **Gentag** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller knapperne i topbjælken) går op til 100 trin tilbage. De er ikke tilgængelige, mens programmet kører.
 
 ## Læs mere {#read-more}
 

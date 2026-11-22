@@ -12,7 +12,7 @@ Chaque commande que vous ajoutez part d'un thème. Vous pouvez la configurer ava
 
 ## Configurer avant d'ajouter {#configure-before-adding}
 
-1. Ouvrez **Ajouter un contrôleur** (**+** sur le tableau de bord).
+1. Ouvrez **Ajouter un contrôleur** (**+** sur le tableau de bord, **+ Contrôleur** sur un ordinateur).
 2. Sélectionnez un type de commande et une apparence dans le bandeau des apparences.
 3. Dans **Configurer**, utilisez les onglets **Style** et **Paramètres** : taille (la palette l'indique sous la forme « L x H points »), couleur d'accent, icône, options du thème, comportement.
 4. Touchez **Ajouter au tableau de bord**.

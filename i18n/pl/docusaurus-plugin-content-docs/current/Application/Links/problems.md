@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Czy wszystko jest gotowe? {#is-everything-ready}
 
-Przycisk **Problemy** na górnym pasku edytora pokazuje:
+Przycisk **Problemy** na górnym pasku edytora (na komputerze tuż przed **Uruchom**) pokazuje:
 
 - **zielony ptaszek**: „Wszystkie wiersze są gotowe”;
 - **czerwony „!”**: „Problemy: N”.
+
+Na komputerze tekst jest napisany na przycisku; w wąskim oknie zostają tylko ikona i liczba problemów. Na telefonie lub tablecie przycisk pokazuje ikonę z liczbą na czerwonej plakietce.
 
 Dotknij go, aby otworzyć panel problemów (panel boczny na telefonie, menu na tablecie lub komputerze). Zawiera listę „Wiersz N — przyczyna”; dotknij pozycji, aby przejść do tego wiersza. Blok, który powoduje problem, ma **czerwoną ramkę**. Gdy wszystko jest w porządku, panel wyświetla „Każdy włączony wiersz może działać.”
 

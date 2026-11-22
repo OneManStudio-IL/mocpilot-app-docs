@@ -10,7 +10,7 @@ Der er ingen separat butiksskærm: du gennemser og køber temaer lige der, hvor 
 
 ## Prøv et tema {#try-a-theme}
 
-1. Åbn dashboardet, og tryk på **+** (**Tilføj controller**).
+1. Åbn dashboardet, og tryk på **+** (**Tilføj controller**; på en computer **+ Controller**).
 2. Vælg en kontroltype, for eksempel et joystick. Striben med udseender viser den i alle temaer; specialkontrollerne findes under **Køretøj og special**.
 3. Tryk på et udseende for at se det i den store forhåndsvisning og prøve det. Under **Konfigurer** kan du prøve farver, størrelser og indstillinger.
 

@@ -12,7 +12,7 @@ Alle kontroller, du tilføjer, tager udgangspunkt i et tema. Du kan konfigurere 
 
 ## Konfigurer før tilføjelse {#configure-before-adding}
 
-1. Åbn **Tilføj controller** (**+** på dashboardet).
+1. Åbn **Tilføj controller** (**+** på dashboardet, **+ Controller** på en computer).
 2. Vælg en kontroltype og et udseende i striben med udseender.
 3. Under **Konfigurer** bruger du fanerne **Stil** og **Indstillinger**: størrelse (paletten viser den som "B x H prikker"), accentfarve, ikon, temaindstillinger, adfærd.
 4. Tryk på **Føj til dashboard**.

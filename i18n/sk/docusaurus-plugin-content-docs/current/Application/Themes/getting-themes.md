@@ -10,7 +10,7 @@ Samostatná obrazovka obchodu neexistuje: témy prezeráte a kupujete priamo tam
 
 ## Vyskúšanie témy {#try-a-theme}
 
-1. Otvorte panel a ťuknite na **+** (**Pridať ovládač**).
+1. Otvorte panel a ťuknite na **+** (**Pridať ovládač**; na počítači **+ Ovládač**).
 2. Vyberte typ ovládacieho prvku, napríklad joystick. Pás vzhľadov ho ukazuje v každej téme; špeciálne ovládacie prvky sú v skupine **Vozidlo a špeciálne**.
 3. Ťuknutím na vzhľad ho zobrazíte vo veľkom náhľade a môžete ho vyskúšať. V časti **Konfigurovať** vyskúšajte farby, veľkosti a možnosti.
 

@@ -24,9 +24,9 @@ Profiler, redigerare och instrumentpanel är likadana överallt; det är bara na
 - **Konto** finns högst upp i **Inställningar**.
 - Sidhuvudet i **Mina profiler** har **Sortera och filtrera**, **Anslut en fjärrkontroll** (ikonen med fjärrkontrollen), **+** (Ny profil, Importera profil…, Sök online) och sökfältet.
 - Huvudskärmarna visas i stående läge. När du öppnar en profil växlar appen till **liggande läge i helskärm**, så att redigeraren och instrumentpanelen får hela skärmen. När du stänger profilen återgår appen till stående läge.
-- I redigeraren ger runda knappar längs överkanten snabb åtkomst till Hem, Ångra, Gör om, AI-byggare, Redigerarens inställningar, Problem (Snabbkopplingar), Handkontroll, Mina hubbar, Fjärrstyrning, Instrumentpanel, Monitor (Logikblock) och Kör / Stoppa.
+- I redigeraren finns **Hem** till vänster i det övre fältet. Till höger finns **Ångra** och **Gör om**, **Instrumentpanel**, **Mina hubbar** (med antalet anslutna hubbar), **Problem** (Snabbkopplingar), **Fjärrstyrning**, **Mer** (⋯) och **Kör / Stoppa**. Under **Mer** finns **AI-byggare**, [**Ryggsäck**](/docs/Application/BlockBuilder/Backpack) och **Monitor** (Logikblock), **Handkontroll** och **Redigerarens inställningar**. På en smal skärm flyttas även Instrumentpanel och Mina hubbar till **Mer**, så att knapparna behåller en storlek som passar fingrarna.
 
-<Screenshot name="editor-phone" alt="Profilredigeraren på en telefon med runda knappar längs överkanten" width={900} />
+<Screenshot name="editor-phone" alt="Profilredigeraren på en telefon med dess övre fält" width={900} />
 
 ## Surfplatta {#tablet}
 
@@ -36,7 +36,7 @@ Profiler, redigerare och instrumentpanel är likadana överallt; det är bara na
 - Sidhuvudet i **Mina profiler** har **Ny profil** (dess meny har också Importera profil…, Anslut en fjärrkontroll och Sök online), **Sortera och filtrera**, **Filtrera efter hashtaggar**, **Anslut en fjärrkontroll** och sökfältet.
 - Tryck på ett profilkort för att markera det: fältet längst ned visar **Dela**, **Redigera**, **Lägg till i favoriter** och **Starta**. Dubbeltryck på ett kort för att starta profilen. Tryck länge på ett kort för att öppna dess meny, som också har **Ta bort profil**.
 - På breda skärmar öppnas Inställningar och Hjälp bredvid listan.
-- En profil öppnas i liggande läge, och redigeraren har samma runda knappar som på en telefon.
+- En profil öppnas i liggande läge, och redigeraren har samma övre fält som på en telefon.
 
 ## Dator (Mac och Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profiler, redigerare och instrumentpanel är likadana överallt; det är bara na
 - Inställningar, Hjälp, Konto, Ny profil, Redigera profil, Profilkatalogen och andra sidor öppnas som **fönster** ovanpå profillistan.
 - Klicka på ett profilkort för att se vad du kan göra med det (**Dela…**, **Redigera…**, **Lägg till i favoriter**, **Starta**); dubbelklicka för att starta profilen. Högerklicka på ett kort för att öppna dess meny, som också har **Ta bort profil**.
 - I redigeraren öppnas **Instrumentpanel** i ett **eget fönster**, så att du kan se programmet och instrumentpanelen sida vid sida.
+
+### Redigerarens övre fält {#editor-top-bar}
+
+- **Vänster**: **Hem** (stänger profilen), menyerna **Fil**, **Redigera**, **Visa** och **Program**, sedan **Ångra** och **Gör om**.
+- **Mitten**: profilens namn och knapparna för profilens andra delar: **Instrumentpanel**, **Hubbar** (med antalet anslutna hubbar) och **Handkontroll**. Sidan du är på har ingen egen knapp.
+- **Höger**: sidopanelerna **AI-byggare**, [**Ryggsäck**](/docs/Application/BlockBuilder/Backpack) och **Monitor** (de två sista bara i Logikblock), **Mer** (⋯), sedan radernas status i Snabbkopplingar (**Alla rader är klara** eller **Problem: N**), **Fjärrstyrning** och den orange knappen **Kör** (**Stoppa** medan programmet körs).
+
+**Mer** har alltid **Redigerarens inställningar…**. När fönstret blir smalt fälls fältet ihop steg för steg i stället för att knapparna trycks ihop: först döljs profilens namn, sedan flyttas **Monitor**, **Ryggsäck** och **AI-byggare** till **Mer**, sedan behåller **Kör** bara sin ikon (och statusen i Snabbkopplingar bara ikonen och antalet), och till sist flyttas även **Handkontroll**, **Instrumentpanel** och **Hubbar** till **Mer**. Om en sidopanel som finns under **Mer** är öppen är knappen **Mer** färgad.
+
+Instrumentpanelens övre fält ser likadant ut: **Hem**, **Fil**, **Redigera** och **Visa**, **Ångra** och **Gör om** till vänster; profilens namn och **Block** (eller **Kopplingar**) för att gå tillbaka till programmet i mitten; **Välj**, **Instrumentpanelsinställningar** och **+ Kontroll** till höger. Se [Redigera instrumentpanelen](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menyer {#menus}
 
@@ -96,6 +106,7 @@ På en Mac gör ⌘ (Command) samma sak som Ctrl i Windows; ⇧ är Skift, ⌃ �
 | Visa / dölj blockpaletten (Logikblock) | Ctrl+P | ⌘P |
 | Sök i blockpaletten (Logikblock) | Ctrl+F | ⌘F |
 | Monitor (Logikblock) | Ctrl+Skift+M | ⇧⌘M |
+| [Ryggsäck](/docs/Application/BlockBuilder/Backpack) (Logikblock) | Ctrl+Skift+B | ⇧⌘B |
 | Zooma in / ut / verklig storlek (Logikblock) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Instrumentpanel**
@@ -113,16 +124,17 @@ På en surfplatta med tangentbord visar eller döljer Ctrl+B (⌘B på en iPad) 
 
 ## Profilredigeraren i alla layouter {#the-profile-editor-on-every-layout}
 
-Redigeraren har inga flikar. **Programmet** (rader i Snabbkopplingar eller Logikblock) fyller skärmen, och knappar öppnar allt annat:
+Redigeraren har inga flikar. **Programmet** (rader i Snabbkopplingar eller Logikblock) fyller skärmen, och knapparna i det övre fältet öppnar allt annat. En del av dem finns under **Mer** (⋯): på en telefon eller surfplatta AI-byggare, Ryggsäck, Monitor, Handkontroll och Redigerarens inställningar; på en dator Redigerarens inställningar och det som inte får plats i ett smalt fönster.
 
 | Knapp | Öppnar |
 |---|---|
-| **Mina hubbar** | profilens [hubbplatser](/docs/Application/Hubs/ConnectingHubs) |
+| **Mina hubbar** (**Hubbar** på en dator) | profilens [hubbplatser](/docs/Application/Hubs/ConnectingHubs) |
 | **Instrumentpanel** | [instrumentpanelen](/docs/Application/Dashboard/DashboardOverview) |
 | **Handkontroll** | [inställningar för handkontrollen](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | värden för variabler och listor (endast Logikblock) |
+| **Ryggsäck** | blockhögar som du har sparat för att återanvända i valfri profil (endast Logikblock); se [Ryggsäck](/docs/Application/BlockBuilder/Backpack) |
 | **Redigerarens inställningar** | [redigerarens alternativ](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **AI-byggare** | [AI-byggaren](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problem** | rader som inte kan köras (endast Snabbkopplingar) |
 | **Fjärrstyrning** | kör profilen på en annan enhet och styr den härifrån (MocPilot Pro); se [Fjärrstyrning](/docs/Application/Profiles/RemoteControl) |
-| **Kör / Stoppa** | startar och stoppar programmet |
+| **Kör / Stoppa** | startar och stoppar programmet (på en dator den orange knappen **Kör** längst till höger) |

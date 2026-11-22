@@ -55,7 +55,7 @@ Deschide **Catalogul de profiluri** (**Caută online** pe pagina de profiluri) �
 
 ## 5. Adaugă hubul {#5-add-your-hub}
 
-1. În editor, deschide **Huburile mele**.
+1. În editor, deschide **Huburile mele** (**Huburi** în bara de sus, pe computer).
 2. Atinge **Adaugă un nou hub** într-un slot liber, alege modelul hubului, apoi atinge **Adaugă**.
 3. Pornește hubul, apasă butonul lui și așteaptă până când MOCPilot îl găsește.
 
@@ -66,7 +66,7 @@ Dacă aplicația cere o actualizare de firmware, urmează [Actualizarea firmware
 ## 6. Așază comenzi pe tabloul de bord {#6-place-controls-on-the-dashboard}
 
 1. Deschide **Tablou de bord**.
-2. Atinge **+** (**Adaugă controler**), alege un **Joystick** și atinge **Adaugă la tabloul de bord**.
+2. Atinge **+** (**Adaugă controler**; pe computer, **+ Controler**), alege un **Joystick** și atinge **Adaugă la tabloul de bord**.
 3. Trage-l unde vrei. Atinge-l ca să-i schimbi dimensiunea, culoarea sau comportamentul.
 
 <Screenshot name="controller-palette" alt="Paleta Adaugă controler cu joystickul selectat" width={900} />

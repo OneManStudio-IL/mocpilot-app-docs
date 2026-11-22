@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: 在编辑器中工作
-description: "逻辑积木中的积木面板、拖放积木、缩放、上下文菜单、撤销、监视器、编辑器设置和 AI 构建器。"
+description: "逻辑积木中的顶栏、积木面板、拖放积木、缩放、上下文菜单、撤销、监视器、背包、编辑器设置和 AI 构建器。"
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # 在编辑器中工作 {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="逻辑积木编辑器" width={900} />
+
+## 顶栏 {#top-bar}
+
+- **电脑和网页编辑器**：左侧是**主页**和菜单，旁边是**撤销**和**重做**。中间是配置文件名称以及**仪表板**、**集线器**和**游戏手柄**。右侧是 **AI 构建器**、[**背包**](/docs/Application/BlockBuilder/Backpack)、**监视器**、**更多**（⋯）、**远程控制**和橙色的**运行**按钮。窗口较窄时，放不下的按钮会移入**更多**；其中始终有**编辑器设置…**。
+- **手机和平板**：左侧是**主页**；右侧是**撤销**、**重做**、**仪表板**、**我的集线器**、**远程控制**、**更多**和**运行 / 停止**。**更多**中有 **AI 构建器**、**背包**、**监视器**、**游戏手柄**和**编辑器设置**。
+
+顶栏在窄窗口中如何收起，请参阅[手机、平板和桌面](/docs/Introducing/Layouts#editor-top-bar)。
 
 ## 积木面板和程序区 {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 - **编辑**：修改它的数值；
 - **复制**；
 - **删除块** / **删除 N 个块**；
+- **添加到背包**：把该积木及连接在它上面的所有积木保存到[背包](/docs/Application/BlockBuilder/Backpack)中；
 - **关于该模块**：在本文档中打开该积木的说明；
 - **将块导出为 SVG** / **将所有块导出为 SVG**：保存一张图片，用于教程或论坛帖子。
 
@@ -40,7 +48,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## 撤销和重做 {#undo-and-redo}
 
-使用**编辑 → 撤销 / 重做**（⌘Z / ⇧⌘Z、Ctrl+Z / Ctrl+Shift+Z）或浮动按钮。
+使用**编辑 → 撤销 / 重做**（⌘Z / ⇧⌘Z、Ctrl+Z / Ctrl+Shift+Z），或顶栏中的**撤销**和**重做**按钮（在电脑上位于菜单旁边）。
 
 - 一次拖动算一步；快速连续修改同一个数值会合并为一步。
 - 即使程序正在运行，也可以撤销。
@@ -50,11 +58,17 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## 监视器 {#monitor}
 
-**监视器**（⇧⌘M / Ctrl+Shift+M）在程序运行时显示变量和列表的当前值。在电脑上，你可以在单独的窗口中打开它。查找错误时它非常有用。
+**监视器**（⇧⌘M / Ctrl+Shift+M，**视图 → 监视器**）在程序运行时显示变量和列表的当前值。它的按钮在电脑上位于顶栏中，在手机或平板上位于**更多**中。在电脑上，你可以在单独的窗口中打开它。查找错误时它非常有用。
+
+## 背包 {#backpack}
+
+**背包**（⇧⌘B / Ctrl+Shift+B，**视图 → 背包**）用来存放积木堆，以便在任何配置文件中重复使用：在积木菜单中选择**添加到背包**，然后轻点或拖动该项，即可把它插入任何程序。它的按钮在顶栏中**监视器**旁边，或在**更多**中。请参阅[背包](/docs/Application/BlockBuilder/Backpack)。
 
 <Screenshot name="blocks-monitor" alt="程序运行时显示变量和列表的监视器" width={900} />
 
 ## 编辑器设置 {#editor-settings}
+
+从顶栏的**更多 → 编辑器设置**打开（在电脑上也可以通过**程序 → 编辑器设置…**）。
 
 - **点击积木启动**：点击某个积木即可运行它，方便单独测试；如果程序已停止，也会同时启动程序。
 - **在中间打开程序**：打开配置文件时，程序以 100% 显示在画布中央（如果程序更大，则从左上角开始显示），无论你编辑时停留在哪里。此设置适用于此设备上的所有配置文件。
@@ -75,7 +89,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## AI 构建器 {#ai-builder}
 
-使用 [MocPilot Pro](/docs/Application/Account/Pro) 时，**AI 构建器**（闪光图标按钮，⇧⌘I / Ctrl+Shift+I）可以根据你输入或说出的描述来设置集线器、仪表板和程序，然后按照你的要求修改配置文件。它适用于逻辑积木和快速连接配置文件。请参阅 [AI 构建器](/docs/Application/Profiles/AiBuilder)。
+使用 [MocPilot Pro](/docs/Application/Account/Pro) 时，**AI 构建器**（顶栏中的闪光图标按钮，手机或平板上为**更多 → AI 构建器**，⇧⌘I / Ctrl+Shift+I）可以根据你输入或说出的描述来设置集线器、仪表板和程序，然后按照你的要求修改配置文件。它适用于逻辑积木和快速连接配置文件。请参阅 [AI 构建器](/docs/Application/Profiles/AiBuilder)。
 
 ### 如何获得好的结果 {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ import Screenshot from '@site/src/components/Screenshot';
 |---|---|
 | 文件 | 关闭配置文件（⌘W） |
 | 编辑 | 撤销、重做、新建变量…、新建列表…、新建消息…、新建积木… |
-| 视图 | 积木面板、放大、缩小、实际大小 |
-| 程序 | 运行（⌘R）、停止（⌘.） |
+| 视图 | 积木面板（⌘P）、[背包](/docs/Application/BlockBuilder/Backpack)（⇧⌘B）、监视器（⇧⌘M）、放大、缩小、实际大小 |
+| 程序 | 运行（⌘R）、停止（⌘.）、编辑器设置… |
+
+在 Windows 上，请用 Ctrl 代替 ⌘，用 Shift 代替 ⇧。

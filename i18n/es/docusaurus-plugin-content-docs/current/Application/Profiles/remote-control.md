@@ -23,7 +23,7 @@ El control remoto te permite conducir un modelo conectado a otro dispositivo. Un
 
 ## Conectar el dispositivo con los hubs {#connect-a-hub-device}
 
-1. En el mando remoto, abre el perfil y pulsa **Control remoto** (el icono del mando a distancia: una casa con ondas de señal) en la barra superior del perfil. En el editor web, pulsa **Mostrar el código** en el panel que se abre.
+1. En el mando remoto, abre el perfil y pulsa **Control remoto** (el icono del mando a distancia: una casa con ondas de señal) en la barra superior del perfil, junto a **Ejecutar**. En el editor web, pulsa **Mostrar el código** en el panel que se abre.
 
    El mando remoto muestra un **código de conexión**: un código QR y 6 dígitos.
 2. En el dispositivo con los hubs, abre MOCPilot y toca **Conectar un mando remoto** en la página **Mis perfiles**. En Mac también puedes elegir **Archivo → Conectar un mando remoto…**.

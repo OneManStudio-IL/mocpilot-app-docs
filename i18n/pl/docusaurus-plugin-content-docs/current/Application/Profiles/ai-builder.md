@@ -17,7 +17,7 @@ Kreator AI jest częścią [MocPilot Pro](/docs/Application/Account/Pro) i dzia�
 ## Otwieranie Kreatora AI {#open-the-ai-builder}
 
 1. Otwórz profil do edycji.
-2. Naciśnij przycisk **Kreator AI** (ikona iskierek) na górnym pasku. Na komputerze możesz też nacisnąć ⇧⌘I / Ctrl+Shift+I.
+2. Na komputerze naciśnij przycisk **Kreator AI** (ikona iskierek) po prawej stronie górnego paska albo ⇧⌘I / Ctrl+Shift+I; w wąskim oknie jest on w menu **Więcej** (⋯). Na telefonie lub tablecie stuknij **Więcej** → **Kreator AI**.
 3. Wpisz swoją prośbę w polu **Co AI ma zbudować lub zmienić?** i naciśnij **Wyślij** (albo Enter; Shift+Enter zaczyna nowy wiersz).
 
 Bez MocPilot Pro przycisk pokazuje, co robi Kreator AI, wraz z przyciskami **Kup MocPilot Pro** i **Nie teraz**.

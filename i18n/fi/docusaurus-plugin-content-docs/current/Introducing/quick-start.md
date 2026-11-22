@@ -55,7 +55,7 @@ Avaa **Profiilikatalogi** (profiilisivun **Hae verkosta**) ja asenna settisi vir
 
 ## 5. Lisää hubisi {#5-add-your-hub}
 
-1. Avaa editorissa **Omat hubit**.
+1. Avaa editorissa **Omat hubit** (tietokoneella yläpalkin **Hubit**).
 2. Napauta vapaassa paikassa **Lisää uusi keskitin**, valitse hubisi malli ja napauta **Lisää**.
 3. Kytke hubi päälle, paina sen painiketta ja odota, kunnes MOCPilot löytää sen.
 
@@ -66,7 +66,7 @@ Jos sovellus pyytää päivittämään laiteohjelmiston, toimi sivun [Laiteohjel
 ## 6. Sijoita ohjaimet kojelautaan {#6-place-controls-on-the-dashboard}
 
 1. Avaa **Kojelauta**.
-2. Napauta **+** (**Lisää ohjain**), valitse **Ohjainsauva** ja napauta **Lisää kojelautaan**.
+2. Napauta **+** (**Lisää ohjain**; tietokoneella **+ Ohjain**), valitse **Ohjainsauva** ja napauta **Lisää kojelautaan**.
 3. Vedä se haluamaasi kohtaan. Napauta sitä muuttaaksesi sen kokoa, väriä tai toimintaa.
 
 <Screenshot name="controller-palette" alt="Lisää ohjain -paletti, jossa ohjainsauva on valittuna" width={900} />

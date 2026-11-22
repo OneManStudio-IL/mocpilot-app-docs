@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Práca v editore
-description: "Paleta, presúvanie blokov, priblíženie, kontextové ponuky, vrátenie krokov, Monitor, Nastavenia editora a AI staviteľ v Logických blokoch."
+description: "Horná lišta, paleta, presúvanie blokov, priblíženie, kontextové ponuky, vrátenie krokov, Monitor, Batoh, Nastavenia editora a AI staviteľ v Logických blokoch."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Práca v editore {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="Editor Logických blokov" width={900} />
+
+## Horná lišta {#top-bar}
+
+- **Počítač a webový editor**: vľavo **Domov** a ponuky, hneď vedľa nich **Späť** a **Znova**. V strede názov profilu a **Panel**, **Huby** a **Herný ovládač**. Vpravo **AI staviteľ**, [**Batoh**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **Viac** (⋯), **Diaľkové ovládanie** a oranžové tlačidlo **Spustiť**. V úzkom okne sa tlačidlá, ktoré sa nezmestia, presunú do ponuky **Viac**; tá vždy obsahuje **Nastavenia editora…**.
+- **Telefón a tablet**: vľavo **Domov**; vpravo **Späť**, **Znova**, **Panel**, **Moje huby**, **Diaľkové ovládanie**, **Viac** a **Spustiť / Zastaviť**. Ponuka **Viac** obsahuje **AI staviteľ**, **Batoh**, **Monitor**, **Herný ovládač** a **Nastavenia editora**.
+
+Ako sa lišta v úzkom okne skladá, opisuje článok [Telefón, tablet a počítač](/docs/Introducing/Layouts#editor-top-bar).
 
 ## Paleta a programová plocha {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ Dlho podržte blok (na dotykovej obrazovke) alebo naň kliknite pravým tlačidl
 - **Upraviť**: zmena jeho hodnôt;
 - **Duplikovať**;
 - **Odstrániť blok** / **Vymazať N blokov**;
+- **Pridať do batohu**: uloží blok a všetko, čo je k nemu pripojené, do [Batohu](/docs/Application/BlockBuilder/Backpack);
 - **O bloku**: otvorí popis bloku v tejto dokumentácii;
 - **Exportovať blok ako SVG** / **Exportovať všetky bloky ako SVG**: uloží obrázok pre návod alebo príspevok vo fóre.
 
@@ -40,7 +48,7 @@ Blok prepojený s ovládačom panela môžete odstrániť až po jeho uvoľnení
 
 ## Späť a znova {#undo-and-redo}
 
-Použite **Upraviť → Späť / Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) alebo plávajúce tlačidlá.
+Použite **Upraviť → Späť / Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) alebo tlačidlá **Späť** a **Znova** na hornej lište (na počítači vedľa ponúk).
 
 - Jedno presunutie je jeden krok; rýchle úpravy tej istej hodnoty sa zlúčia do jedného kroku.
 - Vrátenie funguje aj počas behu programu.
@@ -50,11 +58,17 @@ Použite **Upraviť → Späť / Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z)
 
 ## Monitor {#monitor}
 
-**Monitor** (⇧⌘M / Ctrl+Shift+M) počas behu programu ukazuje aktuálne hodnoty premenných a zoznamov. Na počítači ho môžete otvoriť v samostatnom okne. Veľmi pomáha pri hľadaní chýb.
+**Monitor** (⇧⌘M / Ctrl+Shift+M, **Zobraziť → Monitor**) počas behu programu ukazuje aktuálne hodnoty premenných a zoznamov. Jeho tlačidlo je na počítači na hornej lište, na telefóne alebo tablete v ponuke **Viac**. Na počítači ho môžete otvoriť v samostatnom okne. Veľmi pomáha pri hľadaní chýb.
 
 <Screenshot name="blocks-monitor" alt="Monitor s premennými a zoznamom počas behu programu" width={900} />
 
+## Batoh {#backpack}
+
+**Batoh** (⇧⌘B / Ctrl+Shift+B, **Zobraziť → Batoh**) uchováva zásobníky blokov, ktoré môžete znova použiť v ľubovoľnom profile: v ponuke bloku vyberte **Pridať do batohu** a potom položku ťuknutím alebo presunutím vložte do ľubovoľného programu. Jeho tlačidlo je na hornej lište vedľa **Monitora**, alebo v ponuke **Viac**. Pozrite si [Batoh](/docs/Application/BlockBuilder/Backpack).
+
 ## Nastavenia editora {#editor-settings}
+
+Otvoríte ich cez **Viac → Nastavenia editora** na hornej lište (na počítači aj cez **Program → Nastavenia editora…**).
 
 - **Spustiť blok kliknutím**: kliknutím na blok ho spustíte, takže ho môžete otestovať samostatne; ak je program zastavený, zároveň ho spustí.
 - **Otvárať program v strede**: keď otvoríte profil, program sa zobrazí v 100 % uprostred plochy (alebo od ľavého horného rohu, ak je väčší), bez ohľadu na to, kde ste ho pri úpravách nechali. Platí to pre všetky profily v tomto zariadení.
@@ -75,7 +89,7 @@ Použite **Upraviť → Späť / Znova** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z)
 
 ## AI staviteľ {#ai-builder}
 
-S [MocPilot Pro](/docs/Application/Account/Pro) nastaví **AI staviteľ** (tlačidlo s iskierkami, ⇧⌘I / Ctrl+Shift+I) huby, panel a program podľa popisu, ktorý napíšete alebo poviete, a potom profil mení podľa vašich pokynov. Funguje v profiloch s Logickými blokmi aj Rýchlymi prepojeniami. Pozrite si [AI staviteľ](/docs/Application/Profiles/AiBuilder).
+S [MocPilot Pro](/docs/Application/Account/Pro) nastaví **AI staviteľ** (tlačidlo s iskierkami na hornej lište, na telefóne alebo tablete **Viac → AI staviteľ**, ⇧⌘I / Ctrl+Shift+I) huby, panel a program podľa popisu, ktorý napíšete alebo poviete, a potom profil mení podľa vašich pokynov. Funguje v profiloch s Logickými blokmi aj Rýchlymi prepojeniami. Pozrite si [AI staviteľ](/docs/Application/Profiles/AiBuilder).
 
 ### Ako dosiahnuť dobrý výsledok {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Uveďte hub, povedzte, čo je pripojené ku každému portu a čo má robiť, a 
 |---|---|
 | Súbor | Zavrieť profil (⌘W) |
 | Upraviť | Späť, Znova, Nová premenná…, Nový zoznam…, Nová správa…, Nový blok… |
-| Zobraziť | Paleta blokov, Priblížiť, Oddialiť, Skutočná veľkosť |
-| Program | Spustiť (⌘R), Zastaviť (⌘.) |
+| Zobraziť | Paleta blokov (⌘P), [Batoh](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Priblížiť, Oddialiť, Skutočná veľkosť |
+| Program | Spustiť (⌘R), Zastaviť (⌘.), Nastavenia editora… |
+
+Vo Windows použite namiesto ⌘ kláves Ctrl a namiesto ⇧ kláves Shift.

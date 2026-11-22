@@ -145,7 +145,7 @@ S **Přepínačem** místo tlačítka je to ještě jednodušší: *když přep�
 
 ## 7. Spusťte program a sledujte Monitor {#monitor}
 
-Když něco nefunguje podle očekávání, podívejte se na hodnoty. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) na horní liště ukazuje za běhu programu každou proměnnou.
+Když něco nefunguje podle očekávání, podívejte se na hodnoty. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (na počítači na horní liště, na telefonu nebo tabletu v nabídce **Více**) ukazuje za běhu programu každou proměnnou.
 
 1. Vytvořte proměnnou `plyn`.
 2. V cyklu do ní ukládejte hodnotu joysticku a proměnnou použijte jako rychlost motoru:

@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Je všechno připraveno? {#is-everything-ready}
 
-Tlačítko **Problémy** v horní liště editoru ukazuje:
+Tlačítko **Problémy** v horní liště editoru (na počítači hned před **Spustit**) ukazuje:
 
 - **zelenou fajfku**: „Všechny řádky jsou připravené“;
 - **červený „!“**: „Problémy: N“.
+
+Na počítači je text napsaný přímo na tlačítku; v úzkém okně zůstane jen ikona a počet problémů. Na telefonu nebo tabletu tlačítko ukazuje ikonu a počet v červeném odznaku.
 
 Klepnutím otevřete panel problémů (na telefonu boční panel, na tabletu nebo počítači nabídka). Obsahuje položky „Řádek N — důvod“; klepnutím na položku přeskočíte na daný řádek. Blok, který problém způsobuje, má **červený rámeček**. Když je všechno v pořádku, panel hlásí „Každý zapnutý řádek může běžet.“
 

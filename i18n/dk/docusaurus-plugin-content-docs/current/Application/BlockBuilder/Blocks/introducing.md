@@ -25,7 +25,7 @@ Logikblokke har sit eget sæt blokke og sin egen opførsel. Du kan ikke importer
 
 - **Paletten** viser blokkategorierne: **Begivenheder**, **Kontrol**, **Sensorer**, **Lyde**, **Operator**, **Variable**, **Lister** og **Mine blokke**. Andre kategorier vises, når din profil har brug for dem: **Motorer** og **Lys** (når en hub understøtter dem), **Simulator** (når dashboardet har pedaler, en gearkasse eller en håndbremse), **Skærmkontrollere** og **Spilcontroller**.
 - **Programområdet** er der, hvor du trækker blokke hen og bygger scripts.
-- Den øverste bjælke har **Mine hubs**, **Dashboard**, **Spilcontroller**, **Monitor**, **Editorindstillinger**, **AI-bygger** og **Kør/Stop**.
+- Den øverste bjælke har **Fortryd** og **Gentag**, **Dashboard**, **Mine hubs**, **Spilcontroller**, sidepanelerne **AI-bygger**, [**Rygsæk**](/docs/Application/BlockBuilder/Backpack) og **Monitor**, **Mere** (med **Editorindstillinger**) og **Kør/Stop**. På en telefon eller tablet ligger sidepanelerne og Spilcontroller under **Mere**.
 
 Se [Arbejd i editoren](/docs/Application/BlockBuilder/Editor) for detaljer.
 

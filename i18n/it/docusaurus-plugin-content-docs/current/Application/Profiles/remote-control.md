@@ -23,7 +23,7 @@ Il controllo remoto ti permette di guidare un modello collegato a un altro dispo
 
 ## Collegare un dispositivo con gli hub {#connect-a-hub-device}
 
-1. Sul telecomando, apri il profilo e premi **Controllo remoto** (l'icona del telecomando: una casetta con le onde del segnale) nella barra superiore del profilo. Nell'editor web, premi **Mostra il codice** nel pannello che si apre.
+1. Sul telecomando, apri il profilo e premi **Controllo remoto** (l'icona del telecomando: una casetta con le onde del segnale) nella barra superiore del profilo, accanto ad **Avvia**. Nell'editor web, premi **Mostra il codice** nel pannello che si apre.
 
    Il telecomando mostra un **codice di connessione**: un codice QR e 6 cifre.
 2. Sul dispositivo con gli hub, apri MOCPilot e tocca **Connetti un telecomando** nella pagina **I miei profili**. Su Mac puoi anche scegliere **File → Connetti un telecomando…**.

@@ -25,7 +25,7 @@ Logicablokken heeft een eigen set blokken en een eigen gedrag. Je kunt MOCPilot-
 
 - Het **palet** toont de blokcategorieën: **Gebeurtenissen**, **Besturing**, **Sensoren**, **Geluiden**, **Operator**, **Variabelen**, **Lijsten** en **Mijn blokken**. Andere categorieën verschijnen als je profiel ze nodig heeft: **Motoren** en **Licht** (als een hub ze ondersteunt), **Simulator** (als het dashboard pedalen, een versnellingsbak of een handrem heeft), **Dashboardbedieningselementen** en **Gamepad**.
 - In het **programmagebied** sleep je blokken en bouw je scripts.
-- De bovenbalk bevat **Mijn hubs**, **Dashboard**, **Gamepad**, **Monitor**, **Editorinstellingen**, de **AI-bouwer** en **Start/Stop**.
+- De bovenbalk bevat **Ongedaan maken** en **Opnieuw**, **Dashboard**, **Mijn hubs**, **Gamepad**, de zijpanelen **AI-bouwer**, [**Rugzak**](/docs/Application/BlockBuilder/Backpack) en **Monitor**, **Meer** (met **Editorinstellingen**) en **Start/Stop**. Op een telefoon of tablet staan de zijpanelen en Gamepad in **Meer**.
 
 Zie [Werken in de editor](/docs/Application/BlockBuilder/Editor) voor details.
 

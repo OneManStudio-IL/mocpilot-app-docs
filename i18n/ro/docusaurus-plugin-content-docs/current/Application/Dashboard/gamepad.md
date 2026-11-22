@@ -15,7 +15,7 @@ Gamepadul funcționează împreună cu tabloul de bord; le poți folosi pe amân
 ## Conectează un gamepad {#connect-a-gamepad}
 
 1. Asociază gamepadul cu telefonul, tableta sau computerul din setările Bluetooth ale sistemului (sau conectează-l prin USB).
-2. Deschide un profil și atinge **Gamepad** în editor.
+2. Deschide un profil și mergi la **Gamepad**: în bara de sus a editorului pe computer, în **Mai mult** pe telefon sau tabletă (scrie **Gamepad (conectat)** când sistemul vede un gamepad).
 3. Antetul paginii afișează **Gamepad: (nume)**. „Gamepad nu este conectat” înseamnă că sistemul încă nu îl vede.
 
 <Screenshot name="gamepad" alt="Pagina Gamepad" width={900} />

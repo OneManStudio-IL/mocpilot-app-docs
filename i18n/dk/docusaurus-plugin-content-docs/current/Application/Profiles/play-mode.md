@@ -15,13 +15,13 @@ En profil har to tilstande:
 
 ## Start og stop {#start-and-stop}
 
-Tryk på **Kør** (▶) i editoren eller på dashboardet (computer: **Program → Kør**, ⌘R / Ctrl+R). Tryk på **Stop** (■) for at vende tilbage til redigering (⌘. / Ctrl+.).
+Tryk på **Kør** (▶) yderst til højre i editorens topbjælke; på en telefon eller tablet har dashboardet den også. På en computer er **Kør** den orange knap i editoren (også **Program → Kør**, ⌘R / Ctrl+R). Tryk på **Stop** (■) for at vende tilbage til redigering (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Dashboardet, mens programmet kører" width={900} />
 
 Mens programmet kører:
 
-- er gitterprikkerne på dashboardet og knapperne til tilføjelse og indstillinger skjult;
+- er gitterprikkerne på dashboardet skjult, og det samme er dets redigeringsknapper (på en computer er de ikke tilgængelige);
 - reagerer kontrollerne på berøring og på gamepad'en;
 - viser monitorer og indikatorer live-værdier;
 - viser editoren i Hurtige forbindelser live-værdier mellem blokkene i hver række, og rækkerne kan ikke redigeres;
@@ -33,7 +33,7 @@ Når du åbner en profil, skifter en telefon til liggende format og fuld skærm,
 
 ## Før du trykker på Kør {#before-you-press-run}
 
-- Tænd hubbene, og tjek under **Mine hubs**, at de er forbundet (mærket på knappen viser, hvor mange der er).
+- Tænd hubbene, og tjek under **Mine hubs**, at de er forbundet (tallet på knappen **Mine hubs**, **Hubs** på en computer, viser, hvor mange der er).
 - I Hurtige forbindelser skal du tjekke knappen **Problemer**: et rødt "!" betyder, at nogle rækker ikke kan køre. Se [Kørsel og løsning af problemer](/docs/Application/Links/Problems).
 - Første gang skal du sætte modellen på en stander eller holde den væk fra bordkanten.
 

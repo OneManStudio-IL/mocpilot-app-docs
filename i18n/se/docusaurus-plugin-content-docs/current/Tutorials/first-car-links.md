@@ -41,7 +41,7 @@ Programtypen kan inte ändras i efterhand. Mer om detta i [Skapa en profil](/doc
 
 ## 2. Lägg till och anslut hubben {#add-the-hub}
 
-1. Tryck på **Mina hubbar** i redigeraren.
+1. Tryck på **Mina hubbar** i redigeraren (**Hubbar** i det övre fältet på en dator).
 2. Tryck på **Lägg till en ny hubb** på en ledig plats, välj Technic Hub i listan och tryck på **Lägg till**.
 3. Slå på hubben och tryck på dess knapp. MOCPilot hittar den och ansluter; hubben ligger kvar på platsen.
 4. Om dialogrutan **Firmwareuppdatering krävs** visas trycker du på **Uppdatera** och låter hubben vara påslagen och i närheten tills uppdateringen är klar. Se [Uppdatera firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mer om detta i [Lägga till och ansluta en hubb](/docs/Application/Hubs/Connecti
 
 ## 3. Placera kontrollerna på instrumentpanelen {#dashboard}
 
-1. Öppna **Instrumentpanel** och tryck på **+** (**Lägg till kontroll**).
+1. Öppna **Instrumentpanel** och tryck på **+** (**Lägg till kontroll**; på en dator **+ Kontroll**).
 2. Välj **Joystick** i gruppen **Joysticks** och tryck på **Lägg till på instrumentpanelen**. Den får namnet **JOY1**. Låt **Axeltyp** stå kvar på **Båda axlarna (X, Y)**: upp och ned kör, vänster och höger styr.
 3. Tryck på **+** igen. Välj **Knapp** under **Knappar och växlar** och tryck på **Lägg till på instrumentpanelen**. Den får namnet **BTN1**.
 4. Dra joysticken till vänster sida och knappen till höger sida, där tummarna hamnar. Tryck på en kontroll för att ändra dess storlek (**S**, **M** eller **L**) eller utseende.
@@ -100,7 +100,7 @@ Inga ändlägen? Använd **Manuell**: ställ hjulen rakt för hand, tryck på **
 
 <Screenshot name="tutorial-car-links-rows" alt="Bilens tre färdiga rader: drivning, styrning och lampor" width={900} />
 
-När alla tre raderna är klara visar knappen **Problem** i det övre fältet en grön bock. Ett rött ”!” visar hur många problem som återstår; tryck på det och sedan på ett problem för att hoppa till raden. Se [Köra och åtgärda problem](/docs/Application/Links/Problems).
+När alla tre raderna är klara visar knappen **Problem** i det övre fältet (precis före **Kör**) en grön bock. Ett rött ”!” visar hur många problem som återstår; tryck på det och sedan på ett problem för att hoppa till raden. Se [Köra och åtgärda problem](/docs/Application/Links/Problems).
 
 ## 5. Kör och testa {#run}
 

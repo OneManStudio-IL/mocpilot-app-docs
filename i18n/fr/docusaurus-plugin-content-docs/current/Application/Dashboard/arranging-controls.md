@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Ajouter une commande {#add-a-control}
 
-1. Sur le tableau de bord, touchez **+** (**Ajouter un contrôleur**). Sur un ordinateur, la palette s'ouvre dans sa propre fenêtre.
+1. Sur le tableau de bord, touchez **+** (**Ajouter un contrôleur**) ; sur un ordinateur, cliquez sur **+ Contrôleur** à droite de la barre supérieure. Sur un ordinateur, la palette s'ouvre dans sa propre fenêtre, avec **Ajouter un contrôleur** au milieu de sa barre supérieure.
 2. Choisissez un type de commande dans la liste. Les types sont regroupés : **Manettes**, **Curseurs**, **Boutons et interrupteurs**, **Moniteurs**, puis **Véhicule et spéciaux** pour les [commandes spéciales](/docs/Application/Dashboard/SpecialControls) et **Mes designs** pour les designs que vous avez enregistrés. Pour trouver rapidement une commande, tapez dans **Rechercher des commandes**.
 3. Le bandeau des apparences montre le type sélectionné dans chaque [thème](/docs/Application/Themes/ThemesOverview) (pour une commande spéciale, toutes ses apparences). Touchez une apparence pour la voir dans le grand aperçu ; vous pouvez l'essayer directement.
 4. Réglez la commande dans **Configurer** : les onglets **Style** et **Paramètres** et la taille.
-5. Touchez **Ajouter au tableau de bord**. Sur un ordinateur, vous pouvez ajouter plusieurs commandes à la suite.
+5. Touchez **Ajouter au tableau de bord** (sur un ordinateur, le bouton orange à droite de la barre supérieure de la palette). Sur un ordinateur, vous pouvez ajouter plusieurs commandes à la suite.
 
 <Screenshot name="controller-palette" alt="La palette Ajouter un contrôleur" width={900} />
 

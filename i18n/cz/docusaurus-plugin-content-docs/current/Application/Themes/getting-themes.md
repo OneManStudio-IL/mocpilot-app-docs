@@ -10,7 +10,7 @@ description: "Vyzkoušejte, kupte a aktualizujte motivy a speciální ovládací
 
 ## Vyzkoušení motivu {#try-a-theme}
 
-1. Otevřete panel a klepněte na **+** (**Přidat ovladač**).
+1. Otevřete panel a klepněte na **+** (**Přidat ovladač**; na počítači **+ Ovladač**).
 2. Vyberte typ ovládacího prvku, například joystick. Pás stylů ho ukazuje v každém motivu; speciální ovládací prvky najdete pod **Vozidlo a speciální**.
 3. Klepnutím na styl si ho prohlédnete ve velkém náhledu a vyzkoušíte. V části **Konfigurovat** vyzkoušejte barvy, velikosti a možnosti.
 

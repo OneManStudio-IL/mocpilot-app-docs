@@ -55,7 +55,7 @@ Profilen öppnas i redigeraren. Mer om detta i [Skapa en profil](/docs/Applicati
 
 ## 5. Lägg till din hubb {#5-add-your-hub}
 
-1. Öppna **Mina hubbar** i redigeraren.
+1. Öppna **Mina hubbar** i redigeraren (**Hubbar** i det övre fältet på en dator).
 2. Tryck på **Lägg till en ny hubb** på en ledig plats, välj hubbmodell och tryck sedan på **Lägg till**.
 3. Slå på hubben, tryck på dess knapp och vänta tills MOCPilot hittar den.
 
@@ -66,7 +66,7 @@ Om appen ber om en firmwareuppdatering följer du [Uppdatera firmware](/docs/App
 ## 6. Placera kontroller på instrumentpanelen {#6-place-controls-on-the-dashboard}
 
 1. Öppna **Instrumentpanel**.
-2. Tryck på **+** (**Lägg till kontroll**), välj **Joystick** och tryck på **Lägg till på instrumentpanelen**.
+2. Tryck på **+** (**Lägg till kontroll**; på en dator **+ Kontroll**), välj **Joystick** och tryck på **Lägg till på instrumentpanelen**.
 3. Dra den dit du vill ha den. Tryck på den för att ändra storlek, färg eller beteende.
 
 <Screenshot name="controller-palette" alt="Paletten Lägg till kontroll med joysticken markerad" width={900} />

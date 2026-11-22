@@ -23,7 +23,7 @@ Med fjärrstyrning kan du köra en modell som är ansluten till en annan enhet. 
 
 ## Anslut en hubenhet {#connect-a-hub-device}
 
-1. Öppna profilen på fjärrkontrollen och tryck på **Fjärrstyrning** (fjärrkontrollikonen: ett hus med signalbågar) i profilens övre fält. I webbredigeraren trycker du på **Visa koden** i panelen som öppnas.
+1. Öppna profilen på fjärrkontrollen och tryck på **Fjärrstyrning** (fjärrkontrollikonen: ett hus med signalbågar) i profilens övre fält, bredvid **Kör**. I webbredigeraren trycker du på **Visa koden** i panelen som öppnas.
 
    Fjärrkontrollen visar en **anslutningskod**: en QR-kod och 6 siffror.
 2. Öppna MOCPilot på hubenheten och tryck på **Anslut en fjärrkontroll** på sidan **Mina profiler**. På en Mac kan du också välja **Fil → Anslut en fjärrkontroll…**.

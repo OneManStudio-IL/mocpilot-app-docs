@@ -25,7 +25,7 @@ Logikblöcke hat einen eigenen Blocksatz und ein eigenes Verhalten. Sie können 
 
 - Die **Palette** listet die Blockkategorien auf: **Ereignisse**, **Steuerung**, **Sensoren**, **Töne**, **Operator**, **Variablen**, **Listen** und **Meine Blöcke**. Weitere Kategorien erscheinen, wenn Ihr Profil sie braucht: **Motoren** und **Licht** (wenn ein Hub sie unterstützt), **Simulator** (wenn das Dashboard Pedale, ein Getriebe oder eine Handbremse hat), **Bildschirm-Controller** und **Gamepad**.
 - Im **Programmbereich** ziehen Sie Blöcke hinein und bauen Skripte.
-- Die obere Leiste enthält **Meine Hubs**, **Dashboard**, **Gamepad**, **Monitor**, **Editor-Einstellungen**, den **KI-Builder** und **Start/Stopp**.
+- Die obere Leiste enthält **Rückgängig** und **Wiederholen**, **Dashboard**, **Meine Hubs**, **Gamepad**, die Seitenbereiche **KI-Builder**, [**Rucksack**](/docs/Application/BlockBuilder/Backpack) und **Monitor**, **Mehr** (mit den **Editor-Einstellungen**) und **Start/Stopp**. Auf Smartphone und Tablet befinden sich die Seitenbereiche und das Gamepad unter **Mehr**.
 
 Einzelheiten unter [Arbeiten im Editor](/docs/Application/BlockBuilder/Editor).
 

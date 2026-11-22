@@ -23,7 +23,7 @@ Zdalne sterowanie pozwala sterować modelem połączonym z innym urządzeniem. J
 
 ## Łączenie urządzenia z hubami {#connect-a-hub-device}
 
-1. Na pilocie otwórz profil i naciśnij **Zdalne sterowanie** (ikona pilota: domek z łukami sygnału) na górnym pasku profilu. W edytorze webowym naciśnij **Pokaż kod** w panelu, który się otworzy.
+1. Na pilocie otwórz profil i naciśnij **Zdalne sterowanie** (ikona pilota: domek z łukami sygnału) na górnym pasku profilu, obok **Uruchom**. W edytorze webowym naciśnij **Pokaż kod** w panelu, który się otworzy.
 
    Pilot pokaże **kod połączenia**: kod QR i 6 cyfr.
 2. Na urządzeniu z hubami otwórz MOCPilot i stuknij **Połącz pilota** na stronie **Moje profile**. Na Macu możesz też wybrać **Plik → Połącz pilota…**.

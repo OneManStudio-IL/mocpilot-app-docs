@@ -41,7 +41,7 @@ Programtypen kan ikke endres senere. Mer i [Opprett en profil](/docs/Application
 
 ## 2. Legg til og koble til huben {#add-the-hub}
 
-1. Trykk **Mine hubber** i editoren.
+1. Trykk **Mine hubber** i editoren (**Hubber** i topplinjen på en datamaskin).
 2. Trykk **Legg til en ny hub** i en ledig plass, velg Technic Hub i listen og trykk **Legg til**.
 3. Slå på huben og trykk på knappen på den. MOCPilot finner den og kobler til; huben blir liggende i plassen.
 4. Hvis dialogen **Fastvareoppdatering kreves** vises, trykker du **Oppdater** og holder huben påslått og i nærheten til oppdateringen er ferdig. Se [Oppdatere fastvaren](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mer i [Legg til og koble til en hub](/docs/Application/Hubs/ConnectingHubs).
 
 ## 3. Sett kontrollene på dashboardet {#dashboard}
 
-1. Åpne **Dashboard** og trykk **+** (**Legg til kontroller**).
+1. Åpne **Dashboard** og trykk **+** (**Legg til kontroller**; på en datamaskin **+ Kontroller**).
 2. I gruppen **Joysticks** velger du **Joystick** og trykker **Legg til på dashboard**. Den får namnet **JOY1**. La **Aksetype** stå på **Begge akser (X, Y)**: opp og ned kjører, venstre og høyre styrer.
 3. Trykk **+** igjen. Under **Knappar og brytarar** velger du **Knapp** og trykker **Legg til på dashboard**. Den får namnet **BTN1**.
 4. Dra joysticken til venstre side og knappen til høyre side, der tomlene dine er. Trykk på en kontroll for å endre størrelsen (**S**, **M** eller **L**) eller utseendet.
@@ -100,7 +100,7 @@ Ingen endestopp? Bruk **Manuell**: sett hjulene rett med hånden, trykk **Sett s
 
 <Screenshot name="tutorial-car-links-rows" alt="De tre ferdige radene for bilen: fremdrift, styring og lys" width={900} />
 
-Når alle tre radene er klare, viser **Problemer**-knappen i topplinjen en grønn hake. Et rødt «!» forteller hvor mange problemer som gjenstår; trykk på det og deretter på et problem for å hoppe til raden. Se [Kjøre og rette problemer](/docs/Application/Links/Problems).
+Når alle tre radene er klare, viser **Problemer**-knappen i topplinjen (rett før **Kjør**) en grønn hake. Et rødt «!» forteller hvor mange problemer som gjenstår; trykk på det og deretter på et problem for å hoppe til raden. Se [Kjøre og rette problemer](/docs/Application/Links/Problems).
 
 ## 5. Kjør og test {#run}
 

@@ -145,7 +145,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## 7. 运行并观察监视器 {#monitor}
 
-如果某些功能没有按预期工作，请查看数值。顶部栏中的[监视器](/docs/Application/BlockBuilder/Editor#monitor)会在程序运行时显示每个变量。
+如果某些功能没有按预期工作，请查看数值。[监视器](/docs/Application/BlockBuilder/Editor#monitor)（在电脑上位于顶栏中，在手机或平板上位于**更多**中）会在程序运行时显示每个变量。
 
 1. 创建一个变量 `throttle`。
 2. 在循环中把操纵杆数值存入该变量，并用这个变量作为电机速度：

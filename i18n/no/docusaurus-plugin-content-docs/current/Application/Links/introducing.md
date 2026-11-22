@@ -38,7 +38,7 @@ Direkte utganger (Indikator, Hub-LED, LED-matrise, Kalibrer servoer) trenger ing
 
 - **Radene** fyller skjermen og rulles loddrett. Nye rader starter i den siste, tomme raden («Ny rad: inngang»).
 - **Paletten** nederst har tre faner: **Innganger**, **Behandling** og **Utganger**. Den bygges ut fra profilen din: hver kontroll på dashboardet og hver hub i Mine hubber vises automatisk, spillkontrolleren vises når gamepad-blokkene er slått på, og en handling vises bare hvis en hub i profilen kan utføre den.
-- Knappen **Problemer** i topplinjen viser en grønn hake når alle radene er klare, eller et rødt «!» med antall problemer.
+- Radstatusen i topplinjen, rett før **Kjør**, viser en grønn hake når alle radene er klare, eller et rødt «!» med antall problemer. På en datamaskin står det også **Alle rader er klare** eller **Problemer: N**.
 
 ## Bygg en rad {#build-a-row}
 
@@ -71,7 +71,7 @@ Trykk på **Kjør**. Mens programmet kjører, viser hver skjøt **sanntidsverdie
 
 ## Angre {#undo}
 
-**Angre** og **Gjør om** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller de flytende knappene) går opptil 100 trinn tilbake. De er ikke tilgjengelige mens programmet kjører.
+**Angre** og **Gjør om** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller knappene i topplinjen) går opptil 100 trinn tilbake. De er ikke tilgjengelige mens programmet kjører.
 
 ## Les mer {#read-more}
 

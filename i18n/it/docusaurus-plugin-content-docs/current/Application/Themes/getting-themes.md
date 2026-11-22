@@ -10,7 +10,7 @@ Non c'è una schermata negozio separata: sfogli e acquisti i temi proprio dove l
 
 ## Provare un tema {#try-a-theme}
 
-1. Apri la dashboard e tocca **+** (**Aggiungi controller**).
+1. Apri la dashboard e tocca **+** (**Aggiungi controller**; su un computer, **+ Controller**).
 2. Seleziona un tipo di controllo, ad esempio un joystick. La striscia degli aspetti lo mostra in ogni tema; i controlli speciali si trovano in **Veicolo e speciali**.
 3. Tocca un aspetto per vederlo nell'anteprima grande e provarlo. In **Configura**, prova colori, dimensioni e opzioni.
 

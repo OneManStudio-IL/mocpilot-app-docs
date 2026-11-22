@@ -24,9 +24,9 @@ Los perfiles, los editores y el panel son iguales en todas partes; solo cambia l
 - **Cuenta** está en la parte superior de **Configuración**.
 - La cabecera de **Mis perfiles** tiene **Ordenar y filtrar**, **Conectar un mando remoto** (el icono del mando a distancia), **+** (Nuevo perfil, Importar perfil…, Buscar en línea) y el campo de búsqueda.
 - Las pantallas principales están en vertical. Al abrir un perfil, la app pasa a **horizontal, pantalla completa**, para que el editor y el panel aprovechen toda la pantalla. Al cerrar el perfil vuelve la orientación vertical.
-- En el editor, los botones redondos de la parte superior dan acceso rápido a Inicio, Deshacer, Rehacer, Asistente IA, Configuración del editor, Problemas (Enlaces rápidos), Gamepad, Mis hubs, Control remoto, Panel, Monitor (Bloques lógicos) y Ejecutar / Detener.
+- En el editor, **Inicio** está a la izquierda de la barra superior. A la derecha están **Deshacer** y **Rehacer**, **Panel**, **Mis hubs** (con el número de hubs conectados), **Problemas** (Enlaces rápidos), **Control remoto**, **Más** (⋯) y **Ejecutar / Detener**. **Más** incluye **Asistente IA**, [**Mochila**](/docs/Application/BlockBuilder/Backpack) y **Monitor** (Bloques lógicos), **Gamepad** y **Configuración del editor**. En una pantalla estrecha, Panel y Mis hubs también pasan a **Más**, para que los botones mantengan un tamaño cómodo para el dedo.
 
-<Screenshot name="editor-phone" alt="Editor de perfiles en un teléfono con los botones redondos en la parte superior" width={900} />
+<Screenshot name="editor-phone" alt="Editor de perfiles en un teléfono con su barra superior" width={900} />
 
 ## Tablet {#tablet}
 
@@ -36,7 +36,7 @@ Los perfiles, los editores y el panel son iguales en todas partes; solo cambia l
 - La cabecera de **Mis perfiles** tiene **Nuevo perfil** (su menú también incluye Importar perfil…, Conectar un mando remoto y Buscar en línea), **Ordenar y filtrar**, **Filtrar por hashtags**, **Conectar un mando remoto** y el campo de búsqueda.
 - Toca la tarjeta de un perfil para seleccionarla: la barra inferior muestra **Compartir**, **Editar**, **Añadir a favoritos** y **Lanzar**. Toca dos veces una tarjeta para lanzar el perfil. Mantén pulsada una tarjeta para abrir su menú, que también incluye **Eliminar perfil**.
 - En pantallas anchas, Configuración y Ayuda se abren junto a la lista.
-- Un perfil se abre en horizontal, y el editor tiene los mismos botones redondos que en el teléfono.
+- Un perfil se abre en horizontal, y el editor tiene la misma barra superior que en el teléfono.
 
 ## Escritorio (Mac y Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Los perfiles, los editores y el panel son iguales en todas partes; solo cambia l
 - Configuración, Ayuda, Cuenta, Nuevo perfil, Editar perfil, el Catálogo de perfiles y otras páginas se abren como **ventanas** sobre la lista de perfiles.
 - Haz clic en la tarjeta de un perfil para ver qué puedes hacer con él (**Compartir…**, **Editar…**, **Añadir a favoritos**, **Lanzar**); con doble clic se lanza. Haz clic derecho en una tarjeta para abrir su menú, que también incluye **Eliminar perfil**.
 - En el editor, el **Panel** se abre en su **propia ventana**, para que puedas ver el programa y el panel uno junto al otro.
+
+### La barra superior del editor {#editor-top-bar}
+
+- **Izquierda**: **Inicio** (cierra el perfil), los menús **Archivo**, **Editar**, **Ver** y **Programa**, y después **Deshacer** y **Rehacer**.
+- **Centro**: el nombre del perfil y los botones de las otras secciones del perfil: **Panel**, **Hubs** (con el número de hubs conectados) y **Gamepad**. La página en la que estás no tiene botón propio.
+- **Derecha**: los paneles laterales **Asistente IA**, [**Mochila**](/docs/Application/BlockBuilder/Backpack) y **Monitor** (los dos últimos solo en Bloques lógicos), **Más** (⋯), luego el estado de las filas en Enlaces rápidos (**Todas las filas están listas** o **Problemas: N**), **Control remoto** y el botón naranja **Ejecutar** (**Detener** mientras el programa se ejecuta).
+
+**Más** siempre incluye **Configuración del editor…**. Cuando la ventana se estrecha, la barra se pliega paso a paso en lugar de apretar los botones: primero se oculta el nombre del perfil, después **Monitor**, **Mochila** y **Asistente IA** pasan a **Más**, luego **Ejecutar** se queda solo con su icono (y el estado de Enlaces rápidos solo con su icono y el número) y, por último, **Gamepad**, **Panel** y **Hubs** también pasan a **Más**. Si hay abierto un panel lateral que está en **Más**, el botón **Más** se ve teñido.
+
+La barra superior del Panel es igual: **Inicio**, **Archivo**, **Editar** y **Ver**, **Deshacer** y **Rehacer** a la izquierda; el nombre del perfil y **Bloques** (o **Enlaces**) para volver al programa en el centro; **Seleccionar**, **Configuración del panel** y **+ Controlador** a la derecha. Consulta [Editor del panel](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menús {#menus}
 
@@ -96,6 +106,7 @@ En Mac, ⌘ (Comando) hace lo mismo que Ctrl en Windows; ⇧ es Mayúsculas y �
 | Mostrar / ocultar la paleta de bloques (Bloques lógicos) | Ctrl+P | ⌘P |
 | Buscar en la paleta de bloques (Bloques lógicos) | Ctrl+F | ⌘F |
 | Monitor (Bloques lógicos) | Ctrl+Shift+M | ⇧⌘M |
+| [Mochila](/docs/Application/BlockBuilder/Backpack) (Bloques lógicos) | Ctrl+Shift+B | ⇧⌘B |
 | Acercar / alejar / tamaño real (Bloques lógicos) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Panel**
@@ -113,16 +124,17 @@ En una tablet con teclado, Ctrl+B (⌘B en un iPad) muestra u oculta la barra la
 
 ## El editor de perfiles en cada diseño {#the-profile-editor-on-every-layout}
 
-El editor no tiene pestañas. El **programa** (filas de Enlaces rápidos o Bloques lógicos) ocupa la pantalla, y los botones abren todo lo demás:
+El editor no tiene pestañas. El **programa** (filas de Enlaces rápidos o Bloques lógicos) ocupa la pantalla, y los botones de la barra superior abren todo lo demás. Algunos están en **Más** (⋯): en un teléfono o una tablet, Asistente IA, Mochila, Monitor, Gamepad y Configuración del editor; en un ordenador, Configuración del editor y todo lo que no cabe en una ventana estrecha.
 
 | Botón | Abre |
 |---|---|
-| **Mis hubs** | las [ranuras de hub](/docs/Application/Hubs/ConnectingHubs) del perfil |
+| **Mis hubs** (**Hubs** en un ordenador) | las [ranuras de hub](/docs/Application/Hubs/ConnectingHubs) del perfil |
 | **Panel** | el [panel](/docs/Application/Dashboard/DashboardOverview) |
 | **Gamepad** | la [configuración del gamepad](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | los valores de variables y listas (solo Bloques lógicos) |
+| **Mochila** | pilas de bloques que guardaste para reutilizarlas en cualquier perfil (solo Bloques lógicos); consulta [Mochila](/docs/Application/BlockBuilder/Backpack) |
 | **Configuración del editor** | las [opciones del editor](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **Asistente IA** | el [asistente IA](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemas** | las filas que no se pueden ejecutar (solo Enlaces rápidos) |
 | **Control remoto** | ejecutar el perfil en otro dispositivo y controlarlo desde aquí (MocPilot Pro); consulta [Control remoto](/docs/Application/Profiles/RemoteControl) |
-| **Ejecutar / Detener** | inicia y detiene el programa |
+| **Ejecutar / Detener** | inicia y detiene el programa (en un ordenador, el botón naranja **Ejecutar** del extremo derecho) |

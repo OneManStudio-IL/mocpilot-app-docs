@@ -17,7 +17,7 @@ Der KI-Builder ist Teil von [MocPilot Pro](/docs/Application/Account/Pro) und fu
 ## KI-Builder öffnen {#open-the-ai-builder}
 
 1. Öffnen Sie ein Profil zum Bearbeiten.
-2. Drücken Sie in der oberen Leiste die Schaltfläche **KI-Builder** (das Funkelsymbol). Auf einem Computer können Sie auch ⇧⌘I / Strg+Umschalt+I drücken.
+2. Drücken Sie auf einem Computer rechts in der oberen Leiste die Schaltfläche **KI-Builder** (das Funkelsymbol) oder ⇧⌘I / Strg+Umschalt+I; in einem schmalen Fenster befindet sie sich unter **Mehr** (⋯). Tippen Sie auf Smartphone oder Tablet auf **Mehr** → **KI-Builder**.
 3. Geben Sie Ihre Anfrage in **Was soll die KI erstellen oder ändern?** ein und drücken Sie **Senden** (oder die Eingabetaste; Umschalt+Eingabe beginnt eine neue Zeile).
 
 Ohne MocPilot Pro zeigt die Schaltfläche, was der KI-Builder kann, mit **MocPilot Pro holen** und **Nicht jetzt**.

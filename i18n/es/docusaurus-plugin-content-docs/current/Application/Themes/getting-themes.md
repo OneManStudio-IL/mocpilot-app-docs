@@ -10,7 +10,7 @@ No hay una pantalla de tienda aparte: exploras y compras los temas justo donde l
 
 ## Probar un tema {#try-a-theme}
 
-1. Abre el panel y toca **+** (**Añadir controlador**).
+1. Abre el panel y toca **+** (**Añadir controlador**; en un ordenador, **+ Controlador**).
 2. Selecciona un tipo de control, por ejemplo un joystick. La tira de apariencias lo muestra en todos los temas; los controles especiales están en **Vehículo y especiales**.
 3. Toca una apariencia para verla en la vista previa grande y probarla. En **Configurar**, prueba los colores, los tamaños y las opciones.
 

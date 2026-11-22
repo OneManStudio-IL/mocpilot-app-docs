@@ -12,7 +12,7 @@ Fiecare comandă pe care o adaugi pornește de la o temă. O poți configura în
 
 ## Configurează înainte de adăugare {#configure-before-adding}
 
-1. Deschide **Adaugă controler** (**+** pe tabloul de bord).
+1. Deschide **Adaugă controler** (**+** pe tabloul de bord, **+ Controler** pe computer).
 2. Selectează un tip de comandă și un aspect din banda de aspecte.
 3. În **Configurează**, folosește filele **Stil** și **Setări**: dimensiunea (paleta o afișează ca „L x Î puncte”), culoarea de accent, pictograma, opțiunile temei, comportamentul.
 4. Atinge **Adaugă la tabloul de bord**.

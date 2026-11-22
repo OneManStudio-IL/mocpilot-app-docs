@@ -55,7 +55,7 @@ Ouvrez le **Catalogue de profils** (**Rechercher en ligne** sur la page des prof
 
 ## 5. Ajoutez votre hub {#5-add-your-hub}
 
-1. Dans l'éditeur, ouvrez **Mes hubs**.
+1. Dans l'éditeur, ouvrez **Mes hubs** (**Hubs** dans la barre supérieure sur un ordinateur).
 2. Touchez **Ajouter un nouveau hub** dans un emplacement libre, choisissez le modèle de votre hub, puis touchez **Ajouter**.
 3. Allumez le hub, appuyez sur son bouton et attendez que MOCPilot le trouve.
 
@@ -66,7 +66,7 @@ Si l'application demande une mise à jour du firmware, suivez [Mise à jour du f
 ## 6. Placez des commandes sur le tableau de bord {#6-place-controls-on-the-dashboard}
 
 1. Ouvrez **Tableau de bord**.
-2. Touchez **+** (**Ajouter un contrôleur**), choisissez un **Joystick** et touchez **Ajouter au tableau de bord**.
+2. Touchez **+** (**Ajouter un contrôleur** ; sur un ordinateur, **+ Contrôleur**), choisissez un **Joystick** et touchez **Ajouter au tableau de bord**.
 3. Faites-le glisser à l'endroit voulu. Touchez-le pour modifier sa taille, sa couleur ou son comportement.
 
 <Screenshot name="controller-palette" alt="Palette Ajouter un contrôleur avec le joystick sélectionné" width={900} />

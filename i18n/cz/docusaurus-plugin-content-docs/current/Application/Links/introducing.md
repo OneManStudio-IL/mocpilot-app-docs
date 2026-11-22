@@ -38,7 +38,7 @@ Přímé výstupy (Indikátor, LED hubu, LED matice, Kalibrovat serva) nepotřeb
 
 - **Řádky** vyplňují obrazovku a posouvají se svisle. Nové řádky začínají v posledním, prázdném řádku („Nový řádek: vstup“).
 - **Paleta** dole má tři karty: **Vstupy**, **Zpracování** a **Výstupy**. Sestavuje se z vašeho profilu: každý ovládací prvek panelu a každý hub v Mých hubech se objeví automaticky, gamepad se objeví, když jsou zapnuté bloky gamepadu, a operace se objeví, jen pokud ji některý hub profilu umí.
-- Tlačítko **Problémy** v horní liště ukazuje zelenou fajfku, když je každý řádek připravený, nebo červený „!“ s počtem problémů.
+- Stav řádků na horní liště, hned před **Spustit**, ukazuje zelenou fajfku, když je každý řádek připravený, nebo červený „!“ s počtem problémů. Na počítači je u něj také text **Všechny řádky jsou připravené** nebo **Problémy: N**.
 
 ## Sestavení řádku {#build-a-row}
 
@@ -71,7 +71,7 @@ Stiskněte **Spustit**. Za běhu programu ukazuje každý spoj **aktuální hodn
 
 ## Zpět {#undo}
 
-**Zpět** a **Znovu** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z nebo plovoucí tlačítka) vrátí až 100 kroků. Za běhu programu nejsou k dispozici.
+**Zpět** a **Znovu** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z nebo tlačítka na horní liště) vrátí až 100 kroků. Za běhu programu nejsou k dispozici.
 
 ## Další informace {#read-more}
 

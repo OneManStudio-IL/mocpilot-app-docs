@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Onko kaikki valmista? {#is-everything-ready}
 
-Editorin yläpalkin **Ongelmat**-painike näyttää:
+Editorin yläpalkin **Ongelmat**-painike (tietokoneella juuri ennen **Suorita**-painiketta) näyttää:
 
 - **vihreän valintamerkin**: ”Kaikki rivit ovat valmiita”;
 - **punaisen ”!”**: ”Ongelmia: N”.
+
+Tietokoneella teksti on kirjoitettu painikkeeseen; kapeassa ikkunassa jäljelle jäävät vain kuvake ja ongelmien määrä. Puhelimessa ja tabletissa painikkeessa näkyy kuvake ja määrä punaisessa merkissä.
 
 Napauta sitä avataksesi ongelmapaneelin (puhelimessa sivupaneeli, tabletissa tai tietokoneella valikko). Siinä luetellaan ”Rivi N — syy”; napauta kohdetta siirtyäksesi kyseiselle riville. Ongelman aiheuttavalla lohkolla on **punainen kehys**. Kun kaikki on kunnossa, paneelissa lukee ”Jokainen käytössä oleva rivi voi toimia.”
 

@@ -23,7 +23,7 @@ Etäohjauksella voit ajaa mallia, joka on yhdistetty toiseen laitteeseen. Yksi l
 
 ## Yhdistä hub-laite {#connect-a-hub-device}
 
-1. Avaa kauko-ohjaimessa profiili ja paina profiilin yläpalkissa **Etäohjaus** (kauko-ohjauksen kuvake: talo ja signaalikaaret). Paina verkkoeditorissa avautuvassa paneelissa **Näytä koodi**.
+1. Avaa kauko-ohjaimessa profiili ja paina profiilin yläpalkissa **Suorita**-painikkeen vieressä **Etäohjaus** (kauko-ohjauksen kuvake: talo ja signaalikaaret). Paina verkkoeditorissa avautuvassa paneelissa **Näytä koodi**.
 
    Kauko-ohjain näyttää **yhteyskoodin**: QR-koodin ja 6 numeroa.
 2. Avaa hub-laitteella MOCPilot ja napauta **Omat profiilit** -sivulla **Yhdistä kauko-ohjain**. Macissa voit myös valita **Tiedosto → Yhdistä kauko-ohjain…**.

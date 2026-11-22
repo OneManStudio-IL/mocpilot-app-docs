@@ -38,7 +38,7 @@ Wyjścia bezpośrednie (Wskaźnik, Dioda LED huba, Matryca LED, Kalibracja serw)
 
 - **Wiersze** wypełniają ekran i przewijają się w pionie. Nowe wiersze zaczynasz w ostatnim, pustym wierszu („Nowy wiersz: wejście”).
 - **Paleta** na dole ma trzy karty: **Wejścia**, **Przetwarzanie** i **Wyjścia**. Powstaje na podstawie profilu: każdy kontroler panelu i każdy hub z „Moich hubów” pojawia się automatycznie, gamepad pojawia się po włączeniu bloków gamepada, a operacja pojawia się tylko wtedy, gdy potrafi ją wykonać któryś hub profilu.
-- Przycisk **Problemy** na górnym pasku pokazuje zielony ptaszek, gdy wszystkie wiersze są gotowe, albo czerwony „!” z liczbą problemów.
+- Stan wierszy na górnym pasku, tuż przed **Uruchom**, pokazuje zielony ptaszek, gdy wszystkie wiersze są gotowe, albo czerwony „!” z liczbą problemów. Na komputerze widać też napis **Wszystkie wiersze są gotowe** lub **Problemy: N**.
 
 ## Zbuduj wiersz {#build-a-row}
 
@@ -71,7 +71,7 @@ Naciśnij **Uruchom**. Gdy program działa, każde złącze pokazuje **bieżąc�
 
 ## Cofanie {#undo}
 
-**Cofnij** i **Ponów** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z albo pływające przyciski) cofają do 100 kroków. Nie są dostępne, gdy program działa.
+**Cofnij** i **Ponów** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z albo przyciski na górnym pasku) cofają do 100 kroków. Nie są dostępne, gdy program działa.
 
 ## Więcej informacji {#read-more}
 

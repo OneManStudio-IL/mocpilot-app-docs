@@ -55,7 +55,7 @@ Open de **Profielcatalogus** (**Online zoeken** op de profielenpagina) en instal
 
 ## 5. Voeg je hub toe {#5-add-your-hub}
 
-1. Open in de editor **Mijn hubs**.
+1. Open in de editor **Mijn hubs** (**Hubs** in de bovenbalk op een computer).
 2. Tik in een vrij slot op **Nieuwe hub toevoegen**, kies je hubmodel en tik op **Toevoegen**.
 3. Zet de hub aan, druk op de knop ervan en wacht tot MOCPilot hem vindt.
 
@@ -66,7 +66,7 @@ Vraagt de app om een firmware-update, volg dan [Firmware bijwerken](/docs/Applic
 ## 6. Plaats bedieningselementen op het dashboard {#6-place-controls-on-the-dashboard}
 
 1. Open **Dashboard**.
-2. Tik op **+** (**Controller toevoegen**), kies een **Joystick** en tik op **Toevoegen aan dashboard**.
+2. Tik op **+** (**Controller toevoegen**; op een computer **+ Controller**), kies een **Joystick** en tik op **Toevoegen aan dashboard**.
 3. Sleep hem naar de gewenste plek. Tik erop om de grootte, kleur of werking te wijzigen.
 
 <Screenshot name="controller-palette" alt="Het palet Controller toevoegen met de joystick geselecteerd" width={900} />

@@ -24,9 +24,9 @@ Profile, edytory i panel są wszędzie takie same; różni się tylko nawigacja.
 - **Konto** znajduje się na górze **Ustawień**.
 - Nagłówek **Moje profile** zawiera **Sortuj i filtruj**, **Połącz pilota** (ikona pilota), **+** (Nowy profil, Importuj profil…, Szukaj online) i pole wyszukiwania.
 - Główne ekrany są w orientacji pionowej. Po otwarciu profilu aplikacja przechodzi w **poziomy tryb pełnoekranowy**, dzięki czemu edytor i panel zajmują cały ekran. Po zamknięciu profilu wraca orientacja pionowa.
-- W edytorze okrągłe przyciski u góry dają szybki dostęp do: Ekran główny, Cofnij, Ponów, Kreator AI, Ustawienia edytora, Problemy (Szybkie połączenia), Gamepad, Moje huby, Zdalne sterowanie, Panel, Monitor (Bloki logiczne) oraz Uruchom / Zatrzymaj.
+- W edytorze **Ekran główny** jest po lewej stronie górnego paska. Po prawej są **Cofnij** i **Ponów**, **Panel**, **Moje huby** (z liczbą połączonych hubów), **Problemy** (Szybkie połączenia), **Zdalne sterowanie**, **Więcej** (⋯) oraz **Uruchom / Zatrzymaj**. W menu **Więcej** są **Kreator AI**, [**Plecak**](/docs/Application/BlockBuilder/Backpack) i **Monitor** (Bloki logiczne), **Gamepad** oraz **Ustawienia edytora**. Na wąskim ekranie do menu **Więcej** trafiają też Panel i Moje huby, aby przyciski zachowały wygodny dla palca rozmiar.
 
-<Screenshot name="editor-phone" alt="Edytor profilu na telefonie z okrągłymi przyciskami u góry" width={900} />
+<Screenshot name="editor-phone" alt="Edytor profilu na telefonie z górnym paskiem" width={900} />
 
 ## Tablet {#tablet}
 
@@ -36,7 +36,7 @@ Profile, edytory i panel są wszędzie takie same; różni się tylko nawigacja.
 - Nagłówek **Moje profile** zawiera **Nowy profil** (w jego menu są też Importuj profil…, Połącz pilota i Szukaj online), **Sortuj i filtruj**, **Filtruj według hashtagów**, **Połącz pilota** i pole wyszukiwania.
 - Stuknij kartę profilu, aby ją zaznaczyć: na pasku u dołu pojawią się **Udostępnij**, **Edycja**, **Dodaj do ulubionych** i **Uruchom**. Stuknij kartę dwukrotnie, aby uruchomić profil. Przytrzymaj kartę, aby otworzyć jej menu, w którym jest też **Usuń profil**.
 - Na szerokich ekranach Ustawienia i Pomoc otwierają się obok listy.
-- Profil otwiera się w orientacji poziomej, a edytor ma te same okrągłe przyciski co na telefonie.
+- Profil otwiera się w orientacji poziomej, a edytor ma ten sam górny pasek co na telefonie.
 
 ## Komputer (Mac i Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profile, edytory i panel są wszędzie takie same; różni się tylko nawigacja.
 - Ustawienia, Pomoc, Konto, Nowy profil, Edytuj profil, Katalog profili i inne strony otwierają się jako **okna** nad listą profili.
 - Kliknij kartę profilu, aby zobaczyć, co możesz z nim zrobić (**Udostępnij…**, **Edytuj…**, **Dodaj do ulubionych**, **Uruchom**); dwukrotne kliknięcie uruchamia profil. Kliknij kartę prawym przyciskiem, aby otworzyć jej menu, w którym jest też **Usuń profil**.
 - W edytorze **Panel** otwiera się we **własnym oknie**, więc program i panel możesz oglądać obok siebie.
+
+### Górny pasek edytora {#editor-top-bar}
+
+- **Po lewej**: **Ekran główny** (zamyka profil), menu **Plik**, **Edycja**, **Widok** i **Program**, a dalej **Cofnij** i **Ponów**.
+- **Pośrodku**: nazwa profilu i przyciski pozostałych części profilu: **Panel**, **Huby** (z liczbą połączonych hubów) i **Gamepad**. Strona, na której jesteś, nie ma własnego przycisku.
+- **Po prawej**: panele boczne **Kreator AI**, [**Plecak**](/docs/Application/BlockBuilder/Backpack) i **Monitor** (dwa ostatnie tylko w Blokach logicznych), **Więcej** (⋯), dalej stan wierszy w Szybkich połączeniach (**Wszystkie wiersze są gotowe** lub **Problemy: N**), **Zdalne sterowanie** i pomarańczowy przycisk **Uruchom** (**Zatrzymaj**, gdy program działa).
+
+W menu **Więcej** zawsze jest **Ustawienia edytora…**. Gdy okno się zwęża, pasek zwija się krok po kroku, zamiast ściskać przyciski: najpierw chowa się nazwa profilu, potem **Monitor**, **Plecak** i **Kreator AI** przenoszą się do menu **Więcej**, następnie z **Uruchom** zostaje sama ikona (a ze stanu Szybkich połączeń tylko ikona i liczba), a na końcu do **Więcej** trafiają też **Gamepad**, **Panel** i **Huby**. Jeśli otwarty jest panel boczny, który znajduje się w menu **Więcej**, przycisk **Więcej** jest zabarwiony.
+
+Górny pasek Panelu wygląda tak samo: po lewej **Ekran główny**, **Plik**, **Edycja** i **Widok**, **Cofnij** i **Ponów**; pośrodku nazwa profilu i **Bloki** (albo **Połączenia**), aby wrócić do programu; po prawej **Wybierz**, **Ustawienia panelu** i **+ Kontroler**. Zobacz [Edytor panelu](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menu {#menus}
 
@@ -96,6 +106,7 @@ Na Macu ⌘ (Command) działa tak jak Ctrl w Windows; ⇧ to Shift, ⌃ to Contr
 | Pokazanie / ukrycie palety bloków (Bloki logiczne) | Ctrl+P | ⌘P |
 | Wyszukiwanie w palecie bloków (Bloki logiczne) | Ctrl+F | ⌘F |
 | Monitor (Bloki logiczne) | Ctrl+Shift+M | ⇧⌘M |
+| [Plecak](/docs/Application/BlockBuilder/Backpack) (Bloki logiczne) | Ctrl+Shift+B | ⇧⌘B |
 | Powiększenie / pomniejszenie / rzeczywisty rozmiar (Bloki logiczne) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Panel**
@@ -113,16 +124,17 @@ Na tablecie z klawiaturą Ctrl+B (⌘B na iPadzie) pokazuje lub ukrywa pasek boc
 
 ## Edytor profilu w każdym układzie {#the-profile-editor-on-every-layout}
 
-Edytor nie ma kart. **Program** (wiersze Szybkich połączeń lub Bloki logiczne) wypełnia ekran, a wszystko inne otwierają przyciski:
+Edytor nie ma kart. **Program** (wiersze Szybkich połączeń lub Bloki logiczne) wypełnia ekran, a wszystko inne otwierają przyciski górnego paska. Niektóre z nich są w menu **Więcej** (⋯): na telefonie lub tablecie Kreator AI, Plecak, Monitor, Gamepad i Ustawienia edytora; na komputerze Ustawienia edytora i to, co nie mieści się w wąskim oknie.
 
 | Przycisk | Otwiera |
 |---|---|
-| **Moje huby** | [sloty na huby](/docs/Application/Hubs/ConnectingHubs) profilu |
+| **Moje huby** (**Huby** na komputerze) | [sloty na huby](/docs/Application/Hubs/ConnectingHubs) profilu |
 | **Panel** | [panel](/docs/Application/Dashboard/DashboardOverview) |
 | **Gamepad** | [ustawienia gamepada](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | wartości zmiennych i list (tylko Bloki logiczne) |
+| **Plecak** | stosy bloków zapisane do ponownego użycia w dowolnym profilu (tylko Bloki logiczne); zobacz [Plecak](/docs/Application/BlockBuilder/Backpack) |
 | **Ustawienia edytora** | [opcje edytora](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **Kreator AI** | [Kreator AI](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemy** | wiersze, których nie da się uruchomić (tylko Szybkie połączenia) |
 | **Zdalne sterowanie** | uruchomienie profilu na innym urządzeniu i sterowanie nim stąd (MocPilot Pro); zobacz [Zdalne sterowanie](/docs/Application/Profiles/RemoteControl) |
-| **Uruchom / Zatrzymaj** | uruchamia i zatrzymuje program |
+| **Uruchom / Zatrzymaj** | uruchamia i zatrzymuje program (na komputerze pomarańczowy przycisk **Uruchom** na prawym końcu) |

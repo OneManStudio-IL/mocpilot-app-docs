@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Dashboard-Editor
-description: "Das MOCPilot-Dashboard: das Feld, das Raster, die Symbolleiste, der Hintergrund und Rückgängig."
+description: "Das MOCPilot-Dashboard: das Feld, das Raster, die obere Leiste, der Hintergrund und Rückgängig."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Das **Dashboard** ist der Bildschirm, von dem aus Sie Ihr Modell steuern: Joysticks, Schieberegler, Tasten, Monitore und andere Steuerelemente. Jedes Profil hat ein Dashboard.
 
-Öffnen Sie es mit der Schaltfläche **Dashboard** im Editor (⌘2 / Strg+2 auf einem Computer).
+Öffnen Sie es mit der Schaltfläche **Dashboard** in der oberen Leiste des Editors (⌘2 / Strg+2 auf einem Computer). Auf einem Smartphone mit schmalem Bildschirm befindet sie sich unter **Mehr**.
 
 - **Smartphone und Tablet**: Das Dashboard öffnet sich im Vollbild über dem Editor.
 - **Computer**: Das Dashboard öffnet sich in einem eigenen Fenster **Dashboard**, sodass Sie es neben dem Programm behalten können.
@@ -24,19 +24,32 @@ Das **Dashboard** ist der Bildschirm, von dem aus Sie Ihr Modell steuern: Joysti
 - Im Bearbeitungsmodus wird ein **Punkteraster** aus 40 × 20 Zellen angezeigt. Steuerelemente rasten am Raster ein.
 - Steuerelemente können sich nicht überlappen. Passt ein Steuerelement nicht, kehrt es an seine vorherige Position zurück.
 
-## Symbolleiste {#toolbar}
+## Obere Leiste {#toolbar}
+
+**Smartphone und Tablet**
 
 | Schaltfläche | Funktion |
 |---|---|
 | ← | zurück zum Programmeditor |
 | Rückgängig / Wiederholen | Änderungen am Dashboard rückgängig machen und wiederholen |
-| **+** (Controller hinzufügen) | öffnet die Controller-Palette; siehe [Steuerelemente hinzufügen und anordnen](/docs/Application/Dashboard/ArrangingControls) |
+| **Auswählen** | mehrere Steuerelemente auswählen und gemeinsam sperren, entsperren, löschen oder bearbeiten; **Fertig** beendet den Modus |
 | ⚙ (Dashboard-Einstellungen) | Hintergrund- und Rasteroptionen (siehe unten) |
+| **+** (Controller hinzufügen, mit orangem Ring) | öffnet die Controller-Palette; siehe [Steuerelemente hinzufügen und anordnen](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Start** / **Stopp**: das Programm starten und stoppen |
 
-Auf einem Computer hat das Dashboard-Fenster außerdem Menüs: **Datei** (Profil schließen, In separatem Fenster öffnen, Dashboard-Einstellungen…), **Bearbeiten** (Rückgängig, Wiederholen, Controller hinzufügen…) und **Ansicht** (Blöcke ⌘1, Dashboard ⌘2).
-
 Während das Programm läuft, sind die Bearbeitungsschaltflächen ausgeblendet.
+
+**Computer und Web-Editor**
+
+Die obere Leiste sieht aus wie die des Editors:
+
+- **Links**: **Startseite** (schließt das Profil), die Menüs **Datei**, **Bearbeiten** und **Ansicht**, dann **Rückgängig** und **Wiederholen**.
+- **Mitte**: der Profilname und **Blöcke** (bzw. **Verknüpfungen** in einem Profil mit Schnellverknüpfungen, ⌘1 / Strg+1), um zum Programm zurückzukehren. Für das Dashboard selbst gibt es hier keine Schaltfläche: Es ist die Seite, auf der Sie sich befinden.
+- **Rechts**: **Auswählen**, **Dashboard-Einstellungen** (⚙) und die orange Schaltfläche **+ Controller** (Controller hinzufügen). In einem schmalen Fenster werden der Profilname und die Schaltfläche **Blöcke** ausgeblendet, und von **+ Controller** bleibt nur das **+**.
+
+Auf einem Computer hat die Leiste des Dashboards kein **Start**: Starten und stoppen Sie das Programm im Editor (⌘R / Strg+R, ⌘. / Strg+.). Während es läuft, sind **Auswählen**, **Dashboard-Einstellungen** und **+ Controller** nicht verfügbar.
+
+Menüs: **Datei** (Profil schließen, In separatem Fenster öffnen), **Bearbeiten** (Rückgängig, Wiederholen) und **Ansicht** (Blöcke ⌘1, Dashboard ⌘2). Im separaten Dashboard-Fenster zeigt die Leiste statt **Startseite** den Fenstertitel, **Datei** enthält **Fenster schließen**, und es gibt weder das Menü **Ansicht** noch die Schaltfläche **Blöcke**.
 
 ## Rückgängig und Wiederholen {#undo-and-redo}
 

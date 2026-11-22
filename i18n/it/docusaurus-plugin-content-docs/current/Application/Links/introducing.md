@@ -38,7 +38,7 @@ Le uscite dirette (Indicatore, LED dell'hub, Matrice LED, Calibra servo) non ric
 
 - Le **righe** riempiono lo schermo e scorrono in verticale. Le nuove righe si creano nell'ultima riga, quella vuota («Nuova riga: ingresso»).
 - La **palette** in basso ha tre schede: **Ingressi**, **Elaborazione** e **Uscite**. Si costruisce dal tuo profilo: ogni controllo della dashboard e ogni hub in I miei hub compaiono automaticamente, il gamepad compare quando i blocchi del gamepad sono attivi e un'operazione compare solo se un hub del profilo è in grado di eseguirla.
-- Il pulsante **Problemi** nella barra superiore mostra un segno di spunta verde quando tutte le righe sono pronte, oppure un «!» rosso con il numero di problemi.
+- Lo stato delle righe nella barra superiore, subito prima di **Avvia**, mostra un segno di spunta verde quando tutte le righe sono pronte, oppure un «!» rosso con il numero di problemi. Su un computer indica anche **Tutte le righe sono pronte** o **Problemi: N**.
 
 ## Creare una riga {#build-a-row}
 
@@ -71,7 +71,7 @@ Premi **Avvia**. Mentre il programma è in esecuzione, ogni giunzione mostra il 
 
 ## Annulla {#undo}
 
-**Annulla** e **Ripeti** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, oppure i pulsanti mobili) tornano indietro fino a 100 passaggi. Non sono disponibili mentre il programma è in esecuzione.
+**Annulla** e **Ripeti** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, oppure i pulsanti nella barra superiore) tornano indietro fino a 100 passaggi. Non sono disponibili mentre il programma è in esecuzione.
 
 ## Per saperne di più {#read-more}
 

@@ -25,7 +25,7 @@ Logické bloky majú vlastnú sadu blokov a vlastné správanie. Programy z MOCP
 
 - **Paleta** obsahuje kategórie blokov: **Udalosti**, **Kontrola**, **Senzory**, **Zvuky**, **Operátor**, **Premenné**, **Zoznamy** a **Moje bloky**. Ďalšie kategórie sa objavia, keď ich váš profil potrebuje: **Motory** a **Svetlo** (keď ich hub podporuje), **Simulátor** (keď sú na paneli pedále, prevodovka alebo ručná brzda), **Ovládače na obrazovke** a **Herný ovládač**.
 - **Programová plocha** je miesto, kam presúvate bloky a skladáte skripty.
-- Horná lišta obsahuje **Moje huby**, **Panel**, **Herný ovládač**, **Monitor**, **Nastavenia editora**, **AI staviteľ** a **Spustiť/Zastaviť**.
+- Horná lišta obsahuje **Späť** a **Znova**, **Panel**, **Moje huby**, **Herný ovládač**, bočné panely **AI staviteľ**, [**Batoh**](/docs/Application/BlockBuilder/Backpack) a **Monitor**, **Viac** (s **Nastaveniami editora**) a **Spustiť/Zastaviť**. Na telefóne alebo tablete sú bočné panely a Herný ovládač v ponuke **Viac**.
 
 Podrobnosti nájdete v časti [Práca v editore](/docs/Application/BlockBuilder/Editor).
 

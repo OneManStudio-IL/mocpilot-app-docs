@@ -55,7 +55,7 @@ Otvorte **Katalóg profilov** (**Hľadať online** na stránke profilov) a nain�
 
 ## 5. Pridajte hub {#5-add-your-hub}
 
-1. V editore otvorte **Moje huby**.
+1. V editore otvorte **Moje huby** (na počítači **Huby** na hornej lište).
 2. V prázdnom slote ťuknite na **Pridať nový hub**, vyberte model hubu a ťuknite na **Pridať**.
 3. Zapnite hub, stlačte jeho tlačidlo a počkajte, kým ho MOCPilot nájde.
 
@@ -66,7 +66,7 @@ Ak aplikácia požiada o aktualizáciu firmvéru, postupujte podľa časti [Aktu
 ## 6. Umiestnite ovládacie prvky na panel {#6-place-controls-on-the-dashboard}
 
 1. Otvorte **Panel**.
-2. Ťuknite na **+** (**Pridať ovládač**), vyberte **Joystick** a ťuknite na **Pridať na panel**.
+2. Ťuknite na **+** (**Pridať ovládač**; na počítači **+ Ovládač**), vyberte **Joystick** a ťuknite na **Pridať na panel**.
 3. Presuňte ho, kam chcete. Ťuknutím naň zmeníte jeho veľkosť, farbu alebo správanie.
 
 <Screenshot name="controller-palette" alt="Paleta Pridať ovládač s vybraným joystickom" width={900} />

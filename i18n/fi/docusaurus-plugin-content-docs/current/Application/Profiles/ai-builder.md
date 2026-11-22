@@ -17,7 +17,7 @@ Tekoälyrakentaja kuuluu [MocPilot Prohon](/docs/Application/Account/Pro) ja toi
 ## Avaa tekoälyrakentaja {#open-the-ai-builder}
 
 1. Avaa profiili muokattavaksi.
-2. Paina yläpalkin **Tekoälyrakentaja**-painiketta (kipinäkuvake). Tietokoneella voit myös painaa ⇧⌘I / Ctrl+Shift+I.
+2. Tietokoneella paina yläpalkin oikeassa reunassa olevaa **Tekoälyrakentaja**-painiketta (kipinäkuvake) tai ⇧⌘I / Ctrl+Shift+I; kapeassa ikkunassa se on kohdassa **Lisää toimintoja** (⋯). Puhelimessa tai tabletissa napauta **Lisää toimintoja** → **Tekoälyrakentaja**.
 3. Kirjoita pyyntösi kenttään **Mitä tekoälyn pitäisi rakentaa tai muuttaa?** ja paina **Lähetä** (tai Enter; Shift+Enter aloittaa uuden rivin).
 
 Ilman MocPilot Prota painike näyttää, mitä tekoälyrakentaja tekee, sekä vaihtoehdot **Hanki MocPilot Pro** ja **Ei nyt**.

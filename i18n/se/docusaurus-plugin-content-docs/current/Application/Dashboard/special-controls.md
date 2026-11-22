@@ -26,7 +26,7 @@ Specialkontroller ser ut och fungerar som de riktiga: en ratt, pedaler, en växe
 
 ## Lägga till en specialkontroll {#add-a-special-control}
 
-1. Öppna instrumentpanelen och tryck på **+** (**Lägg till kontroll**).
+1. Öppna instrumentpanelen och tryck på **+** (**Lägg till kontroll**; på en dator **+ Kontroll**).
 2. Rulla till **Fordon och special** i listan med kontrolltyper och välj en kontroll.
 3. Raden med utseenden visar alla dess utseenden. Välj ett och ställ sedan in kontrollen under **Konfigurera**.
 4. Tryck på **Lägg till på instrumentpanelen**. För en kontroll du ännu inte äger trycker du på **Köp** eller **Allt med MocPilot Pro**.

@@ -15,7 +15,7 @@ Gamepad'en virker sammen med dashboardet; du kan bruge begge på samme tid.
 ## Forbind en gamepad {#connect-a-gamepad}
 
 1. Par gamepad'en med din telefon, tablet eller computer i systemets Bluetooth-indstillinger (eller tilslut den med USB).
-2. Åbn en profil, og tryk på **Spilcontroller** i editoren.
+2. Åbn en profil, og gå til **Spilcontroller**: i editorens topbjælke på en computer, under **Mere** på en telefon eller tablet (der står **Spilcontroller (tilsluttet)**, når systemet kan se en spilcontroller).
 3. Sidens overskrift viser **Gamepad: (navn)**. "Gamepad er ikke forbundet" betyder, at systemet ikke kan se den endnu.
 
 <Screenshot name="gamepad" alt="Siden Spilcontroller" width={900} />

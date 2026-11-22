@@ -12,7 +12,7 @@ Hub do profilu přidáte jen jednou. Potom se k němu MOCPilot připojí pokažd
 
 ## Přidání hubu {#add-a-hub}
 
-1. Otevřete profil a klepněte na **Moje huby** (⇧⌘H / Ctrl+Shift+H). Stránka **Moje Bluetooth huby** zobrazí sloty.
+1. Otevřete profil a klepněte na **Moje huby** (na počítači **Huby** na horní liště nebo ⇧⌘H / Ctrl+Shift+H). Stránka **Moje Bluetooth huby** zobrazí sloty.
 2. Ve volném slotu klepněte na **Přidat nový hub**.
 3. Vyberte svůj hub ze seznamu. Filtr nahoře nabízí **Vše**, **LEGO**, **SBrick**, **BuWizz** nebo **Mould King**. Klepněte na **Přidat**.
 4. Postupujte podle pokynů na obrazovce: **Stiskněte tlačítko na rozbočovači** a **Počkejte, než vyhledávání najde rozbočovač**. Chcete-li hledat znovu, klepněte na **Spustit skenování**.
@@ -35,7 +35,7 @@ Tlačítko **Připojit** ve slotu hub připojí. Nabídka slotu obsahuje:
 - **Vyberte kanál: A / B / C**: řídicí kanál Mould King;
 - **Smazat hub**: odebere hub z profilu.
 
-Tlačítko **Moje huby** v editoru ukazuje, kolik hubů je připojeno.
+Tlačítko **Moje huby** v editoru (na počítači **Huby**) ukazuje, kolik hubů je připojeno.
 
 ## Monitor hubu {#hub-monitor}
 

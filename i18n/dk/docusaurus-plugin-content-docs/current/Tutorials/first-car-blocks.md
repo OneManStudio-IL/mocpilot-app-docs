@@ -145,7 +145,7 @@ Med en **Kontakt** i stedet for knappen er det endnu enklere: *når kontakt … 
 
 ## 7. Kør, og hold øje med Monitor {#monitor}
 
-Når noget ikke virker som forventet, så se på værdierne. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) i topbjælken viser alle variabler, mens programmet kører.
+Når noget ikke virker som forventet, så se på værdierne. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (i topbjælken på en computer, under **Mere** på en telefon eller tablet) viser alle variabler, mens programmet kører.
 
 1. Opret en variabel `gas`.
 2. Gem joystickets værdi i den i løkken, og brug variablen som motorhastighed:

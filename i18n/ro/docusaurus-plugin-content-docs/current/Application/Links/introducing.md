@@ -38,7 +38,7 @@ Ieșirile directe (Indicator, LED hub, Matrice LED, Calibrează servo-urile) nu 
 
 - **Rândurile** umplu ecranul și se derulează pe verticală. Rândurile noi încep în ultimul rând, cel gol („Rând nou: intrare”).
 - **Paleta** din partea de jos are trei file: **Intrări**, **Procesare** și **Ieșiri**. Ea se construiește din profilul tău: fiecare comandă din tabloul de bord și fiecare hub din Huburile mele apar automat, gamepadul apare când blocurile gamepadului sunt activate, iar o operație apare doar dacă un hub al profilului o poate executa.
-- Butonul **Probleme** din bara de sus arată o bifă verde când toate rândurile sunt gata sau un „!” roșu cu numărul de probleme.
+- Starea rândurilor din bara de sus, chiar înainte de **Rulează**, arată o bifă verde când toate rândurile sunt gata sau un „!” roșu cu numărul de probleme. Pe computer scrie și **Toate rândurile sunt gata** sau **Probleme: N**.
 
 ## Construiește un rând {#build-a-row}
 
@@ -71,7 +71,7 @@ Apasă **Rulează**. Cât timp programul rulează, fiecare îmbinare arată **va
 
 ## Anulare {#undo}
 
-**Anulează** și **Refă** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z sau butoanele flotante) merg înapoi până la 100 de pași. Nu sunt disponibile cât timp programul rulează.
+**Anulează** și **Refă** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z sau butoanele din bara de sus) merg înapoi până la 100 de pași. Nu sunt disponibile cât timp programul rulează.
 
 ## Mai multe informații {#read-more}
 

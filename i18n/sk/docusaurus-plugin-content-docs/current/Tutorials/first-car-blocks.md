@@ -145,7 +145,7 @@ S **Spínač** namiesto tlačidla je to ešte jednoduchšie: *keď prepínač �
 
 ## 7. Spustite a sledujte Monitor {#monitor}
 
-Keď niečo nefunguje podľa očakávania, pozrite sa na hodnoty. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) na hornej lište ukazuje počas behu programu každú premennú.
+Keď niečo nefunguje podľa očakávania, pozrite sa na hodnoty. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (na počítači na hornej lište, na telefóne alebo tablete v ponuke **Viac**) ukazuje počas behu programu každú premennú.
 
 1. Vytvorte premennú `plyn`.
 2. V cykle do nej ukladajte hodnotu joysticku a premennú použite ako rýchlosť motora:

@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Tout est prêt ? {#is-everything-ready}
 
-Le bouton **Problèmes** de la barre du haut de l’éditeur affiche :
+Le bouton **Problèmes** de la barre du haut de l’éditeur (sur un ordinateur, juste avant **Lancer**) affiche :
 
 - une **coche verte** : « Toutes les lignes sont prêtes » ;
 - un **« ! » rouge** : « Problèmes : N ».
+
+Sur un ordinateur, le texte est écrit sur le bouton ; dans une fenêtre étroite, seuls l’icône et le nombre de problèmes restent. Sur un téléphone ou une tablette, le bouton affiche l’icône, avec le nombre dans une pastille rouge.
 
 Touchez-le pour ouvrir le panneau des problèmes (un panneau latéral sur téléphone, un menu sur tablette ou ordinateur). Il liste « Ligne N — raison » ; touchez un élément pour aller à cette ligne. Le bloc à l’origine du problème est entouré d’un **cadre rouge**. Quand tout va bien, le panneau indique « Chaque ligne activée peut s'exécuter. »
 

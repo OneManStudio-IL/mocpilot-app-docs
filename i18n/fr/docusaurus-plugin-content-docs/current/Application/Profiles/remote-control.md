@@ -23,7 +23,7 @@ Le contrôle à distance vous permet de piloter un modèle connecté à un autre
 
 ## Connecter un appareil des hubs {#connect-a-hub-device}
 
-1. Sur la télécommande, ouvrez le profil et appuyez sur **Contrôle à distance** (l'icône de télécommande : une maison avec des ondes) dans la barre supérieure du profil. Dans l'éditeur web, appuyez sur **Afficher le code** dans le panneau qui s'ouvre.
+1. Sur la télécommande, ouvrez le profil et appuyez sur **Contrôle à distance** (l'icône de télécommande : une maison avec des ondes) dans la barre supérieure du profil, à côté de **Lancer**. Dans l'éditeur web, appuyez sur **Afficher le code** dans le panneau qui s'ouvre.
 
    La télécommande affiche un **code de connexion** : un code QR et 6 chiffres.
 2. Sur l'appareil des hubs, ouvrez MOCPilot et touchez **Connecter une télécommande** sur la page **Mes profils**. Sur Mac, vous pouvez aussi choisir **Fichier → Connecter une télécommande…**.

@@ -145,7 +145,7 @@ Z **Przełącznikiem** zamiast przycisku jest jeszcze prościej: *gdy przełącz
 
 ## 7. Uruchom i obserwuj Monitor {#monitor}
 
-Gdy coś nie działa zgodnie z oczekiwaniami, spójrz na wartości. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) na górnym pasku pokazuje każdą zmienną podczas działania programu.
+Gdy coś nie działa zgodnie z oczekiwaniami, spójrz na wartości. [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (na komputerze na górnym pasku, na telefonie lub tablecie w menu **Więcej**) pokazuje każdą zmienną podczas działania programu.
 
 1. Utwórz zmienną `gaz`.
 2. W pętli zapisuj w niej wartość joysticka i używaj tej zmiennej jako prędkości silnika:

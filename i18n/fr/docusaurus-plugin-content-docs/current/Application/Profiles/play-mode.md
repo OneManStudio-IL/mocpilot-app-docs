@@ -15,13 +15,13 @@ Un profil a deux modes :
 
 ## Démarrer et arrêter {#start-and-stop}
 
-Appuyez sur **Lancer** (▶) dans l'éditeur ou sur le tableau de bord (ordinateur : **Programme → Lancer**, ⌘R / Ctrl+R). Appuyez sur **Arrêter** (■) pour revenir à l'édition (⌘. / Ctrl+.).
+Appuyez sur **Lancer** (▶) à l'extrémité droite de la barre supérieure de l'éditeur ; sur un téléphone ou une tablette, le tableau de bord l'a aussi. Sur un ordinateur, **Lancer** est le bouton orange de l'éditeur (aussi **Programme → Lancer**, ⌘R / Ctrl+R). Appuyez sur **Arrêter** (■) pour revenir à l'édition (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Le tableau de bord pendant l'exécution du programme" width={900} />
 
 Pendant l'exécution du programme :
 
-- les points de la grille du tableau de bord ainsi que les boutons d'ajout et de réglages sont masqués ;
+- les points de la grille du tableau de bord sont masqués, tout comme ses boutons d'édition (sur un ordinateur, ils sont indisponibles) ;
 - les commandes réagissent au toucher et à la manette de jeu ;
 - les moniteurs et les indicateurs affichent les valeurs en direct ;
 - en Liens rapides, l'éditeur affiche les valeurs en direct entre les blocs de chaque ligne, et les lignes ne sont pas modifiables ;
@@ -33,7 +33,7 @@ L'ouverture d'un profil fait passer un téléphone en mode paysage, en plein éc
 
 ## Avant d'appuyer sur Lancer {#before-you-press-run}
 
-- Allumez les hubs et vérifiez dans **Mes hubs** qu'ils sont connectés (le badge sur le bouton indique combien le sont).
+- Allumez les hubs et vérifiez dans **Mes hubs** qu'ils sont connectés (le nombre affiché sur le bouton **Mes hubs**, **Hubs** sur un ordinateur, indique combien le sont).
 - En Liens rapides, regardez le bouton **Problèmes** : un « ! » rouge signifie que certaines lignes ne peuvent pas s'exécuter. Voir [Exécution et résolution des problèmes](/docs/Application/Links/Problems).
 - Pour le premier essai, posez le modèle sur un support ou éloignez-le du bord de la table.
 

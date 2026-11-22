@@ -10,7 +10,7 @@ Nie ma osobnego ekranu sklepu: motywy przeglądasz i kupujesz tam, gdzie ich uż
 
 ## Wypróbowanie motywu {#try-a-theme}
 
-1. Otwórz panel i stuknij **+** (**Dodaj kontroler**).
+1. Otwórz panel i stuknij **+** (**Dodaj kontroler**; na komputerze **+ Kontroler**).
 2. Wybierz typ elementu sterującego, na przykład joystick. Pasek wyglądów pokazuje go w każdym motywie; specjalne elementy sterujące są w grupie **Pojazd i specjalne**.
 3. Stuknij wygląd, aby zobaczyć go w dużym podglądzie i wypróbować. W sekcji **Konfiguruj** wypróbuj kolory, rozmiary i opcje.
 

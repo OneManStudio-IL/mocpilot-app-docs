@@ -26,7 +26,7 @@ Le **Bouton rotatif** n'est pas un produit à part : il est fourni avec chaque t
 
 ## Ajouter une commande spéciale {#add-a-special-control}
 
-1. Ouvrez le tableau de bord et touchez **+** (**Ajouter un contrôleur**).
+1. Ouvrez le tableau de bord et touchez **+** (**Ajouter un contrôleur** ; sur un ordinateur, **+ Contrôleur**).
 2. Dans la liste des types de commandes, faites défiler jusqu'à **Véhicule et spéciaux** et sélectionnez une commande.
 3. Le bandeau des apparences affiche toutes ses apparences. Choisissez-en une, puis réglez la commande dans **Configurer**.
 4. Touchez **Ajouter au tableau de bord**. Pour une commande que vous ne possédez pas encore, touchez **Acheter** ou **Tout avec MocPilot Pro**.

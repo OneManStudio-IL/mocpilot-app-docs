@@ -15,7 +15,7 @@ De gamepad werkt samen met het dashboard; je kunt beide tegelijk gebruiken.
 ## Een gamepad verbinden {#connect-a-gamepad}
 
 1. Koppel de gamepad met je telefoon, tablet of computer via de Bluetooth-instellingen van het systeem (of sluit hem aan via USB).
-2. Open een profiel en tik in de editor op **Gamepad**.
+2. Open een profiel en ga naar **Gamepad**: op een computer in de bovenbalk van de editor, op een telefoon of tablet in **Meer** (er staat **Gamepad (verbonden)** als het systeem een gamepad ziet).
 3. De kop van de pagina toont **Gamepad: (naam)**. “Gamepad is niet verbonden” betekent dat het systeem hem nog niet ziet.
 
 <Screenshot name="gamepad" alt="De pagina Gamepad" width={900} />

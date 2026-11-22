@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Legg til en kontroll {#add-a-control}
 
-1. Trykk **+** (**Legg til kontroller**) på dashboardet. På en datamaskin åpnes paletten i eget vindu.
+1. Trykk **+** (**Legg til kontroller**) på dashboardet; på en datamaskin klikker du **+ Kontroller** til høyre i topplinjen. På en datamaskin åpnes paletten i eget vindu, med **Legg til kontroller** midt i topplinjen.
 2. Velg en kontrolltype i listen. Typene er gruppert: **Joysticks**, **Skyveknapper**, **Knappar og brytarar**, **Skjermar**, deretter **Kjøretøy og spesial** for [spesialkontrollene](/docs/Application/Dashboard/SpecialControls) og **Mine design** for designene du har lagret. For å finne en kontroll raskt skriver du i **Søk i kontroller**.
 3. Utseendestripen viser den valgte typen i alle [temaer](/docs/Application/Themes/ThemesOverview) (for en spesialkontroll alle utseendene). Trykk på et utseende for å se det i den store forhåndsvisningen; du kan prøve det med en gang.
 4. Sett opp kontrollen under **Konfigurer**: fanene **Stil** og **Innstillinger** og størrelsen.
-5. Trykk **Legg til på dashboard**. På en datamaskin kan du legge til flere kontroller etter hverandre.
+5. Trykk **Legg til på dashboard** (på en datamaskin den oransje knappen til høyre i topplinjen i paletten). På en datamaskin kan du legge til flere kontroller etter hverandre.
 
 <Screenshot name="controller-palette" alt="Paletten Legg til kontroller" width={900} />
 

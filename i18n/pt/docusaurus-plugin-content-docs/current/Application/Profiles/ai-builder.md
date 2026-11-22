@@ -17,7 +17,7 @@ O construtor com IA faz parte do [MocPilot Pro](/docs/Application/Account/Pro) e
 ## Abrir o construtor com IA {#open-the-ai-builder}
 
 1. Abra um perfil para edição.
-2. Pressione o botão **Construtor com IA** (o ícone de brilhos) na barra superior. No computador, você também pode pressionar ⇧⌘I / Ctrl+Shift+I.
+2. No computador, pressione o botão **Construtor com IA** (o ícone de brilhos) à direita da barra superior, ou ⇧⌘I / Ctrl+Shift+I; em uma janela estreita, ele fica em **Mais** (⋯). No celular ou tablet, toque em **Mais** → **Construtor com IA**.
 3. Digite seu pedido em **O que a IA deve criar ou alterar?** e pressione **Enviar** (ou Enter; Shift+Enter começa uma nova linha).
 
 Sem o MocPilot Pro, o botão mostra o que o construtor com IA faz, com **Assinar o MocPilot Pro** e **Agora não**.

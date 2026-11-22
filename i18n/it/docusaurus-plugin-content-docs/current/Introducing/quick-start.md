@@ -55,7 +55,7 @@ Apri il **Catalogo dei profili** (**Cerca online** nella pagina dei profili) e i
 
 ## 5. Aggiungi il tuo hub {#5-add-your-hub}
 
-1. Nell'editor, apri **I miei hub**.
+1. Nell'editor, apri **I miei hub** (**Hub** nella barra superiore su un computer).
 2. Tocca **Aggiungi un nuovo hub** in uno slot libero, scegli il modello del tuo hub e tocca **Aggiungi**.
 3. Accendi l'hub, premi il suo pulsante e attendi che MOCPilot lo trovi.
 
@@ -66,7 +66,7 @@ Se l'app chiede un aggiornamento del firmware, segui [Aggiornamento del firmware
 ## 6. Disponi i controlli sulla dashboard {#6-place-controls-on-the-dashboard}
 
 1. Apri **Dashboard**.
-2. Tocca **+** (**Aggiungi controller**), scegli un **Joystick** e tocca **Aggiungi alla dashboard**.
+2. Tocca **+** (**Aggiungi controller**; su un computer, **+ Controller**), scegli un **Joystick** e tocca **Aggiungi alla dashboard**.
 3. Trascinalo dove preferisci. Toccalo per cambiarne dimensione, colore o comportamento.
 
 <Screenshot name="controller-palette" alt="Tavolozza Aggiungi controller con il joystick selezionato" width={900} />

@@ -25,7 +25,7 @@ Logikblock har sin egen uppsättning block och sitt eget beteende. Du kan inte i
 
 - **Paletten** listar blockkategorierna: **Händelser**, **Kontroll**, **Sensorer**, **Ljud**, **Operator**, **Variabler**, **Listor** och **Mina block**. Andra kategorier visas när profilen behöver dem: **Motorer** och **Ljus** (när en hubb stöder dem), **Simulator** (när instrumentpanelen har pedaler, en växellåda eller en handbroms), **Skärmkontroller** och **Handkontroll**.
 - **Programområdet** är där du drar block och bygger skript.
-- Det övre fältet har **Mina hubbar**, **Instrumentpanel**, **Handkontroll**, **Monitor**, **Redigerarens inställningar**, **AI-byggare** och **Kör/Stoppa**.
+- Det övre fältet har **Ångra** och **Gör om**, **Instrumentpanel**, **Mina hubbar**, **Handkontroll**, sidopanelerna **AI-byggare**, [**Ryggsäck**](/docs/Application/BlockBuilder/Backpack) och **Monitor**, **Mer** (med **Redigerarens inställningar**) och **Kör/Stoppa**. På en telefon eller surfplatta finns sidopanelerna och Handkontroll under **Mer**.
 
 Se [Arbeta i redigeraren](/docs/Application/BlockBuilder/Editor) för mer information.
 

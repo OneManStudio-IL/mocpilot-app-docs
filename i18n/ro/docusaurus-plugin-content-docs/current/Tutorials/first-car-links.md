@@ -41,7 +41,7 @@ Tipul de program nu mai poate fi schimbat ulterior. Mai multe în [Creează un p
 
 ## 2. Adaugă și conectează hubul {#add-the-hub}
 
-1. În editor, atinge **Huburile mele**.
+1. În editor, atinge **Huburile mele** (**Huburi** în bara de sus, pe computer).
 2. Atinge **Adaugă un nou hub** într-un slot liber, alege Technic Hub din listă și atinge **Adaugă**.
 3. Pornește hubul și apasă-i butonul. MOCPilot îl găsește și se conectează; hubul rămâne în slot.
 4. Dacă apare dialogul **Este necesară actualizarea firmware**, atinge **Actualizează** și ține hubul pornit și aproape până la terminarea actualizării. Vezi [Actualizarea firmware-ului](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mai multe în [Adaugă și conectează un hub](/docs/Application/Hubs/Connecting
 
 ## 3. Așază comenzile pe tabloul de bord {#dashboard}
 
-1. Deschide **Tablou de bord** și atinge **+** (**Adaugă controler**).
+1. Deschide **Tablou de bord** și atinge **+** (**Adaugă controler**; pe computer, **+ Controler**).
 2. În grupul **Joysticks**, alege **Joystick** și atinge **Adaugă la tabloul de bord**. Se numește **JOY1**. Lasă **Tip de axe** la **Ambele axe (X, Y)**: sus și jos vor conduce, stânga și dreapta vor vira.
 3. Atinge din nou **+**. În **Butoane și comutatoare**, alege **Buton** și atinge **Adaugă la tabloul de bord**. Se numește **BTN1**.
 4. Trage joystickul în partea stângă și butonul în partea dreaptă, acolo unde vor fi degetele mari. Atinge o comandă ca să-i schimbi dimensiunea (**S**, **M** sau **L**) sau aspectul.
@@ -100,7 +100,7 @@ Nu ai opritoare? Folosește **Manual**: îndreaptă roțile cu mâna, atinge **S
 
 <Screenshot name="tutorial-car-links-rows" alt="Cele trei rânduri terminate ale mașinii: tracțiune, direcție și lumini" width={900} />
 
-Când toate cele trei rânduri sunt gata, butonul **Probleme** din bara de sus afișează o bifă verde. Un „!” roșu îți arată câte probleme au mai rămas; atinge-l, apoi atinge o problemă ca să sari la rândul respectiv. Vezi [Rularea și rezolvarea problemelor](/docs/Application/Links/Problems).
+Când toate cele trei rânduri sunt gata, butonul **Probleme** din bara de sus (chiar înainte de **Rulează**) afișează o bifă verde. Un „!” roșu îți arată câte probleme au mai rămas; atinge-l, apoi atinge o problemă ca să sari la rândul respectiv. Vezi [Rularea și rezolvarea problemelor](/docs/Application/Links/Problems).
 
 ## 5. Rulează și testează {#run}
 

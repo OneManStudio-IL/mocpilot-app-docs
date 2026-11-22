@@ -23,7 +23,7 @@ O controle remoto permite dirigir um modelo conectado a outro dispositivo. Um di
 
 ## Conectar um dispositivo com os hubs {#connect-a-hub-device}
 
-1. No controle remoto, abra o perfil e pressione **Controle remoto** (o ícone de controle remoto: uma casa com arcos de sinal) na barra superior do perfil. No editor web, pressione **Mostrar o código** no painel que se abre.
+1. No controle remoto, abra o perfil e pressione **Controle remoto** (o ícone de controle remoto: uma casa com arcos de sinal) na barra superior do perfil, ao lado de **Executar**. No editor web, pressione **Mostrar o código** no painel que se abre.
 
    O controle remoto mostra um **código de conexão**: um código QR e 6 dígitos.
 2. No dispositivo com os hubs, abra o MOCPilot e toque em **Conectar um controle remoto** na página **Meus perfis**. No Mac, você também pode escolher **Arquivo → Conectar um controle remoto…**.

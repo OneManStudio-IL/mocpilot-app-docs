@@ -23,7 +23,7 @@ Diaľkové ovládanie vám umožní riadiť model, ktorý je pripojený k inému
 
 ## Pripojenie zariadenia s hubmi {#connect-a-hub-device}
 
-1. Na diaľkovom ovládači otvorte profil a na hornej lište profilu stlačte **Diaľkové ovládanie** (ikona diaľkového ovládania: domček s oblúkmi signálu). Vo webovom editore stlačte v otvorenom paneli **Zobraziť kód**.
+1. Na diaľkovom ovládači otvorte profil a na hornej lište profilu stlačte **Diaľkové ovládanie** (ikona diaľkového ovládania: domček s oblúkmi signálu) vedľa **Spustiť**. Vo webovom editore stlačte v otvorenom paneli **Zobraziť kód**.
 
    Diaľkový ovládač zobrazí **kód pripojenia**: QR kód a 6 číslic.
 2. Na zariadení s hubmi otvorte MOCPilot a na stránke **Moje profily** ťuknite na **Pripojiť diaľkový ovládač**. Na Macu môžete zvoliť aj **Súbor → Pripojiť diaľkový ovládač…**.

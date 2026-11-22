@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Lisää ohjain {#add-a-control}
 
-1. Napauta kojelaudalla **+** (**Lisää ohjain**). Tietokoneella paletti avautuu omaan ikkunaansa.
+1. Napauta kojelaudalla **+** (**Lisää ohjain**); tietokoneella napsauta yläpalkin oikeassa reunassa **+ Ohjain**. Tietokoneella paletti avautuu omaan ikkunaansa, ja sen yläpalkin keskellä on **Lisää ohjain**.
 2. Valitse luettelosta ohjaintyyppi. Tyypit on ryhmitelty: **Ohjaimet**, **Liukusäätimet**, **Painikkeet ja kytkimet**, **Näytöt**, sitten **Ajoneuvo ja erikois** [erikoisohjaimille](/docs/Application/Dashboard/SpecialControls) ja **Omat mallit** tallentamillesi malleille. Löydät ohjaimen nopeasti kirjoittamalla kenttään **Hae ohjaimia**.
 3. Ulkoasunauha näyttää valitun tyypin jokaisessa [teemassa](/docs/Application/Themes/ThemesOverview) (erikoisohjaimelle kaikki sen ulkoasut). Napauta ulkoasua nähdäksesi sen suuressa esikatselussa; voit kokeilla sitä heti siinä.
 4. Määritä ohjain kohdassa **Määritä**: välilehdet **Tyyli** ja **Asetukset** sekä koko.
-5. Napauta **Lisää kojelautaan**. Tietokoneella voit lisätä useita ohjaimia peräkkäin.
+5. Napauta **Lisää kojelautaan** (tietokoneella oranssi painike paletin yläpalkin oikeassa reunassa). Tietokoneella voit lisätä useita ohjaimia peräkkäin.
 
 <Screenshot name="controller-palette" alt="Lisää ohjain -paletti" width={900} />
 

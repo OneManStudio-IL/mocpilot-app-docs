@@ -12,7 +12,7 @@ Vous n’ajoutez un hub à un profil qu’une seule fois. Ensuite, MOCPilot s’
 
 ## Ajouter un hub {#add-a-hub}
 
-1. Ouvrez le profil et touchez **Mes hubs** (⇧⌘H / Ctrl+Maj+H). La page **Mes hubs Bluetooth** affiche les emplacements.
+1. Ouvrez le profil et touchez **Mes hubs** (sur un ordinateur, **Hubs** dans la barre supérieure ou ⇧⌘H / Ctrl+Maj+H). La page **Mes hubs Bluetooth** affiche les emplacements.
 2. Touchez **Ajouter un nouveau hub** dans un emplacement libre.
 3. Choisissez votre hub dans la liste. Le filtre en haut propose **Tout**, **LEGO**, **SBrick**, **BuWizz** ou **Mould King**. Touchez **Ajouter**.
 4. Suivez les étapes à l’écran : **Appuyez sur le bouton du hub** et **Attendez que la recherche trouve le hub**. Touchez **Démarrer le scan** pour relancer la recherche.
@@ -35,7 +35,7 @@ Le bouton **Connecter** d’un emplacement connecte le hub. Le menu de l’empla
 - **Sélectionner le canal : A / B / C** : le canal de contrôle Mould King ;
 - **Supprimer le hub** : retire le hub du profil.
 
-Le bouton **Mes hubs** de l’éditeur indique combien de hubs sont connectés.
+Le bouton **Mes hubs** de l’éditeur (**Hubs** sur un ordinateur) indique combien de hubs sont connectés.
 
 ## Moniteur du hub {#hub-monitor}
 

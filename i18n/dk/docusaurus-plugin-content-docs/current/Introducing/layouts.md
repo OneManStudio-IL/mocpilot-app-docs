@@ -24,9 +24,9 @@ Profiler, editorer og dashboardet er ens overalt; kun navigationen er forskellig
 - **Konto** ligger øverst i **Indstillinger**.
 - Overskriften på **Mine profiler** har **Sortér og filtrér**, **Forbind en fjernbetjening** (ikonet med fjernbetjeningen), **+** (Ny profil, Importér profil…, Søg online) og søgefeltet.
 - Hovedskærmene vises i portrætformat. Når du åbner en profil, skifter appen til **liggende format og fuld skærm**, så editoren og dashboardet får hele skærmen. Når du lukker profilen, vender portrætformatet tilbage.
-- I editoren giver runde knapper langs toppen hurtig adgang til Hjem, Fortryd, Gentag, AI-bygger, Editorindstillinger, Problemer (Hurtige forbindelser), Spilcontroller, Mine hubs, Fjernstyring, Dashboard, Monitor (Logikblokke) og Kør / Stop.
+- I editoren sidder **Hjem** til venstre i topbjælken. Til højre sidder **Fortryd** og **Gentag**, **Dashboard**, **Mine hubs** (med antallet af forbundne hubs), **Problemer** (Hurtige forbindelser), **Fjernstyring**, **Mere** (⋯) og **Kør / Stop**. Under **Mere** ligger **AI-bygger**, [**Rygsæk**](/docs/Application/BlockBuilder/Backpack) og **Monitor** (Logikblokke), **Spilcontroller** og **Editorindstillinger**. På en smal skærm flytter også Dashboard og Mine hubs ind under **Mere**, så knapperne bevarer en størrelse, der passer til fingrene.
 
-<Screenshot name="editor-phone" alt="Profileditoren på en telefon med de runde knapper langs toppen" width={900} />
+<Screenshot name="editor-phone" alt="Profileditoren på en telefon med dens topbjælke" width={900} />
 
 ## Tablet {#tablet}
 
@@ -36,7 +36,7 @@ Profiler, editorer og dashboardet er ens overalt; kun navigationen er forskellig
 - Overskriften på **Mine profiler** har **Ny profil** (menuen har også Importér profil…, Forbind en fjernbetjening og Søg online), **Sortér og filtrér**, **Filtrér efter hashtags**, **Forbind en fjernbetjening** og søgefeltet.
 - Tryk på et profilkort for at vælge det: bjælken nederst viser **Del**, **Rediger**, **Føj til favoritter** og **Start**. Dobbelttryk på et kort for at starte det. Tryk længe på et kort for at åbne dets menu, som også har **Slet profil**.
 - På brede skærme åbnes Indstillinger og Hjælp ved siden af listen.
-- En profil åbnes i liggende format, og editoren har de samme runde knapper som på en telefon.
+- En profil åbnes i liggende format, og editoren har den samme topbjælke som på en telefon.
 
 ## Computer (Mac og Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profiler, editorer og dashboardet er ens overalt; kun navigationen er forskellig
 - Indstillinger, Hjælp, Konto, Ny profil, Rediger profil, Profilkatalog og andre sider åbnes som **vinduer** over profillisten.
 - Klik på et profilkort for at se, hvad du kan gøre med det (**Del…**, **Rediger…**, **Føj til favoritter**, **Start**); et dobbeltklik starter det. Højreklik på et kort for at åbne dets menu, som også har **Slet profil**.
 - I editoren åbnes **Dashboard** i sit **eget vindue**, så du kan se programmet og dashboardet side om side.
+
+### Editorens topbjælke {#editor-top-bar}
+
+- **Venstre**: **Hjem** (lukker profilen), menuerne **Fil**, **Rediger**, **Vis** og **Program** og derefter **Fortryd** og **Gentag**.
+- **Midten**: profilens navn og knapperne til profilens andre dele: **Dashboard**, **Hubs** (med antallet af forbundne hubs) og **Spilcontroller**. Den side, du er på, har ingen egen knap.
+- **Højre**: sidepanelerne **AI-bygger**, [**Rygsæk**](/docs/Application/BlockBuilder/Backpack) og **Monitor** (de sidste to kun i Logikblokke), **Mere** (⋯), derefter rækkernes status i Hurtige forbindelser (**Alle rækker er klar** eller **Problemer: N**), **Fjernstyring** og den orange knap **Kør** (**Stop**, mens programmet kører).
+
+Under **Mere** finder du altid **Editorindstillinger…**. Når vinduet bliver smalt, foldes bjælken sammen trin for trin i stedet for at klemme knapperne: Først skjules profilens navn, så flytter **Monitor**, **Rygsæk** og **AI-bygger** ind under **Mere**, derefter beholder **Kør** kun sit ikon (og status i Hurtige forbindelser kun ikon og antal), og til sidst flytter også **Spilcontroller**, **Dashboard** og **Hubs** ind under **Mere**. Er et sidepanel fra **Mere** åbent, er knappen **Mere** farvet.
+
+Dashboardets topbjælke ser ens ud: **Hjem**, **Fil**, **Rediger** og **Vis**, **Fortryd** og **Gentag** til venstre; profilens navn og **Blokke** (eller **Forbindelser**) for at gå tilbage til programmet i midten; **Vælg**, **Dashboardindstillinger** og **+ Controller** til højre. Se [Dashboard-editor](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menuer {#menus}
 
@@ -96,6 +106,7 @@ På en Mac gør ⌘ (Command) det samme som Ctrl på Windows; ⇧ er Shift, ⌃ 
 | Vis / skjul blokpaletten (Logikblokke) | Ctrl+P | ⌘P |
 | Søg i blokpaletten (Logikblokke) | Ctrl+F | ⌘F |
 | Monitor (Logikblokke) | Ctrl+Shift+M | ⇧⌘M |
+| [Rygsæk](/docs/Application/BlockBuilder/Backpack) (Logikblokke) | Ctrl+Shift+B | ⇧⌘B |
 | Zoom ind / ud / faktisk størrelse (Logikblokke) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Dashboard**
@@ -113,16 +124,17 @@ På en tablet med tastatur viser eller skjuler Ctrl+B (⌘B på en iPad) sidebj�
 
 ## Profileditoren i alle layouts {#the-profile-editor-on-every-layout}
 
-Editoren har ingen faner. **Programmet** (rækker i Hurtige forbindelser eller Logikblokke) fylder skærmen, og knapper åbner alt det andet:
+Editoren har ingen faner. **Programmet** (rækker i Hurtige forbindelser eller Logikblokke) fylder skærmen, og topbjælkens knapper åbner alt det andet. Nogle af dem ligger under **Mere** (⋯): på en telefon eller tablet AI-bygger, Rygsæk, Monitor, Spilcontroller og Editorindstillinger; på en computer Editorindstillinger og det, der ikke er plads til i et smalt vindue.
 
 | Knap | Åbner |
 |---|---|
-| **Mine hubs** | profilens [hub-slots](/docs/Application/Hubs/ConnectingHubs) |
+| **Mine hubs** (**Hubs** på en computer) | profilens [hub-slots](/docs/Application/Hubs/ConnectingHubs) |
 | **Dashboard** | [dashboardet](/docs/Application/Dashboard/DashboardOverview) |
 | **Spilcontroller** | [gamepad-indstillinger](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | værdier af variabler og lister (kun Logikblokke) |
+| **Rygsæk** | blokstakke, du har gemt til genbrug i alle profiler (kun Logikblokke); se [Rygsæk](/docs/Application/BlockBuilder/Backpack) |
 | **Editorindstillinger** | [editorens indstillinger](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **AI-bygger** | [AI-byggeren](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemer** | rækker, der ikke kan køre (kun Hurtige forbindelser) |
 | **Fjernstyring** | kør profilen på en anden enhed, og styr den herfra (MocPilot Pro); se [Fjernstyring](/docs/Application/Profiles/RemoteControl) |
-| **Kør / Stop** | starter og stopper programmet |
+| **Kør / Stop** | starter og stopper programmet (på en computer den orange knap **Kør** yderst til højre) |

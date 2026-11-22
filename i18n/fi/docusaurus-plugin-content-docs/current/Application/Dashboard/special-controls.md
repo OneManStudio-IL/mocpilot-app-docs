@@ -26,7 +26,7 @@ Erikoisohjaimet näyttävät ja toimivat kuin oikeat: ohjauspyörä, polkimet, v
 
 ## Lisää erikoisohjain {#add-a-special-control}
 
-1. Avaa kojelauta ja napauta **+** (**Lisää ohjain**).
+1. Avaa kojelauta ja napauta **+** (**Lisää ohjain**; tietokoneella **+ Ohjain**).
 2. Vieritä ohjaintyyppien luettelossa kohtaan **Ajoneuvo ja erikois** ja valitse ohjain.
 3. Ulkoasunauha näyttää kaikki sen ulkoasut. Valitse yksi ja määritä ohjain kohdassa **Määritä**.
 4. Napauta **Lisää kojelautaan**. Jos sinulla ei vielä ole ohjainta, napauta **Osta** tai **Kaikki MocPilot Prolla**.

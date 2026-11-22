@@ -26,7 +26,7 @@ De **Draaiknop** is geen apart product: die hoort bij elk betaald thema. Zie [So
 
 ## Een speciaal bedieningselement toevoegen {#add-a-special-control}
 
-1. Open het dashboard en tik op **+** (**Controller toevoegen**).
+1. Open het dashboard en tik op **+** (**Controller toevoegen**; op een computer **+ Controller**).
 2. Scrol in de lijst met soorten bedieningselementen naar **Voertuig & speciaal** en selecteer een bedieningselement.
 3. De strook met stijlen toont alle stijlen ervan. Kies er een en stel het bedieningselement in bij **Configureren**.
 4. Tik op **Toevoegen aan dashboard**. Bij een bedieningselement dat je nog niet bezit, tik je op **Kopen** of **Alles met MocPilot Pro**.

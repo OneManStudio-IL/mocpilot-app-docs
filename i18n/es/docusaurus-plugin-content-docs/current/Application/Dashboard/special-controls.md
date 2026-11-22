@@ -26,7 +26,7 @@ El **Mando giratorio** no es un producto aparte: viene con cada tema de pago. Co
 
 ## Añadir un control especial {#add-a-special-control}
 
-1. Abre el panel y toca **+** (**Añadir controlador**).
+1. Abre el panel y toca **+** (**Añadir controlador**; en un ordenador, **+ Controlador**).
 2. En la lista de tipos de controles, desplázate hasta **Vehículo y especiales** y selecciona un control.
 3. La tira de apariencias muestra todas sus apariencias. Elige una y configura el control en **Configurar**.
 4. Toca **Añadir al panel**. Para un control que aún no tienes, toca **Comprar** o **Todo con MocPilot Pro**.

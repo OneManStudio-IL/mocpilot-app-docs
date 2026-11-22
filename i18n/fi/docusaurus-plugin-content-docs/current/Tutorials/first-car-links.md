@@ -41,7 +41,7 @@ Ohjelman tyyppiä ei voi muuttaa myöhemmin. Lisätietoja sivulla [Profiilin luo
 
 ## 2. Lisää ja yhdistä hubi {#add-the-hub}
 
-1. Napauta editorissa **Omat hubit**.
+1. Napauta editorissa **Omat hubit** (tietokoneella yläpalkin **Hubit**).
 2. Napauta vapaassa paikassa **Lisää uusi keskitin**, valitse luettelosta Technic Hub ja napauta **Lisää**.
 3. Kytke hubi päälle ja paina sen painiketta. MOCPilot löytää sen ja yhdistää; hubi jää paikkaansa.
 4. Jos näkyviin tulee **Laiteohjelmiston päivitys vaaditaan** -ikkuna, napauta **Päivitä** ja pidä hubi päällä ja lähellä, kunnes päivitys on valmis. Katso [Laiteohjelmiston päivittäminen](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Lisätietoja sivulla [Hubin lisääminen ja yhdistäminen](/docs/Application/Hub
 
 ## 3. Lisää ohjaimet kojelautaan {#dashboard}
 
-1. Avaa **Kojelauta** ja napauta **+** (**Lisää ohjain**).
+1. Avaa **Kojelauta** ja napauta **+** (**Lisää ohjain**; tietokoneella **+ Ohjain**).
 2. Valitse **Ohjaimet**-ryhmästä **Ohjainsauva** ja napauta **Lisää kojelautaan**. Sen nimeksi tulee **JOY1**. Jätä **Akselin tyyppi** -asetukseksi **Molemmat akselit (X, Y)**: ylös ja alas ajavat, vasemmalle ja oikealle ohjaavat.
 3. Napauta taas **+**. Valitse **Painikkeet ja kytkimet** -ryhmästä **Painike** ja napauta **Lisää kojelautaan**. Sen nimeksi tulee **BTN1**.
 4. Vedä ohjainsauva vasemmalle ja painike oikealle, peukaloidesi kohdalle. Napauta ohjainta muuttaaksesi sen kokoa (**S**, **M** tai **L**) tai tyyliä.
@@ -100,7 +100,7 @@ Ei rajoittimia? Käytä **Manuaalinen**-tilaa: käännä pyörät käsin suoraan
 
 <Screenshot name="tutorial-car-links-rows" alt="Auton kolme valmista riviä: veto, ohjaus ja valot" width={900} />
 
-Kun kaikki kolme riviä ovat valmiita, yläpalkin **Ongelmat**-painikkeessa näkyy vihreä valintamerkki. Punainen ”!” kertoo, montako ongelmaa on jäljellä; napauta sitä ja sitten ongelmaa siirtyäksesi riville. Katso [Suorittaminen ja ongelmien korjaaminen](/docs/Application/Links/Problems).
+Kun kaikki kolme riviä ovat valmiita, yläpalkin **Ongelmat**-painikkeessa (juuri ennen **Suorita**-painiketta) näkyy vihreä valintamerkki. Punainen ”!” kertoo, montako ongelmaa on jäljellä; napauta sitä ja sitten ongelmaa siirtyäksesi riville. Katso [Suorittaminen ja ongelmien korjaaminen](/docs/Application/Links/Problems).
 
 ## 5. Suorita ja testaa {#run}
 

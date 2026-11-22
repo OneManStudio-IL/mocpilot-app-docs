@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Is alles klaar? {#is-everything-ready}
 
-De knop **Problemen** in de bovenbalk van de editor toont:
+De knop **Problemen** in de bovenbalk van de editor (op een computer vlak voor **Start**) toont:
 
 - een **groen vinkje**: “Alle rijen zijn klaar”;
 - een **rood “!”**: “Problemen: N”.
+
+Op een computer staat de tekst op de knop; in een smal venster blijven alleen het pictogram en het aantal problemen over. Op een telefoon of tablet toont de knop het pictogram, met het aantal in een rood badge.
 
 Tik erop om het probleempaneel te openen (een zijpaneel op een telefoon, een menu op een tablet of computer). Het toont “Rij N — reden”; tik op een item om naar die rij te springen. Het blok dat het probleem veroorzaakt, heeft een **rood kader**. Als alles in orde is, staat er in het paneel “Elke ingeschakelde rij kan draaien.”
 

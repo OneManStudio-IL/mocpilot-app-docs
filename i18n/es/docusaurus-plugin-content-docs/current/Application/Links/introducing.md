@@ -38,7 +38,7 @@ Las salidas directas (Indicador, LED del hub, Matriz de LED, Calibrar servos) no
 
 - Las **filas** ocupan la pantalla y se desplazan en vertical. Las filas nuevas empiezan en la última fila, la vacía («Nueva fila: entrada»).
 - La **paleta** de la parte inferior tiene tres pestañas: **Entradas**, **Procesamiento** y **Salidas**. Se crea a partir de tu perfil: cada control del panel y cada hub de Mis hubs aparecen automáticamente, el gamepad aparece cuando los bloques de gamepad están activados, y una operación aparece solo si algún hub del perfil puede realizarla.
-- El botón **Problemas** de la barra superior muestra una **marca verde** cuando todas las filas están listas, o un **«!» rojo** con el número de problemas.
+- El estado de las filas en la barra superior, justo antes de **Ejecutar**, muestra una **marca verde** cuando todas las filas están listas, o un **«!» rojo** con el número de problemas. En un ordenador también indica **Todas las filas están listas** o **Problemas: N**.
 
 ## Crear una fila {#build-a-row}
 
@@ -71,7 +71,7 @@ Pulsa **Ejecutar**. Mientras el programa se ejecuta, cada unión muestra el **va
 
 ## Deshacer {#undo}
 
-**Deshacer** y **Rehacer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z o los botones flotantes) retroceden hasta 100 pasos. No están disponibles mientras el programa se ejecuta.
+**Deshacer** y **Rehacer** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z o los botones de la barra superior) retroceden hasta 100 pasos. No están disponibles mientras el programa se ejecuta.
 
 ## Más información {#read-more}
 

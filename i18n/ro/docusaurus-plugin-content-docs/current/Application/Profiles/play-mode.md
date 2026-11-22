@@ -15,13 +15,13 @@ Un profil are două moduri:
 
 ## Pornire și oprire {#start-and-stop}
 
-Apasă **Rulează** (▶) în editor sau pe tabloul de bord (computer: **Program → Rulează**, ⌘R / Ctrl+R). Apasă **Oprește** (■) ca să revii la editare (⌘. / Ctrl+.).
+Apasă **Rulează** (▶) la capătul din dreapta al barei de sus a editorului; pe telefon sau tabletă îl are și tabloul de bord. Pe computer, **Rulează** este butonul portocaliu din editor (și **Program → Rulează**, ⌘R / Ctrl+R). Apasă **Oprește** (■) ca să revii la editare (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Tabloul de bord cât timp programul rulează" width={900} />
 
 Cât timp programul rulează:
 
-- punctele grilei tabloului de bord și butoanele de adăugare și de setări sunt ascunse;
+- punctele grilei tabloului de bord sunt ascunse, la fel și butoanele lui de editare (pe computer, acestea nu sunt disponibile);
 - comenzile răspund la atingere și la gamepad;
 - monitoarele și indicatoarele afișează valori în timp real;
 - în Legături rapide, editorul afișează valori în timp real între blocurile fiecărui rând, iar rândurile nu pot fi editate;
@@ -33,7 +33,7 @@ Deschiderea unui profil trece telefonul în mod peisaj, pe tot ecranul, astfel �
 
 ## Înainte să apeși Rulează {#before-you-press-run}
 
-- Pornește huburile și verifică în **Huburile mele** că sunt conectate (insigna de pe buton arată câte sunt).
+- Pornește huburile și verifică în **Huburile mele** că sunt conectate (numărul de pe butonul **Huburile mele**, **Huburi** pe computer, arată câte sunt).
 - În Legături rapide, verifică butonul **Probleme**: un „!” roșu înseamnă că unele rânduri nu pot rula. Vezi [Rularea și rezolvarea problemelor](/docs/Application/Links/Problems).
 - La prima încercare, pune modelul pe un suport sau ține-l departe de marginea mesei.
 

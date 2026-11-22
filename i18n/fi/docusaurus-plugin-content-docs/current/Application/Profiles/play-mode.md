@@ -15,13 +15,13 @@ Profiililla on kaksi tilaa:
 
 ## Käynnistys ja pysäytys {#start-and-stop}
 
-Paina **Suorita** (▶) editorissa tai kojelaudalla (tietokoneella **Ohjelma → Suorita**, ⌘R / Ctrl+R). Palaa muokkaamaan painamalla **Pysäytä** (■) (⌘. / Ctrl+.).
+Paina **Suorita** (▶) editorin yläpalkin oikeassa reunassa; puhelimessa ja tabletissa se on myös kojelaudalla. Tietokoneella **Suorita** on editorin oranssi painike (myös **Ohjelma → Suorita**, ⌘R / Ctrl+R). Palaa muokkaamaan painamalla **Pysäytä** (■) (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Kojelauta ohjelman ollessa käynnissä" width={900} />
 
 Ohjelman ollessa käynnissä:
 
-- kojelaudan ruudukon pisteet sekä lisäys- ja asetuspainikkeet ovat piilossa;
+- kojelaudan ruudukon pisteet ovat piilossa, samoin sen muokkauspainikkeet (tietokoneella ne eivät ole käytettävissä);
 - ohjaimet reagoivat kosketukseen ja peliohjaimeen;
 - näytöt ja ilmaisimet näyttävät reaaliaikaisia arvoja;
 - Pikalinkeissä editori näyttää reaaliaikaiset arvot jokaisen rivin lohkojen välissä, eikä rivejä voi muokata;
@@ -33,7 +33,7 @@ Profiilin avaaminen siirtää puhelimen vaakasuuntaan ja koko näytön tilaan, j
 
 ## Ennen kuin painat Suorita {#before-you-press-run}
 
-- Kytke hubit päälle ja tarkista kohdassa **Omat hubit**, että ne on yhdistetty (painikkeen merkki näyttää, montako on yhdistetty).
+- Kytke hubit päälle ja tarkista kohdassa **Omat hubit**, että ne on yhdistetty (**Omat hubit** -painikkeen luku, tietokoneella **Hubit**, näyttää, montako on yhdistetty).
 - Tarkista Pikalinkeissä **Ongelmat**-painike: punainen ”!” tarkoittaa, että joitakin rivejä ei voi suorittaa. Katso [Suorittaminen ja ongelmien korjaaminen](/docs/Application/Links/Problems).
 - Nosta malli ensimmäisellä kokeilukerralla telineelle tai pidä se kaukana pöydän reunasta.
 

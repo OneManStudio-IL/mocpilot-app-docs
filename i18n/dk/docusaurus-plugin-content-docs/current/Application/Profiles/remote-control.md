@@ -23,7 +23,7 @@ Med fjernstyring kan du køre en model, der er forbundet til en anden enhed. Den
 
 ## Forbind en hubenhed {#connect-a-hub-device}
 
-1. Åbn profilen på fjernbetjeningen, og tryk på **Fjernstyring** (ikonet for fjernstyring: et hus med signalbuer) i profilens topbjælke. I webeditoren trykker du på **Vis koden** i panelet, der åbnes.
+1. Åbn profilen på fjernbetjeningen, og tryk på **Fjernstyring** (ikonet for fjernstyring: et hus med signalbuer) i profilens topbjælke ved siden af **Kør**. I webeditoren trykker du på **Vis koden** i panelet, der åbnes.
 
    Fjernbetjeningen viser en **forbindelseskode**: en QR-kode og 6 cifre.
 2. Åbn MOCPilot på hubenheden, og tryk på **Forbind en fjernbetjening** på siden **Mine profiler**. På en Mac kan du også vælge **Fil → Forbind en fjernbetjening…**.

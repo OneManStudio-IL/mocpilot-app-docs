@@ -41,7 +41,7 @@ Le type de programme ne pourra plus être changé ensuite. Pour en savoir plus, 
 
 ## 2. Ajoutez et connectez le hub {#add-the-hub}
 
-1. Dans l'éditeur, touchez **Mes hubs**.
+1. Dans l'éditeur, touchez **Mes hubs** (**Hubs** dans la barre supérieure sur un ordinateur).
 2. Touchez **Ajouter un nouveau hub** dans un emplacement libre, choisissez le Technic Hub dans la liste et touchez **Ajouter**.
 3. Allumez le hub et appuyez sur son bouton. MOCPilot le trouve et s'y connecte ; le hub reste dans l'emplacement.
 4. Si la fenêtre **Mise à jour du firmware requise** s'affiche, touchez **Mettre à jour** et gardez le hub allumé et à proximité jusqu'à la fin de la mise à jour. Voir [Mise à jour du firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Pour en savoir plus, voir [Ajouter et connecter un hub](/docs/Application/Hubs/C
 
 ## 3. Placez les commandes sur le tableau de bord {#dashboard}
 
-1. Ouvrez **Tableau de bord** et touchez **+** (**Ajouter un contrôleur**).
+1. Ouvrez **Tableau de bord** et touchez **+** (**Ajouter un contrôleur** ; sur un ordinateur, **+ Contrôleur**).
 2. Dans le groupe **Manettes**, choisissez **Manette** (le joystick) et touchez **Ajouter au tableau de bord**. Il s'appelle **JOY1**. Laissez **Type d'axes** sur **Les deux axes (X, Y)** : haut et bas serviront à avancer, gauche et droite à tourner.
 3. Touchez à nouveau **+**. Dans **Boutons et interrupteurs**, choisissez **Bouton** et touchez **Ajouter au tableau de bord**. Il s'appelle **BTN1**.
 4. Faites glisser le joystick sur le côté gauche et le bouton sur le côté droit, là où se trouveront vos pouces. Touchez une commande pour changer sa taille (**S**, **M** ou **L**) ou son apparence.
@@ -100,7 +100,7 @@ Pas de butées ? Utilisez **Manuel** : remettez les roues droites à la main, to
 
 <Screenshot name="tutorial-car-links-rows" alt="Les trois lignes terminées de la voiture : propulsion, direction et phares" width={900} />
 
-Quand les trois lignes sont prêtes, le bouton **Problèmes** de la barre supérieure affiche une coche verte. Un « ! » rouge indique le nombre de problèmes restants ; touchez-le, puis touchez un problème pour accéder à la ligne concernée. Voir [Exécution et résolution des problèmes](/docs/Application/Links/Problems).
+Quand les trois lignes sont prêtes, le bouton **Problèmes** de la barre supérieure (juste avant **Lancer**) affiche une coche verte. Un « ! » rouge indique le nombre de problèmes restants ; touchez-le, puis touchez un problème pour accéder à la ligne concernée. Voir [Exécution et résolution des problèmes](/docs/Application/Links/Problems).
 
 ## 5. Lancez et testez {#run}
 

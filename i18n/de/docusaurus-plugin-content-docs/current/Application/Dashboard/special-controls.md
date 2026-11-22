@@ -26,7 +26,7 @@ Der **Drehknopf** ist kein eigenes Produkt: Er gehört zu jedem kostenpflichtige
 
 ## Ein Spezial-Steuerelement hinzufügen {#add-a-special-control}
 
-1. Öffnen Sie das Dashboard und tippen Sie auf **+** (**Controller hinzufügen**).
+1. Öffnen Sie das Dashboard und tippen Sie auf **+** (**Controller hinzufügen**; auf einem Computer **+ Controller**).
 2. Scrollen Sie in der Liste der Steuerelementtypen zu **Fahrzeug & Spezial** und wählen Sie ein Steuerelement.
 3. Der Streifen mit den Varianten zeigt alle seine Aussehen. Wählen Sie eines und richten Sie das Steuerelement dann unter **Konfigurieren** ein.
 4. Tippen Sie auf **Zum Dashboard hinzufügen**. Für ein Steuerelement, das Sie noch nicht besitzen, tippen Sie auf **Kaufen** oder **Alles mit MocPilot Pro**.

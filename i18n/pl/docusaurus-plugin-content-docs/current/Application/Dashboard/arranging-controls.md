@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Dodawanie elementu sterującego {#add-a-control}
 
-1. Na panelu stuknij **+** (**Dodaj kontroler**). Na komputerze paleta otwiera się we własnym oknie.
+1. Na panelu stuknij **+** (**Dodaj kontroler**); na komputerze kliknij **+ Kontroler** po prawej stronie górnego paska. Na komputerze paleta otwiera się we własnym oknie, z napisem **Dodaj kontroler** pośrodku jej górnego paska.
 2. Wybierz z listy typ elementu sterującego. Typy są pogrupowane: **Dżojstiki**, **Suwaki**, **Przyciski i przełączniki**, **Monitory**, a dalej **Pojazd i specjalne** dla [specjalnych elementów sterujących](/docs/Application/Dashboard/SpecialControls) oraz **Moje projekty** dla zapisanych przez Ciebie projektów. Aby szybko znaleźć element, pisz w polu **Szukaj elementów sterujących**.
 3. Pasek wyglądów pokazuje wybrany typ w każdym [motywie](/docs/Application/Themes/ThemesOverview) (dla specjalnego elementu sterującego – wszystkie jego wyglądy). Stuknij wygląd, aby zobaczyć go w dużym podglądzie; możesz go od razu wypróbować.
 4. Skonfiguruj element w sekcji **Konfiguruj**: karty **Styl** i **Ustawienia** oraz rozmiar.
-5. Stuknij **Dodaj do panelu**. Na komputerze możesz dodać kilka elementów jeden po drugim.
+5. Stuknij **Dodaj do panelu** (na komputerze to pomarańczowy przycisk po prawej stronie górnego paska palety). Na komputerze możesz dodać kilka elementów jeden po drugim.
 
 <Screenshot name="controller-palette" alt="Paleta Dodaj kontroler" width={900} />
 

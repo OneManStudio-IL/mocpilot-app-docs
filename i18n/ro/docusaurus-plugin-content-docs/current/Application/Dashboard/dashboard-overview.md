@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Editorul tabloului de bord
-description: "Tabloul de bord MOCPilot: câmpul, grila, bara de instrumente, fundalul și anularea."
+description: "Tabloul de bord MOCPilot: câmpul, grila, bara de sus, fundalul și anularea."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Tabloul de bord** este ecranul de pe care îți conduci modelul: joystickuri, glisoare, butoane, monitoare și alte comenzi. Fiecare profil are un tablou de bord.
 
-Deschide-l cu butonul **Tablou de bord** din editor (⌘2 / Ctrl+2 pe computer).
+Deschide-l cu butonul **Tablou de bord** din bara de sus a editorului (⌘2 / Ctrl+2 pe computer). Pe un telefon cu ecran îngust, se află în **Mai mult**.
 
 - **Telefon și tabletă**: tabloul de bord se deschide pe tot ecranul, peste editor.
 - **Computer**: tabloul de bord se deschide în propria fereastră **Tablou de bord**, ca să-l poți ține lângă program.
@@ -24,19 +24,32 @@ Deschide-l cu butonul **Tablou de bord** din editor (⌘2 / Ctrl+2 pe computer).
 - În modul de editare se afișează o **grilă de puncte** de 40 × 20 de celule. Comenzile se aliniază la grilă.
 - Comenzile nu se pot suprapune. Dacă o comandă nu încape, revine unde era.
 
-## Bara de instrumente {#toolbar}
+## Bara de sus {#toolbar}
+
+**Telefon și tabletă**
 
 | Buton | Ce face |
 |---|---|
 | ← | înapoi la editorul de program |
 | Anulează / Refă | anulează și reface modificările tabloului de bord |
-| **+** (Adaugă controler) | deschide paleta de controlere; vezi [Adaugă și aranjează comenzi](/docs/Application/Dashboard/ArrangingControls) |
+| **Selectează** | selectezi mai multe comenzi ca să le blochezi, deblochezi, ștergi sau editezi împreună; **Gata** încheie selecția |
 | ⚙ (Setări tablou de bord) | opțiuni pentru fundal și grilă (mai jos) |
+| **+** (Adaugă controler, cu un inel portocaliu) | deschide paleta de controlere; vezi [Adaugă și aranjează comenzi](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Rulează** / **Oprește**: pornește și oprește programul |
 
-Pe computer, fereastra Tablou de bord are și meniuri: **Fișier** (Închide profilul, Deschide în fereastră separată, Setări tablou de bord…), **Editare** (Anulează, Refă, Adaugă controler…) și **Vizualizare** (Blocuri ⌘1, Tablou de bord ⌘2).
-
 Cât timp programul rulează, butoanele de editare sunt ascunse.
+
+**Computer și editorul web**
+
+Bara de sus arată ca cea a editorului:
+
+- **Stânga**: **Acasă** (închide profilul), meniurile **Fișier**, **Editare** și **Vizualizare**, apoi **Anulează** și **Refă**.
+- **Mijloc**: numele profilului și **Blocuri** (sau **Legături** într-un profil Legături rapide, ⌘1 / Ctrl+1) ca să revii la program. Tabloul de bord nu are buton aici: este pagina pe care te afli.
+- **Dreapta**: **Selectează**, **Setări tablou de bord** (⚙) și butonul portocaliu **+ Controler** (Adaugă controler). Într-o fereastră îngustă, numele profilului și butonul **Blocuri** se ascund, iar din **+ Controler** rămâne doar **+**.
+
+Pe computer, bara tabloului de bord nu are **Rulează**: pornește și oprește programul din editor (⌘R / Ctrl+R, ⌘. / Ctrl+.). Cât timp rulează, **Selectează**, **Setări tablou de bord** și **+ Controler** nu sunt disponibile.
+
+Meniuri: **Fișier** (Închide profilul, Deschide în fereastră separată), **Editare** (Anulează, Refă) și **Vizualizare** (Blocuri ⌘1, Tablou de bord ⌘2). În fereastra separată Tablou de bord, bara arată titlul ferestrei în loc de **Acasă**, **Fișier** are **Închide fereastra** și nu există meniul **Vizualizare** sau butonul **Blocuri**.
 
 ## Anulare și refacere {#undo-and-redo}
 

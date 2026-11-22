@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Editor della dashboard
-description: "La dashboard di MOCPilot: il campo, la griglia, la barra degli strumenti, lo sfondo e l'annullamento."
+description: "La dashboard di MOCPilot: il campo, la griglia, la barra superiore, lo sfondo e l'annullamento."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 La **dashboard** è la schermata da cui guidi il tuo modello: joystick, slider, pulsanti, monitor e altri controlli. Ogni profilo ha una dashboard.
 
-Aprila con il pulsante **Dashboard** nell'editor (⌘2 / Ctrl+2 su un computer).
+Aprila con il pulsante **Dashboard** nella barra superiore dell'editor (⌘2 / Ctrl+2 su un computer). Su uno smartphone con schermo stretto si trova in **Altro**.
 
 - **Smartphone e tablet**: la dashboard si apre a schermo intero sopra l'editor.
 - **Computer**: la dashboard si apre nella sua finestra **Dashboard**, così puoi tenerla accanto al programma.
@@ -24,19 +24,32 @@ Aprila con il pulsante **Dashboard** nell'editor (⌘2 / Ctrl+2 su un computer).
 - In modalità di modifica viene mostrata una **griglia di punti** di 40 × 20 celle. I controlli si agganciano alla griglia.
 - I controlli non possono sovrapporsi. Se un controllo non ci sta, torna dov'era.
 
-## Barra degli strumenti {#toolbar}
+## Barra superiore {#toolbar}
+
+**Smartphone e tablet**
 
 | Pulsante | Cosa fa |
 |---|---|
 | ← | torna all'editor del programma |
 | Annulla / Ripeti | annulla e ripete le modifiche alla dashboard |
-| **+** (Aggiungi controller) | apre la tavolozza dei controller; vedi [Aggiungere e disporre i controlli](/docs/Application/Dashboard/ArrangingControls) |
+| **Seleziona** | seleziona più controlli per bloccarli, sbloccarli, eliminarli o modificarli insieme; **Fine** termina la selezione |
 | ⚙ (Impostazioni della dashboard) | opzioni di sfondo e griglia (vedi sotto) |
+| **+** (Aggiungi controller, con un anello arancione) | apre la tavolozza dei controller; vedi [Aggiungere e disporre i controlli](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Avvia** / **Ferma**: avvia e ferma il programma |
 
-Su un computer, la finestra Dashboard ha anche dei menu: **File** (Chiudi profilo, Apri in una finestra separata, Impostazioni della dashboard…), **Modifica** (Annulla, Ripeti, Aggiungi controller…) e **Vista** (Blocchi ⌘1, Dashboard ⌘2).
-
 Mentre il programma è in esecuzione, i pulsanti di modifica sono nascosti.
+
+**Computer ed editor web**
+
+La barra superiore è simile a quella dell'editor:
+
+- **Sinistra**: **Home** (chiude il profilo), i menu **File**, **Modifica** e **Vista**, poi **Annulla** e **Ripeti**.
+- **Centro**: il nome del profilo e **Blocchi** (o **Collegamenti** in un profilo Collegamenti rapidi, ⌘1 / Ctrl+1) per tornare al programma. La dashboard stessa non ha un pulsante qui: è la pagina in cui ti trovi.
+- **Destra**: **Seleziona**, **Impostazioni della dashboard** (⚙) e il pulsante arancione **+ Controller** (Aggiungi controller). In una finestra stretta il nome del profilo e il pulsante **Blocchi** si nascondono, e **+ Controller** mantiene solo il suo **+**.
+
+Su un computer la barra della dashboard non ha **Avvia**: avvia e ferma il programma dall'editor (⌘R / Ctrl+R, ⌘. / Ctrl+.). Durante l'esecuzione, **Seleziona**, **Impostazioni della dashboard** e **+ Controller** non sono disponibili.
+
+Menu: **File** (Chiudi profilo, Apri in una finestra separata), **Modifica** (Annulla, Ripeti) e **Vista** (Blocchi ⌘1, Dashboard ⌘2). Nella finestra separata della Dashboard, la barra mostra il titolo della finestra al posto di **Home**, **File** contiene **Chiudi finestra** e non ci sono né il menu **Vista** né il pulsante **Blocchi**.
 
 ## Annullare e ripetere {#undo-and-redo}
 

@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Ist alles bereit? {#is-everything-ready}
 
-Die Schaltfläche **Probleme** in der oberen Leiste des Editors zeigt:
+Die Schaltfläche **Probleme** in der oberen Leiste des Editors (auf einem Computer direkt vor **Start**) zeigt:
 
 - ein **grünes Häkchen**: „Alle Zeilen sind bereit“;
 - ein **rotes „!“**: „Probleme: N“.
+
+Auf einem Computer steht der Text auf der Schaltfläche; in einem schmalen Fenster bleiben nur das Symbol und die Anzahl der Probleme. Auf Smartphone und Tablet zeigt die Schaltfläche das Symbol, die Anzahl steht in einem roten Abzeichen.
 
 Tippen Sie darauf, um den Problembereich zu öffnen (auf dem Telefon ein Seitenbereich, auf Tablet oder Computer ein Menü). Er listet „Zeile N — Grund“ auf; tippen Sie auf einen Eintrag, um zu dieser Zeile zu springen. Der Block, der das Problem verursacht, hat einen **roten Rahmen**. Ist alles in Ordnung, steht im Bereich „Jede eingeschaltete Zeile kann laufen.“
 

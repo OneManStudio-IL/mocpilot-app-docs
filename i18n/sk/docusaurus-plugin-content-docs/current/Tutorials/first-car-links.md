@@ -41,7 +41,7 @@ Typ programu sa neskôr nedá zmeniť. Viac v časti [Vytvorenie profilu](/docs/
 
 ## 2. Pridajte a pripojte hub {#add-the-hub}
 
-1. V editore ťuknite na **Moje huby**.
+1. V editore ťuknite na **Moje huby** (na počítači **Huby** na hornej lište).
 2. V prázdnom slote ťuknite na **Pridať nový hub**, v zozname vyberte Technic Hub a ťuknite na **Pridať**.
 3. Zapnite hub a stlačte jeho tlačidlo. MOCPilot ho nájde a pripojí sa; hub zostane v slote.
 4. Ak sa zobrazí dialóg **Vyžaduje sa aktualizácia firmvéru**, ťuknite na **Aktualizovať** a nechajte hub zapnutý a nablízku, kým sa aktualizácia nedokončí. Pozrite si [Aktualizácia firmvéru](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Viac v časti [Pridanie a pripojenie hubu](/docs/Application/Hubs/ConnectingHubs
 
 ## 3. Umiestnite ovládacie prvky na panel {#dashboard}
 
-1. Otvorte **Panel** a ťuknite na **+** (**Pridať ovládač**).
+1. Otvorte **Panel** a ťuknite na **+** (**Pridať ovládač**; na počítači **+ Ovládač**).
 2. V skupine **Joysticky** vyberte **Joystick** a ťuknite na **Pridať na panel**. Dostane názov **JOY1**. **Typ osí** nechajte na **Obe osi (X, Y)**: hore a dole bude ovládať jazdu, doľava a doprava riadenie.
 3. Znova ťuknite na **+**. V skupine **Tlačidlá a prepínače** vyberte **Tlačidlo** a ťuknite na **Pridať na panel**. Dostane názov **BTN1**.
 4. Presuňte joystick na ľavú stranu a tlačidlo na pravú, tam, kde budete mať palce. Ťuknutím na ovládací prvok zmeníte jeho veľkosť (**S**, **M** alebo **L**) alebo vzhľad.
@@ -100,7 +100,7 @@ Nemáte dorazy? Použite **Ručne**: rukou natočte kolesá rovno, ťuknite na *
 
 <Screenshot name="tutorial-car-links-rows" alt="Tri hotové riadky auta: jazda, riadenie a svetlá" width={900} />
 
-Keď sú všetky tri riadky pripravené, tlačidlo **Problémy** na hornej lište ukazuje zelenú značku. Červený „!“ udáva, koľko problémov zostáva; ťuknite naň a potom na problém, a prejdete na príslušný riadok. Pozrite si [Spustenie a riešenie problémov](/docs/Application/Links/Problems).
+Keď sú všetky tri riadky pripravené, tlačidlo **Problémy** na hornej lište (hneď pred **Spustiť**) ukazuje zelenú značku. Červený „!“ udáva, koľko problémov zostáva; ťuknite naň a potom na problém, a prejdete na príslušný riadok. Pozrite si [Spustenie a riešenie problémov](/docs/Application/Links/Problems).
 
 ## 5. Spustite a otestujte {#run}
 

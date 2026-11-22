@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Er alt klar? {#is-everything-ready}
 
-Knappen **Problemer** i editorens øverste bjælke viser:
+Knappen **Problemer** i editorens øverste bjælke (på en computer lige før **Kør**) viser:
 
 - et **grønt flueben**: »Alle rækker er klar«;
 - et **rødt »!«**: »Problemer: N«.
+
+På en computer står teksten på knappen; i et smalt vindue er kun ikonet og antallet af problemer tilbage. På en telefon eller tablet viser knappen ikonet med antallet i et rødt mærke.
 
 Tryk på den for at åbne problempanelet (et sidepanel på en telefon, en menu på en tablet eller computer). Det viser »Række N — årsag«; tryk på et punkt for at springe til den række. Blokken, der forårsager problemet, har en **rød ramme**. Når alt er i orden, står der i panelet »Alle rækker, der er slået til, kan køre.«
 

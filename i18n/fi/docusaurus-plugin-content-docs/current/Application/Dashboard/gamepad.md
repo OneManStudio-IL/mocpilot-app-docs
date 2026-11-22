@@ -15,7 +15,7 @@ Peliohjain toimii yhdessä kojelaudan kanssa; voit käyttää molempia samanaika
 ## Yhdistä peliohjain {#connect-a-gamepad}
 
 1. Muodosta peliohjaimen ja puhelimen, tabletin tai tietokoneen välille pari järjestelmän Bluetooth-asetuksissa (tai kytke se USB:llä).
-2. Avaa profiili ja napauta editorissa **Peliohjain**.
+2. Avaa profiili ja siirry kohtaan **Peliohjain**: tietokoneella editorin yläpalkissa, puhelimessa tai tabletissa kohdassa **Lisää toimintoja** (siinä lukee **Peliohjain (yhdistetty)**, kun järjestelmä havaitsee peliohjaimen).
 3. Sivun otsakkeessa näkyy **Peliohjain: (nimi)**. ”Peliohjainta ei ole yhdistetty” tarkoittaa, ettei järjestelmä vielä näe sitä.
 
 <Screenshot name="gamepad" alt="Peliohjain-sivu" width={900} />

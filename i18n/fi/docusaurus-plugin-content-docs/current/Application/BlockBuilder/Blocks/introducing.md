@@ -25,7 +25,7 @@ Logiikkalohkoilla on omat lohkonsa ja oma toimintansa. MOCPilot-ohjelmia ei voi 
 
 - **Paletissa** ovat lohkoluokat: **Tapahtumat**, **Hallinta**, **Anturit**, **Äänet**, **Operaattori**, **Muuttujat**, **Listat** ja **Minun lohkot**. Muut luokat näkyvät, kun profiilisi tarvitsee niitä: **Moottorit** ja **Valo** (kun hubi tukee niitä), **Simulaattori** (kun kojelaudalla on polkimet, vaihteisto tai käsijarru), **Näytön ohjaimet** ja **Peliohjain**.
 - **Ohjelma-alueelle** vedetään lohkot ja rakennetaan skriptit.
-- Yläpalkissa ovat **Omat hubit**, **Kojelauta**, **Peliohjain**, **Seuranta**, **Editorin asetukset**, **Tekoälyrakentaja** ja **Suorita/Pysäytä**.
+- Yläpalkissa ovat **Kumoa** ja **Tee uudelleen**, **Kojelauta**, **Omat hubit**, **Peliohjain**, sivupaneelit **Tekoälyrakentaja**, [**Reppu**](/docs/Application/BlockBuilder/Backpack) ja **Seuranta**, **Lisää toimintoja** (jossa on **Editorin asetukset**) sekä **Suorita/Pysäytä**. Puhelimessa ja tabletissa sivupaneelit ja Peliohjain ovat kohdassa **Lisää toimintoja**.
 
 Lisätietoja: [Työskentely editorissa](/docs/Application/BlockBuilder/Editor).
 

@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Este totul gata? {#is-everything-ready}
 
-Butonul **Probleme** din bara de sus a editorului arată:
+Butonul **Probleme** din bara de sus a editorului (pe computer, chiar înainte de **Rulează**) arată:
 
 - o **bifă verde**: „Toate rândurile sunt gata”;
 - un **„!” roșu**: „Probleme: N”.
+
+Pe computer, textul este scris pe buton; într-o fereastră îngustă rămân doar pictograma și numărul de probleme. Pe telefon sau tabletă, butonul arată pictograma, cu numărul într-o insignă roșie.
 
 Atinge-l pentru a deschide panoul de probleme (un panou lateral pe telefon, un meniu pe tabletă sau computer). Acesta listează „Rândul N — motiv”; atinge un element ca să sari la acel rând. Blocul care cauzează problema are un **cadru roșu**. Când totul este în regulă, panoul afișează „Fiecare rând pornit poate rula.”
 

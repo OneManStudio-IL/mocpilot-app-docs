@@ -24,9 +24,9 @@ Profiler, editorer og dashboardet er like overalt; bare navigasjonen er forskjel
 - **Konto** ligger øverst i **Innstillinger**.
 - Toppen av **Mine profiler** har **Sorter og filtrer**, **Koble til en fjernkontroll** (fjernkontrollikonet), **+** (Ny profil, Importer profil…, Søk på nett) og søkefeltet.
 - Hovedskjermene vises i stående format. Når du åpner en profil, bytter appen til **liggende format i fullskjerm**, slik at editoren og dashboardet får hele skjermen. Når du lukker profilen, kommer stående format tilbake.
-- I editoren gir runde knapper langs toppen rask tilgang til Hjem, Angre, Gjør om, AI-bygger, Editorinnstillinger, Problemer (Hurtigkoblinger), Spillkontroller, Mine hubber, Fjernstyring, Dashboard, Monitor (Logikkblokker) og Kjør / Stopp.
+- I editoren ligger **Hjem** til venstre i topplinjen. Til høyre ligger **Angre** og **Gjør om**, **Dashboard**, **Mine hubber** (med antall tilkoblede hubber), **Problemer** (Hurtigkoblinger), **Fjernstyring**, **Mer** (⋯) og **Kjør / Stopp**. **Mer** inneholder **AI-bygger**, [**Ryggsekk**](/docs/Application/BlockBuilder/Backpack) og **Monitor** (Logikkblokker), **Spillkontroller** og **Editorinnstillinger**. På en smal skjerm flyttes også Dashboard og Mine hubber til **Mer**, slik at knappene beholder en størrelse som passer for fingrene.
 
-<Screenshot name="editor-phone" alt="Profileditoren på en telefon med de runde knappene langs toppen" width={900} />
+<Screenshot name="editor-phone" alt="Profileditoren på en telefon med topplinjen" width={900} />
 
 ## Nettbrett {#tablet}
 
@@ -36,7 +36,7 @@ Profiler, editorer og dashboardet er like overalt; bare navigasjonen er forskjel
 - Toppen av **Mine profiler** har **Ny profil** (menyen har også Importer profil…, Koble til en fjernkontroll og Søk på nett), **Sorter og filtrer**, **Filtrer etter emneknagger**, **Koble til en fjernkontroll** og søkefeltet.
 - Trykk på et profilkort for å velge det: linjen nederst viser **Del**, **Rediger**, **Legg til i favoritter** og **Start**. Dobbelttrykk på et kort for å starte det. Hold fingeren på et kort for å åpne menyen, som også har **Slett profil**.
 - På brede skjermer åpnes Innstillinger og Hjelp ved siden av listen.
-- En profil åpnes i liggende format, og editoren har de samme runde knappene som på en telefon.
+- En profil åpnes i liggende format, og editoren har den samme topplinjen som på en telefon.
 
 ## Datamaskin (Mac og Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profiler, editorer og dashboardet er like overalt; bare navigasjonen er forskjel
 - Innstillinger, Hjelp, Konto, Ny profil, Rediger profil, Profilkatalogen og andre sider åpnes som **vinduer** over profillisten.
 - Klikk på et profilkort for å se hva du kan gjøre med det (**Del…**, **Rediger…**, **Legg til i favoritter**, **Start**); et dobbeltklikk starter det. Høyreklikk på et kort for å åpne menyen, som også har **Slett profil**.
 - I editoren åpnes **Dashboard** i **eget vindu**, slik at du kan se programmet og dashboardet side om side.
+
+### Topplinjen i editoren {#editor-top-bar}
+
+- **Venstre**: **Hjem** (lukker profilen), menyene **Fil**, **Rediger**, **Vis** og **Program**, deretter **Angre** og **Gjør om**.
+- **Midten**: profilnavnet og knappene for profilens andre deler: **Dashboard**, **Hubber** (med antall tilkoblede hubber) og **Spillkontroller**. Siden du er på, har ingen egen knapp.
+- **Høyre**: sidepanelene **AI-bygger**, [**Ryggsekk**](/docs/Application/BlockBuilder/Backpack) og **Monitor** (de to siste bare i Logikkblokker), **Mer** (⋯), deretter radstatusen i Hurtigkoblinger (**Alle rader er klare** eller **Problemer: N**), **Fjernstyring** og den oransje **Kjør**-knappen (**Stopp** mens programmet kjører).
+
+**Mer** har alltid **Editorinnstillinger…**. Når vinduet blir smalt, foldes linjen sammen trinn for trinn i stedet for at knappene klemmes sammen: først skjules profilnavnet, deretter flyttes **Monitor**, **Ryggsekk** og **AI-bygger** til **Mer**, så beholder **Kjør** bare ikonet (og Hurtigkoblinger-statusen bare ikonet og antallet), og til slutt flyttes også **Spillkontroller**, **Dashboard** og **Hubber** til **Mer**. Hvis et sidepanel som ligger under **Mer**, er åpent, er **Mer**-knappen farget.
+
+Topplinjen i Dashboard ser lik ut: **Hjem**, **Fil**, **Rediger** og **Vis**, **Angre** og **Gjør om** til venstre; profilnavnet og **Blokker** (eller **Koblinger**) for å gå tilbake til programmet i midten; **Velg**, **Dashboardinnstillinger** og **+ Kontroller** til høyre. Se [Dashboard-editoren](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menyer {#menus}
 
@@ -96,6 +106,7 @@ På Mac gjør ⌘ (Command) det samme som Ctrl på Windows; ⇧ er Shift, ⌃ er
 | Vis / skjul blokkpaletten (Logikkblokker) | Ctrl+P | ⌘P |
 | Søk i blokkpaletten (Logikkblokker) | Ctrl+F | ⌘F |
 | Monitor (Logikkblokker) | Ctrl+Shift+M | ⇧⌘M |
+| [Ryggsekk](/docs/Application/BlockBuilder/Backpack) (Logikkblokker) | Ctrl+Shift+B | ⇧⌘B |
 | Zoom inn / ut / faktisk størrelse (Logikkblokker) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Dashboard**
@@ -113,16 +124,17 @@ På et nettbrett med tastatur viser eller skjuler Ctrl+B (⌘B på iPad) sidelin
 
 ## Profileditoren i alle oppsett {#the-profile-editor-on-every-layout}
 
-Editoren har ingen faner. **Programmet** (Hurtigkoblinger-rader eller Logikkblokker) fyller skjermen, og knapper åpner alt annet:
+Editoren har ingen faner. **Programmet** (Hurtigkoblinger-rader eller Logikkblokker) fyller skjermen, og knappene i topplinjen åpner alt annet. Noen av dem ligger under **Mer** (⋯): på telefon og nettbrett AI-bygger, Ryggsekk, Monitor, Spillkontroller og Editorinnstillinger; på en datamaskin Editorinnstillinger og det som ikke får plass i et smalt vindu.
 
 | Knapp | Åpner |
 |---|---|
-| **Mine hubber** | profilens [hubplasser](/docs/Application/Hubs/ConnectingHubs) |
+| **Mine hubber** (**Hubber** på en datamaskin) | profilens [hubplasser](/docs/Application/Hubs/ConnectingHubs) |
 | **Dashboard** | [dashboardet](/docs/Application/Dashboard/DashboardOverview) |
 | **Spillkontroller** | [innstillinger for spillkontroller](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | verdier for variabler og lister (bare Logikkblokker) |
+| **Ryggsekk** | blokkstabler du har lagret for å bruke igjen i hvilken som helst profil (bare Logikkblokker); se [Ryggsekk](/docs/Application/BlockBuilder/Backpack) |
 | **Editorinnstillinger** | [editoralternativer](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **AI-bygger** | [AI-byggeren](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemer** | rader som ikke kan kjøres (bare Hurtigkoblinger) |
 | **Fjernstyring** | kjør profilen på en annen enhet og styr den herfra (MocPilot Pro); se [Fjernstyring](/docs/Application/Profiles/RemoteControl) |
-| **Kjør / Stopp** | starter og stopper programmet |
+| **Kjør / Stopp** | starter og stopper programmet (på en datamaskin den oransje **Kjør**-knappen helt til høyre) |

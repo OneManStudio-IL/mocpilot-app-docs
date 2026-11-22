@@ -12,7 +12,7 @@ Un hub si aggiunge a un profilo una sola volta. Da quel momento MOCPilot si coll
 
 ## Aggiungere un hub {#add-a-hub}
 
-1. Apri il profilo e tocca **I miei hub** (⇧⌘H / Ctrl+Shift+H). La pagina **I miei hub Bluetooth** mostra gli slot.
+1. Apri il profilo e tocca **I miei hub** (su un computer, **Hub** nella barra superiore oppure ⇧⌘H / Ctrl+Shift+H). La pagina **I miei hub Bluetooth** mostra gli slot.
 2. Tocca **Aggiungi un nuovo hub** in uno slot libero.
 3. Scegli il tuo hub dall'elenco. Il filtro in alto mostra **Tutto**, **LEGO**, **SBrick**, **BuWizz** o **Mould King**. Tocca **Aggiungi**.
 4. Segui i passaggi sullo schermo: **Premi il pulsante sull’hub** e **Attendi che la ricerca trovi l’hub**. Tocca **Avvia scansione** per cercare di nuovo.
@@ -35,7 +35,7 @@ Il pulsante **Connetti** di uno slot collega l'hub. Il menu dello slot contiene:
 - **Seleziona canale: A / B / C**: il canale di controllo Mould King;
 - **Elimina hub**: rimuove l'hub dal profilo.
 
-Il pulsante **I miei hub** nell'editor mostra quanti hub sono collegati.
+Il pulsante **I miei hub** nell'editor (**Hub** su un computer) mostra quanti hub sono collegati.
 
 ## Monitor dell'hub {#hub-monitor}
 

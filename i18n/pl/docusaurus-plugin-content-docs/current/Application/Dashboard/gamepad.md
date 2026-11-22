@@ -15,7 +15,7 @@ Gamepad działa razem z panelem; możesz używać obu jednocześnie.
 ## Podłączanie gamepada {#connect-a-gamepad}
 
 1. Sparuj gamepad z telefonem, tabletem lub komputerem w systemowych ustawieniach Bluetooth (albo podłącz go przez USB).
-2. Otwórz profil i stuknij **Gamepad** w edytorze.
+2. Otwórz profil i przejdź do **Gamepad**: na komputerze na górnym pasku edytora, na telefonie lub tablecie w menu **Więcej** (widnieje tam **Gamepad (połączony)**, gdy system widzi gamepad).
 3. Nagłówek strony pokazuje **Gamepad: (nazwa)**. Komunikat „Gamepad nie jest podłączony” oznacza, że system jeszcze go nie widzi.
 
 <Screenshot name="gamepad" alt="Strona Gamepad" width={900} />

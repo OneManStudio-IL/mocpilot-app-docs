@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Är allt klart? {#is-everything-ready}
 
-Knappen **Problem** i redigerarens övre fält visar:
+Knappen **Problem** i redigerarens övre fält (på en dator precis före **Kör**) visar:
 
 - en **grön bock**: ”Alla rader är klara”;
 - ett **rött ”!”**: ”Problem: N”.
+
+På en dator står texten på knappen; i ett smalt fönster finns bara ikonen och antalet problem kvar. På en telefon eller surfplatta visar knappen ikonen, med antalet i ett rött märke.
 
 Tryck på den för att öppna problempanelen (en sidopanel på telefon, en meny på surfplatta eller dator). Den listar ”Rad N — orsak”; tryck på en post för att hoppa till den raden. Blocket som orsakar problemet har en **röd ram**. När allt är i ordning står det i panelen ”Varje påslagen rad kan köras.”
 

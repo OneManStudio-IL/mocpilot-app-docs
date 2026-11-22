@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Está tudo pronto? {#is-everything-ready}
 
-O botão **Problemas** na barra superior do editor mostra:
+O botão **Problemas** na barra superior do editor (no computador, logo antes de **Executar**) mostra:
 
 - um **visto verde**: "Todas as linhas estão prontas";
 - um **"!" vermelho**: "Problemas: N".
+
+No computador, o texto aparece escrito no botão; em uma janela estreita, ficam só o ícone e o número de problemas. No celular ou tablet, o botão mostra o ícone, com o número em um selo vermelho.
 
 Toque nele para abrir o painel de problemas (um painel lateral no celular, um menu no tablet ou no computador). Ele lista "Linha N — motivo"; toque em um item para ir até aquela linha. O bloco que causa o problema fica com uma **moldura vermelha**. Quando está tudo certo, o painel diz "Todas as linhas ligadas podem ser executadas."
 

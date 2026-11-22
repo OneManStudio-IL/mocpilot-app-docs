@@ -15,13 +15,13 @@ Un perfil tiene dos modos:
 
 ## Iniciar y detener {#start-and-stop}
 
-Pulsa **Ejecutar** (▶) en el editor o en el panel (en ordenador: **Programa → Ejecutar**, ⌘R / Ctrl+R). Pulsa **Detener** (■) para volver a editar (⌘. / Ctrl+.).
+Pulsa **Ejecutar** (▶) en el extremo derecho de la barra superior del editor; en un teléfono o una tablet, el panel también lo tiene. En un ordenador, **Ejecutar** es el botón naranja del editor (también **Programa → Ejecutar**, ⌘R / Ctrl+R). Pulsa **Detener** (■) para volver a editar (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Panel mientras se ejecuta el programa" width={900} />
 
 Mientras el programa se ejecuta:
 
-- los puntos de la cuadrícula del panel y los botones de añadir y de configuración se ocultan;
+- los puntos de la cuadrícula del panel se ocultan, igual que sus botones de edición (en un ordenador quedan desactivados);
 - los controles responden al tacto y al gamepad;
 - los monitores y los indicadores muestran valores en directo;
 - en Enlaces rápidos, el editor muestra valores en directo entre los bloques de cada fila, y las filas no se pueden editar;
@@ -33,7 +33,7 @@ Al abrir un perfil, el teléfono pasa a horizontal y pantalla completa, para que
 
 ## Antes de pulsar Ejecutar {#before-you-press-run}
 
-- Enciende los hubs y comprueba en **Mis hubs** que están conectados (la insignia del botón muestra cuántos lo están).
+- Enciende los hubs y comprueba en **Mis hubs** que están conectados (el número del botón **Mis hubs**, **Hubs** en un ordenador, muestra cuántos lo están).
 - En Enlaces rápidos, mira el botón **Problemas**: un «!» rojo significa que algunas filas no se pueden ejecutar. Consulta [Ejecución y solución de problemas](/docs/Application/Links/Problems).
 - La primera vez, pon el modelo sobre un soporte o mantenlo lejos del borde de la mesa.
 

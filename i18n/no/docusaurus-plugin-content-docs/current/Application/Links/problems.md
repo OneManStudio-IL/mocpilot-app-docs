@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Er alt klart? {#is-everything-ready}
 
-Knappen **Problemer** i topplinjen i redigeringsprogrammet viser:
+Knappen **Problemer** i topplinjen i redigeringsprogrammet (på en datamaskin rett før **Kjør**) viser:
 
 - en **grønn hake**: «Alle rader er klare»;
 - et **rødt «!»**: «Problemer: N».
+
+På en datamaskin står teksten på knappen; i et smalt vindu er bare ikonet og antall problemer igjen. På telefon og nettbrett viser knappen ikonet, med antallet i et rødt merke.
 
 Trykk på den for å åpne problempanelet (et sidepanel på telefon, en meny på nettbrett eller datamaskin). Det viser «Rad N — årsak»; trykk på et element for å gå til den raden. Blokken som forårsaker problemet, har en **rød ramme**. Når alt er i orden, står det i panelet «Alle rader som er slått på, kan kjøre.»
 

@@ -10,7 +10,7 @@ Não existe uma tela de loja separada: você navega pelos temas e os compra exat
 
 ## Experimentar um tema {#try-a-theme}
 
-1. Abra o painel e toque em **+** (**Adicionar controlador**).
+1. Abra o painel e toque em **+** (**Adicionar controlador**; no computador, **+ Controlador**).
 2. Selecione um tipo de controle, por exemplo um joystick. A faixa de visuais o mostra em cada tema; os controles especiais ficam em **Veículo e especiais**.
 3. Toque em um visual para vê-lo na pré-visualização grande e testá-lo. Em **Configurar**, experimente as cores, os tamanhos e as opções.
 

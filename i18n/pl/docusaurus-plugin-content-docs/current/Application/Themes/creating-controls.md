@@ -12,7 +12,7 @@ Każdy dodawany element sterujący zaczyna się od motywu. Możesz go skonfiguro
 
 ## Konfiguracja przed dodaniem {#configure-before-adding}
 
-1. Otwórz **Dodaj kontroler** (**+** na panelu).
+1. Otwórz **Dodaj kontroler** (**+** na panelu, **+ Kontroler** na komputerze).
 2. Wybierz typ elementu i wygląd na pasku wyglądów.
 3. W sekcji **Konfiguruj** użyj kart **Styl** i **Ustawienia**: rozmiar (paleta pokazuje go jako „S x W kropek”), kolor akcentu, ikona, opcje motywu, zachowanie.
 4. Stuknij **Dodaj do panelu**.

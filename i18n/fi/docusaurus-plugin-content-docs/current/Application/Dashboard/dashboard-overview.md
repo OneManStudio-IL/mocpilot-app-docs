@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Kojelaudan editori
-description: "MOCPilotin kojelauta: kenttä, ruudukko, työkalurivi, tausta ja kumoaminen."
+description: "MOCPilotin kojelauta: kenttä, ruudukko, yläpalkki, tausta ja kumoaminen."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Kojelauta** on näkymä, josta ajat malliasi: ohjainsauvat, liukusäätimet, painikkeet, näytöt ja muut ohjaimet. Jokaisella profiililla on yksi kojelauta.
 
-Avaa se editorin **Kojelauta**-painikkeella (tietokoneella ⌘2 / Ctrl+2).
+Avaa se editorin yläpalkin **Kojelauta**-painikkeella (tietokoneella ⌘2 / Ctrl+2). Kapeanäyttöisessä puhelimessa se on kohdassa **Lisää toimintoja**.
 
 - **Puhelin ja tabletti**: kojelauta avautuu koko näytön kokoisena editorin päälle.
 - **Tietokone**: kojelauta avautuu omaan **Kojelauta**-ikkunaansa, joten voit pitää sen ohjelman vieressä.
@@ -24,19 +24,32 @@ Avaa se editorin **Kojelauta**-painikkeella (tietokoneella ⌘2 / Ctrl+2).
 - Muokkaustilassa näkyy 40 × 20 ruudun **pisteruudukko**. Ohjaimet kohdistuvat ruudukkoon.
 - Ohjaimet eivät voi olla päällekkäin. Jos ohjain ei mahdu, se palaa paikalleen.
 
-## Työkalurivi {#toolbar}
+## Yläpalkki {#toolbar}
+
+**Puhelin ja tabletti**
 
 | Painike | Mitä se tekee |
 |---|---|
 | ← | takaisin ohjelmaeditoriin |
 | Kumoa / Tee uudelleen | kumoaa ja tekee uudelleen kojelaudan muutokset |
-| **+** (Lisää ohjain) | avaa ohjainpaletin; katso [Ohjainten lisääminen ja järjestäminen](/docs/Application/Dashboard/ArrangingControls) |
+| **Valitse** | valitse useita ohjaimia ja lukitse, avaa lukitus, poista tai muokkaa niitä yhdessä; **Valmis** lopettaa valinnan |
 | ⚙ (Kojelaudan asetukset) | taustan ja ruudukon asetukset (alla) |
+| **+** (Lisää ohjain, oranssi rengas) | avaa ohjainpaletin; katso [Ohjainten lisääminen ja järjestäminen](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Suorita** / **Pysäytä**: käynnistää ja pysäyttää ohjelman |
 
-Tietokoneella Kojelauta-ikkunassa on myös valikot: **Tiedosto** (Sulje profiili, Avaa erillisessä ikkunassa, Kojelaudan asetukset…), **Muokkaa** (Kumoa, Tee uudelleen, Lisää ohjain…) ja **Näytä** (Lohkot ⌘1, Kojelauta ⌘2).
-
 Ohjelman ollessa käynnissä muokkauspainikkeet ovat piilossa.
+
+**Tietokone ja verkkoeditori**
+
+Yläpalkki on samanlainen kuin editorissa:
+
+- **Vasemmalla**: **Koti** (sulkee profiilin), valikot **Tiedosto**, **Muokkaa** ja **Näytä** sekä sitten **Kumoa** ja **Tee uudelleen**.
+- **Keskellä**: profiilin nimi ja **Lohkot** (Pikalinkit-profiilissa **Linkit**, ⌘1 / Ctrl+1), joilla palaat ohjelmaan. Kojelaudalla itsellään ei ole tässä painiketta: se on sivu, jolla olet.
+- **Oikealla**: **Valitse**, **Kojelaudan asetukset** (⚙) ja oranssi **+ Ohjain** -painike (Lisää ohjain). Kapeassa ikkunassa profiilin nimi ja **Lohkot**-painike piiloutuvat, ja **+ Ohjain** -painikkeesta jää vain **+**.
+
+Tietokoneella kojelaudan palkissa ei ole **Suorita**-painiketta: käynnistä ja pysäytä ohjelma editorista (⌘R / Ctrl+R, ⌘. / Ctrl+.). Ohjelman ollessa käynnissä **Valitse**, **Kojelaudan asetukset** ja **+ Ohjain** eivät ole käytettävissä.
+
+Valikot: **Tiedosto** (Sulje profiili, Avaa erillisessä ikkunassa), **Muokkaa** (Kumoa, Tee uudelleen) ja **Näytä** (Lohkot ⌘1, Kojelauta ⌘2). Erillisessä Kojelauta-ikkunassa palkissa näkyy **Kodin** sijaan ikkunan otsikko, **Tiedosto**-valikossa on **Sulje ikkuna**, eikä **Näytä**-valikkoa tai **Lohkot**-painiketta ole.
 
 ## Kumoa ja tee uudelleen {#undo-and-redo}
 

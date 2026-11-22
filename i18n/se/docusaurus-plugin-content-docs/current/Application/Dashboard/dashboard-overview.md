@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Redigera instrumentpanelen
-description: "Instrumentpanelen i MOCPilot: fältet, rutnätet, verktygsfältet, bakgrunden och ångra."
+description: "Instrumentpanelen i MOCPilot: fältet, rutnätet, det övre fältet, bakgrunden och ångra."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Instrumentpanelen** är skärmen du kör modellen från: joystickar, skjutreglage, knappar, monitorer och andra kontroller. Varje profil har en instrumentpanel.
 
-Öppna den med knappen **Instrumentpanel** i redigeraren (⌘2 / Ctrl+2 på en dator).
+Öppna den med knappen **Instrumentpanel** i redigerarens övre fält (⌘2 / Ctrl+2 på en dator). På en telefon med smal skärm finns den under **Mer**.
 
 - **Telefon och surfplatta**: instrumentpanelen öppnas i helskärm ovanpå redigeraren.
 - **Dator**: instrumentpanelen öppnas i ett eget fönster, **Instrumentpanel**, så att du kan ha den bredvid programmet.
@@ -24,19 +24,32 @@ import Screenshot from '@site/src/components/Screenshot';
 - I redigeringsläget visas ett **punktrutnät** med 40 × 20 rutor. Kontrollerna fäster mot rutnätet.
 - Kontroller kan inte överlappa varandra. Om en kontroll inte får plats hoppar den tillbaka dit den var.
 
-## Verktygsfält {#toolbar}
+## Övre fältet {#toolbar}
+
+**Telefon och surfplatta**
 
 | Knapp | Vad den gör |
 |---|---|
 | ← | tillbaka till programredigeraren |
 | Ångra / Gör om | ångrar och gör om ändringar på instrumentpanelen |
-| **+** (Lägg till kontroll) | öppnar kontrollpaletten; se [Lägga till och ordna kontroller](/docs/Application/Dashboard/ArrangingControls) |
+| **Välj** | markera flera kontroller och lås, lås upp, ta bort eller redigera dem tillsammans; **Klar** avslutar läget |
 | ⚙ (Instrumentpanelsinställningar) | alternativ för bakgrund och rutnät (se nedan) |
+| **+** (Lägg till kontroll, med en orange ring) | öppnar kontrollpaletten; se [Lägga till och ordna kontroller](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Kör** / **Stoppa**: startar och stoppar programmet |
 
-På en dator har fönstret Instrumentpanel också menyer: **Fil** (Stäng profil, Öppna i separat fönster, Instrumentpanelsinställningar…), **Redigera** (Ångra, Gör om, Lägg till kontroll…) och **Visa** (Block ⌘1, Instrumentpanel ⌘2).
-
 Medan programmet körs är redigeringsknapparna dolda.
+
+**Dator och webbredigerare**
+
+Det övre fältet ser ut som redigerarens:
+
+- **Vänster**: **Hem** (stänger profilen), menyerna **Fil**, **Redigera** och **Visa**, sedan **Ångra** och **Gör om**.
+- **Mitten**: profilens namn och **Block** (eller **Kopplingar** i en profil med Snabbkopplingar, ⌘1 / Ctrl+1) för att gå tillbaka till programmet. Instrumentpanelen har ingen egen knapp här: det är sidan du är på.
+- **Höger**: **Välj**, **Instrumentpanelsinställningar** (⚙) och den orange knappen **+ Kontroll** (Lägg till kontroll). I ett smalt fönster döljs profilens namn och knappen **Block**, och **+ Kontroll** behåller bara sitt **+**.
+
+På en dator finns ingen **Kör** i instrumentpanelens fält: kör och stoppa programmet från redigeraren (⌘R / Ctrl+R, ⌘. / Ctrl+.). Medan programmet körs är **Välj**, **Instrumentpanelsinställningar** och **+ Kontroll** inte tillgängliga.
+
+Menyer: **Fil** (Stäng profil, Öppna i separat fönster), **Redigera** (Ångra, Gör om) och **Visa** (Block ⌘1, Instrumentpanel ⌘2). I det separata fönstret Instrumentpanel visar fältet fönstrets titel i stället för **Hem**, **Fil** har **Stäng fönster**, och det finns ingen meny **Visa** och ingen knapp **Block**.
 
 ## Ångra och gör om {#undo-and-redo}
 

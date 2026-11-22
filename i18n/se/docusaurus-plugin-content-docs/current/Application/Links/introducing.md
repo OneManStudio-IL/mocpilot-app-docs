@@ -38,7 +38,7 @@ Direktutgångar (Indikator, Hubbens LED, LED-matris, Kalibrera servon) behöver 
 
 - **Raderna** fyller skärmen och rullar vertikalt. Nya rader börjar i den sista, tomma raden (”Ny rad: ingång”).
 - **Paletten** längst ner har tre flikar: **Ingångar**, **Bearbetning** och **Utgångar**. Den byggs utifrån din profil: alla kontroller på instrumentpanelen och alla hubbar under Mina hubbar visas automatiskt, handkontrollen visas när handkontrollsblocken är aktiverade, och en åtgärd visas bara om någon hubb i profilen kan utföra den.
-- Knappen **Problem** i det övre fältet visar en grön bock när alla rader är klara, eller ett rött ”!” med antalet problem.
+- Radernas status i det övre fältet, precis före **Kör**, visar en grön bock när alla rader är klara, eller ett rött ”!” med antalet problem. På en dator står det också **Alla rader är klara** eller **Problem: N**.
 
 ## Bygg en rad {#build-a-row}
 
@@ -71,7 +71,7 @@ Tryck på **Kör**. Medan programmet körs visar varje fog det **aktuella värde
 
 ## Ångra {#undo}
 
-**Ångra** och **Gör om** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller de flytande knapparna) går tillbaka upp till 100 steg. De är inte tillgängliga medan programmet körs.
+**Ångra** och **Gör om** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z eller knapparna i det övre fältet) går tillbaka upp till 100 steg. De är inte tillgängliga medan programmet körs.
 
 ## Läs mer {#read-more}
 

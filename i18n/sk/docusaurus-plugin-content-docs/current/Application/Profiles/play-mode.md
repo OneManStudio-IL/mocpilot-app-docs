@@ -15,13 +15,13 @@ Profil má dva režimy:
 
 ## Spustenie a zastavenie {#start-and-stop}
 
-Stlačte **Spustiť** (▶) v editore alebo na paneli (počítač: **Program → Spustiť**, ⌘R / Ctrl+R). Stlačením **Zastaviť** (■) sa vrátite k úpravám (⌘. / Ctrl+.).
+Stlačte **Spustiť** (▶) na pravom konci hornej lišty editora; na telefóne alebo tablete ho má aj panel. Na počítači je **Spustiť** oranžové tlačidlo v editore (aj **Program → Spustiť**, ⌘R / Ctrl+R). Stlačením **Zastaviť** (■) sa vrátite k úpravám (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Panel počas behu programu" width={900} />
 
 Kým program beží:
 
-- body mriežky panela a tlačidlá na pridávanie a nastavenia sú skryté;
+- body mriežky panela sú skryté, rovnako ako jeho tlačidlá na úpravy (na počítači nie sú k dispozícii);
 - ovládacie prvky reagujú na dotyk aj na herný ovládač;
 - monitory a indikátory ukazujú živé hodnoty;
 - v Rýchlych prepojeniach editor ukazuje živé hodnoty medzi blokmi každého riadka a riadky sa nedajú upravovať;
@@ -33,7 +33,7 @@ Po otvorení profilu sa telefón prepne na šírku, na celú obrazovku, aby pane
 
 ## Skôr než stlačíte Spustiť {#before-you-press-run}
 
-- Zapnite huby a v **Moje huby** skontrolujte, či sú pripojené (odznak na tlačidle ukazuje, koľko ich je).
+- Zapnite huby a v **Moje huby** skontrolujte, či sú pripojené (číslo na tlačidle **Moje huby**, na počítači **Huby**, ukazuje, koľko ich je).
 - V Rýchlych prepojeniach skontrolujte tlačidlo **Problémy**: červený „!“ znamená, že niektoré riadky sa nedajú spustiť. Pozrite si [Spustenie a riešenie problémov](/docs/Application/Links/Problems).
 - Pri prvom pokuse postavte model na podstavec alebo ho držte ďalej od okraja stola.
 

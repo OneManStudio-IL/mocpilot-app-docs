@@ -15,7 +15,7 @@ Herný ovládač funguje spolu s panelom; oba môžete používať naraz.
 ## Pripojenie herného ovládača {#connect-a-gamepad}
 
 1. Spárujte herný ovládač s telefónom, tabletom alebo počítačom v systémových nastaveniach Bluetooth (alebo ho pripojte cez USB).
-2. Otvorte profil a v editore ťuknite na **Herný ovládač**.
+2. Otvorte profil a prejdite na **Herný ovládač**: na počítači na hornej lište editora, na telefóne alebo tablete v ponuke **Viac** (keď systém herný ovládač vidí, položka znie **Herný ovládač (pripojený)**).
 3. Hlavička stránky ukazuje **Herný ovládač: (názov)**. „Herný ovládač nie je pripojený“ znamená, že ho systém zatiaľ nevidí.
 
 <Screenshot name="gamepad" alt="Stránka Herný ovládač" width={900} />

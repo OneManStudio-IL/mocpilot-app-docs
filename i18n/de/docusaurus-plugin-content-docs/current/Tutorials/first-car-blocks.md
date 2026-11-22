@@ -145,7 +145,7 @@ Mit einem **Schalter** statt der Taste ist es noch einfacher: *wenn Schalter …
 
 ## 7. Starten und den Monitor beobachten {#monitor}
 
-Wenn etwas nicht wie erwartet funktioniert, sehen Sie sich die Werte an. Der [Monitor](/docs/Application/BlockBuilder/Editor#monitor) in der oberen Leiste zeigt jede Variable an, während das Programm läuft.
+Wenn etwas nicht wie erwartet funktioniert, sehen Sie sich die Werte an. Der [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (auf einem Computer in der oberen Leiste, auf Smartphone und Tablet unter **Mehr**) zeigt jede Variable an, während das Programm läuft.
 
 1. Erstellen Sie eine Variable `throttle`.
 2. Speichern Sie in der Schleife den Joystick-Wert darin und verwenden Sie die Variable für die Motorgeschwindigkeit:

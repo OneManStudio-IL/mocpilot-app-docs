@@ -145,7 +145,7 @@ Con un **Interruptor** en lugar del botón es aún más sencillo: *cuando interr
 
 ## 7. Ejecuta y observa el Monitor {#monitor}
 
-Cuando algo no funciona como esperas, mira los valores. El [Monitor](/docs/Application/BlockBuilder/Editor#monitor) de la barra superior muestra todas las variables mientras el programa se ejecuta.
+Cuando algo no funciona como esperas, mira los valores. El [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (en la barra superior en un ordenador, en **Más** en un teléfono o una tablet) muestra todas las variables mientras el programa se ejecuta.
 
 1. Crea una variable `acelerador`.
 2. En el bucle, guarda en ella el valor del joystick y usa la variable como velocidad del motor:

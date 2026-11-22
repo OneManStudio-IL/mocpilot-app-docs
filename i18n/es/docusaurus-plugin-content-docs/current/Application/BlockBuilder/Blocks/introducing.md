@@ -25,7 +25,7 @@ Bloques lógicos tiene su propio conjunto de bloques y su propio comportamiento.
 
 - La **paleta** muestra las categorías de bloques: **Eventos**, **Control**, **Sensores**, **Sonidos**, **Operador**, **Variables**, **Listas** y **Mis bloques**. Otras categorías aparecen cuando tu perfil las necesita: **Motores** y **Luz** (cuando algún hub las admite), **Simulador** (cuando el panel tiene pedales, caja de cambios o freno de mano), **Controladores en pantalla** y **Gamepad**.
 - El **área del programa** es donde arrastras los bloques y creas los scripts.
-- La barra superior tiene **Mis hubs**, **Panel**, **Gamepad**, **Monitor**, **Configuración del editor**, el **Asistente IA** y **Ejecutar/Detener**.
+- La barra superior tiene **Deshacer** y **Rehacer**, **Panel**, **Mis hubs**, **Gamepad**, los paneles laterales **Asistente IA**, [**Mochila**](/docs/Application/BlockBuilder/Backpack) y **Monitor**, **Más** (con **Configuración del editor**) y **Ejecutar/Detener**. En un teléfono o una tablet, los paneles laterales y Gamepad están en **Más**.
 
 Consulta [Trabajar en el editor](/docs/Application/BlockBuilder/Editor) para más detalles.
 

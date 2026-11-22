@@ -12,7 +12,7 @@ Du lägger till en hubb i en profil en gång. Därefter ansluter MOCPilot till d
 
 ## Lägg till en hubb {#add-a-hub}
 
-1. Öppna profilen och tryck på **Mina hubbar** (⇧⌘H / Ctrl+Shift+H). Sidan **Mina Bluetooth-hubbar** visar platserna.
+1. Öppna profilen och tryck på **Mina hubbar** (på en dator **Hubbar** i det övre fältet eller ⇧⌘H / Ctrl+Shift+H). Sidan **Mina Bluetooth-hubbar** visar platserna.
 2. Tryck på **Lägg till en ny hubb** på en ledig plats.
 3. Välj din hubb i listan. Filtret högst upp visar **Alla**, **LEGO**, **SBrick**, **BuWizz** eller **Mould King**. Tryck på **Lägg till**.
 4. Följ stegen på skärmen: **Tryck på knappen på hubben** och **Vänta tills sökningen hittar hubben**. Tryck på **Starta skanning** för att söka igen.
@@ -35,7 +35,7 @@ Knappen **Anslut** på en plats ansluter hubben. Platsens meny innehåller:
 - **Välj kanal: A / B / C**: styrkanalen för Mould King;
 - **Ta bort hub**: tar bort hubben från profilen.
 
-Knappen **Mina hubbar** i redigeraren visar hur många hubbar som är anslutna.
+Knappen **Mina hubbar** i redigeraren (**Hubbar** på en dator) visar hur många hubbar som är anslutna.
 
 ## Hubbmonitor {#hub-monitor}
 

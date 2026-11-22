@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## ¿Está todo listo? {#is-everything-ready}
 
-El botón **Problemas** de la barra superior del editor muestra:
+El botón **Problemas** de la barra superior del editor (en un ordenador, justo antes de **Ejecutar**) muestra:
 
 - una **marca verde**: «Todas las filas están listas»;
 - un **«!» rojo**: «Problemas: N».
+
+En un ordenador, el texto aparece escrito en el botón; en una ventana estrecha solo quedan el icono y el número de problemas. En un teléfono o una tablet, el botón muestra el icono, con el número en una insignia roja.
 
 Tócalo para abrir el panel de problemas (un panel lateral en el teléfono, un menú en la tableta o el ordenador). Muestra una lista «Fila N — motivo»; toca un elemento para ir a esa fila. El bloque que causa el problema tiene un **marco rojo**. Cuando todo está bien, el panel indica «Todas las filas activadas pueden ejecutarse.»
 

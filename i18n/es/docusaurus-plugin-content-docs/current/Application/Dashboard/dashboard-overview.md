@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Editor del panel
-description: "El panel de MOCPilot: el campo, la cuadrícula, la barra de herramientas, el fondo y deshacer."
+description: "El panel de MOCPilot: el campo, la cuadrícula, la barra superior, el fondo y deshacer."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 El **panel** es la pantalla desde la que conduces tu modelo: joysticks, deslizadores, botones, monitores y otros controles. Cada perfil tiene un panel.
 
-Ábrelo con el botón **Panel** del editor (⌘2 / Ctrl+2 en un ordenador).
+Ábrelo con el botón **Panel** de la barra superior del editor (⌘2 / Ctrl+2 en un ordenador). En un teléfono con pantalla estrecha, está en **Más**.
 
 - **Teléfono y tablet**: el panel se abre a pantalla completa sobre el editor.
 - **Ordenador**: el panel se abre en su propia ventana **Panel**, para que puedas tenerlo junto al programa.
@@ -24,19 +24,32 @@ El **panel** es la pantalla desde la que conduces tu modelo: joysticks, deslizad
 - En modo de edición se muestra una **cuadrícula de puntos** de 40 × 20 celdas. Los controles se ajustan a la cuadrícula.
 - Los controles no pueden solaparse. Si un control no cabe, vuelve a donde estaba.
 
-## Barra de herramientas {#toolbar}
+## Barra superior {#toolbar}
+
+**Teléfono y tablet**
 
 | Botón | Qué hace |
 |---|---|
 | ← | vuelve al editor del programa |
 | Deshacer / Rehacer | deshace y rehace los cambios del panel |
-| **+** (Añadir controlador) | abre la paleta de controladores; consulta [Añadir y organizar controles](/docs/Application/Dashboard/ArrangingControls) |
+| **Seleccionar** | selecciona varios controles para bloquearlos, desbloquearlos, eliminarlos o editarlos a la vez; **Listo** termina la selección |
 | ⚙ (Configuración del panel) | opciones de fondo y cuadrícula (ver más abajo) |
+| **+** (Añadir controlador, con un anillo naranja) | abre la paleta de controladores; consulta [Añadir y organizar controles](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Ejecutar** / **Detener**: inicia y detiene el programa |
 
-En un ordenador, la ventana del Panel también tiene menús: **Archivo** (Cerrar perfil, Abrir en una ventana aparte, Configuración del panel…), **Editar** (Deshacer, Rehacer, Añadir controlador…) y **Ver** (Bloques ⌘1, Panel ⌘2).
-
 Mientras el programa se ejecuta, los botones de edición se ocultan.
+
+**Ordenador y editor web**
+
+La barra superior se parece a la del editor:
+
+- **Izquierda**: **Inicio** (cierra el perfil), los menús **Archivo**, **Editar** y **Ver**, y después **Deshacer** y **Rehacer**.
+- **Centro**: el nombre del perfil y **Bloques** (o **Enlaces** en un perfil de Enlaces rápidos, ⌘1 / Ctrl+1) para volver al programa. El panel en sí no tiene botón aquí: es la página en la que estás.
+- **Derecha**: **Seleccionar**, **Configuración del panel** (⚙) y el botón naranja **+ Controlador** (Añadir controlador). En una ventana estrecha se ocultan el nombre del perfil y el botón **Bloques**, y **+ Controlador** se queda solo con su **+**.
+
+En un ordenador, la barra del panel no tiene **Ejecutar**: ejecuta y detén el programa desde el editor (⌘R / Ctrl+R, ⌘. / Ctrl+.). Mientras se ejecuta, **Seleccionar**, **Configuración del panel** y **+ Controlador** no están disponibles.
+
+Menús: **Archivo** (Cerrar perfil, Abrir en una ventana aparte), **Editar** (Deshacer, Rehacer) y **Ver** (Bloques ⌘1, Panel ⌘2). En la ventana aparte del Panel, la barra muestra el título de la ventana en lugar de **Inicio**, **Archivo** incluye **Cerrar ventana** y no hay menú **Ver** ni botón **Bloques**.
 
 ## Deshacer y rehacer {#undo-and-redo}
 

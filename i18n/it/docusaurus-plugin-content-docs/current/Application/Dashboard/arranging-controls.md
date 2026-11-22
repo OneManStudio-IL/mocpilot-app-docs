@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Aggiungere un controllo {#add-a-control}
 
-1. Sulla dashboard, tocca **+** (**Aggiungi controller**). Su un computer la tavolozza si apre in una finestra separata.
+1. Sulla dashboard, tocca **+** (**Aggiungi controller**); su un computer, fai clic su **+ Controller** a destra della barra superiore. Su un computer la tavolozza si apre in una finestra separata, con **Aggiungi controller** al centro della sua barra superiore.
 2. Scegli un tipo di controllo nell'elenco. I tipi sono raggruppati: **Joystick**, **Sliders**, **Pulsanti e interruttori**, **Monitor**, poi **Veicolo e speciali** per i [controlli speciali](/docs/Application/Dashboard/SpecialControls) e **I miei design** per i design che hai salvato. Per trovare rapidamente un controllo, scrivi in **Cerca controlli**.
 3. La striscia degli aspetti mostra il tipo selezionato in ogni [tema](/docs/Application/Themes/ThemesOverview) (per un controllo speciale, tutti i suoi aspetti). Tocca un aspetto per vederlo nell'anteprima grande; puoi provarlo direttamente lì.
 4. Configura il controllo in **Configura**: le schede **Stile** e **Impostazioni** e la dimensione.
-5. Tocca **Aggiungi alla dashboard**. Su un computer puoi aggiungere più controlli di seguito.
+5. Tocca **Aggiungi alla dashboard** (su un computer, il pulsante arancione a destra della barra superiore della tavolozza). Su un computer puoi aggiungere più controlli di seguito.
 
 <Screenshot name="controller-palette" alt="La tavolozza Aggiungi controller" width={900} />
 

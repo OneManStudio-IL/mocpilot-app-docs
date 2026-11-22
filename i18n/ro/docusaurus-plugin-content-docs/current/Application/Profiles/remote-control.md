@@ -23,7 +23,7 @@ Controlul de la distanță îți permite să conduci un model conectat la alt di
 
 ## Conectează un dispozitiv cu huburi {#connect-a-hub-device}
 
-1. Pe telecomandă, deschide profilul și apasă **Control de la distanță** (pictograma de telecomandă: o casă cu arce de semnal) în bara de sus a profilului. În editorul web, apasă **Arată codul** în panoul care se deschide.
+1. Pe telecomandă, deschide profilul și apasă **Control de la distanță** (pictograma de telecomandă: o casă cu arce de semnal) în bara de sus a profilului, lângă **Rulează**. În editorul web, apasă **Arată codul** în panoul care se deschide.
 
    Telecomanda afișează un **cod de conectare**: un cod QR și 6 cifre.
 2. Pe dispozitivul cu huburi, deschide MOCPilot și atinge **Conectează o telecomandă** pe pagina **Profilurile mele**. Pe Mac poți alege și **Fișier → Conectează o telecomandă…**.

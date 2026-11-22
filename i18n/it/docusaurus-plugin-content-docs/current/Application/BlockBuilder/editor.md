@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Lavorare nell'editor
-description: "Palette, trascinamento dei blocchi, zoom, menu contestuali, annullamento, Monitor, Impostazioni dell'editor e Assistente IA in Blocchi logici."
+description: "Barra superiore, palette, trascinamento dei blocchi, zoom, menu contestuali, annullamento, Monitor, Zaino, Impostazioni dell'editor e Assistente IA in Blocchi logici."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Lavorare nell'editor {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="Editor di Blocchi logici" width={900} />
+
+## Barra superiore {#top-bar}
+
+- **Computer ed editor web**: **Home** e i menu a sinistra, con **Annulla** e **Ripeti** accanto. Al centro: il nome del profilo e **Dashboard**, **Hub** e **Gamepad**. A destra: **Assistente IA**, [**Zaino**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **Altro** (⋯), **Controllo remoto** e il pulsante arancione **Avvia**. In una finestra stretta, i pulsanti che non ci stanno passano in **Altro**, che contiene sempre **Impostazioni dell'editor…**.
+- **Smartphone e tablet**: **Home** a sinistra; a destra **Annulla**, **Ripeti**, **Dashboard**, **I miei hub**, **Controllo remoto**, **Altro** e **Avvia / Ferma**. **Altro** contiene **Assistente IA**, **Zaino**, **Monitor**, **Gamepad** e **Impostazioni dell'editor**.
+
+Vedi [Smartphone, tablet e desktop](/docs/Introducing/Layouts#editor-top-bar) per sapere come si ripiega la barra in una finestra stretta.
 
 ## Palette e area del programma {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ Tieni premuto (su un touchscreen) o fai clic con il tasto destro su un blocco:
 - **Modificare**: cambia i suoi valori;
 - **Duplica**;
 - **Elimina blocco** / **Elimina N blocchi**;
+- **Aggiungi allo zaino**: conserva il blocco e tutto ciò che vi è agganciato nello [zaino](/docs/Application/BlockBuilder/Backpack);
 - **Informazioni sul blocco**: apre la descrizione del blocco in questa documentazione;
 - **Esporta blocco come SVG** / **Esporta tutti i blocchi come SVG**: salva un'immagine per un tutorial o un post sul forum.
 
@@ -40,7 +48,7 @@ Un blocco collegato a un controllo della dashboard si può eliminare solo dopo a
 
 ## Annulla e ripeti {#undo-and-redo}
 
-Usa **Modifica → Annulla / Ripeti** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) oppure i pulsanti mobili.
+Usa **Modifica → Annulla / Ripeti** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) oppure i pulsanti **Annulla** e **Ripeti** nella barra superiore (accanto ai menu su un computer).
 
 - Un trascinamento è un passaggio; le modifiche rapide dello stesso valore si uniscono in un unico passaggio.
 - L'annullamento funziona anche mentre il programma è in esecuzione.
@@ -50,11 +58,17 @@ Usa **Modifica → Annulla / Ripeti** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) op
 
 ## Monitor {#monitor}
 
-**Monitor** (⇧⌘M / Ctrl+Shift+M) mostra i valori attuali di variabili e liste mentre il programma è in esecuzione. Su un computer puoi aprirlo in una finestra separata. È di grande aiuto quando cerchi un errore.
+**Monitor** (⇧⌘M / Ctrl+Shift+M, **Vista → Monitor**) mostra i valori attuali di variabili e liste mentre il programma è in esecuzione. Il suo pulsante si trova nella barra superiore su un computer e in **Altro** su smartphone o tablet. Su un computer puoi aprirlo in una finestra separata. È di grande aiuto quando cerchi un errore.
+
+## Zaino {#backpack}
+
+Lo **Zaino** (⇧⌘B / Ctrl+Shift+B, **Vista → Zaino**) conserva pile di blocchi da riutilizzare in qualsiasi profilo: scegli **Aggiungi allo zaino** nel menu di un blocco, poi tocca o trascina l'elemento per inserirlo in qualsiasi programma. Il suo pulsante si trova accanto a **Monitor** nella barra superiore, oppure in **Altro**. Vedi [Zaino](/docs/Application/BlockBuilder/Backpack).
 
 <Screenshot name="blocks-monitor" alt="Monitor con variabili e una lista durante l'esecuzione del programma" width={900} />
 
 ## Impostazioni dell'editor {#editor-settings}
+
+Aprile da **Altro → Impostazioni dell'editor** nella barra superiore (su un computer anche da **Programma → Impostazioni dell'editor…**).
 
 - **Avvia blocco con clic**: facendo clic su un blocco lo esegui, così puoi provarlo da solo; se il programma è fermo, lo avvia anche.
 - **Apri il programma al centro**: quando apri un profilo, il programma viene mostrato al 100% al centro dell'area di lavoro (oppure dal suo angolo in alto a sinistra, se è più grande), indipendentemente da dove lo avevi lasciato durante la modifica. Vale per tutti i profili su questo dispositivo.
@@ -75,7 +89,7 @@ Il livello viene salvato nel profilo. I blocchi già presenti nel programma cont
 
 ## Assistente IA {#ai-builder}
 
-Con [MocPilot Pro](/docs/Application/Account/Pro), l'**Assistente IA** (il pulsante con le scintille, ⇧⌘I / Ctrl+Shift+I) configura gli hub, la dashboard e il programma a partire da una descrizione che scrivi o detti, e poi modifica il profilo come richiedi. Funziona nei profili Blocchi logici e Collegamenti rapidi. Vedi [Assistente IA](/docs/Application/Profiles/AiBuilder).
+Con [MocPilot Pro](/docs/Application/Account/Pro), l'**Assistente IA** (il pulsante con le scintille nella barra superiore, **Altro → Assistente IA** su smartphone o tablet, ⇧⌘I / Ctrl+Shift+I) configura gli hub, la dashboard e il programma a partire da una descrizione che scrivi o detti, e poi modifica il profilo come richiedi. Funziona nei profili Blocchi logici e Collegamenti rapidi. Vedi [Assistente IA](/docs/Application/Profiles/AiBuilder).
 
 ### Come ottenere un buon risultato {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Indica l'hub, di' che cosa è collegato a ogni porta e che cosa deve fare, e com
 |---|---|
 | File | Chiudi profilo (⌘W) |
 | Modifica | Annulla, Ripeti, Nuova variabile…, Nuova lista…, Nuovo messaggio…, Nuovo blocco… |
-| Vista | Palette dei blocchi, Ingrandisci, Riduci, Dimensioni reali |
-| Programma | Avvia (⌘R), Ferma (⌘.) |
+| Vista | Palette dei blocchi (⌘P), [Zaino](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Ingrandisci, Riduci, Dimensioni reali |
+| Programma | Avvia (⌘R), Ferma (⌘.), Impostazioni dell'editor… |
+
+Su Windows usa Ctrl al posto di ⌘ e Shift al posto di ⇧.

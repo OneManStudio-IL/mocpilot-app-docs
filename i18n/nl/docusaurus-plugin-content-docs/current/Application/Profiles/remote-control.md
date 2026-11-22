@@ -23,7 +23,7 @@ Met de afstandsbediening bestuur je een model dat met een ander apparaat verbond
 
 ## Een hub-apparaat verbinden {#connect-a-hub-device}
 
-1. Open op de afstandsbediening het profiel en druk in de bovenbalk van het profiel op **Afstandsbediening** (het pictogram van de afstandsbediening: een huisje met signaalbogen). Druk in de webeditor in het paneel dat opent op **Code tonen**.
+1. Open op de afstandsbediening het profiel en druk in de bovenbalk van het profiel op **Afstandsbediening** (het pictogram van de afstandsbediening: een huisje met signaalbogen), naast **Start**. Druk in de webeditor in het paneel dat opent op **Code tonen**.
 
    De afstandsbediening toont een **verbindingscode**: een QR-code en 6 cijfers.
 2. Open op het hub-apparaat MOCPilot en tik op de pagina **Mijn profielen** op **Afstandsbediening verbinden**. Op een Mac kun je ook **Bestand → Afstandsbediening verbinden…** kiezen.

@@ -12,7 +12,7 @@ Sie fügen einen Hub nur einmal zu einem Profil hinzu. Danach verbindet sich MOC
 
 ## Hub hinzufügen {#add-a-hub}
 
-1. Öffnen Sie das Profil und tippen Sie auf **Meine Hubs** (⇧⌘H / Strg+Umschalt+H). Die Seite **Meine Bluetooth-Hubs** zeigt die Slots.
+1. Öffnen Sie das Profil und tippen Sie auf **Meine Hubs** (auf einem Computer **Hubs** in der oberen Leiste oder ⇧⌘H / Strg+Umschalt+H). Die Seite **Meine Bluetooth-Hubs** zeigt die Slots.
 2. Tippen Sie in einem freien Slot auf **Neuen Hub hinzufügen**.
 3. Wählen Sie Ihren Hub aus der Liste. Der Filter oben zeigt **Alle**, **LEGO**, **SBrick**, **BuWizz** oder **Mould King**. Tippen Sie auf **Hinzufügen**.
 4. Folgen Sie den Schritten auf dem Bildschirm: **Drücke die Taste am Hub** und **Warten Sie, bis die Suche den Hub findet**. Mit **Scan starten** suchen Sie erneut.
@@ -35,7 +35,7 @@ Die Schaltfläche **Verbinden** in einem Slot verbindet den Hub. Das Slot-Menü 
 - **Kanal auswählen: A / B / C**: der Steuerkanal von Mould King;
 - **Hub löschen**: entfernt den Hub aus dem Profil.
 
-Die Schaltfläche **Meine Hubs** im Editor zeigt, wie viele Hubs verbunden sind.
+Die Schaltfläche **Meine Hubs** im Editor (**Hubs** auf einem Computer) zeigt, wie viele Hubs verbunden sind.
 
 ## Hub-Monitor {#hub-monitor}
 

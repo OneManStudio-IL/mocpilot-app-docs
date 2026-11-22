@@ -41,7 +41,7 @@ Programtypen kan ikke ændres senere. Mere i [Opret en profil](/docs/Application
 
 ## 2. Tilføj og forbind hubben {#add-the-hub}
 
-1. Tryk på **Mine hubs** i editoren.
+1. Tryk på **Mine hubs** i editoren (**Hubs** i topbjælken på en computer).
 2. Tryk på **Tilføj en ny hub** i et ledigt slot, vælg Technic Hub på listen, og tryk på **Tilføj**.
 3. Tænd hubben, og tryk på dens knap. MOCPilot finder den og forbinder; hubben bliver i sit slot.
 4. Hvis dialogen **Firmwareopdatering kræves** vises, så tryk på **Opdater**, og hold hubben tændt og tæt på, indtil opdateringen er færdig. Se [Opdatering af firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Mere i [Tilføj og forbind en hub](/docs/Application/Hubs/ConnectingHubs).
 
 ## 3. Sæt kontrollerne på dashboardet {#dashboard}
 
-1. Åbn **Dashboard**, og tryk på **+** (**Tilføj controller**).
+1. Åbn **Dashboard**, og tryk på **+** (**Tilføj controller**; på en computer **+ Controller**).
 2. I gruppen **Joysticks** vælger du **Joystick** og trykker på **Føj til dashboard**. Den hedder **JOY1**. Lad **Akseltype** stå på **Begge akser (X, Y)**: op og ned kører, venstre og højre styrer.
 3. Tryk på **+** igen. Under **Knapper og kontakter** vælger du **Knap** og trykker på **Føj til dashboard**. Den hedder **BTN1**.
 4. Træk joysticket til venstre side og knappen til højre side, hvor dine tommelfingre er. Tryk på en kontrol for at ændre dens størrelse (**S**, **M** eller **L**) eller dens udseende.
@@ -100,7 +100,7 @@ Ingen endestop? Brug **Manuel**: drej hjulene lige med hånden, tryk på **Sæt 
 
 <Screenshot name="tutorial-car-links-rows" alt="Bilens tre færdige rækker: kørsel, styring og lys" width={900} />
 
-Når alle tre rækker er klar, viser knappen **Problemer** i topbjælken et grønt flueben. Et rødt "!" fortæller, hvor mange problemer der er tilbage; tryk på det og derefter på et problem for at springe til rækken. Se [Kørsel og løsning af problemer](/docs/Application/Links/Problems).
+Når alle tre rækker er klar, viser knappen **Problemer** i topbjælken (lige før **Kør**) et grønt flueben. Et rødt "!" fortæller, hvor mange problemer der er tilbage; tryk på det og derefter på et problem for at springe til rækken. Se [Kørsel og løsning af problemer](/docs/Application/Links/Problems).
 
 ## 5. Kør og test {#run}
 

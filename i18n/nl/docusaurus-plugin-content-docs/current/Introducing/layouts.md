@@ -24,9 +24,9 @@ Profielen, editors en het dashboard zijn overal hetzelfde; alleen de navigatie v
 - **Account** staat bovenaan in **Instellingen**.
 - De kop van **Mijn profielen** bevat **Sorteren en filteren**, **Afstandsbediening verbinden** (het pictogram van de afstandsbediening), **+** (Nieuw profiel, Profiel importeren…, Online zoeken) en het zoekveld.
 - De hoofdschermen staan in staande stand. Als je een profiel opent, schakelt de app over naar **liggend, volledig scherm**, zodat de editor en het dashboard het hele scherm krijgen. Sluit je het profiel, dan keert de staande stand terug.
-- In de editor geven ronde knoppen bovenaan snel toegang tot Home, Ongedaan maken, Opnieuw, AI-bouwer, Editorinstellingen, Problemen (Snelle koppelingen), Gamepad, Mijn hubs, Afstandsbediening, Dashboard, Monitor (Logicablokken) en Start / Stop.
+- In de editor staat **Home** links in de bovenbalk. Rechts staan **Ongedaan maken** en **Opnieuw**, **Dashboard**, **Mijn hubs** (met het aantal verbonden hubs), **Problemen** (Snelle koppelingen), **Afstandsbediening**, **Meer** (⋯) en **Start / Stop**. In **Meer** staan de **AI-bouwer**, de [**Rugzak**](/docs/Application/BlockBuilder/Backpack) en **Monitor** (Logicablokken), **Gamepad** en **Editorinstellingen**. Op een smal scherm gaan ook Dashboard en Mijn hubs naar **Meer**, zodat de knoppen groot genoeg blijven voor je vinger.
 
-<Screenshot name="editor-phone" alt="De profieleditor op een telefoon met de ronde knoppen bovenaan" width={900} />
+<Screenshot name="editor-phone" alt="De profieleditor op een telefoon met zijn bovenbalk" width={900} />
 
 ## Tablet {#tablet}
 
@@ -36,7 +36,7 @@ Profielen, editors en het dashboard zijn overal hetzelfde; alleen de navigatie v
 - De kop van **Mijn profielen** bevat **Nieuw profiel** (het menu daarvan heeft ook Profiel importeren…, Afstandsbediening verbinden en Online zoeken), **Sorteren en filteren**, **Filteren op hashtags**, **Afstandsbediening verbinden** en het zoekveld.
 - Tik op een profielkaart om die te selecteren: de balk onderaan toont **Delen**, **Bewerken**, **Aan favorieten toevoegen** en **Starten**. Dubbeltik op een kaart om het profiel te starten. Houd een kaart ingedrukt voor het menu, dat ook **Profiel verwijderen** bevat.
 - Op brede schermen openen Instellingen en Help naast de lijst.
-- Een profiel opent in liggende stand, en de editor heeft dezelfde ronde knoppen als op een telefoon.
+- Een profiel opent in liggende stand, en de editor heeft dezelfde bovenbalk als op een telefoon.
 
 ## Desktop (Mac en Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profielen, editors en het dashboard zijn overal hetzelfde; alleen de navigatie v
 - Instellingen, Help, Account, Nieuw profiel, Profiel bewerken, de Profielcatalogus en andere pagina's openen als **vensters** boven de profiellijst.
 - Klik op een profielkaart om te zien wat je ermee kunt doen (**Delen…**, **Bewerken…**, **Aan favorieten toevoegen**, **Starten**); dubbelklikken start het profiel. Klik met de rechtermuisknop op een kaart voor het menu, dat ook **Profiel verwijderen** bevat.
 - In de editor opent het **Dashboard** in een **eigen venster**, zodat je het programma en het dashboard naast elkaar ziet.
+
+### De bovenbalk van de editor {#editor-top-bar}
+
+- **Links**: **Home** (sluit het profiel), de menu's **Bestand**, **Bewerken**, **Weergave** en **Programma**, daarna **Ongedaan maken** en **Opnieuw**.
+- **Midden**: de profielnaam en de knoppen van de andere onderdelen van het profiel: **Dashboard**, **Hubs** (met het aantal verbonden hubs) en **Gamepad**. De pagina waarop je bent, heeft geen eigen knop.
+- **Rechts**: de zijpanelen **AI-bouwer**, [**Rugzak**](/docs/Application/BlockBuilder/Backpack) en **Monitor** (de laatste twee alleen in Logicablokken), **Meer** (⋯), dan in Snelle koppelingen de status van de rijen (**Alle rijen zijn klaar** of **Problemen: N**), **Afstandsbediening** en de oranje knop **Start** (**Stop** terwijl het programma loopt).
+
+In **Meer** staat altijd **Editorinstellingen…**. Wordt het venster smal, dan vouwt de balk zich stap voor stap op in plaats van de knoppen samen te persen: eerst verdwijnt de profielnaam, dan gaan **Monitor**, **Rugzak** en de **AI-bouwer** naar **Meer**, dan houdt **Start** alleen zijn pictogram over (en de status van Snelle koppelingen alleen het pictogram en het aantal), en ten slotte gaan ook **Gamepad**, **Dashboard** en **Hubs** naar **Meer**. Is een zijpaneel uit **Meer** geopend, dan is de knop **Meer** gekleurd.
+
+De bovenbalk van het dashboard ziet er hetzelfde uit: links **Home**, **Bestand**, **Bewerken** en **Weergave**, **Ongedaan maken** en **Opnieuw**; in het midden de profielnaam en **Blokken** (of **Koppelingen**) om terug te gaan naar het programma; rechts **Selecteren**, **Dashboardinstellingen** en **+ Controller**. Zie [Dashboard-editor](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menu's {#menus}
 
@@ -96,6 +106,7 @@ Op een Mac doet ⌘ (Command) wat Ctrl op Windows doet; ⇧ is Shift, ⌃ is Con
 | Blokkenpalet tonen / verbergen (Logicablokken) | Ctrl+P | ⌘P |
 | Zoeken in het blokkenpalet (Logicablokken) | Ctrl+F | ⌘F |
 | Monitor (Logicablokken) | Ctrl+Shift+M | ⇧⌘M |
+| [Rugzak](/docs/Application/BlockBuilder/Backpack) (Logicablokken) | Ctrl+Shift+B | ⇧⌘B |
 | Inzoomen / uitzoomen / werkelijke grootte (Logicablokken) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Dashboard**
@@ -113,16 +124,17 @@ Op een tablet met toetsenbord toont of verbergt Ctrl+B (⌘B op een iPad) de zij
 
 ## De profieleditor in elke indeling {#the-profile-editor-on-every-layout}
 
-De editor heeft geen tabbladen. Het **programma** (rijen van Snelle koppelingen of Logicablokken) vult het scherm, en met knoppen open je al het andere:
+De editor heeft geen tabbladen. Het **programma** (rijen van Snelle koppelingen of Logicablokken) vult het scherm, en met de knoppen in de bovenbalk open je al het andere. Sommige staan in **Meer** (⋯): op een telefoon of tablet de AI-bouwer, Rugzak, Monitor, Gamepad en Editorinstellingen; op een computer Editorinstellingen en alles wat in een smal venster niet past.
 
 | Knop | Opent |
 |---|---|
-| **Mijn hubs** | de [hubslots](/docs/Application/Hubs/ConnectingHubs) van het profiel |
+| **Mijn hubs** (**Hubs** op een computer) | de [hubslots](/docs/Application/Hubs/ConnectingHubs) van het profiel |
 | **Dashboard** | het [dashboard](/docs/Application/Dashboard/DashboardOverview) |
 | **Gamepad** | de [gamepadinstellingen](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | waarden van variabelen en lijsten (alleen Logicablokken) |
+| **Rugzak** | blokstapels die je hebt opgeslagen om in elk profiel opnieuw te gebruiken (alleen Logicablokken); zie [Rugzak](/docs/Application/BlockBuilder/Backpack) |
 | **Editorinstellingen** | de [editoropties](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **AI-bouwer** | de [AI-bouwer](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemen** | rijen die niet kunnen worden uitgevoerd (alleen Snelle koppelingen) |
 | **Afstandsbediening** | het profiel op een ander apparaat uitvoeren en het van hieruit besturen (MocPilot Pro); zie [Afstandsbediening](/docs/Application/Profiles/RemoteControl) |
-| **Start / Stop** | start en stopt het programma |
+| **Start / Stop** | start en stopt het programma (op een computer de oranje knop **Start** helemaal rechts) |

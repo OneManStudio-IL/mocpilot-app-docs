@@ -25,7 +25,7 @@ Logické bloky mají vlastní sadu bloků a vlastní chování. Programy z MOCPi
 
 - **Paleta** obsahuje kategorie bloků: **Události**, **Ovládání**, **Senzory**, **Zvuky**, **Operátor**, **Proměnné**, **Seznamy** a **Moje bloky**. Další kategorie se objeví, když je váš profil potřebuje: **Motory** a **Světlo** (když je hub podporuje), **Simulátor** (když má panel pedály, převodovku nebo ruční brzdu), **Ovladače na obrazovce** a **Herní ovladač**.
 - **Programová plocha** je místo, kam přetahujete bloky a skládáte skripty.
-- Horní lišta obsahuje **Moje huby**, **Panel**, **Herní ovladač**, **Monitor**, **Nastavení editoru**, **AI tvůrce** a **Spustit/Zastavit**.
+- Horní lišta obsahuje **Zpět** a **Znovu**, **Panel**, **Moje huby**, **Herní ovladač**, boční panely **AI tvůrce**, [**Batoh**](/docs/Application/BlockBuilder/Backpack) a **Monitor**, **Více** (s **Nastavením editoru**) a **Spustit/Zastavit**. Na telefonu nebo tabletu jsou boční panely a Herní ovladač v nabídce **Více**.
 
 Podrobnosti najdete v části [Práce v editoru](/docs/Application/BlockBuilder/Editor).
 

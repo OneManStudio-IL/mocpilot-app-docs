@@ -55,7 +55,7 @@ Profilen åpnes i editoren. Mer i [Opprett en profil](/docs/Application/Profiles
 
 ## 5. Legg til huben {#5-add-your-hub}
 
-1. Åpne **Mine hubber** i editoren.
+1. Åpne **Mine hubber** i editoren (**Hubber** i topplinjen på en datamaskin).
 2. Trykk **Legg til en ny hub** i en ledig plass, velg hubmodellen og trykk **Legg til**.
 3. Slå på huben, trykk på knappen på den og vent til MOCPilot finner den.
 
@@ -66,7 +66,7 @@ Hvis appen ber om en fastvareoppdatering, følger du [Oppdatere fastvaren](/docs
 ## 6. Plasser kontroller på dashboardet {#6-place-controls-on-the-dashboard}
 
 1. Åpne **Dashboard**.
-2. Trykk **+** (**Legg til kontroller**), velg en **Joystick** og trykk **Legg til på dashboard**.
+2. Trykk **+** (**Legg til kontroller**; på en datamaskin **+ Kontroller**), velg en **Joystick** og trykk **Legg til på dashboard**.
 3. Dra den dit du vil ha den. Trykk på den for å endre størrelse, farge eller oppførsel.
 
 <Screenshot name="controller-palette" alt="Paletten Legg til kontroller med joysticken valgt" width={900} />

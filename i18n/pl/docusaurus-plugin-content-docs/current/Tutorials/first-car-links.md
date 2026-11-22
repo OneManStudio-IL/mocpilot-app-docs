@@ -41,7 +41,7 @@ Typu programu nie da się później zmienić. Więcej w artykule [Tworzenie prof
 
 ## 2. Dodaj i połącz hub {#add-the-hub}
 
-1. W edytorze stuknij **Moje huby**.
+1. W edytorze stuknij **Moje huby** (na komputerze **Huby** na górnym pasku).
 2. Stuknij **Dodaj nowy hub** w wolnym slocie, wybierz z listy Technic Hub i stuknij **Dodaj**.
 3. Włącz hub i naciśnij jego przycisk. MOCPilot go znajdzie i się połączy; hub zostanie w slocie.
 4. Jeśli pojawi się okno **Wymagana aktualizacja firmware**, stuknij **Aktualizuj** i trzymaj włączony hub w pobliżu, aż aktualizacja się zakończy. Zobacz [Aktualizacja firmware](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Więcej w artykule [Dodawanie i łączenie huba](/docs/Application/Hubs/Connecti
 
 ## 3. Umieść elementy sterujące na panelu {#dashboard}
 
-1. Otwórz **Panel** i stuknij **+** (**Dodaj kontroler**).
+1. Otwórz **Panel** i stuknij **+** (**Dodaj kontroler**; na komputerze **+ Kontroler**).
 2. W grupie **Dżojstiki** wybierz **Dżojstik** i stuknij **Dodaj do panelu**. Otrzyma nazwę **JOY1**. Zostaw **Typ osi** na **Obie osie (X, Y)**: góra i dół będą odpowiadać za jazdę, lewo i prawo za skręcanie.
 3. Ponownie stuknij **+**. W grupie **Przyciski i przełączniki** wybierz **Przycisk** i stuknij **Dodaj do panelu**. Otrzyma nazwę **BTN1**.
 4. Przeciągnij joystick na lewą stronę, a przycisk na prawą – tam, gdzie będą Twoje kciuki. Stuknij element sterujący, aby zmienić jego rozmiar (**S**, **M** lub **L**) albo wygląd.
@@ -100,7 +100,7 @@ Brak ograniczników? Użyj trybu **Ręczna**: ustaw koła prosto ręcznie, stukn
 
 <Screenshot name="tutorial-car-links-rows" alt="Trzy gotowe wiersze samochodu: jazda, skręcanie i światła" width={900} />
 
-Gdy wszystkie trzy wiersze są gotowe, przycisk **Problemy** na górnym pasku pokazuje zielony znacznik. Czerwony „!” informuje, ile problemów zostało; stuknij go, a potem problem, aby przejść do wiersza. Zobacz [Uruchamianie i naprawianie problemów](/docs/Application/Links/Problems).
+Gdy wszystkie trzy wiersze są gotowe, przycisk **Problemy** na górnym pasku (tuż przed **Uruchom**) pokazuje zielony znacznik. Czerwony „!” informuje, ile problemów zostało; stuknij go, a potem problem, aby przejść do wiersza. Zobacz [Uruchamianie i naprawianie problemów](/docs/Application/Links/Problems).
 
 ## 5. Uruchom i przetestuj {#run}
 

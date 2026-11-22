@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Ein Steuerelement hinzufügen {#add-a-control}
 
-1. Tippen Sie auf dem Dashboard auf **+** (**Controller hinzufügen**). Auf einem Computer öffnet sich die Palette in einem eigenen Fenster.
+1. Tippen Sie auf dem Dashboard auf **+** (**Controller hinzufügen**); auf einem Computer klicken Sie rechts in der oberen Leiste auf **+ Controller**. Auf einem Computer öffnet sich die Palette in einem eigenen Fenster, mit **Controller hinzufügen** in der Mitte seiner oberen Leiste.
 2. Wählen Sie in der Liste einen Steuerelementtyp. Die Typen sind gruppiert: **Joysticks**, **Schieberegler**, **Tasten und Schalter**, **Monitore**, dann **Fahrzeug & Spezial** für die [Spezial-Steuerelemente](/docs/Application/Dashboard/SpecialControls) und **Meine Designs** für Ihre gespeicherten Designs. Um ein Steuerelement schnell zu finden, tippen Sie in **Steuerungen suchen**.
 3. Der Streifen mit den Varianten zeigt den gewählten Typ in jedem [Theme](/docs/Application/Themes/ThemesOverview) (bei einem Spezial-Steuerelement alle seine Aussehen-Varianten). Tippen Sie auf eine Variante, um sie in der großen Vorschau zu sehen; dort können Sie sie gleich ausprobieren.
 4. Richten Sie das Steuerelement unter **Konfigurieren** ein: die Tabs **Stil** und **Einstellungen** sowie die Größe.
-5. Tippen Sie auf **Zum Dashboard hinzufügen**. Auf einem Computer können Sie mehrere Steuerelemente nacheinander hinzufügen.
+5. Tippen Sie auf **Zum Dashboard hinzufügen** (auf einem Computer die orange Schaltfläche rechts in der oberen Leiste der Palette). Auf einem Computer können Sie mehrere Steuerelemente nacheinander hinzufügen.
 
 <Screenshot name="controller-palette" alt="Die Palette „Controller hinzufügen“" width={900} />
 

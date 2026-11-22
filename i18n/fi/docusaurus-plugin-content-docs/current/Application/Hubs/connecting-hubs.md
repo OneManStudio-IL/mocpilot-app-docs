@@ -12,7 +12,7 @@ Hubi lisätään profiiliin kerran. Sen jälkeen MOCPilot yhdistää siihen aina
 
 ## Lisää hubi {#add-a-hub}
 
-1. Avaa profiili ja napauta **Omat hubit** (⇧⌘H / Ctrl+Shift+H). **Omat Bluetooth-keskitinlaitteet** -sivu näyttää paikat.
+1. Avaa profiili ja napauta **Omat hubit** (tietokoneella yläpalkin **Hubit** tai ⇧⌘H / Ctrl+Shift+H). **Omat Bluetooth-keskitinlaitteet** -sivu näyttää paikat.
 2. Napauta vapaassa paikassa **Lisää uusi keskitin**.
 3. Valitse hubisi luettelosta. Yläreunan suodatin näyttää vaihtoehdot **Kaikki**, **LEGO**, **SBrick**, **BuWizz** tai **Mould King**. Napauta **Lisää**.
 4. Seuraa näytön ohjeita: **Paina hubin painiketta** ja **Odota, että haku löytää hubin**. Napauta **Aloita skannaus** hakeaksesi uudelleen.
@@ -35,7 +35,7 @@ Paikan **Yhdistä**-painike yhdistää hubin. Paikan valikossa on:
 - **Valitse kanava: A / B / C**: Mould Kingin ohjauskanava;
 - **Poista hubi**: poistaa hubin profiilista.
 
-Editorin **Omat hubit** -painike näyttää, montako hubia on yhdistetty.
+Editorin **Omat hubit** -painike (tietokoneella **Hubit**) näyttää, montako hubia on yhdistetty.
 
 ## Hubin seuranta {#hub-monitor}
 

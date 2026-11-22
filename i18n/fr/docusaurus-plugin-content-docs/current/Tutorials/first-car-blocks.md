@@ -145,7 +145,7 @@ Avec un **Interrupteur** à la place du bouton, c'est encore plus simple : *lors
 
 ## 7. Lancez et observez le Moniteur {#monitor}
 
-Quand quelque chose ne fonctionne pas comme prévu, regardez les valeurs. Le [Moniteur](/docs/Application/BlockBuilder/Editor#monitor) de la barre supérieure affiche toutes les variables pendant l'exécution du programme.
+Quand quelque chose ne fonctionne pas comme prévu, regardez les valeurs. Le [Moniteur](/docs/Application/BlockBuilder/Editor#monitor) (dans la barre supérieure sur un ordinateur, dans **Plus** sur un téléphone ou une tablette) affiche toutes les variables pendant l'exécution du programme.
 
 1. Créez une variable `gaz`.
 2. Dans la boucle, enregistrez-y la valeur du joystick et utilisez la variable comme vitesse du moteur :

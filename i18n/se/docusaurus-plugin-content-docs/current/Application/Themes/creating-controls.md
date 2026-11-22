@@ -12,7 +12,7 @@ Varje kontroll du lägger till utgår från ett tema. Du kan konfigurera den inn
 
 ## Konfigurera innan du lägger till {#configure-before-adding}
 
-1. Öppna **Lägg till kontroll** (**+** på instrumentpanelen).
+1. Öppna **Lägg till kontroll** (**+** på instrumentpanelen, **+ Kontroll** på en dator).
 2. Välj en kontrolltyp och ett utseende i raden med utseenden.
 3. Under **Konfigurera** använder du flikarna **Stil** och **Inställningar**: storlek (paletten visar den som ”B x H punkter”), accentfärg, ikon, temaalternativ, beteende.
 4. Tryck på **Lägg till på instrumentpanelen**.

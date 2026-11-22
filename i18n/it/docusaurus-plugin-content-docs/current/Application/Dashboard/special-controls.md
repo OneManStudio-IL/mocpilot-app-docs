@@ -26,7 +26,7 @@ La **Manopola** non è un prodotto separato: è inclusa in ogni tema a pagamento
 
 ## Aggiungere un controllo speciale {#add-a-special-control}
 
-1. Apri la dashboard e tocca **+** (**Aggiungi controller**).
+1. Apri la dashboard e tocca **+** (**Aggiungi controller**; su un computer, **+ Controller**).
 2. Nell'elenco dei tipi di controlli, scorri fino a **Veicolo e speciali** e seleziona un controllo.
 3. La striscia degli aspetti mostra tutti i suoi aspetti. Scegline uno, poi configura il controllo in **Configura**.
 4. Tocca **Aggiungi alla dashboard**. Per un controllo che non possiedi ancora, tocca **Acquista** o **Tutto con MocPilot Pro**.

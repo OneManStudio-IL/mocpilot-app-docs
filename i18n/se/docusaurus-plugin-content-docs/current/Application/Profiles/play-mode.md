@@ -15,13 +15,13 @@ En profil har två lägen:
 
 ## Starta och stoppa {#start-and-stop}
 
-Tryck på **Kör** (▶) i redigeraren eller på instrumentpanelen (dator: **Program → Kör**, ⌘R / Ctrl+R). Tryck på **Stoppa** (■) för att gå tillbaka till redigeringen (⌘. / Ctrl+.).
+Tryck på **Kör** (▶) längst till höger i redigerarens övre fält; på en telefon eller surfplatta finns den även på instrumentpanelen. På en dator är **Kör** den orange knappen i redigeraren (även **Program → Kör**, ⌘R / Ctrl+R). Tryck på **Stoppa** (■) för att gå tillbaka till redigeringen (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Instrumentpanelen medan programmet körs" width={900} />
 
 Medan programmet körs:
 
-- döljs rutnätets punkter på instrumentpanelen och knapparna för att lägga till och för inställningar;
+- döljs rutnätets punkter på instrumentpanelen, och likaså dess redigeringsknappar (på en dator är de inte tillgängliga);
 - reagerar kontrollerna på beröring och på handkontrollen;
 - visar monitorer och indikatorer aktuella värden;
 - visar redigeraren i Snabbkopplingar aktuella värden mellan blocken på varje rad, och raderna kan inte redigeras;
@@ -33,7 +33,7 @@ När du öppnar en profil växlar telefonen till liggande läge i helskärm, så
 
 ## Innan du trycker på Kör {#before-you-press-run}
 
-- Slå på hubbarna och kontrollera under **Mina hubbar** att de är anslutna (märket på knappen visar hur många som är det).
+- Slå på hubbarna och kontrollera under **Mina hubbar** att de är anslutna (siffran på knappen **Mina hubbar**, **Hubbar** på en dator, visar hur många som är det).
 - I Snabbkopplingar kontrollerar du knappen **Problem**: ett rött ”!” betyder att vissa rader inte kan köras. Se [Köra och åtgärda problem](/docs/Application/Links/Problems).
 - Första gången ställer du modellen på ett stöd eller håller den borta från bordskanten.
 

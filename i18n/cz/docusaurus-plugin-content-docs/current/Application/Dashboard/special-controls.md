@@ -26,7 +26,7 @@ Speciální ovládací prvky vypadají a fungují jako skutečné: volant, pedá
 
 ## Přidání speciálního ovládacího prvku {#add-a-special-control}
 
-1. Otevřete panel a klepněte na **+** (**Přidat ovladač**).
+1. Otevřete panel a klepněte na **+** (**Přidat ovladač**; na počítači **+ Ovladač**).
 2. V seznamu typů ovládacích prvků sjeďte ke skupině **Vozidlo a speciální** a vyberte ovládací prvek.
 3. Pás stylů ukazuje všechny jeho styly. Vyberte jeden a pak ovládací prvek nastavte v části **Konfigurovat**.
 4. Klepněte na **Přidat na panel**. U ovládacího prvku, který ještě nevlastníte, klepněte na **Koupit** nebo **Vše s MocPilot Pro**.

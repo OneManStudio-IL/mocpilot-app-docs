@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Pridanie ovládacieho prvku {#add-a-control}
 
-1. Na paneli ťuknite na **+** (**Pridať ovládač**). Na počítači sa paleta otvorí vo vlastnom okne.
+1. Na paneli ťuknite na **+** (**Pridať ovládač**); na počítači kliknite na **+ Ovládač** vpravo na hornej lište. Na počítači sa paleta otvorí vo vlastnom okne s nápisom **Pridať ovládač** v strede hornej lišty.
 2. V zozname vyberte typ ovládacieho prvku. Typy sú zoskupené: **Joysticky**, **Posuvníky**, **Tlačidlá a prepínače**, **Monitory**, potom **Vozidlo a špeciálne** pre [špeciálne ovládacie prvky](/docs/Application/Dashboard/SpecialControls) a **Moje návrhy** pre návrhy, ktoré ste si uložili. Ak chcete ovládací prvok nájsť rýchlo, píšte do poľa **Hľadať ovládacie prvky**.
 3. Pás vzhľadov ukazuje vybraný typ v každej [téme](/docs/Application/Themes/ThemesOverview) (pri špeciálnom ovládacom prvku všetky jeho vzhľady). Ťuknutím na vzhľad ho zobrazíte vo veľkom náhľade; môžete ho tam rovno vyskúšať.
 4. Ovládací prvok nastavte v časti **Konfigurovať**: karty **Štýl** a **Nastavenia** a veľkosť.
-5. Ťuknite na **Pridať na panel**. Na počítači môžete pridať niekoľko ovládacích prvkov za sebou.
+5. Ťuknite na **Pridať na panel** (na počítači je to oranžové tlačidlo vpravo na hornej lište palety). Na počítači môžete pridať niekoľko ovládacích prvkov za sebou.
 
 <Screenshot name="controller-palette" alt="Paleta Pridať ovládač" width={900} />
 

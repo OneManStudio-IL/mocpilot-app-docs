@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Lägga till en kontroll {#add-a-control}
 
-1. Tryck på **+** (**Lägg till kontroll**) på instrumentpanelen. På en dator öppnas paletten i ett eget fönster.
+1. Tryck på **+** (**Lägg till kontroll**) på instrumentpanelen; på en dator klickar du på **+ Kontroll** till höger i det övre fältet. På en dator öppnas paletten i ett eget fönster, med **Lägg till kontroll** mitt i dess övre fält.
 2. Välj en kontrolltyp i listan. Typerna är grupperade: **Joysticks**, **Reglage**, **Knappar och växlar**, **Skärmar**, sedan **Fordon och special** för [specialkontrollerna](/docs/Application/Dashboard/SpecialControls) och **Mina designer** för designer du har sparat. Skriv i **Sök kontroller** för att snabbt hitta en kontroll.
 3. Raden med utseenden visar den valda typen i alla [teman](/docs/Application/Themes/ThemesOverview) (för en specialkontroll alla dess utseenden). Tryck på ett utseende för att se det i den stora förhandsvisningen; du kan prova det direkt där.
 4. Ställ in kontrollen under **Konfigurera**: flikarna **Stil** och **Inställningar** samt storleken.
-5. Tryck på **Lägg till på instrumentpanelen**. På en dator kan du lägga till flera kontroller i följd.
+5. Tryck på **Lägg till på instrumentpanelen** (på en dator den orange knappen till höger i palettens övre fält). På en dator kan du lägga till flera kontroller i följd.
 
 <Screenshot name="controller-palette" alt="Paletten Lägg till kontroll" width={900} />
 

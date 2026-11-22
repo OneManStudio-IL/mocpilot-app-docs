@@ -17,7 +17,7 @@ AI 构建器属于 [MocPilot Pro](/docs/Application/Account/Pro)，可在应用�
 ## 打开 AI 构建器 {#open-the-ai-builder}
 
 1. 打开一个配置文件进行编辑。
-2. 按下顶部栏中的 **AI 构建器**按钮（闪光图标）。在电脑上也可以按 ⇧⌘I / Ctrl+Shift+I。
+2. 在电脑上，按下顶栏右侧的 **AI 构建器**按钮（闪光图标），或按 ⇧⌘I / Ctrl+Shift+I；在窄窗口中，它位于**更多**（⋯）中。在手机或平板上，轻点**更多** → **AI 构建器**。
 3. 在 **AI 应该构建或修改什么？**中输入你的请求，然后按**发送**（或按 Enter；Shift+Enter 换行）。
 
 没有 MocPilot Pro 时，该按钮会介绍 AI 构建器的功能，并显示**获取 MocPilot Pro** 和**以后再说**。

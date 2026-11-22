@@ -12,7 +12,7 @@ Je voegt een hub één keer toe aan een profiel. Daarna maakt MOCPilot verbindin
 
 ## Een hub toevoegen {#add-a-hub}
 
-1. Open het profiel en tik op **Mijn hubs** (⇧⌘H / Ctrl+Shift+H). De pagina **Mijn Bluetooth-hubs** toont de slots.
+1. Open het profiel en tik op **Mijn hubs** (op een computer **Hubs** in de bovenbalk of ⇧⌘H / Ctrl+Shift+H). De pagina **Mijn Bluetooth-hubs** toont de slots.
 2. Tik in een vrij slot op **Nieuwe hub toevoegen**.
 3. Kies je hub in de lijst. Met het filter bovenaan kies je **Alles**, **LEGO**, **SBrick**, **BuWizz** of **Mould King**. Tik op **Toevoegen**.
 4. Volg de stappen op het scherm: **Druk op de knop op de hub** en **Wacht tot de zoekopdracht de hub vindt**. Tik op **Scan starten** om opnieuw te zoeken.
@@ -35,7 +35,7 @@ Met de knop **Verbinden** op een slot verbind je de hub. Het slotmenu bevat:
 - **Selecteer kanaal: A / B / C**: het besturingskanaal van Mould King;
 - **Verwijder hub**: verwijdert de hub uit het profiel.
 
-De knop **Mijn hubs** in de editor laat zien hoeveel hubs er verbonden zijn.
+De knop **Mijn hubs** in de editor (**Hubs** op een computer) laat zien hoeveel hubs er verbonden zijn.
 
 ## Hubmonitor {#hub-monitor}
 

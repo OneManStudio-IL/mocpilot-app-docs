@@ -38,7 +38,7 @@ Directe uitvoer (Indicator, Hub-LED, LED-matrix, Servo's kalibreren) heeft geen 
 
 - **Rijen** vullen het scherm en scrollen verticaal. Nieuwe rijen begin je in de laatste, lege rij (“Nieuwe rij: invoer”).
 - Het **palet** onderaan heeft drie tabbladen: **Invoer**, **Verwerking** en **Uitvoer**. Het wordt opgebouwd uit je profiel: elke dashboardbediening en elke hub in Mijn hubs verschijnt automatisch, de gamepad verschijnt als gamepadblokken aan staan, en een bewerking verschijnt alleen als een hub van het profiel die kan uitvoeren.
-- De knop **Problemen** in de bovenbalk toont een groen vinkje als elke rij klaar is, of een rood “!” met het aantal problemen.
+- De status van de rijen in de bovenbalk, vlak voor **Start**, toont een groen vinkje als elke rij klaar is, of een rood “!” met het aantal problemen. Op een computer staat er ook **Alle rijen zijn klaar** of **Problemen: N**.
 
 ## Een rij bouwen {#build-a-row}
 
@@ -71,7 +71,7 @@ Druk op **Start**. Terwijl het programma draait, toont elke verbinding de **live
 
 ## Ongedaan maken {#undo}
 
-**Ongedaan maken** en **Opnieuw** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, of de zwevende knoppen) gaan tot 100 stappen terug. Ze zijn niet beschikbaar terwijl het programma draait.
+**Ongedaan maken** en **Opnieuw** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, of de knoppen in de bovenbalk) gaan tot 100 stappen terug. Ze zijn niet beschikbaar terwijl het programma draait.
 
 ## Meer lezen {#read-more}
 

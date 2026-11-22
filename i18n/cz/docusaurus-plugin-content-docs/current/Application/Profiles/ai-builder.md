@@ -17,7 +17,7 @@ AI tvůrce je součástí [MocPilot Pro](/docs/Application/Account/Pro) a funguj
 ## Otevření AI tvůrce {#open-the-ai-builder}
 
 1. Otevřete profil k úpravám.
-2. Stiskněte tlačítko **AI tvůrce** (ikona jisker) na horní liště. Na počítači můžete také stisknout ⇧⌘I / Ctrl+Shift+I.
+2. Na počítači stiskněte tlačítko **AI tvůrce** (ikona jisker) vpravo na horní liště nebo ⇧⌘I / Ctrl+Shift+I; v úzkém okně je v nabídce **Více** (⋯). Na telefonu nebo tabletu klepněte na **Více** → **AI tvůrce**.
 3. Napište svůj požadavek do pole **Co má AI sestavit nebo změnit?** a stiskněte **Odeslat** (nebo Enter; Shift+Enter začne nový řádek).
 
 Bez MocPilot Pro ukáže tlačítko, co AI tvůrce umí, s volbami **Získat MocPilot Pro** a **Teď ne**.

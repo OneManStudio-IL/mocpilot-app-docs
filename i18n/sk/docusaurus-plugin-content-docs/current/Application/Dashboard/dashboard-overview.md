@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Editor panela
-description: "Panel MOCPilot: plocha, mriežka, panel nástrojov, pozadie a funkcia Späť."
+description: "Panel MOCPilot: plocha, mriežka, horná lišta, pozadie a funkcia Späť."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Panel** je obrazovka, z ktorej riadite model: joysticky, posuvníky, tlačidlá, monitory a ďalšie ovládacie prvky. Každý profil má jeden panel.
 
-Otvoríte ho tlačidlom **Panel** v editore (na počítači ⌘2 / Ctrl+2).
+Otvoríte ho tlačidlom **Panel** na hornej lište editora (na počítači ⌘2 / Ctrl+2). Na telefóne s úzkou obrazovkou je v ponuke **Viac**.
 
 - **Telefón a tablet**: panel sa otvorí na celú obrazovku nad editorom.
 - **Počítač**: panel sa otvorí vo vlastnom okne **Panel**, takže ho môžete mať vedľa programu.
@@ -24,19 +24,32 @@ Otvoríte ho tlačidlom **Panel** v editore (na počítači ⌘2 / Ctrl+2).
 - V režime úprav sa zobrazuje **bodková mriežka** so 40 × 20 bunkami. Ovládacie prvky sa prichytávajú k mriežke.
 - Ovládacie prvky sa nemôžu prekrývať. Ak sa ovládací prvok nezmestí, vráti sa na pôvodné miesto.
 
-## Panel nástrojov {#toolbar}
+## Horná lišta {#toolbar}
+
+**Telefón a tablet**
 
 | Tlačidlo | Čo robí |
 |---|---|
 | ← | späť do editora programu |
 | Späť / Znova | vráti a zopakuje zmeny panela |
-| **+** (Pridať ovládač) | otvorí paletu ovládačov; pozrite si [Pridanie a usporiadanie ovládacích prvkov](/docs/Application/Dashboard/ArrangingControls) |
+| **Vybrať** | výber niekoľkých ovládacích prvkov, ktoré potom môžete spoločne zamknúť, odomknúť, odstrániť alebo upraviť; **Hotovo** výber ukončí |
 | ⚙ (Nastavenia panela) | možnosti pozadia a mriežky (nižšie) |
+| **+** (Pridať ovládač, s oranžovým krúžkom) | otvorí paletu ovládačov; pozrite si [Pridanie a usporiadanie ovládacích prvkov](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Spustiť** / **Zastaviť**: spustenie a zastavenie programu |
 
-Na počítači má okno Panel aj ponuky: **Súbor** (Zavrieť profil, Otvoriť v samostatnom okne, Nastavenia panela…), **Upraviť** (Späť, Znova, Pridať ovládač…) a **Zobraziť** (Bloky ⌘1, Panel ⌘2).
-
 Kým program beží, tlačidlá na úpravy sú skryté.
+
+**Počítač a webový editor**
+
+Horná lišta vyzerá rovnako ako v editore:
+
+- **Vľavo**: **Domov** (zatvorí profil), ponuky **Súbor**, **Upraviť** a **Zobraziť** a za nimi **Späť** a **Znova**.
+- **V strede**: názov profilu a **Bloky** (v profile s Rýchlymi prepojeniami **Prepojenia**, ⌘1 / Ctrl+1) na návrat k programu. Samotný panel tu tlačidlo nemá: je to stránka, na ktorej ste.
+- **Vpravo**: **Vybrať**, **Nastavenia panela** (⚙) a oranžové tlačidlo **+ Ovládač** (Pridať ovládač). V úzkom okne sa názov profilu a tlačidlo **Bloky** skryjú a z **+ Ovládač** zostane iba **+**.
+
+Na lište panela na počítači nie je **Spustiť**: program spúšťajte a zastavujte z editora (⌘R / Ctrl+R, ⌘. / Ctrl+.). Kým program beží, **Vybrať**, **Nastavenia panela** a **+ Ovládač** nie sú k dispozícii.
+
+Ponuky: **Súbor** (Zavrieť profil, Otvoriť v samostatnom okne), **Upraviť** (Späť, Znova) a **Zobraziť** (Bloky ⌘1, Panel ⌘2). V samostatnom okne Panel ukazuje lišta namiesto **Domov** názov okna, ponuka **Súbor** obsahuje **Zavrieť okno** a ponuka **Zobraziť** ani tlačidlo **Bloky** tam nie sú.
 
 ## Späť a Znova {#undo-and-redo}
 

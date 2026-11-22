@@ -38,7 +38,7 @@ Suorat lähdöt (Ilmaisin, Hubin LED, LED-matriisi, Kalibroi servot) eivät tarv
 
 - **Rivit** täyttävät näytön ja vierivät pystysuunnassa. Uusi rivi aloitetaan viimeiseltä, tyhjältä riviltä (”Uusi rivi: syöte”).
 - Alareunan **paletissa** on kolme välilehteä: **Syötteet**, **Käsittely** ja **Lähdöt**. Paletti kootaan profiilistasi: jokainen kojelaudan ohjain ja jokainen Omien hubien hubi näkyy siinä automaattisesti, peliohjain näkyy, kun peliohjainlohkot ovat käytössä, ja toiminto näkyy vain, jos jokin profiilin hubeista osaa sen.
-- Yläpalkin **Ongelmat**-painikkeessa näkyy vihreä valintamerkki, kun kaikki rivit ovat valmiita, tai punainen ”!” ja ongelmien määrä.
+- Rivien tila yläpalkissa, juuri ennen **Suorita**-painiketta, näyttää vihreän valintamerkin, kun kaikki rivit ovat valmiita, tai punaisen ”!” ja ongelmien määrän. Tietokoneella siinä lukee myös **Kaikki rivit ovat valmiita** tai **Ongelmia: N**.
 
 ## Rakenna rivi {#build-a-row}
 
@@ -71,7 +71,7 @@ Paina **Suorita**. Ohjelman käydessä jokainen liitos näyttää sen läpi kulk
 
 ## Kumoa {#undo}
 
-**Kumoa** ja **Tee uudelleen** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z tai kelluvat painikkeet) palaavat enintään 100 vaihetta. Ne eivät ole käytettävissä ohjelman ollessa käynnissä.
+**Kumoa** ja **Tee uudelleen** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z tai yläpalkin painikkeet) palaavat enintään 100 vaihetta. Ne eivät ole käytettävissä ohjelman ollessa käynnissä.
 
 ## Lue lisää {#read-more}
 

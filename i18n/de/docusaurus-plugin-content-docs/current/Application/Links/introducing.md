@@ -38,7 +38,7 @@ Direkte Ausgänge (Anzeige, Hub-LED, LED-Matrix, Servos kalibrieren) brauchen ke
 
 - Die **Zeilen** füllen den Bildschirm und lassen sich vertikal scrollen. Neue Zeilen beginnen in der letzten, leeren Zeile („Neue Zeile: Eingang“).
 - Die **Palette** unten hat drei Registerkarten: **Eingänge**, **Verarbeitung** und **Ausgänge**. Sie wird aus Ihrem Profil erstellt: Jedes Dashboard-Steuerelement und jeder Hub unter „Meine Hubs“ erscheinen automatisch, das Gamepad erscheint, wenn Gamepad-Blöcke aktiviert sind, und eine Aktion erscheint nur, wenn ein Hub des Profils sie ausführen kann.
-- Die Schaltfläche **Probleme** in der oberen Leiste zeigt ein grünes Häkchen, wenn jede Zeile bereit ist, oder ein rotes „!“ mit der Anzahl der Probleme.
+- Der Zeilenstatus in der oberen Leiste, direkt vor **Start**, zeigt ein grünes Häkchen, wenn jede Zeile bereit ist, oder ein rotes „!“ mit der Anzahl der Probleme. Auf einem Computer steht dort außerdem **Alle Zeilen sind bereit** oder **Probleme: N**.
 
 ## Eine Zeile erstellen {#build-a-row}
 
@@ -71,7 +71,7 @@ Drücken Sie **Start**. Während das Programm läuft, zeigt jede Verbindungsstel
 
 ## Rückgängig {#undo}
 
-**Rückgängig** und **Wiederholen** (⌘Z / ⇧⌘Z, Strg+Z / Strg+Umschalt+Z oder die schwebenden Schaltflächen) gehen bis zu 100 Schritte zurück. Während das Programm läuft, sind sie nicht verfügbar.
+**Rückgängig** und **Wiederholen** (⌘Z / ⇧⌘Z, Strg+Z / Strg+Umschalt+Z oder die Schaltflächen in der oberen Leiste) gehen bis zu 100 Schritte zurück. Während das Programm läuft, sind sie nicht verfügbar.
 
 ## Mehr dazu {#read-more}
 

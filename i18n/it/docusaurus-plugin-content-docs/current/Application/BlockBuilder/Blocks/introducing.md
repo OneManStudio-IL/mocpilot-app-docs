@@ -25,7 +25,7 @@ Blocchi logici ha un proprio insieme di blocchi e un proprio comportamento. Non 
 
 - La **palette** elenca le categorie di blocchi: **Eventi**, **Controllo**, **Sensori**, **Suoni**, **Operatore**, **Variabili**, **Liste** e **I miei blocchi**. Altre categorie compaiono quando il profilo ne ha bisogno: **Motori** e **Luce** (quando un hub li supporta), **Simulatore** (quando la dashboard ha pedali, un cambio o un freno a mano), **Controller su schermo** e **Gamepad**.
 - L'**area del programma** è dove trascini i blocchi e costruisci gli script.
-- La barra superiore contiene **I miei hub**, **Dashboard**, **Gamepad**, **Monitor**, **Impostazioni dell'editor**, l'**Assistente IA** e **Avvia/Ferma**.
+- La barra superiore contiene **Annulla** e **Ripeti**, **Dashboard**, **I miei hub**, **Gamepad**, i pannelli laterali **Assistente IA**, [**Zaino**](/docs/Application/BlockBuilder/Backpack) e **Monitor**, **Altro** (con **Impostazioni dell'editor**) e **Avvia/Ferma**. Su smartphone o tablet, i pannelli laterali e Gamepad si trovano in **Altro**.
 
 Per i dettagli vedi [Lavorare nell'editor](/docs/Application/BlockBuilder/Editor).
 

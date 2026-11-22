@@ -15,7 +15,7 @@ Spillkontrolleren fungerer sammen med dashboardet; du kan bruke begge samtidig.
 ## Koble til en spillkontroller {#connect-a-gamepad}
 
 1. Par spillkontrolleren med telefonen, nettbrettet eller datamaskinen i systemets Bluetooth-innstillinger (eller koble den til med USB).
-2. Åpne en profil og trykk **Spillkontroller** i editoren.
+2. Åpne en profil og gå til **Spillkontroller**: i topplinjen i editoren på en datamaskin, under **Mer** på telefon og nettbrett (der står det **Spillkontroller (tilkoblet)** når systemet ser en spillkontroller).
 3. Toppen av siden viser **Spillkontroller: (navn)**. «Spillkontroller er ikke tilkoblet» betyr at systemet ikke ser den ennå.
 
 <Screenshot name="gamepad" alt="Siden Spillkontroller" width={900} />

@@ -23,7 +23,7 @@ Mit der Fernsteuerung steuern Sie ein Modell, das mit einem anderen Gerät verbu
 
 ## Ein Hub-Gerät verbinden {#connect-a-hub-device}
 
-1. Öffnen Sie auf der Fernbedienung das Profil und drücken Sie in der oberen Leiste des Profils **Fernsteuerung** (das Fernbedienungssymbol: ein Haus mit Funkwellen). Drücken Sie im Web-Editor im sich öffnenden Bereich auf **Code anzeigen**.
+1. Öffnen Sie auf der Fernbedienung das Profil und drücken Sie in der oberen Leiste des Profils **Fernsteuerung** (das Fernbedienungssymbol: ein Haus mit Funkwellen) neben **Start**. Drücken Sie im Web-Editor im sich öffnenden Bereich auf **Code anzeigen**.
 
    Die Fernbedienung zeigt einen **Verbindungscode**: einen QR-Code und 6 Ziffern.
 2. Öffnen Sie auf dem Hub-Gerät MOCPilot und tippen Sie auf der Seite **Meine Profile** auf **Fernbedienung verbinden**. Auf dem Mac können Sie auch **Datei → Fernbedienung verbinden…** wählen.

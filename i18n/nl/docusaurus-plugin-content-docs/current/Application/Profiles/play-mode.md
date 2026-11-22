@@ -15,13 +15,13 @@ Een profiel heeft twee modi:
 
 ## Starten en stoppen {#start-and-stop}
 
-Druk op **Start** (▶) in de editor of op het dashboard (computer: **Programma → Start**, ⌘R / Ctrl+R). Druk op **Stop** (■) om terug te gaan naar bewerken (⌘. / Ctrl+.).
+Druk op **Start** (▶) helemaal rechts in de bovenbalk van de editor; op een telefoon of tablet heeft het dashboard hem ook. Op een computer is **Start** de oranje knop in de editor (ook **Programma → Start**, ⌘R / Ctrl+R). Druk op **Stop** (■) om terug te gaan naar bewerken (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Het dashboard terwijl het programma loopt" width={900} />
 
 Terwijl het programma loopt:
 
-- zijn de rasterpunten van het dashboard en de knoppen voor toevoegen en instellingen verborgen;
+- zijn de rasterpunten van het dashboard verborgen, en ook de bewerkingsknoppen (op een computer zijn ze niet beschikbaar);
 - reageren de bedieningselementen op aanraking en op de gamepad;
 - tonen monitors en indicatoren live waarden;
 - toont de editor bij Snelle koppelingen live waarden tussen de blokken van elke rij, en kunnen de rijen niet worden bewerkt;
@@ -33,7 +33,7 @@ Als je een profiel opent, schakelt een telefoon over naar liggend, volledig sche
 
 ## Voordat je op Start drukt {#before-you-press-run}
 
-- Zet de hubs aan en controleer in **Mijn hubs** of ze verbonden zijn (het badge op de knop toont hoeveel er verbonden zijn).
+- Zet de hubs aan en controleer in **Mijn hubs** of ze verbonden zijn (het getal op de knop **Mijn hubs**, **Hubs** op een computer, toont hoeveel er verbonden zijn).
 - Controleer bij Snelle koppelingen de knop **Problemen**: een rood “!” betekent dat sommige rijen niet kunnen worden uitgevoerd. Zie [Uitvoeren en problemen oplossen](/docs/Application/Links/Problems).
 - Zet het model de eerste keer op een standaard of houd het uit de buurt van de rand van de tafel.
 

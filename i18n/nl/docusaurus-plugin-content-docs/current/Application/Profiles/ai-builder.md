@@ -17,7 +17,7 @@ De AI-bouwer is onderdeel van [MocPilot Pro](/docs/Application/Account/Pro) en w
 ## De AI-bouwer openen {#open-the-ai-builder}
 
 1. Open een profiel om te bewerken.
-2. Druk op de knop **AI-bouwer** (het pictogram met de sterretjes) in de bovenbalk. Op een computer kun je ook op ⇧⌘I / Ctrl+Shift+I drukken.
+2. Druk op een computer op de knop **AI-bouwer** (het pictogram met de sterretjes) rechts in de bovenbalk, of op ⇧⌘I / Ctrl+Shift+I; in een smal venster staat hij in **Meer** (⋯). Tik op een telefoon of tablet op **Meer** → **AI-bouwer**.
 3. Typ je verzoek in **Wat moet de AI bouwen of wijzigen?** en druk op **Verzenden** (of Enter; met Shift+Enter begin je een nieuwe regel).
 
 Zonder MocPilot Pro laat de knop zien wat de AI-bouwer doet, met **MocPilot Pro nemen** en **Niet nu**.

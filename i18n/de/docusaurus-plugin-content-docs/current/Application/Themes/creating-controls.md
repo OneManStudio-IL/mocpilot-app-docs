@@ -12,7 +12,7 @@ Jedes Steuerelement, das Sie hinzufügen, basiert auf einem Theme. Sie können e
 
 ## Vor dem Hinzufügen konfigurieren {#configure-before-adding}
 
-1. Öffnen Sie **Controller hinzufügen** (**+** auf dem Dashboard).
+1. Öffnen Sie **Controller hinzufügen** (**+** auf dem Dashboard, **+ Controller** auf einem Computer).
 2. Wählen Sie einen Steuerelementtyp und im Streifen eine Variante.
 3. Verwenden Sie unter **Konfigurieren** die Tabs **Stil** und **Einstellungen**: Größe (die Palette zeigt sie als „B x H Punkte“), Akzentfarbe, Symbol, Theme-Optionen, Verhalten.
 4. Tippen Sie auf **Zum Dashboard hinzufügen**.

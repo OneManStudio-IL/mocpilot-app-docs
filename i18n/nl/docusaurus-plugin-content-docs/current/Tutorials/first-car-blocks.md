@@ -145,7 +145,7 @@ Met een **Schakelaar** in plaats van de knop is het nog eenvoudiger: *wanneer sc
 
 ## 7. Starten en de Monitor bekijken {#monitor}
 
-Werkt iets niet zoals verwacht, kijk dan naar de waarden. De [Monitor](/docs/Application/BlockBuilder/Editor#monitor) in de bovenbalk toont elke variabele terwijl het programma loopt.
+Werkt iets niet zoals verwacht, kijk dan naar de waarden. De [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (in de bovenbalk op een computer, in **Meer** op een telefoon of tablet) toont elke variabele terwijl het programma loopt.
 
 1. Maak een variabele `gas`.
 2. Sla in de lus de waarde van de joystick erin op en gebruik de variabele voor de motorsnelheid:

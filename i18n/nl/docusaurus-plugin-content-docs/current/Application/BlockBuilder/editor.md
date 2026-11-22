@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Werken in de editor
-description: "Palet, blokken slepen, zoomen, contextmenu's, ongedaan maken, Monitor, editorinstellingen en de AI-bouwer in Logicablokken."
+description: "Bovenbalk, palet, blokken slepen, zoomen, contextmenu's, ongedaan maken, Monitor, Rugzak, editorinstellingen en de AI-bouwer in Logicablokken."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Werken in de editor {#working-in-the-editor}
 
 <Screenshot name="blocks-editor" alt="Editor van Logicablokken" width={900} />
+
+## Bovenbalk {#top-bar}
+
+- **Computer en webeditor**: links **Home** en de menu's, met **Ongedaan maken** en **Opnieuw** ernaast. In het midden: de profielnaam en **Dashboard**, **Hubs** en **Gamepad**. Rechts: **AI-bouwer**, [**Rugzak**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **Meer** (⋯), **Afstandsbediening** en de oranje knop **Start**. In een smal venster gaan de knoppen die niet passen naar **Meer**; daar staat altijd **Editorinstellingen…**.
+- **Telefoon en tablet**: **Home** links; rechts **Ongedaan maken**, **Opnieuw**, **Dashboard**, **Mijn hubs**, **Afstandsbediening**, **Meer** en **Start / Stop**. In **Meer** staan **AI-bouwer**, **Rugzak**, **Monitor**, **Gamepad** en **Editorinstellingen**.
+
+Zie [Telefoon, tablet en desktop](/docs/Introducing/Layouts#editor-top-bar) voor hoe de balk zich in een smal venster opvouwt.
 
 ## Palet en programmagebied {#palette-and-program-area}
 
@@ -31,6 +38,7 @@ Houd een blok lang ingedrukt (op een touchscreen) of klik er met de rechtermuisk
 - **Bewerken**: de waarden wijzigen;
 - **Dupliceren**;
 - **Blok verwijderen** / **Verwijder N blokken**;
+- **Aan rugzak toevoegen**: bewaar het blok en alles wat eraan vastzit in de [rugzak](/docs/Application/BlockBuilder/Backpack);
 - **Over het blok**: opent de beschrijving van het blok in deze documentatie;
 - **Blok exporteren als SVG** / **Alle blokken exporteren als SVG**: sla een afbeelding op voor een handleiding of een forumbericht.
 
@@ -40,7 +48,7 @@ Een blok dat aan een dashboardbediening gekoppeld is, kun je pas verwijderen nad
 
 ## Ongedaan maken en opnieuw {#undo-and-redo}
 
-Gebruik **Bewerken → Ongedaan maken / Opnieuw** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) of de zwevende knoppen.
+Gebruik **Bewerken → Ongedaan maken / Opnieuw** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) of de knoppen **Ongedaan maken** en **Opnieuw** in de bovenbalk (op een computer naast de menu's).
 
 - Eén keer slepen is één stap; snelle wijzigingen van dezelfde waarde worden samengevoegd tot één stap.
 - Ongedaan maken werkt ook terwijl het programma draait.
@@ -50,11 +58,17 @@ Gebruik **Bewerken → Ongedaan maken / Opnieuw** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl
 
 ## Monitor {#monitor}
 
-**Monitor** (⇧⌘M / Ctrl+Shift+M) toont de huidige waarden van variabelen en lijsten terwijl het programma draait. Op een computer kun je hem in een apart venster openen. Een grote hulp als je een fout zoekt.
+**Monitor** (⇧⌘M / Ctrl+Shift+M, **Weergave → Monitor**) toont de huidige waarden van variabelen en lijsten terwijl het programma draait. De knop staat op een computer in de bovenbalk en op een telefoon of tablet in **Meer**. Op een computer kun je hem in een apart venster openen. Een grote hulp als je een fout zoekt.
 
 <Screenshot name="blocks-monitor" alt="Monitor met variabelen en een lijst terwijl het programma draait" width={900} />
 
+## Rugzak {#backpack}
+
+De **Rugzak** (⇧⌘B / Ctrl+Shift+B, **Weergave → Rugzak**) bewaart blokstapels om ze in elk profiel opnieuw te gebruiken: kies **Aan rugzak toevoegen** in het menu van een blok en tik daarna op het item of sleep het om het in een programma in te voegen. De knop staat naast **Monitor** in de bovenbalk, of in **Meer**. Zie [Rugzak](/docs/Application/BlockBuilder/Backpack).
+
 ## Editorinstellingen {#editor-settings}
+
+Open ze via **Meer → Editorinstellingen** in de bovenbalk (op een computer ook via **Programma → Editorinstellingen…**).
 
 - **Blok starten door te klikken**: als je op een blok klikt, wordt het uitgevoerd, zodat je het los kunt testen; staat het programma stil, dan start het daarmee ook.
 - **Programma in het midden openen**: als je een profiel opent, wordt het programma op 100% in het midden van het canvas getoond (of vanaf de linkerbovenhoek als het groter is), waar je het tijdens het bewerken ook achterliet. Dit geldt voor alle profielen op dit apparaat.
@@ -75,7 +89,7 @@ Het niveau wordt in het profiel opgeslagen. Blokken die al in het programma staa
 
 ## AI-bouwer {#ai-builder}
 
-Met [MocPilot Pro](/docs/Application/Account/Pro) stelt de **AI-bouwer** (de knop met de sterretjes, ⇧⌘I / Ctrl+Shift+I) de hubs, het dashboard en het programma in op basis van een beschrijving die je typt of uitspreekt, en past daarna het profiel aan zoals je vraagt. Hij werkt in profielen met Logicablokken en met Snelle koppelingen. Zie [AI-bouwer](/docs/Application/Profiles/AiBuilder).
+Met [MocPilot Pro](/docs/Application/Account/Pro) stelt de **AI-bouwer** (de knop met de sterretjes in de bovenbalk, **Meer → AI-bouwer** op een telefoon of tablet, ⇧⌘I / Ctrl+Shift+I) de hubs, het dashboard en het programma in op basis van een beschrijving die je typt of uitspreekt, en past daarna het profiel aan zoals je vraagt. Hij werkt in profielen met Logicablokken en met Snelle koppelingen. Zie [AI-bouwer](/docs/Application/Profiles/AiBuilder).
 
 ### Zo krijg je een goed resultaat {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Noem de hub, vertel wat er op elke poort is aangesloten en wat het moet doen, en
 |---|---|
 | Bestand | Profiel sluiten (⌘W) |
 | Bewerken | Ongedaan maken, Opnieuw, Nieuwe variabele…, Nieuwe lijst…, Nieuw bericht…, Nieuw blok… |
-| Weergave | Blokkenpalet, Inzoomen, Uitzoomen, Werkelijke grootte |
-| Programma | Start (⌘R), Stop (⌘.) |
+| Weergave | Blokkenpalet (⌘P), [Rugzak](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Inzoomen, Uitzoomen, Werkelijke grootte |
+| Programma | Start (⌘R), Stop (⌘.), Editorinstellingen… |
+
+Gebruik op Windows Ctrl in plaats van ⌘ en Shift in plaats van ⇧.

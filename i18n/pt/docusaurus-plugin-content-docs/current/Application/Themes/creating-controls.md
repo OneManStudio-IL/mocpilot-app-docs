@@ -12,7 +12,7 @@ Todo controle que você adiciona parte de um tema. Você pode configurá-lo ante
 
 ## Configurar antes de adicionar {#configure-before-adding}
 
-1. Abra **Adicionar controlador** (**+** no painel).
+1. Abra **Adicionar controlador** (**+** no painel, **+ Controlador** no computador).
 2. Selecione um tipo de controle e um visual na faixa de visuais.
 3. Em **Configurar**, use as abas **Estilo** e **Configurações**: tamanho (a paleta o mostra como “L x A pontos”), cor de acento, ícone, opções do tema, comportamento.
 4. Toque em **Adicionar ao painel**.

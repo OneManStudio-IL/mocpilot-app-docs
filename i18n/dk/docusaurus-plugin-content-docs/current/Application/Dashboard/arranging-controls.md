@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Tilføj en kontrol {#add-a-control}
 
-1. Tryk på **+** (**Tilføj controller**) på dashboardet. På en computer åbnes paletten i sit eget vindue.
+1. Tryk på **+** (**Tilføj controller**) på dashboardet; på en computer klikker du på **+ Controller** yderst til højre i topbjælken. På en computer åbnes paletten i sit eget vindue med **Tilføj controller** midt i dets topbjælke.
 2. Vælg en kontroltype på listen. Typerne er grupperet: **Joysticks**, **Skyder**, **Knapper og kontakter**, **Skærme**, derefter **Køretøj og special** for [specialkontrollerne](/docs/Application/Dashboard/SpecialControls) og **Mine designs** for de designs, du har gemt. Skriv i **Søg i kontroller** for hurtigt at finde en kontrol.
 3. Stribe med udseender viser den valgte type i alle [temaer](/docs/Application/Themes/ThemesOverview) (for en specialkontrol alle dens udseender). Tryk på et udseende for at se det i den store forhåndsvisning; du kan prøve det lige der.
 4. Indstil kontrollen under **Konfigurer**: fanerne **Stil** og **Indstillinger** og størrelsen.
-5. Tryk på **Føj til dashboard**. På en computer kan du tilføje flere kontroller i træk.
+5. Tryk på **Føj til dashboard** (på en computer den orange knap yderst til højre i palettens topbjælke). På en computer kan du tilføje flere kontroller i træk.
 
 <Screenshot name="controller-palette" alt="Paletten Tilføj controller" width={900} />
 

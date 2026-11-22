@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Adicionar um controle {#add-a-control}
 
-1. No painel, toque em **+** (**Adicionar controlador**). No computador, a paleta abre em uma janela própria.
+1. No painel, toque em **+** (**Adicionar controlador**); no computador, clique em **+ Controlador** à direita da barra superior. No computador, a paleta abre em uma janela própria, com **Adicionar controlador** no meio da barra superior dela.
 2. Escolha um tipo de controle na lista. Os tipos são agrupados: **Joysticks**, **Deslizadores**, **Botões e interruptores**, **Monitores**, depois **Veículo e especiais** para os [controles especiais](/docs/Application/Dashboard/SpecialControls) e **Meus designs** para os designs que você salvou. Para achar um controle rapidamente, digite em **Buscar controles**.
 3. A faixa de visuais mostra o tipo selecionado em cada [tema](/docs/Application/Themes/ThemesOverview) (para um controle especial, todas as aparências dele). Toque em um visual para vê-lo na pré-visualização grande; você pode testá-lo ali mesmo.
 4. Configure o controle em **Configurar**: as abas **Estilo** e **Configurações** e o tamanho.
-5. Toque em **Adicionar ao painel**. No computador, você pode adicionar vários controles seguidos.
+5. Toque em **Adicionar ao painel** (no computador, o botão laranja à direita da barra superior da paleta). No computador, você pode adicionar vários controles seguidos.
 
 <Screenshot name="controller-palette" alt="A paleta Adicionar controlador" width={900} />
 

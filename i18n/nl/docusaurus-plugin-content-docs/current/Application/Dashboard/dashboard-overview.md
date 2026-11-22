@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Dashboard-editor
-description: "Het MOCPilot-dashboard: het veld, het raster, de werkbalk, de achtergrond en ongedaan maken."
+description: "Het MOCPilot-dashboard: het veld, het raster, de bovenbalk, de achtergrond en ongedaan maken."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Het **dashboard** is het scherm waarmee je je model bestuurt: joysticks, schuifregelaars, knoppen, monitors en andere bedieningselementen. Elk profiel heeft één dashboard.
 
-Open het met de knop **Dashboard** in de editor (⌘2 / Ctrl+2 op een computer).
+Open het met de knop **Dashboard** in de bovenbalk van de editor (⌘2 / Ctrl+2 op een computer). Op een telefoon met een smal scherm staat hij in **Meer**.
 
 - **Telefoon en tablet**: het dashboard opent schermvullend over de editor.
 - **Computer**: het dashboard opent in een eigen venster **Dashboard**, zodat je het naast het programma kunt houden.
@@ -24,19 +24,32 @@ Open het met de knop **Dashboard** in de editor (⌘2 / Ctrl+2 op een computer).
 - In de bewerkingsmodus wordt een **puntraster** van 40 × 20 cellen getoond. Bedieningselementen klikken vast op het raster.
 - Bedieningselementen kunnen elkaar niet overlappen. Past een bedieningselement niet, dan gaat het terug naar waar het was.
 
-## Werkbalk {#toolbar}
+## Bovenbalk {#toolbar}
+
+**Telefoon en tablet**
 
 | Knop | Wat hij doet |
 |---|---|
 | ← | terug naar de programma-editor |
 | Ongedaan maken / Opnieuw | wijzigingen aan het dashboard ongedaan maken en opnieuw uitvoeren |
-| **+** (Controller toevoegen) | opent het palet met bedieningselementen; zie [Bedieningselementen toevoegen en schikken](/docs/Application/Dashboard/ArrangingControls) |
+| **Selecteren** | meerdere bedieningselementen selecteren en ze samen vergrendelen, ontgrendelen, verwijderen of bewerken; **Gereed** beëindigt het |
 | ⚙ (Dashboardinstellingen) | opties voor achtergrond en raster (hieronder) |
+| **+** (Controller toevoegen, met een oranje ring) | opent het palet met bedieningselementen; zie [Bedieningselementen toevoegen en schikken](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Start** / **Stop**: het programma starten en stoppen |
 
-Op een computer heeft het venster Dashboard ook menu's: **Bestand** (Profiel sluiten, Openen in apart venster, Dashboardinstellingen…), **Bewerken** (Ongedaan maken, Opnieuw, Controller toevoegen…) en **Weergave** (Blokken ⌘1, Dashboard ⌘2).
-
 Terwijl het programma loopt, zijn de bewerkingsknoppen verborgen.
+
+**Computer en webeditor**
+
+De bovenbalk ziet eruit als die van de editor:
+
+- **Links**: **Home** (sluit het profiel), de menu's **Bestand**, **Bewerken** en **Weergave**, daarna **Ongedaan maken** en **Opnieuw**.
+- **Midden**: de profielnaam en **Blokken** (of **Koppelingen** in een profiel met Snelle koppelingen, ⌘1 / Ctrl+1) om terug te gaan naar het programma. Het dashboard zelf heeft hier geen knop: dat is de pagina waarop je bent.
+- **Rechts**: **Selecteren**, **Dashboardinstellingen** (⚙) en de oranje knop **+ Controller** (Controller toevoegen). In een smal venster verdwijnen de profielnaam en de knop **Blokken**, en van **+ Controller** blijft alleen de **+** over.
+
+Op een computer heeft de balk van het dashboard geen **Start**: start en stop het programma vanuit de editor (⌘R / Ctrl+R, ⌘. / Ctrl+.). Terwijl het loopt, zijn **Selecteren**, **Dashboardinstellingen** en **+ Controller** niet beschikbaar.
+
+Menu's: **Bestand** (Profiel sluiten, Openen in apart venster), **Bewerken** (Ongedaan maken, Opnieuw) en **Weergave** (Blokken ⌘1, Dashboard ⌘2). In het aparte venster Dashboard toont de balk de venstertitel in plaats van **Home**, heeft **Bestand** het item **Venster sluiten**, en is er geen menu **Weergave** of knop **Blokken**.
 
 ## Ongedaan maken en opnieuw {#undo-and-redo}
 

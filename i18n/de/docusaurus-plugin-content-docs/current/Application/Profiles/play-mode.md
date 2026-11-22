@@ -15,13 +15,13 @@ Ein Profil hat zwei Modi:
 
 ## Starten und stoppen {#start-and-stop}
 
-Drücken Sie **Start** (▶) im Editor oder auf dem Dashboard (Computer: **Programm → Start**, ⌘R / Strg+R). Mit **Stopp** (■) kehren Sie zum Bearbeiten zurück (⌘. / Strg+.).
+Drücken Sie **Start** (▶) am rechten Ende der oberen Leiste des Editors; auf Smartphone und Tablet hat auch das Dashboard diese Schaltfläche. Auf einem Computer ist **Start** die orange Schaltfläche im Editor (auch **Programm → Start**, ⌘R / Strg+R). Mit **Stopp** (■) kehren Sie zum Bearbeiten zurück (⌘. / Strg+.).
 
 <Screenshot name="dashboard-run" alt="Dashboard, während das Programm läuft" width={900} />
 
 Während das Programm läuft:
 
-- sind die Rasterpunkte des Dashboards sowie die Schaltflächen zum Hinzufügen und für die Einstellungen ausgeblendet;
+- sind die Rasterpunkte des Dashboards und seine Bearbeitungsschaltflächen ausgeblendet (auf einem Computer sind diese nicht verfügbar);
 - reagieren die Steuerelemente auf Berührung und auf das Gamepad;
 - zeigen Monitore und Anzeigen Live-Werte;
 - zeigt der Editor bei Schnellverknüpfungen Live-Werte zwischen den Blöcken jeder Zeile, und die Zeilen lassen sich nicht bearbeiten;
@@ -33,7 +33,7 @@ Beim Öffnen eines Profils wechselt ein Smartphone ins Querformat mit Vollbild, 
 
 ## Bevor Sie Start drücken {#before-you-press-run}
 
-- Schalten Sie die Hubs ein und prüfen Sie unter **Meine Hubs**, ob sie verbunden sind (das Abzeichen auf der Schaltfläche zeigt, wie viele es sind).
+- Schalten Sie die Hubs ein und prüfen Sie unter **Meine Hubs**, ob sie verbunden sind (die Zahl auf der Schaltfläche **Meine Hubs**, auf einem Computer **Hubs**, zeigt, wie viele es sind).
 - Prüfen Sie bei Schnellverknüpfungen die Schaltfläche **Probleme**: Ein rotes „!“ bedeutet, dass einige Zeilen nicht ausgeführt werden können. Siehe [Ausführen und Probleme beheben](/docs/Application/Links/Problems).
 - Stellen Sie das Modell beim ersten Versuch auf einen Ständer oder halten Sie es vom Tischrand fern.
 

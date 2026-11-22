@@ -12,7 +12,7 @@ Každý ovládací prvok, ktorý pridáte, vychádza z niektorej témy. Pred pri
 
 ## Nastavenie pred pridaním {#configure-before-adding}
 
-1. Otvorte **Pridať ovládač** (**+** na paneli).
+1. Otvorte **Pridať ovládač** (**+** na paneli, na počítači **+ Ovládač**).
 2. Vyberte typ ovládacieho prvku a vzhľad v páse vzhľadov.
 3. V časti **Konfigurovať** použite karty **Štýl** a **Nastavenia**: veľkosť (paleta ju ukazuje ako „Š x V bodov“), akcentovú farbu, ikonu, možnosti témy, správanie.
 4. Ťuknite na **Pridať na panel**.

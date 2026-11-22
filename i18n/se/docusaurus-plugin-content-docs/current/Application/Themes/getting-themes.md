@@ -10,7 +10,7 @@ Det finns ingen separat butiksskärm: du bläddrar bland och köper teman precis
 
 ## Prova ett tema {#try-a-theme}
 
-1. Öppna instrumentpanelen och tryck på **+** (**Lägg till kontroll**).
+1. Öppna instrumentpanelen och tryck på **+** (**Lägg till kontroll**; på en dator **+ Kontroll**).
 2. Välj en kontrolltyp, till exempel en joystick. Raden med utseenden visar den i alla teman; specialkontrollerna finns under **Fordon och special**.
 3. Tryck på ett utseende för att se det i den stora förhandsvisningen och prova det. Under **Konfigurera** kan du prova färger, storlekar och alternativ.
 

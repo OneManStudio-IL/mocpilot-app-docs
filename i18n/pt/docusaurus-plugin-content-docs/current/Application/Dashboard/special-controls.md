@@ -26,7 +26,7 @@ O **Botão giratório** não é um produto separado: ele vem com todo tema pago.
 
 ## Adicionar um controle especial {#add-a-special-control}
 
-1. Abra o painel e toque em **+** (**Adicionar controlador**).
+1. Abra o painel e toque em **+** (**Adicionar controlador**; no computador, **+ Controlador**).
 2. Na lista de tipos de controle, role até **Veículo e especiais** e selecione um controle.
 3. A faixa de visuais mostra todas as aparências dele. Escolha uma e configure o controle em **Configurar**.
 4. Toque em **Adicionar ao painel**. Para um controle que você ainda não possui, toque em **Comprar** ou **Tudo com MocPilot Pro**.

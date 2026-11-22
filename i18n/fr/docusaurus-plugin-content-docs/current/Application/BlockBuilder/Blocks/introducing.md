@@ -25,7 +25,7 @@ Blocs logiques possède ses propres blocs et son propre comportement. Vous ne po
 
 - La **palette** liste les catégories de blocs : **Événements**, **Contrôle**, **Capteurs**, **Sons**, **Opérateur**, **Variables**, **Listes** et **Mes blocs**. D’autres catégories apparaissent quand votre profil en a besoin : **Moteurs** et **Lumière** (quand un hub les prend en charge), **Simulateur** (quand le tableau de bord comporte des pédales, une boîte de vitesses ou un frein à main), **Contrôleurs à l'écran** et **Manette de jeu**.
 - La **zone de programme** est l’endroit où vous faites glisser les blocs et construisez les scripts.
-- La barre du haut contient **Mes hubs**, **Tableau de bord**, **Manette de jeu**, **Moniteur**, **Paramètres de l'éditeur**, l’**Assistant IA** et **Lancer/Arrêter**.
+- La barre du haut contient **Annuler** et **Rétablir**, **Tableau de bord**, **Mes hubs**, **Manette de jeu**, les panneaux latéraux **Assistant IA**, [**Sac à dos**](/docs/Application/BlockBuilder/Backpack) et **Moniteur**, **Plus** (avec **Paramètres de l'éditeur**) et **Lancer/Arrêter**. Sur téléphone ou tablette, les panneaux latéraux et la Manette de jeu se trouvent dans **Plus**.
 
 Pour plus de détails, voir [Travailler dans l’éditeur](/docs/Application/BlockBuilder/Editor).
 

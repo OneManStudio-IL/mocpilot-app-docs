@@ -55,7 +55,7 @@ MOCPilot 可在 App Store（iPhone、iPad、Mac）、Google Play（Android）和
 
 ## 5. 添加集线器 {#5-add-your-hub}
 
-1. 在编辑器中打开**我的集线器**。
+1. 在编辑器中打开**我的集线器**（在电脑上为顶栏中的**集线器**）。
 2. 在空闲槽位中轻点**添加新集线器**，选择集线器型号，然后轻点**添加**。
 3. 打开集线器电源，按下它的按钮，等待 MOCPilot 找到它。
 
@@ -66,7 +66,7 @@ MOCPilot 可在 App Store（iPhone、iPad、Mac）、Google Play（Android）和
 ## 6. 在仪表板上摆放控件 {#6-place-controls-on-the-dashboard}
 
 1. 打开**仪表板**。
-2. 轻点 **+**（**添加控制器**），选择**操纵杆**，然后轻点**添加到仪表板**。
+2. 轻点 **+**（**添加控制器**；在电脑上为 **+ 控制器**），选择**操纵杆**，然后轻点**添加到仪表板**。
 3. 把它拖到你想要的位置。轻点它可以更改大小、颜色或行为。
 
 <Screenshot name="controller-palette" alt="添加控制器面板，已选中操纵杆" width={900} />

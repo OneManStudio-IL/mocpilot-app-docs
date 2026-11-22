@@ -41,7 +41,7 @@ Typ programu později změnit nelze. Více v článku [Vytvoření profilu](/doc
 
 ## 2. Přidejte a připojte hub {#add-the-hub}
 
-1. V editoru klepněte na **Moje huby**.
+1. V editoru klepněte na **Moje huby** (na počítači **Huby** na horní liště).
 2. Ve volném slotu klepněte na **Přidat nový hub**, v seznamu zvolte Technic Hub a klepněte na **Přidat**.
 3. Zapněte hub a stiskněte jeho tlačítko. MOCPilot ho najde a připojí se; hub zůstane ve slotu.
 4. Pokud se objeví dialog **Je vyžadována aktualizace firmwaru**, klepněte na **Aktualizovat** a nechte hub zapnutý a nablízku, dokud aktualizace neskončí. Viz [Aktualizace firmwaru](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ Více v článku [Přidání a připojení hubu](/docs/Application/Hubs/Connecti
 
 ## 3. Umístěte ovládací prvky na panel {#dashboard}
 
-1. Otevřete **Panel** a klepněte na **+** (**Přidat ovladač**).
+1. Otevřete **Panel** a klepněte na **+** (**Přidat ovladač**; na počítači **+ Ovladač**).
 2. Ve skupině **Joystick** zvolte **Joystick** a klepněte na **Přidat na panel**. Dostane název **JOY1**. **Typ osy** nechte na **Obě osy (X, Y)**: nahoru a dolů se bude jezdit, doleva a doprava zatáčet.
 3. Znovu klepněte na **+**. Ve skupině **Tlačítka a přepínače** zvolte **Tlačítko** a klepněte na **Přidat na panel**. Dostane název **BTN1**.
 4. Přetáhněte joystick na levou stranu a tlačítko na pravou, kde budete mít palce. Klepnutím na ovládací prvek změníte jeho velikost (**S**, **M** nebo **L**) nebo styl.
@@ -100,7 +100,7 @@ V režimu **Auto** se motor řízení při každém spuštění programu natoč�
 
 <Screenshot name="tutorial-car-links-rows" alt="Tři hotové řádky auta: jízda, řízení a světla" width={900} />
 
-Když jsou všechny tři řádky hotové, tlačítko **Problémy** na horní liště ukáže zelenou fajfku. Červený „!“ ukazuje, kolik problémů zbývá; klepněte na něj a pak na problém, abyste přeskočili na příslušný řádek. Viz [Spuštění a řešení problémů](/docs/Application/Links/Problems).
+Když jsou všechny tři řádky hotové, tlačítko **Problémy** na horní liště (hned před **Spustit**) ukáže zelenou fajfku. Červený „!“ ukazuje, kolik problémů zbývá; klepněte na něj a pak na problém, abyste přeskočili na příslušný řádek. Viz [Spuštění a řešení problémů](/docs/Application/Links/Problems).
 
 ## 5. Spusťte a vyzkoušejte {#run}
 

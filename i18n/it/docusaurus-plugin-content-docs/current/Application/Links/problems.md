@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## È tutto pronto? {#is-everything-ready}
 
-Il pulsante **Problemi** nella barra superiore dell'editor mostra:
+Il pulsante **Problemi** nella barra superiore dell'editor (su un computer, subito prima di **Avvia**) mostra:
 
 - un **segno di spunta verde**: «Tutte le righe sono pronte»;
 - un **«!» rosso**: «Problemi: N».
+
+Su un computer il testo è scritto sul pulsante; in una finestra stretta restano solo l'icona e il numero di problemi. Su smartphone o tablet il pulsante mostra l'icona, con il numero in un badge rosso.
 
 Toccalo per aprire il pannello dei problemi (un pannello laterale sul telefono, un menu su tablet o computer). Il pannello elenca «Riga N — motivo»; tocca una voce per passare a quella riga. Il blocco che causa il problema ha una **cornice rossa**. Quando è tutto a posto, il pannello mostra «Ogni riga attiva può essere eseguita.»
 

@@ -17,7 +17,7 @@ AI staviteľ je súčasťou [MocPilot Pro](/docs/Application/Account/Pro) a fung
 ## Otvorenie AI staviteľa {#open-the-ai-builder}
 
 1. Otvorte profil na úpravu.
-2. Stlačte tlačidlo **AI staviteľ** (ikona iskier) na hornej lište. Na počítači môžete stlačiť aj ⇧⌘I / Ctrl+Shift+I.
+2. Na počítači stlačte tlačidlo **AI staviteľ** (ikona iskier) vpravo na hornej lište alebo ⇧⌘I / Ctrl+Shift+I; v úzkom okne je v ponuke **Viac** (⋯). Na telefóne alebo tablete ťuknite na **Viac** → **AI staviteľ**.
 3. Napíšte požiadavku do poľa **Čo má AI vytvoriť alebo zmeniť?** a stlačte **Odoslať** (alebo Enter; Shift+Enter začne nový riadok).
 
 Bez MocPilot Pro tlačidlo ukáže, čo AI staviteľ robí, s možnosťami **Získať MocPilot Pro** a **Teraz nie**.

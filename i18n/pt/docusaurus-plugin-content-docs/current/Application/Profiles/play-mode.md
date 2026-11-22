@@ -15,13 +15,13 @@ Um perfil tem dois modos:
 
 ## Iniciar e parar {#start-and-stop}
 
-Pressione **Executar** (▶) no editor ou no painel (computador: **Programa → Executar**, ⌘R / Ctrl+R). Pressione **Parar** (■) para voltar à edição (⌘. / Ctrl+.).
+Pressione **Executar** (▶) na ponta direita da barra superior do editor; no celular ou tablet, o painel também tem esse botão. No computador, **Executar** é o botão laranja no editor (também **Programa → Executar**, ⌘R / Ctrl+R). Pressione **Parar** (■) para voltar à edição (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Painel enquanto o programa roda" width={900} />
 
 Enquanto o programa roda:
 
-- os pontos da grade do painel e os botões de adicionar e de configurações ficam ocultos;
+- os pontos da grade do painel ficam ocultos, assim como os botões de edição dele (no computador, eles ficam indisponíveis);
 - os controles respondem ao toque e ao gamepad;
 - monitores e indicadores mostram valores ao vivo;
 - em Ligações rápidas, o editor mostra valores ao vivo entre os blocos de cada linha, e as linhas não podem ser editadas;
@@ -33,7 +33,7 @@ Ao abrir um perfil, o celular passa para a horizontal, em tela cheia, para que o
 
 ## Antes de pressionar Executar {#before-you-press-run}
 
-- Ligue os hubs e confira em **Meus hubs** se eles estão conectados (o selo no botão mostra quantos estão).
+- Ligue os hubs e confira em **Meus hubs** se eles estão conectados (o número no botão **Meus hubs**, **Hubs** no computador, mostra quantos estão).
 - Em Ligações rápidas, confira o botão **Problemas**: um “!” vermelho significa que algumas linhas não podem ser executadas. Veja [Executar e corrigir problemas](/docs/Application/Links/Problems).
 - Na primeira tentativa, coloque o modelo sobre um suporte ou mantenha-o longe da borda da mesa.
 

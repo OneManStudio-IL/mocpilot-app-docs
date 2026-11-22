@@ -25,7 +25,7 @@ Logikkblokker har sitt eget sett med blokker og sin egen oppførsel. Du kan ikke
 
 - **Paletten** viser blokkategoriene: **Hendelser**, **Kontroll**, **Sensorer**, **Lyder**, **Operatør**, **Variabler**, **Lister** og **Mine blokker**. Andre kategorier vises når profilen trenger dem: **Motorer** og **Lys** (når en hub støtter dem), **Simulator** (når dashboardet har pedaler, girkasse eller handbrekk), **Skjermkontrollere** og **Spillkontroller**.
 - **Programområdet** er der du drar inn blokker og bygger skript.
-- Topplinjen har **Mine hubber**, **Dashboard**, **Spillkontroller**, **Monitor**, **Editorinnstillinger**, **AI-bygger** og **Kjør/Stopp**.
+- Topplinjen har **Angre** og **Gjør om**, **Dashboard**, **Mine hubber**, **Spillkontroller**, sidepanelene **AI-bygger**, [**Ryggsekk**](/docs/Application/BlockBuilder/Backpack) og **Monitor**, **Mer** (med **Editorinnstillinger**) og **Kjør/Stopp**. På telefon og nettbrett ligger sidepanelene og Spillkontroller under **Mer**.
 
 Se [Arbeide i redigeringsprogrammet](/docs/Application/BlockBuilder/Editor) for detaljer.
 

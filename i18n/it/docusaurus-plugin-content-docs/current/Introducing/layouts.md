@@ -24,9 +24,9 @@ Profili, editor e dashboard sono uguali ovunque; cambia solo la navigazione.
 - **Account** si trova in cima alle **Impostazioni**.
 - L'intestazione di **I miei profili** contiene **Ordina e filtra**, **Connetti un telecomando** (l'icona del telecomando), **+** (Nuovo profilo, Importa profilo…, Cerca online) e il campo di ricerca.
 - Le schermate principali sono in verticale. Quando apri un profilo, l'app passa in **orizzontale a schermo intero**, così l'editor e la dashboard hanno a disposizione tutto lo schermo. Chiudendo il profilo si torna in verticale.
-- Nell'editor, i pulsanti rotondi in alto danno accesso rapido a Home, Annulla, Ripeti, Assistente IA, Impostazioni dell'editor, Problemi (Collegamenti rapidi), Gamepad, I miei hub, Controllo remoto, Dashboard, Monitor (Blocchi logici) e Avvia / Ferma.
+- Nell'editor, **Home** si trova a sinistra della barra superiore. A destra ci sono **Annulla** e **Ripeti**, **Dashboard**, **I miei hub** (con il numero di hub collegati), **Problemi** (Collegamenti rapidi), **Controllo remoto**, **Altro** (⋯) e **Avvia / Ferma**. **Altro** contiene **Assistente IA**, [**Zaino**](/docs/Application/BlockBuilder/Backpack) e **Monitor** (Blocchi logici), **Gamepad** e **Impostazioni dell'editor**. Su uno schermo stretto anche Dashboard e I miei hub passano in **Altro**, così i pulsanti restano abbastanza grandi per le dita.
 
-<Screenshot name="editor-phone" alt="Editor del profilo su uno smartphone con i pulsanti rotondi in alto" width={900} />
+<Screenshot name="editor-phone" alt="Editor del profilo su uno smartphone con la sua barra superiore" width={900} />
 
 ## Tablet {#tablet}
 
@@ -36,7 +36,7 @@ Profili, editor e dashboard sono uguali ovunque; cambia solo la navigazione.
 - L'intestazione di **I miei profili** contiene **Nuovo profilo** (il suo menu contiene anche Importa profilo…, Connetti un telecomando e Cerca online), **Ordina e filtra**, **Filtra per hashtag**, **Connetti un telecomando** e il campo di ricerca.
 - Tocca la scheda di un profilo per selezionarla: la barra in basso mostra **Condividi**, **Modifica**, **Aggiungi ai preferiti** e **Avvia**. Tocca due volte una scheda per avviare il profilo. Tieni premuta una scheda per aprire il suo menu, che contiene anche **Elimina profilo**.
 - Sugli schermi larghi, Impostazioni e Aiuto si aprono accanto all'elenco.
-- Un profilo si apre in orizzontale e l'editor ha gli stessi pulsanti rotondi dello smartphone.
+- Un profilo si apre in orizzontale e l'editor ha la stessa barra superiore dello smartphone.
 
 ## Desktop (Mac e Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profili, editor e dashboard sono uguali ovunque; cambia solo la navigazione.
 - Impostazioni, Aiuto, Account, Nuovo profilo, Modifica profilo, il Catalogo dei profili e le altre pagine si aprono come **finestre** sopra l'elenco dei profili.
 - Fai clic sulla scheda di un profilo per vedere cosa puoi farci (**Condividi…**, **Modifica…**, **Aggiungi ai preferiti**, **Avvia**); con un doppio clic lo avvii. Fai clic con il tasto destro su una scheda per aprire il suo menu, che contiene anche **Elimina profilo**.
 - Nell'editor, la **Dashboard** si apre in una **finestra separata**, così puoi vedere il programma e la dashboard uno accanto all'altra.
+
+### La barra superiore dell'editor {#editor-top-bar}
+
+- **Sinistra**: **Home** (chiude il profilo), i menu **File**, **Modifica**, **Vista** e **Programma**, poi **Annulla** e **Ripeti**.
+- **Centro**: il nome del profilo e i pulsanti delle altre sezioni del profilo: **Dashboard**, **Hub** (con il numero di hub collegati) e **Gamepad**. La pagina in cui ti trovi non ha un pulsante proprio.
+- **Destra**: i pannelli laterali **Assistente IA**, [**Zaino**](/docs/Application/BlockBuilder/Backpack) e **Monitor** (gli ultimi due solo in Blocchi logici), **Altro** (⋯), poi lo stato delle righe in Collegamenti rapidi (**Tutte le righe sono pronte** o **Problemi: N**), **Controllo remoto** e il pulsante arancione **Avvia** (**Ferma** mentre il programma è in esecuzione).
+
+**Altro** contiene sempre **Impostazioni dell'editor…**. Quando la finestra si restringe, la barra si ripiega un passo alla volta invece di schiacciare i pulsanti: prima si nasconde il nome del profilo, poi **Monitor**, **Zaino** e **Assistente IA** passano in **Altro**, quindi **Avvia** mantiene solo l'icona (e lo stato di Collegamenti rapidi solo l'icona e il numero) e infine anche **Gamepad**, **Dashboard** e **Hub** passano in **Altro**. Se è aperto un pannello laterale che si trova in **Altro**, il pulsante **Altro** appare colorato.
+
+La barra superiore della Dashboard è uguale: **Home**, **File**, **Modifica** e **Vista**, **Annulla** e **Ripeti** a sinistra; il nome del profilo e **Blocchi** (o **Collegamenti**) per tornare al programma al centro; **Seleziona**, **Impostazioni della dashboard** e **+ Controller** a destra. Vedi [Editor della dashboard](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Menu {#menus}
 
@@ -96,6 +106,7 @@ Su Mac, ⌘ (Command) fa quello che fa Ctrl su Windows; ⇧ è Maiusc, ⌃ è Co
 | Mostrare / nascondere la tavolozza dei blocchi (Blocchi logici) | Ctrl+P | ⌘P |
 | Cercare nella tavolozza dei blocchi (Blocchi logici) | Ctrl+F | ⌘F |
 | Monitor (Blocchi logici) | Ctrl+Maiusc+M | ⇧⌘M |
+| [Zaino](/docs/Application/BlockBuilder/Backpack) (Blocchi logici) | Ctrl+Maiusc+B | ⇧⌘B |
 | Ingrandire / ridurre / dimensioni reali (Blocchi logici) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Dashboard**
@@ -113,16 +124,17 @@ Su un tablet con tastiera, Ctrl+B (⌘B su iPad) mostra o nasconde la barra late
 
 ## L'editor del profilo in ogni layout {#the-profile-editor-on-every-layout}
 
-L'editor non ha schede. Il **programma** (righe dei Collegamenti rapidi o Blocchi logici) occupa lo schermo e i pulsanti aprono tutto il resto:
+L'editor non ha schede. Il **programma** (righe dei Collegamenti rapidi o Blocchi logici) occupa lo schermo e i pulsanti della barra superiore aprono tutto il resto. Alcuni si trovano in **Altro** (⋯): su smartphone o tablet Assistente IA, Zaino, Monitor, Gamepad e Impostazioni dell'editor; su computer Impostazioni dell'editor e tutto ciò che non ci sta in una finestra stretta.
 
 | Pulsante | Apre |
 |---|---|
-| **I miei hub** | gli [slot degli hub](/docs/Application/Hubs/ConnectingHubs) del profilo |
+| **I miei hub** (**Hub** su un computer) | gli [slot degli hub](/docs/Application/Hubs/ConnectingHubs) del profilo |
 | **Dashboard** | la [dashboard](/docs/Application/Dashboard/DashboardOverview) |
 | **Gamepad** | le [impostazioni del gamepad](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | i valori di variabili e liste (solo Blocchi logici) |
+| **Zaino** | le pile di blocchi salvate per riutilizzarle in qualsiasi profilo (solo Blocchi logici); vedi [Zaino](/docs/Application/BlockBuilder/Backpack) |
 | **Impostazioni dell'editor** | le [opzioni dell'editor](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **Assistente IA** | l'[Assistente IA](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Problemi** | le righe che non possono essere eseguite (solo Collegamenti rapidi) |
 | **Controllo remoto** | esegui il profilo su un altro dispositivo e controllalo da qui (MocPilot Pro); vedi [Controllo remoto](/docs/Application/Profiles/RemoteControl) |
-| **Avvia / Ferma** | avvia e ferma il programma |
+| **Avvia / Ferma** | avvia e ferma il programma (su un computer, il pulsante arancione **Avvia** all'estremità destra) |

@@ -24,9 +24,9 @@ Profilurile, editoarele și tabloul de bord sunt la fel peste tot; diferă doar 
 - **Cont** se află în partea de sus a paginii **Setări**.
 - Antetul **Profilurile mele** conține **Sortare și filtrare**, **Conectează o telecomandă** (pictograma de telecomandă), **+** (Profil nou, Importă profil…, Caută online) și câmpul de căutare.
 - Ecranele principale sunt în mod portret. Când deschizi un profil, aplicația trece în **mod peisaj, pe tot ecranul**, astfel încât editorul și tabloul de bord să aibă tot ecranul. La închiderea profilului revine modul portret.
-- În editor, butoanele rotunde din partea de sus oferă acces rapid la Acasă, Anulează, Refă, Constructor AI, Setări editor, Probleme (Legături rapide), Gamepad, Huburile mele, Control de la distanță, Tablou de bord, Monitor (Blocuri logice) și Rulează / Oprește.
+- În editor, **Acasă** se află în stânga barei de sus. În dreapta sunt **Anulează** și **Refă**, **Tablou de bord**, **Huburile mele** (cu numărul de huburi conectate), **Probleme** (Legături rapide), **Control de la distanță**, **Mai mult** (⋯) și **Rulează / Oprește**. **Mai mult** conține **Constructor AI**, [**Rucsac**](/docs/Application/BlockBuilder/Backpack) și **Monitor** (Blocuri logice), **Gamepad** și **Setări editor**. Pe un ecran îngust, Tablou de bord și Huburile mele se mută și ele în **Mai mult**, ca butoanele să rămână destul de mari pentru deget.
 
-<Screenshot name="editor-phone" alt="Editorul de profil pe telefon, cu butoanele rotunde în partea de sus" width={900} />
+<Screenshot name="editor-phone" alt="Editorul de profil pe telefon, cu bara de sus" width={900} />
 
 ## Tabletă {#tablet}
 
@@ -36,7 +36,7 @@ Profilurile, editoarele și tabloul de bord sunt la fel peste tot; diferă doar 
 - Antetul **Profilurile mele** conține **Profil nou** (meniul lui are și Importă profil…, Conectează o telecomandă și Caută online), **Sortare și filtrare**, **Filtrează după hashtaguri**, **Conectează o telecomandă** și câmpul de căutare.
 - Atinge cardul unui profil ca să-l selectezi: bara din partea de jos afișează **Partajează**, **Editează**, **Adaugă la favorite** și **Lansează**. Atinge de două ori un card ca să-l lansezi. Ține apăsat pe un card pentru meniul lui, care are și **Șterge profilul**.
 - Pe ecranele late, Setările și Ajutorul se deschid lângă listă.
-- Un profil se deschide în mod peisaj, iar editorul are aceleași butoane rotunde ca pe telefon.
+- Un profil se deschide în mod peisaj, iar editorul are aceeași bară de sus ca pe telefon.
 
 ## Desktop (Mac și Windows) {#desktop-mac-and-windows}
 
@@ -46,6 +46,16 @@ Profilurile, editoarele și tabloul de bord sunt la fel peste tot; diferă doar 
 - Setările, Ajutorul, Contul, Profil nou, Editează profilul, Catalogul de profiluri și alte pagini se deschid ca **ferestre** peste lista de profiluri.
 - Dă clic pe cardul unui profil ca să vezi ce poți face cu el (**Partajează…**, **Editează…**, **Adaugă la favorite**, **Lansează**); dublu clic îl lansează. Clic dreapta pe un card deschide meniul lui, care are și **Șterge profilul**.
 - În editor, **Tabloul de bord** se deschide în **fereastră proprie**, astfel încât vezi programul și tabloul de bord unul lângă altul.
+
+### Bara de sus a editorului {#editor-top-bar}
+
+- **Stânga**: **Acasă** (închide profilul), meniurile **Fișier**, **Editare**, **Vizualizare** și **Program**, apoi **Anulează** și **Refă**.
+- **Mijloc**: numele profilului și butoanele celorlalte secțiuni ale profilului: **Tablou de bord**, **Huburi** (cu numărul de huburi conectate) și **Gamepad**. Pagina pe care te afli nu are buton propriu.
+- **Dreapta**: panourile laterale **Constructor AI**, [**Rucsac**](/docs/Application/BlockBuilder/Backpack) și **Monitor** (ultimele două doar în Blocuri logice), **Mai mult** (⋯), apoi starea rândurilor în Legături rapide (**Toate rândurile sunt gata** sau **Probleme: N**), **Control de la distanță** și butonul portocaliu **Rulează** (**Oprește** cât timp programul rulează).
+
+**Mai mult** are întotdeauna **Setări editor…**. Când fereastra devine îngustă, bara se pliază pas cu pas în loc să înghesuie butoanele: mai întâi se ascunde numele profilului, apoi **Monitor**, **Rucsac** și **Constructor AI** se mută în **Mai mult**, apoi din **Rulează** rămâne doar pictograma (iar din starea Legături rapide doar pictograma și numărul), iar la final **Gamepad**, **Tablou de bord** și **Huburi** se mută și ele în **Mai mult**. Dacă este deschis un panou lateral aflat în **Mai mult**, butonul **Mai mult** este colorat.
+
+Bara de sus a tabloului de bord arată la fel: **Acasă**, **Fișier**, **Editare** și **Vizualizare**, **Anulează** și **Refă** în stânga; numele profilului și **Blocuri** (sau **Legături**) ca să revii la program în mijloc; **Selectează**, **Setări tablou de bord** și **+ Controler** în dreapta. Vezi [Editorul tabloului de bord](/docs/Application/Dashboard/DashboardOverview#toolbar).
 
 ### Meniuri {#menus}
 
@@ -96,6 +106,7 @@ Pe Mac, ⌘ (Command) face ce face Ctrl pe Windows; ⇧ este Shift, ⌃ este Con
 | Afișează / ascunde paleta de blocuri (Blocuri logice) | Ctrl+P | ⌘P |
 | Caută în paleta de blocuri (Blocuri logice) | Ctrl+F | ⌘F |
 | Monitor (Blocuri logice) | Ctrl+Shift+M | ⇧⌘M |
+| [Rucsac](/docs/Application/BlockBuilder/Backpack) (Blocuri logice) | Ctrl+Shift+B | ⇧⌘B |
 | Mărește / micșorează / dimensiune reală (Blocuri logice) | Ctrl++ / Ctrl+− / Ctrl+0 | ⌘+ / ⌘− / ⌘0 |
 
 **Tablou de bord**
@@ -113,16 +124,17 @@ Pe o tabletă cu tastatură, Ctrl+B (⌘B pe iPad) afișează sau ascunde bara l
 
 ## Editorul de profil în fiecare aspect {#the-profile-editor-on-every-layout}
 
-Editorul nu are file. **Programul** (rândurile Legături rapide sau Blocurile logice) ocupă tot ecranul, iar butoanele deschid restul:
+Editorul nu are file. **Programul** (rândurile Legături rapide sau Blocurile logice) ocupă tot ecranul, iar butoanele din bara de sus deschid restul. Unele dintre ele se află în **Mai mult** (⋯): pe telefon sau tabletă Constructor AI, Rucsac, Monitor, Gamepad și Setări editor; pe computer Setări editor și tot ce nu încape într-o fereastră îngustă.
 
 | Buton | Deschide |
 |---|---|
-| **Huburile mele** | [sloturile de hub](/docs/Application/Hubs/ConnectingHubs) ale profilului |
+| **Huburile mele** (**Huburi** pe computer) | [sloturile de hub](/docs/Application/Hubs/ConnectingHubs) ale profilului |
 | **Tablou de bord** | [tabloul de bord](/docs/Application/Dashboard/DashboardOverview) |
 | **Gamepad** | [setările gamepadului](/docs/Application/Dashboard/Gamepad) |
 | **Monitor** | valorile variabilelor și listelor (doar Blocuri logice) |
+| **Rucsac** | teancurile de blocuri pe care le-ai salvat ca să le refolosești în orice profil (doar Blocuri logice); vezi [Rucsac](/docs/Application/BlockBuilder/Backpack) |
 | **Setări editor** | [opțiunile editorului](/docs/Application/BlockBuilder/Editor#editor-settings) |
 | **Constructor AI** | [constructorul AI](/docs/Application/Profiles/AiBuilder) (MocPilot Pro) |
 | **Probleme** | rândurile care nu pot rula (doar Legături rapide) |
 | **Control de la distanță** | rulează profilul pe alt dispozitiv și îl controlează de aici (MocPilot Pro); vezi [Control de la distanță](/docs/Application/Profiles/RemoteControl) |
-| **Rulează / Oprește** | pornește și oprește programul |
+| **Rulează / Oprește** | pornește și oprește programul (pe computer, butonul portocaliu **Rulează** de la capătul din dreapta) |

@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Dashboard-editor
-description: "MOCPilots dashboard: feltet, gitteret, værktøjslinjen, baggrunden og fortryd."
+description: "MOCPilots dashboard: feltet, gitteret, topbjælken, baggrunden og fortryd."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Dashboardet** er den skærm, du kører din model fra: joysticks, skydere, knapper, skærme og andre kontroller. Hver profil har ét dashboard.
 
-Åbn det med knappen **Dashboard** i editoren (⌘2 / Ctrl+2 på en computer).
+Åbn det med knappen **Dashboard** i editorens topbjælke (⌘2 / Ctrl+2 på en computer). På en telefon med en smal skærm ligger den under **Mere**.
 
 - **Telefon og tablet**: dashboardet åbnes i fuld skærm over editoren.
 - **Computer**: dashboardet åbnes i sit eget vindue **Dashboard**, så du kan have det ved siden af programmet.
@@ -24,19 +24,32 @@ import Screenshot from '@site/src/components/Screenshot';
 - I redigeringstilstand vises et **prikgitter** på 40 × 20 celler. Kontrollerne klikker på plads i gitteret.
 - Kontroller kan ikke overlappe hinanden. Hvis en kontrol ikke kan være der, vender den tilbage til sin plads.
 
-## Værktøjslinje {#toolbar}
+## Topbjælke {#toolbar}
+
+**Telefon og tablet**
 
 | Knap | Hvad den gør |
 |---|---|
 | ← | tilbage til programeditoren |
 | Fortryd / Gentag | fortryd og gentag ændringer på dashboardet |
-| **+** (Tilføj controller) | åbner controllerpaletten; se [Tilføj og arrangér kontroller](/docs/Application/Dashboard/ArrangingControls) |
+| **Vælg** | vælg flere kontroller, og lås, lås op, slet eller rediger dem samlet; **Færdig** afslutter |
 | ⚙ (Dashboardindstillinger) | indstillinger for baggrund og gitter (nedenfor) |
+| **+** (Tilføj controller, med en orange ring) | åbner controllerpaletten; se [Tilføj og arrangér kontroller](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Kør** / **Stop**: start og stop programmet |
 
-På en computer har dashboardvinduet også menuer: **Fil** (Luk profil, Åbn i separat vindue, Dashboardindstillinger…), **Rediger** (Fortryd, Gentag, Tilføj controller…) og **Vis** (Blokke ⌘1, Dashboard ⌘2).
-
 Mens programmet kører, er redigeringsknapperne skjult.
+
+**Computer og webeditor**
+
+Topbjælken ligner editorens:
+
+- **Venstre**: **Hjem** (lukker profilen), menuerne **Fil**, **Rediger** og **Vis** og derefter **Fortryd** og **Gentag**.
+- **Midten**: profilens navn og **Blokke** (eller **Forbindelser** i en profil med Hurtige forbindelser, ⌘1 / Ctrl+1) for at gå tilbage til programmet. Selve dashboardet har ingen knap her: Det er den side, du er på.
+- **Højre**: **Vælg**, **Dashboardindstillinger** (⚙) og den orange knap **+ Controller** (Tilføj controller). I et smalt vindue skjules profilens navn og knappen **Blokke**, og **+ Controller** beholder kun sit **+**.
+
+På en computer har dashboardets bjælke ingen **Kør**: Start og stop programmet fra editoren (⌘R / Ctrl+R, ⌘. / Ctrl+.). Mens det kører, er **Vælg**, **Dashboardindstillinger** og **+ Controller** ikke tilgængelige.
+
+Menuer: **Fil** (Luk profil, Åbn i separat vindue), **Rediger** (Fortryd, Gentag) og **Vis** (Blokke ⌘1, Dashboard ⌘2). I det separate dashboardvindue viser bjælken vinduets titel i stedet for **Hjem**, **Fil** har **Luk vindue**, og der er hverken menuen **Vis** eller knappen **Blokke**.
 
 ## Fortryd og gentag {#undo-and-redo}
 

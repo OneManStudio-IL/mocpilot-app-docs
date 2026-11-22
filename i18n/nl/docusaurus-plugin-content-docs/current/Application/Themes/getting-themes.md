@@ -10,7 +10,7 @@ Er is geen apart winkelscherm: je bekijkt en koopt thema's precies daar waar je 
 
 ## Een thema uitproberen {#try-a-theme}
 
-1. Open het dashboard en tik op **+** (**Controller toevoegen**).
+1. Open het dashboard en tik op **+** (**Controller toevoegen**; op een computer **+ Controller**).
 2. Kies een soort bedieningselement, bijvoorbeeld een joystick. De strook met stijlen toont hem in elk thema; de speciale bedieningselementen staan onder **Voertuig & speciaal**.
 3. Tik op een stijl om hem in het grote voorbeeld te zien en uit te proberen. Probeer bij **Configureren** de kleuren, grootten en opties.
 

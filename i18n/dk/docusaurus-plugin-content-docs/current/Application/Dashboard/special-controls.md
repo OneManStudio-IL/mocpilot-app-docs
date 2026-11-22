@@ -26,7 +26,7 @@ Specialkontroller ser ud og virker som den ægte vare: et rat, pedaler, en gears
 
 ## Tilføj en specialkontrol {#add-a-special-control}
 
-1. Åbn dashboardet, og tryk på **+** (**Tilføj controller**).
+1. Åbn dashboardet, og tryk på **+** (**Tilføj controller**; på en computer **+ Controller**).
 2. Rul ned til **Køretøj og special** på listen over kontroltyper, og vælg en kontrol.
 3. Striben med udseender viser alle dens udseender. Vælg et, og indstil derefter kontrollen under **Konfigurer**.
 4. Tryk på **Føj til dashboard**. For en kontrol, du ikke ejer endnu, trykker du på **Køb** eller **Alt med MocPilot Pro**.
