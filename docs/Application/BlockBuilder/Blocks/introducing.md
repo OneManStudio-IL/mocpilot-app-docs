@@ -25,7 +25,7 @@ Logic Blocks has its own set of blocks and its own behavior. You can't import MO
 
 - The **palette** lists the block categories: **Events**, **Control**, **Sensors**, **Sounds**, **Operators**, **Variables**, **Lists** and **My Blocks**. Other categories appear when your profile needs them: **Motors** and **Light** (when a hub supports them), **Simulator** (when the dashboard has pedals, a gearbox or a handbrake), **Dashboard controllers** and **Gamepad**.
 - The **program area** is where you drag blocks and build scripts.
-- The top bar has **My Hubs**, **Dashboard**, **Gamepad**, **Monitor**, **Editor Settings**, the **AI builder** and **Run/Stop**.
+- The top bar has **Undo** and **Redo**, **Dashboard**, **My Hubs**, **Gamepad**, the side panels **AI builder**, [**Backpack**](/docs/Application/BlockBuilder/Backpack) and **Monitor**, **More** (with **Editor Settings**) and **Run/Stop**. On a phone or tablet, the side panels and Gamepad are in **More**.
 
 See [Working in the editor](/docs/Application/BlockBuilder/Editor) for details.
 

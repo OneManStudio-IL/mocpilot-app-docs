@@ -41,7 +41,7 @@ The program type can't be changed later. More in [Create a profile](/docs/Applic
 
 ## 2. Add and connect the hub {#add-the-hub}
 
-1. In the editor, tap **My Hubs**.
+1. In the editor, tap **My Hubs** (**Hubs** in the top bar on a computer).
 2. Tap **Add a new Hub** in a free slot, choose the Technic Hub in the list and tap **Add**.
 3. Switch the hub on and press its button. MOCPilot finds it and connects; the hub stays in the slot.
 4. If the **Firmware update required** dialog appears, tap **Update** and keep the hub on and close by until the update is done. See [Firmware updating](/docs/Application/Hubs/FirmwareUpdating).
@@ -52,7 +52,7 @@ More in [Add and connect a hub](/docs/Application/Hubs/ConnectingHubs).
 
 ## 3. Put the controls on the dashboard {#dashboard}
 
-1. Open **Dashboard** and tap **+** (**Add Controller**).
+1. Open **Dashboard** and tap **+** (**Add Controller**; on a computer, **+ Controller**).
 2. In the **Joysticks** group, choose **Joystick** and tap **Add to dashboard**. It is named **JOY1**. Leave **Axes type** at **Both axes (X, Y)**: up and down will drive, left and right will steer.
 3. Tap **+** again. In **Buttons and switches**, choose **Button** and tap **Add to dashboard**. It is named **BTN1**.
 4. Drag the joystick to the left side and the button to the right side, where your thumbs will be. Tap a control to change its size (**S**, **M** or **L**) or its look.
@@ -100,7 +100,7 @@ No end stops? Use **Manual**: turn the wheels straight by hand, tap **Set as zer
 
 <Screenshot name="tutorial-car-links-rows" alt="The three finished rows of the car: drive, steering and lights" width={900} />
 
-When all three rows are ready, the **Problems** button in the top bar shows a green check. A red "!" tells you how many problems are left; tap it and then a problem to jump to the row. See [Running and fixing problems](/docs/Application/Links/Problems).
+When all three rows are ready, the **Problems** button in the top bar (right before **Run**) shows a green check. A red "!" tells you how many problems are left; tap it and then a problem to jump to the row. See [Running and fixing problems](/docs/Application/Links/Problems).
 
 ## 5. Run and test {#run}
 

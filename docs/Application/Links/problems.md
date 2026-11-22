@@ -10,10 +10,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Is everything ready?
 
-The **Problems** button in the editor's top bar shows:
+The **Problems** button in the editor's top bar (on a computer, right before **Run**) shows:
 
 - a **green check**: "All rows are ready";
 - a **red "!"**: "Problems: N".
+
+On a computer the text is written on the button; in a narrow window only the icon and the number of problems remain. On a phone or tablet the button shows the icon, with the number in a red badge.
 
 Tap it to open the problems panel (a side panel on a phone, a menu on a tablet or computer). It lists "Row N — reason"; tap an item to jump to that row. The block that causes the problem has a **red frame**. When everything is fine, the panel says "Every row that is turned on can run."
 

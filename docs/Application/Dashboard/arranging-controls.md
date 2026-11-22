@@ -10,11 +10,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 ## Add a control
 
-1. On the dashboard, tap **+** (**Add Controller**). On a computer, the palette opens in its own window.
+1. On the dashboard, tap **+** (**Add Controller**); on a computer, click **+ Controller** at the right of the top bar. On a computer, the palette opens in its own window, with **Add Controller** in the middle of its top bar.
 2. Choose a control type in the list. The types are grouped: **Joysticks**, **Sliders**, **Buttons and switches**, **Monitors**, then **Vehicle & special** for the [special controls](/docs/Application/Dashboard/SpecialControls) and **My designs** for the designs you saved. To find a control quickly, type in **Search controls**.
 3. The looks strip shows the selected type in every [theme](/docs/Application/Themes/ThemesOverview) (for a special control, all its looks). Tap a look to see it in the large preview; you can try it out right there.
 4. Set the control up in **Configure**: the **Style** and **Settings** tabs and the size.
-5. Tap **Add to dashboard**. On a computer, you can add several controls in a row.
+5. Tap **Add to dashboard** (on a computer, the orange button at the right of the palette's top bar). On a computer, you can add several controls in a row.
 
 <Screenshot name="controller-palette" alt="The Add Controller palette" width={900} />
 

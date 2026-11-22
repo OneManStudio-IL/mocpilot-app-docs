@@ -1,7 +1,7 @@
 ---
 id: Editor
 title: Working in the editor
-description: "Palette, dragging blocks, zoom, context menus, undo, Monitor, Editor Settings and the AI builder in Logic Blocks."
+description: "Top bar, palette, dragging blocks, zoom, context menus, undo, Monitor, Backpack, Editor Settings and the AI builder in Logic Blocks."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -9,6 +9,13 @@ import Screenshot from '@site/src/components/Screenshot';
 # Working in the editor
 
 <Screenshot name="blocks-editor" alt="Logic Blocks editor" width={900} />
+
+## Top bar {#top-bar}
+
+- **Computer and web editor**: **Home** and the menus on the left, with **Undo** and **Redo** next to them. In the middle: the profile name and **Dashboard**, **Hubs** and **Gamepad**. On the right: **AI builder**, [**Backpack**](/docs/Application/BlockBuilder/Backpack), **Monitor**, **More** (⋯), **Remote control** and the orange **Run** button. In a narrow window, the buttons that don't fit move into **More**; it always has **Editor Settings…**.
+- **Phone and tablet**: **Home** on the left; on the right **Undo**, **Redo**, **Dashboard**, **My Hubs**, **Remote control**, **More** and **Run / Stop**. **More** has the **AI builder**, **Backpack**, **Monitor**, **Gamepad** and **Editor Settings**.
+
+See [Phone, tablet and desktop](/docs/Introducing/Layouts#editor-top-bar) for how the bar folds in a narrow window.
 
 ## Palette and program area
 
@@ -31,6 +38,7 @@ Long-press (on a touch screen) or right-click a block:
 - **Edit**: change its values;
 - **Duplicate**;
 - **Delete block** / **Delete N blocks**;
+- **Add to Backpack**: keep the block and everything attached to it in the [Backpack](/docs/Application/BlockBuilder/Backpack);
 - **About block**: opens the block's description in this documentation;
 - **Export block as SVG** / **Export all blocks as SVG**: save a picture for a tutorial or a forum post.
 
@@ -40,7 +48,7 @@ A block that is linked to a dashboard control can be deleted only after you rele
 
 ## Undo and redo
 
-Use **Edit → Undo / Redo** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) or the floating buttons.
+Use **Edit → Undo / Redo** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) or the **Undo** and **Redo** buttons in the top bar (next to the menus on a computer).
 
 - One drag is one step; quick edits of the same value merge into one step.
 - Undo works even while the program runs.
@@ -50,11 +58,17 @@ Use **Edit → Undo / Redo** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z) or the floa
 
 ## Monitor {#monitor}
 
-**Monitor** (⇧⌘M / Ctrl+Shift+M) shows the current values of variables and lists while the program runs. On a computer you can open it in a separate window. It's a great help when you're looking for a bug.
+**Monitor** (⇧⌘M / Ctrl+Shift+M, **View → Monitor**) shows the current values of variables and lists while the program runs. Its button is in the top bar on a computer and in **More** on a phone or tablet. On a computer you can open it in a separate window. It's a great help when you're looking for a bug.
+
+## Backpack {#backpack}
+
+The **Backpack** (⇧⌘B / Ctrl+Shift+B, **View → Backpack**) keeps block stacks to reuse in any profile: choose **Add to Backpack** in a block's menu, then tap or drag the item to insert it into any program. Its button is next to **Monitor** in the top bar, or in **More**. See [Backpack](/docs/Application/BlockBuilder/Backpack).
 
 <Screenshot name="blocks-monitor" alt="Monitor showing variables and a list while the program runs" width={900} />
 
 ## Editor Settings {#editor-settings}
+
+Open them from **More → Editor Settings** in the top bar (on a computer also **Program → Editor Settings…**).
 
 - **Launch block by clicking**: clicking a block runs it, so you can test it on its own; if the program is stopped, this starts it too.
 - **Open the program in the middle**: when you open a profile, the program is shown at 100% in the middle of the canvas (or from its top-left corner when it's larger), wherever you left it while editing. This applies to all profiles on this device.
@@ -75,7 +89,7 @@ The level is saved in the profile. Blocks already in the program keep working wh
 
 ## AI builder {#ai-builder}
 
-With [MocPilot Pro](/docs/Application/Account/Pro), the **AI builder** (the sparkles button, ⇧⌘I / Ctrl+Shift+I) sets up the hubs, the dashboard and the program from a description that you type or say, and then changes the profile as you ask. It works in Logic Blocks and Quick Links profiles. See [AI builder](/docs/Application/Profiles/AiBuilder).
+With [MocPilot Pro](/docs/Application/Account/Pro), the **AI builder** (the sparkles button in the top bar, **More → AI builder** on a phone or tablet, ⇧⌘I / Ctrl+Shift+I) sets up the hubs, the dashboard and the program from a description that you type or say, and then changes the profile as you ask. It works in Logic Blocks and Quick Links profiles. See [AI builder](/docs/Application/Profiles/AiBuilder).
 
 ### How to get a good result {#ai-builder-tips}
 
@@ -87,5 +101,7 @@ Name the hub, say what is connected to each port and what it should do, and how 
 |---|---|
 | File | Close Profile (⌘W) |
 | Edit | Undo, Redo, New Variable…, New List…, New Message…, New Block… |
-| View | Block Palette, Zoom In, Zoom Out, Actual Size |
-| Program | Run (⌘R), Stop (⌘.) |
+| View | Block Palette (⌘P), [Backpack](/docs/Application/BlockBuilder/Backpack) (⇧⌘B), Monitor (⇧⌘M), Zoom In, Zoom Out, Actual Size |
+| Program | Run (⌘R), Stop (⌘.), Editor Settings… |
+
+On Windows, use Ctrl instead of ⌘ and Shift instead of ⇧.

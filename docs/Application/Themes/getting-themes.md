@@ -10,7 +10,7 @@ There is no separate store screen: you browse and buy themes right where you use
 
 ## Try a theme
 
-1. Open the dashboard and tap **+** (**Add Controller**).
+1. Open the dashboard and tap **+** (**Add Controller**; on a computer, **+ Controller**).
 2. Select a control type, for example a joystick. The looks strip shows it in every theme; the special controls are under **Vehicle & special**.
 3. Tap a look to see it in the large preview and try it out. In **Configure**, try the colours, sizes and options.
 

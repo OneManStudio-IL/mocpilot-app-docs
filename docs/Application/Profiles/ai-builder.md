@@ -17,7 +17,7 @@ The AI builder is part of [MocPilot Pro](/docs/Application/Account/Pro) and work
 ## Open the AI builder
 
 1. Open a profile for editing.
-2. Press the **AI builder** button (the sparkles icon) in the top bar. On a computer you can also press ⇧⌘I / Ctrl+Shift+I.
+2. On a computer, press the **AI builder** button (the sparkles icon) on the right of the top bar, or ⇧⌘I / Ctrl+Shift+I; in a narrow window it's in **More** (⋯). On a phone or tablet, tap **More** → **AI builder**.
 3. Type your request in **What should the AI build or change?** and press **Send** (or Enter; Shift+Enter starts a new line).
 
 Without MocPilot Pro, the button shows what the AI builder does, with **Get MocPilot Pro** and **Not now**.

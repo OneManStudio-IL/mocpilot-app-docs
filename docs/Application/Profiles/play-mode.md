@@ -15,13 +15,13 @@ A profile has two modes:
 
 ## Start and stop
 
-Press **Run** (▶) in the editor or on the dashboard (computer: **Program → Run**, ⌘R / Ctrl+R). Press **Stop** (■) to go back to editing (⌘. / Ctrl+.).
+Press **Run** (▶) at the right end of the editor's top bar; on a phone or tablet the dashboard has it too. On a computer, **Run** is the orange button in the editor (also **Program → Run**, ⌘R / Ctrl+R). Press **Stop** (■) to go back to editing (⌘. / Ctrl+.).
 
 <Screenshot name="dashboard-run" alt="Dashboard while the program runs" width={900} />
 
 While the program runs:
 
-- the dashboard grid dots and the add and settings buttons are hidden;
+- the dashboard grid dots are hidden, and so are its editing buttons (on a computer they're unavailable);
 - controls respond to touch and to the gamepad;
 - monitors and indicators show live values;
 - in Quick Links, the editor shows live values between the blocks of every row, and the rows can't be edited;
@@ -33,7 +33,7 @@ Opening a profile switches a phone to landscape, full screen, so the dashboard g
 
 ## Before you press Run
 
-- Switch the hubs on and check in **My Hubs** that they're connected (the badge on the button shows how many are).
+- Switch the hubs on and check in **My Hubs** that they're connected (the number on the **My Hubs** button, **Hubs** on a computer, shows how many are).
 - In Quick Links, check the **Problems** button: a red "!" means some rows can't run. See [Running and fixing problems](/docs/Application/Links/Problems).
 - For the first try, put the model on a stand or keep it away from the edge of the table.
 

@@ -55,7 +55,7 @@ Open the **Profile Catalog** (**Search Online** on the profiles page) and instal
 
 ## 5. Add your hub
 
-1. In the editor, open **My Hubs**.
+1. In the editor, open **My Hubs** (**Hubs** in the top bar on a computer).
 2. Tap **Add a new Hub** in a free slot, choose your hub model, then tap **Add**.
 3. Switch the hub on, press its button and wait until MOCPilot finds it.
 
@@ -66,7 +66,7 @@ If the app asks for a firmware update, follow [Firmware updating](/docs/Applicat
 ## 6. Place controls on the dashboard
 
 1. Open **Dashboard**.
-2. Tap **+** (**Add Controller**), choose a **Joystick** and tap **Add to dashboard**.
+2. Tap **+** (**Add Controller**; on a computer, **+ Controller**), choose a **Joystick** and tap **Add to dashboard**.
 3. Drag it where you want it. Tap it to change its size, color or behavior.
 
 <Screenshot name="controller-palette" alt="Add Controller palette with the joystick selected" width={900} />

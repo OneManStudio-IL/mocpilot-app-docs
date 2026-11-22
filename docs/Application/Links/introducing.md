@@ -38,7 +38,7 @@ Direct outputs (Indicator, Hub LED, LED matrix, Calibrate servos) need no operat
 
 - **Rows** fill the screen and scroll vertically. New rows start in the last, empty row ("New row: input").
 - The **palette** at the bottom has three tabs: **Inputs**, **Processing** and **Outputs**. It is built from your profile: every dashboard control and every hub in My Hubs appears automatically, the gamepad appears when gamepad blocks are on, and an operation appears only if a hub of the profile can do it.
-- The **Problems** button in the top bar shows a green check when every row is ready, or a red "!" with the number of problems.
+- The rows' status in the top bar, right before **Run**, shows a green check when every row is ready, or a red "!" with the number of problems. On a computer it also says **All rows are ready** or **Problems: N**.
 
 ## Build a row
 
@@ -71,7 +71,7 @@ Press **Run**. While the program runs, every joint shows the **live value** pass
 
 ## Undo
 
-**Undo** and **Redo** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, or the floating buttons) go back up to 100 steps. They are not available while the program runs.
+**Undo** and **Redo** (⌘Z / ⇧⌘Z, Ctrl+Z / Ctrl+Shift+Z, or the buttons in the top bar) go back up to 100 steps. They are not available while the program runs.
 
 ## Read more
 

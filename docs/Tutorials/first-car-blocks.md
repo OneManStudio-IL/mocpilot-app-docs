@@ -145,7 +145,7 @@ With a **Switch** instead of the button it is even simpler: *when switch … is 
 
 ## 7. Run and watch the Monitor {#monitor}
 
-When something doesn't work as expected, look at the values. The [Monitor](/docs/Application/BlockBuilder/Editor#monitor) in the top bar shows every variable while the program runs.
+When something doesn't work as expected, look at the values. The [Monitor](/docs/Application/BlockBuilder/Editor#monitor) (in the top bar on a computer, in **More** on a phone or tablet) shows every variable while the program runs.
 
 1. Make a variable `throttle`.
 2. In the loop, store the joystick value in it and use the variable for the motor speed:

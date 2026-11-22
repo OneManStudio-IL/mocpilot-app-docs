@@ -26,7 +26,7 @@ The **Rotary knob** is not a separate product: it comes with every paid theme. S
 
 ## Add a special control
 
-1. Open the dashboard and tap **+** (**Add Controller**).
+1. Open the dashboard and tap **+** (**Add Controller**; on a computer, **+ Controller**).
 2. In the list of control types, scroll to **Vehicle & special** and select a control.
 3. The looks strip shows all its looks. Pick one, then set up the control in **Configure**.
 4. Tap **Add to dashboard**. For a control you don't own yet, tap **Purchase** or **All with MocPilot Pro**.

@@ -105,6 +105,7 @@ const sidebars = {
       items: [
         'Application/BlockBuilder/Blocks/BlocksIntroducing',
         'Application/BlockBuilder/Editor',
+        'Application/BlockBuilder/Backpack',
         'Application/BlockBuilder/Examples',
         {
           type: 'category',

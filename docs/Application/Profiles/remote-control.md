@@ -23,7 +23,7 @@ Remote control lets you drive a model that is connected to another device. One d
 
 ## Connect a hub device {#connect-a-hub-device}
 
-1. On the remote, open the profile and press **Remote control** (the remote control icon: a house with signal arcs) in the profile's top bar. In the web editor, press **Show the code** in the panel that opens.
+1. On the remote, open the profile and press **Remote control** (the remote control icon: a house with signal arcs) in the profile's top bar, next to **Run**. In the web editor, press **Show the code** in the panel that opens.
 
    The remote shows a **connection code**: a QR code and 6 digits.
 2. On the hub device, open MOCPilot and tap **Connect a Remote** on the **My profiles** page. On a Mac, you can also choose **File → Connect a Remote…**.

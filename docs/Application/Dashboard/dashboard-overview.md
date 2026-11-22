@@ -1,7 +1,7 @@
 ---
 id: DashboardOverview
 title: Dashboard editor
-description: "The MOCPilot dashboard: the field, the grid, the toolbar, the background and undo."
+description: "The MOCPilot dashboard: the field, the grid, the top bar, the background and undo."
 ---
 
 import Screenshot from '@site/src/components/Screenshot';
@@ -10,7 +10,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 The **dashboard** is the screen you drive your model from: joysticks, sliders, buttons, monitors and other controls. Each profile has one dashboard.
 
-Open it with the **Dashboard** button in the editor (⌘2 / Ctrl+2 on a computer).
+Open it with the **Dashboard** button in the editor's top bar (⌘2 / Ctrl+2 on a computer). On a phone with a narrow screen, it's in **More**.
 
 - **Phone and tablet**: the dashboard opens full screen over the editor.
 - **Computer**: the dashboard opens in its own **Dashboard** window, so you can keep it next to the program.
@@ -24,19 +24,32 @@ Open it with the **Dashboard** button in the editor (⌘2 / Ctrl+2 on a computer
 - In edit mode, a **dot grid** of 40 × 20 cells is shown. Controls snap to the grid.
 - Controls can't overlap. If a control doesn't fit, it goes back to where it was.
 
-## Toolbar
+## Top bar {#toolbar}
+
+**Phone and tablet**
 
 | Button | What it does |
 |---|---|
 | ← | back to the program editor |
 | Undo / Redo | undo and redo dashboard changes |
-| **+** (Add Controller) | opens the controller palette; see [Add and arrange controls](/docs/Application/Dashboard/ArrangingControls) |
+| **Select** | select several controls and lock, unlock, delete or edit them together; **Done** ends it |
 | ⚙ (Dashboard Settings) | background and grid options (below) |
+| **+** (Add Controller, with an orange ring) | opens the controller palette; see [Add and arrange controls](/docs/Application/Dashboard/ArrangingControls) |
 | ▶ / ■ | **Run** / **Stop**: start and stop the program |
 
-On a computer, the Dashboard window also has menus: **File** (Close Profile, Open in Separate Window, Dashboard Settings…), **Edit** (Undo, Redo, Add Controller…) and **View** (Blocks ⌘1, Dashboard ⌘2).
-
 While the program runs, the editing buttons are hidden.
+
+**Computer and web editor**
+
+The top bar looks like the editor's:
+
+- **Left**: **Home** (closes the profile), the **File**, **Edit** and **View** menus, then **Undo** and **Redo**.
+- **Middle**: the profile name and **Blocks** (or **Links** in a Quick Links profile, ⌘1 / Ctrl+1) to go back to the program. The dashboard itself has no button here: it's the page you're on.
+- **Right**: **Select**, **Dashboard Settings** (⚙) and the orange **+ Controller** button (Add Controller). In a narrow window the profile name and the **Blocks** button hide, and **+ Controller** keeps only its **+**.
+
+There is no **Run** on the dashboard's bar on a computer: run and stop the program from the editor (⌘R / Ctrl+R, ⌘. / Ctrl+.). While it runs, **Select**, **Dashboard Settings** and **+ Controller** are unavailable.
+
+Menus: **File** (Close Profile, Open in Separate Window), **Edit** (Undo, Redo) and **View** (Blocks ⌘1, Dashboard ⌘2). In the separate Dashboard window, the bar shows the window title instead of **Home**, **File** has **Close Window**, and there is no **View** menu or **Blocks** button.
 
 ## Undo and redo
 

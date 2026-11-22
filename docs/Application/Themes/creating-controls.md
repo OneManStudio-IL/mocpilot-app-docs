@@ -12,7 +12,7 @@ Every control you add starts from a theme. You can configure it before adding it
 
 ## Configure before adding
 
-1. Open **Add Controller** (**+** on the dashboard).
+1. Open **Add Controller** (**+** on the dashboard, **+ Controller** on a computer).
 2. Select a control type and a look in the looks strip.
 3. In **Configure**, use the **Style** and **Settings** tabs: size (the palette shows it as "W x H dots"), accent colour, icon, theme options, behaviour.
 4. Tap **Add to dashboard**.
