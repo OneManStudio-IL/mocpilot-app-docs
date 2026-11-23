@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Controles especiais {#special-controls}
 
-Os controles especiais têm visual e funcionamento de verdade: um volante, pedais, uma alavanca de câmbio, um freio de mão, uma alavanca de seta e um controlador de locomotiva. Cada um é um produto separado: compre os que você precisa ou tenha todos com o [MocPilot Pro](/docs/Application/Account/Pro).
+Os controles especiais têm visual e funcionamento de verdade: um volante, pedais, uma alavanca de câmbio, um freio de mão, uma alavanca de seta, uma caixa de transferência e um controlador de locomotiva. Cada um é um produto separado: compre os que você precisa ou tenha todos com o [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Um painel com volante, pedais, alavanca de câmbio, freio de mão, setas e controle de trem" width={900} />
 
@@ -20,6 +20,7 @@ Os controles especiais têm visual e funcionamento de verdade: um volante, pedai
 | [Câmbio automático](#gear-shifter) | Câmbio | GEARA | seletor: P, R, N, D |
 | [Freio de mão](#handbrake) | Freio de mão | HBRK | força, travado |
 | [Setas](#turn-signals) | Setas | STALK | seta esquerda, seta direita, luz |
+| [Caixa de transferência](#transfer-case) | Caixa de transferência | XFER | modo de tração: 2H, 4H, N, 4L; bloqueios do diferencial |
 | [Controle de trem](#train-controller) | Controle de trem | TRTHR | ponto de potência, sentido, tração |
 
 O **Botão giratório** não é um produto separado: ele vem com todo tema pago. Veja [Tipos de controle](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Algumas aparências também ajustam a cor de acento para combinar quando você a
 ## Configurações de todos os controles especiais {#settings-of-all-special-controls}
 
 - **Aparência** (aba Estilo): veja acima.
-- **Cor de acento** (aba Estilo): alavanca de câmbio, freio de mão, setas e controle de trem.
+- **Cor de acento** (aba Estilo): alavanca de câmbio, freio de mão, setas, caixa de transferência e controle de trem.
 - **Bloquear o controlador** e **Interatividade** (aba Configurações), como em qualquer controle. Veja [Propriedades dos controles](/docs/Application/Dashboard/ControlProperties).
 
 ## Volante {#steering-wheel}
@@ -138,6 +139,45 @@ Uma alavanca de seta com interruptor de luz.
 
 **Ligações rápidas**: a entrada [Setas](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) com os canais **Setas (esquerda − / direita +)** (duas luzes de polaridade oposta em uma porta), **Seta esquerda**, **Seta direita** e **Luz**.
 
+## Caixa de transferência {#transfer-case}
+
+A caixa de transferência de um veículo off-road escolhe quais rodas o motor traciona. O controle tem um seletor com quatro posições e interruptores para os bloqueios do diferencial:
+
+| Posição | O que significa |
+|---|---|
+| **2H** | tração em duas rodas: só as rodas traseiras são tracionadas, para estradas normais |
+| **4H** | tração nas quatro rodas: todas as rodas são tracionadas, para lama, areia e neve |
+| **N** | neutro: o motor fica desconectado das rodas |
+| **4L** | tração nas quatro rodas com **reduzida**: lenta e forte, para subidas íngremes e trilhas em pedras |
+
+Os **bloqueios do diferencial** fazem as rodas de um eixo (**dianteiro**, **traseiro**) ou os dois eixos (**central**) girarem juntos, para que uma roda que perdeu aderência não fique só patinando.
+
+<Screenshot name="transfer-case-dashboard" alt="O controle da caixa de transferência em um painel: o seletor, os interruptores dos bloqueios e o mostrador" width={700} />
+
+### Como usar {#transfer-case-use}
+
+- **Seletor**: as posições de cima para baixo são 2H, 4H, N, 4L. Dependendo da aparência, é um **controle deslizante** (um botão estriado em uma fenda: deslize-o ao longo dela; quando você solta, ele se encaixa na posição mais próxima) ou um **seletor giratório** (gire-o; ele estala nas posições). A fenda é reta, então de 4H você só chega a 4L passando por N, como em uma caixa de transferência de alavanca de verdade.
+- **Bloqueios**: uma fileira de interruptores para os bloqueios dianteiro, central e traseiro: chaves com lâmpada ou botões com trava cujo anel acende na cor de acento, dependendo da aparência. Toque em um interruptor para engatar o bloqueio e toque de novo para soltá-lo.
+- **Mostrador**: as marcações 2H, 4H, N e 4L junto ao seletor não mudam; o mostrador exibe a posição selecionada e os bloqueios engatados (**F**, **C**, **R**) na cor de acento.
+
+### Configurações {#transfer-case-settings}
+
+Na aba **Configurações**:
+
+- **Neutro (N)** (ativado por padrão): desative para um seletor só com 2H, 4H e 4L.
+- **Bloqueio do diferencial dianteiro** (ativado), **Bloqueio do diferencial central** (desativado), **Bloqueio do diferencial traseiro** (ativado): quais interruptores de bloqueio o controle mostra. Se forem menos de três, eles vão para o meio da fileira.
+- **Bloqueios dianteiro e central só em 4WD** (ativado): os bloqueios dianteiro e central só funcionam em 4H e 4L, como em um carro de verdade. Em 2H, um toque neles é recusado (o interruptor pisca em vermelho), e passar para 2H os solta. Em N, eles ficam como estão. O bloqueio traseiro funciona em qualquer posição.
+
+### Valores {#transfer-case-values}
+
+- A **posição**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Tração nas quatro rodas**: ligada em 4H e 4L. **Reduzida**: ligada em 4L.
+- Cada bloqueio: ligado ou desligado.
+
+**Aparências**: há uma aparência para cada tema, com o nome dele: Clássico, 4x4 clássico, Off-road e uma para cada tema pago. Algumas aparências têm um controle deslizante, outras um seletor giratório. **Holograma** desenha o controle inteiro como um contorno de uma só cor, na cor de acento.
+
+**Ligações rápidas**: a entrada [Caixa de transferência](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) com os canais **Tração nas quatro rodas**, **Reduzida**, **Bloqueio do diferencial dianteiro**, **Bloqueio do diferencial central** e **Bloqueio do diferencial traseiro** (cada um ligado/desligado, como um interruptor). A entrada [Veículo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) recebe a caixa de transferência inteira na configuração **Caixa de transferência**.
+
 ## Controle de trem {#train-controller}
 
 Um controlador mestre de locomotiva com alavanca de aceleração e reversor.
@@ -162,6 +202,7 @@ Cada controle especial acrescenta seus próprios blocos à categoria **Controlad
 | Câmbios | *quando câmbio … troca de marcha / sobe a marcha / reduz a marcha / coloca em ponto morto / ré / estacionamento* | *marcha …*, *câmbio … em ponto morto / em ré / numa marcha à frente / em estacionamento?*, *marchas de …* |
 | Freio de mão | *quando freio de mão … puxado / travado / destravado / solto* | *força do freio de mão …*, *freio de mão … travado / destravado / puxado?* |
 | Setas | *quando setas … seta esquerda / seta direita / luz liga / desliga* | *setas … seta esquerda / seta direita / luz está ligado?* |
+| Caixa de transferência | *quando caixa de transferência … 2H / 4H / N / 4L / tração nas quatro rodas / reduzida / bloqueio dianteiro / bloqueio central / bloqueio traseiro é engatado / é desengatado* | *caixa de transferência … [o mesmo] está engatado?*, *posição da caixa de transferência …* |
 | Controle de trem | *quando controlador do trem … ponto alterado / aumentado / reduzido, acelerador fechado, reversor movido, alavanca solta* | *controlador do trem … tração / ponto de potência / reversor*, *controlador do trem … para frente / em ré / em neutro / no ponto 0?* |
 
 O volante e os pedais também têm o bloco *som … de …*: ele escolhe um dos sons deles para os blocos de **Sons**. Detalhes: [Controladores na tela](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ O volante e os pedais também têm o bloco *som … de …*: ele escolhe um dos 
 
 Os controles especiais dão só a entrada bruta. O **simulador de veículo** transforma os pedais, a alavanca de câmbio e o freio de mão em um modelo que anda como um carro: acelera com inércia, segue no embalo, freia, dá ré, troca de marcha em D e fica parado no freio de mão.
 
-- **Ligações rápidas**: use a entrada [Veículo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Escolha os **Pedais**, a **Alavanca de câmbio** e o **Freio de mão** do seu painel, o **Tipo de veículo** (Carro, Veículo off-road, Carro esportivo, Caminhão) e a **Saída**: **Velocidade**, **Rotação do motor (rpm)**, **Freando** ou **No freio de mão**.
-- **Blocos lógicos**: quando o painel tem pedais, uma alavanca de câmbio ou um freio de mão, aparece a categoria **Simulador**. Crie um veículo nela (**Criar veículo**) e coloque o bloco *dirigir* sob um evento. Encaixe valores nos espaços dele: *acelerador*, *freio*, *marcha*, *de* (número de marchas; o bloco *marchas de …* encaixa aqui), *freio de mão* e *travado*. Outros blocos do Simulador definem o tipo de veículo, a inércia do motor e a velocidade de ré, leem a velocidade, a rotação do motor e a marcha, e reagem quando o veículo arranca, para, freia ou troca de marcha.
+- **Ligações rápidas**: use a entrada [Veículo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Escolha os **Pedais**, a **Alavanca de câmbio**, o **Freio de mão** e a **Caixa de transferência** do seu painel, o **Tipo de veículo** (Carro, Veículo off-road, Carro esportivo, Caminhão) e a **Saída**: **Velocidade**, **Rotação do motor (rpm)**, **Freando** ou **No freio de mão**.
+- **Blocos lógicos**: quando o painel tem pedais, uma alavanca de câmbio ou um freio de mão, aparece a categoria **Simulador**. Crie um veículo nela (**Criar veículo**) e coloque o bloco *dirigir* sob um evento. Encaixe valores nos espaços dele: *acelerador*, *freio*, *marcha*, *de* (número de marchas; o bloco *marchas de …* encaixa aqui), *freio de mão*, *travado* e *caixa de transferência* (o bloco *posição da caixa de transferência …* encaixa aqui; deixe vazio se o modelo não tiver caixa de transferência). Outros blocos do Simulador definem o tipo de veículo, a inércia do motor e a velocidade de ré, leem a velocidade, a rotação do motor e a marcha, e reagem quando o veículo arranca, para, freia ou troca de marcha.
 
 Como o simulador dirige:
 
@@ -180,6 +221,7 @@ Como o simulador dirige:
 - **Câmbio manual**: R dá ré, N não anda. Opcionalmente, cada marcha limita a velocidade máxima.
 - **Câmbio automático**: R dá ré, N não anda, P segura o modelo como um freio de mão travado. Em D, o simulador sobe e reduz as marchas sozinho e mostra a marcha no seletor.
 - **Freio de mão**: a força dele se soma à frenagem; um freio de mão travado pode segurar o modelo.
+- **Caixa de transferência**: em 2H e 4H, o modelo anda como sem ela. Em **N**, não anda: o modelo segue no embalo, e o freio só reduz a velocidade, sem dar ré. Em **4L**, a velocidade fica limitada a 40 % para a frente e em ré, com a rotação do motor mais alta para compensar; um modelo mais rápido desacelera até o limite depois que você passa para 4L. Os bloqueios do diferencial não mudam a forma como o simulador dirige: são apenas saídas do controle.
 - **Tipo de veículo**: um caminhão é mais pesado (mais inércia) e tem freio a ar; um carro esportivo reage rápido e dá ré mais depressa.
 
 Os últimos pedais, alavanca de câmbio ou freio de mão não podem ser excluídos enquanto o programa usa blocos do Simulador.

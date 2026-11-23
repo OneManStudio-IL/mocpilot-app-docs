@@ -34,6 +34,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | [シフトレバー](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **ギア** または **方向（R − / 前進 +）** |
 | [サイドブレーキ](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **サイドブレーキ固定**（オン/オフ）または **サイドブレーキの強さ** |
 | [ウインカー](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **ウインカー（左 − / 右 +）**、**左ウインカー**、**右ウインカー**、または **ライト** |
+| [トランスファー](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **4WD**、**ローレンジ**、**フロントデフロック**、**センターデフロック**、または **リアデフロック**（オン/オフ） |
 | [十字キー](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **上 / 下** または **左 / 右**：−1、0、+1 |
 | [ボタン](/docs/Application/Links/Blocks/InputBlocks#controller-button) | 押している間オン |
 | [スイッチ](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | オン / オフ |

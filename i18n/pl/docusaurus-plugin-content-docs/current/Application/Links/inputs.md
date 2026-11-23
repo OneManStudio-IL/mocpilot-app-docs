@@ -34,6 +34,7 @@ Blok [Kontroler](/docs/Application/Links/Blocks/InputBlocks#src-controller) pobi
 | [Skrzynia biegów](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Bieg** lub **Kierunek (R − / naprzód +)** |
 | [Hamulec ręczny](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Hamulec ręczny zaciągnięty** (wł./wył.) lub **Siła hamulca ręcznego** |
 | [Kierunkowskazy](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Kierunkowskazy (lewy − / prawy +)**, **Lewy kierunkowskaz**, **Prawy kierunkowskaz** lub **Światło** |
+| [Reduktor](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Napęd na cztery koła**, **Reduktor**, **Blokada przedniego dyferencjału**, **Blokada centralnego dyferencjału** lub **Blokada tylnego dyferencjału** (wł./wył.) |
 | [Pad kierunkowy](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Góra / dół** lub **Lewo / prawo**: −1, 0 lub +1 |
 | [Przycisk](/docs/Application/Links/Blocks/InputBlocks#controller-button) | wł., dopóki jest wciśnięty |
 | [Przełącznik](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | wł. / wył. |

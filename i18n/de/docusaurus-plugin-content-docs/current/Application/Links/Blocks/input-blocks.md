@@ -24,7 +24,7 @@ Ein Steuerelement Ihres Dashboards, angezeigt mit seinem Namen (**JOY1**, **SLDR
 - **Controller**: jedes unten aufgeführte Dashboard-Steuerelement. Monitore sind Ausgänge, keine Eingänge.
 - **Kanal**: was das Steuerelement liefert, bei Steuerelementen mit mehreren Kanälen. Die Palette bietet einen Block pro Kanal.
 
-Lenkrad, Pedale, Schalthebel, Handbremse, Blinker und Fahrschalter sind unter [Spezielle Steuerelemente](/docs/Application/Dashboard/SpecialControls) beschrieben.
+Lenkrad, Pedale, Schalthebel, Handbremse, Blinker, Verteilergetriebe und Fahrschalter sind unter [Spezielle Steuerelemente](/docs/Application/Dashboard/SpecialControls) beschrieben.
 
 Wird das Steuerelement vom Dashboard entfernt, meldet die Zeile „Wählen Sie einen Dashboard-Controller“. Gibt es seinen Kanal nicht mehr, meldet sie „Wählen Sie, was … liefert“ (bei einem Joystick: „… bewegt sich nicht entlang dieser Achse“).
 
@@ -88,6 +88,16 @@ Der Blinkerhebel (spezielles Steuerelement).
 - Linker Blinker und Rechter Blinker liefern: Wert 1, solange dieser Blinker an ist (blinkend mit der Leuchte, wenn das Blinken des Steuerelements aktiviert ist), sonst 0.
 - Licht liefert: Wert 1, solange das Licht an ist, sonst 0.
 
+### Verteilergetriebe {#controller-transfercase}
+
+Das [Verteilergetriebe](/docs/Application/Dashboard/SpecialControls#transfer-case) (spezielles Steuerelement).
+
+- **Kanal**: **Allradantrieb** (Standard), **Geländeuntersetzung**, **Vordere Differenzialsperre**, **Mittlere Differenzialsperre** oder **Hintere Differenzialsperre**.
+- Allradantrieb liefert: an/aus, an in 4H und 4L.
+- Geländeuntersetzung liefert: an/aus, an in 4L.
+- Jede Differenzialsperre liefert: an/aus, an, solange diese Sperre eingelegt ist.
+- Die Stellung selbst (2H, 4H, N, 4L) gelangt über die Einstellung **Verteilergetriebe** des Eingangs [Fahrzeug](#src-vehicle) zum Simulator.
+
 ### Steuerkreuz {#controller-dpad}
 
 - **Kanal**: **Hoch / runter** oder **Links / rechts**.
@@ -110,11 +120,12 @@ Der Blinkerhebel (spezielles Steuerelement).
 
 ## Fahrzeug {#src-vehicle}
 
-Ein simuliertes Auto, das über Pedale, Schalthebel und Handbremse des Dashboards gesteuert wird: Es beschleunigt, bremst, rollt aus und fährt rückwärts wie ein echtes Fahrzeug, und die Zeile erhält seine Geschwindigkeit oder Motordrehzahl. Die Palette zeigt Fahrzeug-Blöcke, wenn das Dashboard Pedale, einen Schalthebel oder eine Handbremse hat, einen Block pro Ausgang, bereits mit dem jeweils ersten Steuerelement jeder Art verknüpft.
+Ein simuliertes Auto, das über Pedale, Schalthebel, Handbremse und Verteilergetriebe des Dashboards gesteuert wird: Es beschleunigt, bremst, rollt aus und fährt rückwärts wie ein echtes Fahrzeug, und die Zeile erhält seine Geschwindigkeit oder Motordrehzahl. Die Palette zeigt Fahrzeug-Blöcke, wenn das Dashboard Pedale, einen Schalthebel oder eine Handbremse hat, einen Block pro Ausgang, bereits mit dem jeweils ersten Steuerelement jeder Art verknüpft.
 
 - **Pedale**: die Dashboard-Pedale, die das Fahrzeug steuern (erforderlich).
 - **Schalthebel**: **keine** oder ein Schalthebel auf dem Dashboard. Ohne Schalthebel fährt das Fahrzeug rückwärts, wenn Sie im Stand das Bremspedal gedrückt halten.
 - **Handbremse**: **keine** oder eine Handbremse auf dem Dashboard.
+- **Verteilergetriebe**: **keine** oder ein Verteilergetriebe auf dem Dashboard. In 2H und 4H fährt das Fahrzeug wie ohne Verteilergetriebe, in N fährt es nicht (es rollt aus), in 4L ist seine Geschwindigkeit auf 40 % begrenzt.
 - **Fahrzeugtyp**: **Auto** (Standard), **Geländewagen**, **Sportwagen** oder **Lkw**. Die Typen unterscheiden sich in Trägheit und Rückwärtsgeschwindigkeit; der Lkw hat zusätzlich eine Druckluftbremse.
 - **Ausgang**:
   - **Geschwindigkeit** (Standard): Wert −1…1, negativ bei Rückwärtsfahrt;

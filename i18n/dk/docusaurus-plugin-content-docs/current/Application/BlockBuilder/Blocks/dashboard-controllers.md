@@ -19,7 +19,7 @@ På denne side:
 - [Skydere og drejeknapper](#sliders-and-knobs): skyder, drejeknap
 - [Skærme](#monitor-blocks)
 - [Rat og pedaler](#steering-wheel-and-pedals)
-- [Andre særlige kontroller](#other-special-controls): gearkasse, håndbremse, blinklys, køreregulator
+- [Andre særlige kontroller](#other-special-controls): gearkasse, håndbremse, blinklys, fordelergearkasse, køreregulator
 
 ## Blokke til alle kontroller {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blokke til [blinklysene](/docs/Application/Dashboard/SpecialControls#turn-signal
 *blinklys [kontrol] [venstre blinklys / højre blinklys / lys] er tændt ?*
 
 - Type: værdiblok, `true` / `false`
+
+### Fordelergearkasseblokke {#transfer-case-blocks}
+
+Blokke til [fordelergearkassen](/docs/Application/Dashboard/SpecialControls#transfer-case). Den anden liste i hændelses- og tilstandsblokken har de samme valg:
+
+- **2H**, **4H**, **N**, **4L**: vælgeren står i denne position;
+- **firehjulstræk**: vælgeren står i 4H eller 4L;
+- **lavgear**: vælgeren står i 4L;
+- **forreste spærre**, **centerspærre**, **bageste spærre**: differentialespærren er slået til.
+
+#### `Fordelergearkassehændelse` (Begynder) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*når fordelergearkasse [kontrol] [2H / 4H / N / 4L / firehjulstræk / lavgear / forreste spærre / centerspærre / bageste spærre] [slås til / slås fra]*: **slås til** kører, når valget bliver sandt (vælgeren når positionen, eller spærren slås til), **slås fra**, når det ikke længere er sandt.
+
+- Type: hændelsesblok
+
+#### `Fordelergearkassens tilstand (boolesk)` (Begynder) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*fordelergearkasse [kontrol] [2H / 4H / N / 4L / firehjulstræk / lavgear / forreste spærre / centerspærre / bageste spærre] er slået til ?*
+
+- Type: værdiblok, `true` / `false`
+
+#### `Fordelergearkassens position (tal)` (Begynder) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*fordelergearkassens position [kontrol]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Sæt den i stikket *fordelergearkasse* på blokken [kør](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), så simulatoren bruger fordelergearkassen.
+
+- Type: værdiblok
 
 ### Køreregulatorblokke {#train-controller-blocks}
 

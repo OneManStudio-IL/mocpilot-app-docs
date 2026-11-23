@@ -34,6 +34,7 @@ En [Kontroller](/docs/Application/Links/Blocks/InputBlocks#src-controller)-blokk
 | [Girspak](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Gir** eller **Retning (R − / forover +)** |
 | [Handbrekk](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handbrekk låst** (av/på) eller **Handbrekkraft** |
 | [Blinklys](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Blinklys (venstre − / høyre +)**, **Venstre blinklys**, **Høyre blinklys** eller **Lys** |
+| [Fordelingsgir](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Firehjulsdrift**, **Lågt gir**, **Framdifferensialsperre**, **Midtdifferensialsperre** eller **Bakdifferensialsperre** (av/på) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Opp / ned** eller **Venstre / høyre**: −1, 0 eller +1 |
 | [Knapp](/docs/Application/Links/Blocks/InputBlocks#controller-button) | på mens den holdes inne |
 | [Bryter](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | på / av |

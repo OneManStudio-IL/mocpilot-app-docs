@@ -34,6 +34,7 @@ Jokaisen syötteen kaikki asetukset ja arvot on lueteltu [Syötelohkot](/docs/Ap
 | [Vaihdekeppi](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Vaihde** tai **Suunta (R − / eteen +)** |
 | [Käsijarru](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Käsijarru lukittu** (päällä/pois) tai **Käsijarrun voima** |
 | [Suuntavilkut](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Suuntavilkut (vasen − / oikea +)**, **Vasen suuntavilkku**, **Oikea suuntavilkku** tai **Valo** |
+| [Jakovaihteisto](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Neliveto**, **Alennusvaihde**, **Etutasauspyörästön lukko**, **Keskitasauspyörästön lukko** tai **Takatasauspyörästön lukko** (päällä/pois) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Ylös / alas** tai **Vasen / oikea**: −1, 0 tai +1 |
 | [Painike](/docs/Application/Links/Blocks/InputBlocks#controller-button) | päällä niin kauan kuin sitä painetaan |
 | [Kytkin](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | päällä / pois |

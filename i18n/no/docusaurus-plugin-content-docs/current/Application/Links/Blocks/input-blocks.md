@@ -24,7 +24,7 @@ En kontroll fra dashboardet, vist med navnet (**JOY1**, **SLDR1**, **BTN2**…).
 - **Kontroller**: en hvilken som helst av kontrollene på dashboardet som er oppført nedenfor. Monitorer er utganger, ikke innganger.
 - **Kanal**: hva kontrollen gir, for kontroller med flere kanaler. Paletten tilbyr én blokk per kanal.
 
-Ratt, pedaler, girspak, handbrekk, blinklys og kjørekontroller er beskrevet under [Spesialkontroller](/docs/Application/Dashboard/SpecialControls).
+Ratt, pedaler, girspak, handbrekk, blinklys, fordelingsgir og kjørekontroller er beskrevet under [Spesialkontroller](/docs/Application/Dashboard/SpecialControls).
 
 Hvis kontrollen fjernes fra dashboardet, rapporterer raden «Velg en dashboardkontroller». Hvis kanalen ikke lenger finnes, rapporterer den «Velg hva … gir» (for en joystick: «… beveger seg ikke langs denne aksen»).
 
@@ -88,6 +88,16 @@ Blinklysspaken (spesialkontroll).
 - Venstre blinklys og Høyre blinklys gir: verdi 1 mens det blinklyset er på (blinker i takt med lampen når blinking er slått på for kontrollen), ellers 0.
 - Lys gir: verdi 1 mens lyset er på, ellers 0.
 
+### Fordelingsgir {#controller-transfercase}
+
+[Fordelingsgiret](/docs/Application/Dashboard/SpecialControls#transfer-case) (spesialkontroll).
+
+- **Kanal**: **Firehjulsdrift** (standard), **Lågt gir**, **Framdifferensialsperre**, **Midtdifferensialsperre** eller **Bakdifferensialsperre**.
+- Firehjulsdrift gir: av/på, på i 4H og 4L.
+- Lågt gir gir: av/på, på i 4L.
+- Hver differensialsperre gir: av/på, på mens den sperren er koblet inn.
+- Selve posisjonen (2H, 4H, N, 4L) går til simulatoren via innstillingen **Fordelingsgir** i inngangen [Kjøretøy](#src-vehicle).
+
 ### D-pad {#controller-dpad}
 
 - **Kanal**: **Opp / ned** eller **Venstre / høyre**.
@@ -110,11 +120,12 @@ Blinklysspaken (spesialkontroll).
 
 ## Kjøretøy {#src-vehicle}
 
-En simulert bil som styres av pedalene, girspaken og handbrekket på dashboardet: den akselererer, bremser, ruller fritt og rygger som et ekte kjøretøy, og raden får hastigheten eller turtallet. Paletten viser Kjøretøy-blokker når dashboardet har pedaler, girspak eller handbrekk, én blokk per utgang, allerede koblet til den første kontrollen av hver type.
+En simulert bil som styres av pedalene, girspaken, handbrekket og fordelingsgiret på dashboardet: den akselererer, bremser, ruller fritt og rygger som et ekte kjøretøy, og raden får hastigheten eller turtallet. Paletten viser Kjøretøy-blokker når dashboardet har pedaler, girspak eller handbrekk, én blokk per utgang, allerede koblet til den første kontrollen av hver type.
 
 - **Pedaler**: pedalene på dashboardet som styrer kjøretøyet (påkrevd).
 - **Girspak**: **ingen** eller en girspak på dashboardet. Uten girspak kjører kjøretøyet bakover når du holder bremsepedalen inne mens det står stille.
 - **Handbrekk**: **ingen** eller et handbrekk på dashboardet.
+- **Fordelingsgir**: **ingen** eller et fordelingsgir på dashboardet. I 2H og 4H kjører kjøretøyet som uten det, i N kjører det ikke (det triller), i 4L er hastigheten begrenset til 40 %.
 - **Kjøretøytype**: **Bil** (standard), **Terrengkjøretøy**, **Sportsbil** eller **Lastebil**. Typene har ulik treghet og ryggehastighet; lastebilen har i tillegg luftbrems.
 - **Utgang**:
   - **Hastighet** (standard): verdi −1…1, negativ ved rygging;

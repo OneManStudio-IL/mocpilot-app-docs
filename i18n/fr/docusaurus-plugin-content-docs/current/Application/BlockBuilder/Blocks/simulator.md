@@ -30,7 +30,7 @@ Aucune boucle `répéter toujours` n’est nécessaire : **conduire** continue d
 
 ## Blocs {#blocks}
 
-### `… conduire accélérateur … frein … rapport … de … frein à main … serré …` (Débutant) {#block_vehicle_drive}
+### `… conduire accélérateur … frein … rapport … de … frein à main … serré … boîte de transfert …` (Débutant) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Le cœur du simulateur. Un bloc en C qui conduit le véhicule : toutes les 0,1 s
 - `rapport` : le rapport choisi : `-1` marche arrière, `0` point mort, `1` et plus en marche avant. Avec une commande de boîte automatique dans cet emplacement, c’est la position de son sélecteur qui est utilisée (P, R, N, D) et la voiture choisit elle-même le rapport en D.
 - `de` : le nombre de rapports de la boîte de vitesses (6 par défaut).
 - `frein à main` : la force avec laquelle le frein à main est tiré, de 0 à 100 ; `serré` : s’il est verrouillé.
+- `boîte de transfert` (facultatif) : la position de la [boîte de transfert](/docs/Application/Dashboard/SpecialControls#transfer-case), généralement le bloc [position de la boîte de transfert](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float) : `0` 2H, `1` 4H, `2` N, `3` 4L. En 2H et 4H, la voiture roule comme sans elle ; en N, elle n’avance pas (elle roule en roue libre, et le frein ne fait que la ralentir sans la faire reculer) ; en 4L, sa vitesse est limitée à 40 %. Laissez-le vide si le modèle n’a pas de boîte de transfert.
 - Une entrée n’est prise en compte que si un bloc y est placé ; un simple nombre dans un emplacement vide est ignoré (sauf pour `de`).
 - Un seul bloc **conduire** peut conduire un véhicule à la fois ; un second bloc pour le même véhicule saute ses blocs intérieurs.
 

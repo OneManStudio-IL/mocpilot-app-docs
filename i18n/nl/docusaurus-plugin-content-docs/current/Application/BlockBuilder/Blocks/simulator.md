@@ -30,7 +30,7 @@ Een lus `altijd herhalen` is niet nodig: **rijden** blijft vanzelf draaien tot d
 
 ## Blokken {#blocks}
 
-### `… rijden gas … rem … versnelling … versnellingen van … handrem … aangetrokken …` (Beginner) {#block_vehicle_drive}
+### `… rijden gas … rem … versnelling … versnellingen van … handrem … aangetrokken … verdeelbak …` (Beginner) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Het hart van de simulator. Een C-blok dat het voertuig laat rijden: elke 0,1 s l
 - `versnelling`: de gekozen versnelling: `-1` achteruit, `0` neutraal, `1` en hoger vooruit. Staat er een automatische versnellingspook in dit vak, dan wordt in plaats daarvan de stand van de keuzehendel gebruikt (P, R, N, D) en kiest de auto in D zelf de versnelling.
 - `versnellingen van`: hoeveel versnellingen de bak heeft (standaard 6).
 - `handrem`: hoe hard de handrem is aangetrokken, 0 tot 100; `aangetrokken`: of hij vergrendeld is.
+- `verdeelbak` (optioneel): de stand van de [verdeelbak](/docs/Application/Dashboard/SpecialControls#transfer-case), meestal het blok [stand van de verdeelbak](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. In 2H en 4H rijdt de auto zoals zonder verdeelbak; in N rijdt hij niet (hij rolt uit, en de rem remt hem alleen af zonder dat hij achteruitrijdt); in 4L is zijn snelheid begrensd tot 40 %. Laat het leeg als het model geen verdeelbak heeft.
 - Een invoer telt alleen als er een blok in staat; een los getal in een leeg vak wordt genegeerd (behalve bij `versnellingen van`).
 - Er kan maar één **rijden**-blok tegelijk een voertuig besturen; een tweede voor hetzelfde voertuig slaat zijn binnenste blokken over.
 

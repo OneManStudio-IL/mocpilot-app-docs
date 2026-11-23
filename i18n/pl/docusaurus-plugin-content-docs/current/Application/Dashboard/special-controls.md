@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Specjalne elementy sterujące {#special-controls}
 
-Specjalne elementy sterujące wyglądają i działają jak prawdziwe: kierownica, pedały, skrzynia biegów, hamulec ręczny, dźwignia kierunkowskazów i nastawnik jazdy lokomotywy. Każdy z nich to osobny produkt: kup te, których potrzebujesz, albo zdobądź wszystkie z [MocPilot Pro](/docs/Application/Account/Pro).
+Specjalne elementy sterujące wyglądają i działają jak prawdziwe: kierownica, pedały, skrzynia biegów, hamulec ręczny, dźwignia kierunkowskazów, reduktor i nastawnik jazdy lokomotywy. Każdy z nich to osobny produkt: kup te, których potrzebujesz, albo zdobądź wszystkie z [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Panel z kierownicą, pedałami, skrzynią biegów, hamulcem ręcznym, kierunkowskazami i nastawnikiem jazdy" width={900} />
 
@@ -20,6 +20,7 @@ Specjalne elementy sterujące wyglądają i działają jak prawdziwe: kierownica
 | [Automatyczna skrzynia biegów](#gear-shifter) | Skrzynia biegów | GEARA | wybierak: P, R, N, D |
 | [Hamulec ręczny](#handbrake) | Hamulec ręczny | HBRK | siła, zaciągnięcie |
 | [Kierunkowskazy](#turn-signals) | Kierunkowskazy | STALK | lewy kierunkowskaz, prawy kierunkowskaz, światła |
+| [Reduktor](#transfer-case) | Reduktor | XFER | tryb napędu: 2H, 4H, N, 4L; blokady dyferencjałów |
 | [Nastawnik jazdy](#train-controller) | Nastawnik jazdy | TRTHR | pozycja jazdy, kierunek, siła pociągowa |
 
 **Pokrętło** nie jest osobnym produktem: jest częścią każdego płatnego motywu. Zobacz [Typy elementów sterujących](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Niektóre wyglądy po wybraniu ustawiają też pasujący do nich kolor akcentu.
 ## Ustawienia wszystkich specjalnych elementów sterujących {#settings-of-all-special-controls}
 
 - **Wygląd** (karta Styl): patrz wyżej.
-- **Kolor akcentu** (karta Styl): skrzynia biegów, hamulec ręczny, kierunkowskazy i nastawnik jazdy.
+- **Kolor akcentu** (karta Styl): skrzynia biegów, hamulec ręczny, kierunkowskazy, reduktor i nastawnik jazdy.
 - **Zablokować kontroler** i **Interaktywność** (karta Ustawienia), jak w każdym elemencie sterującym. Zobacz [Właściwości elementów sterujących](/docs/Application/Dashboard/ControlProperties).
 
 ## Kierownica {#steering-wheel}
@@ -138,6 +139,45 @@ Dźwignia kierunkowskazów z włącznikiem świateł.
 
 **Szybkie połączenia**: wejście [Kierunkowskazy](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) z kanałami **Kierunkowskazy (lewy − / prawy +)** (dwa światła o przeciwnej polaryzacji na jednym porcie), **Lewy kierunkowskaz**, **Prawy kierunkowskaz** i **Światło**.
 
+## Reduktor {#transfer-case}
+
+Reduktor (skrzynia rozdzielcza) pojazdu terenowego decyduje, które koła napędza silnik. Kontroler ma wybierak z czterema położeniami i przełączniki blokad dyferencjałów:
+
+| Położenie | Co oznacza |
+|---|---|
+| **2H** | napęd na dwa koła: napędzane są tylko tylne koła, do jazdy po zwykłych drogach |
+| **4H** | napęd na cztery koła: napędzane są wszystkie koła, na błoto, piasek i śnieg |
+| **N** | luz: silnik jest odłączony od kół |
+| **4L** | napęd na cztery koła z **reduktorem** (przełożeniem terenowym): wolno i z dużą siłą, na strome podjazdy i jazdę po skałach |
+
+**Blokady dyferencjałów** sprawiają, że koła jednej osi (**przednia**, **tylna**) albo obie osie (**centralna**) obracają się razem, więc koło, które straciło przyczepność, nie kręci się po prostu w miejscu.
+
+<Screenshot name="transfer-case-dashboard" alt="Kontroler reduktora na panelu: wybierak, przełączniki blokad i wyświetlacz" width={700} />
+
+### Jak go używać {#transfer-case-use}
+
+- **Wybierak**: położenia od góry do dołu: 2H, 4H, N, 4L. Zależnie od wyglądu jest to **suwak** (żebrowana gałka w szczelinie: przesuwaj ją; po puszczeniu zatrzaskuje się w najbliższym położeniu) albo **pokrętło** (obracaj je; przeskakuje z kliknięciem między położeniami). Szczelina jest prosta, więc z 4H do 4L przejdziesz tylko przez N, jak w prawdziwym reduktorze z dźwignią.
+- **Blokady**: rząd przełączników dla blokady przedniej, centralnej i tylnej: dźwigienki z lampką lub przyciski z zatrzaskiem, których pierścień świeci w kolorze akcentu, zależnie od wyglądu. Stuknij przełącznik, aby włączyć blokadę, i stuknij go ponownie, aby ją zwolnić.
+- **Wyświetlacz**: oznaczenia 2H, 4H, N i 4L przy wybieraku się nie zmieniają; wyświetlacz pokazuje wybrane położenie i włączone blokady (**F**, **C**, **R**) w kolorze akcentu.
+
+### Ustawienia {#transfer-case-settings}
+
+Na karcie **Ustawienia**:
+
+- **Luz (N)** (domyślnie włączone): wyłącz, jeśli wybierak ma mieć tylko 2H, 4H i 4L.
+- **Blokada przedniego dyferencjału** (włączone), **Blokada centralnego dyferencjału** (wyłączone), **Blokada tylnego dyferencjału** (włączone): które przełączniki blokad pokazuje kontroler. Jeśli jest ich mniej niż trzy, przesuwają się na środek rzędu.
+- **Blokady przednia i centralna tylko w 4WD** (włączone): blokady przednia i centralna działają tylko w 4H i 4L, jak w prawdziwym samochodzie. W 2H stuknięcie w nie zostaje odrzucone (przełącznik miga na czerwono), a przejście na 2H je zwalnia. W N pozostają bez zmian. Blokada tylna działa w każdym położeniu.
+
+### Wartości {#transfer-case-values}
+
+- **Położenie**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Napęd na cztery koła**: włączony w 4H i 4L. **Reduktor** (przełożenie terenowe): włączony w 4L.
+- Każda blokada: włączona lub wyłączona.
+
+**Wyglądy**: każdy motyw ma swój wygląd o tej samej nazwie: Klasyczny, Klasyczna 4x4, Terenówka i po jednym dla każdego płatnego motywu. Niektóre wyglądy mają suwak, inne pokrętło. **Hologram** rysuje cały kontroler jako jednobarwny kontur w kolorze akcentu.
+
+**Szybkie połączenia**: wejście [Reduktor](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) z kanałami **Napęd na cztery koła**, **Reduktor**, **Blokada przedniego dyferencjału**, **Blokada centralnego dyferencjału** i **Blokada tylnego dyferencjału** (każdy wł./wył., jak przełącznik). Wejście [Pojazd](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) przyjmuje cały reduktor w ustawieniu **Reduktor**.
+
 ## Nastawnik jazdy {#train-controller}
 
 Nastawnik jazdy lokomotywy z dźwignią jazdy i nawrotnikiem.
@@ -162,6 +202,7 @@ Każdy specjalny element sterujący dodaje własne bloki do kategorii **Kontrole
 | Skrzynie biegów | *gdy skrzynia biegów … zmienia bieg / zmienia bieg w górę / zmienia bieg w dół / wrzuca luz / wsteczny / parkowanie* | *bieg …*, *skrzynia biegów … na luzie / na wstecznym / na biegu do przodu / na parkowaniu?*, *biegi z …* |
 | Hamulec ręczny | *gdy hamulec ręczny … ciągnięty / zablokowany / odblokowany / puszczony* | *siła hamulca ręcznego …*, *hamulec ręczny … zablokowany / odblokowany / ciągnięty?* |
 | Kierunkowskazy | *gdy kierunkowskazy … lewy kierunkowskaz / prawy kierunkowskaz / światła włącza się / wyłącza się* | *kierunkowskazy … lewy kierunkowskaz / prawy kierunkowskaz / światła jest włączony?* |
+| Reduktor | *gdy reduktor … 2H / 4H / N / 4L / napęd na cztery koła / reduktor / blokada przednia / blokada centralna / blokada tylna włącza się / wyłącza się* | *reduktor … [to samo] jest włączony?*, *położenie reduktora …* |
 | Nastawnik jazdy | *gdy nastawnik jazdy … zmieniona pozycja / podniesiona / obniżona, nastawnik na zero, nawrotnik przestawiony, dźwignia puszczona* | *nastawnik jazdy … siła pociągowa / pozycja jazdy / nawrotnik*, *nastawnik jazdy … do przodu / wstecz / neutralny / na pozycji 0?* |
 
 Kierownica i pedały mają też blok *dźwięk … z …*: wybiera jeden z ich dźwięków dla bloków kategorii **Dźwięki**. Szczegóły: [Kontrolery ekranowe](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Kierownica i pedały mają też blok *dźwięk … z …*: wybiera jeden z ich d
 
 Specjalne elementy sterujące podają tylko surowe dane wejściowe. **Symulator pojazdu** zamienia pedały, skrzynię biegów i hamulec ręczny w model, który jeździ jak samochód: przyspiesza z bezwładnością, toczy się siłą rozpędu, hamuje, cofa, zmienia biegi w trybie D i stoi na hamulcu ręcznym.
 
-- **Szybkie połączenia**: użyj wejścia [Pojazd](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Wybierz z panelu **Pedały**, **Drążek zmiany biegów** i **Hamulec ręczny**, a także **Typ pojazdu** (Samochód, Pojazd terenowy, Samochód sportowy, Ciężarówka) i **Wyjście**: **Prędkość**, **Obroty silnika (obr./min)**, **Hamowanie** lub **Na hamulcu ręcznym**.
-- **Bloki logiczne**: gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny, pojawia się kategoria **Symulator**. Utwórz w niej pojazd (**Utwórz pojazd**) i umieść blok *jedź* pod zdarzeniem. Wstaw wartości w jego gniazda: *gaz*, *hamulec*, *bieg*, *z* (liczba biegów; pasuje tu blok *biegi z …*), *hamulec ręczny* i *zablokowany*. Pozostałe bloki Symulatora ustawiają typ pojazdu, bezwładność silnika i prędkość cofania, odczytują prędkość, obroty silnika i bieg oraz reagują, gdy pojazd rusza, zatrzymuje się, hamuje lub zmienia bieg.
+- **Szybkie połączenia**: użyj wejścia [Pojazd](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Wybierz z panelu **Pedały**, **Drążek zmiany biegów**, **Hamulec ręczny** i **Reduktor**, a także **Typ pojazdu** (Samochód, Pojazd terenowy, Samochód sportowy, Ciężarówka) i **Wyjście**: **Prędkość**, **Obroty silnika (obr./min)**, **Hamowanie** lub **Na hamulcu ręcznym**.
+- **Bloki logiczne**: gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny, pojawia się kategoria **Symulator**. Utwórz w niej pojazd (**Utwórz pojazd**) i umieść blok *jedź* pod zdarzeniem. Wstaw wartości w jego gniazda: *gaz*, *hamulec*, *bieg*, *z* (liczba biegów; pasuje tu blok *biegi z …*), *hamulec ręczny*, *zablokowany* i *reduktor* (pasuje tu blok *położenie reduktora …*; zostaw je puste, jeśli model nie ma reduktora). Pozostałe bloki Symulatora ustawiają typ pojazdu, bezwładność silnika i prędkość cofania, odczytują prędkość, obroty silnika i bieg oraz reagują, gdy pojazd rusza, zatrzymuje się, hamuje lub zmienia bieg.
 
 Jak jeździ symulator:
 
@@ -180,6 +221,7 @@ Jak jeździ symulator:
 - **Manualna skrzynia biegów**: R cofa, N nie jedzie. Opcjonalnie każdy bieg ogranicza prędkość maksymalną.
 - **Automatyczna skrzynia biegów**: R cofa, N nie jedzie, P trzyma model jak zablokowany hamulec ręczny. W trybie D symulator sam zmienia biegi w górę i w dół i pokazuje bieg na wybieraku.
 - **Hamulec ręczny**: jego siła dodaje się do hamowania; zablokowany hamulec ręczny może utrzymać model w miejscu.
+- **Reduktor**: w 2H i 4H model jedzie tak jak bez niego. **N** nie jedzie: model toczy się siłą rozpędu, a hamulec tylko go spowalnia, nie wrzucając wstecznego. **4L** ogranicza prędkość do 40 % do przodu i do tyłu, przy odpowiednio wyższych obrotach silnika; szybciej jadący model po przejściu na 4L zwalnia do tego limitu. Blokady dyferencjałów nie zmieniają sposobu jazdy symulatora: są tylko wyjściami kontrolera.
 - **Typ pojazdu**: ciężarówka jest cięższa (większa bezwładność) i ma hamulec pneumatyczny; samochód sportowy szybko reaguje i szybciej cofa.
 
 Ostatnich pedałów, skrzyni biegów ani hamulca ręcznego nie można usunąć, dopóki program używa bloków Symulatora.

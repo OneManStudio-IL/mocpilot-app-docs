@@ -34,6 +34,7 @@ Un bloc [Contrôleur](/docs/Application/Links/Blocks/InputBlocks#src-controller)
 | [Levier de vitesses](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Rapport** ou **Sens (R − / avant +)** |
 | [Frein à main](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Frein à main serré** (activé/désactivé) ou **Force du frein à main** |
 | [Clignotants](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Clignotants (gauche − / droite +)**, **Clignotant gauche**, **Clignotant droit** ou **Lumière** |
+| [Boîte de transfert](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Transmission intégrale**, **Gamme courte**, **Blocage du différentiel avant**, **Blocage du différentiel central** ou **Blocage du différentiel arrière** (activé/désactivé) |
 | [Croix directionnelle](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Haut / bas** ou **Gauche / droite** : −1, 0 ou +1 |
 | [Bouton](/docs/Application/Links/Blocks/InputBlocks#controller-button) | activé tant qu’il est appuyé |
 | [Interrupteur](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | activé / désactivé |

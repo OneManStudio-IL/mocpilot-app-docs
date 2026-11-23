@@ -19,7 +19,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [スライダーとノブ](#sliders-and-knobs)：スライダー、ロータリーノブ
 - [モニター](#monitor-blocks)
 - [ハンドルとペダル](#steering-wheel-and-pedals)
-- [その他の特殊コントロール](#other-special-controls)：ギアボックス、サイドブレーキ、ウインカー、マスコン
+- [その他の特殊コントロール](#other-special-controls)：ギアボックス、サイドブレーキ、ウインカー、トランスファー、マスコン
 
 ## すべてのコントロール共通のブロック {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 *ウインカー [コントロール] [左ウインカー / 右ウインカー / ライト] 点灯中 ?*
 
 - 種類：値ブロック、`true` / `false`
+
+### トランスファーのブロック {#transfer-case-blocks}
+
+[トランスファー](/docs/Application/Dashboard/SpecialControls#transfer-case)のブロックです。イベントブロックと状態ブロックの 2 つ目のリストには、同じ選択肢があります。
+
+- **2H**、**4H**、**N**、**4L**：セレクターがこのポジションにある。
+- **4WD**：セレクターが 4H または 4L にある。
+- **ローレンジ**：セレクターが 4L にある。
+- **フロントデフロック**、**センターデフロック**、**リアデフロック**：そのデフロックが入っている。
+
+#### `トランスファーのイベント` (初心者) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*トランスファー [コントロール] [2H / 4H / N / 4L / 4WD / ローレンジ / フロントデフロック / センターデフロック / リアデフロック] [入る / 外れる]*：**入る** は選択肢が真になったとき（セレクターがそのポジションに来たとき、またはロックがオンになったとき）、**外れる** は真でなくなったときに実行されます。
+
+- 種類：イベントブロック
+
+#### `トランスファーの状態（真偽値）` (初心者) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*トランスファー [コントロール] [2H / 4H / N / 4L / 4WD / ローレンジ / フロントデフロック / センターデフロック / リアデフロック] 入っている ?*
+
+- 種類：値ブロック、`true` / `false`
+
+#### `トランスファーの位置（数値）` (初心者) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*トランスファーの位置 [コントロール]*：0 = 2H、1 = 4H、2 = N、3 = 4L。[運転](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive)ブロックの *トランスファー* ソケットに入れると、シミュレーターがトランスファーを使えるようになります。
+
+- 種類：値ブロック
 
 ### マスコンのブロック {#train-controller-blocks}
 

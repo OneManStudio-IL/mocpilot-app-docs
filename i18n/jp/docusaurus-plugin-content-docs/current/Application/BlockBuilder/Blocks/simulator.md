@@ -30,7 +30,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## ブロック {#blocks}
 
-### `… 運転 アクセル … ブレーキ … ギア … / … サイドブレーキ … ロック …` (初心者) {#block_vehicle_drive}
+### `… 運転 アクセル … ブレーキ … ギア … / … サイドブレーキ … ロック … トランスファー …` (初心者) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - `ギア`：選択中のギア。`-1` が後退、`0` がニュートラル、`1` 以上が前進です。このスロットにオートマチック変速機のコントロールを入れると、代わりにセレクターの位置（P、R、N、D）が使われ、D では車が自動でギアを選びます。
 - `/`：ギアボックスのギア数（初期値は 6）。
 - `サイドブレーキ`：サイドブレーキの引き具合（0〜100）。`ロック`：ロックされているかどうか。
+- `トランスファー`（省略可）：[トランスファー](/docs/Application/Dashboard/SpecialControls#transfer-case)のポジション。通常は[トランスファーの位置](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float)ブロックを入れます。`0` が 2H、`1` が 4H、`2` が N、`3` が 4L です。2H と 4H では、トランスファーがないときと同じように走ります。N では走りません（惰性で進み、ブレーキは減速させるだけで後退はしません）。4L では速度が 40 % に制限されます。モデルにトランスファーがない場合は空のままにします。
 - 入力はブロックを入れたときだけ有効です。空のスロットに直接入力した数値は無視されます（`/` を除く）。
 - 1 台の車両を運転できる**運転**ブロックは同時に 1 つだけです。同じ車両に対する 2 つ目のブロックは、中のブロックを実行しません。
 

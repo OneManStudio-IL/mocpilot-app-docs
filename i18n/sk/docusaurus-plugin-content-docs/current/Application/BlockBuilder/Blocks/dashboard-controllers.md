@@ -19,7 +19,7 @@ Na tejto stránke:
 - [Posuvníky a gombíky](#sliders-and-knobs): posuvník, otočný gombík
 - [Monitory](#monitor-blocks)
 - [Volant a pedále](#steering-wheel-and-pedals)
-- [Ďalšie špeciálne ovládače](#other-special-controls): prevodovka, ručná brzda, smerovky, ovládač vlaku
+- [Ďalšie špeciálne ovládače](#other-special-controls): prevodovka, ručná brzda, smerovky, rozdeľovacia prevodovka, ovládač vlaku
 
 ## Bloky pre všetky ovládače {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Bloky [smeroviek](/docs/Application/Dashboard/SpecialControls#turn-signals). Vid
 *smerovky [ovládač] [ľavá smerovka / pravá smerovka / svetlá] je zapnutý ?*
 
 - Typ: hodnotový blok, `true` / `false`
+
+### Bloky rozdeľovacej prevodovky {#transfer-case-blocks}
+
+Bloky [rozdeľovacej prevodovky](/docs/Application/Dashboard/SpecialControls#transfer-case). Druhý zoznam v blokoch udalosti a stavu ponúka rovnaké voľby:
+
+- **2H**, **4H**, **N**, **4L**: volič je v tejto polohe;
+- **pohon všetkých kolies**: volič je v 4H alebo 4L;
+- **redukcia**: volič je v 4L;
+- **predná uzávierka**, **stredová uzávierka**, **zadná uzávierka**: uzávierka diferenciálu je zapnutá.
+
+#### `Udalosť rozdeľovacej prevodovky` (Začiatočník) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*keď rozdeľovacia prevodovka [ovládač] [2H / 4H / N / 4L / pohon všetkých kolies / redukcia / predná uzávierka / stredová uzávierka / zadná uzávierka] [sa zapne / sa vypne]*: **sa zapne** sa spustí, keď voľba začne platiť (volič dosiahne polohu alebo sa uzávierka zapne), **sa vypne**, keď prestane platiť.
+
+- Typ: blok udalosti
+
+#### `Stav rozdeľovacej prevodovky (boolean)` (Začiatočník) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*rozdeľovacia prevodovka [ovládač] [2H / 4H / N / 4L / pohon všetkých kolies / redukcia / predná uzávierka / stredová uzávierka / zadná uzávierka] je zapnuté ?*
+
+- Typ: hodnotový blok, `true` / `false`
+
+#### `Poloha rozdeľovacej prevodovky (float)` (Začiatočník) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*poloha rozdeľovacej prevodovky [ovládač]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Zapojte ho do otvoru *rozdeľovacia prevodovka* bloku [jazdiť](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), aby simulátor rozdeľovaciu prevodovku používal.
+
+- Typ: hodnotový blok
 
 ### Bloky ovládača vlaku {#train-controller-blocks}
 

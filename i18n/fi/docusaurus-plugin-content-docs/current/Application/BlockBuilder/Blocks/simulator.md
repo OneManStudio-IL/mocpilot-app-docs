@@ -30,7 +30,7 @@ kun polkimet PDL1 mikä tahansa liikkuu
 
 ## Lohkot {#blocks}
 
-### `… aja kaasu … jarru … vaihde … / … käsijarru … lukittu …` (Aloittelija) {#block_vehicle_drive}
+### `… aja kaasu … jarru … vaihde … / … käsijarru … lukittu … jakovaihteisto …` (Aloittelija) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Simulaattorin sydän. C-lohko, joka ajaa ajoneuvoa: 0,1 sekunnin välein se luke
 - `vaihde`: valittu vaihde: `-1` peruutus, `0` vapaa, `1` ja ylöspäin eteenpäin. Jos tähän paikkaan on asetettu automaattivaihteiston ohjain, käytetään sen sijaan valitsimen asentoa (P, R, N, D), ja auto valitsee vaihteen D-asennossa itse.
 - `/`: montako vaihdetta vaihteistossa on (oletuksena 6).
 - `käsijarru`: kuinka lujaa käsijarrua vedetään, 0–100; `lukittu`: onko se lukittu.
+- `jakovaihteisto` (valinnainen): [jakovaihteiston](/docs/Application/Dashboard/SpecialControls#transfer-case) asento, yleensä [jakovaihteiston asento](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float) -lohko: `0` 2H, `1` 4H, `2` N, `3` 4L. Asennoissa 2H ja 4H auto ajaa kuin ilman sitä; asennossa N se ei aja (se rullaa vapaasti, ja jarru vain hidastaa sitä peruuttamatta); asennossa 4L nopeus rajoitetaan 40 %:iin. Jätä paikka tyhjäksi, jos mallissa ei ole jakovaihteistoa.
 - Syöte otetaan huomioon vain, kun siihen on asetettu lohko; tyhjään paikkaan kirjoitettu pelkkä luku ohitetaan (paitsi `/`).
 - Vain yksi **aja**-lohko voi ajaa ajoneuvoa kerrallaan; toinen saman ajoneuvon lohko ohittaa sisäiset lohkonsa.
 

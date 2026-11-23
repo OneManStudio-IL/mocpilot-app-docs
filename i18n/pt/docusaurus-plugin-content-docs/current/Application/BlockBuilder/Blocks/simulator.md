@@ -30,7 +30,7 @@ Não é preciso um laço `repetir sempre`: **dirigir** continua sozinho até o c
 
 ## Blocos {#blocks}
 
-### `… dirigir acelerador … freio … marcha … de … freio de mão … travado …` (Iniciante) {#block_vehicle_drive}
+### `… dirigir acelerador … freio … marcha … de … freio de mão … travado … caixa de transferência …` (Iniciante) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ O coração do simulador. Um bloco C que dirige o veículo: a cada 0,1 s, ele l�
 - `marcha`: a marcha selecionada: `-1` ré, `0` neutro, `1` e acima para frente. Com um controle de câmbio automático neste encaixe, é usada a posição do seletor dele (P, R, N, D), e o carro escolhe a marcha sozinho em D.
 - `de`: quantas marchas o câmbio tem (6 por padrão).
 - `freio de mão`: o quanto o freio de mão está puxado, de 0 a 100; `travado`: se ele está travado.
+- `caixa de transferência` (opcional): a posição da [caixa de transferência](/docs/Application/Dashboard/SpecialControls#transfer-case), normalmente o bloco [posição da caixa de transferência](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. Em 2H e 4H, o carro anda como sem ela; em N, não anda (segue no embalo, e o freio só reduz a velocidade, sem dar ré); em 4L, a velocidade fica limitada a 40 %. Deixe vazio se o modelo não tiver caixa de transferência.
 - Uma entrada só conta quando há um bloco colocado nela; um número simples em um encaixe vazio é ignorado (exceto em `de`).
 - Só um bloco **dirigir** pode dirigir um veículo por vez; um segundo bloco para o mesmo veículo pula os blocos de dentro.
 

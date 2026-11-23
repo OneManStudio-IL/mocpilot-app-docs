@@ -24,7 +24,7 @@ Een bediening van je dashboard, weergegeven met de naam (**JOY1**, **SLDR1**, **
 - **Controller**: elke dashboardbediening uit de lijst hieronder. Monitoren zijn uitvoer, geen invoer.
 - **Kanaal**: wat de bediening geeft, bij bedieningen met meerdere kanalen. Het palet biedt één blok per kanaal.
 
-Het stuur, de pedalen, de versnellingspook, de handrem, de richtingaanwijzers en de rijschakelaar worden beschreven op [Speciale bedieningselementen](/docs/Application/Dashboard/SpecialControls).
+Het stuur, de pedalen, de versnellingspook, de handrem, de richtingaanwijzers, de verdeelbak en de rijschakelaar worden beschreven op [Speciale bedieningselementen](/docs/Application/Dashboard/SpecialControls).
 
 Wordt de bediening van het dashboard verwijderd, dan meldt de rij “Kies een dashboardcontroller”. Bestaat het kanaal niet meer, dan meldt de rij “Kies wat … geeft” (bij een joystick: “… beweegt niet langs deze as”).
 
@@ -88,6 +88,16 @@ De richtingaanwijzerhendel (speciaal bedieningselement).
 - Linker richtingaanwijzer en Rechter richtingaanwijzer geven: waarde 1 zolang die richtingaanwijzer aan staat (knipperend met de lamp als knipperen bij de bediening aan staat), anders 0.
 - Licht geeft: waarde 1 zolang het licht aan is, anders 0.
 
+### Verdeelbak {#controller-transfercase}
+
+De [verdeelbak](/docs/Application/Dashboard/SpecialControls#transfer-case) (speciaal bedieningselement).
+
+- **Kanaal**: **Vierwielaandrijving** (standaard), **Lage gearing**, **Voorste differentieelslot**, **Middendifferentieelslot** of **Achterste differentieelslot**.
+- Vierwielaandrijving geeft: aan/uit, aan in 4H en 4L.
+- Lage gearing geeft: aan/uit, aan in 4L.
+- Elk differentieelslot geeft: aan/uit, aan zolang dat slot is ingeschakeld.
+- De stand zelf (2H, 4H, N, 4L) gaat naar de simulator via de instelling **Verdeelbak** van de invoer [Voertuig](#src-vehicle).
+
 ### Richtingspad {#controller-dpad}
 
 - **Kanaal**: **Omhoog / omlaag** of **Links / rechts**.
@@ -110,11 +120,12 @@ De richtingaanwijzerhendel (speciaal bedieningselement).
 
 ## Voertuig {#src-vehicle}
 
-Een gesimuleerde auto die wordt bestuurd met de pedalen, de versnellingspook en de handrem van het dashboard: hij versnelt, remt, rolt uit en rijdt achteruit als een echt voertuig, en de rij krijgt zijn snelheid of toerental. Het palet toont Voertuig-blokken als het dashboard pedalen, een versnellingspook of een handrem heeft, één blok per uitvoerwaarde, al gekoppeld aan de eerste bediening van elk soort.
+Een gesimuleerde auto die wordt bestuurd met de pedalen, de versnellingspook, de handrem en de verdeelbak van het dashboard: hij versnelt, remt, rolt uit en rijdt achteruit als een echt voertuig, en de rij krijgt zijn snelheid of toerental. Het palet toont Voertuig-blokken als het dashboard pedalen, een versnellingspook of een handrem heeft, één blok per uitvoerwaarde, al gekoppeld aan de eerste bediening van elk soort.
 
 - **Pedalen**: de dashboardpedalen die het voertuig besturen (verplicht).
 - **Versnellingspook**: **geen** of een versnellingspook op het dashboard. Zonder versnellingspook rijdt het voertuig achteruit als je bij stilstand het rempedaal ingetrapt houdt.
 - **Handrem**: **geen** of een handrem op het dashboard.
+- **Verdeelbak**: **geen** of een verdeelbak op het dashboard. In 2H en 4H rijdt het voertuig zoals zonder verdeelbak, in N rijdt het niet (het rolt uit), in 4L is de snelheid begrensd tot 40 %.
 - **Voertuigtype**: **Auto** (standaard), **Terreinwagen**, **Sportwagen** of **Vrachtwagen**. De typen verschillen in traagheid en achteruitsnelheid; de vrachtwagen heeft ook een luchtrem.
 - **Uitvoer**:
   - **Snelheid** (standaard): waarde −1…1, negatief bij achteruitrijden;

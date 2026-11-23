@@ -34,6 +34,7 @@ Een blok [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller)
 | [Versnellingspook](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Versnelling** of **Richting (R − / vooruit +)** |
 | [Handrem](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handrem aangetrokken** (aan/uit) of **Handremkracht** |
 | [Richtingaanwijzers](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Richtingaanwijzers (links − / rechts +)**, **Linker richtingaanwijzer**, **Rechter richtingaanwijzer** of **Licht** |
+| [Verdeelbak](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Vierwielaandrijving**, **Lage gearing**, **Voorste differentieelslot**, **Middendifferentieelslot** of **Achterste differentieelslot** (aan/uit) |
 | [Richtingspad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Omhoog / omlaag** of **Links / rechts**: −1, 0 of +1 |
 | [Knop](/docs/Application/Links/Blocks/InputBlocks#controller-button) | aan zolang ingedrukt |
 | [Schakelaar](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | aan / uit |

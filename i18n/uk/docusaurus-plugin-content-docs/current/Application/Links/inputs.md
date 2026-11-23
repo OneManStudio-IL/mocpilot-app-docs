@@ -34,6 +34,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | [Важіль передач](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Передача** або **Напрямок (R − / вперед +)** |
 | [Ручник](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Ручник затягнуто** (увімк./вимк.) або **Сила ручника** |
 | [Поворотники](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Поворотники (лівий − / правий +)**, **Лівий поворотник**, **Правий поворотник** або **Світло** |
+| [Роздавальна коробка](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Повний привід**, **Знижувальна**, **Блокування переднього диференціала**, **Блокування центрального диференціала** або **Блокування заднього диференціала** (увімк./вимк.) |
 | [Хрестовина](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Вгору / вниз** або **Вліво / вправо**: −1, 0 або +1 |
 | [Кнопка](/docs/Application/Links/Blocks/InputBlocks#controller-button) | увімкнено, поки натиснута |
 | [Перемикач](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | увімк. / вимк. |

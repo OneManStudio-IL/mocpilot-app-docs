@@ -34,6 +34,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | [Рычаг передач](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Передача** или **Направление (R − / вперёд +)** |
 | [Ручник](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Ручник затянут** (вкл/выкл) или **Сила ручника** |
 | [Поворотники](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Поворотники (левый − / правый +)**, **Левый поворотник**, **Правый поворотник** или **Свет** |
+| [Раздатка](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Полный привод**, **Понижающая**, **Блокировка переднего дифференциала**, **Блокировка центрального дифференциала** или **Блокировка заднего дифференциала** (вкл./выкл.) |
 | [Крестовина](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Вверх / вниз** или **Влево / вправо**: −1, 0 или +1 |
 | [Кнопка](/docs/Application/Links/Blocks/InputBlocks#controller-button) | вкл, пока нажата |
 | [Переключатель](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | вкл / выкл |

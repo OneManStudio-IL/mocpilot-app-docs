@@ -19,7 +19,7 @@ På denne siden:
 - [Skyveknapper og dreieknapper](#sliders-and-knobs): skyveknapp, dreieknapp
 - [Monitorer](#monitor-blocks)
 - [Ratt og pedaler](#steering-wheel-and-pedals)
-- [Andre spesialkontrollere](#other-special-controls): girkasse, handbrekk, blinklys, kjørekontroller
+- [Andre spesialkontrollere](#other-special-controls): girkasse, handbrekk, blinklys, fordelingsgir, kjørekontroller
 
 ## Blokker for alle kontrollere {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blokker for [blinklysene](/docs/Application/Dashboard/SpecialControls#turn-signa
 *blinklys [kontroller] [venstre blinklys / høyre blinklys / lys] er på ?*
 
 - Type: verdiblokk, `true` / `false`
+
+### Fordelingsgirblokker {#transfer-case-blocks}
+
+Blokker for [fordelingsgiret](/docs/Application/Dashboard/SpecialControls#transfer-case). Den andre listen i hendelses- og tilstandsblokkene har de samme valgene:
+
+- **2H**, **4H**, **N**, **4L**: velgeren står i denne posisjonen;
+- **firehjulsdrift**: velgeren står i 4H eller 4L;
+- **lågt gir**: velgeren står i 4L;
+- **fremre sperre**, **midtsperre**, **bakre sperre**: differensialsperren er koblet inn.
+
+#### `Fordelingsgirhendelse` (Nybegynner) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*når fordelingsgir [kontroller] [2H / 4H / N / 4L / firehjulsdrift / lågt gir / fremre sperre / midtsperre / bakre sperre] [blir kopla inn / blir kopla ut]*: **blir kopla inn** kjøres når valget blir sant (velgeren når posisjonen, eller sperren slås på), **blir kopla ut** når det slutter å være sant.
+
+- Type: hendelsesblokk
+
+#### `Fordelingsgirtilstand (boolsk)` (Nybegynner) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*fordelingsgir [kontroller] [2H / 4H / N / 4L / firehjulsdrift / lågt gir / fremre sperre / midtsperre / bakre sperre] er kopla inn ?*
+
+- Type: verdiblokk, `true` / `false`
+
+#### `Fordelingsgirposisjon (desimaltall)` (Nybegynner) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*stilling for fordelingsgiret [kontroller]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Koble den til feltet *fordelingsgir* i blokken [kjør](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), så bruker simulatoren fordelingsgiret.
+
+- Type: verdiblokk
 
 ### Kjørekontrollerblokker {#train-controller-blocks}
 

@@ -30,7 +30,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## 积木 {#blocks}
 
-### `… 驾驶 油门 … 刹车 … 挡位 … 共 … 手刹 … 锁定 …`（初学者） {#block_vehicle_drive}
+### `… 驾驶 油门 … 刹车 … 挡位 … 共 … 手刹 … 锁定 … 分动箱 …`（初学者） {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - `挡位`：所选挡位：`-1` 倒挡，`0` 空挡，`1` 及以上为前进挡。如果在这个插槽中放入自动变速箱控件，则使用其挡杆位置（P、R、N、D），并且汽车在 D 挡时会自行选择挡位。
 - `共`：变速箱的挡位数（默认 6）。
 - `手刹`：手刹拉起的力度，0 到 100；`锁定`：手刹是否锁定。
+- `分动箱`（可选）：[分动箱](/docs/Application/Dashboard/SpecialControls#transfer-case)的位置，通常使用[分动箱挡位](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float)积木：`0` 2H，`1` 4H，`2` N，`3` 4L。在 2H 和 4H 下，汽车的行驶方式与没有分动箱时相同；在 N 下它不行驶（会滑行，刹车只会让它减速而不会倒车）；在 4L 下它的速度被限制在 40 %。如果模型没有分动箱，就留空。
 - 只有放入了积木的输入才会生效；空插槽中直接填写的数字会被忽略（`共` 除外）。
 - 同一时间只能有一个**驾驶**积木驾驶一辆车；同一辆车的第二个驾驶积木会跳过其内部的积木。
 

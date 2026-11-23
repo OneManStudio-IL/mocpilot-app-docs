@@ -34,6 +34,7 @@ Um bloco [Controlador](/docs/Application/Links/Blocks/InputBlocks#src-controller
 | [Alavanca de câmbio](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Marcha** ou **Sentido (R − / frente +)** |
 | [Freio de mão](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Freio de mão puxado** (liga/desliga) ou **Força do freio de mão** |
 | [Setas](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Setas (esquerda − / direita +)**, **Seta esquerda**, **Seta direita** ou **Farol** |
+| [Caixa de transferência](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Tração nas quatro rodas**, **Reduzida**, **Bloqueio do diferencial dianteiro**, **Bloqueio do diferencial central** ou **Bloqueio do diferencial traseiro** (liga/desliga) |
 | [Direcional](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Cima / baixo** ou **Esquerda / direita**: −1, 0 ou +1 |
 | [Botão](/docs/Application/Links/Blocks/InputBlocks#controller-button) | ligado enquanto pressionado |
 | [Interruptor](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | liga / desliga |

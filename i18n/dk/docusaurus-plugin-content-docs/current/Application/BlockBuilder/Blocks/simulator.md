@@ -30,7 +30,7 @@ Der er ikke brug for en `gentag altid`-løkke: **kør** bliver selv ved med at k
 
 ## Blokke {#blocks}
 
-### `… kør speeder … bremse … gear … af … håndbremse … låst …` (Begynder) {#block_vehicle_drive}
+### `… kør speeder … bremse … gear … af … håndbremse … låst … fordelergearkasse …` (Begynder) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Hjertet i simulatoren. En C-blok, der kører køretøjet: Hvert 0,1 s læser den
 - `gear`: det valgte gear: `-1` bak, `0` frigear, `1` og opefter fremad. Sidder en kontrol til automatgear i dette felt, bruges dens vælgerposition i stedet (P, R, N, D), og bilen vælger selv gear i D.
 - `af`: hvor mange gear gearkassen har (6 som standard).
 - `håndbremse`: hvor hårdt håndbremsen er trukket, 0 til 100; `låst`: om den er låst.
+- `fordelergearkasse` (valgfri): [fordelergearkassens](/docs/Application/Dashboard/SpecialControls#transfer-case) position, som regel blokken [fordelergearkassens position](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. I 2H og 4H kører bilen som uden fordelergearkasse; i N kører den ikke (den triller, og bremsen sænker kun farten uden at bakke); i 4L er farten begrænset til 40 %. Lad feltet være tomt, hvis modellen ikke har en fordelergearkasse.
 - Et input tæller kun, når der er sat en blok ind i det; et almindeligt tal i et tomt felt ignoreres (undtagen `af`).
 - Kun én **kør**-blok kan køre et køretøj ad gangen; en anden blok til samme køretøj springer sine indre blokke over.
 

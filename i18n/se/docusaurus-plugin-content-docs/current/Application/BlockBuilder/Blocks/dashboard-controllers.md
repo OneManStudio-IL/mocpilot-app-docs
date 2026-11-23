@@ -19,7 +19,7 @@ På den här sidan:
 - [Skjutreglage och vridrattar](#sliders-and-knobs): skjutreglage, vridratt
 - [Monitorer](#monitor-blocks)
 - [Ratt och pedaler](#steering-wheel-and-pedals)
-- [Övriga specialkontroller](#other-special-controls): växellåda, handbroms, blinkers, tågreglage
+- [Övriga specialkontroller](#other-special-controls): växellåda, handbroms, blinkers, fördelningslåda, tågreglage
 
 ## Block för alla kontroller {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Block för [blinkersen](/docs/Application/Dashboard/SpecialControls#turn-signals
 *blinkers [kontroll] [vänster blinker / höger blinker / ljus] är på ?*
 
 - Typ: värdeblock, `true` / `false`
+
+### Block för fördelningslåda {#transfer-case-blocks}
+
+Block för [fördelningslådan](/docs/Application/Dashboard/SpecialControls#transfer-case). Den andra listan i händelse- och tillståndsblocken har samma val:
+
+- **2H**, **4H**, **N**, **4L**: väljaren står i det här läget;
+- **fyrhjulsdrift**: väljaren står i 4H eller 4L;
+- **lågväxel**: väljaren står i 4L;
+- **främre spärr**, **mittspärr**, **bakre spärr**: differentialspärren är inkopplad.
+
+#### `Fördelningslådans händelse` (Nybörjare) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*när fördelningslåda [kontroll] [2H / 4H / N / 4L / fyrhjulsdrift / lågväxel / främre spärr / mittspärr / bakre spärr] [kopplas in / kopplas ur]*: **kopplas in** körs när valet blir sant (väljaren når läget eller spärren slås på), **kopplas ur** när det slutar vara sant.
+
+- Typ: händelseblock
+
+#### `Fördelningslådans tillstånd (boolean)` (Nybörjare) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*fördelningslåda [kontroll] [2H / 4H / N / 4L / fyrhjulsdrift / lågväxel / främre spärr / mittspärr / bakre spärr] är inkopplad ?*
+
+- Typ: värdeblock, `true` / `false`
+
+#### `Fördelningslådans läge (decimaltal)` (Nybörjare) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*fördelningslådans läge [kontroll]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Koppla det till facket *fördelningslåda* i blocket [kör](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) så att simulatorn använder fördelningslådan.
+
+- Typ: värdeblock
 
 ### Block för tågreglage {#train-controller-blocks}
 

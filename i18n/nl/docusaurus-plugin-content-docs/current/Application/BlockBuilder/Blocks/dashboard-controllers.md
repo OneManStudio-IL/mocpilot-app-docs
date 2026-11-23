@@ -19,7 +19,7 @@ Op deze pagina:
 - [Schuifregelaars en draaiknoppen](#sliders-and-knobs): schuifregelaar, draaiknop
 - [Monitoren](#monitor-blocks)
 - [Stuur en pedalen](#steering-wheel-and-pedals)
-- [Andere speciale bedieningselementen](#other-special-controls): versnellingsbak, handrem, richtingaanwijzers, rijschakelaar
+- [Andere speciale bedieningselementen](#other-special-controls): versnellingsbak, handrem, richtingaanwijzers, verdeelbak, rijschakelaar
 
 ## Blokken voor alle bedieningen {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blokken van de [richtingaanwijzers](/docs/Application/Dashboard/SpecialControls#
 *richtingaanwijzers [bediening] [linker richtingaanwijzer / rechter richtingaanwijzer / licht] is aan ?*
 
 - Type: waardeblok, `true` / `false`
+
+### Verdeelbakblokken {#transfer-case-blocks}
+
+Blokken van de [verdeelbak](/docs/Application/Dashboard/SpecialControls#transfer-case). De tweede lijst in het gebeurtenisblok en het toestandsblok biedt dezelfde keuzes:
+
+- **2H**, **4H**, **N**, **4L**: de keuzehendel staat in deze stand;
+- **vierwielaandrijving**: de keuzehendel staat in 4H of 4L;
+- **lage gearing**: de keuzehendel staat in 4L;
+- **voorste slot**, **middenslot**, **achterste slot**: het differentieelslot is ingeschakeld.
+
+#### `Verdeelbakgebeurtenis` (Beginner) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*wanneer verdeelbak [bediening] [2H / 4H / N / 4L / vierwielaandrijving / lage gearing / voorste slot / middenslot / achterste slot] [wordt ingeschakeld / wordt uitgeschakeld]*: **wordt ingeschakeld** wordt uitgevoerd zodra de keuze waar wordt (de keuzehendel bereikt de stand, of het slot wordt ingeschakeld), **wordt uitgeschakeld** zodra die niet meer waar is.
+
+- Type: gebeurtenisblok
+
+#### `Toestand van de verdeelbak (booleaans)` (Beginner) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*verdeelbak [bediening] [2H / 4H / N / 4L / vierwielaandrijving / lage gearing / voorste slot / middenslot / achterste slot] is ingeschakeld ?*
+
+- Type: waardeblok, `true` / `false`
+
+#### `Stand van de verdeelbak (getal)` (Beginner) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*stand van de verdeelbak [bediening]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Zet het in het vak *verdeelbak* van het blok [rijden](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), zodat de simulator rekening houdt met de verdeelbak.
+
+- Type: waardeblok
 
 ### Rijschakelaarblokken {#train-controller-blocks}
 

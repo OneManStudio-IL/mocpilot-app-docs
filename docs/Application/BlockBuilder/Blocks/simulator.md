@@ -30,7 +30,7 @@ No `forever` loop is needed: **drive** keeps running by itself until the car sto
 
 ## Blocks
 
-### `… drive gas … brake … gear … of … handbrake … locked …` (Beginner) {#block_vehicle_drive}
+### `… drive gas … brake … gear … of … handbrake … locked … transfer case …` (Beginner) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ The heart of the simulator. A C block that drives the vehicle: every 0.1 s it re
 - `gear`: the selected gear: `-1` reverse, `0` neutral, `1` and up forward. With an automatic gearbox control in this slot, its selector position is used instead (P, R, N, D) and the car picks the gear in D by itself.
 - `of`: how many gears the gearbox has (6 by default).
 - `handbrake`: how hard the handbrake is pulled, 0 to 100; `locked`: whether it is locked.
+- `transfer case` (optional): the [transfer case](/docs/Application/Dashboard/SpecialControls#transfer-case) position, usually the [transfer case position](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float) block: `0` 2H, `1` 4H, `2` N, `3` 4L. In 2H and 4H the car drives as without it; in N it doesn't drive (it coasts, and the brake only slows it down without reversing); in 4L its speed is limited to 40 %. Leave it empty if the model has no transfer case.
 - An input counts only when a block is placed in it; a plain number in an empty slot is ignored (except `of`).
 - Only one **drive** block can drive a vehicle at a time; a second one for the same vehicle skips its inner blocks.
 

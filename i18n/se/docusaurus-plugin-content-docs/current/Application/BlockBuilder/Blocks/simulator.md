@@ -30,7 +30,7 @@ Ingen `upprepa alltid`-loop behövs: **kör** fortsätter av sig själv tills bi
 
 ## Block {#blocks}
 
-### `… kör gas … broms … växel … av … handbroms … låst …` (Nybörjare) {#block_vehicle_drive}
+### `… kör gas … broms … växel … av … handbroms … låst … fördelningslåda …` (Nybörjare) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Simulatorns hjärta. Ett C-block som kör fordonet: var 0,1 s läser det sina in
 - `växel`: den valda växeln: `-1` back, `0` friläge, `1` och uppåt framåt. Med en kontroll för automatlåda i det här facket används i stället väljarens läge (P, R, N, D), och bilen väljer själv växel i D.
 - `av`: hur många växlar växellådan har (6 som standard).
 - `handbroms`: hur hårt handbromsen är dragen, 0 till 100; `låst`: om den är låst.
+- `fördelningslåda` (valfritt): [fördelningslådans](/docs/Application/Dashboard/SpecialControls#transfer-case) läge, oftast blocket [fördelningslådans läge](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. I 2H och 4H kör bilen som utan det; i N kör den inte (den rullar fritt, och bromsen saktar bara ned den utan att backa); i 4L begränsas hastigheten till 40 %. Lämna facket tomt om modellen saknar fördelningslåda.
 - Ett indata räknas bara när ett block ligger i det; ett vanligt tal i ett tomt fack ignoreras (utom `av`).
 - Bara ett **kör**-block i taget kan köra ett fordon; ett andra för samma fordon hoppar över sina inre block.
 

@@ -24,7 +24,7 @@ Un controllo della dashboard, indicato con il suo nome (**JOY1**, **SLDR1**, **B
 - **Controller**: uno qualsiasi dei controlli della dashboard elencati qui sotto. I monitor sono uscite, non ingressi.
 - **Canale**: che cosa fornisce il controllo, per i controlli con più canali. La palette offre un blocco per canale.
 
-Volante, pedali, leva del cambio, freno a mano, frecce e manipolatore del treno sono descritti in [Controlli speciali](/docs/Application/Dashboard/SpecialControls).
+Volante, pedali, leva del cambio, freno a mano, frecce, riduttore e manipolatore del treno sono descritti in [Controlli speciali](/docs/Application/Dashboard/SpecialControls).
 
 Se il controllo viene rimosso dalla dashboard, la riga segnala «Scegli un controller della dashboard». Se il suo canale non esiste più, segnala «Scegli cosa fornisce …» (per un joystick: «… non si muove su questo asse»).
 
@@ -88,6 +88,16 @@ La levetta delle frecce (controllo speciale).
 - Freccia sinistra e Freccia destra forniscono: valore 1 finché quella freccia è attiva (lampeggia insieme alla spia quando il lampeggio del controllo è attivo), altrimenti 0.
 - Luce fornisce: valore 1 finché la luce è accesa, altrimenti 0.
 
+### Riduttore {#controller-transfercase}
+
+Il [riduttore](/docs/Application/Dashboard/SpecialControls#transfer-case) (controllo speciale).
+
+- **Canale**: **Trazione integrale** (predefinito), **Ridotte**, **Bloccaggio del differenziale anteriore**, **Bloccaggio del differenziale centrale** o **Bloccaggio del differenziale posteriore**.
+- Trazione integrale fornisce: acceso/spento, acceso in 4H e 4L.
+- Ridotte fornisce: acceso/spento, acceso in 4L.
+- Ogni bloccaggio del differenziale fornisce: acceso/spento, acceso finché quel bloccaggio è inserito.
+- La posizione vera e propria (2H, 4H, N, 4L) arriva al simulatore tramite l'impostazione **Riduttore** dell'ingresso [Veicolo](#src-vehicle).
+
 ### Pad direzionale {#controller-dpad}
 
 - **Canale**: **Su / giù** o **Sinistra / destra**.
@@ -110,11 +120,12 @@ La levetta delle frecce (controllo speciale).
 
 ## Veicolo {#src-vehicle}
 
-Un'auto simulata guidata da pedali, leva del cambio e freno a mano della dashboard: accelera, frena, procede per inerzia e va in retromarcia come un veicolo vero, e la riga riceve la sua velocità o il regime del motore. La palette mostra i blocchi Veicolo quando la dashboard ha pedali, una leva del cambio o un freno a mano: un blocco per ogni uscita, già collegato al primo controllo di ciascun tipo.
+Un'auto simulata guidata da pedali, leva del cambio, freno a mano e riduttore della dashboard: accelera, frena, procede per inerzia e va in retromarcia come un veicolo vero, e la riga riceve la sua velocità o il regime del motore. La palette mostra i blocchi Veicolo quando la dashboard ha pedali, una leva del cambio o un freno a mano: un blocco per ogni uscita, già collegato al primo controllo di ciascun tipo.
 
 - **Pedali**: i pedali della dashboard che guidano il veicolo (obbligatori).
 - **Leva del cambio**: **nessuno** oppure una leva del cambio della dashboard. Senza leva, tenendo premuto il pedale del freno da fermo il veicolo va all'indietro.
 - **Freno a mano**: **nessuno** oppure un freno a mano della dashboard.
+- **Riduttore**: **nessuno** oppure un riduttore della dashboard. In 2H e 4H il veicolo si guida come senza riduttore, in N non avanza (procede per inerzia), in 4L la sua velocità è limitata al 40 %.
 - **Tipo di veicolo**: **Auto** (predefinito), **Fuoristrada**, **Auto sportiva** o **Camion**. I tipi differiscono per inerzia e velocità in retromarcia; il camion ha anche un freno ad aria.
 - **Uscita**:
   - **Velocità** (predefinita): valore −1…1, negativo in retromarcia;

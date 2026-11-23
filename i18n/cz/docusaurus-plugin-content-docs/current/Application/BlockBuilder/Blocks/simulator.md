@@ -30,7 +30,7 @@ Cyklus `opakovat vždy` není potřeba: **jízda** běží sama, dokud se auto n
 
 ## Bloky {#blocks}
 
-### `… jízda plyn … brzda … převod … z … ruční brzda … zajištěna …` (Začátečník) {#block_vehicle_drive}
+### `… jízda plyn … brzda … převod … z … ruční brzda … zajištěna … rozdělovací převodovka …` (Začátečník) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Srdce simulátoru. Blok ve tvaru C, který řídí vozidlo: každých 0,1 s pře
 - `převod`: zvolený rychlostní stupeň: `-1` zpátečka, `0` neutrál, `1` a výš vpřed. S ovládacím prvkem automatické převodovky v tomto slotu se místo toho použije poloha voliče (P, R, N, D) a v D si auto volí stupeň samo.
 - `z`: kolik stupňů má převodovka (výchozí 6).
 - `ruční brzda`: jak silně je ruční brzda zatažená, 0 až 100; `zajištěna`: zda je zajištěná.
+- `rozdělovací převodovka` (volitelné): poloha [rozdělovací převodovky](/docs/Application/Dashboard/SpecialControls#transfer-case), obvykle blok [poloha rozdělovací převodovky](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. Ve 2H a 4H auto jezdí, jako by tam nebyla; v N nejede (jede setrvačností a brzda ho jen zpomaluje, aniž by couvalo); ve 4L je jeho rychlost omezena na 40 %. Pokud model rozdělovací převodovku nemá, nechte vstup prázdný.
 - Vstup se počítá, jen když je do něj vložený blok; samotné číslo v prázdném slotu se ignoruje (kromě `z`).
 - Vozidlo může najednou řídit jen jeden blok **jízda**; druhý pro stejné vozidlo své vnitřní bloky přeskočí.
 

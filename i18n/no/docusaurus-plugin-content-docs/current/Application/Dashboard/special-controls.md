@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Spesialkontroller {#special-controls}
 
-Spesialkontroller ser ut og fungerer som den ekte varen: et ratt, pedaler, en girspak, et håndbrekk, en blinklysspak og en lokomotivkontroller. Hver av dem er et eget produkt: kjøp dem du trenger, eller få alle med [MocPilot Pro](/docs/Application/Account/Pro).
+Spesialkontroller ser ut og fungerer som den ekte varen: et ratt, pedaler, en girspak, et håndbrekk, en blinklysspak, et fordelingsgir og en lokomotivkontroller. Hver av dem er et eget produkt: kjøp dem du trenger, eller få alle med [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Et dashboard med ratt, pedaler, girspak, håndbrekk, blinklys og togkontroll" width={900} />
 
@@ -20,6 +20,7 @@ Spesialkontroller ser ut og fungerer som den ekte varen: et ratt, pedaler, en gi
 | [Automatisk girkasse](#gear-shifter) | Girspak | GEARA | velger: P, R, N, D |
 | [Handbrekk](#handbrake) | Handbrekk | HBRK | kraft, låst |
 | [Blinklys](#turn-signals) | Blinklys | STALK | venstre blinklys, høyre blinklys, lys |
+| [Fordelingsgir](#transfer-case) | Fordelingsgir | XFER | kjøremodus: 2H, 4H, N, 4L; differensialsperrer |
 | [Togkontroll](#train-controller) | Togkontroll | TRTHR | kjøretrinn, retning, trekkraft |
 
 **Dreieknapp** er ikke et eget produkt: den følger med alle betalte temaer. Se [Kontrolltyper](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Noen utseender setter også en passende aksentfarge når du velger dem.
 ## Innstillinger for alle spesialkontroller {#settings-of-all-special-controls}
 
 - **Utsjånad** (fanen Stil): se ovenfor.
-- **Aksentfarge** (fanen Stil): girspak, håndbrekk, blinklys og togkontroll.
+- **Aksentfarge** (fanen Stil): girspak, håndbrekk, blinklys, fordelingsgir og togkontroll.
 - **Lås kontrolleren** og **Interaktivitet** (fanen Innstillinger), som på alle kontroller. Se [Kontrollegenskaper](/docs/Application/Dashboard/ControlProperties).
 
 ## Ratt {#steering-wheel}
@@ -138,6 +139,45 @@ En blinklysspak med lysbryter.
 
 **Hurtigkoblinger**: inngangen [Blinklys](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) med kanalene **Blinklys (venstre − / høyre +)** (to lys med motsatt polaritet på én port), **Venstre blinklys**, **Høyre blinklys** og **Lys**.
 
+## Fordelingsgir {#transfer-case}
+
+Fordelingsgiret i en terrengbil velger hvilke hjul motoren driver. Kontrollen har en velger med fire posisjoner og brytere for differensialsperrene:
+
+| Posisjon | Hva den betyr |
+|---|---|
+| **2H** | tohjulsdrift: bare bakhjulene drives, for vanlig vei |
+| **4H** | firehjulsdrift: alle hjul drives, for gjørme, sand og snø |
+| **N** | fri: motoren er koblet fra hjulene |
+| **4L** | firehjulsdrift med **lågt gir**: sakte og kraftig, for bratte stigninger og klatring i steinete terreng |
+
+**Differensialsperrer** får hjulene på en aksel (**fram**, **bak**) eller de to akslene (**midt**) til å rotere sammen, slik at et hjul som har mistet grepet, ikke bare spinner.
+
+<Screenshot name="transfer-case-dashboard" alt="Fordelingsgiret på et dashboard: velgeren, sperrebryterne og displayet" width={700} />
+
+### Slik bruker du det {#transfer-case-use}
+
+- **Velger**: posisjoner ovenfra og ned: 2H, 4H, N, 4L. Avhengig av utseendet er den en **glidebryter** (en riflet knott i et spor: skyv den langs sporet; når du slipper, smetter den til nærmeste posisjon) eller et **dreiehjul** (drei det; det klikker inn i posisjonene). Sporet er rett, så fra 4H kommer du til 4L bare via N, som på et ekte fordelingsgir med spak.
+- **Sperrer**: en rad brytere for fremre, midtre og bakre sperre: vippebrytere med lampe eller låsende knapper med en ring som lyser i aksentfargen, avhengig av utseendet. Trykk på en bryter for å koble inn sperren, og trykk igjen for å koble den ut.
+- **Display**: merkene 2H, 4H, N og 4L ved velgeren endrer seg ikke; displayet viser valgt posisjon og innkoblede sperrer (**F**, **C**, **R**) i aksentfargen.
+
+### Innstillinger {#transfer-case-settings}
+
+I fanen **Innstillinger**:
+
+- **Fri (N)** (på som standard): slå den av for en velger med bare 2H, 4H og 4L.
+- **Framdifferensialsperre** (på), **Midtdifferensialsperre** (av), **Bakdifferensialsperre** (på): hvilke sperrebrytere kontrollen viser. Er det færre enn tre, flyttes de til midten av raden.
+- **Fram- og midtsperre berre i 4WD** (på): fremre og midtre sperre virker bare i 4H og 4L, som i en ekte bil. I 2H avvises et trykk på dem (bryteren blinker rødt), og når du skifter til 2H, kobles de ut. N lar dem være som de er. Bakre sperre virker i alle posisjoner.
+
+### Verdier {#transfer-case-values}
+
+- **Posisjonen**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Firehjulsdrift**: på i 4H og 4L. **Lågt gir**: på i 4L.
+- Hver sperre: på eller av.
+
+**Utseender**: det finnes et utseende for hvert tema, med samme navn: Klassisk, Klassisk 4x4, Terrengbil og ett for hvert betalt tema. Noen utseender har en glidebryter, andre et dreiehjul. **Hologram** tegner hele kontrollen som et omriss i én farge, aksentfargen.
+
+**Hurtigkoblinger**: inngangen [Fordelingsgir](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) med kanalene **Firehjulsdrift**, **Lågt gir**, **Framdifferensialsperre**, **Midtdifferensialsperre** og **Bakdifferensialsperre** (hver av/på, som en bryter). Inngangen [Kjøretøy](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) tar hele fordelingsgiret i innstillingen **Fordelingsgir**.
+
 ## Togkontroll {#train-controller}
 
 En lokomotivkontroller med kjørespak og retningsvelger.
@@ -162,6 +202,7 @@ Hver spesialkontroll legger til egne blokker i kategorien **Skjermkontrollere** 
 | Girkasser | *når girkasse … skifter gir / girer opp / girer ned / går i fri / revers / parkering* | *gir …*, *er girkasse … i fri / i revers / i et forovergir / i parkering?*, *gir for …* |
 | Handbrekk | *når handbrekk … trekt / låst / løyst / sleppt* | *handbrekkraft …*, *er handbrekk … låst / løyst / trekt?* |
 | Blinklys | *når blinklys … venstre blinklys / høyre blinklys / lys slås på / av* | *blinklys … venstre blinklys / høyre blinklys / lys er på?* |
+| Fordelingsgir | *når fordelingsgir … 2H / 4H / N / 4L / firehjulsdrift / lågt gir / fremre sperre / midtsperre / bakre sperre blir kopla inn / blir kopla ut* | *fordelingsgir … [samme valg] er kopla inn?*, *stilling for fordelingsgiret …* |
 | Togkontroll | *når kjørekontroller … trinn endret / økt / senket, kontroller på null, retningsvelger flyttet, spak sluppet* | *kjørekontroller … trekkraft / kjøretrinn / retningsvelger*, *er kjørekontroller … i forover / i revers / i fri / på trinn 0?* |
 
 Rattet og pedalene har også blokken *lyd … av …*: den velger en av lydene deres for blokkene under **Lyder**. Detaljer: [Skjermkontrollere](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Rattet og pedalene har også blokken *lyd … av …*: den velger en av lydene d
 
 Spesialkontroller gir bare rå inndata. **Kjøretøysimulatoren** gjør pedalene, girspaken og håndbrekket om til en modell som kjører som en bil: den akselererer med treghet, triller, bremser, rygger, skifter gir i D og holdes igjen av håndbrekket.
 
-- **Hurtigkoblinger**: bruk inngangen [Kjøretøy](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Velg **Pedaler**, **Girspak** og **Handbrekk** fra dashboardet, **Kjøretøytype** (Bil, Terrengkjøretøy, Sportsbil, Lastebil) og **Utgang**: **Hastighet**, **Turtall (o/min)**, **Bremser** eller **På handbrekket**.
-- **Logikkblokker**: når dashboardet har pedaler, girspak eller håndbrekk, dukker kategorien **Simulator** opp. Opprett et kjøretøy der (**Opprett kjøretøy**) og sett blokken *kjør* under en hendelse. Koble verdier til åpningene: *gass*, *brems*, *gir*, *av* (antall gir; blokken *gir for …* passer her), *handbrekk* og *låst*. Andre Simulator-blokker setter kjøretøytype, motortreghet og ryggehastighet, leser hastighet, turtall og gir, og reagerer når kjøretøyet starter, stopper, bremser eller skifter gir.
+- **Hurtigkoblinger**: bruk inngangen [Kjøretøy](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Velg **Pedaler**, **Girspak**, **Handbrekk** og **Fordelingsgir** fra dashboardet, **Kjøretøytype** (Bil, Terrengkjøretøy, Sportsbil, Lastebil) og **Utgang**: **Hastighet**, **Turtall (o/min)**, **Bremser** eller **På handbrekket**.
+- **Logikkblokker**: når dashboardet har pedaler, girspak eller håndbrekk, dukker kategorien **Simulator** opp. Opprett et kjøretøy der (**Opprett kjøretøy**) og sett blokken *kjør* under en hendelse. Koble verdier til åpningene: *gass*, *brems*, *gir*, *av* (antall gir; blokken *gir for …* passer her), *handbrekk*, *låst* og *fordelingsgir* (blokken *stilling for fordelingsgiret …* passer her; la den stå tom hvis modellen ikke har fordelingsgir). Andre Simulator-blokker setter kjøretøytype, motortreghet og ryggehastighet, leser hastighet, turtall og gir, og reagerer når kjøretøyet starter, stopper, bremser eller skifter gir.
 
 Slik kjører simulatoren:
 
@@ -180,6 +221,7 @@ Slik kjører simulatoren:
 - **Manuell girkasse**: R rygger, N kjører ikke. Hvert gir kan eventuelt begrense toppfarten.
 - **Automatisk girkasse**: R rygger, N kjører ikke, P holder modellen som et låst håndbrekk. I D skifter simulatoren opp og ned av seg selv og viser giret på velgeren.
 - **Handbrekk**: kraften legges til bremsingen; et låst håndbrekk kan holde modellen.
+- **Fordelingsgir**: 2H og 4H kjører som uten det. **N** kjører ikke: modellen triller, og bremsen bremser den bare ned uten å rygge. **4L** begrenser hastigheten til 40 % forover og i revers, med tilsvarende høyere turtall; en modell som kjører fortere, bremser ned til grensen når du skifter til 4L. Differensialsperrene endrer ikke hvordan simulatoren kjører: de er bare utganger fra kontrollen.
 - **Kjøretøytype**: en lastebil er tyngre (mer treghet) og har luftbrems; en sportsbil reagerer raskt og rygger fortere.
 
 De siste pedalene, girspaken eller håndbrekket kan ikke slettes så lenge programmet bruker Simulator-blokker.

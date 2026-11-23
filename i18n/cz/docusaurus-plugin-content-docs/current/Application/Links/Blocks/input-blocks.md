@@ -24,7 +24,7 @@ Ovládací prvek z vašeho panelu, zobrazený svým názvem (**JOY1**, **SLDR1**
 - **Ovladač**: kterýkoli ovládací prvek panelu z níže uvedeného seznamu. Monitory jsou výstupy, ne vstupy.
 - **Kanál**: co prvek dává, u prvků s více kanály. Paleta nabízí jeden blok pro každý kanál.
 
-Volant, pedály, řadicí páka, ruční brzda, blinkry a jízdní kontrolér jsou popsány na stránce [Speciální ovládací prvky](/docs/Application/Dashboard/SpecialControls).
+Volant, pedály, řadicí páka, ruční brzda, blinkry, rozdělovací převodovka a jízdní kontrolér jsou popsány na stránce [Speciální ovládací prvky](/docs/Application/Dashboard/SpecialControls).
 
 Pokud je prvek z panelu odebrán, řádek hlásí „Vyberte ovladač na panelu“. Pokud jeho kanál už neexistuje, hlásí „Zvolte, co dává …“ (u joysticku: „… se v této ose nepohybuje“).
 
@@ -88,6 +88,16 @@ Páčka blinkrů (speciální ovládací prvek).
 - Levý blinkr a Pravý blinkr dávají: hodnotu 1, dokud je daný blinkr zapnutý (bliká spolu se světlem, když má prvek zapnuté blikání), jinak 0.
 - Světlo dává: hodnotu 1, dokud svítí světla, jinak 0.
 
+### Rozdělovací převodovka {#controller-transfercase}
+
+[Rozdělovací převodovka](/docs/Application/Dashboard/SpecialControls#transfer-case) (speciální ovládací prvek).
+
+- **Kanál**: **Pohon všech kol** (výchozí), **Redukce**, **Uzávěrka předního diferenciálu**, **Uzávěrka středového diferenciálu** nebo **Uzávěrka zadního diferenciálu**.
+- Pohon všech kol dává: zapnuto/vypnuto, zapnuto ve 4H a 4L.
+- Redukce dává: zapnuto/vypnuto, zapnuto ve 4L.
+- Každá uzávěrka diferenciálu dává: zapnuto/vypnuto, zapnuto, dokud je daná uzávěrka zapnutá.
+- Samotná poloha (2H, 4H, N, 4L) jde do simulátoru přes nastavení **Rozdělovací převodovka** vstupu [Vozidlo](#src-vehicle).
+
 ### D-pad {#controller-dpad}
 
 - **Kanál**: **Nahoru / dolů** nebo **Vlevo / vpravo**.
@@ -110,11 +120,12 @@ Páčka blinkrů (speciální ovládací prvek).
 
 ## Vozidlo {#src-vehicle}
 
-Simulované auto ovládané pedály, řadicí pákou a ruční brzdou z panelu: zrychluje, brzdí, dojíždí a couvá jako skutečné vozidlo a řádek dostává jeho rychlost nebo otáčky motoru. Paleta ukazuje bloky Vozidlo, když má panel pedály, řadicí páku nebo ruční brzdu, a to jeden blok pro každý výstup, rovnou propojený s prvním prvkem každého druhu.
+Simulované auto ovládané pedály, řadicí pákou, ruční brzdou a rozdělovací převodovkou z panelu: zrychluje, brzdí, dojíždí a couvá jako skutečné vozidlo a řádek dostává jeho rychlost nebo otáčky motoru. Paleta ukazuje bloky Vozidlo, když má panel pedály, řadicí páku nebo ruční brzdu, a to jeden blok pro každý výstup, rovnou propojený s prvním prvkem každého druhu.
 
 - **Pedály**: pedály z panelu, které vozidlo ovládají (povinné).
 - **Řadicí páka**: **žádné** nebo řadicí páka na panelu. Bez ní vozidlo couvá, když ve stoji držíte brzdový pedál.
 - **Ruční brzda**: **žádné** nebo ruční brzda na panelu.
+- **Rozdělovací převodovka**: **žádné** nebo rozdělovací převodovka na panelu. Ve 2H a 4H vozidlo jezdí, jako by tam nebyla, v N nejede (jede setrvačností), ve 4L je jeho rychlost omezena na 40 %.
 - **Typ vozidla**: **Osobní auto** (výchozí), **Terénní vozidlo**, **Sportovní auto** nebo **Nákladní auto**. Typy se liší setrvačností a rychlostí couvání; nákladní auto má navíc vzduchovou brzdu.
 - **Výstup**:
   - **Rychlost** (výchozí): hodnota −1…1, při couvání záporná;

@@ -24,7 +24,7 @@ Une commande de votre tableau de bord, affichée sous son nom (**JOY1**, **SLDR1
 - **Contrôleur** : n’importe quelle commande du tableau de bord parmi celles listées ci-dessous. Les moniteurs sont des sorties, pas des entrées.
 - **Canal** : ce que donne la commande, pour les commandes à plusieurs canaux. La palette propose un bloc par canal.
 
-Le volant, les pédales, le levier de vitesses, le frein à main, les clignotants et le manipulateur de traction sont décrits dans [Commandes spéciales](/docs/Application/Dashboard/SpecialControls).
+Le volant, les pédales, le levier de vitesses, le frein à main, les clignotants, la boîte de transfert et le manipulateur de traction sont décrits dans [Commandes spéciales](/docs/Application/Dashboard/SpecialControls).
 
 Si la commande est retirée du tableau de bord, la ligne signale « Choisissez un contrôleur du tableau de bord ». Si son canal n’existe plus, elle signale « Choisissez ce que donne … » (pour un joystick : « … ne bouge pas sur cet axe »).
 
@@ -88,6 +88,16 @@ Le commodo des clignotants (commande spéciale).
 - Clignotant gauche et Clignotant droit donnent : la valeur 1 tant que ce clignotant est actif (en clignotant avec la lampe lorsque le clignotement de la commande est activé), sinon 0.
 - Lumière donne : la valeur 1 tant que la lumière est allumée, sinon 0.
 
+### Boîte de transfert {#controller-transfercase}
+
+La [boîte de transfert](/docs/Application/Dashboard/SpecialControls#transfer-case) (commande spéciale).
+
+- **Canal** : **Transmission intégrale** (par défaut), **Gamme courte**, **Blocage du différentiel avant**, **Blocage du différentiel central** ou **Blocage du différentiel arrière**.
+- Transmission intégrale donne : activé/désactivé, activé en 4H et 4L.
+- Gamme courte donne : activé/désactivé, activé en 4L.
+- Chaque blocage de différentiel donne : activé/désactivé, activé tant que ce blocage est enclenché.
+- La position elle-même (2H, 4H, N, 4L) est transmise au simulateur par le réglage **Boîte de transfert** de l’entrée [Véhicule](#src-vehicle).
+
 ### Croix directionnelle {#controller-dpad}
 
 - **Canal** : **Haut / bas** ou **Gauche / droite**.
@@ -110,11 +120,12 @@ Le commodo des clignotants (commande spéciale).
 
 ## Véhicule {#src-vehicle}
 
-Une voiture simulée, pilotée par les pédales, le levier de vitesses et le frein à main du tableau de bord : elle accélère, freine, roule sur son élan et recule comme un vrai véhicule, et la ligne reçoit sa vitesse ou son régime moteur. La palette affiche les blocs Véhicule lorsque le tableau de bord comporte des pédales, un levier de vitesses ou un frein à main, avec un bloc par sortie, déjà relié à la première commande de chaque type.
+Une voiture simulée, pilotée par les pédales, le levier de vitesses, le frein à main et la boîte de transfert du tableau de bord : elle accélère, freine, roule sur son élan et recule comme un vrai véhicule, et la ligne reçoit sa vitesse ou son régime moteur. La palette affiche les blocs Véhicule lorsque le tableau de bord comporte des pédales, un levier de vitesses ou un frein à main, avec un bloc par sortie, déjà relié à la première commande de chaque type.
 
 - **Pédales** : les pédales du tableau de bord qui pilotent le véhicule (obligatoire).
 - **Levier de vitesses** : **aucun** ou un levier de vitesses du tableau de bord. Sans levier, maintenir la pédale de frein à l’arrêt fait reculer le véhicule.
 - **Frein à main** : **aucun** ou un frein à main du tableau de bord.
+- **Boîte de transfert** : **aucun** ou une boîte de transfert du tableau de bord. En 2H et 4H, le véhicule roule comme sans elle ; en N, il n’avance pas (il roule sur son élan) ; en 4L, sa vitesse est limitée à 40 %.
 - **Type de véhicule** : **Voiture** (par défaut), **Tout-terrain**, **Voiture de sport** ou **Camion**. Les types diffèrent par leur inertie et leur vitesse en marche arrière ; le camion a en plus un frein pneumatique.
 - **Sortie** :
   - **Vitesse** (par défaut) : une valeur de −1…1, négative en marche arrière ;

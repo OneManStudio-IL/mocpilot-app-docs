@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Controlli speciali {#special-controls}
 
-I controlli speciali hanno l'aspetto e il funzionamento di quelli veri: un volante, i pedali, una leva del cambio, un freno a mano, una leva delle frecce e un manipolatore da locomotiva. Ognuno è un prodotto separato: acquista quelli che ti servono oppure ottienili tutti con [MocPilot Pro](/docs/Application/Account/Pro).
+I controlli speciali hanno l'aspetto e il funzionamento di quelli veri: un volante, i pedali, una leva del cambio, un freno a mano, una leva delle frecce, un riduttore e un manipolatore da locomotiva. Ognuno è un prodotto separato: acquista quelli che ti servono oppure ottienili tutti con [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Una dashboard con volante, pedali, leva del cambio, freno a mano, frecce e manipolatore del treno" width={900} />
 
@@ -20,6 +20,7 @@ I controlli speciali hanno l'aspetto e il funzionamento di quelli veri: un volan
 | [Cambio automatico](#gear-shifter) | Leva del cambio | GEARA | selettore: P, R, N, D |
 | [Freno a mano](#handbrake) | Freno a mano | HBRK | forza, tirato |
 | [Frecce](#turn-signals) | Frecce | STALK | freccia sinistra, freccia destra, luce |
+| [Riduttore](#transfer-case) | Riduttore | XFER | modalità di trazione: 2H, 4H, N, 4L; bloccaggi dei differenziali |
 | [Manipolatore del treno](#train-controller) | Manipolatore del treno | TRTHR | tacca di trazione, direzione, trazione |
 
 La **Manopola** non è un prodotto separato: è inclusa in ogni tema a pagamento. Vedi [Tipi di controlli](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Alcuni aspetti, quando li scegli, impostano anche un colore di accento adatto.
 ## Impostazioni di tutti i controlli speciali {#settings-of-all-special-controls}
 
 - **Aspetto** (scheda Stile): vedi sopra.
-- **Colore di accento** (scheda Stile): leva del cambio, freno a mano, frecce e manipolatore del treno.
+- **Colore di accento** (scheda Stile): leva del cambio, freno a mano, frecce, riduttore e manipolatore del treno.
 - **Bloccare il controller** e **Interattività** (scheda Impostazioni), come per ogni controllo. Vedi [Proprietà dei controlli](/docs/Application/Dashboard/ControlProperties).
 
 ## Volante {#steering-wheel}
@@ -138,6 +139,45 @@ Una leva delle frecce con un interruttore delle luci.
 
 **Collegamenti rapidi**: l'ingresso [Frecce](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) con i canali **Frecce (sinistra − / destra +)** (due luci di polarità opposta su una porta), **Freccia sinistra**, **Freccia destra** e **Luce**.
 
+## Riduttore {#transfer-case}
+
+Il riduttore di un fuoristrada sceglie quali ruote vengono mosse dal motore. Il controllo ha un selettore a quattro posizioni e interruttori per i bloccaggi dei differenziali:
+
+| Posizione | Significato |
+|---|---|
+| **2H** | trazione a due ruote: sono motrici solo le ruote posteriori, per le strade normali |
+| **4H** | trazione integrale: tutte le ruote sono motrici, per fango, sabbia e neve |
+| **N** | folle: il motore è scollegato dalle ruote |
+| **4L** | trazione integrale con le **ridotte**: lenta e potente, per salite ripide e percorsi su roccia |
+
+I **bloccaggi dei differenziali** fanno girare insieme le ruote di un asse (**anteriore**, **posteriore**) o i due assi (**centrale**), così una ruota che ha perso aderenza non gira semplicemente a vuoto.
+
+<Screenshot name="transfer-case-dashboard" alt="Il controllo del riduttore su una dashboard: il selettore, gli interruttori dei bloccaggi e il display" width={700} />
+
+### Come si usa {#transfer-case-use}
+
+- **Selettore**: posizioni dall'alto in basso: 2H, 4H, N, 4L. A seconda dell'aspetto è un **cursore** (un pomello zigrinato in una guida: fallo scorrere; quando lo lasci, scatta nella posizione più vicina) o una **manopola** (ruotala; scatta nelle posizioni). La guida è dritta, quindi da 4H arrivi a 4L solo passando per N, come su un vero riduttore a leva.
+- **Bloccaggi**: una fila di interruttori per i bloccaggi anteriore, centrale e posteriore: levette con spia o pulsanti a ritenuta con un anello che si illumina nel colore di accento, a seconda dell'aspetto. Tocca un interruttore per inserire il bloccaggio, toccalo di nuovo per disinserirlo.
+- **Display**: le scritte 2H, 4H, N e 4L accanto al selettore non cambiano; il display mostra la posizione selezionata e i bloccaggi inseriti (**F**, **C**, **R**) nel colore di accento.
+
+### Impostazioni {#transfer-case-settings}
+
+Nella scheda **Impostazioni**:
+
+- **Folle (N)** (attiva per impostazione predefinita): disattivala per un selettore con solo 2H, 4H e 4L.
+- **Bloccaggio del differenziale anteriore** (attiva), **Bloccaggio del differenziale centrale** (disattivata), **Bloccaggio del differenziale posteriore** (attiva): quali interruttori di bloccaggio mostra il controllo. Se sono meno di tre, si spostano al centro della fila.
+- **Bloccaggi anteriore e centrale solo in 4WD** (attiva): i bloccaggi anteriore e centrale funzionano solo in 4H e 4L, come su un'auto vera. In 2H un tocco su di essi viene rifiutato (l'interruttore lampeggia in rosso) e il passaggio in 2H li disinserisce. N li lascia come sono. Il bloccaggio posteriore funziona in qualsiasi posizione.
+
+### Valori {#transfer-case-values}
+
+- La **posizione**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Trazione integrale**: acceso in 4H e 4L. **Ridotte**: acceso in 4L.
+- Ogni bloccaggio: acceso o spento.
+
+**Aspetti**: c'è un aspetto per ogni tema, con lo stesso nome: Classico, 4x4 classico, Fuoristrada e uno per ogni tema a pagamento. Alcuni aspetti hanno un cursore, altri una manopola. **Ologramma** disegna l'intero controllo come un contorno di un solo colore, il colore di accento.
+
+**Collegamenti rapidi**: l'ingresso [Riduttore](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) con i canali **Trazione integrale**, **Ridotte**, **Bloccaggio del differenziale anteriore**, **Bloccaggio del differenziale centrale** e **Bloccaggio del differenziale posteriore** (ciascuno acceso/spento, come un interruttore). L'ingresso [Veicolo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) riceve l'intero riduttore nella sua impostazione **Riduttore**.
+
 ## Manipolatore del treno {#train-controller}
 
 Un manipolatore da locomotiva con una leva di trazione e un invertitore.
@@ -162,6 +202,7 @@ Ogni controllo speciale aggiunge i propri blocchi alla categoria **Controller su
 | Cambi | *quando cambio … cambia marcia / sale di marcia / scala marcia / mette in folle / in retromarcia / in parcheggio* | *marcia …*, *cambio … in folle / in retromarcia / in una marcia avanti / in parcheggio?*, *marce di …* |
 | Freno a mano | *quando freno a mano … viene tirato / bloccato / sbloccato / rilasciato* | *forza del freno a mano …*, *freno a mano … bloccato / sbloccato / tirato?* |
 | Frecce | *quando frecce … freccia sinistra / freccia destra / luce si accende / si spegne* | *frecce … freccia sinistra / freccia destra / luce è acceso?* |
+| Riduttore | *quando riduttore … 2H / 4H / N / 4L / trazione integrale / ridotte / bloccaggio anteriore / bloccaggio centrale / bloccaggio posteriore si inserisce / si disinserisce* | *riduttore … [le stesse] è inserito?*, *posizione del riduttore …* |
 | Manipolatore del treno | *quando manipolatore … tacca cambiata / alzata / abbassata, trazione chiusa, invertitore spostato, leva rilasciata* | *manipolatore … trazione / tacca di trazione / invertitore*, *manipolatore … in avanti / in retromarcia / in folle / alla tacca 0?* |
 
 Il volante e i pedali hanno anche il blocco *suono … di …*: sceglie uno dei loro suoni per i blocchi **Suoni**. Dettagli: [Controller su schermo](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Il volante e i pedali hanno anche il blocco *suono … di …*: sceglie uno dei 
 
 I controlli speciali forniscono solo valori grezzi. Il **simulatore di veicolo** trasforma pedali, leva del cambio e freno a mano in un modello che si guida come un'auto: accelera con inerzia, procede per inerzia, frena, va in retromarcia, cambia marcia in D e resta fermo con il freno a mano.
 
-- **Collegamenti rapidi**: usa l'ingresso [Veicolo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Scegli i **Pedali**, la **Leva del cambio** e il **Freno a mano** dalla tua dashboard, il **Tipo di veicolo** (Auto, Fuoristrada, Auto sportiva, Camion) e l'**Uscita**: **Velocità**, **Regime motore (giri/min)**, **In frenata** o **Con il freno a mano**.
-- **Blocchi logici**: quando la dashboard ha pedali, una leva del cambio o un freno a mano, compare la categoria **Simulatore**. Crea lì un veicolo (**Crea veicolo**) e metti il blocco *guida* sotto un evento. Inserisci i valori nei suoi spazi: *acceleratore*, *freno*, *marcia*, *di* (numero di marce; qui si inserisce il blocco *marce di …*), *freno a mano* e *tirato*. Altri blocchi del Simulatore impostano il tipo di veicolo, l'inerzia del motore e la velocità in retromarcia, leggono la velocità, i giri motore e la marcia, e reagiscono quando il veicolo parte, si ferma, frena o cambia marcia.
+- **Collegamenti rapidi**: usa l'ingresso [Veicolo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Scegli i **Pedali**, la **Leva del cambio**, il **Freno a mano** e il **Riduttore** dalla tua dashboard, il **Tipo di veicolo** (Auto, Fuoristrada, Auto sportiva, Camion) e l'**Uscita**: **Velocità**, **Regime motore (giri/min)**, **In frenata** o **Con il freno a mano**.
+- **Blocchi logici**: quando la dashboard ha pedali, una leva del cambio o un freno a mano, compare la categoria **Simulatore**. Crea lì un veicolo (**Crea veicolo**) e metti il blocco *guida* sotto un evento. Inserisci i valori nei suoi spazi: *acceleratore*, *freno*, *marcia*, *di* (numero di marce; qui si inserisce il blocco *marce di …*), *freno a mano*, *tirato* e *riduttore* (qui si inserisce il blocco *posizione del riduttore …*; lascialo vuoto se il modello non ha un riduttore). Altri blocchi del Simulatore impostano il tipo di veicolo, l'inerzia del motore e la velocità in retromarcia, leggono la velocità, i giri motore e la marcia, e reagiscono quando il veicolo parte, si ferma, frena o cambia marcia.
 
 Come guida il simulatore:
 
@@ -180,6 +221,7 @@ Come guida il simulatore:
 - **Cambio manuale**: R va in retromarcia, N non fa avanzare. Facoltativamente, ogni marcia limita la velocità massima.
 - **Cambio automatico**: R va in retromarcia, N non fa avanzare, P tiene fermo il modello come un freno a mano tirato. In D il simulatore sale e scala di marcia da solo e mostra la marcia sul selettore.
 - **Freno a mano**: la sua forza si aggiunge alla frenata; un freno a mano tirato può tenere fermo il modello.
+- **Riduttore**: in 2H e 4H il modello si guida come senza riduttore. In **N** non avanza: il modello procede per inerzia e il freno lo rallenta soltanto, senza andare in retromarcia. **4L** limita la velocità al 40 % in avanti e in retromarcia, con un regime motore più alto in proporzione; un modello più veloce rallenta fino al limite dopo il passaggio in 4L. I bloccaggi dei differenziali non cambiano il modo in cui guida il simulatore: sono solo uscite del controllo.
 - **Tipo di veicolo**: un camion è più pesante (più inerzia) e ha il freno ad aria; un'auto sportiva reagisce rapidamente e va più veloce in retromarcia.
 
 Gli ultimi pedali, leva del cambio o freno a mano non si possono eliminare finché il programma usa blocchi del Simulatore.

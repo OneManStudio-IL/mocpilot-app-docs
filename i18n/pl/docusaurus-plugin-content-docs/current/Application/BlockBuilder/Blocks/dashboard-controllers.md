@@ -19,7 +19,7 @@ Na tej stronie:
 - [Suwaki i pokrętła](#sliders-and-knobs): suwak, pokrętło
 - [Monitory](#monitor-blocks)
 - [Kierownica i pedały](#steering-wheel-and-pedals)
-- [Inne kontrolery specjalne](#other-special-controls): skrzynia biegów, hamulec ręczny, kierunkowskazy, nastawnik jazdy
+- [Inne kontrolery specjalne](#other-special-controls): skrzynia biegów, hamulec ręczny, kierunkowskazy, reduktor, nastawnik jazdy
 
 ## Bloki dla wszystkich kontrolerów {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Bloki [kierunkowskazów](/docs/Application/Dashboard/SpecialControls#turn-signal
 *kierunkowskazy [kontroler] [lewy kierunkowskaz / prawy kierunkowskaz / światła] jest włączony ?*
 
 - Typ: blok wartości, `true` / `false`
+
+### Bloki reduktora {#transfer-case-blocks}
+
+Bloki [reduktora](/docs/Application/Dashboard/SpecialControls#transfer-case). Druga lista w blokach zdarzenia i stanu ma te same opcje:
+
+- **2H**, **4H**, **N**, **4L**: wybierak jest w tym położeniu;
+- **napęd na cztery koła**: wybierak jest w 4H lub 4L;
+- **reduktor**: wybierak jest w 4L (przełożenie terenowe);
+- **blokada przednia**, **blokada centralna**, **blokada tylna**: blokada dyferencjału jest włączona.
+
+#### `Zdarzenie reduktora` (Początkujący) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*gdy reduktor [kontroler] [2H / 4H / N / 4L / napęd na cztery koła / reduktor / blokada przednia / blokada centralna / blokada tylna] [włącza się / wyłącza się]*: **włącza się** uruchamia skrypt, gdy wybrana opcja staje się prawdziwa (wybierak dochodzi do położenia albo blokada zostaje włączona), **wyłącza się** — gdy przestaje być prawdziwa.
+
+- Typ: blok zdarzenia
+
+#### `Stan reduktora (logiczny)` (Początkujący) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*reduktor [kontroler] [2H / 4H / N / 4L / napęd na cztery koła / reduktor / blokada przednia / blokada centralna / blokada tylna] jest włączony ?*
+
+- Typ: blok wartości, `true` / `false`
+
+#### `Położenie reduktora (liczba)` (Początkujący) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*położenie reduktora [kontroler]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Wstaw go w gniazdo *reduktor* bloku [jedź](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), aby symulator uwzględniał reduktor.
+
+- Typ: blok wartości
 
 ### Bloki nastawnika jazdy {#train-controller-blocks}
 

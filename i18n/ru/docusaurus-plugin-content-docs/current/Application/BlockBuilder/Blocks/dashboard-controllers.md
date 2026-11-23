@@ -19,7 +19,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [Слайдеры и ручки](#sliders-and-knobs): слайдер, поворотная ручка
 - [Мониторы](#monitor-blocks)
 - [Руль и педали](#steering-wheel-and-pedals)
-- [Другие специальные элементы](#other-special-controls): коробка передач, ручной тормоз, поворотники, контроллер машиниста
+- [Другие специальные элементы](#other-special-controls): коробка передач, ручной тормоз, поворотники, раздатка, контроллер машиниста
 
 ## Блоки для всех элементов {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 *поворотники [элемент] [левый поворот / правый поворот / свет] включён ?*
 
 - Тип: блок значения, `истина` / `ложь`
+
+### Блоки раздатки {#transfer-case-blocks}
+
+Блоки [раздатки](/docs/Application/Dashboard/SpecialControls#transfer-case). Во втором списке у блоков события и состояния одни и те же варианты:
+
+- **2H**, **4H**, **N**, **4L**: селектор в этом положении;
+- **полный привод**: селектор в 4H или 4L;
+- **понижающая**: селектор в 4L;
+- **блокировка переда**, **блокировка центра**, **блокировка зада**: блокировка дифференциала включена.
+
+#### `Событие раздатки` (Новичок) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*когда раздатка [элемент] [2H / 4H / N / 4L / полный привод / понижающая / блокировка переда / блокировка центра / блокировка зада] [включается / выключается]*: **включается** срабатывает, когда выбранное условие становится верным (селектор встаёт в положение или блокировка включается), **выключается** — когда оно перестаёт быть верным.
+
+- Тип: блок события
+
+#### `Состояние раздатки (логическое)` (Новичок) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*раздатка [элемент] [2H / 4H / N / 4L / полный привод / понижающая / блокировка переда / блокировка центра / блокировка зада] включён ?*
+
+- Тип: блок значения, `true` / `false`
+
+#### `Положение раздатки (число)` (Новичок) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*положение раздатки [элемент]*: 0 — 2H, 1 — 4H, 2 — N, 3 — 4L. Подставьте его в гнездо *раздатка* блока [ехать](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), чтобы симулятор учитывал раздатку.
+
+- Тип: блок значения
 
 ### Блоки контроллера машиниста {#train-controller-blocks}
 

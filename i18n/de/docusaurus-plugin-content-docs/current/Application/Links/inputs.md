@@ -34,6 +34,7 @@ Ein Block [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller
 | [Schalthebel](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Gang** oder **Richtung (R − / vorwärts +)** |
 | [Handbremse](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handbremse angezogen** (an/aus) oder **Handbremskraft** |
 | [Blinker](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Blinker (links − / rechts +)**, **Linker Blinker**, **Rechter Blinker** oder **Licht** |
+| [Verteilergetriebe](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Allradantrieb**, **Geländeuntersetzung**, **Vordere Differenzialsperre**, **Mittlere Differenzialsperre** oder **Hintere Differenzialsperre** (an/aus) |
 | [Steuerkreuz](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Hoch / runter** oder **Links / rechts**: −1, 0 oder +1 |
 | [Taste](/docs/Application/Links/Blocks/InputBlocks#controller-button) | an, solange sie gedrückt ist |
 | [Schalter](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | an / aus |

@@ -19,7 +19,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [Повзунки й регулятори](#sliders-and-knobs): повзунок, поворотний регулятор
 - [Монітори](#monitor-blocks)
 - [Кермо й педалі](#steering-wheel-and-pedals)
-- [Інші спеціальні контролери](#other-special-controls): коробка передач, ручник, поворотники, контролер машиніста
+- [Інші спеціальні контролери](#other-special-controls): коробка передач, ручник, поворотники, роздавальна коробка, контролер машиніста
 
 ## Блоки для всіх елементів {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 *поворотники [елемент] [лівий поворот / правий поворот / світло] увімкнено ?*
 
 - Тип: блок-значення, `true` / `false`
+
+### Блоки роздавальної коробки {#transfer-case-blocks}
+
+Блоки [роздавальної коробки](/docs/Application/Dashboard/SpecialControls#transfer-case). Другий список у блоках події та стану має однакові варіанти:
+
+- **2H**, **4H**, **N**, **4L**: селектор у цьому положенні;
+- **повний привід**: селектор у 4H або 4L;
+- **знижувальна**: селектор у 4L;
+- **блокування переду**, **блокування центру**, **блокування заду**: блокування диференціала ввімкнено.
+
+#### `Подія роздавальної коробки` (Початківець) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*коли роздавальна коробка [елемент] [2H / 4H / N / 4L / повний привід / знижувальна / блокування переду / блокування центру / блокування заду] [вмикається / вимикається]*: **вмикається** спрацьовує, коли вибрана умова стає істинною (селектор доходить до положення або блокування вмикається), **вимикається** — коли вона перестає бути істинною.
+
+- Тип: блок події
+
+#### `Стан роздавальної коробки (boolean)` (Початківець) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*роздавальна коробка [елемент] [2H / 4H / N / 4L / повний привід / знижувальна / блокування переду / блокування центру / блокування заду] увімкнено ?*
+
+- Тип: блок-значення, `true` / `false`
+
+#### `Положення роздавальної коробки (float)` (Початківець) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*положення роздавальної коробки [елемент]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Вставте його в гніздо *роздавальна коробка* блока [їхати](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), щоб симулятор ураховував роздавальну коробку.
+
+- Тип: блок-значення
 
 ### Блоки контролера машиніста {#train-controller-blocks}
 

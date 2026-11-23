@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Comenzi speciale {#special-controls}
 
-Comenzile speciale arată și funcționează ca cele reale: un volan, pedale, un schimbător de viteze, o frână de mână, o manetă de semnalizare și un controler de locomotivă. Fiecare este un produs separat: cumpără-le pe cele de care ai nevoie sau obține-le pe toate cu [MocPilot Pro](/docs/Application/Account/Pro).
+Comenzile speciale arată și funcționează ca cele reale: un volan, pedale, un schimbător de viteze, o frână de mână, o manetă de semnalizare, o cutie de transfer și un controler de locomotivă. Fiecare este un produs separat: cumpără-le pe cele de care ai nevoie sau obține-le pe toate cu [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Un tablou de bord cu volan, pedale, schimbător de viteze, frână de mână, semnalizare și controler de tren" width={900} />
 
@@ -20,6 +20,7 @@ Comenzile speciale arată și funcționează ca cele reale: un volan, pedale, un
 | [Cutie de viteze automată](#gear-shifter) | Schimbător de viteze | GEARA | selectorul: P, R, N, D |
 | [Frână de mână](#handbrake) | Frână de mână | HBRK | forța, blocată |
 | [Semnalizare](#turn-signals) | Semnalizare | STALK | semnalizarea stânga, semnalizarea dreapta, luminile |
+| [Cutie de transfer](#transfer-case) | Cutie de transfer | XFER | modul de tracțiune: 2H, 4H, N, 4L; blocările diferențialelor |
 | [Controler de tren](#train-controller) | Controler de tren | TRTHR | treapta de putere, sensul, tracțiunea |
 
 **Butonul rotativ** nu este un produs separat: vine cu fiecare temă plătită. Vezi [Tipuri de comenzi](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Unele aspecte setează și culoarea de accent potrivită atunci când le alegi.
 ## Setările tuturor comenzilor speciale {#settings-of-all-special-controls}
 
 - **Aspect** (fila Stil): vezi mai sus.
-- **Culoare de accent** (fila Stil): schimbătorul de viteze, frâna de mână, semnalizarea și controlerul de tren.
+- **Culoare de accent** (fila Stil): schimbătorul de viteze, frâna de mână, semnalizarea, cutia de transfer și controlerul de tren.
 - **Blocați controlerul** și **Interactivitate** (fila Setări), ca la orice comandă. Vezi [Proprietățile comenzilor](/docs/Application/Dashboard/ControlProperties).
 
 ## Volan {#steering-wheel}
@@ -138,6 +139,45 @@ O manetă de semnalizare cu întrerupător de lumini.
 
 **Legături rapide**: intrarea [Semnalizare](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) cu canalele **Semnalizare (stânga − / dreapta +)** (două lumini cu polaritate opusă pe un singur port), **Semnalizare stânga**, **Semnalizare dreapta** și **Lumină**.
 
+## Cutie de transfer {#transfer-case}
+
+Cutia de transfer a unui vehicul off-road alege ce roți antrenează motorul. Comanda are un selector cu patru poziții și comutatoare pentru blocările diferențialelor:
+
+| Poziție | Ce înseamnă |
+|---|---|
+| **2H** | tracțiune pe două roți: sunt antrenate doar roțile din spate, pentru drumuri obișnuite |
+| **4H** | tracțiune integrală: sunt antrenate toate roțile, pentru noroi, nisip și zăpadă |
+| **N** | neutru: motorul este decuplat de roți |
+| **4L** | tracțiune integrală cu **treaptă redusă**: lent și puternic, pentru urcări abrupte și mers pe stânci |
+
+**Blocările diferențialelor** fac ca roțile unei punți (**față**, **spate**) sau cele două punți (**central**) să se rotească împreună, astfel încât o roată care și-a pierdut aderența să nu se învârtă pur și simplu în gol.
+
+<Screenshot name="transfer-case-dashboard" alt="Comanda cutiei de transfer pe un tablou de bord: selectorul, comutatoarele blocărilor și afișajul" width={700} />
+
+### Cum o folosești {#transfer-case-use}
+
+- **Selector**: pozițiile de sus în jos: 2H, 4H, N, 4L. În funcție de aspect, este un **cursor** (un buton striat într-o fantă: glisează-l de-a lungul ei; când îi dai drumul, se fixează în cea mai apropiată poziție) sau un **selector rotativ** (rotește-l; se fixează cu un clic în poziții). Fanta este dreaptă, așa că din 4H ajungi în 4L doar prin N, ca la o cutie de transfer reală cu manetă.
+- **Blocări**: un rând de comutatoare pentru blocările față, central și spate: comutatoare cu lampă sau butoane cu reținere al căror inel se aprinde în culoarea de accent, în funcție de aspect. Atinge un comutator ca să cuplezi blocarea și atinge-l din nou ca s-o eliberezi.
+- **Afișaj**: marcajele 2H, 4H, N și 4L de lângă selector nu se schimbă; afișajul arată poziția selectată și blocările cuplate (**F**, **C**, **R**) în culoarea de accent.
+
+### Setări {#transfer-case-settings}
+
+În fila **Setări**:
+
+- **Neutru (N)** (activat implicit): dezactivează-l pentru un selector doar cu 2H, 4H și 4L.
+- **Blocarea diferențialului față** (activat), **Blocarea diferențialului central** (dezactivat), **Blocarea diferențialului spate** (activat): ce comutatoare de blocare arată comanda. Dacă sunt mai puțin de trei, se mută la mijlocul rândului.
+- **Blocările față și central doar în 4WD** (activat): blocările față și central funcționează doar în 4H și 4L, ca la o mașină reală. În 2H o atingere pe ele este refuzată (comutatorul clipește roșu), iar trecerea în 2H le eliberează. În N rămân cum sunt. Blocarea spate funcționează în orice poziție.
+
+### Valori {#transfer-case-values}
+
+- **Poziția**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Tracțiune integrală**: pornită în 4H și 4L. **Treaptă redusă**: pornită în 4L.
+- Fiecare blocare: pornită sau oprită.
+
+**Aspecte**: există un aspect pentru fiecare temă, numit după ea: Clasic, 4x4 clasic, Off-road și câte unul pentru fiecare temă plătită. Unele aspecte au un cursor, altele un selector rotativ. **Hologramă** desenează întreaga comandă ca un contur de o singură culoare, în culoarea de accent.
+
+**Legături rapide**: intrarea [Cutie de transfer](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) cu canalele **Tracțiune integrală**, **Treaptă redusă**, **Blocarea diferențialului față**, **Blocarea diferențialului central** și **Blocarea diferențialului spate** (fiecare pornit/oprit, ca un comutator). Intrarea [Vehicul](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) preia întreaga cutie de transfer în setarea **Cutie de transfer**.
+
 ## Controler de tren {#train-controller}
 
 Un controler de locomotivă cu manetă de tracțiune și inversor.
@@ -162,6 +202,7 @@ Fiecare comandă specială își adaugă propriile blocuri în categoria **Contr
 | Cutii de viteze | *când cutia de viteze … schimbă treapta / urcă o treaptă / coboară o treaptă / trece la neutru / trece în marșarier / trece în parcare* | *treapta …*, *este cutia de viteze … în neutru / în marșarier / într-o treaptă înainte / în parcare?*, *treptele de viteză din …* |
 | Frână de mână | *când frâna de mână … este trasă / blocată / deblocată / eliberată* | *forța frânei de mână …*, *este frâna de mână … blocată / deblocată / trasă?* |
 | Semnalizare | *când semnalizatoarele … semnalizarea stânga / semnalizarea dreapta / luminile se aprinde / se stinge* | *semnalizatoarele … semnalizarea stânga / semnalizarea dreapta / luminile este aprins?* |
+| Cutie de transfer | *când cutia de transfer … 2H / 4H / N / 4L / tracțiune integrală / treaptă redusă / blocare față / blocare centrală / blocare spate se cuplează / se decuplează* | *cutia de transfer … [aceleași] este cuplat?*, *poziția cutiei de transfer …* |
 | Controler de tren | *când controlerul de tren … treapta schimbată / treapta crescută / treapta scăzută, tracțiunea oprită, inversorul mutat, maneta eliberată* | *controlerul de tren … tracțiune / treapta de putere / inversor*, *este controlerul de tren … înainte / înapoi / în neutru / la treapta 0?* |
 
 Volanul și pedalele au și blocul *sunet … de la …*: el alege unul dintre sunetele lor pentru blocurile **Sunete**. Detalii: [Controlere pe ecran](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Volanul și pedalele au și blocul *sunet … de la …*: el alege unul dintre s
 
 Comenzile speciale dau doar valori brute. **Simulatorul de vehicul** transformă pedalele, schimbătorul de viteze și frâna de mână într-un model care se conduce ca o mașină: accelerează cu inerție, rulează liber, frânează, merge înapoi, schimbă treptele în D și stă pe loc pe frâna de mână.
 
-- **Legături rapide**: folosește intrarea [Vehicul](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Alege de pe tabloul de bord **Pedalele**, **Schimbătorul de viteze** și **Frâna de mână**, apoi **Tip de vehicul** (Autoturism, Vehicul off-road, Mașină sport, Camion) și **Ieșire**: **Viteză**, **Turația motorului (rpm)**, **Frânare** sau **Pe frâna de mână**.
-- **Blocuri logice**: când tabloul de bord are pedale, un schimbător de viteze sau o frână de mână, apare categoria **Simulator**. Creează acolo un vehicul (**Creează vehicul**) și pune blocul *conduce* sub un eveniment. Conectează valori în sloturile lui: *accelerație*, *frână*, *treapta*, *din* (numărul de trepte; aici se potrivește blocul *treptele de viteză din …*), *frână de mână* și *blocată*. Alte blocuri Simulator setează tipul vehiculului, inerția motorului și viteza de marșarier, citesc viteza, turația motorului și treapta și reacționează când vehiculul pornește, se oprește, frânează sau schimbă treapta.
+- **Legături rapide**: folosește intrarea [Vehicul](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Alege de pe tabloul de bord **Pedalele**, **Schimbătorul de viteze**, **Frâna de mână** și **Cutia de transfer**, apoi **Tip de vehicul** (Autoturism, Vehicul off-road, Mașină sport, Camion) și **Ieșire**: **Viteză**, **Turația motorului (rpm)**, **Frânare** sau **Pe frâna de mână**.
+- **Blocuri logice**: când tabloul de bord are pedale, un schimbător de viteze sau o frână de mână, apare categoria **Simulator**. Creează acolo un vehicul (**Creează vehicul**) și pune blocul *conduce* sub un eveniment. Conectează valori în sloturile lui: *accelerație*, *frână*, *treapta*, *din* (numărul de trepte; aici se potrivește blocul *treptele de viteză din …*), *frână de mână*, *blocată* și *cutia de transfer* (aici se potrivește blocul *poziția cutiei de transfer …*; lasă-l gol dacă modelul nu are cutie de transfer). Alte blocuri Simulator setează tipul vehiculului, inerția motorului și viteza de marșarier, citesc viteza, turația motorului și treapta și reacționează când vehiculul pornește, se oprește, frânează sau schimbă treapta.
 
 Cum conduce simulatorul:
 
@@ -180,6 +221,7 @@ Cum conduce simulatorul:
 - **Cutie de viteze manuală**: R merge înapoi, N nu conduce. Opțional, fiecare treaptă limitează viteza maximă.
 - **Cutie de viteze automată**: R merge înapoi, N nu conduce, P ține modelul pe loc ca o frână de mână blocată. În D, simulatorul urcă și coboară singur treptele și afișează treapta pe selector.
 - **Frâna de mână**: forța ei se adaugă la frânare; o frână de mână blocată poate ține modelul pe loc.
+- **Cutia de transfer**: 2H și 4H conduc ca fără ea. **N** nu conduce: modelul rulează liber, iar frâna doar îl încetinește, fără să meargă înapoi. **4L** limitează viteza la 40 % înainte și înapoi, cu turația motorului mai mare pe măsură; un model care merge mai repede încetinește până la limită după ce treci în 4L. Blocările diferențialelor nu schimbă felul în care conduce simulatorul: sunt doar ieșiri ale comenzii.
 - **Tip de vehicul**: un camion este mai greu (mai multă inerție) și are frână pneumatică; o mașină sport reacționează rapid și merge înapoi mai repede.
 
 Ultimele pedale, ultimul schimbător de viteze sau ultima frână de mână nu pot fi șterse cât timp programul folosește blocuri Simulator.

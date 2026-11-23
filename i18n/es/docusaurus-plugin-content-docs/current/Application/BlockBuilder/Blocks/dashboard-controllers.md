@@ -19,7 +19,7 @@ En esta página:
 - [Deslizadores y mandos giratorios](#sliders-and-knobs): deslizador, mando giratorio
 - [Monitores](#monitor-blocks)
 - [Volante y pedales](#steering-wheel-and-pedals)
-- [Otros controles especiales](#other-special-controls): caja de cambios, freno de mano, intermitentes, controlador de tren
+- [Otros controles especiales](#other-special-controls): caja de cambios, freno de mano, intermitentes, caja de transferencia, controlador de tren
 
 ## Bloques para todos los controles {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Bloques de los [intermitentes](/docs/Application/Dashboard/SpecialControls#turn-
 *intermitentes [control] [intermitente izquierdo / intermitente derecho / luz] está encendido ?*
 
 - Tipo: bloque de valor, `true` / `false`
+
+### Bloques de la caja de transferencia {#transfer-case-blocks}
+
+Bloques de la [caja de transferencia](/docs/Application/Dashboard/SpecialControls#transfer-case). La segunda lista de los bloques de evento y de estado ofrece las mismas opciones:
+
+- **2H**, **4H**, **N**, **4L**: el selector está en esa posición;
+- **tracción total**: el selector está en 4H o 4L;
+- **reductora**: el selector está en 4L;
+- **bloqueo delantero**, **bloqueo central**, **bloqueo trasero**: el bloqueo del diferencial está activado.
+
+#### `Evento de la caja de transferencia` (Principiante) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*cuando caja de transferencia [control] [2H / 4H / N / 4L / tracción total / reductora / bloqueo delantero / bloqueo central / bloqueo trasero] [se activa / se desactiva]*: **se activa** se ejecuta cuando la opción pasa a ser verdadera (el selector llega a la posición o se activa el bloqueo), y **se desactiva**, cuando deja de serlo.
+
+- Tipo: bloque de evento
+
+#### `Estado de la caja de transferencia (booleano)` (Principiante) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*caja de transferencia [control] [2H / 4H / N / 4L / tracción total / reductora / bloqueo delantero / bloqueo central / bloqueo trasero] está activado ?*
+
+- Tipo: bloque de valor, `true` / `false`
+
+#### `Posición de la caja de transferencia (número)` (Principiante) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*posición de la caja de transferencia [control]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Conéctalo al hueco *caja de transferencia* del bloque [conducir](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) para que el simulador use la caja de transferencia.
+
+- Tipo: bloque de valor
 
 ### Bloques del controlador de tren {#train-controller-blocks}
 

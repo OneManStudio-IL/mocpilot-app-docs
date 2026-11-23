@@ -34,6 +34,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | [换挡杆](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **挡位**或**方向（R − / 前进 +）** |
 | [手刹](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **手刹已拉起**（开/关）或**手刹力度** |
 | [转向灯](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **转向灯（左 − / 右 +）**、**左转向灯**、**右转向灯**或**灯光** |
+| [分动箱](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **四轮驱动**、**低速挡**、**前差速锁**、**中央差速锁**或**后差速锁**（开/关） |
 | [方向键](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **上 / 下**或**左 / 右**：−1、0 或 +1 |
 | [按钮](/docs/Application/Links/Blocks/InputBlocks#controller-button) | 按住时为开 |
 | [开关](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | 开 / 关 |

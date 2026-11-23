@@ -24,7 +24,7 @@ Un control de tu panel, mostrado por su nombre (**JOY1**, **SLDR1**, **BTN2**…
 - **Controlador**: cualquiera de los controles del panel que se describen abajo. Los monitores son salidas, no entradas.
 - **Canal**: lo que da el control, en los controles con varios canales. La paleta ofrece un bloque por canal.
 
-El volante, los pedales, la palanca de cambios, el freno de mano, los intermitentes y el controlador de tren se describen en [Controles especiales](/docs/Application/Dashboard/SpecialControls).
+El volante, los pedales, la palanca de cambios, el freno de mano, los intermitentes, la caja de transferencia y el controlador de tren se describen en [Controles especiales](/docs/Application/Dashboard/SpecialControls).
 
 Si el control se elimina del panel, la fila indica «Elige un controlador del panel». Si su canal ya no existe, indica «Elige qué da …» (en un joystick: «… no se mueve en este eje»).
 
@@ -88,6 +88,16 @@ La palanca de los intermitentes (control especial).
 - Intermitente izquierdo e Intermitente derecho dan: valor 1 mientras ese intermitente está encendido (parpadeando con la luz cuando el parpadeo del control está activado); si no, 0.
 - Luz da: valor 1 mientras la luz está encendida; si no, 0.
 
+### Caja de transferencia {#controller-transfercase}
+
+La [caja de transferencia](/docs/Application/Dashboard/SpecialControls#transfer-case) (control especial).
+
+- **Canal**: **Tracción total** (predeterminado), **Reductora**, **Bloqueo del diferencial delantero**, **Bloqueo del diferencial central** o **Bloqueo del diferencial trasero**.
+- Tracción total da: encendido/apagado, encendido en 4H y 4L.
+- Reductora da: encendido/apagado, encendido en 4L.
+- Cada bloqueo de diferencial da: encendido/apagado, encendido mientras ese bloqueo está activado.
+- La posición en sí (2H, 4H, N, 4L) llega al simulador a través del ajuste **Caja de transferencia** de la entrada [Vehículo](#src-vehicle).
+
 ### Pad direccional {#controller-dpad}
 
 - **Canal**: **Arriba / abajo** o **Izquierda / derecha**.
@@ -110,11 +120,12 @@ La palanca de los intermitentes (control especial).
 
 ## Vehículo {#src-vehicle}
 
-Un coche simulado que se maneja con los pedales, la palanca de cambios y el freno de mano del panel: acelera, frena, avanza por inercia y da marcha atrás como un vehículo real, y la fila recibe su velocidad o sus revoluciones. La paleta muestra bloques Vehículo cuando el panel tiene pedales, palanca de cambios o freno de mano: un bloque por salida, ya vinculado al primer control de cada tipo.
+Un coche simulado que se maneja con los pedales, la palanca de cambios, el freno de mano y la caja de transferencia del panel: acelera, frena, avanza por inercia y da marcha atrás como un vehículo real, y la fila recibe su velocidad o sus revoluciones. La paleta muestra bloques Vehículo cuando el panel tiene pedales, palanca de cambios o freno de mano: un bloque por salida, ya vinculado al primer control de cada tipo.
 
 - **Pedales**: los pedales del panel que manejan el vehículo (obligatorio).
 - **Palanca de cambios**: **ninguno** o una palanca de cambios del panel. Sin ella, mantener pisado el pedal de freno estando parado hace que el vehículo vaya marcha atrás.
 - **Freno de mano**: **ninguno** o un freno de mano del panel.
+- **Caja de transferencia**: **ninguno** o una caja de transferencia del panel. En 2H y 4H el vehículo se conduce como sin ella; en N no avanza (rueda por inercia); en 4L su velocidad se limita al 40 %.
 - **Tipo de vehículo**: **Coche** (predeterminado), **Todoterreno**, **Deportivo** o **Camión**. Los tipos se diferencian en la inercia y la velocidad marcha atrás; el camión tiene además freno neumático.
 - **Salida**:
   - **Velocidad** (predeterminado): valor −1…1, negativo al ir marcha atrás;

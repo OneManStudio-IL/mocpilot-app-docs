@@ -30,7 +30,7 @@ Non serve un ciclo `ripetere sempre`: **guida** continua a funzionare da solo fi
 
 ## Blocchi {#blocks}
 
-### `… guida acceleratore … freno … marcia … di … freno a mano … tirato …` (Principiante) {#block_vehicle_drive}
+### `… guida acceleratore … freno … marcia … di … freno a mano … tirato … riduttore …` (Principiante) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Il cuore del simulatore. Un blocco C che guida il veicolo: ogni 0,1 s legge i su
 - `marcia`: la marcia selezionata: `-1` retromarcia, `0` folle, `1` e oltre marce avanti. Se in questo spazio c'è un controllo del cambio automatico, viene usata invece la posizione del suo selettore (P, R, N, D) e in D l'auto sceglie la marcia da sola.
 - `di`: quante marce ha il cambio (6 per impostazione predefinita).
 - `freno a mano`: quanto è tirato il freno a mano, da 0 a 100; `tirato`: se è bloccato.
+- `riduttore` (facoltativo): la posizione del [riduttore](/docs/Application/Dashboard/SpecialControls#transfer-case), di solito il blocco [posizione del riduttore](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. In 2H e 4H l'auto si guida come senza riduttore; in N non avanza (procede per inerzia e il freno la rallenta soltanto, senza andare in retromarcia); in 4L la sua velocità è limitata al 40 %. Lascialo vuoto se il modello non ha un riduttore.
 - Un ingresso conta solo se vi è inserito un blocco; un semplice numero in uno spazio vuoto viene ignorato (tranne `di`).
 - Un solo blocco **guida** alla volta può guidare un veicolo; un secondo blocco per lo stesso veicolo salta i propri blocchi interni.
 

@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Erikoisohjaimet {#special-controls}
 
-Erikoisohjaimet näyttävät ja toimivat kuin oikeat: ohjauspyörä, polkimet, vaihdevipu, käsijarru, suuntavilkkuvipu ja veturin ajokytkin. Kukin on erillinen tuote: osta tarvitsemasi tai hanki kaikki [MocPilot Prolla](/docs/Application/Account/Pro).
+Erikoisohjaimet näyttävät ja toimivat kuin oikeat: ohjauspyörä, polkimet, vaihdevipu, käsijarru, suuntavilkkuvipu, jakovaihteisto ja veturin ajokytkin. Kukin on erillinen tuote: osta tarvitsemasi tai hanki kaikki [MocPilot Prolla](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Kojelauta, jossa on ohjauspyörä, polkimet, vaihdevipu, käsijarru, suuntavilkut ja junan ajokytkin" width={900} />
 
@@ -20,6 +20,7 @@ Erikoisohjaimet näyttävät ja toimivat kuin oikeat: ohjauspyörä, polkimet, v
 | [Automaattivaihteisto](#gear-shifter) | Vaihdevipu | GEARA | valitsimen: P, R, N, D |
 | [Käsijarru](#handbrake) | Käsijarru | HBRK | voiman, lukituksen |
 | [Suuntavilkut](#turn-signals) | Suuntavilkut | STALK | vasemman vilkun, oikean vilkun, valot |
+| [Jakovaihteisto](#transfer-case) | Jakovaihteisto | XFER | ajotilan: 2H, 4H, N, 4L; tasauspyörästön lukot |
 | [Junan ajokytkin](#train-controller) | Junan ajokytkin | TRTHR | ajoaskeleen, suunnan, vedon |
 
 **Kiertonuppi** ei ole erillinen tuote: se tulee jokaisen maksullisen teeman mukana. Katso [Ohjaintyypit](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Jotkin ulkoasut myös asettavat niille sopivan korostevärin, kun valitset ne.
 ## Kaikkien erikoisohjainten asetukset {#settings-of-all-special-controls}
 
 - **Ulkoasu** (Tyyli-välilehti): katso yllä.
-- **Korosteväri** (Tyyli-välilehti): vaihdevipu, käsijarru, suuntavilkut ja junan ajokytkin.
+- **Korosteväri** (Tyyli-välilehti): vaihdevipu, käsijarru, suuntavilkut, jakovaihteisto ja junan ajokytkin.
 - **Lukitse ohjain** ja **Interaktiivisuus** (Asetukset-välilehti), kuten jokaisessa ohjaimessa. Katso [Ohjainten ominaisuudet](/docs/Application/Dashboard/ControlProperties).
 
 ## Ohjauspyörä {#steering-wheel}
@@ -138,6 +139,45 @@ Suuntavilkkuvipu ja valokytkin.
 
 **Pikalinkit**: [Suuntavilkut](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals)-syöte kanavilla **Suuntavilkut (vasen − / oikea +)** (kaksi vastakkaisnapaista valoa yhdessä portissa), **Vasen suuntavilkku**, **Oikea suuntavilkku** ja **Valo**.
 
+## Jakovaihteisto {#transfer-case}
+
+Maastoajoneuvon jakovaihteisto valitsee, mitä pyöriä moottori vetää. Ohjaimessa on neliasentoinen valitsin sekä kytkimet tasauspyörästön lukoille:
+
+| Asento | Merkitys |
+|---|---|
+| **2H** | kaksiveto: vain takapyörät vetävät, tavallisille teille |
+| **4H** | neliveto: kaikki pyörät vetävät, mutaan, hiekkaan ja lumeen |
+| **N** | vapaa: moottori on irti pyöristä |
+| **4L** | neliveto **alennusvaihteella**: hidas ja voimakas, jyrkkiin nousuihin ja kivikkoon |
+
+**Tasauspyörästön lukot** saavat akselin pyörät (**etu**, **taka**) tai kaksi akselia (**keski**) pyörimään yhdessä, jolloin pidon menettänyt pyörä ei vain sudi tyhjää.
+
+<Screenshot name="transfer-case-dashboard" alt="Jakovaihteiston ohjain kojelaudalla: valitsin, lukkojen kytkimet ja näyttö" width={700} />
+
+### Käyttö {#transfer-case-use}
+
+- **Valitsin**: asennot ylhäältä alas: 2H, 4H, N, 4L. Ulkoasusta riippuen se on **liukusäädin** (uritettu nuppi urassa: liu'uta sitä uraa pitkin; kun päästät irti, se napsahtaa lähimpään asentoon) tai **kiertovalitsin** (käännä sitä; se napsahtaa asentoihin). Ura on suora, joten 4H:sta pääset 4L:ään vain N:n kautta, kuten oikeassa vipukäyttöisessä jakovaihteistossa.
+- **Lukot**: rivi kytkimiä etu-, keski- ja takalukolle: ulkoasusta riippuen merkkivalollisia vipukytkimiä tai lukittuvia painikkeita, joiden rengas syttyy korostevärillä. Napauta kytkintä kytkeäksesi lukon ja napauta uudelleen vapauttaaksesi sen.
+- **Näyttö**: valitsimen vieressä olevat merkinnät 2H, 4H, N ja 4L eivät muutu; näyttö näyttää valitun asennon ja kytketyt lukot (**F**, **C**, **R**) korostevärillä.
+
+### Asetukset {#transfer-case-settings}
+
+**Asetukset**-välilehdellä:
+
+- **Vapaa (N)** (oletuksena päällä): poista se käytöstä, jos haluat valitsimen, jossa on vain 2H, 4H ja 4L.
+- **Etutasauspyörästön lukko** (päällä), **Keskitasauspyörästön lukko** (pois), **Takatasauspyörästön lukko** (päällä): mitkä lukkokytkimet ohjain näyttää. Jos niitä on alle kolme, ne siirtyvät rivin keskelle.
+- **Etu- ja keskilukko vain 4WD:ssä** (päällä): etu- ja keskilukko toimivat vain asennoissa 4H ja 4L, kuten oikeassa autossa. Asennossa 2H niiden napautus hylätään (kytkin välähtää punaisena), ja vaihto asentoon 2H vapauttaa ne. N jättää ne ennalleen. Takalukko toimii kaikissa asennoissa.
+
+### Arvot {#transfer-case-values}
+
+- **Asento**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Neliveto**: päällä asennoissa 4H ja 4L. **Alennusvaihde**: päällä asennossa 4L.
+- Jokainen lukko: päällä tai pois.
+
+**Ulkoasut**: jokaiselle teemalle on oma, sen mukaan nimetty ulkoasu: Klassinen, Klassinen 4x4, Maastoauto ja yksi kullekin maksulliselle teemalle. Joissakin ulkoasuissa on liukusäädin, toisissa kiertovalitsin. **Hologrammi** piirtää koko ohjaimen yksivärisenä ääriviivana korostevärillä.
+
+**Pikalinkit**: [Jakovaihteisto](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase)-syöte kanavilla **Neliveto**, **Alennusvaihde**, **Etutasauspyörästön lukko**, **Keskitasauspyörästön lukko** ja **Takatasauspyörästön lukko** (kukin päällä/pois, kuten kytkin). [Ajoneuvo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle)-syöte ottaa koko jakovaihteiston **Jakovaihteisto**-asetukseensa.
+
 ## Junan ajokytkin {#train-controller}
 
 Veturin ajokytkin, jossa on ajovipu ja suunnanvaihtaja.
@@ -162,6 +202,7 @@ Jokainen erikoisohjain lisää omat lohkonsa Logiikkalohkojen **Näytön ohjaime
 | Vaihteistot | *kun vaihteisto … vaihtaa vaihdetta / vaihtaa ylös / vaihtaa alas / vaihtaa vapaalle / peruutusvaihteelle / pysäköintiin* | *vaihde …*, *onko vaihteisto … vapaalla / peruutusvaihteella / eteenpäin vaihteella / pysäköinnillä?*, *vaihteet: …* |
 | Käsijarru | *kun käsijarru … vedetty / lukittu / vapautettu / päästetty* | *käsijarrun voima …*, *onko käsijarru … lukittu / vapautettu / vedetty?* |
 | Suuntavilkut | *kun suuntavilkut … vasen vilkku / oikea vilkku / valot syttyy / sammuu* | *suuntavilkut … vasen vilkku / oikea vilkku / valot on päällä?* |
+| Jakovaihteisto | *kun jakovaihteisto … 2H / 4H / N / 4L / neliveto / alennusvaihde / etulukko / keskilukko / takalukko kytkeytyy / kytkeytyy irti* | *jakovaihteisto … [samat valinnat] on kytketty?*, *jakovaihteiston asento …* |
 | Junan ajokytkin | *kun ajokytkin … ajoaskel muuttui / nousi / laski, ajokytkin nollassa, suunnanvaihtaja siirretty, vipu päästetty* | *ajokytkin … veto / ajoaskel / suunnanvaihtaja*, *onko ajokytkin … eteenpäin / taaksepäin / neutraali / ajoaskeleella 0?* |
 
 Ohjauspyörällä ja polkimilla on myös *ääni … ohjaimesta …* -lohko: se valitsee yhden niiden äänistä **Äänet**-lohkoille. Lisätietoja: [Näytön ohjaimet](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Ohjauspyörällä ja polkimilla on myös *ääni … ohjaimesta …* -lohko: se 
 
 Erikoisohjaimet antavat vain raakasyötteen. **Ajoneuvosimulaattori** muuttaa polkimet, vaihdevivun ja käsijarrun malliksi, joka ajaa kuin auto: se kiihtyy hitauden kanssa, rullaa vapaasti, jarruttaa, peruuttaa, vaihtaa vaihteita D-asennossa ja pysyy paikallaan käsijarrun varassa.
 
-- **Pikalinkit**: käytä [Ajoneuvo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle)-syötettä. Valitse kojelaudaltasi **Polkimet**, **Vaihdekeppi** ja **Käsijarru**, **Ajoneuvon tyyppi** (Henkilöauto, Maastoajoneuvo, Urheiluauto, Kuorma-auto) ja **Lähtö**: **Nopeus**, **Moottorin kierrokset (rpm)**, **Jarruttaa** tai **Käsijarrussa**.
-- **Logiikkalohkot**: kun kojelaudalla on polkimet, vaihdevipu tai käsijarru, näkyviin tulee **Simulaattori**-luokka. Luo siellä ajoneuvo (**Luo ajoneuvo**) ja aseta *aja*-lohko tapahtuman alle. Kytke arvot sen paikkoihin: *kaasu*, *jarru*, *vaihde*, */* (vaihteiden määrä; *vaihteet: …* -lohko sopii tähän), *käsijarru* ja *lukittu*. Muut Simulaattori-lohkot asettavat ajoneuvon tyypin, moottorin hitauden ja peruutusnopeuden, lukevat nopeuden, moottorin kierrokset ja vaihteen sekä reagoivat, kun ajoneuvo lähtee liikkeelle, pysähtyy, jarruttaa tai vaihtaa vaihdetta.
+- **Pikalinkit**: käytä [Ajoneuvo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle)-syötettä. Valitse kojelaudaltasi **Polkimet**, **Vaihdekeppi**, **Käsijarru** ja **Jakovaihteisto**, **Ajoneuvon tyyppi** (Henkilöauto, Maastoajoneuvo, Urheiluauto, Kuorma-auto) ja **Lähtö**: **Nopeus**, **Moottorin kierrokset (rpm)**, **Jarruttaa** tai **Käsijarrussa**.
+- **Logiikkalohkot**: kun kojelaudalla on polkimet, vaihdevipu tai käsijarru, näkyviin tulee **Simulaattori**-luokka. Luo siellä ajoneuvo (**Luo ajoneuvo**) ja aseta *aja*-lohko tapahtuman alle. Kytke arvot sen paikkoihin: *kaasu*, *jarru*, *vaihde*, */* (vaihteiden määrä; *vaihteet: …* -lohko sopii tähän), *käsijarru*, *lukittu* ja *jakovaihteisto* (*jakovaihteiston asento …* -lohko sopii tähän; jätä se tyhjäksi, jos mallissa ei ole jakovaihteistoa). Muut Simulaattori-lohkot asettavat ajoneuvon tyypin, moottorin hitauden ja peruutusnopeuden, lukevat nopeuden, moottorin kierrokset ja vaihteen sekä reagoivat, kun ajoneuvo lähtee liikkeelle, pysähtyy, jarruttaa tai vaihtaa vaihdetta.
 
 Miten simulaattori ajaa:
 
@@ -180,6 +221,7 @@ Miten simulaattori ajaa:
 - **Manuaalivaihteisto**: R peruuttaa, N ei aja. Valinnaisesti jokainen vaihde rajoittaa huippunopeutta.
 - **Automaattivaihteisto**: R peruuttaa, N ei aja, P pitää mallin paikallaan kuin lukittu käsijarru. D-asennossa simulaattori vaihtaa ylös ja alas itsestään ja näyttää vaihteen valitsimessa.
 - **Käsijarru**: sen voima lisätään jarrutukseen; lukittu käsijarru voi pitää mallin paikallaan.
+- **Jakovaihteisto**: 2H ja 4H ajavat kuin ilman sitä. **N** ei aja: malli rullaa vapaasti, ja jarru vain hidastaa sitä peruuttamatta. **4L** rajoittaa nopeuden 40 %:iin eteen- ja taaksepäin, ja moottorin kierrokset nousevat vastaavasti; nopeammin liikkuva malli hidastuu rajaan, kun vaihdat asentoon 4L. Tasauspyörästön lukot eivät vaikuta simulaattorin ajoon: ne ovat vain ohjaimen lähtöjä.
 - **Ajoneuvon tyyppi**: kuorma-auto on raskaampi (enemmän hitautta) ja siinä on paineilmajarru; urheiluauto reagoi nopeasti ja peruuttaa nopeammin.
 
 Viimeisiä polkimia, vaihdevipua tai käsijarrua ei voi poistaa, kun ohjelma käyttää Simulaattori-lohkoja.

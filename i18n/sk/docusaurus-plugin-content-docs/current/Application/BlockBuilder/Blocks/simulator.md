@@ -30,7 +30,7 @@ Cyklus `zopakovať vždy` nie je potrebný: blok **jazdiť** beží sám, kým a
 
 ## Bloky {#blocks}
 
-### `… jazdiť plyn … brzda … stupeň … z … ručná brzda … zaistená …` (Začiatočník) {#block_vehicle_drive}
+### `… jazdiť plyn … brzda … stupeň … z … ručná brzda … zaistená … rozdeľovacia prevodovka …` (Začiatočník) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Srdce simulátora. Blok v tvare C, ktorý riadi vozidlo: každých 0,1 s prečí
 - `stupeň`: zvolený prevodový stupeň: `-1` spiatočka, `0` neutrál, `1` a vyššie dopredu. Ak je v tomto políčku ovládač automatickej prevodovky, použije sa namiesto toho poloha jeho voliča (P, R, N, D) a v D si auto stupeň vyberá samo.
 - `z`: koľko stupňov má prevodovka (predvolene 6).
 - `ručná brzda`: ako silno je ručná brzda potiahnutá, 0 až 100; `zaistená`: či je zaistená.
+- `rozdeľovacia prevodovka` (voliteľné): poloha [rozdeľovacej prevodovky](/docs/Application/Dashboard/SpecialControls#transfer-case), zvyčajne blok [poloha rozdeľovacej prevodovky](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. V 2H a 4H auto jazdí, akoby tam nebola; v N nejazdí (ide voľnobehom a brzda ho iba spomaľuje, bez cúvania); v 4L je jeho rýchlosť obmedzená na 40 %. Ak model rozdeľovaciu prevodovku nemá, nechajte vstup prázdny.
 - Vstup sa berie do úvahy, iba keď je v ňom vložený blok; samotné číslo v prázdnom políčku sa ignoruje (okrem `z`).
 - Vozidlo môže naraz riadiť iba jeden blok **jazdiť**; druhý pre to isté vozidlo svoje vnútorné bloky preskočí.
 

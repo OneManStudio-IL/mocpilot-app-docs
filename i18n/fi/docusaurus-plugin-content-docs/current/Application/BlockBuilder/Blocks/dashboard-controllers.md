@@ -19,7 +19,7 @@ Tällä sivulla:
 - [Liukusäätimet ja nupit](#sliders-and-knobs): liukusäädin, kiertonuppi
 - [Näytöt](#monitor-blocks)
 - [Ohjauspyörä ja polkimet](#steering-wheel-and-pedals)
-- [Muut erikoisohjaimet](#other-special-controls): vaihteisto, käsijarru, suuntavilkut, ajokytkin
+- [Muut erikoisohjaimet](#other-special-controls): vaihteisto, käsijarru, suuntavilkut, jakovaihteisto, ajokytkin
 
 ## Lohkot kaikille ohjaimille {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Muiden [erikoisohjainten](/docs/Application/Dashboard/SpecialControls) lohkot.
 *suuntavilkut [ohjain] [vasen vilkku / oikea vilkku / valot] on päällä ?*
 
 - Tyyppi: arvolohko, `true` / `false`
+
+### Jakovaihteistolohkot {#transfer-case-blocks}
+
+[Jakovaihteiston](/docs/Application/Dashboard/SpecialControls#transfer-case) lohkot. Tapahtuma- ja tilalohkojen toisessa luettelossa on samat vaihtoehdot:
+
+- **2H**, **4H**, **N**, **4L**: valitsin on tässä asennossa;
+- **neliveto**: valitsin on asennossa 4H tai 4L;
+- **alennusvaihde**: valitsin on asennossa 4L;
+- **etulukko**, **keskilukko**, **takalukko**: tasauspyörästön lukko on kytketty.
+
+#### `Jakovaihteiston tapahtuma` (Aloittelija) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*kun jakovaihteisto [ohjain] [2H / 4H / N / 4L / neliveto / alennusvaihde / etulukko / keskilukko / takalukko] [kytkeytyy / kytkeytyy irti]*: **kytkeytyy** suoritetaan, kun valinnasta tulee tosi (valitsin saavuttaa asennon tai lukko kytketään päälle), **kytkeytyy irti**, kun se lakkaa olemasta tosi.
+
+- Tyyppi: tapahtumalohko
+
+#### `Jakovaihteiston tila (totuusarvo)` (Aloittelija) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*jakovaihteisto [ohjain] [2H / 4H / N / 4L / neliveto / alennusvaihde / etulukko / keskilukko / takalukko] on kytketty ?*
+
+- Tyyppi: arvolohko, `true` / `false`
+
+#### `Jakovaihteiston asento (liukuluku)` (Aloittelija) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*jakovaihteiston asento [ohjain]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Kytke se [aja](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive)-lohkon *jakovaihteisto*-paikkaan, niin simulaattori käyttää jakovaihteistoa.
+
+- Tyyppi: arvolohko
 
 ### Ajokytkinlohkot {#train-controller-blocks}
 

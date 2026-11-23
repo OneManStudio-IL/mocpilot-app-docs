@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Special controls
 
-Special controls look and work like the real thing: a steering wheel, pedals, a gear shifter, a handbrake, a turn signal stalk and a locomotive controller. Each one is a separate product: buy the ones you need or get them all with [MocPilot Pro](/docs/Application/Account/Pro).
+Special controls look and work like the real thing: a steering wheel, pedals, a gear shifter, a handbrake, a turn signal stalk, a transfer case and a locomotive controller. Each one is a separate product: buy the ones you need or get them all with [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="A dashboard with a steering wheel, pedals, a gear shifter, a handbrake, turn signals and a train controller" width={900} />
 
@@ -20,6 +20,7 @@ Special controls look and work like the real thing: a steering wheel, pedals, a 
 | [Automatic gearbox](#gear-shifter) | Gear shifter | GEARA | selector: P, R, N, D |
 | [Handbrake](#handbrake) | Handbrake | HBRK | force, locked |
 | [Turn signals](#turn-signals) | Turn signals | STALK | left signal, right signal, light |
+| [Transfer case](#transfer-case) | Transfer case | XFER | drive mode: 2H, 4H, N, 4L; differential locks |
 | [Train controller](#train-controller) | Train controller | TRTHR | power notch, direction, traction |
 
 The **Rotary knob** is not a separate product: it comes with every paid theme. See [Control types](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Some looks also set the accent colour to suit them when you choose them.
 ## Settings of all special controls
 
 - **Look** (Style tab): see above.
-- **Accent color** (Style tab): gear shifter, handbrake, turn signals and train controller.
+- **Accent color** (Style tab): gear shifter, handbrake, turn signals, transfer case and train controller.
 - **Lock the controller** and **Interactivity** (Settings tab), as on every control. See [Control properties](/docs/Application/Dashboard/ControlProperties).
 
 ## Steering wheel {#steering-wheel}
@@ -138,6 +139,45 @@ A turn signal stalk with a light switch.
 
 **Quick Links**: the [Turn signals](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) input with the channels **Turn signals (left − / right +)** (two lights of opposite polarity on one port), **Left turn signal**, **Right turn signal** and **Light**.
 
+## Transfer case {#transfer-case}
+
+The transfer case of an off-road vehicle chooses which wheels the engine drives. The control has a selector with four positions and switches for the differential locks:
+
+| Position | What it means |
+|---|---|
+| **2H** | two-wheel drive: only the rear wheels are driven, for normal roads |
+| **4H** | four-wheel drive: all wheels are driven, for mud, sand and snow |
+| **N** | neutral: the engine is disconnected from the wheels |
+| **4L** | four-wheel drive with **low range**: slow and strong, for steep climbs and rock crawling |
+
+**Differential locks** make the wheels of an axle (**front**, **rear**) or the two axles (**center**) turn together, so a wheel that has lost grip doesn't just spin.
+
+<Screenshot name="transfer-case-dashboard" alt="The transfer case control on a dashboard: the selector, the lock switches and the display" width={700} />
+
+### How to use it {#transfer-case-use}
+
+- **Selector**: positions from top to bottom: 2H, 4H, N, 4L. Depending on the look it's a **slider** (a ribbed knob in a slot: slide it along; when you let go, it snaps to the nearest position) or a **dial** (turn it; it clicks into the positions). The slot is straight, so from 4H you reach 4L only through N, as on a real lever transfer case.
+- **Locks**: a row of switches for the front, center and rear locks: toggle switches with a lamp or latching buttons whose ring lights up in the accent color, depending on the look. Tap a switch to engage the lock, tap it again to release it.
+- **Display**: the 2H, 4H, N and 4L labels by the selector don't change; the display shows the selected position and the engaged locks (**F**, **C**, **R**) in the accent color.
+
+### Settings {#transfer-case-settings}
+
+On the **Settings** tab:
+
+- **Neutral position (N)** (on by default): turn it off for a selector with only 2H, 4H and 4L.
+- **Front differential lock** (on), **Center differential lock** (off), **Rear differential lock** (on): which lock switches the control shows. Fewer than three move to the middle of the row.
+- **Front and center locks only in 4WD** (on): the front and center locks work only in 4H and 4L, as in a real car. In 2H a tap on them is refused (the switch flashes red), and shifting into 2H releases them. N keeps them as they are. The rear lock works in any position.
+
+### Values {#transfer-case-values}
+
+- The **position**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Four-wheel drive**: on in 4H and 4L. **Low range**: on in 4L.
+- Each lock: on or off.
+
+**Looks**: there's a look for every theme, named after it: Classic, Classic 4x4, Off-roader and one for each paid theme. Some looks have a slider, others a dial. **Hologram** draws the whole control as a single-color outline in the accent color.
+
+**Quick Links**: the [Transfer case](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) input with the channels **Four-wheel drive**, **Low range**, **Front differential lock**, **Center differential lock** and **Rear differential lock** (each on/off, like a switch). The [Vehicle](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) input takes the whole transfer case in its **Transfer case** setting.
+
 ## Train controller {#train-controller}
 
 A locomotive master controller with a throttle lever and a reverser.
@@ -162,6 +202,7 @@ Each special control adds its own blocks to the **Dashboard controllers** catego
 | Gearboxes | *when gearbox … shifts gear / shifts up / shifts down / shifts into neutral / reverse / park* | *gear …*, *is gearbox … in neutral / in reverse / in a forward gear / in park?*, *gears of …* |
 | Handbrake | *when handbrake … is pulled / locked / unlocked / released* | *handbrake force …*, *is handbrake … locked / unlocked / pulled?* |
 | Turn signals | *when turn signals … left signal / right signal / light turns on / off* | *turn signals … left signal / right signal / light is on?* |
+| Transfer case | *when transfer case … 2H / 4H / N / 4L / four-wheel drive / low range / front lock / center lock / rear lock engages / disengages* | *transfer case … [the same] is engaged?*, *transfer case position …* |
 | Train controller | *when train controller … notch changed / raised / lowered, throttle closed, reverser moved, lever released* | *train controller … traction / power notch / reverser*, *is train controller … in forward / in reverse / in neutral / at notch 0?* |
 
 The steering wheel and the pedals also have the *sound … of …* block: it picks one of their sounds for the **Sounds** blocks. Details: [Dashboard controllers](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ The steering wheel and the pedals also have the *sound … of …* block: it pic
 
 Special controls give only raw input. The **vehicle simulator** turns the pedals, the gear shifter and the handbrake into a model that drives like a car: it speeds up with inertia, coasts, brakes, reverses, shifts gears in D and holds on the handbrake.
 
-- **Quick Links**: use the [Vehicle](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) input. Choose the **Pedals**, the **Gear shifter** and the **Handbrake** from your dashboard, the **Vehicle type** (Car, Off-road vehicle, Sports car, Truck) and the **Output**: **Speed**, **Engine speed (rpm)**, **Braking** or **On the handbrake**.
-- **Logic Blocks**: when the dashboard has pedals, a gear shifter or a handbrake, the **Simulator** category appears. Create a vehicle there (**Create vehicle**) and put the *drive* block under an event. Plug values into its sockets: *gas*, *brake*, *gear*, *of* (number of gears; the *gears of …* block fits here), *handbrake* and *locked*. Other Simulator blocks set the vehicle type, the engine inertia and the reverse speed, read the speed, the engine speed and the gear, and react when the vehicle starts, stops, brakes or shifts.
+- **Quick Links**: use the [Vehicle](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) input. Choose the **Pedals**, the **Gear shifter**, the **Handbrake** and the **Transfer case** from your dashboard, the **Vehicle type** (Car, Off-road vehicle, Sports car, Truck) and the **Output**: **Speed**, **Engine speed (rpm)**, **Braking** or **On the handbrake**.
+- **Logic Blocks**: when the dashboard has pedals, a gear shifter or a handbrake, the **Simulator** category appears. Create a vehicle there (**Create vehicle**) and put the *drive* block under an event. Plug values into its sockets: *gas*, *brake*, *gear*, *of* (number of gears; the *gears of …* block fits here), *handbrake*, *locked* and *transfer case* (the *transfer case position …* block fits here; leave it empty if the model has no transfer case). Other Simulator blocks set the vehicle type, the engine inertia and the reverse speed, read the speed, the engine speed and the gear, and react when the vehicle starts, stops, brakes or shifts.
 
 How the simulator drives:
 
@@ -180,6 +221,7 @@ How the simulator drives:
 - **Manual gearbox**: R reverses, N doesn't drive. Optionally, each gear limits the top speed.
 - **Automatic gearbox**: R reverses, N doesn't drive, P holds the model like a locked handbrake. In D the simulator shifts up and down by itself and shows the gear on the selector.
 - **Handbrake**: its force adds to the braking; a locked handbrake can hold the model.
+- **Transfer case**: 2H and 4H drive as without it. **N** doesn't drive: the model coasts, and the brake only slows it down without reversing. **4L** limits the speed to 40 % forward and in reverse, with the engine speed higher to match; a model going faster slows down to the limit after you shift into 4L. The differential locks don't change how the simulator drives: they are only outputs of the control.
 - **Vehicle type**: a truck is heavier (more inertia) and has an air brake; a sports car reacts quickly and reverses faster.
 
 The last pedals, gear shifter or handbrake can't be deleted while the program uses Simulator blocks.

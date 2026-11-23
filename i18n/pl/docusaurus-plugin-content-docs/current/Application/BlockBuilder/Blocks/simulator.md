@@ -30,7 +30,7 @@ Pętla `powtarzać zawsze` nie jest potrzebna: blok **jedź** działa sam, dopó
 
 ## Bloki {#blocks}
 
-### `… jedź gaz … hamulec … bieg … z … hamulec ręczny … zaciągnięty …` (Początkujący) {#block_vehicle_drive}
+### `… jedź gaz … hamulec … bieg … z … hamulec ręczny … zaciągnięty … reduktor …` (Początkujący) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Serce symulatora. Blok C, który prowadzi pojazd: co 0,1 s odczytuje swoje wejś
 - `bieg`: wybrany bieg: `-1` wsteczny, `0` luz, `1` i wyżej do przodu. Gdy w tym polu jest kontroler automatycznej skrzyni biegów, używane jest położenie jej wybieraka (P, R, N, D), a na D samochód sam wybiera bieg.
 - `z`: ile biegów ma skrzynia (domyślnie 6).
 - `hamulec ręczny`: jak mocno zaciągnięty jest hamulec ręczny, od 0 do 100; `zaciągnięty`: czy jest zablokowany.
+- `reduktor` (opcjonalnie): położenie [reduktora](/docs/Application/Dashboard/SpecialControls#transfer-case), zwykle blok [położenie reduktora](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. W 2H i 4H samochód jedzie tak jak bez niego; w N nie jedzie (toczy się siłą rozpędu, a hamulec tylko go spowalnia, nie wrzucając wstecznego); w 4L jego prędkość jest ograniczona do 40 %. Zostaw to pole puste, jeśli model nie ma reduktora.
 - Wejście jest brane pod uwagę tylko wtedy, gdy umieszczono w nim blok; zwykła liczba w pustym polu jest ignorowana (z wyjątkiem `z`).
 - Pojazdem może naraz kierować tylko jeden blok **jedź**; drugi blok dla tego samego pojazdu pomija swoje bloki wewnętrzne.
 

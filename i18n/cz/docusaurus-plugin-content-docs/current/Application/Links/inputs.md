@@ -34,6 +34,7 @@ Blok [Ovladač](/docs/Application/Links/Blocks/InputBlocks#src-controller) vezme
 | [Řadicí páka](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Převod** nebo **Směr (R − / vpřed +)** |
 | [Ruční brzda](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Ruční brzda zajištěna** (zapnuto/vypnuto) nebo **Síla ruční brzdy** |
 | [Blinkry](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Blinkry (vlevo − / vpravo +)**, **Levý blinkr**, **Pravý blinkr** nebo **Světlo** |
+| [Rozdělovací převodovka](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Pohon všech kol**, **Redukce**, **Uzávěrka předního diferenciálu**, **Uzávěrka středového diferenciálu** nebo **Uzávěrka zadního diferenciálu** (zapnuto/vypnuto) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Nahoru / dolů** nebo **Vlevo / vpravo**: −1, 0 nebo +1 |
 | [Tlačítko](/docs/Application/Links/Blocks/InputBlocks#controller-button) | zapnuto, dokud je stisknuté |
 | [Spínač](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | zapnuto / vypnuto |

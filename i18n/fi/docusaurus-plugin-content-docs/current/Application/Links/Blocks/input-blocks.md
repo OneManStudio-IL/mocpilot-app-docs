@@ -24,7 +24,7 @@ Kojelaudan ohjain, joka näkyy nimellään (**JOY1**, **SLDR1**, **BTN2**…).
 - **Ohjain**: mikä tahansa alla luetelluista kojelaudan ohjaimista. Näytöt ovat lähtöjä, eivät syötteitä.
 - **Kanava**: mitä ohjain antaa, jos ohjaimella on useita kanavia. Paletti tarjoaa yhden lohkon kanavaa kohden.
 
-Ohjauspyörä, polkimet, vaihdekeppi, käsijarru, suuntavilkut ja ajokytkin on kuvattu sivulla [Erikoisohjaimet](/docs/Application/Dashboard/SpecialControls).
+Ohjauspyörä, polkimet, vaihdekeppi, käsijarru, suuntavilkut, jakovaihteisto ja ajokytkin on kuvattu sivulla [Erikoisohjaimet](/docs/Application/Dashboard/SpecialControls).
 
 Jos ohjain poistetaan kojelaudalta, rivi ilmoittaa ”Valitse kojelaudan ohjain”. Jos sen kanavaa ei enää ole, rivi ilmoittaa ”Valitse, mitä … antaa” (ohjainsauvalla: ”… ei liiku tällä akselilla”).
 
@@ -88,6 +88,16 @@ Suuntavilkkuvipu (erikoisohjain).
 - Vasen suuntavilkku ja Oikea suuntavilkku antavat: arvon 1, kun kyseinen vilkku on päällä (vilkkuu lampun tahdissa, jos ohjaimen vilkutus on käytössä), muuten 0.
 - Valo antaa: arvon 1, kun valo palaa, muuten 0.
 
+### Jakovaihteisto {#controller-transfercase}
+
+[Jakovaihteisto](/docs/Application/Dashboard/SpecialControls#transfer-case) (erikoisohjain).
+
+- **Kanava**: **Neliveto** (oletus), **Alennusvaihde**, **Etutasauspyörästön lukko**, **Keskitasauspyörästön lukko** tai **Takatasauspyörästön lukko**.
+- Neliveto antaa: päällä/pois, päällä asennoissa 4H ja 4L.
+- Alennusvaihde antaa: päällä/pois, päällä asennossa 4L.
+- Kukin tasauspyörästön lukko antaa: päällä/pois, päällä, kun kyseinen lukko on kytketty.
+- Itse asento (2H, 4H, N, 4L) välittyy simulaattorille [Ajoneuvo](#src-vehicle)-syötteen **Jakovaihteisto**-asetuksen kautta.
+
 ### D-pad {#controller-dpad}
 
 - **Kanava**: **Ylös / alas** tai **Vasen / oikea**.
@@ -110,11 +120,12 @@ Suuntavilkkuvipu (erikoisohjain).
 
 ## Ajoneuvo {#src-vehicle}
 
-Simuloitu auto, jota ohjataan kojelaudan polkimilla, vaihdekepillä ja käsijarrulla: se kiihtyy, jarruttaa, rullaa ja peruuttaa kuin oikea ajoneuvo, ja rivi saa sen nopeuden tai moottorin kierrokset. Paletti näyttää Ajoneuvo-lohkot, kun kojelaudalla on polkimet, vaihdekeppi tai käsijarru, yhden lohkon kutakin lähtöä kohden valmiiksi linkitettynä kunkin tyypin ensimmäiseen ohjaimeen.
+Simuloitu auto, jota ohjataan kojelaudan polkimilla, vaihdekepillä, käsijarrulla ja jakovaihteistolla: se kiihtyy, jarruttaa, rullaa ja peruuttaa kuin oikea ajoneuvo, ja rivi saa sen nopeuden tai moottorin kierrokset. Paletti näyttää Ajoneuvo-lohkot, kun kojelaudalla on polkimet, vaihdekeppi tai käsijarru, yhden lohkon kutakin lähtöä kohden valmiiksi linkitettynä kunkin tyypin ensimmäiseen ohjaimeen.
 
 - **Polkimet**: kojelaudan polkimet, jotka ohjaavat ajoneuvoa (pakollinen).
 - **Vaihdekeppi**: **ei mitään** tai kojelaudan vaihdekeppi. Ilman sitä jarrupolkimen painaminen paikallaan seistessä ajaa ajoneuvoa taaksepäin.
 - **Käsijarru**: **ei mitään** tai kojelaudan käsijarru.
+- **Jakovaihteisto**: **ei mitään** tai kojelaudan jakovaihteisto. Asennoissa 2H ja 4H ajoneuvo ajaa kuin ilman sitä, asennossa N se ei aja (se rullaa vapaasti), asennossa 4L nopeus rajoitetaan 40 %:iin.
 - **Ajoneuvon tyyppi**: **Henkilöauto** (oletus), **Maastoajoneuvo**, **Urheiluauto** tai **Kuorma-auto**. Tyypit eroavat hitaudeltaan ja peruutusnopeudeltaan; kuorma-autossa on lisäksi paineilmajarru.
 - **Lähtö**:
   - **Nopeus** (oletus): arvo −1…1, peruuttaessa negatiivinen;

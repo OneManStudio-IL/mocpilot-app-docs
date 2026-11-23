@@ -19,7 +19,7 @@ On this page:
 - [Sliders and knobs](#sliders-and-knobs): slider, rotary knob
 - [Monitors](#monitor-blocks)
 - [Steering wheel and pedals](#steering-wheel-and-pedals)
-- [Other special controls](#other-special-controls): gearbox, handbrake, turn signals, train controller
+- [Other special controls](#other-special-controls): gearbox, handbrake, turn signals, transfer case, train controller
 
 ## Blocks for all controls {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blocks of the [turn signals](/docs/Application/Dashboard/SpecialControls#turn-si
 *turn signals [control] [left signal / right signal / light] is on ?*
 
 - Type: value block, `true` / `false`
+
+### Transfer case blocks {#transfer-case-blocks}
+
+Blocks of the [transfer case](/docs/Application/Dashboard/SpecialControls#transfer-case). The second list in the event and state blocks has the same choices:
+
+- **2H**, **4H**, **N**, **4L**: the selector is in this position;
+- **four-wheel drive**: the selector is in 4H or 4L;
+- **low range**: the selector is in 4L;
+- **front lock**, **center lock**, **rear lock**: the differential lock is engaged.
+
+#### `Transfer case event` (Beginner) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*when transfer case [control] [2H / 4H / N / 4L / four-wheel drive / low range / front lock / center lock / rear lock] [engages / disengages]*: **engages** runs when the choice becomes true (the selector reaches the position, or the lock is switched on), **disengages** when it stops being true.
+
+- Type: event block
+
+#### `Transfer case state (boolean)` (Beginner) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*transfer case [control] [2H / 4H / N / 4L / four-wheel drive / low range / front lock / center lock / rear lock] is engaged ?*
+
+- Type: value block, `true` / `false`
+
+#### `Transfer case position (float)` (Beginner) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*transfer case position [control]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Plug it into the *transfer case* socket of the [drive](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) block to let the simulator use the transfer case.
+
+- Type: value block
 
 ### Train controller blocks {#train-controller-blocks}
 

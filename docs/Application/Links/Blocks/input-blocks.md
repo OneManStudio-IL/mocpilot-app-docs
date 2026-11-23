@@ -24,7 +24,7 @@ A control from your dashboard, shown by its name (**JOY1**, **SLDR1**, **BTN2**�
 - **Controller**: any dashboard control listed below. Monitors are outputs, not inputs.
 - **Channel**: what the control gives, for controls with several channels. The palette offers one block per channel.
 
-The steering wheel, pedals, gear shifter, handbrake, turn signals and train controller are described on [Special controls](/docs/Application/Dashboard/SpecialControls).
+The steering wheel, pedals, gear shifter, handbrake, turn signals, transfer case and train controller are described on [Special controls](/docs/Application/Dashboard/SpecialControls).
 
 If the control is removed from the dashboard, the row reports "Choose a dashboard controller". If its channel no longer exists, it reports "Choose what … gives" (for a joystick: "… does not move along this axis").
 
@@ -88,6 +88,16 @@ The turn-signal stalk (special control).
 - Left turn signal and Right turn signal give: value 1 while that signal is on (blinking with the lamp when the control's blinking is on), otherwise 0.
 - Light gives: value 1 while the light is on, otherwise 0.
 
+### Transfer case {#controller-transfercase}
+
+The [transfer case](/docs/Application/Dashboard/SpecialControls#transfer-case) (special control).
+
+- **Channel**: **Four-wheel drive** (default), **Low range**, **Front differential lock**, **Center differential lock** or **Rear differential lock**.
+- Four-wheel drive gives: on/off, on in 4H and 4L.
+- Low range gives: on/off, on in 4L.
+- Each differential lock gives: on/off, on while that lock is engaged.
+- The position itself (2H, 4H, N, 4L) goes to the simulator through the **Transfer case** setting of the [Vehicle](#src-vehicle) input.
+
 ### D-pad {#controller-dpad}
 
 - **Channel**: **Up / down** or **Left / right**.
@@ -110,11 +120,12 @@ The turn-signal stalk (special control).
 
 ## Vehicle {#src-vehicle}
 
-A simulated car driven by the dashboard's pedals, gear shifter and handbrake: it accelerates, brakes, coasts and reverses like a real vehicle, and the row gets its speed or engine speed. The palette shows Vehicle blocks when the dashboard has pedals, a gear shifter or a handbrake, one block per output, already linked to the first control of each kind.
+A simulated car driven by the dashboard's pedals, gear shifter, handbrake and transfer case: it accelerates, brakes, coasts and reverses like a real vehicle, and the row gets its speed or engine speed. The palette shows Vehicle blocks when the dashboard has pedals, a gear shifter or a handbrake, one block per output, already linked to the first control of each kind.
 
 - **Pedals**: the dashboard pedals that drive the vehicle (required).
 - **Gear shifter**: **none** or a gear shifter on the dashboard. Without one, holding the brake pedal at a standstill drives the vehicle backwards.
 - **Handbrake**: **none** or a handbrake on the dashboard.
+- **Transfer case**: **none** or a transfer case on the dashboard. In 2H and 4H the vehicle drives as without it, in N it doesn't drive (it coasts), in 4L its speed is limited to 40 %.
 - **Vehicle type**: **Car** (default), **Off-road vehicle**, **Sports car** or **Truck**. The types differ in inertia and reverse speed; the truck also has an air brake.
 - **Output**:
   - **Speed** (default): value −1…1, negative when reversing;

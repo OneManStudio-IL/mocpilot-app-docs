@@ -24,7 +24,7 @@ Ovládač z vášho panela, zobrazený podľa svojho názvu (**JOY1**, **SLDR1**
 - **Ovládač**: ktorýkoľvek ovládač panela uvedený nižšie. Monitory sú výstupy, nie vstupy.
 - **Kanál**: čo ovládač dáva, pri ovládačoch s viacerými kanálmi. Paleta ponúka jeden blok pre každý kanál.
 
-Volant, pedále, radiaca páka, ručná brzda, smerovky a ovládač vlaku sú opísané na stránke [Špeciálne ovládače](/docs/Application/Dashboard/SpecialControls).
+Volant, pedále, radiaca páka, ručná brzda, smerovky, rozdeľovacia prevodovka a ovládač vlaku sú opísané na stránke [Špeciálne ovládače](/docs/Application/Dashboard/SpecialControls).
 
 Ak ovládač z panela odstránite, riadok hlási „Vyberte ovládač na paneli“. Ak jeho kanál už neexistuje, hlási „Vyberte, čo dáva …“ (pri joysticku: „… sa v tejto osi nepohybuje“).
 
@@ -88,6 +88,16 @@ Páčka smeroviek (špeciálny ovládač).
 - Ľavá smerovka a Pravá smerovka dávajú: hodnotu 1, kým je daná smerovka zapnutá (bliká spolu so žiarovkou, keď je v ovládači zapnuté blikanie), inak 0.
 - Svetlo dáva: hodnotu 1, kým svieti svetlo, inak 0.
 
+### Rozdeľovacia prevodovka {#controller-transfercase}
+
+[Rozdeľovacia prevodovka](/docs/Application/Dashboard/SpecialControls#transfer-case) (špeciálny ovládač).
+
+- **Kanál**: **Pohon všetkých kolies** (predvolené), **Redukcia**, **Uzávierka predného diferenciálu**, **Uzávierka stredového diferenciálu** alebo **Uzávierka zadného diferenciálu**.
+- Pohon všetkých kolies dáva: zapnuté/vypnuté, zapnuté v 4H a 4L.
+- Redukcia dáva: zapnuté/vypnuté, zapnuté v 4L.
+- Každá uzávierka diferenciálu dáva: zapnuté/vypnuté, zapnuté, kým je daná uzávierka zapnutá.
+- Samotná poloha (2H, 4H, N, 4L) ide do simulátora cez nastavenie **Rozdeľovacia prevodovka** vstupu [Vozidlo](#src-vehicle).
+
 ### D-pad {#controller-dpad}
 
 - **Kanál**: **Hore / dole** alebo **Vľavo / vpravo**.
@@ -110,11 +120,12 @@ Páčka smeroviek (špeciálny ovládač).
 
 ## Vozidlo {#src-vehicle}
 
-Simulované auto ovládané pedálmi, radiacou pákou a ručnou brzdou z panela: zrýchľuje, brzdí, dobieha a cúva ako skutočné vozidlo a riadok dostáva jeho rýchlosť alebo otáčky motora. Paleta zobrazuje bloky Vozidlo, keď sú na paneli pedále, radiaca páka alebo ručná brzda, jeden blok pre každý výstup, už prepojený s prvým ovládačom každého druhu.
+Simulované auto ovládané pedálmi, radiacou pákou, ručnou brzdou a rozdeľovacou prevodovkou z panela: zrýchľuje, brzdí, dobieha a cúva ako skutočné vozidlo a riadok dostáva jeho rýchlosť alebo otáčky motora. Paleta zobrazuje bloky Vozidlo, keď sú na paneli pedále, radiaca páka alebo ručná brzda, jeden blok pre každý výstup, už prepojený s prvým ovládačom každého druhu.
 
 - **Pedále**: pedále na paneli, ktoré vozidlo poháňajú (povinné).
 - **Radiaca páka**: **žiadne** alebo radiaca páka na paneli. Bez nej sa vozidlo rozbehne dozadu, keď v stoji držíte brzdový pedál.
 - **Ručná brzda**: **žiadne** alebo ručná brzda na paneli.
+- **Rozdeľovacia prevodovka**: **žiadne** alebo rozdeľovacia prevodovka na paneli. V 2H a 4H vozidlo jazdí, akoby tam nebola, v N nejazdí (ide voľnobehom), v 4L je jeho rýchlosť obmedzená na 40 %.
 - **Typ vozidla**: **Osobné auto** (predvolené), **Terénne vozidlo**, **Športové auto** alebo **Nákladné auto**. Typy sa líšia zotrvačnosťou a rýchlosťou cúvania; nákladné auto má navyše vzduchovú brzdu.
 - **Výstup**:
   - **Rýchlosť** (predvolené): hodnota −1…1, pri cúvaní záporná;

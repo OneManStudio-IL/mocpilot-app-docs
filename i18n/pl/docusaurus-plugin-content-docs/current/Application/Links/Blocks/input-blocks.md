@@ -24,7 +24,7 @@ Kontroler z Twojego panelu, pokazany pod swoją nazwą (**JOY1**, **SLDR1**, **B
 - **Kontroler**: dowolny kontroler panelu z listy poniżej. Monitory są wyjściami, a nie wejściami.
 - **Kanał**: co podaje kontroler, w kontrolerach z kilkoma kanałami. Paleta oferuje po jednym bloku na kanał.
 
-Kierownicę, pedały, skrzynię biegów, hamulec ręczny, kierunkowskazy i nastawnik jazdy opisano w sekcji [Kontrolery specjalne](/docs/Application/Dashboard/SpecialControls).
+Kierownicę, pedały, skrzynię biegów, hamulec ręczny, kierunkowskazy, reduktor i nastawnik jazdy opisano w sekcji [Kontrolery specjalne](/docs/Application/Dashboard/SpecialControls).
 
 Jeśli kontroler zostanie usunięty z panelu, wiersz zgłasza „Wybierz kontroler panelu”. Jeśli jego kanał już nie istnieje, zgłasza „Wybierz, co podaje …” (w przypadku joysticka: „… nie porusza się w tej osi”).
 
@@ -88,6 +88,16 @@ Przełącznik kierunkowskazów (kontroler specjalny).
 - Lewy kierunkowskaz i Prawy kierunkowskaz podają: wartość 1, dopóki dany kierunkowskaz jest włączony (miga razem z lampką, gdy w kontrolerze włączone jest miganie), w przeciwnym razie 0.
 - Światło podaje: wartość 1, dopóki światło jest włączone, w przeciwnym razie 0.
 
+### Reduktor {#controller-transfercase}
+
+[Reduktor](/docs/Application/Dashboard/SpecialControls#transfer-case) (kontroler specjalny).
+
+- **Kanał**: **Napęd na cztery koła** (domyślnie), **Reduktor**, **Blokada przedniego dyferencjału**, **Blokada centralnego dyferencjału** lub **Blokada tylnego dyferencjału**.
+- Napęd na cztery koła podaje: wł./wył., włączony w 4H i 4L.
+- Reduktor (przełożenie terenowe) podaje: wł./wył., włączony w 4L.
+- Każda blokada dyferencjału podaje: wł./wył., włączona, dopóki dana blokada jest włączona.
+- Samo położenie (2H, 4H, N, 4L) trafia do symulatora przez ustawienie **Reduktor** wejścia [Pojazd](#src-vehicle).
+
 ### Pad kierunkowy {#controller-dpad}
 
 - **Kanał**: **Góra / dół** lub **Lewo / prawo**.
@@ -110,11 +120,12 @@ Przełącznik kierunkowskazów (kontroler specjalny).
 
 ## Pojazd {#src-vehicle}
 
-Symulowany samochód sterowany pedałami, skrzynią biegów i hamulcem ręcznym z panelu: przyspiesza, hamuje, toczy się i cofa jak prawdziwy pojazd, a wiersz dostaje jego prędkość lub obroty silnika. Paleta pokazuje bloki Pojazd, gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny — po jednym bloku na każde wyjście, od razu powiązanym z pierwszym kontrolerem każdego rodzaju.
+Symulowany samochód sterowany pedałami, skrzynią biegów, hamulcem ręcznym i reduktorem z panelu: przyspiesza, hamuje, toczy się i cofa jak prawdziwy pojazd, a wiersz dostaje jego prędkość lub obroty silnika. Paleta pokazuje bloki Pojazd, gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny — po jednym bloku na każde wyjście, od razu powiązanym z pierwszym kontrolerem każdego rodzaju.
 
 - **Pedały**: pedały z panelu, które sterują pojazdem (wymagane).
 - **Skrzynia biegów**: **brak** lub skrzynia biegów z panelu. Bez niej przytrzymanie pedału hamulca na postoju powoduje jazdę do tyłu.
 - **Hamulec ręczny**: **brak** lub hamulec ręczny z panelu.
+- **Reduktor**: **brak** lub reduktor z panelu. W 2H i 4H pojazd jedzie tak jak bez niego, w N nie jedzie (toczy się siłą rozpędu), w 4L jego prędkość jest ograniczona do 40 %.
 - **Typ pojazdu**: **Samochód** (domyślnie), **Pojazd terenowy**, **Samochód sportowy** lub **Ciężarówka**. Typy różnią się bezwładnością i prędkością cofania; ciężarówka ma też hamulec pneumatyczny.
 - **Wyjście**:
   - **Prędkość** (domyślnie): wartość −1…1, ujemna przy cofaniu;

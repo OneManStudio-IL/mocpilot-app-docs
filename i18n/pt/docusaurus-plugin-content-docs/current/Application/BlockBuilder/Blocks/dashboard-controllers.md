@@ -19,7 +19,7 @@ Nesta página:
 - [Sliders e botões giratórios](#sliders-and-knobs): slider, botão giratório
 - [Monitores](#monitor-blocks)
 - [Volante e pedais](#steering-wheel-and-pedals)
-- [Outros controles especiais](#other-special-controls): câmbio, freio de mão, setas, controlador do trem
+- [Outros controles especiais](#other-special-controls): câmbio, freio de mão, setas, caixa de transferência, controlador do trem
 
 ## Blocos para todos os controles {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blocos das [setas](/docs/Application/Dashboard/SpecialControls#turn-signals). El
 *setas [controle] [seta esquerda / seta direita / farol] está ligado ?*
 
 - Tipo: bloco de valor, `true` / `false`
+
+### Blocos da caixa de transferência {#transfer-case-blocks}
+
+Blocos da [caixa de transferência](/docs/Application/Dashboard/SpecialControls#transfer-case). A segunda lista nos blocos de evento e de estado tem as mesmas opções:
+
+- **2H**, **4H**, **N**, **4L**: o seletor está nesta posição;
+- **tração nas quatro rodas**: o seletor está em 4H ou 4L;
+- **reduzida**: o seletor está em 4L;
+- **bloqueio dianteiro**, **bloqueio central**, **bloqueio traseiro**: o bloqueio do diferencial está engatado.
+
+#### `Evento da caixa de transferência` (Iniciante) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*quando caixa de transferência [controle] [2H / 4H / N / 4L / tração nas quatro rodas / reduzida / bloqueio dianteiro / bloqueio central / bloqueio traseiro] [é engatado / é desengatado]*: **é engatado** executa o script quando a opção passa a ser verdadeira (o seletor chega à posição ou o bloqueio é ligado), **é desengatado** quando ela deixa de ser verdadeira.
+
+- Tipo: bloco de evento
+
+#### `Estado da caixa de transferência (booleano)` (Iniciante) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*caixa de transferência [controle] [2H / 4H / N / 4L / tração nas quatro rodas / reduzida / bloqueio dianteiro / bloqueio central / bloqueio traseiro] está engatado ?*
+
+- Tipo: bloco de valor, `true` / `false`
+
+#### `Posição da caixa de transferência (número)` (Iniciante) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*posição da caixa de transferência [controle]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Encaixe-o no espaço *caixa de transferência* do bloco [dirigir](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) para que o simulador use a caixa de transferência.
+
+- Tipo: bloco de valor
 
 ### Blocos de controlador do trem {#train-controller-blocks}
 

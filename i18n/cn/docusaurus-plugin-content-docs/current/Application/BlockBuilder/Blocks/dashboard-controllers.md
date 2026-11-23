@@ -19,7 +19,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [滑块和旋钮](#sliders-and-knobs)：滑块、旋钮
 - [监视器](#monitor-blocks)
 - [方向盘和踏板](#steering-wheel-and-pedals)
-- [其他特殊控件](#other-special-controls)：变速箱、手刹、转向灯、列车控制器
+- [其他特殊控件](#other-special-controls)：变速箱、手刹、转向灯、分动箱、列车控制器
 
 ## 适用于所有控件的积木 {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 *转向灯 [控件] [左转向灯 / 右转向灯 / 灯光] 是否开启 ？*
 
 - 类型：数值积木，`true` / `false`
+
+### 分动箱积木 {#transfer-case-blocks}
+
+[分动箱](/docs/Application/Dashboard/SpecialControls#transfer-case)的积木。事件积木和状态积木中的第二个列表具有相同的选项：
+
+- **2H**、**4H**、**N**、**4L**：选择器处于该位置；
+- **四轮驱动**：选择器处于 4H 或 4L；
+- **低速挡**：选择器处于 4L；
+- **前差速锁**、**中央差速锁**、**后差速锁**：该差速锁已接合。
+
+#### `分动箱事件`（初学者） {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*当分动箱 [控件] [2H / 4H / N / 4L / 四轮驱动 / 低速挡 / 前差速锁 / 中央差速锁 / 后差速锁] [接合 / 断开]*：选项变为真时（选择器到达该位置，或差速锁被打开）运行**接合**，不再为真时运行**断开**。
+
+- 类型：事件积木
+
+#### `分动箱状态（布尔）`（初学者） {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*分动箱 [控件] [2H / 4H / N / 4L / 四轮驱动 / 低速挡 / 前差速锁 / 中央差速锁 / 后差速锁] 已接合 ？*
+
+- 类型：数值积木，`true` / `false`
+
+#### `分动箱挡位（浮点）`（初学者） {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*分动箱挡位 [控件]*：0 = 2H，1 = 4H，2 = N，3 = 4L。把它插入[驾驶](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive)积木的*分动箱*插槽，模拟器就会使用分动箱。
+
+- 类型：数值积木
 
 ### 列车控制器积木 {#train-controller-blocks}
 

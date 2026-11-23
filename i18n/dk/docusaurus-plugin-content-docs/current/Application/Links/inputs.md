@@ -34,6 +34,7 @@ En [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller)-blok 
 | [Gearstang](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Gear** eller **Retning (R − / frem +)** |
 | [Håndbremse](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Håndbremse låst** (til/fra) eller **Håndbremsekraft** |
 | [Blinklys](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Blinklys (venstre − / højre +)**, **Venstre blinklys**, **Højre blinklys** eller **Lys** |
+| [Fordelergearkasse](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Firehjulstræk**, **Lavgear**, **Fordifferentialespærre**, **Centerdifferentialespærre** eller **Bagdifferentialespærre** (til/fra) |
 | [Retningspad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Op / ned** eller **Venstre / højre**: −1, 0 eller +1 |
 | [Knap](/docs/Application/Links/Blocks/InputBlocks#controller-button) | til, så længe den holdes nede |
 | [Kontakt](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | til / fra |

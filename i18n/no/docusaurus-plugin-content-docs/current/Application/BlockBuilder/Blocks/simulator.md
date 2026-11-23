@@ -30,7 +30,7 @@ Du trenger ingen `gjenta alltid`-løkke: **kjør** fortsetter av seg selv til bi
 
 ## Blokker {#blocks}
 
-### `… kjør gass … brems … gir … av … handbrekk … låst …` (Nybegynner) {#block_vehicle_drive}
+### `… kjør gass … brems … gir … av … handbrekk … låst … fordelingsgir …` (Nybegynner) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Hjertet i simulatoren. En C-blokk som kjører kjøretøyet: Hvert 0,1 s leser de
 - `gir`: det valgte giret: `-1` revers, `0` fri, `1` og oppover forover. Står en automatgirkontroller i dette feltet, brukes velgerposisjonen i stedet (P, R, N, D), og i D velger bilen giret selv.
 - `av`: hvor mange gir girkassen har (6 som standard).
 - `handbrekk`: hvor hardt handbrekket er trukket, 0 til 100; `låst`: om det er låst.
+- `fordelingsgir` (valgfritt): posisjonen til [fordelingsgiret](/docs/Application/Dashboard/SpecialControls#transfer-case), som regel blokken [stilling for fordelingsgiret](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. I 2H og 4H kjører bilen som uten det; i N kjører den ikke (den triller, og bremsen bremser den bare ned uten å rygge); i 4L er hastigheten begrenset til 40 %. La feltet stå tomt hvis modellen ikke har fordelingsgir.
 - En inngang teller bare når det er plassert en blokk i den; et vanlig tall i et tomt felt ignoreres (unntatt `av`).
 - Bare én **kjør**-blokk kan kjøre et kjøretøy om gangen; en annen blokk for det samme kjøretøyet hopper over blokkene inni seg.
 

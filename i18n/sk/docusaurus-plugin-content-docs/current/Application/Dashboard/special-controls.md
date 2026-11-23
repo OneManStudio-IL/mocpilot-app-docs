@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Špeciálne ovládacie prvky {#special-controls}
 
-Špeciálne ovládacie prvky vyzerajú a fungujú ako skutočné: volant, pedále, radiaca páka, ručná brzda, páčka smeroviek a ovládač lokomotívy. Každý z nich je samostatný produkt: kúpte si tie, ktoré potrebujete, alebo ich získajte všetky s [MocPilot Pro](/docs/Application/Account/Pro).
+Špeciálne ovládacie prvky vyzerajú a fungujú ako skutočné: volant, pedále, radiaca páka, ručná brzda, páčka smeroviek, rozdeľovacia prevodovka a ovládač lokomotívy. Každý z nich je samostatný produkt: kúpte si tie, ktoré potrebujete, alebo ich získajte všetky s [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Panel s volantom, pedálmi, radiacou pákou, ručnou brzdou, smerovkami a ovládačom vlaku" width={900} />
 
@@ -20,6 +20,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | [Automatická prevodovka](#gear-shifter) | Radiaca páka | GEARA | volič: P, R, N, D |
 | [Ručná brzda](#handbrake) | Ručná brzda | HBRK | sila, zatiahnutá |
 | [Smerovky](#turn-signals) | Smerovky | STALK | ľavá smerovka, pravá smerovka, svetlá |
+| [Rozdeľovacia prevodovka](#transfer-case) | Rozdeľovacia prevodovka | XFER | režim pohonu: 2H, 4H, N, 4L; uzávierky diferenciálov |
 | [Ovládač vlaku](#train-controller) | Ovládač vlaku | TRTHR | jazdný stupeň, smer, ťah |
 
 **Otočný gombík** nie je samostatný produkt: je súčasťou každej platenej témy. Pozrite si [Typy ovládacích prvkov](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Niektoré vzhľady pri výbere nastavia aj akcentovú farbu, ktorá k nim pasuje
 ## Nastavenia všetkých špeciálnych ovládacích prvkov {#settings-of-all-special-controls}
 
 - **Vzhľad** (karta Štýl): pozrite vyššie.
-- **Akcentová farba** (karta Štýl): radiaca páka, ručná brzda, smerovky a ovládač vlaku.
+- **Akcentová farba** (karta Štýl): radiaca páka, ručná brzda, smerovky, rozdeľovacia prevodovka a ovládač vlaku.
 - **Zablokovať ovládač** a **Interaktivita** (karta Nastavenia), ako pri každom ovládacom prvku. Pozrite si [Vlastnosti ovládacích prvkov](/docs/Application/Dashboard/ControlProperties).
 
 ## Volant {#steering-wheel}
@@ -138,6 +139,45 @@ Páčka smeroviek so spínačom svetiel.
 
 **Rýchle prepojenia**: vstup [Smerovky](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) s kanálmi **Smerovky (ľavá − / pravá +)** (dve svetlá s opačnou polaritou na jednom porte), **Ľavá smerovka**, **Pravá smerovka** a **Svetlo**.
 
+## Rozdeľovacia prevodovka {#transfer-case}
+
+Rozdeľovacia prevodovka terénneho vozidla určuje, ktoré kolesá motor poháňa. Ovládací prvok má volič so štyrmi polohami a spínače uzávierok diferenciálov:
+
+| Poloha | Čo znamená |
+|---|---|
+| **2H** | pohon dvoch kolies: poháňané sú iba zadné kolesá, na bežné cesty |
+| **4H** | pohon všetkých kolies: poháňané sú všetky kolesá, do blata, piesku a snehu |
+| **N** | neutrál: motor je od kolies odpojený |
+| **4L** | pohon všetkých kolies s **redukciou**: pomaly a silno, na strmé stúpania a lezenie po skalách |
+
+**Uzávierky diferenciálov** zabezpečia, že sa kolesá jednej nápravy (**predná**, **zadná**) alebo obe nápravy (**stredová**) otáčajú spolu, takže koleso, ktoré stratilo priľnavosť, sa len neprekĺzava naprázdno.
+
+<Screenshot name="transfer-case-dashboard" alt="Ovládací prvok rozdeľovacej prevodovky na paneli: volič, spínače uzávierok a displej" width={700} />
+
+### Ako ju používať {#transfer-case-use}
+
+- **Volič**: polohy zhora nadol: 2H, 4H, N, 4L. Podľa vzhľadu je to **posuvník** (ryhovaný gombík v drážke: posúvajte ho po nej; keď ho pustíte, zapadne do najbližšej polohy) alebo **otočný volič** (otáčajte ním; zacvakáva do polôh). Drážka je rovná, takže zo 4H sa do 4L dostanete iba cez N, ako pri skutočnej rozdeľovacej prevodovke s pákou.
+- **Uzávierky**: rad spínačov pre prednú, stredovú a zadnú uzávierku: páčkové spínače s kontrolkou alebo aretačné tlačidlá, ktorých krúžok sa rozsvieti v akcentovej farbe, podľa vzhľadu. Ťuknutím na spínač uzávierku zapnete, ďalším ťuknutím ju uvoľníte.
+- **Displej**: označenia 2H, 4H, N a 4L pri voliči sa nemenia; displej ukazuje zvolenú polohu a zapnuté uzávierky (**F**, **C**, **R**) v akcentovej farbe.
+
+### Nastavenia {#transfer-case-settings}
+
+Na karte **Nastavenia**:
+
+- **Neutrál (N)** (predvolene zapnuté): vypnite pre volič iba s polohami 2H, 4H a 4L.
+- **Uzávierka predného diferenciálu** (zapnuté), **Uzávierka stredového diferenciálu** (vypnuté), **Uzávierka zadného diferenciálu** (zapnuté): ktoré spínače uzávierok ovládací prvok zobrazí. Ak ich je menej ako tri, presunú sa do stredu radu.
+- **Predná a stredová uzávierka len v 4WD** (zapnuté): predná a stredová uzávierka fungujú iba v 4H a 4L, ako v skutočnom aute. V 2H sa ťuknutie na ne odmietne (spínač červeno blikne) a preradenie do 2H ich uvoľní. N ich ponechá tak, ako sú. Zadná uzávierka funguje v akejkoľvek polohe.
+
+### Hodnoty {#transfer-case-values}
+
+- **Poloha**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Pohon všetkých kolies**: zapnutý v 4H a 4L. **Redukcia**: zapnutá v 4L.
+- Každá uzávierka: zapnutá alebo vypnutá.
+
+**Vzhľady**: pre každú tému je jeden vzhľad pomenovaný podľa nej: Klasický, Klasická 4x4, Terénne auto a po jednom pre každú platenú tému. Niektoré vzhľady majú posuvník, iné otočný volič. **Hologram** vykreslí celý ovládací prvok ako jednofarebný obrys v akcentovej farbe.
+
+**Rýchle prepojenia**: vstup [Rozdeľovacia prevodovka](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) s kanálmi **Pohon všetkých kolies**, **Redukcia**, **Uzávierka predného diferenciálu**, **Uzávierka stredového diferenciálu** a **Uzávierka zadného diferenciálu** (každý zapnuté/vypnuté, ako spínač). Vstup [Vozidlo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) preberá celú rozdeľovaciu prevodovku v nastavení **Rozdeľovacia prevodovka**.
+
 ## Ovládač vlaku {#train-controller}
 
 Jazdný ovládač lokomotívy s jazdnou pákou a smerovou pákou.
@@ -162,6 +202,7 @@ Každý špeciálny ovládací prvok pridáva vlastné bloky do kategórie **Ovl
 | Prevodovky | *keď prevodovka … preradí / preradí hore / preradí dole / zaradí neutrál / spiatočku / parkovanie* | *prevodový stupeň …*, *prevodovka … v neutráli / na spiatočke / na rýchlosti vpred / na parkovaní?*, *prevodové stupne …* |
 | Ručná brzda | *keď ručná brzda … ťahaná / zatiahnutá / uvoľnená / pustená* | *sila ručnej brzdy …*, *ručná brzda … zatiahnutá / uvoľnená / ťahaná?* |
 | Smerovky | *keď smerovky … ľavá smerovka / pravá smerovka / svetlá sa zapne / vypne* | *smerovky … ľavá smerovka / pravá smerovka / svetlá je zapnutý?* |
+| Rozdeľovacia prevodovka | *keď rozdeľovacia prevodovka … 2H / 4H / N / 4L / pohon všetkých kolies / redukcia / predná uzávierka / stredová uzávierka / zadná uzávierka sa zapne / sa vypne* | *rozdeľovacia prevodovka … [to isté] je zapnuté?*, *poloha rozdeľovacej prevodovky …* |
 | Ovládač vlaku | *keď jazdný ovládač … zmenil stupeň / stupeň zvýšený / stupeň znížený, jazda vypnutá, smerová páka prestavená, páka pustená* | *jazdný ovládač … ťah / jazdný stupeň / smerová páka*, *jazdný ovládač … vpred / vzad / v neutráli / na stupni 0?* |
 
 Volant a pedále majú aj blok *zvuk … z …*: vyberie jeden z ich zvukov pre bloky **Zvuky**. Podrobnosti: [Ovládače na obrazovke](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Volant a pedále majú aj blok *zvuk … z …*: vyberie jeden z ich zvukov pre 
 
 Špeciálne ovládacie prvky dávajú iba surový vstup. **Simulátor vozidla** premení pedále, radiacu páku a ručnú brzdu na model, ktorý jazdí ako auto: zrýchľuje so zotrvačnosťou, ide voľnobehom, brzdí, cúva, v polohe D radí a drží na ručnej brzde.
 
-- **Rýchle prepojenia**: použite vstup [Vozidlo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Zvoľte **Pedále**, **Radiaca páka** a **Ručná brzda** z vášho panela, **Typ vozidla** (Osobné auto, Terénne vozidlo, Športové auto, Nákladné auto) a **Výstup**: **Rýchlosť**, **Otáčky motora (ot/min)**, **Brzdenie** alebo **Na ručnej brzde**.
-- **Logické bloky**: keď sú na paneli pedále, radiaca páka alebo ručná brzda, objaví sa kategória **Simulátor**. Vytvorte v nej vozidlo (**Vytvoriť vozidlo**) a blok *jazdiť* umiestnite pod udalosť. Do jeho otvorov vložte hodnoty: *plyn*, *brzda*, *prevodový stupeň*, *z* (počet stupňov; sem pasuje blok *prevodové stupne …*), *ručná brzda* a *zatiahnutá*. Ďalšie bloky Simulátora nastavujú typ vozidla, zotrvačnosť motora a rýchlosť cúvania, čítajú rýchlosť, otáčky motora a stupeň a reagujú, keď sa vozidlo rozbehne, zastaví, brzdí alebo preradí.
+- **Rýchle prepojenia**: použite vstup [Vozidlo](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Zvoľte **Pedále**, **Radiaca páka**, **Ručná brzda** a **Rozdeľovacia prevodovka** z vášho panela, **Typ vozidla** (Osobné auto, Terénne vozidlo, Športové auto, Nákladné auto) a **Výstup**: **Rýchlosť**, **Otáčky motora (ot/min)**, **Brzdenie** alebo **Na ručnej brzde**.
+- **Logické bloky**: keď sú na paneli pedále, radiaca páka alebo ručná brzda, objaví sa kategória **Simulátor**. Vytvorte v nej vozidlo (**Vytvoriť vozidlo**) a blok *jazdiť* umiestnite pod udalosť. Do jeho otvorov vložte hodnoty: *plyn*, *brzda*, *prevodový stupeň*, *z* (počet stupňov; sem pasuje blok *prevodové stupne …*), *ručná brzda*, *zatiahnutá* a *rozdeľovacia prevodovka* (sem pasuje blok *poloha rozdeľovacej prevodovky …*; nechajte ho prázdny, ak model rozdeľovaciu prevodovku nemá). Ďalšie bloky Simulátora nastavujú typ vozidla, zotrvačnosť motora a rýchlosť cúvania, čítajú rýchlosť, otáčky motora a stupeň a reagujú, keď sa vozidlo rozbehne, zastaví, brzdí alebo preradí.
 
 Ako simulátor jazdí:
 
@@ -180,6 +221,7 @@ Ako simulátor jazdí:
 - **Manuálna prevodovka**: R cúva, N nejazdí. Voliteľne každý stupeň obmedzuje maximálnu rýchlosť.
 - **Automatická prevodovka**: R cúva, N nejazdí, P drží model ako zatiahnutá ručná brzda. V polohe D simulátor sám radí hore aj dole a stupeň ukazuje na voliči.
 - **Ručná brzda**: jej sila sa pripočíta k brzdeniu; zatiahnutá ručná brzda dokáže model udržať.
+- **Rozdeľovacia prevodovka**: v 2H a 4H model jazdí, akoby tam nebola. **N** nejazdí: model ide voľnobehom a brzda ho iba spomaľuje, bez cúvania. **4L** obmedzuje rýchlosť na 40 % dopredu aj dozadu a otáčky motora sú zodpovedajúco vyššie; model, ktorý ide rýchlejšie, po preradení do 4L spomalí na tento limit. Uzávierky diferenciálov jazdu simulátora nemenia: sú to iba výstupy ovládacieho prvku.
 - **Typ vozidla**: nákladné auto je ťažšie (väčšia zotrvačnosť) a má vzduchovú brzdu; športové auto reaguje rýchlo a cúva rýchlejšie.
 
 Posledné pedále, radiaca páka alebo ručná brzda sa nedajú odstrániť, kým program používa bloky Simulátora.

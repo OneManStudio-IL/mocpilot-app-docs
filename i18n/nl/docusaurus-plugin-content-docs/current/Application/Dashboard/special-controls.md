@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Speciale bedieningselementen {#special-controls}
 
-Speciale bedieningselementen zien eruit en werken als het echte ding: een stuurwiel, pedalen, een versnellingspook, een handrem, een richtingaanwijzerhendel en een rijschakelaar van een locomotief. Elk is een apart product: koop de bedieningselementen die je nodig hebt of krijg ze allemaal met [MocPilot Pro](/docs/Application/Account/Pro).
+Speciale bedieningselementen zien eruit en werken als het echte ding: een stuurwiel, pedalen, een versnellingspook, een handrem, een richtingaanwijzerhendel, een verdeelbak en een rijschakelaar van een locomotief. Elk is een apart product: koop de bedieningselementen die je nodig hebt of krijg ze allemaal met [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Een dashboard met een stuurwiel, pedalen, een versnellingspook, een handrem, richtingaanwijzers en een treinregelaar" width={900} />
 
@@ -20,6 +20,7 @@ Speciale bedieningselementen zien eruit en werken als het echte ding: een stuurw
 | [Automatische bak](#gear-shifter) | Versnellingspook | GEARA | keuzehendel: P, R, N, D |
 | [Handrem](#handbrake) | Handrem | HBRK | kracht, aangetrokken |
 | [Richtingaanwijzers](#turn-signals) | Richtingaanwijzers | STALK | linker richtingaanwijzer, rechter richtingaanwijzer, licht |
+| [Verdeelbak](#transfer-case) | Verdeelbak | XFER | rijmodus: 2H, 4H, N, 4L; differentieelsloten |
 | [Treinregelaar](#train-controller) | Treinregelaar | TRTHR | rijstand, richting, trekkracht |
 
 De **Draaiknop** is geen apart product: die hoort bij elk betaald thema. Zie [Soorten bedieningselementen](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Sommige stijlen stellen ook de accentkleur passend in als je ze kiest.
 ## Instellingen van alle speciale bedieningselementen {#settings-of-all-special-controls}
 
 - **Uiterlijk** (tabblad Stijl): zie hierboven.
-- **Accentkleur** (tabblad Stijl): versnellingspook, handrem, richtingaanwijzers en treinregelaar.
+- **Accentkleur** (tabblad Stijl): versnellingspook, handrem, richtingaanwijzers, verdeelbak en treinregelaar.
 - **Lock de controller** en **Interactiviteit** (tabblad Instellingen), zoals bij elk bedieningselement. Zie [Eigenschappen van bedieningselementen](/docs/Application/Dashboard/ControlProperties).
 
 ## Stuurwiel {#steering-wheel}
@@ -138,6 +139,45 @@ Een richtingaanwijzerhendel met een lichtschakelaar.
 
 **Snelle koppelingen**: de invoer [Richtingaanwijzers](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) met de kanalen **Richtingaanwijzers (links − / rechts +)** (twee lampen met tegengestelde polariteit op één poort), **Linker richtingaanwijzer**, **Rechter richtingaanwijzer** en **Licht**.
 
+## Verdeelbak {#transfer-case}
+
+De verdeelbak van een terreinwagen bepaalt welke wielen de motor aandrijft. Het bedieningselement heeft een keuzehendel met vier standen en schakelaars voor de differentieelsloten:
+
+| Stand | Betekenis |
+|---|---|
+| **2H** | tweewielaandrijving: alleen de achterwielen worden aangedreven, voor gewone wegen |
+| **4H** | vierwielaandrijving: alle wielen worden aangedreven, voor modder, zand en sneeuw |
+| **N** | neutraal: de motor is losgekoppeld van de wielen |
+| **4L** | vierwielaandrijving met **lage gearing**: langzaam en krachtig, voor steile hellingen en rock crawling |
+
+**Differentieelsloten** laten de wielen van één as (**voor**, **achter**) of de twee assen (**midden**) samen draaien, zodat een wiel dat grip verliest niet zomaar doordraait.
+
+<Screenshot name="transfer-case-dashboard" alt="De verdeelbak op een dashboard: de keuzehendel, de slotschakelaars en het display" width={700} />
+
+### Zo gebruik je hem {#transfer-case-use}
+
+- **Keuzehendel**: standen van boven naar beneden: 2H, 4H, N, 4L. Afhankelijk van de stijl is het een **schuif** (een geribbelde knop in een sleuf: schuif hem erlangs; als je loslaat, springt hij naar de dichtstbijzijnde stand) of een **draaiknop** (draai eraan; hij klikt vast in de standen). De sleuf is recht, dus van 4H kom je alleen via N bij 4L, net als bij een echte verdeelbak met hendel.
+- **Sloten**: een rij schakelaars voor het voorste, middelste en achterste slot: afhankelijk van de stijl tuimelschakelaars met een lampje of vergrendelende knoppen met een ring die oplicht in de accentkleur. Tik op een schakelaar om het slot in te schakelen en tik nog eens om het weer los te zetten.
+- **Display**: de labels 2H, 4H, N en 4L naast de keuzehendel veranderen niet; het display toont de gekozen stand en de ingeschakelde sloten (**F**, **C**, **R**) in de accentkleur.
+
+### Instellingen {#transfer-case-settings}
+
+Op het tabblad **Instellingen**:
+
+- **Neutraal (N)** (standaard aan): zet dit uit voor een keuzehendel met alleen 2H, 4H en 4L.
+- **Voorste differentieelslot** (aan), **Middendifferentieelslot** (uit), **Achterste differentieelslot** (aan): welke slotschakelaars het bedieningselement toont. Zijn het er minder dan drie, dan schuiven ze naar het midden van de rij.
+- **Voor- en middenslot alleen in 4WD** (aan): het voorste en het middenslot werken alleen in 4H en 4L, zoals in een echte auto. In 2H wordt een tik erop geweigerd (de schakelaar knippert rood), en schakelen naar 2H zet ze los. In N blijven ze zoals ze zijn. Het achterste slot werkt in elke stand.
+
+### Waarden {#transfer-case-values}
+
+- De **stand**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Vierwielaandrijving**: aan in 4H en 4L. **Lage gearing**: aan in 4L.
+- Elk slot: aan of uit.
+
+**Stijlen**: er is een stijl voor elk thema, met dezelfde naam: Klassiek, Klassieke 4x4, Terreinwagen en een voor elk betaald thema. Sommige stijlen hebben een schuif, andere een draaiknop. **Hologram** tekent het hele bedieningselement als een omtrek in één kleur, de accentkleur.
+
+**Snelle koppelingen**: de invoer [Verdeelbak](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) met de kanalen **Vierwielaandrijving**, **Lage gearing**, **Voorste differentieelslot**, **Middendifferentieelslot** en **Achterste differentieelslot** (elk aan/uit, net als een schakelaar). De invoer [Voertuig](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) neemt de hele verdeelbak op in zijn instelling **Verdeelbak**.
+
 ## Treinregelaar {#train-controller}
 
 Een rijschakelaar van een locomotief met een gashendel en een rijrichtingschakelaar.
@@ -162,6 +202,7 @@ Elk speciaal bedieningselement voegt eigen blokken toe aan de categorie **Dashbo
 | Versnellingsbakken | *wanneer versnellingsbak … schakelt / schakelt op / schakelt terug / schakelt naar neutraal / schakelt in zijn achteruit / schakelt naar parkeren* | *versnelling …*, *is versnellingsbak … in neutraal / in zijn achteruit / in een vooruitversnelling / in parkeerstand?*, *versnellingen van …* |
 | Handrem | *wanneer handrem … is getrokken / vergrendeld / ontgrendeld / losgelaten* | *handremkracht …*, *is handrem … vergrendeld / ontgrendeld / getrokken?* |
 | Richtingaanwijzers | *wanneer richtingaanwijzers … linker richtingaanwijzer / rechter richtingaanwijzer / licht gaat aan / gaat uit* | *richtingaanwijzers … linker richtingaanwijzer / rechter richtingaanwijzer / licht is aan?* |
+| Verdeelbak | *wanneer verdeelbak … 2H / 4H / N / 4L / vierwielaandrijving / lage gearing / voorste slot / middenslot / achterste slot wordt ingeschakeld / wordt uitgeschakeld* | *verdeelbak … [hetzelfde] is ingeschakeld?*, *stand van de verdeelbak …* |
 | Treinregelaar | *wanneer rijschakelaar … rijstand gewijzigd / rijstand verhoogd / rijstand verlaagd, rijschakelaar op nul, rijrichtingschakelaar verzet, hendel losgelaten* | *rijschakelaar … trekkracht / rijstand / rijrichtingschakelaar*, *is rijschakelaar … vooruit / achteruit / in neutraal / op rijstand 0?* |
 
 Het stuurwiel en de pedalen hebben ook het blok *geluid … van …*: dat kiest een van hun geluiden voor de blokken in **Geluiden**. Details: [Dashboardbedieningselementen](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Het stuurwiel en de pedalen hebben ook het blok *geluid … van …*: dat kiest 
 
 Speciale bedieningselementen geven alleen ruwe invoer. De **voertuigsimulator** maakt van de pedalen, de versnellingspook en de handrem een model dat rijdt als een auto: het trekt op met traagheid, rolt uit, remt, rijdt achteruit, schakelt in D en blijft staan op de handrem.
 
-- **Snelle koppelingen**: gebruik de invoer [Voertuig](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Kies de **Pedalen**, de **Versnellingspook** en de **Handrem** van je dashboard, het **Voertuigtype** (Auto, Terreinwagen, Sportwagen, Vrachtwagen) en de **Uitvoer**: **Snelheid**, **Toerental (tpm)**, **Remmen** of **Op de handrem**.
-- **Logicablokken**: als het dashboard pedalen, een versnellingspook of een handrem heeft, verschijnt de categorie **Simulator**. Maak daar een voertuig (**Voertuig aanmaken**) en zet het blok *rijden* onder een gebeurtenis. Zet waarden in de vakken ervan: *gas*, *rem*, *versnelling*, *van* (aantal versnellingen; het blok *versnellingen van …* past hier), *handrem* en *aangetrokken*. Met andere Simulator-blokken stel je het voertuigtype, de motortraagheid en de achteruitsnelheid in, lees je de snelheid, het toerental en de versnelling uit, en reageer je als het voertuig wegrijdt, stopt, remt of schakelt.
+- **Snelle koppelingen**: gebruik de invoer [Voertuig](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Kies de **Pedalen**, de **Versnellingspook**, de **Handrem** en de **Verdeelbak** van je dashboard, het **Voertuigtype** (Auto, Terreinwagen, Sportwagen, Vrachtwagen) en de **Uitvoer**: **Snelheid**, **Toerental (tpm)**, **Remmen** of **Op de handrem**.
+- **Logicablokken**: als het dashboard pedalen, een versnellingspook of een handrem heeft, verschijnt de categorie **Simulator**. Maak daar een voertuig (**Voertuig aanmaken**) en zet het blok *rijden* onder een gebeurtenis. Zet waarden in de vakken ervan: *gas*, *rem*, *versnelling*, *van* (aantal versnellingen; het blok *versnellingen van …* past hier), *handrem*, *aangetrokken* en *verdeelbak* (het blok *stand van de verdeelbak …* past hier; laat het leeg als het model geen verdeelbak heeft). Met andere Simulator-blokken stel je het voertuigtype, de motortraagheid en de achteruitsnelheid in, lees je de snelheid, het toerental en de versnelling uit, en reageer je als het voertuig wegrijdt, stopt, remt of schakelt.
 
 Zo rijdt de simulator:
 
@@ -180,6 +221,7 @@ Zo rijdt de simulator:
 - **Handgeschakelde bak**: R rijdt achteruit, N rijdt niet. Optioneel begrenst elke versnelling de topsnelheid.
 - **Automatische bak**: R rijdt achteruit, N rijdt niet, P houdt het model vast als een aangetrokken handrem. In D schakelt de simulator zelf op en terug en toont hij de versnelling op de keuzehendel.
 - **Handrem**: de kracht ervan komt bij het remmen; een aangetrokken handrem kan het model vasthouden.
+- **Verdeelbak**: in 2H en 4H rijdt het model zoals zonder verdeelbak. In **N** rijdt het niet: het model rolt uit, en de rem remt het alleen af zonder dat het achteruitrijdt. **4L** begrenst de snelheid vooruit en achteruit tot 40 %, met een navenant hoger toerental; een model dat sneller rijdt, remt na het schakelen naar 4L af tot die grens. De differentieelsloten veranderen niets aan hoe de simulator rijdt: het zijn alleen uitvoerwaarden van het bedieningselement.
 - **Voertuigtype**: een vrachtwagen is zwaarder (meer traagheid) en heeft een luchtrem; een sportwagen reageert snel en rijdt sneller achteruit.
 
 De laatste pedalen, versnellingspook of handrem kunnen niet worden verwijderd zolang het programma Simulator-blokken gebruikt.

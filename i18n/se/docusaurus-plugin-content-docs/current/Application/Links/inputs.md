@@ -34,6 +34,7 @@ Blocket [Kontroll](/docs/Application/Links/Blocks/InputBlocks#src-controller) h�
 | [Växelspak](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Växel** eller **Riktning (R − / framåt +)** |
 | [Handbroms](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handbroms åtdragen** (på/av) eller **Handbromskraft** |
 | [Blinkers](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Blinkers (vänster − / höger +)**, **Vänster blinker**, **Höger blinker** eller **Ljus** |
+| [Fördelningslåda](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Fyrhjulsdrift**, **Lågväxel**, **Framdifferentialspärr**, **Mittdifferentialspärr** eller **Bakdifferentialspärr** (på/av) |
 | [Riktad pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Upp / ner** eller **Vänster / höger**: −1, 0 eller +1 |
 | [Knapp](/docs/Application/Links/Blocks/InputBlocks#controller-button) | på medan den hålls intryckt |
 | [Brytare](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | på / av |

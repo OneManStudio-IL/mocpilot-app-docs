@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Specialkontroller
 
-Specialkontroller ser ut och fungerar som de riktiga: en ratt, pedaler, en växelspak, en handbroms, en blinkersspak och ett körreglage för lok. Var och en är en separat produkt: köp de du behöver eller få alla med [MocPilot Pro](/docs/Application/Account/Pro).
+Specialkontroller ser ut och fungerar som de riktiga: en ratt, pedaler, en växelspak, en handbroms, en blinkersspak, en fördelningslåda och ett körreglage för lok. Var och en är en separat produkt: köp de du behöver eller få alla med [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="En instrumentpanel med ratt, pedaler, växelspak, handbroms, blinkers och tågreglage" width={900} />
 
@@ -20,6 +20,7 @@ Specialkontroller ser ut och fungerar som de riktiga: en ratt, pedaler, en växe
 | [Automatisk växellåda](#gear-shifter) | Växelspak | GEARA | väljare: P, R, N, D |
 | [Handbroms](#handbrake) | Handbroms | HBRK | kraft, låst |
 | [Blinkers](#turn-signals) | Blinkers | STALK | vänster blinker, höger blinker, ljus |
+| [Fördelningslåda](#transfer-case) | Fördelningslåda | XFER | körläge: 2H, 4H, N, 4L; differentialspärrar |
 | [Tågreglage](#train-controller) | Tågreglage | TRTHR | körsteg, riktning, dragkraft |
 
 **Vridratt** är ingen separat produkt: den följer med varje betalt tema. Se [Kontrolltyper](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Vissa utseenden ställer också in en passande accentfärg när du väljer dem.
 ## Inställningar för alla specialkontroller {#settings-of-all-special-controls}
 
 - **Utseende** (fliken Stil): se ovan.
-- **Accentfärg** (fliken Stil): växelspak, handbroms, blinkers och tågreglage.
+- **Accentfärg** (fliken Stil): växelspak, handbroms, blinkers, fördelningslåda och tågreglage.
 - **Lås kontrollern** och **Interaktivitet** (fliken Inställningar), som på alla kontroller. Se [Kontrollens egenskaper](/docs/Application/Dashboard/ControlProperties).
 
 ## Ratt {#steering-wheel}
@@ -138,6 +139,45 @@ En blinkersspak med ljusomkopplare.
 
 **Snabbkopplingar**: ingången [Blinkers](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) med kanalerna **Blinkers (vänster − / höger +)** (två lampor med motsatt polaritet på en port), **Vänster blinker**, **Höger blinker** och **Ljus**.
 
+## Fördelningslåda {#transfer-case}
+
+Fördelningslådan i ett terrängfordon väljer vilka hjul motorn driver. Kontrollen har en väljare med fyra lägen och brytare för differentialspärrarna:
+
+| Läge | Vad det betyder |
+|---|---|
+| **2H** | tvåhjulsdrift: bara bakhjulen drivs, för vanliga vägar |
+| **4H** | fyrhjulsdrift: alla hjul drivs, för lera, sand och snö |
+| **N** | friläge: motorn är frikopplad från hjulen |
+| **4L** | fyrhjulsdrift med **lågväxel**: långsamt och kraftfullt, för branta backar och klättring i sten |
+
+**Differentialspärrar** får hjulen på en axel (**fram**, **bak**) eller de två axlarna (**mitt**) att rotera tillsammans, så att ett hjul som har tappat greppet inte bara spinner.
+
+<Screenshot name="transfer-case-dashboard" alt="Fördelningslådan på en instrumentpanel: väljaren, spärrbrytarna och displayen" width={700} />
+
+### Så använder du den {#transfer-case-use}
+
+- **Väljare**: lägena uppifrån och ned: 2H, 4H, N, 4L. Beroende på utseendet är den ett **skjutreglage** (en räfflad knopp i ett spår: skjut den längs spåret; när du släpper hoppar den till närmaste läge) eller en **vridväljare** (vrid den; den klickar in i lägena). Spåret är rakt, så från 4H når du 4L bara via N, precis som på en riktig fördelningslåda med spak.
+- **Spärrar**: en rad brytare för fram-, mitt- och bakspärren: vippbrytare med lampa eller låsande knappar vars ring lyser i accentfärgen, beroende på utseendet. Tryck på en brytare för att koppla in spärren och tryck igen för att koppla ur den.
+- **Display**: markeringarna 2H, 4H, N och 4L vid väljaren ändras inte; displayen visar det valda läget och de inkopplade spärrarna (**F**, **C**, **R**) i accentfärgen.
+
+### Inställningar {#transfer-case-settings}
+
+På fliken **Inställningar**:
+
+- **Neutralläge (N)** (påslagen som standard): slå av den för en väljare med bara 2H, 4H och 4L.
+- **Framdifferentialspärr** (på), **Mittdifferentialspärr** (av), **Bakdifferentialspärr** (på): vilka spärrbrytare kontrollen visar. Är de färre än tre flyttas de till mitten av raden.
+- **Fram- och mittspärr endast i 4WD** (på): fram- och mittspärren fungerar bara i 4H och 4L, som i en riktig bil. I 2H avvisas ett tryck på dem (brytaren blinkar rött), och när du växlar till 2H kopplas de ur. N lämnar dem som de är. Bakspärren fungerar i alla lägen.
+
+### Värden {#transfer-case-values}
+
+- **Läget**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Fyrhjulsdrift**: på i 4H och 4L. **Lågväxel**: på i 4L.
+- Varje spärr: på eller av.
+
+**Utseenden**: det finns ett utseende för varje tema, uppkallat efter det: Klassisk, Klassisk 4x4, Terrängbil och ett för varje betaltema. Vissa utseenden har ett skjutreglage, andra en vridväljare. **Hologram** ritar hela kontrollen som en enfärgad kontur i accentfärgen.
+
+**Snabbkopplingar**: ingången [Fördelningslåda](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) med kanalerna **Fyrhjulsdrift**, **Lågväxel**, **Framdifferentialspärr**, **Mittdifferentialspärr** och **Bakdifferentialspärr** (var och en på/av, som en brytare). Ingången [Fordon](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) tar hela fördelningslådan i sin inställning **Fördelningslåda**.
+
 ## Tågreglage {#train-controller}
 
 Ett körreglage för lok med körspak och riktningsväljare.
@@ -162,6 +202,7 @@ Varje specialkontroll lägger till egna block i kategorin **Skärmkontroller** i
 | Växellådor | *när växellåda … byter växel / växlar upp / växlar ned / växlar till friläge / back / parkering* | *växel …*, *är växellåda … i friläge / i back / i en framåtväxel / i parkering?*, *växlar för …* |
 | Handbroms | *när handbroms … dras / låses / låses upp / släpps* | *handbromskraft …*, *är handbroms … låst / olåst / åtdragen?* |
 | Blinkers | *när blinkers … vänster blinker / höger blinker / ljus slås på / av* | *blinkers … vänster blinker / höger blinker / ljus är på?* |
+| Fördelningslåda | *när fördelningslåda … 2H / 4H / N / 4L / fyrhjulsdrift / lågväxel / främre spärr / mittspärr / bakre spärr kopplas in / kopplas ur* | *fördelningslåda … [samma val] är inkopplad?*, *fördelningslådans läge …* |
 | Tågreglage | *när körkontroll … körsteg ändrat / höjt / sänkt, körkontroll på noll, riktningsväljare flyttad, spak släppt* | *körkontroll … dragkraft / körsteg / riktningsväljare*, *är körkontroll … i framåt / i back / i neutral / på körsteg 0?* |
 
 Ratten och pedalerna har också blocket *ljud … från …*: det väljer ett av deras ljud för blocken i **Ljud**. Detaljer: [Instrumentpanelens kontroller](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Ratten och pedalerna har också blocket *ljud … från …*: det väljer ett av
 
 Specialkontroller ger bara rå inmatning. **Fordonssimulatorn** gör om pedalerna, växelspaken och handbromsen till en modell som kör som en bil: den accelererar med tröghet, rullar fritt, bromsar, backar, växlar i D och står still på handbromsen.
 
-- **Snabbkopplingar**: använd ingången [Fordon](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Välj **Pedaler**, **Växelspak** och **Handbroms** från din instrumentpanel, **Fordonstyp** (Personbil, Terrängfordon, Sportbil, Lastbil) och **Utgång**: **Hastighet**, **Motorvarvtal (varv/min)**, **Bromsning** eller **På handbromsen**.
-- **Logikblock**: när instrumentpanelen har pedaler, en växelspak eller en handbroms visas kategorin **Simulator**. Skapa ett fordon där (**Skapa fordon**) och lägg blocket *kör* under en händelse. Koppla värden till dess fält: *gas*, *broms*, *växel*, *för* (antal växlar; blocket *växlar för …* passar här), *handbroms* och *låst*. Andra Simulator-block ställer in fordonstyp, motorns tröghet och backhastigheten, läser av hastigheten, motorvarvtalet och växeln, och reagerar när fordonet startar, stannar, bromsar eller växlar.
+- **Snabbkopplingar**: använd ingången [Fordon](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Välj **Pedaler**, **Växelspak**, **Handbroms** och **Fördelningslåda** från din instrumentpanel, **Fordonstyp** (Personbil, Terrängfordon, Sportbil, Lastbil) och **Utgång**: **Hastighet**, **Motorvarvtal (varv/min)**, **Bromsning** eller **På handbromsen**.
+- **Logikblock**: när instrumentpanelen har pedaler, en växelspak eller en handbroms visas kategorin **Simulator**. Skapa ett fordon där (**Skapa fordon**) och lägg blocket *kör* under en händelse. Koppla värden till dess fält: *gas*, *broms*, *växel*, *för* (antal växlar; blocket *växlar för …* passar här), *handbroms*, *låst* och *fördelningslåda* (blocket *fördelningslådans läge …* passar här; lämna det tomt om modellen saknar fördelningslåda). Andra Simulator-block ställer in fordonstyp, motorns tröghet och backhastigheten, läser av hastigheten, motorvarvtalet och växeln, och reagerar när fordonet startar, stannar, bromsar eller växlar.
 
 Så kör simulatorn:
 
@@ -180,6 +221,7 @@ Så kör simulatorn:
 - **Manuell växellåda**: R backar, N kör inte. Varje växel kan också begränsa toppfarten.
 - **Automatisk växellåda**: R backar, N kör inte, P håller modellen still som en låst handbroms. I D växlar simulatorn upp och ned av sig själv och visar växeln på väljaren.
 - **Handbroms**: dess kraft läggs till bromsningen; en låst handbroms kan hålla modellen still.
+- **Fördelningslåda**: 2H och 4H kör som utan den. **N** kör inte: modellen rullar fritt, och bromsen saktar bara ned den utan att backa. **4L** begränsar hastigheten till 40 % framåt och bakåt, med motsvarande högre motorvarvtal; en modell som kör fortare saktar ned till gränsen när du växlar till 4L. Differentialspärrarna ändrar inte hur simulatorn kör: de är bara utgångar från kontrollen.
 - **Fordonstyp**: en lastbil är tyngre (mer tröghet) och har luftbroms; en sportbil reagerar snabbt och backar fortare.
 
 De sista pedalerna, växelspaken eller handbromsen kan inte tas bort medan programmet använder Simulator-block.

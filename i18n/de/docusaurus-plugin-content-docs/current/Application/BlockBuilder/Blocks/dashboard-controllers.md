@@ -19,7 +19,7 @@ Auf dieser Seite:
 - [Schieberegler und Drehknöpfe](#sliders-and-knobs): Schieberegler, Drehknopf
 - [Monitore](#monitor-blocks)
 - [Lenkrad und Pedale](#steering-wheel-and-pedals)
-- [Weitere spezielle Steuerelemente](#other-special-controls): Getriebe, Handbremse, Blinker, Fahrschalter
+- [Weitere spezielle Steuerelemente](#other-special-controls): Getriebe, Handbremse, Blinker, Verteilergetriebe, Fahrschalter
 
 ## Blöcke für alle Steuerelemente {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blöcke der [Blinker](/docs/Application/Dashboard/SpecialControls#turn-signals).
 *Blinker [Steuerelement] [linker Blinker / rechter Blinker / Licht] ist an ?*
 
 - Typ: Werteblock, `true` / `false`
+
+### Verteilergetriebe-Blöcke {#transfer-case-blocks}
+
+Blöcke des [Verteilergetriebes](/docs/Application/Dashboard/SpecialControls#transfer-case). Die zweite Liste im Ereignis- und im Zustandsblock bietet dieselbe Auswahl:
+
+- **2H**, **4H**, **N**, **4L**: Der Wählhebel steht in dieser Stellung;
+- **Allradantrieb**: Der Wählhebel steht auf 4H oder 4L;
+- **Geländeuntersetzung**: Der Wählhebel steht auf 4L;
+- **Sperre vorn**, **Mittelsperre**, **Sperre hinten**: Die Differenzialsperre ist eingelegt.
+
+#### `Verteilergetriebe-Ereignis` (Anfänger) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*wenn Verteilergetriebe [Steuerelement] [2H / 4H / N / 4L / Allradantrieb / Geländeuntersetzung / Sperre vorn / Mittelsperre / Sperre hinten] [wird eingelegt / wird ausgelegt]*: **wird eingelegt** wird ausgeführt, wenn die Auswahl wahr wird (der Wählhebel erreicht die Stellung oder die Sperre wird eingeschaltet), **wird ausgelegt**, wenn sie nicht mehr wahr ist.
+
+- Typ: Ereignisblock
+
+#### `Verteilergetriebe-Zustand (boolesch)` (Anfänger) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*Verteilergetriebe [Steuerelement] [2H / 4H / N / 4L / Allradantrieb / Geländeuntersetzung / Sperre vorn / Mittelsperre / Sperre hinten] ist eingelegt ?*
+
+- Typ: Werteblock, `true` / `false`
+
+#### `Verteilergetriebe-Stellung (Zahl)` (Anfänger) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*Stellung des Verteilergetriebes [Steuerelement]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Stecken Sie ihn in den Anschluss *Verteilergetriebe* des Blocks [fahren](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), damit der Simulator das Verteilergetriebe berücksichtigt.
+
+- Typ: Werteblock
 
 ### Fahrschalter-Blöcke {#train-controller-blocks}
 

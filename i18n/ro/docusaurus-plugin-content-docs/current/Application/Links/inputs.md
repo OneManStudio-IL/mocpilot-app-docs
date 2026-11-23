@@ -34,6 +34,7 @@ Un bloc [Controler](/docs/Application/Links/Blocks/InputBlocks#src-controller) p
 | [Schimbător de viteze](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Treaptă de viteză** sau **Sens (R − / înainte +)** |
 | [Frână de mână](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Frâna de mână trasă** (pornit/oprit) sau **Forța frânei de mână** |
 | [Semnalizare](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Semnalizare (stânga − / dreapta +)**, **Semnalizare stânga**, **Semnalizare dreapta** sau **Lumină** |
+| [Cutie de transfer](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Tracțiune integrală**, **Treaptă redusă**, **Blocarea diferențialului față**, **Blocarea diferențialului central** sau **Blocarea diferențialului spate** (pornit/oprit) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Sus / jos** sau **Stânga / dreapta**: −1, 0 sau +1 |
 | [Buton](/docs/Application/Links/Blocks/InputBlocks#controller-button) | pornit cât timp este apăsat |
 | [Comutator](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | pornit / oprit |

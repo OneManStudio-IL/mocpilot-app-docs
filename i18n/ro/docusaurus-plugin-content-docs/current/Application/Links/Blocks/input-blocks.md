@@ -24,7 +24,7 @@ O comandă din tabloul de bord, afișată după numele ei (**JOY1**, **SLDR1**, 
 - **Controler**: orice comandă din tabloul de bord din lista de mai jos. Monitoarele sunt ieșiri, nu intrări.
 - **Canal**: ce oferă comanda, pentru comenzile cu mai multe canale. Paleta oferă câte un bloc pentru fiecare canal.
 
-Volanul, pedalele, schimbătorul de viteze, frâna de mână, semnalizatoarele și controlerul de tren sunt descrise la [Comenzi speciale](/docs/Application/Dashboard/SpecialControls).
+Volanul, pedalele, schimbătorul de viteze, frâna de mână, semnalizatoarele, cutia de transfer și controlerul de tren sunt descrise la [Comenzi speciale](/docs/Application/Dashboard/SpecialControls).
 
 Dacă comanda este eliminată din tabloul de bord, rândul raportează „Alege un controler al tabloului de bord”. Dacă respectivul canal nu mai există, raportează „Alege ce oferă …” (pentru un joystick: „… nu se mișcă pe această axă”).
 
@@ -88,6 +88,16 @@ Maneta de semnalizare (comandă specială).
 - Semnalizare stânga și Semnalizare dreapta oferă: valoarea 1 cât timp semnalizarea respectivă este pornită (clipind odată cu lampa când clipirea comenzii este activată), altfel 0.
 - Lumină oferă: valoarea 1 cât timp lumina este aprinsă, altfel 0.
 
+### Cutie de transfer {#controller-transfercase}
+
+[Cutia de transfer](/docs/Application/Dashboard/SpecialControls#transfer-case) (comandă specială).
+
+- **Canal**: **Tracțiune integrală** (implicit), **Treaptă redusă**, **Blocarea diferențialului față**, **Blocarea diferențialului central** sau **Blocarea diferențialului spate**.
+- Tracțiune integrală oferă: pornit/oprit, pornit în 4H și 4L.
+- Treaptă redusă oferă: pornit/oprit, pornit în 4L.
+- Fiecare blocare a diferențialului oferă: pornit/oprit, pornit cât timp blocarea respectivă este cuplată.
+- Poziția propriu-zisă (2H, 4H, N, 4L) ajunge la simulator prin setarea **Cutie de transfer** a intrării [Vehicul](#src-vehicle).
+
 ### D-pad {#controller-dpad}
 
 - **Canal**: **Sus / jos** sau **Stânga / dreapta**.
@@ -110,11 +120,12 @@ Maneta de semnalizare (comandă specială).
 
 ## Vehicul {#src-vehicle}
 
-O mașină simulată, condusă de pedalele, schimbătorul de viteze și frâna de mână din tabloul de bord: accelerează, frânează, rulează liber și merge înapoi ca un vehicul adevărat, iar rândul primește viteza sau turația motorului. Paleta arată blocurile Vehicul când tabloul de bord are pedale, schimbător de viteze sau frână de mână, câte un bloc pentru fiecare ieșire, deja legat de prima comandă de fiecare tip.
+O mașină simulată, condusă de pedalele, schimbătorul de viteze, frâna de mână și cutia de transfer din tabloul de bord: accelerează, frânează, rulează liber și merge înapoi ca un vehicul adevărat, iar rândul primește viteza sau turația motorului. Paleta arată blocurile Vehicul când tabloul de bord are pedale, schimbător de viteze sau frână de mână, câte un bloc pentru fiecare ieșire, deja legat de prima comandă de fiecare tip.
 
 - **Pedale**: pedalele din tabloul de bord care conduc vehiculul (obligatoriu).
 - **Schimbător de viteze**: **niciunul** sau un schimbător de viteze din tabloul de bord. Fără el, dacă ții apăsată pedala de frână pe loc, vehiculul merge înapoi.
 - **Frână de mână**: **niciunul** sau o frână de mână din tabloul de bord.
+- **Cutie de transfer**: **niciunul** sau o cutie de transfer din tabloul de bord. În 2H și 4H vehiculul merge ca fără ea, în N nu conduce (rulează liber), în 4L viteza lui este limitată la 40 %.
 - **Tip de vehicul**: **Autoturism** (implicit), **Vehicul off-road**, **Mașină sport** sau **Camion**. Tipurile diferă prin inerție și viteza de mers înapoi; camionul are și frână pneumatică.
 - **Ieșire**:
   - **Viteză** (implicit): valoare −1…1, negativă la mersul înapoi;

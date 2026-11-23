@@ -30,7 +30,7 @@ No hace falta un bucle `repetir siempre`: **conducir** sigue funcionando por sí
 
 ## Bloques {#blocks}
 
-### `… conducir acelerador … freno … marcha … de … freno de mano … bloqueado …` (Principiante) {#block_vehicle_drive}
+### `… conducir acelerador … freno … marcha … de … freno de mano … bloqueado … caja de transferencia …` (Principiante) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ El corazón del simulador. Un bloque en forma de C que conduce el vehículo: cad
 - `marcha`: la marcha seleccionada: `-1` marcha atrás, `0` punto muerto, `1` y superiores hacia delante. Con un control de caja automática en este campo, se usa la posición de su selector (P, R, N, D) y el coche elige la marcha por sí solo en D.
 - `de`: cuántas marchas tiene la caja de cambios (6 por defecto).
 - `freno de mano`: cuánto se tira del freno de mano, de 0 a 100; `bloqueado`: si está bloqueado.
+- `caja de transferencia` (opcional): la posición de la [caja de transferencia](/docs/Application/Dashboard/SpecialControls#transfer-case), normalmente el bloque [posición de la caja de transferencia](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. En 2H y 4H el coche se conduce como sin ella; en N no avanza (rueda por inercia y el freno solo lo frena, sin dar marcha atrás); en 4L su velocidad se limita al 40 %. Déjalo vacío si el modelo no tiene caja de transferencia.
 - Una entrada solo cuenta cuando se coloca un bloque en ella; un número suelto en un campo vacío se ignora (excepto `de`).
 - Solo un bloque **conducir** puede conducir un vehículo a la vez; un segundo bloque para el mismo vehículo omite sus bloques interiores.
 

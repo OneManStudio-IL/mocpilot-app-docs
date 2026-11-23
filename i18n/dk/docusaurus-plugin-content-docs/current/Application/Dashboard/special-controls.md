@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Specialkontroller {#special-controls}
 
-Specialkontroller ser ud og virker som den ægte vare: et rat, pedaler, en gearstang, en håndbremse, en blinklysarm og en lokomotivkontrol. Hver af dem er et separat produkt: køb dem, du har brug for, eller få dem alle med [MocPilot Pro](/docs/Application/Account/Pro).
+Specialkontroller ser ud og virker som den ægte vare: et rat, pedaler, en gearstang, en håndbremse, en blinklysarm, en fordelergearkasse og en lokomotivkontrol. Hver af dem er et separat produkt: køb dem, du har brug for, eller få dem alle med [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Et dashboard med rat, pedaler, gearstang, håndbremse, blinklys og togkontrol" width={900} />
 
@@ -20,6 +20,7 @@ Specialkontroller ser ud og virker som den ægte vare: et rat, pedaler, en gears
 | [Automatisk gearkasse](#gear-shifter) | Gearstang | GEARA | gearvælger: P, R, N, D |
 | [Håndbremse](#handbrake) | Håndbremse | HBRK | kraft, låst |
 | [Blinklys](#turn-signals) | Blinklys | STALK | venstre blinklys, højre blinklys, lys |
+| [Fordelergearkasse](#transfer-case) | Fordelergearkasse | XFER | køremodus: 2H, 4H, N, 4L; differentialespærrer |
 | [Togkontrol](#train-controller) | Togkontrol | TRTHR | køretrin, retning, trækkraft |
 
 **Drejeknap** er ikke et separat produkt: den følger med alle betalte temaer. Se [Kontroltyper](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Nogle udseender sætter også accentfarven, så den passer, når du vælger dem.
 ## Indstillinger for alle specialkontroller {#settings-of-all-special-controls}
 
 - **Udseende** (fanen Stil): se ovenfor.
-- **Accentfarve** (fanen Stil): gearstang, håndbremse, blinklys og togkontrol.
+- **Accentfarve** (fanen Stil): gearstang, håndbremse, blinklys, fordelergearkasse og togkontrol.
 - **Lås controlleren** og **Interaktivitet** (fanen Indstillinger), som på alle kontroller. Se [Kontrollens egenskaber](/docs/Application/Dashboard/ControlProperties).
 
 ## Rat {#steering-wheel}
@@ -138,6 +139,45 @@ En blinklysarm med lyskontakt.
 
 **Hurtige forbindelser**: inputtet [Blinklys](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) med kanalerne **Blinklys (venstre − / højre +)** (to lys med modsat polaritet på én port), **Venstre blinklys**, **Højre blinklys** og **Lys**.
 
+## Fordelergearkasse {#transfer-case}
+
+Fordelergearkassen i en terrængående bil bestemmer, hvilke hjul motoren trækker. Kontrollen har en vælger med fire positioner og kontakter til differentialespærrerne:
+
+| Position | Betydning |
+|---|---|
+| **2H** | tohjulstræk: kun baghjulene trækker, til almindelig vej |
+| **4H** | firehjulstræk: alle hjul trækker, til mudder, sand og sne |
+| **N** | neutral: motoren er koblet fra hjulene |
+| **4L** | firehjulstræk med **lavgear**: langsomt og kraftigt, til stejle stigninger og rock crawling |
+
+**Differentialespærrer** får hjulene på en aksel (**for**, **bag**) eller de to aksler (**center**) til at dreje sammen, så et hjul, der har mistet grebet, ikke bare spinner.
+
+<Screenshot name="transfer-case-dashboard" alt="Fordelergearkassen på et dashboard: vælgeren, spærrekontakterne og displayet" width={700} />
+
+### Sådan bruger du den {#transfer-case-use}
+
+- **Vælger**: positioner oppefra og ned: 2H, 4H, N, 4L. Afhængigt af udseendet er det en **skyder** (en riflet knap i et spor: skub den langs sporet; når du slipper, springer den til den nærmeste position) eller en **drejeknap** (drej den; den klikker på plads i positionerne). Sporet er lige, så fra 4H kommer du kun til 4L gennem N, som i en rigtig fordelergearkasse med håndtag.
+- **Spærrer**: en række kontakter til for-, center- og bagspærren: vippekontakter med lampe eller låsende knapper, hvis ring lyser i accentfarven, afhængigt af udseendet. Tryk på en kontakt for at slå spærren til, og tryk igen for at slå den fra.
+- **Display**: mærkaterne 2H, 4H, N og 4L ved vælgeren ændrer sig ikke; displayet viser den valgte position og de spærrer, der er slået til (**F**, **C**, **R**), i accentfarven.
+
+### Indstillinger {#transfer-case-settings}
+
+På fanen **Indstillinger**:
+
+- **Neutral (N)** (slået til som standard): slå den fra for en vælger med kun 2H, 4H og 4L.
+- **Fordifferentialespærre** (til), **Centerdifferentialespærre** (fra), **Bagdifferentialespærre** (til): hvilke spærrekontakter kontrollen viser. Er der færre end tre, rykker de ind mod midten af rækken.
+- **For- og centerspærre kun i 4WD** (til): for- og centerspærren virker kun i 4H og 4L, som i en rigtig bil. I 2H bliver et tryk på dem afvist (kontakten blinker rødt), og et skift til 2H slår dem fra. N lader dem være, som de er. Bagspærren virker i alle positioner.
+
+### Værdier {#transfer-case-values}
+
+- **Positionen**: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Firehjulstræk**: til i 4H og 4L. **Lavgear**: til i 4L.
+- Hver spærre: til eller fra.
+
+**Udseender**: der er et udseende til hvert tema, opkaldt efter det: Klassisk, Klassisk 4x4, Terrængående og et til hvert betalt tema. Nogle udseender har en skyder, andre en drejeknap. **Hologram** tegner hele kontrollen som en ensfarvet kontur i accentfarven.
+
+**Hurtige forbindelser**: inputtet [Fordelergearkasse](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) med kanalerne **Firehjulstræk**, **Lavgear**, **Fordifferentialespærre**, **Centerdifferentialespærre** og **Bagdifferentialespærre** (hver til/fra, som en kontakt). Inputtet [Køretøj](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) tager hele fordelergearkassen i sin indstilling **Fordelergearkasse**.
+
 ## Togkontrol {#train-controller}
 
 En lokomotivkontrol med et regulatorhåndtag og en retningsvælger.
@@ -162,6 +202,7 @@ Hver specialkontrol tilføjer sine egne blokke til kategorien **Skærmkontroller
 | Gearkasser | *når gearkasse … skifter gear / skifter op / skifter ned / skifter til frigear / bakgear / parkering* | *gear …*, *er gearkasse … i frigear / i bakgear / i et fremadgear / i parkering?*, *gear af …* |
 | Håndbremse | *når håndbremse … trukket / låst / udløst / sluppet* | *håndbremsekraft …*, *er håndbremse … låst / udløst / trukket?* |
 | Blinklys | *når blinklys … venstre blinklys / højre blinklys / lys tændes / slukkes* | *blinklys … venstre blinklys / højre blinklys / lys er tændt?* |
+| Fordelergearkasse | *når fordelergearkasse … 2H / 4H / N / 4L / firehjulstræk / lavgear / forreste spærre / centerspærre / bageste spærre slås til / slås fra* | *fordelergearkasse … [det samme] er slået til?*, *fordelergearkassens position …* |
 | Togkontrol | *når køreregulator … trin ændret / hævet / sænket, regulator lukket, retningsvælger flyttet, håndtag sluppet* | *køreregulator … trækkraft / køretrin / retningsvælger*, *er køreregulator … i fremad / i bak / i neutral / på trin 0?* |
 
 Rattet og pedalerne har også blokken *lyd … af …*: den vælger en af deres lyde til blokkene under **Lyde**. Detaljer: [Skærmkontrollere](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Rattet og pedalerne har også blokken *lyd … af …*: den vælger en af deres 
 
 Specialkontroller giver kun rå input. **Køretøjssimulatoren** gør pedalerne, gearstangen og håndbremsen til en model, der kører som en bil: den accelererer med inerti, triller, bremser, bakker, skifter gear i D og holder stille på håndbremsen.
 
-- **Hurtige forbindelser**: brug inputtet [Køretøj](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Vælg **Pedaler**, **Gearstang** og **Håndbremse** fra dit dashboard, **Køretøjstype** (Bil, Terrængående køretøj, Sportsvogn, Lastbil) og **Output**: **Hastighed**, **Motoromdrejninger (rpm)**, **Bremser** eller **På håndbremsen**.
-- **Logikblokke**: når dashboardet har pedaler, en gearstang eller en håndbremse, vises kategorien **Simulator**. Opret et køretøj der (**Opret køretøj**), og sæt blokken *kør* under en hændelse. Sæt værdier i dens stik: *speeder*, *bremse*, *gear*, *af* (antal gear; blokken *gear af …* passer her), *håndbremse* og *låst*. Andre Simulator-blokke sætter køretøjstypen, motorens inerti og bakhastigheden, læser hastigheden, motoromdrejningerne og gearet og reagerer, når køretøjet starter, stopper, bremser eller skifter gear.
+- **Hurtige forbindelser**: brug inputtet [Køretøj](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Vælg **Pedaler**, **Gearstang**, **Håndbremse** og **Fordelergearkasse** fra dit dashboard, **Køretøjstype** (Bil, Terrængående køretøj, Sportsvogn, Lastbil) og **Output**: **Hastighed**, **Motoromdrejninger (rpm)**, **Bremser** eller **På håndbremsen**.
+- **Logikblokke**: når dashboardet har pedaler, en gearstang eller en håndbremse, vises kategorien **Simulator**. Opret et køretøj der (**Opret køretøj**), og sæt blokken *kør* under en hændelse. Sæt værdier i dens stik: *speeder*, *bremse*, *gear*, *af* (antal gear; blokken *gear af …* passer her), *håndbremse*, *låst* og *fordelergearkasse* (blokken *fordelergearkassens position …* passer her; lad stikket være tomt, hvis modellen ikke har en fordelergearkasse). Andre Simulator-blokke sætter køretøjstypen, motorens inerti og bakhastigheden, læser hastigheden, motoromdrejningerne og gearet og reagerer, når køretøjet starter, stopper, bremser eller skifter gear.
 
 Sådan kører simulatoren:
 
@@ -180,6 +221,7 @@ Sådan kører simulatoren:
 - **Manuel gearkasse**: R bakker, N kører ikke. Hvert gear kan eventuelt begrænse topfarten.
 - **Automatisk gearkasse**: R bakker, N kører ikke, P holder modellen som en låst håndbremse. I D skifter simulatoren selv op og ned og viser gearet på gearvælgeren.
 - **Håndbremse**: dens kraft lægges til bremsningen; en låst håndbremse kan holde modellen.
+- **Fordelergearkasse**: 2H og 4H kører som uden fordelergearkasse. **N** kører ikke: modellen triller, og bremsen sænker kun farten uden at bakke. **4L** begrænser farten til 40 % fremad og i bak, med tilsvarende højere motoromdrejninger; en model, der kører hurtigere, sænker farten til grænsen, når du skifter til 4L. Differentialespærrerne ændrer ikke, hvordan simulatoren kører: de er kun output fra kontrollen.
 - **Køretøjstype**: en lastbil er tungere (mere inerti) og har luftbremse; en sportsvogn reagerer hurtigt og bakker hurtigere.
 
 De sidste pedaler, den sidste gearstang eller håndbremse kan ikke slettes, mens programmet bruger Simulator-blokke.

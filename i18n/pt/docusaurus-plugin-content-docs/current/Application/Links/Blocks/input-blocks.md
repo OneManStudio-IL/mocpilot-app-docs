@@ -24,7 +24,7 @@ Um controle do seu painel, mostrado pelo nome (**JOY1**, **SLDR1**, **BTN2**…)
 - **Controlador**: qualquer controle do painel listado abaixo. Os monitores são saídas, não entradas.
 - **Canal**: o que o controle fornece, nos controles com vários canais. A paleta oferece um bloco por canal.
 
-O volante, os pedais, a alavanca de câmbio, o freio de mão, as setas e o controlador do trem estão descritos em [Controles especiais](/docs/Application/Dashboard/SpecialControls).
+O volante, os pedais, a alavanca de câmbio, o freio de mão, as setas, a caixa de transferência e o controlador do trem estão descritos em [Controles especiais](/docs/Application/Dashboard/SpecialControls).
 
 Se o controle for removido do painel, a linha informa "Escolha um controlador do painel". Se o canal dele não existir mais, ela informa "Escolha o que … fornece" (para um joystick: "… não se move neste eixo").
 
@@ -88,6 +88,16 @@ A alavanca das setas (controle especial).
 - Seta esquerda e Seta direita fornecem: valor 1 enquanto aquela seta está ligada (piscando junto com a lâmpada quando o pisca do controle está ativado), caso contrário 0.
 - Farol fornece: valor 1 enquanto o farol está aceso, caso contrário 0.
 
+### Caixa de transferência {#controller-transfercase}
+
+A [caixa de transferência](/docs/Application/Dashboard/SpecialControls#transfer-case) (controle especial).
+
+- **Canal**: **Tração nas quatro rodas** (padrão), **Reduzida**, **Bloqueio do diferencial dianteiro**, **Bloqueio do diferencial central** ou **Bloqueio do diferencial traseiro**.
+- Tração nas quatro rodas fornece: liga/desliga, ligado em 4H e 4L.
+- Reduzida fornece: liga/desliga, ligado em 4L.
+- Cada bloqueio do diferencial fornece: liga/desliga, ligado enquanto aquele bloqueio está engatado.
+- A posição em si (2H, 4H, N, 4L) vai para o simulador pela configuração **Caixa de transferência** da entrada [Veículo](#src-vehicle).
+
 ### Direcional {#controller-dpad}
 
 - **Canal**: **Cima / baixo** ou **Esquerda / direita**.
@@ -110,11 +120,12 @@ A alavanca das setas (controle especial).
 
 ## Veículo {#src-vehicle}
 
-Um carro simulado controlado pelos pedais, pela alavanca de câmbio e pelo freio de mão do painel: ele acelera, freia, segue embalado e dá ré como um veículo de verdade, e a linha recebe a velocidade ou a rotação do motor dele. A paleta mostra os blocos Veículo quando o painel tem pedais, alavanca de câmbio ou freio de mão, um bloco por saída, já ligado ao primeiro controle de cada tipo.
+Um carro simulado controlado pelos pedais, pela alavanca de câmbio, pelo freio de mão e pela caixa de transferência do painel: ele acelera, freia, segue embalado e dá ré como um veículo de verdade, e a linha recebe a velocidade ou a rotação do motor dele. A paleta mostra os blocos Veículo quando o painel tem pedais, alavanca de câmbio ou freio de mão, um bloco por saída, já ligado ao primeiro controle de cada tipo.
 
 - **Pedais**: os pedais do painel que conduzem o veículo (obrigatório).
 - **Alavanca de câmbio**: **nenhum** ou uma alavanca de câmbio do painel. Sem ela, segurar o pedal do freio com o veículo parado faz ele andar para trás.
 - **Freio de mão**: **nenhum** ou um freio de mão do painel.
+- **Caixa de transferência**: **nenhum** ou uma caixa de transferência do painel. Em 2H e 4H, o veículo anda como sem ela; em N, não anda (segue embalado); em 4L, a velocidade fica limitada a 40 %.
 - **Tipo de veículo**: **Carro** (padrão), **Veículo off-road**, **Carro esportivo** ou **Caminhão**. Os tipos diferem em inércia e velocidade de ré; o caminhão também tem freio a ar.
 - **Saída**:
   - **Velocidade** (padrão): valor −1…1, negativo em marcha a ré;

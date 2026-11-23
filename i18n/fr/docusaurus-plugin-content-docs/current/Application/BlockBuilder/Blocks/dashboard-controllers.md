@@ -19,7 +19,7 @@ Sur cette page :
 - [Curseurs et boutons rotatifs](#sliders-and-knobs) : curseur, bouton rotatif
 - [Moniteurs](#monitor-blocks)
 - [Volant et pédales](#steering-wheel-and-pedals)
-- [Autres commandes spéciales](#other-special-controls) : boîte de vitesses, frein à main, clignotants, manipulateur de traction
+- [Autres commandes spéciales](#other-special-controls) : boîte de vitesses, frein à main, clignotants, boîte de transfert, manipulateur de traction
 
 ## Blocs pour toutes les commandes {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blocs des [clignotants](/docs/Application/Dashboard/SpecialControls#turn-signals
 *clignotants [commande] [clignotant gauche / clignotant droit / feux] est allumé ?*
 
 - Type : bloc de valeur, `true` / `false`
+
+### Blocs de la boîte de transfert {#transfer-case-blocks}
+
+Blocs de la [boîte de transfert](/docs/Application/Dashboard/SpecialControls#transfer-case). La deuxième liste des blocs d’événement et d’état propose les mêmes choix :
+
+- **2H**, **4H**, **N**, **4L** : le sélecteur est sur cette position ;
+- **transmission intégrale** : le sélecteur est sur 4H ou 4L ;
+- **gamme courte** : le sélecteur est sur 4L ;
+- **blocage avant**, **blocage central**, **blocage arrière** : le blocage de différentiel est enclenché.
+
+#### `Événement de la boîte de transfert` (Débutant) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*quand boîte de transfert [commande] [2H / 4H / N / 4L / transmission intégrale / gamme courte / blocage avant / blocage central / blocage arrière] [s'enclenche / se désenclenche]* : **s'enclenche** s’exécute quand le choix devient vrai (le sélecteur atteint la position ou le blocage est activé), **se désenclenche** quand il cesse de l’être.
+
+- Type : bloc d’événement
+
+#### `État de la boîte de transfert (booléen)` (Débutant) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*boîte de transfert [commande] [2H / 4H / N / 4L / transmission intégrale / gamme courte / blocage avant / blocage central / blocage arrière] est enclenché ?*
+
+- Type : bloc de valeur, `true` / `false`
+
+#### `Position de la boîte de transfert (nombre)` (Débutant) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*position de la boîte de transfert [commande]* : 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Branchez-le dans l’emplacement *boîte de transfert* du bloc [conduire](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) pour que le simulateur tienne compte de la boîte de transfert.
+
+- Type : bloc de valeur
 
 ### Blocs du manipulateur de traction {#train-controller-blocks}
 

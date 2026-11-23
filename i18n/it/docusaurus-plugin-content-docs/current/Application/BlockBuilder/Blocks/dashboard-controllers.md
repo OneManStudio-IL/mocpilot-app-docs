@@ -19,7 +19,7 @@ In questa pagina:
 - [Cursori e manopole](#sliders-and-knobs): cursore, manopola
 - [Monitor](#monitor-blocks)
 - [Volante e pedali](#steering-wheel-and-pedals)
-- [Altri controlli speciali](#other-special-controls): cambio, freno a mano, frecce, manipolatore del treno
+- [Altri controlli speciali](#other-special-controls): cambio, freno a mano, frecce, riduttore, manipolatore del treno
 
 ## Blocchi per tutti i controlli {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blocchi delle [frecce](/docs/Application/Dashboard/SpecialControls#turn-signals)
 *frecce [controllo] [freccia sinistra / freccia destra / luci] è acceso ?*
 
 - Tipo: blocco valore, `true` / `false`
+
+### Blocchi del riduttore {#transfer-case-blocks}
+
+Blocchi del [riduttore](/docs/Application/Dashboard/SpecialControls#transfer-case). Il secondo elenco dei blocchi evento e stato offre le stesse scelte:
+
+- **2H**, **4H**, **N**, **4L**: il selettore è in questa posizione;
+- **trazione integrale**: il selettore è in 4H o 4L;
+- **ridotte**: il selettore è in 4L;
+- **bloccaggio anteriore**, **bloccaggio centrale**, **bloccaggio posteriore**: il bloccaggio del differenziale è inserito.
+
+#### `Evento del riduttore` (Principiante) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*quando riduttore [controllo] [2H / 4H / N / 4L / trazione integrale / ridotte / bloccaggio anteriore / bloccaggio centrale / bloccaggio posteriore] [si inserisce / si disinserisce]*: **si inserisce** viene eseguito quando la scelta diventa vera (il selettore raggiunge la posizione o il bloccaggio viene attivato), **si disinserisce** quando smette di esserlo.
+
+- Tipo: blocco evento
+
+#### `Stato del riduttore (booleano)` (Principiante) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*riduttore [controllo] [2H / 4H / N / 4L / trazione integrale / ridotte / bloccaggio anteriore / bloccaggio centrale / bloccaggio posteriore] è inserito ?*
+
+- Tipo: blocco valore, `true` / `false`
+
+#### `Posizione del riduttore (numero)` (Principiante) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*posizione del riduttore [controllo]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Inseriscilo nello spazio *riduttore* del blocco [guida](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) perché il simulatore usi il riduttore.
+
+- Tipo: blocco valore
 
 ### Blocchi del manipolatore del treno {#train-controller-blocks}
 

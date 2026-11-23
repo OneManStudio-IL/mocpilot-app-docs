@@ -24,7 +24,7 @@ En kontroll från din instrumentpanel, som visas med sitt namn (**JOY1**, **SLDR
 - **Kontroll**: någon av kontrollerna på instrumentpanelen nedan. Monitorer är utgångar, inte ingångar.
 - **Kanal**: vad kontrollen ger, för kontroller med flera kanaler. Paletten erbjuder ett block per kanal.
 
-Ratten, pedalerna, växelspaken, handbromsen, blinkersen och tågreglaget beskrivs under [Specialkontroller](/docs/Application/Dashboard/SpecialControls).
+Ratten, pedalerna, växelspaken, handbromsen, blinkersen, fördelningslådan och tågreglaget beskrivs under [Specialkontroller](/docs/Application/Dashboard/SpecialControls).
 
 Om kontrollen tas bort från instrumentpanelen rapporterar raden ”Välj en kontroll på instrumentpanelen”. Om dess kanal inte längre finns rapporterar den ”Välj vad … ger” (för en joystick: ”… rör sig inte längs den här axeln”).
 
@@ -88,6 +88,16 @@ Blinkersspaken (specialkontroll).
 - Vänster blinker och Höger blinker ger: värde 1 medan blinkern är på (blinkar i takt med lampan när kontrollens blinkning är påslagen), annars 0.
 - Ljus ger: värde 1 medan ljuset är på, annars 0.
 
+### Fördelningslåda {#controller-transfercase}
+
+[Fördelningslådan](/docs/Application/Dashboard/SpecialControls#transfer-case) (specialkontroll).
+
+- **Kanal**: **Fyrhjulsdrift** (standard), **Lågväxel**, **Framdifferentialspärr**, **Mittdifferentialspärr** eller **Bakdifferentialspärr**.
+- Fyrhjulsdrift ger: på/av, på i 4H och 4L.
+- Lågväxel ger: på/av, på i 4L.
+- Varje differentialspärr ger: på/av, på medan den spärren är inkopplad.
+- Själva läget (2H, 4H, N, 4L) går till simulatorn via inställningen **Fördelningslåda** i ingången [Fordon](#src-vehicle).
+
 ### Riktad pad {#controller-dpad}
 
 - **Kanal**: **Upp / ner** eller **Vänster / höger**.
@@ -110,11 +120,12 @@ Blinkersspaken (specialkontroll).
 
 ## Fordon {#src-vehicle}
 
-En simulerad bil som styrs av instrumentpanelens pedaler, växelspak och handbroms: den accelererar, bromsar, rullar och backar som ett riktigt fordon, och raden får dess hastighet eller motorvarvtal. Paletten visar Fordon-block när instrumentpanelen har pedaler, en växelspak eller en handbroms, ett block per utgång, redan kopplat till den första kontrollen av varje sort.
+En simulerad bil som styrs av instrumentpanelens pedaler, växelspak, handbroms och fördelningslåda: den accelererar, bromsar, rullar och backar som ett riktigt fordon, och raden får dess hastighet eller motorvarvtal. Paletten visar Fordon-block när instrumentpanelen har pedaler, en växelspak eller en handbroms, ett block per utgång, redan kopplat till den första kontrollen av varje sort.
 
 - **Pedaler**: pedalerna på instrumentpanelen som styr fordonet (krävs).
 - **Växelspak**: **ingen** eller en växelspak på instrumentpanelen. Utan växelspak backar fordonet när du håller in bromspedalen vid stillastående.
 - **Handbroms**: **ingen** eller en handbroms på instrumentpanelen.
+- **Fördelningslåda**: **ingen** eller en fördelningslåda på instrumentpanelen. I 2H och 4H kör fordonet som utan den, i N kör det inte (det rullar fritt), i 4L begränsas hastigheten till 40 %.
 - **Fordonstyp**: **Personbil** (standard), **Terrängfordon**, **Sportbil** eller **Lastbil**. Typerna skiljer sig i tröghet och backhastighet; lastbilen har dessutom luftbroms.
 - **Utgång**:
   - **Hastighet** (standard): värde −1…1, negativt vid backning;

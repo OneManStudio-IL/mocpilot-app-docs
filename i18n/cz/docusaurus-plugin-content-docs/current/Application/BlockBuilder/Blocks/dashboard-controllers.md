@@ -19,7 +19,7 @@ Na této stránce:
 - [Posuvníky a otočné ovladače](#sliders-and-knobs): posuvník, otočný ovladač
 - [Monitory](#monitor-blocks)
 - [Volant a pedály](#steering-wheel-and-pedals)
-- [Další speciální ovládací prvky](#other-special-controls): převodovka, ruční brzda, blinkry, jízdní kontrolér
+- [Další speciální ovládací prvky](#other-special-controls): převodovka, ruční brzda, blinkry, rozdělovací převodovka, jízdní kontrolér
 
 ## Bloky pro všechny ovládací prvky {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Bloky [blinkrů](/docs/Application/Dashboard/SpecialControls#turn-signals). Vid�
 *blinkry [prvek] [levý blinkr / pravý blinkr / světla] je zapnutý ?*
 
 - Typ: hodnotový blok, `true` / `false`
+
+### Bloky rozdělovací převodovky {#transfer-case-blocks}
+
+Bloky [rozdělovací převodovky](/docs/Application/Dashboard/SpecialControls#transfer-case). Druhý seznam v blocích události a stavu nabízí stejné volby:
+
+- **2H**, **4H**, **N**, **4L**: volič je v této poloze;
+- **pohon všech kol**: volič je ve 4H nebo 4L;
+- **redukce**: volič je ve 4L;
+- **přední uzávěrka**, **středová uzávěrka**, **zadní uzávěrka**: uzávěrka diferenciálu je zapnutá.
+
+#### `Událost rozdělovací převodovky` (Začátečník) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*když rozdělovací převodovka [prvek] [2H / 4H / N / 4L / pohon všech kol / redukce / přední uzávěrka / středová uzávěrka / zadní uzávěrka] [se zapne / se vypne]*: **se zapne** se spustí, když volba začne platit (volič dosáhne polohy nebo se uzávěrka zapne), **se vypne**, když platit přestane.
+
+- Typ: blok události
+
+#### `Stav rozdělovací převodovky (boolean)` (Začátečník) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*rozdělovací převodovka [prvek] [2H / 4H / N / 4L / pohon všech kol / redukce / přední uzávěrka / středová uzávěrka / zadní uzávěrka] je zapnuto ?*
+
+- Typ: hodnotový blok, `true` / `false`
+
+#### `Poloha rozdělovací převodovky (float)` (Začátečník) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*poloha rozdělovací převodovky [prvek]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Zapojte ho do vstupu *rozdělovací převodovka* bloku [jízda](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive), aby simulátor rozdělovací převodovku používal.
+
+- Typ: hodnotový blok
 
 ### Bloky jízdního kontroléru {#train-controller-blocks}
 

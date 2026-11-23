@@ -34,6 +34,7 @@ Un blocco [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller
 | [Leva del cambio](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Marcia** o **Direzione (R − / avanti +)** |
 | [Freno a mano](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Freno a mano tirato** (acceso/spento) o **Forza del freno a mano** |
 | [Frecce](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Frecce (sinistra − / destra +)**, **Freccia sinistra**, **Freccia destra** o **Luce** |
+| [Riduttore](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Trazione integrale**, **Ridotte**, **Bloccaggio del differenziale anteriore**, **Bloccaggio del differenziale centrale** o **Bloccaggio del differenziale posteriore** (acceso/spento) |
 | [Pad direzionale](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Su / giù** o **Sinistra / destra**: −1, 0 o +1 |
 | [Pulsante](/docs/Application/Links/Blocks/InputBlocks#controller-button) | acceso finché è premuto |
 | [Interruttore](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | acceso / spento |

@@ -30,7 +30,7 @@ Nu este nevoie de o buclă `repeta mereu`: **conduce** rulează singur până c�
 
 ## Blocuri {#blocks}
 
-### `… conduce accelerație … frână … treaptă … din … frână de mână … blocată …` (Începător) {#block_vehicle_drive}
+### `… conduce accelerație … frână … treaptă … din … frână de mână … blocată … cutia de transfer …` (Începător) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Inima simulatorului. Un bloc C care conduce vehiculul: la fiecare 0,1 s își ci
 - `treaptă`: treapta selectată: `-1` marșarier, `0` neutru, `1` și mai sus înainte. Cu o comandă de cutie automată în acest câmp, se folosește în schimb poziția selectorului ei (P, R, N, D), iar în D mașina își alege singură treapta.
 - `din`: câte trepte are cutia de viteze (implicit 6).
 - `frână de mână`: cât de tare este trasă frâna de mână, de la 0 la 100; `blocată`: dacă este blocată.
+- `cutia de transfer` (opțional): poziția [cutiei de transfer](/docs/Application/Dashboard/SpecialControls#transfer-case), de obicei blocul [poziția cutiei de transfer](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. În 2H și 4H mașina merge ca fără ea; în N nu conduce (rulează liber, iar frâna doar o încetinește, fără să meargă înapoi); în 4L viteza ei este limitată la 40 %. Lasă câmpul gol dacă modelul nu are cutie de transfer.
 - O intrare contează doar când în ea este pus un bloc; un număr simplu într-un câmp gol este ignorat (cu excepția lui `din`).
 - Un singur bloc **conduce** poate conduce un vehicul la un moment dat; un al doilea pentru același vehicul își sare blocurile interioare.
 

@@ -34,6 +34,7 @@ Blok [Ovládač](/docs/Application/Links/Blocks/InputBlocks#src-controller) beri
 | [Radiaca páka](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Prevodový stupeň** alebo **Smer (R − / dopredu +)** |
 | [Ručná brzda](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Ručná brzda zatiahnutá** (zap./vyp.) alebo **Sila ručnej brzdy** |
 | [Smerovky](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Smerovky (ľavá − / pravá +)**, **Ľavá smerovka**, **Pravá smerovka** alebo **Svetlo** |
+| [Rozdeľovacia prevodovka](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Pohon všetkých kolies**, **Redukcia**, **Uzávierka predného diferenciálu**, **Uzávierka stredového diferenciálu** alebo **Uzávierka zadného diferenciálu** (zapnuté/vypnuté) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Hore / dole** alebo **Vľavo / vpravo**: −1, 0 alebo +1 |
 | [Tlačidlo](/docs/Application/Links/Blocks/InputBlocks#controller-button) | zapnuté, kým je stlačené |
 | [Spínač](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | zap. / vyp. |

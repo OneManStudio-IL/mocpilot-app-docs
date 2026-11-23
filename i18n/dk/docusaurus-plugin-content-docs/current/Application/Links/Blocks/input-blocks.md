@@ -24,7 +24,7 @@ En kontrol fra dit dashboard, vist med sit navn (**JOY1**, **SLDR1**, **BTN2**�
 - **Controller**: enhver af de kontroller på dashboardet, der er nævnt nedenfor. Monitorer er output, ikke input.
 - **Kanal**: hvad kontrollen giver, for kontroller med flere kanaler. Paletten tilbyder én blok pr. kanal.
 
-Rattet, pedalerne, gearstangen, håndbremsen, blinklysene og køreregulatoren er beskrevet under [Særlige kontroller](/docs/Application/Dashboard/SpecialControls).
+Rattet, pedalerne, gearstangen, håndbremsen, blinklysene, fordelergearkassen og køreregulatoren er beskrevet under [Særlige kontroller](/docs/Application/Dashboard/SpecialControls).
 
 Fjernes kontrollen fra dashboardet, melder rækken »Vælg en dashboardcontroller«. Findes kanalen ikke længere, melder den »Vælg, hvad … giver« (for et joystick: »… bevæger sig ikke langs denne akse«).
 
@@ -88,6 +88,16 @@ Blinklysarmen (særlig kontrol).
 - Venstre blinklys og Højre blinklys giver: værdi 1, mens det pågældende blinklys er tændt (blinker i takt med lampen, når kontrollens blink er slået til), ellers 0.
 - Lys giver: værdi 1, mens lyset er tændt, ellers 0.
 
+### Fordelergearkasse {#controller-transfercase}
+
+[Fordelergearkassen](/docs/Application/Dashboard/SpecialControls#transfer-case) (særlig kontrol).
+
+- **Kanal**: **Firehjulstræk** (standard), **Lavgear**, **Fordifferentialespærre**, **Centerdifferentialespærre** eller **Bagdifferentialespærre**.
+- Firehjulstræk giver: til/fra, til i 4H og 4L.
+- Lavgear giver: til/fra, til i 4L.
+- Hver differentialespærre giver: til/fra, til, mens den pågældende spærre er slået til.
+- Selve positionen (2H, 4H, N, 4L) går til simulatoren via indstillingen **Fordelergearkasse** i inputtet [Køretøj](#src-vehicle).
+
 ### Retningspad {#controller-dpad}
 
 - **Kanal**: **Op / ned** eller **Venstre / højre**.
@@ -110,11 +120,12 @@ Blinklysarmen (særlig kontrol).
 
 ## Køretøj {#src-vehicle}
 
-En simuleret bil, der styres af dashboardets pedaler, gearstang og håndbremse: Den accelererer, bremser, ruller frit og bakker som et rigtigt køretøj, og rækken får dens hastighed eller motoromdrejninger. Paletten viser Køretøj-blokke, når dashboardet har pedaler, en gearstang eller en håndbremse – én blok pr. output, allerede koblet til den første kontrol af hver slags.
+En simuleret bil, der styres af dashboardets pedaler, gearstang, håndbremse og fordelergearkasse: Den accelererer, bremser, ruller frit og bakker som et rigtigt køretøj, og rækken får dens hastighed eller motoromdrejninger. Paletten viser Køretøj-blokke, når dashboardet har pedaler, en gearstang eller en håndbremse – én blok pr. output, allerede koblet til den første kontrol af hver slags.
 
 - **Pedaler**: de pedaler på dashboardet, der styrer køretøjet (påkrævet).
 - **Gearstang**: **ingen** eller en gearstang på dashboardet. Uden gearstang bakker køretøjet, når du holder bremsepedalen nede i stilstand.
 - **Håndbremse**: **ingen** eller en håndbremse på dashboardet.
+- **Fordelergearkasse**: **ingen** eller en fordelergearkasse på dashboardet. I 2H og 4H kører køretøjet som uden fordelergearkasse, i N kører det ikke (det triller), i 4L er farten begrænset til 40 %.
 - **Køretøjstype**: **Bil** (standard), **Terrængående køretøj**, **Sportsvogn** eller **Lastbil**. Typerne adskiller sig i inerti og hastighed ved bakning; lastbilen har desuden trykluftbremse.
 - **Output**:
   - **Hastighed** (standard): værdi −1…1, negativ ved bakning;

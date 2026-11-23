@@ -8,7 +8,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 # Commandes spéciales {#special-controls}
 
-Les commandes spéciales ressemblent aux vraies et fonctionnent comme elles : un volant, des pédales, un levier de vitesses, un frein à main, un commodo de clignotants et un manipulateur de locomotive. Chacune est un produit à part : achetez celles dont vous avez besoin ou obtenez-les toutes avec [MocPilot Pro](/docs/Application/Account/Pro).
+Les commandes spéciales ressemblent aux vraies et fonctionnent comme elles : un volant, des pédales, un levier de vitesses, un frein à main, un commodo de clignotants, une boîte de transfert et un manipulateur de locomotive. Chacune est un produit à part : achetez celles dont vous avez besoin ou obtenez-les toutes avec [MocPilot Pro](/docs/Application/Account/Pro).
 
 <Screenshot name="special-controls-dashboard" alt="Un tableau de bord avec un volant, des pédales, un levier de vitesses, un frein à main, des clignotants et un manipulateur de train" width={900} />
 
@@ -20,6 +20,7 @@ Les commandes spéciales ressemblent aux vraies et fonctionnent comme elles : un
 | [Boîte automatique](#gear-shifter) | Levier de vitesses | GEARA | sélecteur : P, R, N, D |
 | [Frein à main](#handbrake) | Frein à main | HBRK | force, serré |
 | [Clignotants](#turn-signals) | Clignotants | STALK | clignotant gauche, clignotant droit, lumière |
+| [Boîte de transfert](#transfer-case) | Boîte de transfert | XFER | mode de transmission : 2H, 4H, N, 4L ; blocages de différentiel |
 | [Manipulateur de train](#train-controller) | Manipulateur de train | TRTHR | cran de puissance, sens, traction |
 
 Le **Bouton rotatif** n'est pas un produit à part : il est fourni avec chaque thème payant. Voir [Types de commandes](/docs/Application/Dashboard/ControlTypes#rotary-knob).
@@ -42,7 +43,7 @@ Certaines apparences règlent aussi la couleur d'accent qui leur convient quand 
 ## Réglages communs à toutes les commandes spéciales {#settings-of-all-special-controls}
 
 - **Apparence** (onglet Style) : voir ci-dessus.
-- **Couleur d'accent** (onglet Style) : levier de vitesses, frein à main, clignotants et manipulateur de train.
+- **Couleur d'accent** (onglet Style) : levier de vitesses, frein à main, clignotants, boîte de transfert et manipulateur de train.
 - **Verrouiller le contrôleur** et **Interactivité** (onglet Paramètres), comme pour toutes les commandes. Voir [Propriétés des commandes](/docs/Application/Dashboard/ControlProperties).
 
 ## Volant {#steering-wheel}
@@ -138,6 +139,45 @@ Un commodo de clignotants avec un interrupteur d'éclairage.
 
 **Liens rapides** : l'entrée [Clignotants](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) avec les canaux **Clignotants (gauche − / droite +)** (deux lumières de polarité opposée sur un même port), **Clignotant gauche**, **Clignotant droit** et **Lumière**.
 
+## Boîte de transfert {#transfer-case}
+
+La boîte de transfert d'un véhicule tout-terrain choisit les roues entraînées par le moteur. La commande comporte un sélecteur à quatre positions et des interrupteurs pour les blocages de différentiel :
+
+| Position | Signification |
+|---|---|
+| **2H** | deux roues motrices : seules les roues arrière sont entraînées, pour les routes normales |
+| **4H** | quatre roues motrices : toutes les roues sont entraînées, pour la boue, le sable et la neige |
+| **N** | point mort : le moteur est désaccouplé des roues |
+| **4L** | quatre roues motrices en **gamme courte** : lent et puissant, pour les fortes montées et le franchissement de rochers |
+
+Les **blocages de différentiel** font tourner ensemble les roues d'un essieu (**avant**, **arrière**) ou les deux essieux (**central**), pour qu'une roue qui a perdu son adhérence ne patine pas dans le vide.
+
+<Screenshot name="transfer-case-dashboard" alt="La commande de boîte de transfert sur un tableau de bord : le sélecteur, les interrupteurs de blocage et l'afficheur" width={700} />
+
+### Utilisation {#transfer-case-use}
+
+- **Sélecteur** : positions de haut en bas : 2H, 4H, N, 4L. Selon l'apparence, c'est un **curseur** (un bouton strié dans une glissière : faites-le glisser ; quand vous le relâchez, il se cale sur la position la plus proche) ou une **molette** (tournez-la ; elle s'enclique sur les positions). La glissière est droite : depuis 4H, on n'atteint 4L qu'en passant par N, comme sur une vraie boîte de transfert à levier.
+- **Blocages** : une rangée d'interrupteurs pour les blocages avant, central et arrière : interrupteurs à bascule avec voyant ou boutons à accrochage dont l'anneau s'allume dans la couleur d'accent, selon l'apparence. Touchez un interrupteur pour enclencher le blocage, touchez-le à nouveau pour le libérer.
+- **Afficheur** : les repères 2H, 4H, N et 4L à côté du sélecteur ne changent pas ; l'afficheur indique la position choisie et les blocages enclenchés (**F**, **C**, **R**) dans la couleur d'accent.
+
+### Réglages {#transfer-case-settings}
+
+Dans l'onglet **Paramètres** :
+
+- **Point mort (N)** (activé par défaut) : désactivez-le pour un sélecteur avec seulement 2H, 4H et 4L.
+- **Blocage du différentiel avant** (activé), **Blocage du différentiel central** (désactivé), **Blocage du différentiel arrière** (activé) : les interrupteurs de blocage qu'affiche la commande. S'il y en a moins de trois, ils se placent au milieu de la rangée.
+- **Blocages avant et central seulement en 4WD** (activé) : les blocages avant et central ne fonctionnent qu'en 4H et 4L, comme sur une vraie voiture. En 2H, une pression dessus est refusée (l'interrupteur clignote en rouge), et le passage en 2H les libère. N les laisse tels quels. Le blocage arrière fonctionne dans toutes les positions.
+
+### Valeurs {#transfer-case-values}
+
+- La **position** : 0 = 2H, 1 = 4H, 2 = N, 3 = 4L.
+- **Transmission intégrale** : activée en 4H et 4L. **Gamme courte** : activée en 4L.
+- Chaque blocage : activé ou désactivé.
+
+**Apparences** : il y a une apparence pour chaque thème, qui porte son nom : Classique, 4x4 classique, Tout-terrain et une pour chaque thème payant. Certaines apparences ont un curseur, d'autres une molette. **Hologramme** dessine toute la commande sous forme d'un contour d'une seule couleur, la couleur d'accent.
+
+**Liens rapides** : l'entrée [Boîte de transfert](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) avec les canaux **Transmission intégrale**, **Gamme courte**, **Blocage du différentiel avant**, **Blocage du différentiel central** et **Blocage du différentiel arrière** (chacun activé/désactivé, comme un interrupteur). L'entrée [Véhicule](/docs/Application/Links/Blocks/InputBlocks#src-vehicle) prend toute la boîte de transfert dans son réglage **Boîte de transfert**.
+
 ## Manipulateur de train {#train-controller}
 
 Un manipulateur de locomotive avec un levier de traction et un inverseur.
@@ -162,6 +202,7 @@ Chaque commande spéciale ajoute ses propres blocs à la catégorie **Contrôleu
 | Boîtes de vitesses | *quand la boîte de vitesses … change de rapport / monte un rapport / descend un rapport / passe au point mort / en marche arrière / en parking* | *rapport …*, *la boîte de vitesses … est-elle au point mort / en marche arrière / sur un rapport avant / en parking ?*, *rapports de …* |
 | Frein à main | *quand le frein à main … est tiré / serré / desserré / relâché* | *force du frein à main …*, *le frein à main … est-il serré / desserré / tiré ?* |
 | Clignotants | *quand clignotants … clignotant gauche / clignotant droit / lumière s'allume / s'éteint* | *clignotants … clignotant gauche / clignotant droit / lumière est allumé ?* |
+| Boîte de transfert | *quand boîte de transfert … 2H / 4H / N / 4L / transmission intégrale / gamme courte / blocage avant / blocage central / blocage arrière s'enclenche / se désenclenche* | *boîte de transfert … [les mêmes] est enclenché ?*, *position de la boîte de transfert …* |
 | Manipulateur de train | *quand manipulateur de traction … cran modifié / relevé / abaissé, traction coupée, inverseur déplacé, levier relâché* | *manipulateur de traction … traction / cran de puissance / inverseur*, *le manipulateur de traction … est-il en marche avant / en marche arrière / au neutre / au cran 0 ?* |
 
 Le volant et les pédales disposent aussi du bloc *son … de …* : il choisit l'un de leurs sons pour les blocs **Sons**. Détails : [Contrôleurs à l'écran](/docs/Application/BlockBuilder/Blocks/DashboardControllers).
@@ -170,8 +211,8 @@ Le volant et les pédales disposent aussi du bloc *son … de …* : il choisit 
 
 Les commandes spéciales ne fournissent que des valeurs brutes. Le **simulateur de véhicule** transforme les pédales, le levier de vitesses et le frein à main en un modèle qui roule comme une voiture : il accélère avec de l'inertie, roule en roue libre, freine, recule, passe les rapports en D et reste immobile sur le frein à main.
 
-- **Liens rapides** : utilisez l'entrée [Véhicule](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Choisissez les **Pédales**, le **Levier de vitesses** et le **Frein à main** de votre tableau de bord, le **Type de véhicule** (Voiture, Véhicule tout-terrain, Voiture de sport, Camion) et la **Sortie** : **Vitesse**, **Régime moteur (tr/min)**, **Freinage** ou **Sur le frein à main**.
-- **Blocs logiques** : quand le tableau de bord comporte des pédales, un levier de vitesses ou un frein à main, la catégorie **Simulateur** apparaît. Créez-y un véhicule (**Créer un véhicule**) et placez le bloc *conduire* sous un événement. Branchez des valeurs dans ses emplacements : *accélérateur*, *frein*, *rapport*, *de* (nombre de rapports ; le bloc *rapports de …* s'y insère), *frein à main* et *serré*. Les autres blocs Simulateur règlent le type de véhicule, l'inertie du moteur et la vitesse de marche arrière, lisent la vitesse, le régime moteur et le rapport, et réagissent quand le véhicule démarre, s'arrête, freine ou change de rapport.
+- **Liens rapides** : utilisez l'entrée [Véhicule](/docs/Application/Links/Blocks/InputBlocks#src-vehicle). Choisissez les **Pédales**, le **Levier de vitesses**, le **Frein à main** et la **Boîte de transfert** de votre tableau de bord, le **Type de véhicule** (Voiture, Véhicule tout-terrain, Voiture de sport, Camion) et la **Sortie** : **Vitesse**, **Régime moteur (tr/min)**, **Freinage** ou **Sur le frein à main**.
+- **Blocs logiques** : quand le tableau de bord comporte des pédales, un levier de vitesses ou un frein à main, la catégorie **Simulateur** apparaît. Créez-y un véhicule (**Créer un véhicule**) et placez le bloc *conduire* sous un événement. Branchez des valeurs dans ses emplacements : *accélérateur*, *frein*, *rapport*, *de* (nombre de rapports ; le bloc *rapports de …* s'y insère), *frein à main*, *serré* et *boîte de transfert* (le bloc *position de la boîte de transfert …* s'y insère ; laissez-le vide si le modèle n'a pas de boîte de transfert). Les autres blocs Simulateur règlent le type de véhicule, l'inertie du moteur et la vitesse de marche arrière, lisent la vitesse, le régime moteur et le rapport, et réagissent quand le véhicule démarre, s'arrête, freine ou change de rapport.
 
 Comment le simulateur conduit :
 
@@ -180,6 +221,7 @@ Comment le simulateur conduit :
 - **Boîte manuelle** : R fait reculer, N n'avance pas. En option, chaque rapport limite la vitesse maximale.
 - **Boîte automatique** : R fait reculer, N n'avance pas, P immobilise le modèle comme un frein à main serré. En D, le simulateur monte et descend les rapports tout seul et affiche le rapport sur le sélecteur.
 - **Frein à main** : sa force s'ajoute au freinage ; un frein à main serré peut immobiliser le modèle.
+- **Boîte de transfert** : en 2H et 4H, le modèle roule comme sans elle. En **N**, il n'avance pas : le modèle roule en roue libre, et le frein ne fait que le ralentir sans le faire reculer. **4L** limite la vitesse à 40 % en marche avant comme en marche arrière, avec un régime moteur plus élevé en conséquence ; un modèle qui roule plus vite ralentit jusqu'à la limite après le passage en 4L. Les blocages de différentiel ne changent pas la façon dont le simulateur conduit : ce ne sont que des sorties de la commande.
 - **Type de véhicule** : un camion est plus lourd (plus d'inertie) et dispose d'un frein à air ; une voiture de sport réagit vite et recule plus rapidement.
 
 Les dernières pédales, le dernier levier de vitesses ou le dernier frein à main ne peuvent pas être supprimés tant que le programme utilise des blocs Simulateur.

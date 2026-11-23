@@ -30,7 +30,7 @@ Eine Schleife `immer wiederholen` ist nicht nötig: **fahren** läuft von selbst
 
 ## Blöcke {#blocks}
 
-### `… fahren Gas … Bremse … Gang … von … Handbremse … angezogen …` (Anfänger) {#block_vehicle_drive}
+### `… fahren Gas … Bremse … Gang … von … Handbremse … angezogen … Verteilergetriebe …` (Anfänger) {#block_vehicle_drive}
 
 <img src={useBaseUrl('/img/blocks/block_vehicle_drive.svg')} alt="block_vehicle_drive.svg" />
 
@@ -40,6 +40,7 @@ Das Herzstück des Simulators. Ein C-Block, der das Fahrzeug fährt: Alle 0,1 s 
 - `Gang`: der gewählte Gang: `-1` rückwärts, `0` Leerlauf, ab `1` vorwärts. Steckt ein Automatikgetriebe-Steuerelement in diesem Feld, wird stattdessen seine Wählhebelstellung verwendet (P, R, N, D), und das Auto wählt in D den Gang selbst.
 - `von`: wie viele Gänge das Getriebe hat (standardmäßig 6).
 - `Handbremse`: wie stark die Handbremse gezogen ist, 0 bis 100; `angezogen`: ob sie eingerastet ist.
+- `Verteilergetriebe` (optional): die Stellung des [Verteilergetriebes](/docs/Application/Dashboard/SpecialControls#transfer-case), meist der Block [Stellung des Verteilergetriebes](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_transfercase_value_float): `0` 2H, `1` 4H, `2` N, `3` 4L. In 2H und 4H fährt das Auto wie ohne Verteilergetriebe; in N fährt es nicht (es rollt aus, und die Bremse verlangsamt es nur, ohne dass es rückwärts fährt); in 4L ist seine Geschwindigkeit auf 40 % begrenzt. Lassen Sie das Feld leer, wenn das Modell kein Verteilergetriebe hat.
 - Eine Eingabe zählt nur, wenn ein Block darin steckt; eine einfache Zahl in einem leeren Feld wird ignoriert (außer bei `von`).
 - Nur ein Block **fahren** kann ein Fahrzeug gleichzeitig fahren; ein zweiter für dasselbe Fahrzeug überspringt seine inneren Blöcke.
 

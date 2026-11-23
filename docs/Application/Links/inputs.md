@@ -34,6 +34,7 @@ A [Controller](/docs/Application/Links/Blocks/InputBlocks#src-controller) block 
 | [Gear shifter](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Gear** or **Direction (R − / forward +)** |
 | [Handbrake](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Handbrake locked** (on/off) or **Handbrake force** |
 | [Turn signals](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Turn signals (left − / right +)**, **Left turn signal**, **Right turn signal** or **Light** |
+| [Transfer case](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Four-wheel drive**, **Low range**, **Front differential lock**, **Center differential lock** or **Rear differential lock** (on/off) |
 | [D-pad](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Up / down** or **Left / right**: −1, 0 or +1 |
 | [Button](/docs/Application/Links/Blocks/InputBlocks#controller-button) | on while pressed |
 | [Switch](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | on / off |

@@ -19,7 +19,7 @@ Pe această pagină:
 - [Slidere și butoane rotative](#sliders-and-knobs): slider, buton rotativ
 - [Monitoare](#monitor-blocks)
 - [Volan și pedale](#steering-wheel-and-pedals)
-- [Alte comenzi speciale](#other-special-controls): cutie de viteze, frână de mână, semnalizatoare, controler de tren
+- [Alte comenzi speciale](#other-special-controls): cutie de viteze, frână de mână, semnalizatoare, cutie de transfer, controler de tren
 
 ## Blocuri pentru toate comenzile {#blocks-for-all-controls}
 
@@ -382,6 +382,39 @@ Blocurile [semnalizatoarelor](/docs/Application/Dashboard/SpecialControls#turn-s
 *semnalizatoarele [comandă] [semnalizarea stânga / semnalizarea dreapta / luminile] este aprins ?*
 
 - Tip: bloc de valoare, `true` / `false`
+
+### Blocuri pentru cutia de transfer {#transfer-case-blocks}
+
+Blocurile [cutiei de transfer](/docs/Application/Dashboard/SpecialControls#transfer-case). A doua listă din blocurile de eveniment și de stare are aceleași opțiuni:
+
+- **2H**, **4H**, **N**, **4L**: selectorul este în această poziție;
+- **tracțiune integrală**: selectorul este în 4H sau 4L;
+- **treaptă redusă**: selectorul este în 4L;
+- **blocare față**, **blocare centrală**, **blocare spate**: blocarea diferențialului este cuplată.
+
+#### `Eveniment cutie de transfer` (Începător) {#block_dashboard_controller_transfercase_event}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_event.svg')} alt="block_dashboard_controller_transfercase_event.svg" />
+
+*când cutia de transfer [comandă] [2H / 4H / N / 4L / tracțiune integrală / treaptă redusă / blocare față / blocare centrală / blocare spate] [se cuplează / se decuplează]*: **se cuplează** rulează când opțiunea devine adevărată (selectorul ajunge în poziție sau blocarea este pornită), **se decuplează** când nu mai este adevărată.
+
+- Tip: bloc de eveniment
+
+#### `Starea cutiei de transfer (boolean)` (Începător) {#block_dashboard_controller_transfercase_value_boolean}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_boolean.svg')} alt="block_dashboard_controller_transfercase_value_boolean.svg" />
+
+*cutia de transfer [comandă] [2H / 4H / N / 4L / tracțiune integrală / treaptă redusă / blocare față / blocare centrală / blocare spate] este cuplat ?*
+
+- Tip: bloc de valoare, `true` / `false`
+
+#### `Poziția cutiei de transfer (număr)` (Începător) {#block_dashboard_controller_transfercase_value_float}
+
+<img src={useBaseUrl('/img/blocks/block_dashboard_controller_transfercase_value_float.svg')} alt="block_dashboard_controller_transfercase_value_float.svg" />
+
+*poziția cutiei de transfer [comandă]*: 0 = 2H, 1 = 4H, 2 = N, 3 = 4L. Conectează-l în slotul *cutia de transfer* al blocului [conduce](/docs/Application/BlockBuilder/Blocks/Simulator#block_vehicle_drive) ca simulatorul să folosească cutia de transfer.
+
+- Tip: bloc de valoare
 
 ### Blocuri pentru controlerul de tren {#train-controller-blocks}
 

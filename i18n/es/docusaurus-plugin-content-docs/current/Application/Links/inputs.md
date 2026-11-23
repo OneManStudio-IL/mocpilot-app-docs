@@ -34,6 +34,7 @@ Un bloque [Controlador](/docs/Application/Links/Blocks/InputBlocks#src-controlle
 | [Palanca de cambios](/docs/Application/Links/Blocks/InputBlocks#controller-gear) | **Marcha** o **Sentido (R − / adelante +)** |
 | [Freno de mano](/docs/Application/Links/Blocks/InputBlocks#controller-handbrake) | **Freno de mano puesto** (encendido/apagado) o **Fuerza del freno de mano** |
 | [Intermitentes](/docs/Application/Links/Blocks/InputBlocks#controller-turnsignals) | **Intermitentes (izquierda − / derecha +)**, **Intermitente izquierdo**, **Intermitente derecho** o **Luz** |
+| [Caja de transferencia](/docs/Application/Links/Blocks/InputBlocks#controller-transfercase) | **Tracción total**, **Reductora**, **Bloqueo del diferencial delantero**, **Bloqueo del diferencial central** o **Bloqueo del diferencial trasero** (encendido/apagado) |
 | [Pad direccional](/docs/Application/Links/Blocks/InputBlocks#controller-dpad) | **Arriba / abajo** o **Izquierda / derecha**: −1, 0 o +1 |
 | [Botón](/docs/Application/Links/Blocks/InputBlocks#controller-button) | encendido mientras se mantiene pulsado |
 | [Interruptor](/docs/Application/Links/Blocks/InputBlocks#controller-switch) | encendido / apagado |
