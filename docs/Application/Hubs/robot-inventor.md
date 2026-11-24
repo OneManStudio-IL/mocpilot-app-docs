@@ -18,7 +18,7 @@ The **SPIKE™ Prime hub** (45601) is the same hardware with the LEGO® Educatio
 - **Quick Links**: motors, sensors, the [light matrix](/docs/Application/Links/Blocks/OutputBlocks#hub-matrix) and the [distance sensor lights](/docs/Application/Links/Blocks/OutputBlocks#op-sensorlights).
 - **Hub monitor**: battery, orientation, tilt and the devices on the ports, see [Hub monitor](/docs/Application/Hubs/ConnectingHubs#hub-monitor).
 
-The program runs in MOCPilot and sends commands to the hub while it runs, so keep the phone or computer connected to the hub.
+A block program can run in two ways: **streaming**, where MOCPilot runs it and sends commands to the hub (keep the device connected), or **download**, where MOCPilot writes it into one of the hub's program slots and the hub runs it by itself. See [Run the program on the hub](#download).
 
 ## Connect the hub {#connect}
 
@@ -61,6 +61,43 @@ When the profile has a Robot Inventor or SPIKE Prime hub, the Logic Blocks palet
 | [Events](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events) | when the hub is shaken or tapped, is on a side, is tilted, when the force sensor is pressed, when a radio signal arrives |
 
 The control, operator, variable, list and My Blocks blocks of the Robot Inventor app are the same as MOCPilot's own [core blocks](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing). The blocks that the general hub blocks already cover (motor speed and position, the color and distance sensors, the light matrix, the hub button, the timer) are in their usual categories.
+
+## Run the program on the hub {#download}
+
+Like the Robot Inventor app, MOCPilot can write a Logic Blocks program into one of the hub's 20 program slots (0–19). The hub then runs it without the app: you can disconnect the phone or computer, and start the program again later with the hub's own buttons.
+
+### The slot button and card {#slot-card}
+
+When a Robot Inventor or SPIKE Prime hub is connected to a Logic Blocks profile, a button appears in the bottom-right corner of the editor, next to the zoom. It shows the selected slot number on a small 5×5 matrix, or a streaming sign. Tap it to open the card:
+
+- the hub with the selected slot; **‹** and **›** pick slot 0–19;
+- **Download / Streaming**: how **Run** works for this hub;
+- the **download** button (⤓): writes the program into the slot without starting it;
+- a status line: the progress, *Slot 3: the program is on the hub*, or what went wrong.
+
+When several Robot Inventor or SPIKE Prime hubs are connected, the card also has a hub button: tap it to choose which hub gets the program. MOCPilot remembers the mode and the slot on this device.
+
+<Screenshot name="robot-inventor-slot-card" alt="The slot card: the hub, the slot arrows, the Download / Streaming switch and the download button" width={500} />
+
+### Download {#download-mode}
+
+In **Download** mode, **Run** turns the block program into a hub program, writes it into the selected slot and starts it on the hub. Writing takes a few seconds; then the program runs on the hub on its own.
+
+- To start it again later without the app, pick the slot with the hub's left and right buttons and press the center button.
+- The **center button** of the hub stops the program.
+- To go back to running programs from MOCPilot, switch the card to **Streaming**.
+
+### What can run on the hub {#download-blocks}
+
+Most blocks can go to the hub:
+
+- events: program start, messages, conditions, the timer, the hub buttons, sensors, gestures, orientation, tilt and radio signals;
+- control, operators, variables, lists and My Blocks;
+- all the Robot Inventor blocks, and the motor, light and sensor blocks of this hub.
+
+Some blocks need the app and can't run on the hub alone: the dashboard and gamepad blocks, blocks of other hubs, the **center button** event (on the hub that button stops the program), battery and connection events, the temperature and the steering rack calibration. If the program has any of them, nothing is written: the card says **These blocks cannot run on the hub without the app** and lists them. Remove those blocks or use **Streaming**.
+
+If writing fails, the status line says why, for example **Not enough space on the hub** or **The hub did not answer**. Try again, or restart the hub if it keeps failing.
 
 ## Firmware {#firmware}
 
