@@ -27,7 +27,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - 主な用途：状態に反応する。例：`とき タイマー > 5 かつ スイッチ 有効`
 
-### `タイマー > … の場合` (上級者) {#block_event_when_timer_greater_than}
+### `タイマーが次を超えたとき …` (上級者) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 

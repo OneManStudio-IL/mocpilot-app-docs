@@ -360,7 +360,7 @@ Vrací úhel hubu ve stupních kolem jedné osy: `vybočení` (otáčení doleva
 
 - Typické použití: vést robota rovně nebo ho otočit přesně o 90°: vynulujte úhel stáčení a pak zatáčejte, dokud nedosáhne požadovaného úhlu.
 
-#### `nastavit úhel kormidlování na 0` (Začátečník) {#block_ri_reset_yaw}
+#### `nastavit úhel vybočení na 0` (Začátečník) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 

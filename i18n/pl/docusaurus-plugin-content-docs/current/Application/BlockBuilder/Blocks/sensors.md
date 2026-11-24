@@ -294,7 +294,7 @@ Zwraca kąt huba w stopniach wokół jednej osi: `odchylenie` (obrót w lewo i w
 
 - Typowe zastosowanie: prowadzić robota po prostej albo obrócić go dokładnie o 90°: wyzeruj odchylenie, a potem skręcaj, aż odchylenie osiągnie zadany kąt.
 
-#### `ustaw kąt ryskania na 0` (Początkujący) {#block_ri_reset_yaw}
+#### `ustaw kąt odchylenia na 0` (Początkujący) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 

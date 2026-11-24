@@ -294,7 +294,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - Для чого: вести робота по прямій або повернути його рівно на 90°: обнуліть рискання, а потім кермуйте, доки воно не досягне потрібного кута.
 
-#### `встановити кут рискування на 0` (Початківець) {#block_ri_reset_yaw}
+#### `встановити кут рискання на 0` (Початківець) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 

@@ -294,7 +294,7 @@ Returnează unghiul hubului în grade în jurul unei axe: `girație` (rotirea la
 
 - Utilizare tipică: condu un robot în linie dreaptă sau întoarce-l exact cu 90°: resetează girația, apoi virează până când girația ajunge la unghiul dorit.
 
-#### `setează unghiul de derapaj la 0` (Începător) {#block_ri_reset_yaw}
+#### `setează unghiul de girație la 0` (Începător) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 

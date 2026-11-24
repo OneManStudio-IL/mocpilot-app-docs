@@ -294,7 +294,7 @@ Vráti uhol hubu v stupňoch okolo jednej osi: `vybočenie` (otáčanie doľava 
 
 - Typické použitie: viesť robota rovno alebo ho otočiť presne o 90°: vynulujte vybočenie a potom zatáčajte, kým nedosiahne požadovaný uhol.
 
-#### `nastaviť uhol ryskania na 0` (Začiatočník) {#block_ri_reset_yaw}
+#### `nastaviť uhol vybočenia na 0` (Začiatočník) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 

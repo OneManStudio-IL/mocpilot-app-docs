@@ -102,10 +102,10 @@ Blochează accelerația până când ambele huburi sunt conectate.
 
 ```text
 când începe programul
-seta JOY1 interactivitate dezactiva
+JOY1 interactivitate dezactiva
 așteptați până la (Hub 1 conectat) și (Hub 2 conectat)
 afișează "Gata" pe MNTR1 monitor
-seta JOY1 interactivitate activa
+JOY1 interactivitate activa
 ```
 
 ## Gamepad {#gamepad}

@@ -37,7 +37,7 @@ Hubi käyttää perinteistä Bluetoothia, ei Bluetooth Low Energyä: se toimii A
 Windowsissa ja Macissa voit yhdistää hubin myös sen USB-kaapelilla. LEGO-ajuria ei tarvitse asentaa.
 
 1. Yhdistä hubi tietokoneeseen USB-kaapelilla ja kytke hubi päälle.
-2. Napauta **Yhdistää**.
+2. Napauta **Yhdistä**.
 
 Jos MOCPilot ilmoittaa **USB:ssä ei ole hubia**, tarkista kaapeli (jotkin kaapelit vain lataavat) ja että hubi on päällä.
 
