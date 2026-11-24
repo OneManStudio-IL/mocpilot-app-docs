@@ -54,7 +54,7 @@ MOCPilot zobrazí **Bluetooth je vypnutý**, keď je Bluetooth v zariadení vypn
 
 ## Huby s klasickým Bluetooth {#classic-bluetooth-hubs}
 
-Hub **Robot Inventor** používa klasický Bluetooth, nie Bluetooth Low Energy. Funguje na Androide, Macu a Windows, ale nie na iPhone a iPade. Ak ho MOCPilot vo Windows nenájde, najprv hub spárujte v **Nastavenia → Bluetooth a zariadenia → Pridať zariadenie** a potom ho v aplikácii vyhľadajte znova.
+Hub **Robot Inventor** používa klasický Bluetooth, nie Bluetooth Low Energy. Funguje na Androide, Macu a Windows, ale nie na iPhone a iPade. Ak ho MOCPilot vo Windows nenájde, najprv hub spárujte v **Nastavenia → Bluetooth a zariadenia → Pridať zariadenie** a potom ho v aplikácii vyhľadajte znova. Vo Windows a na Macu ho môžete pripojiť aj káblom USB; pozrite [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub#connect).
 
 Všetky ostatné podporované huby používajú Bluetooth Low Energy a pridávajú sa iba v MOCPilot, nie v systémových nastaveniach Bluetooth.
 

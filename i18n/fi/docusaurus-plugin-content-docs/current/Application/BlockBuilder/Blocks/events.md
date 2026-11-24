@@ -147,3 +147,37 @@ Suoritetaan, kun BOOST-väri- ja etäisyysanturin mittaama etäisyys täyttää 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Suoritetaan, kun BOOST-väri- ja etäisyysanturi näkee valitun värin.
+
+## Robot Inventor -tapahtumat {#robot-inventor-events}
+
+Nämä tapahtumat tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS Robot Inventor- ja SPIKE Prime -hubien](/docs/Application/Hubs/RobotInventorHub) kanssa. Niissä on hubikuvake. Vastaavat arvot ovat sivulla [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `kun hubi on …` (Aloittelija) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Suoritetaan kerran aina, kun hubi on `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai kun se `putoaa`.
+
+### `kun … on ylöspäin` (Aloittelija) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Suoritetaan, kun hubin valittu puoli kääntyy ylöspäin: `etupuoli` (valomatriisi, oletus), `yläpuoli`, `oikea puoli`, `takapuoli`, `alapuoli` tai `vasen puoli`.
+
+### `kun hubi on kallistettu …` (Edistynyt) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Suoritetaan, kun hubia kallistetaan `ylös`, `alas`, `vasemmalle`, `oikealle` tai mihin suuntaan tahansa (`mikä tahansa`, oletus) noin 12° tai enemmän.
+
+### `kun … painettu / painettu lujaa / vapautettu` (Aloittelija) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Suoritetaan, kun valitun portin voima-anturia painetaan, painetaan lujaa (yli 5 newtonia) tai se vapautetaan.
+
+### `kun hubi vastaanottaa signaalin …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Suoritetaan, kun tämä hubi vastaanottaa toiselta hubilta tämännimisen radiosignaalin. Sen arvon voi lukea lohkolla [vastaanotettu signaali … arvo](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

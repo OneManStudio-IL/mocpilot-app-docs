@@ -54,10 +54,13 @@ De hub van de op afstand bestuurbare LEGO® Technic-auto's (Porsche GT4 e-Perfor
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Alles over verbinden, firmware en de blokken: [MINDSTORMS Robot Inventor-hub](/docs/Application/Hubs/RobotInventorHub).
+
 - **LED-matrix**: een niveaubalk, een getal of een afbeelding in Snelle koppelingen; tekst en pixels in Logicablokken.
 - **Lampjes van de afstandssensor** (de “ogen” van de sensor).
 - **Blokkeerdetectie** en motorvermogen.
-- Klassieke Bluetooth: niet beschikbaar op iPhone en iPad.
+- Alle blokken van de Robot Inventor-app: [Beweging](/docs/Application/BlockBuilder/Blocks/Movement), hubgeluiden en muziek, gebaren, gieren, de krachtsensor, radio tussen hubs.
+- Klassieke Bluetooth (niet beschikbaar op iPhone en iPad) of een USB-kabel op Windows en Mac.
 
 ## LEGO®-hubs met een kleurenled {#lego-hubs-with-a-colour-led}
 

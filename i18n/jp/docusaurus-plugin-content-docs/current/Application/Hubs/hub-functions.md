@@ -54,10 +54,13 @@ LEGO® Technic のリモコンカー（Porsche GT4 e-Performance、Lamborghini R
 
 ## Robot Inventor（LEGO® Large Hub） {#robot-inventor-lego-large-hub}
 
+接続、ファームウェア、ブロックについてのすべて：[MINDSTORMS Robot Inventor のハブ](/docs/Application/Hubs/RobotInventorHub)。
+
 - **LED マトリックス**：クイックリンクではレベルバー、数値、画像を、ロジックブロックではテキストとピクセルを表示できます。
 - **センサーライト**（距離センサーの「目」）。
 - **ストール検出**とモーターの電力。
-- クラシック Bluetooth を使うため、iPhone と iPad では使えません。
+- Robot Inventor アプリのすべてのブロック：[移動](/docs/Application/BlockBuilder/Blocks/Movement)、ハブのサウンドと音楽、ジェスチャー、ヨー、フォースセンサー、ハブ間の無線通信。
+- クラシック Bluetooth（iPhone と iPad では使えません）、または Windows と Mac では USB ケーブル。
 
 ## カラー LED 付きの LEGO® ハブ {#lego-hubs-with-a-colour-led}
 

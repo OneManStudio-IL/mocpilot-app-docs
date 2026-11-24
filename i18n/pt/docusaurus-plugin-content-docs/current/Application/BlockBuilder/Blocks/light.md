@@ -4,6 +4,7 @@ title: Luz
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Luz {#light}
 
@@ -96,7 +97,49 @@ Define a orientação da imagem na matriz de luzes. Por padrão, ela é `na vert
 
 Controla as luzes em volta dos "olhos" do sensor de distância na porta selecionada. Você pode acender ou apagar cada luz, ou colocar uma lista no encaixe para definir o brilho de cada uma.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (o bloco tem o ícone do hub).
+
+## Matriz de luzes do Robot Inventor {#robot-inventor-light}
+
+Estes blocos vêm do app Robot Inventor e só funcionam com os [hubs MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Eles têm o ícone do hub. Toque na imagem de um bloco para desenhá-la; nos blocos de animação, ela mostra o primeiro quadro e o número de quadros.
+
+### `ligar … por … segundos` (Iniciante) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Mostra a imagem na matriz de luzes pelo tempo indicado (2 segundos por padrão) e depois a apaga. O bloco espera até o tempo acabar.
+
+### `reproduzir animação … em … quadros por segundo até terminar` (Iniciante) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Reproduz os quadros da animação uma vez, na velocidade indicada (4 quadros por segundo por padrão), e espera até o último quadro.
+
+### `iniciar animação … em … quadros por segundo …` (Iniciante) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Inicia a animação e passa na hora para o próximo bloco.
+
+- `uma vez`: reproduz a animação uma única vez.
+- `repetir` (padrão): reproduz a animação sem parar, até que outro bloco de luz mude a matriz.
+
+### `definir brilho dos pixels para … %` (Avançado) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Define o brilho das imagens e animações dos blocos Robot Inventor acima, de 0 a 100 %. Até este bloco ser executado, elas ficam com o brilho máximo. Cada pixel mantém o seu brilho em relação aos outros.
+
+### Desenhar imagens e animações {#animation-editor}
+
+Toque na imagem de um bloco de luz para abrir o editor:
+
+- **Pixels**: toque ou arraste sobre a grade 5×5 para pintar com o brilho selecionado.
+- **Brilho**: a escala ao lado da grade escolhe o brilho da pintura (10 níveis, de apagado a máximo).
+- **Tudo apagado / tudo aceso**: limpa a imagem ou a preenche com o brilho selecionado.
+- **Quadros** (só nos blocos de animação): a barra sob a grade mostra o quadro atual, por exemplo **2/3**. Os botões vão para o quadro **anterior** e o **seguinte**, **adicionam** um quadro vazio depois do atual, **duplicam** o quadro atual ou o **excluem** (uma animação mantém pelo menos um quadro).
+
+<Screenshot name="robot-inventor-animation-editor" alt="O editor de animação: a grade 5×5, a escala de brilho e a barra de quadros" width={600} />
 
 ## LEDs das portas do BuWizz 3 {#buwizz-3-port-leds}
 

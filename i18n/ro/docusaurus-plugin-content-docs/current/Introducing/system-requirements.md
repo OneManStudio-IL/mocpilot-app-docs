@@ -22,7 +22,7 @@ Linkurile către magazine le găsești pe [mocpilot.com](https://mocpilot.com). 
 ## Bluetooth {#bluetooth}
 
 - Huburile se conectează prin **Bluetooth Low Energy** (Bluetooth 4.0 sau mai nou). Aproape orice telefon și tabletă îl au; pe un computer, folosește adaptorul încorporat sau un adaptor Bluetooth USB.
-- Hubul **Robot Inventor** folosește Bluetooth clasic. Funcționează pe Android, Mac și Windows, dar nu pe iPhone și iPad.
+- Hubul **Robot Inventor** folosește Bluetooth clasic. Funcționează pe Android, Mac și Windows, dar nu pe iPhone și iPad. Pe Windows și Mac se poate conecta și cu un cablu USB.
 - Huburile **Mould King** primesc comenzile ca difuzări Bluetooth (advertising). Pe Windows, Mould King 6.0 are nevoie de un adaptor și un driver care pot difuza, iar Mould King 4.0 nu funcționează deloc; folosește pentru el un telefon sau o tabletă.
 - Aplicația cere permisiunea Bluetooth (pe Android și Dispozitive din apropiere sau Locație). Vezi [Bluetooth și permisiuni](/docs/Help/BluetoothPermissions).
 

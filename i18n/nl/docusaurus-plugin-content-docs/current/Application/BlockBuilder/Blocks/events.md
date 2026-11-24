@@ -147,3 +147,37 @@ Wordt uitgevoerd als de afstand die de BOOST-kleur- en afstandssensor meet aan d
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Wordt uitgevoerd als de BOOST-kleur- en afstandssensor de gekozen kleur ziet.
+
+## Robot Inventor-gebeurtenissen {#robot-inventor-events}
+
+Deze gebeurtenissen komen uit de Robot Inventor-app en werken alleen met de [hubs van MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ze dragen het hubpictogram. De bijbehorende waarden staan op de pagina [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `wanneer hub …` (Beginner) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Wordt elke keer één keer uitgevoerd als de hub `getikt`, `dubbel getikt` of `geschud` (standaard) wordt of `vallend` is.
+
+### `wanneer … boven is` (Beginner) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Wordt uitgevoerd als de gekozen kant van de hub naar boven wijst: `voorkant` (de lichtmatrix, standaard), `bovenkant`, `rechterkant`, `achterkant`, `onderkant` of `linkerkant`.
+
+### `wanneer hub gekanteld …` (Gevorderd) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Wordt uitgevoerd als de hub ongeveer 12° of meer `omhoog`, `omlaag`, `naar links`, `naar rechts` of in een willekeurige richting (`elke`, standaard) wordt gekanteld.
+
+### `wanneer … ingedrukt / hard ingedrukt / vrijgegeven` (Beginner) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Wordt uitgevoerd als de krachtsensor op de gekozen poort wordt ingedrukt, hard wordt ingedrukt (met meer dan 5 newton) of wordt losgelaten (in de app `vrijgegeven`).
+
+### `wanneer hub signaal ontvangt …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Wordt uitgevoerd als deze hub van een andere hub het radiosignaal met deze naam ontvangt. Lees de waarde ervan met [ontvangen signaal … waarde](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

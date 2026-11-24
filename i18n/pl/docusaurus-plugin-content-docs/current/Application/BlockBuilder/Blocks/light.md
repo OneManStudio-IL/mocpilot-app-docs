@@ -4,6 +4,7 @@ title: Światło
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Światło
 
@@ -96,7 +97,49 @@ Ustawia orientację obrazu na matrycy świetlnej. Domyślnie jest to `prosto`; n
 
 Steruje światłami wokół „oczu” czujnika odległości na wybranym porcie. Każde światło możesz włączyć lub wyłączyć albo wstawić do pola listę, aby ustawić jasność każdego światła.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok ma ikonę huba).
+
+## Matryca świetlna Robot Inventor {#robot-inventor-light}
+
+Te bloki pochodzą z aplikacji Robot Inventor i działają tylko z [hubami MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Mają ikonę huba. Dotknij obrazu w bloku, aby go narysować; w blokach animacji pokazuje on pierwszą klatkę i liczbę klatek.
+
+### `włącz … przez … sekundy` (Początkujący) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Wyświetla obraz na matrycy świetlnej przez podany czas (domyślnie 2 sekundy), a potem go wyłącza. Blok czeka, aż czas minie.
+
+### `odtwórz animację … w … klatek na sekundę do końca` (Początkujący) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Odtwarza klatki animacji raz, z podaną szybkością (domyślnie 4 klatki na sekundę), i czeka do ostatniej klatki.
+
+### `uruchom animację … w … klatek na sekundę …` (Początkujący) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Uruchamia animację i od razu przechodzi do następnego bloku.
+
+- `raz`: odtwarza ją jeden raz.
+- `powtórzyć` (domyślnie; chodzi o powtarzanie): odtwarza ją w kółko, dopóki inny blok światła nie zmieni matrycy.
+
+### `ustaw jasność pikseli na … %` (Zaawansowany) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Ustawia jasność obrazów i animacji z powyższych bloków Robot Inventor, od 0 do 100 %. Dopóki ten blok się nie wykona, świecą z pełną jasnością. Każdy piksel zachowuje swoją jasność względem pozostałych.
+
+### Rysowanie obrazów i animacji {#animation-editor}
+
+Dotknij obrazu w bloku światła, aby otworzyć edytor:
+
+- **Piksele**: dotykaj siatki 5×5 lub przeciągaj po niej, aby malować wybraną jasnością.
+- **Jasność**: skala obok siatki wybiera jasność do malowania (10 poziomów, od wyłączonego do pełnej).
+- **Wszystkie wyłączone / wszystkie włączone**: czyści obraz lub wypełnia go wybraną jasnością.
+- **Klatki** (tylko w blokach animacji): pasek pod siatką pokazuje bieżącą klatkę, na przykład **2/3**. Przyciski przechodzą do **poprzedniej** i **następnej** klatki, **dodają** pustą klatkę po bieżącej, **powielają** bieżącą klatkę lub ją **usuwają** (animacja zachowuje co najmniej jedną klatkę).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Edytor animacji: siatka 5×5, skala jasności i pasek klatek" width={600} />
 
 ## Diody LED portów BuWizz 3 {#buwizz-3-port-leds}
 

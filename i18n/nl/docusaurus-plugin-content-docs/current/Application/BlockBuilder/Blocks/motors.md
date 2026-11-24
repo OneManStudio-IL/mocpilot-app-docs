@@ -97,9 +97,9 @@ Bepaalt wat de motor doet als hij stopt.
 
 ### `schakel stall detectie in …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Schakelt blokkeerdetectie in of uit.
+Schakelt blokkeerdetectie in of uit. Als die aan staat, geeft een geblokkeerde motor het op in plaats van door te duwen, zodat een blok dat op de motor wacht, kan eindigen.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (het blok draagt het hubpictogram).
 
 ### `stel versnelling in op …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Geeft de huidige snelheid van de motor terug.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Geeft het huidige vermogen van de motor terug.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (het blok draagt het hubpictogram).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Deze blokken komen uit de Robot Inventor-app en werken alleen met de [hubs van MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ze dragen het hubpictogram. Om een robot met twee wielen te besturen, zie de blokken van [Beweging](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `start motor op … % vermogen` (Gevorderd) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Start de motoren op de gekozen poorten met het opgegeven vermogen, van −100 tot 100 % (standaard 75 %). Anders dan bij **start motor op … % snelheid** houdt de motor geen geregelde snelheid vast: onder belasting gaat hij langzamer, zoals een motor zonder encoder.
+
+### `werd de motor onderbroken?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` als de laatste opdracht van de motor op deze poort niet is afgemaakt, omdat een ander motorblok op dezelfde poort hem heeft onderbroken.
 
 ## Technic Move Hub {#technic-move-hub}
 

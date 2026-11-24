@@ -97,9 +97,9 @@ Elige qué hace el motor cuando se detiene.
 
 ### `activar detección de bloqueo …` (Gurú) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Activa o desactiva la detección de bloqueo.
+Activa o desactiva la detección de bloqueo. Si está activada, un motor que se bloquea se rinde en lugar de seguir empujando, así que un bloque que espera al motor puede terminar.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (el bloque lleva el icono del hub).
 
 ### `establecer aceleración a …` (Gurú) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Devuelve la velocidad actual del motor.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Devuelve la potencia actual del motor.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (el bloque lleva el icono del hub).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Estos bloques vienen de la app Robot Inventor y solo funcionan con los [hubs MINDSTORMS Robot Inventor y SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Llevan el icono del hub. Para conducir un robot de dos ruedas, consulta los bloques de [Movimiento](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `iniciar motor en … % potencia` (Avanzado) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Arranca los motores de los puertos seleccionados con la potencia indicada, de −100 a 100 % (75 % de forma predeterminada). A diferencia de **iniciar motor en … % velocidad**, el motor no mantiene una velocidad regulada: con carga se frena, como un motor sin encoder.
+
+### `¿se interrumpió el motor?` (Gurú) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` si la última orden del motor de este puerto no terminó porque otro bloque de motor del mismo puerto la interrumpió.
 
 ## Technic Move Hub {#technic-move-hub}
 

@@ -54,7 +54,7 @@ Windows では、MOCPilot は Bluetooth の権限を求めません。Bluetooth 
 
 ## クラシック Bluetooth のハブ {#classic-bluetooth-hubs}
 
-**Robot Inventor** ハブは、Bluetooth Low Energy ではなくクラシック Bluetooth を使います。Android、Mac、Windows では使えますが、iPhone と iPad では使えません。Windows で MOCPilot がハブを見つけられない場合は、先に **設定 → Bluetooth とデバイス → デバイスの追加** でハブをペアリングしてから、アプリでもう一度検索してください。
+**Robot Inventor** ハブは、Bluetooth Low Energy ではなくクラシック Bluetooth を使います。Android、Mac、Windows では使えますが、iPhone と iPad では使えません。Windows で MOCPilot がハブを見つけられない場合は、先に **設定 → Bluetooth とデバイス → デバイスの追加** でハブをペアリングしてから、アプリでもう一度検索してください。Windows と Mac では USB ケーブルで接続することもできます。[MINDSTORMS Robot Inventor のハブ](/docs/Application/Hubs/RobotInventorHub#connect) を参照してください。
 
 ほかの対応ハブはすべて Bluetooth Low Energy を使い、システムの Bluetooth 設定ではなく MOCPilot の中だけで追加します。
 

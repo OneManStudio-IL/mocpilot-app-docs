@@ -18,7 +18,7 @@ MOCPilot は以下のハブ、モーター、センサーに対応していま�
 
 - プロフィールには 5 つのハブスロットがあります。2 つは無料で、残りの 3 つはハブスロットの追加購入または [MocPilot Pro](/docs/Application/Account/Pro) で使えるようになります。
 - **Mould King** のハブはコマンドを受信するだけです（センサーやフィードバックはありません）。1 つのプロフィールで使える Mould King の種類は 1 つだけです：Mould King 4.0 ハブなら最大 3 台、Mould King 6.0 なら 1 台。
-- **Robot Inventor** ハブ（LEGO® ラージハブ）はクラシック Bluetooth を使うため、iPhone と iPad では使えません。
+- **Robot Inventor** ハブ（LEGO® ラージハブ）と **SPIKE Prime** ハブ（ベータ版、SPIKE Legacy ファームウェア）はクラシック Bluetooth を使うため、iPhone と iPad では使えません。Windows と Mac では USB ケーブルでも接続できます。[MINDSTORMS Robot Inventor のハブ](/docs/Application/Hubs/RobotInventorHub) を参照してください。
 - ファームウェアの更新と復旧は、Technic Hub、Technic Move Hub、BOOST Move Hub、City Hub で利用できます。[ファームウェアの更新](/docs/Application/Hubs/FirmwareUpdating)を参照してください。
 - モーターとライト以外に各ハブでできることは、[ハブ固有の機能](/docs/Application/Hubs/HubFunctions)で説明しています。
 

@@ -147,3 +147,37 @@ Körs när avståndet som BOOST färg- och avståndssensor mäter uppfyller vill
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Körs när BOOST färg- och avståndssensor ser den valda färgen.
+
+## Robot Inventor-händelser {#robot-inventor-events}
+
+De här händelserna kommer från Robot Inventor-appen och fungerar bara med [MINDSTORMS Robot Inventor- och SPIKE Prime-hubbarna](/docs/Application/Hubs/RobotInventorHub). De har hubbikonen. Motsvarande värden finns på sidan [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `när hubben är …` (Nybörjare) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Körs en gång varje gång hubben blir `knackad`, `dubbelknackad`, `skakad` (standard) eller när den `faller`.
+
+### `när … är uppåt` (Nybörjare) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Körs när den valda sidan av hubben vänds uppåt: `framsida` (ljusmatrisen, standard), `ovansida`, `höger sida`, `baksida`, `undersida` eller `vänster sida`.
+
+### `när hubben lutas …` (Avancerad) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Körs när hubben lutas `upp`, `ner`, `åt vänster`, `åt höger` eller åt valfritt håll (`vilken som helst`, standard), med ungefär 12° eller mer.
+
+### `när … tryckt / hårt tryckt / släppt` (Nybörjare) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Körs när kraftsensorn på den valda porten trycks in, trycks hårt (mer än 5 newton) eller släpps.
+
+### `när hubben tar emot signal …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Körs när den här hubben tar emot radiosignalen med det här namnet från en annan hubb. Läs dess värde med [mottagen signal … värde](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

@@ -29,7 +29,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Move Hub / BOOST (88006) | 2 个内置电机 + 2 个端口 |
 | LEGO® Remote Control (88010) | 它的按钮可作为输入 |
 | LEGO® WeDo 2.0 Smart Hub | 2 个端口 |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 个端口，灯光点阵；不支持 iPhone 和 iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 个端口，灯光点阵，扬声器，陀螺仪；蓝牙或 USB；不支持 iPhone 和 iPad |
 | BuWizz 2.0 | 4 个端口，功率模式 |
 | BuWizz 3.0 Pro | 6 个端口，端口彩色 LED |
 | SBrick、SBrick Plus | 4 个端口，速度控制，不支持位置控制 |

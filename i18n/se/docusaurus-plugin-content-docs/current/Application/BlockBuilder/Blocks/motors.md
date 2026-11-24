@@ -97,9 +97,9 @@ Väljer vad motorn gör när den stannar.
 
 ### `aktivera stall detektering …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Slår på eller av stoppdetektering.
+Slår på eller av stoppdetektering. När den är på ger en motor som blockeras upp i stället för att fortsätta trycka, så att ett block som väntar på motorn kan bli klart.
 
-- Hubbar: MINDSTORMS Robot Inventor.
+- Hubbar: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocket har hubbikonen).
 
 ### `ställ in acceleration till …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Returnerar motorns aktuella hastighet.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Returnerar motorns aktuella effekt.
 
-- Hubbar: MINDSTORMS Robot Inventor.
+- Hubbar: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocket har hubbikonen).
+
+## Robot Inventor {#robot-inventor-motors}
+
+De här blocken kommer från Robot Inventor-appen och fungerar bara med [MINDSTORMS Robot Inventor- och SPIKE Prime-hubbarna](/docs/Application/Hubs/RobotInventorHub). De har hubbikonen. För att köra en tvåhjulig robot, se blocken under [Rörelse](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `starta motor vid … % kraft` (Avancerad) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Startar motorerna på de valda portarna med angiven kraft, från −100 till 100 % (standard 75 %). Till skillnad från **starta motor vid … % hastighet** håller motorn ingen reglerad hastighet: under belastning saktar den in, som en motor utan pulsgivare.
+
+### `avbröts motorn?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` om det senaste kommandot till motorn på den här porten inte blev klart eftersom ett annat motorblock på samma port avbröt det.
 
 ## Technic Move Hub {#technic-move-hub}
 

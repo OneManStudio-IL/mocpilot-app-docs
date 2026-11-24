@@ -14,6 +14,7 @@ Tällä sivulla:
 - [Hubin tila](#hub-state): akku, jännite, lämpötila, virta ja tehotila
 - [Hubin painikkeet, kallistus ja suunta](#hub-tilt-and-orientation)
 - [Porttien anturit](#sensors-on-ports): mikä tahansa laite, Technic-värianturi, Technic-etäisyysanturi, BOOST-väri- ja etäisyysanturi, WeDo 2.0 -anturit
+- [Robot Inventor -hubi](#robot-inventor-sensors): voima-anturi, eleet, suunta, kääntö-, nyökkäys- ja kallistuskulma, kallistus, hubien välinen radio
 - [Tämä laite](#this-device): puhelin, tabletti tai tietokone, jossa MOCPilot on käynnissä
 - [Ajastin](#timer)
 
@@ -240,6 +241,98 @@ Palauttaa WeDo 2.0 -kallistusanturin tietoja: kallistuskulman tai suunnan, johon
 - Kulmat: `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll)
 - Suunnan tulos: `teksti` tai `luku`; suunnat: `neutraali`, `eteenpäin`, `taaksepäin`, `vasen`, `oikea`, `tuntematon`
 - Hubit: WeDo 2.0.
+
+## Robot Inventor -hubi {#robot-inventor-sensors}
+
+Nämä lohkot tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS Robot Inventor- ja SPIKE Prime -hubien](/docs/Application/Hubs/RobotInventorHub) kanssa. Niissä on hubikuvake. Niiden tapahtumat (kun hubia ravistetaan, kallistetaan ja niin edelleen) ovat sivulla [Tapahtumat](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Voima-anturi {#robot-inventor-force-sensor}
+
+#### `on … painettu / painettu lujaa / vapautettu ?` (Aloittelija) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Tarkistaa valitun portin voima-anturin. `painettu lujaa` tarkoittaa painamista yli 5 newtonin voimalla.
+
+#### `… paine yksikössä % / newton` (Aloittelija) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Palauttaa, kuinka lujaa voima-anturia painetaan: prosentteina (0–100) tai newtoneina (0–10).
+
+### Hubin liike {#robot-inventor-motion}
+
+#### `onko hubi … ?` (Edistynyt) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, jos hubia on juuri liikutettu näin: `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai `putoaa`. Ele lasketaan kerran: kun lohko on lukenut sen, se katoaa.
+
+#### `ele` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Palauttaa viimeisimmän eleen tekstinä: `tapped`, `doubletapped`, `shake` tai `freefall`, tai tyhjän arvon, jos elettä ei ole ollut.
+
+#### `on … ylöspäin?` (Aloittelija) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, jos tämä hubin puoli on ylöspäin: `etupuoli` (valomatriisi), `yläpuoli`, `oikea puoli`, `takapuoli`, `alapuoli` tai `vasen puoli`.
+
+#### `suunta` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Palauttaa ylöspäin olevan puolen tekstinä: `front`, `up`, `rightside`, `back`, `down` tai `leftside`.
+
+#### `… kulma` (Aloittelija) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Palauttaa hubin kulman asteina yhden akselin ympäri. Sovelluksessa valikon kaikki kolme vaihtoehtoa näkyvät nimellä `kallistus`; ne ovat tässä järjestyksessä kääntökulma (yaw: kääntyminen vasemmalle ja oikealle kuin kompassissa), nyökkäyskulma (pitch: keula ylös ja alas) ja kallistuskulma (roll: kallistuminen sivuille).
+
+- Tyypillinen käyttö: robotin ajaminen suoraan tai kääntäminen tarkalleen 90°: nollaa kääntökulma ja ohjaa sitten, kunnes kääntökulma saavuttaa halutun kulman.
+
+#### `nollaa kääntökulma` (Aloittelija) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Tekee hubin nykyisestä suunnasta kääntökulman uuden nollakohdan. Lohko odottaa 0,1 s, jotta seuraava lukema lasketaan jo siitä.
+
+#### `kulmanopeus …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Palauttaa, kuinka nopeasti hubi kääntyy akselin `x`, `y` tai `z` ympäri (gyroskooppi), asteina sekunnissa.
+
+#### `kiihtyvyys …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Palauttaa hubin kiihtyvyyden akselin `x`, `y` tai `z` suunnassa sellaisena kuin hubi sen ilmoittaa.
+
+#### `onko hubi kallistettu … ?` (Edistynyt) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, jos hubi on kallistettu tähän suuntaan: `ylös`, `alas`, `vasemmalle`, `oikealle` tai `mikä tahansa` (oletus). Hubi lasketaan kallistetuksi noin 12°:n kallistuksesta alkaen; jos se on kallistettu kumpaankin suuntaan, suurempi kallistus ratkaisee.
+
+### Hubien välinen radio {#robot-inventor-radio}
+
+Robot Inventor -hubit voivat lähettää toisilleen lyhyitä signaaleja langattomasti ilman MOCPilotia välissä. Signaalilla on nimi ja arvo.
+
+#### `lähetä hubin signaali … kanssa …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Lähettää tältä hubilta lähellä oleville hubeille signaalin annetulla nimellä (oletuksena `signal`) ja arvolla (`1`).
+
+#### `vastaanotettu signaali … arvo` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Palauttaa viimeisimmän arvon, jonka tämä hubi on vastaanottanut tämännimiselle signaalille, tai 0, jos mitään ei ole vielä tullut. Jos haluat reagoida heti signaalin saapuessa, käytä lohkoa [kun hubi vastaanottaa signaalin](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Tämä laite {#this-device}
 

@@ -14,6 +14,7 @@ Na tej stronie:
 - [Stan huba](#hub-state): bateria, napięcie, temperatura, prąd i tryb mocy
 - [Przyciski, nachylenie i orientacja huba](#hub-tilt-and-orientation)
 - [Czujniki na portach](#sensors-on-ports): dowolne urządzenie, czujnik koloru Technic, czujnik odległości Technic, czujnik koloru i odległości BOOST, czujniki WeDo 2.0
+- [Hub Robot Inventor](#robot-inventor-sensors): czujnik siły, gesty, orientacja, kąty ryskania, pochylenia i obrotu, przechylenie, radio między hubami
 - [To urządzenie](#this-device): telefon, tablet lub komputer, na którym działa MOCPilot
 - [Stoper](#timer)
 
@@ -240,6 +241,98 @@ Zwraca dane z czujnika nachylenia WeDo 2.0: kąt nachylenia albo kierunek, w kt�
 - Kąty: `pochylenie`, `obrót`
 - Wynik kierunku: `tekst` lub `liczba`; kierunki: `neutralny`, `do przodu`, `do tyłu`, `lewo`, `prawo`, `nieznany`
 - Huby: WeDo 2.0.
+
+## Hub Robot Inventor {#robot-inventor-sensors}
+
+Te bloki pochodzą z aplikacji Robot Inventor i działają tylko z [hubami MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Mają ikonę huba. Ich wydarzenia (gdy hub zostanie potrząśnięty, przechylony i tak dalej) są na stronie [Wydarzenia](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Czujnik siły {#robot-inventor-force-sensor}
+
+#### `… jest naciśnięty / mocno naciśnięty / zwolniony ?` (Początkujący) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Sprawdza czujnik siły na wybranym porcie. `mocno naciśnięty` oznacza naciśnięty siłą ponad 5 niutonów.
+
+#### `… nacisk w % / niutony` (Początkujący) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Zwraca, jak mocno naciśnięty jest czujnik siły: w procentach (0–100) lub w niutonach (0–10).
+
+### Ruch huba {#robot-inventor-motion}
+
+#### `czy hub jest … ?` (Zaawansowany) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, jeśli hub został właśnie poruszony w ten sposób: `stuknięty`, `stuknięty dwukrotnie`, `potrząśnięty` (domyślnie) lub `spada`. Gest liczy się raz: gdy jakiś blok go odczyta, znika.
+
+#### `gest` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Zwraca ostatni gest jako tekst: `tapped`, `doubletapped`, `shake` lub `freefall`, albo pustą wartość, jeśli gestu nie było.
+
+#### `jest … u góry?` (Początkujący) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, jeśli ta strona huba jest skierowana do góry: `przód` (matryca świetlna), `góra`, `prawy bok`, `tył`, `spód` lub `lewy bok`.
+
+#### `orientacja` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Zwraca jako tekst stronę skierowaną do góry: `front`, `up`, `rightside`, `back`, `down` lub `leftside`.
+
+#### `… kąt` (Początkujący) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Zwraca kąt huba w stopniach wokół jednej osi: `ryskanie` (obrót w lewo i w prawo, jak kompas), `pochylenie` (przód w górę i w dół) lub `obrót` (przechylanie na boki).
+
+- Typowe zastosowanie: prowadzić robota po prostej albo obrócić go dokładnie o 90°: wyzeruj ryskanie, a potem skręcaj, aż ryskanie osiągnie zadany kąt.
+
+#### `ustaw kąt ryskania na 0` (Początkujący) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Ustala bieżący kierunek huba jako nowe zero kąta ryskania. Blok czeka 0,1 s, żeby następny odczyt był już liczony od niego.
+
+#### `prędkość kątowa …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Zwraca, jak szybko hub obraca się wokół osi `x`, `y` lub `z` (żyroskop), w stopniach na sekundę.
+
+#### `przyspieszenie …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Zwraca przyspieszenie huba wzdłuż osi `x`, `y` lub `z` w postaci, w jakiej podaje je hub.
+
+#### `czy hub jest przechylony … ?` (Zaawansowany) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, jeśli hub jest przechylony w tym kierunku: `w górę`, `w dół`, `w lewo`, `w prawo` lub `jakikolwiek` (w dowolnym kierunku, domyślnie). Hub uznaje się za przechylony od około 12° od poziomu; gdy jest przechylony w obie strony, liczy się większe przechylenie.
+
+### Radio między hubami {#robot-inventor-radio}
+
+Huby Robot Inventor mogą wysyłać sobie nawzajem krótkie sygnały drogą radiową, bez pośrednictwa MOCPilot. Sygnał ma nazwę i wartość.
+
+#### `wyślij sygnał huba … z …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Wysyła z tego huba do pobliskich hubów sygnał o podanej nazwie (domyślnie `signal`) i podanej wartości (`1`).
+
+#### `odebrany sygnał … wartość` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Zwraca ostatnią wartość, jaką ten hub odebrał dla sygnału o tej nazwie, albo 0, jeśli żadna jeszcze nie przyszła. Aby zareagować w chwili nadejścia sygnału, użyj bloku [kiedy hub odbierze sygnał](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## To urządzenie {#this-device}
 

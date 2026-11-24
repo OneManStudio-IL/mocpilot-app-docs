@@ -54,7 +54,7 @@ MOCPilot viser **Bluetooth er av** når Bluetooth på enheten er slått av. Slå
 
 ## Hubber med klassisk Bluetooth {#classic-bluetooth-hubs}
 
-**Robot Inventor**-huben bruker klassisk Bluetooth, ikke Bluetooth Low Energy. Den fungerer på Android, Mac og Windows, men ikke på iPhone og iPad. Hvis MOCPilot ikke finner den på Windows, parer du huben først under **Innstillinger → Bluetooth og enheter → Legg til enhet** og søker deretter på nytt i appen.
+**Robot Inventor**-huben bruker klassisk Bluetooth, ikke Bluetooth Low Energy. Den fungerer på Android, Mac og Windows, men ikke på iPhone og iPad. Hvis MOCPilot ikke finner den på Windows, parer du huben først under **Innstillinger → Bluetooth og enheter → Legg til enhet** og søker deretter på nytt i appen. På Windows og Mac kan du også koble den til med en USB-kabel; se [MINDSTORMS Robot Inventor-huben](/docs/Application/Hubs/RobotInventorHub#connect).
 
 Alle andre støttede hubber bruker Bluetooth Low Energy og legges bare til i MOCPilot, ikke i systemets Bluetooth-innstillinger.
 

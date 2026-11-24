@@ -23,7 +23,7 @@ Logiikkalohkoilla on omat lohkonsa ja oma toimintansa. MOCPilot-ohjelmia ei voi 
 
 <Screenshot name="blocks-editor" alt="Logiikkalohkojen editori paletteineen ja ohjelmineen" width={900} />
 
-- **Paletissa** ovat lohkoluokat: **Tapahtumat**, **Hallinta**, **Anturit**, **Äänet**, **Operaattori**, **Muuttujat**, **Listat** ja **Minun lohkot**. Muut luokat näkyvät, kun profiilisi tarvitsee niitä: **Moottorit** ja **Valo** (kun hubi tukee niitä), **Simulaattori** (kun kojelaudalla on polkimet, vaihteisto tai käsijarru), **Näytön ohjaimet** ja **Peliohjain**.
+- **Paletissa** ovat lohkoluokat: **Tapahtumat**, **Hallinta**, **Anturit**, **Äänet**, **Operaattori**, **Muuttujat**, **Listat** ja **Minun lohkot**. Muut luokat näkyvät, kun profiilisi tarvitsee niitä: **Moottorit** ja **Valo** (kun hubi tukee niitä), **Liike** ([Robot Inventor -hubin](/docs/Application/Hubs/RobotInventorHub) kanssa), **Simulaattori** (kun kojelaudalla on polkimet, vaihteisto tai käsijarru), **Näytön ohjaimet** ja **Peliohjain**.
 - **Ohjelma-alueelle** vedetään lohkot ja rakennetaan skriptit.
 - Yläpalkissa ovat **Kumoa** ja **Tee uudelleen**, **Kojelauta**, **Omat hubit**, **Peliohjain**, sivupaneelit **Tekoälyrakentaja**, [**Reppu**](/docs/Application/BlockBuilder/Backpack) ja **Seuranta**, **Lisää toimintoja** (jossa on **Editorin asetukset**) sekä **Suorita/Pysäytä**. Puhelimessa ja tabletissa sivupaneelit ja Peliohjain ovat kohdassa **Lisää toimintoja**.
 
@@ -146,7 +146,7 @@ Jokaisella profiililla on **lohkotaso**: **Aloittelija** näyttää yksinkertais
 
 - [Tapahtumat](/docs/Application/BlockBuilder/Blocks/Events) · [Hallinta](/docs/Application/BlockBuilder/Blocks/Control) · [Operaattorit](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Muuttujat](/docs/Application/BlockBuilder/Blocks/Variables) · [Listat](/docs/Application/BlockBuilder/Blocks/Lists) · [Minun lohkot](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Moottorit](/docs/Application/BlockBuilder/Blocks/Motors) · [Valo](/docs/Application/BlockBuilder/Blocks/Light) · [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors) · [Äänet](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Liike](/docs/Application/BlockBuilder/Blocks/Movement) · [Moottorit](/docs/Application/BlockBuilder/Blocks/Motors) · [Valo](/docs/Application/BlockBuilder/Blocks/Light) · [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors) · [Äänet](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulaattori](/docs/Application/BlockBuilder/Blocks/Simulator) · [Näytön ohjaimet](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Peliohjain](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 Sovelluksessa voit painaa lohkoa pitkään (tai napsauttaa sitä hiiren oikealla painikkeella) ja valita **Tietoja lohkosta**, niin sen kuvaus avautuu täällä.

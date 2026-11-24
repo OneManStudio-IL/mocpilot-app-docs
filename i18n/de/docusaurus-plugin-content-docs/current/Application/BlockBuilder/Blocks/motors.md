@@ -97,9 +97,9 @@ Legt fest, was der Motor tut, wenn er stoppt.
 
 ### `Blockierungserkennung aktivieren …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Schaltet die Blockiererkennung ein oder aus.
+Schaltet die Blockiererkennung ein oder aus. Ist sie eingeschaltet, gibt ein blockierter Motor auf, statt weiterzudrücken, sodass ein Block, der auf den Motor wartet, fertig werden kann.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (der Block trägt das Hub-Symbol).
 
 ### `Beschleunigung einstellen auf …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Liefert die aktuelle Geschwindigkeit des Motors.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Liefert die aktuelle Leistung des Motors.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (der Block trägt das Hub-Symbol).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Diese Blöcke stammen aus der Robot-Inventor-App und funktionieren nur mit den [Hubs von MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Sie tragen das Hub-Symbol. Um einen zweirädrigen Roboter zu fahren, verwenden Sie die Blöcke der Kategorie [Bewegung](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `Motor starten bei … % Leistung` (Fortgeschritten) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Startet die Motoren an den gewählten Ports mit der angegebenen Leistung von −100 bis 100 % (Standard 75 %). Anders als bei **Motor starten bei … % Geschwindigkeit** hält der Motor keine geregelte Geschwindigkeit: Unter Last wird er langsamer, wie ein Motor ohne Encoder.
+
+### `wurde der Motor unterbrochen?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true`, wenn der letzte Befehl des Motors an diesem Port nicht zu Ende kam, weil ein anderer Motorblock am selben Port ihn abgebrochen hat.
 
 ## Technic Move Hub {#technic-move-hub}
 

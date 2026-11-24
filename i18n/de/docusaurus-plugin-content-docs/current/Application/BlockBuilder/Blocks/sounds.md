@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Töne {#sounds}
 
-Tonblöcke spielen Töne auf dem Telefon, Tablet oder Computer ab, auf dem MOCPilot läuft: Pieptöne, Signale, Hupen, Effekte und Ihre eigenen Aufnahmen.
+Tonblöcke spielen Töne auf dem Telefon, Tablet oder Computer ab, auf dem MOCPilot läuft: Pieptöne, Signale, Hupen, Effekte und Ihre eigenen Aufnahmen. Der Robot-Inventor-Hub hat außerdem einen eigenen Lautsprecher, siehe [Lautsprecher des Robot-Inventor-Hubs](#robot-inventor-sounds).
 
 ## Welche Töne Sie abspielen können {#which-sounds-you-can-play}
 
@@ -73,3 +73,122 @@ Liefert die aktuelle Lautstärke, von 0 bis 100.
 Liefert den ausgewählten Ton als Wert.
 
 - Typische Verwendung: einen Ton in einer Variablen oder Liste speichern oder an einen Ihrer [Meine Blöcke](/docs/Application/BlockBuilder/Blocks/MyBlocks) übergeben und ihn dann mit **Ton … spiele** abspielen.
+
+## Lautsprecher des Robot-Inventor-Hubs {#robot-inventor-sounds}
+
+Diese Blöcke stammen aus der Robot-Inventor-App und spielen Töne über den Lautsprecher des [Hubs von MINDSTORMS Robot Inventor oder SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) ab, nicht auf Ihrem Gerät. Sie tragen das Hub-Symbol. Noten sind MIDI-Notennummern: 60 ist das mittlere C, jeder Schritt ist ein Halbton (0 bis 132).
+
+### `Piepton spielen … für … sekunden` (Anfänger) {#block_ri_sound_beep_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_beep_for.svg')} alt="block_ri_sound_beep_for.svg" />
+
+Spielt einen Piepton der angegebenen Note (standardmäßig 60) für die angegebene Zeit (standardmäßig 0,2 s) und wartet, bis er endet.
+
+### `Piepton starten …` (Fortgeschritten) {#block_ri_sound_beep}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_beep.svg')} alt="block_ri_sound_beep.svg" />
+
+Startet einen Piepton der angegebenen Note und geht sofort weiter. Der Piepton klingt bis **alle Klänge stoppen** oder bis zu einem anderen Hub-Klang.
+
+### `Klang abspielen … bis zum Ende` (Anfänger) {#block_ri_sound_play_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_play_until_done.svg')} alt="block_ri_sound_play_until_done.svg" />
+
+Spielt einen der auf dem Hub gespeicherten Roboterklänge ab (Affirmative, Laser, Hello, Tadaa und 80 weitere) und wartet, bis er endet. Die Klänge gehören zur Hub-Software; bleibt der Hub stumm, siehe [Wenn der Hub nicht startet](/docs/Application/Hubs/RobotInventorHub#restore).
+
+### `Klang starten …` (Anfänger) {#block_ri_sound_play}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_play.svg')} alt="block_ri_sound_play.svg" />
+
+Startet einen Roboterklang des Hubs und geht sofort weiter.
+
+### `alle Klänge stoppen` (Hub) (Anfänger) {#block_ri_sound_stop}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_stop.svg')} alt="block_ri_sound_stop.svg" />
+
+Stoppt den Klang und den Piepton auf dem Hub. Der Block **stoppe alle Töne** ohne Hub-Symbol stoppt die Töne Ihres Geräts.
+
+### `Hub-Lautstärke einstellen auf … %` (Fortgeschritten) {#block_ri_sound_set_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_set_volume.svg')} alt="block_ri_sound_set_volume.svg" />
+
+Stellt die Lautstärke der Pieptöne, Klänge und Noten des Hubs ein, von 0 bis 100 % (100 %, bis Sie sie ändern).
+
+### `Hub-Lautstärke ändern um …` (Fortgeschritten) {#block_ri_sound_change_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_change_volume.svg')} alt="block_ri_sound_change_volume.svg" />
+
+Macht den Hub um den angegebenen Betrag lauter oder leiser (standardmäßig −10); die Lautstärke bleibt zwischen 0 und 100 %.
+
+### `Hub-Lautstärke` (Fortgeschritten) {#block_ri_sound_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_volume.svg')} alt="block_ri_sound_volume.svg" />
+
+Liefert die Hub-Lautstärke, von 0 bis 100.
+
+### `setzen … Effekt auf …` (Fortgeschritten) {#block_ri_sound_set_effect}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_set_effect.svg')} alt="block_ri_sound_set_effect.svg" />
+
+Legt einen Klangeffekt für die Roboterklänge fest, die danach starten.
+
+- `Tonhöhe`: von −360 bis 360; positive Werte machen die Klänge höher und schneller, negative tiefer und langsamer. 0 ist normal.
+- `Panorama links/rechts`: von −100 bis 100. Der Hub hat nur einen Lautsprecher, daher hören Sie es nicht; der Wert bleibt für Programme aus der Robot-Inventor-App erhalten.
+
+### `ändern … Effekt um …` (Fortgeschritten) {#block_ri_sound_change_effect}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_change_effect.svg')} alt="block_ri_sound_change_effect.svg" />
+
+Ändert den Tonhöhen- oder Panorama-Effekt um den angegebenen Betrag (standardmäßig 10), in denselben Grenzen.
+
+### `Klangeffekte aufheben` (Fortgeschritten) {#block_ri_sound_clear_effects}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_clear_effects.svg')} alt="block_ri_sound_clear_effects.svg" />
+
+Setzt Tonhöhe und Panorama auf 0 zurück.
+
+### Musik {#robot-inventor-music}
+
+Die Musikblöcke zählen die Zeit in **Schlägen**: Beim Tempo von 60 Schlägen pro Minute (Standard) dauert ein Schlag eine Sekunde. Während das Programm in MOCPilot läuft, klingen Noten als Hub-Pieptöne in der richtigen Höhe und Länge und Trommeln als kurze Pieptöne; das Instrument ändert den Klang noch nicht.
+
+#### `Note spielen … für … Schläge` (Fortgeschritten) {#block_ri_sound_music_note}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_note.svg')} alt="block_ri_sound_music_note.svg" />
+
+Spielt eine Note (standardmäßig 60) für die angegebene Anzahl Schläge (standardmäßig 0,25) und wartet.
+
+#### `Trommel spielen … für … Schläge` (Fortgeschritten) {#block_ri_sound_music_drum}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_drum.svg')} alt="block_ri_sound_music_drum.svg" />
+
+Spielt eine von 18 Trommeln (Snare-Trommel, Bass-Trommel, Hi-Hat, Kuhglocke und weitere) und wartet die angegebene Anzahl Schläge.
+
+#### `pausieren für … Schläge` (Fortgeschritten) {#block_ri_sound_music_rest}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_rest.svg')} alt="block_ri_sound_music_rest.svg" />
+
+Wartet die angegebene Anzahl Schläge, ohne etwas zu spielen.
+
+#### `Instrument einstellen auf …` (Guru) {#block_ri_sound_music_instrument}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_instrument.svg')} alt="block_ri_sound_music_instrument.svg" />
+
+Wählt eines von 21 Instrumenten (Klavier, Orgel, Gitarre, Flöte, Chor, Synthesizer und weitere) für die folgenden Noten.
+
+#### `Tempo einstellen auf …` (Fortgeschritten) {#block_ri_sound_music_set_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_set_tempo.svg')} alt="block_ri_sound_music_set_tempo.svg" />
+
+Stellt das Tempo in Schlägen pro Minute ein, von 20 bis 500 (standardmäßig 60).
+
+#### `Tempo ändern um …` (Fortgeschritten) {#block_ri_sound_music_change_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_change_tempo.svg')} alt="block_ri_sound_music_change_tempo.svg" />
+
+Macht die Musik um die angegebene Anzahl Schläge pro Minute schneller oder langsamer (standardmäßig 20).
+
+#### `Tempo` (Fortgeschritten) {#block_ri_sound_music_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_tempo.svg')} alt="block_ri_sound_music_tempo.svg" />
+
+Liefert das aktuelle Tempo in Schlägen pro Minute.

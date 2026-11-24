@@ -22,7 +22,7 @@ MOCPilot 可在手机、平板和电脑上运行。要驾驶模型，设备还�
 ## 蓝牙 {#bluetooth}
 
 - 集线器通过**低功耗蓝牙**（Bluetooth 4.0 或更新版本）连接。几乎所有手机和平板都支持；在电脑上，可使用内置适配器或 USB 蓝牙适配器。
-- **Robot Inventor** 集线器使用经典蓝牙。它可在 Android、Mac 和 Windows 上使用，但不支持 iPhone 和 iPad。
+- **Robot Inventor** 集线器使用经典蓝牙。它可在 Android、Mac 和 Windows 上使用，但不支持 iPhone 和 iPad。在 Windows 和 Mac 上，它也可以用 USB 线连接。
 - **Mould King** 集线器以蓝牙广播（advertising）的方式接收命令。在 Windows 上，Mould King 6.0 需要支持广播的适配器和驱动程序，而 Mould King 4.0 完全无法使用；请改用手机或平板。
 - 应用会请求蓝牙权限（在 Android 上还会请求“附近的设备”或“位置信息”权限）。参见[蓝牙和权限](/docs/Help/BluetoothPermissions)。
 

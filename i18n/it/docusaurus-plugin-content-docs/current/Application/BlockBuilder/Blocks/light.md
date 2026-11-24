@@ -4,6 +4,7 @@ title: Luce
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Luce {#light}
 
@@ -96,7 +97,49 @@ Imposta l'orientamento dell'immagine sulla matrice di luci. Per impostazione pre
 
 Controlla le luci attorno agli «occhi» del sensore di distanza sulla porta selezionata. Puoi accendere o spegnere ogni luce, oppure inserire una lista nello spazio per impostare la luminosità di ciascuna luce.
 
-- Hub: MINDSTORMS Robot Inventor.
+- Hub: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (il blocco ha l'icona dell'hub).
+
+## Matrice di luci Robot Inventor {#robot-inventor-light}
+
+Questi blocchi provengono dall'app Robot Inventor e funzionano solo con gli [hub MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Hanno l'icona dell'hub. Tocca l'immagine in un blocco per disegnarla; nei blocchi di animazione mostra il primo fotogramma e il numero di fotogrammi.
+
+### `accendere … per … secondi` (Principiante) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Mostra l'immagine sulla matrice di luci per il tempo indicato (2 secondi come predefinito), poi la spegne. Il blocco attende che il tempo sia trascorso.
+
+### `riproduci animazione … a … fotogrammi al secondo fino alla fine` (Principiante) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Riproduce una volta i fotogrammi dell'animazione alla velocità indicata (4 fotogrammi al secondo come predefinito) e attende fino all'ultimo fotogramma.
+
+### `avvia animazione … a … fotogrammi al secondo …` (Principiante) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Avvia l'animazione e passa subito al blocco successivo.
+
+- `una volta`: la riproduce una sola volta.
+- `ripetere` (predefinito): la riproduce di continuo finché un altro blocco di luce non cambia la matrice.
+
+### `imposta luminosità pixel a … %` (Avanzato) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Imposta la luminosità delle immagini e delle animazioni dei blocchi Robot Inventor qui sopra, da 0 a 100 %. Finché questo blocco non viene eseguito, sono alla massima luminosità. Ogni pixel mantiene la propria luminosità rispetto agli altri.
+
+### Disegnare immagini e animazioni {#animation-editor}
+
+Tocca l'immagine in un blocco di luce per aprire l'editor:
+
+- **Pixel**: tocca la griglia 5×5 o trascina il dito sopra di essa per dipingere con la luminosità selezionata.
+- **Luminosità**: la scala accanto alla griglia sceglie la luminosità con cui dipingere (10 livelli, da spento a massima).
+- **Tutto spento / tutto acceso**: cancella l'immagine o la riempie con la luminosità selezionata.
+- **Fotogrammi** (solo nei blocchi di animazione): la barra sotto la griglia mostra il fotogramma corrente, per esempio **2/3**. I pulsanti passano al fotogramma **precedente** e **successivo**, **aggiungono** un fotogramma vuoto dopo quello corrente, **duplicano** il fotogramma corrente o lo **eliminano** (un'animazione conserva almeno un fotogramma).
+
+<Screenshot name="robot-inventor-animation-editor" alt="L'editor di animazioni: la griglia 5×5, la scala della luminosità e la barra dei fotogrammi" width={600} />
 
 ## LED delle porte BuWizz 3 {#buwizz-3-port-leds}
 

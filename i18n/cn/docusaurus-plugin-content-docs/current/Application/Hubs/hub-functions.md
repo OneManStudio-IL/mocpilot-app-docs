@@ -54,10 +54,13 @@ LEGO® Technic 遥控车（Porsche GT4 e-Performance、Lamborghini Revuelto、Ba
 
 ## Robot Inventor（LEGO® Large Hub） {#robot-inventor-lego-large-hub}
 
+有关连接、固件和积木的全部内容：[MINDSTORMS Robot Inventor 集线器](/docs/Application/Hubs/RobotInventorHub)。
+
 - **LED 点阵**：在快速连接中显示条形图、数字或图片；在逻辑积木中显示文字和像素。
 - **距离传感器灯光**（传感器的“眼睛”）。
 - **卡死检测**和电机功率。
-- 使用经典蓝牙：不支持 iPhone 和 iPad。
+- Robot Inventor 应用的所有积木：[运动](/docs/Application/BlockBuilder/Blocks/Movement)、集线器声音和音乐、手势、偏航、力传感器、集线器之间的无线电。
+- 经典蓝牙（不支持 iPhone 和 iPad），或在 Windows 和 Mac 上使用 USB 线。
 
 ## 带彩色 LED 的 LEGO® 集线器 {#lego-hubs-with-a-colour-led}
 

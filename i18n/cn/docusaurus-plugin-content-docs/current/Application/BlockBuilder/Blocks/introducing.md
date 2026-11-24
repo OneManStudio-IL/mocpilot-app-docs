@@ -23,7 +23,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <Screenshot name="blocks-editor" alt="带有积木面板和程序的逻辑积木编辑器" width={900} />
 
-- **积木面板**列出各个积木类别：**事件**、**控制**、**传感器**、**声音**、**运算符**、**变量**、**列表**和**我的模块**。其他类别会在配置文件需要时出现：**电机**和**灯光**（当集线器支持时）、**模拟器**（当仪表板上有踏板、变速箱或手刹时）、**屏幕控制器**和**游戏手柄**。
+- **积木面板**列出各个积木类别：**事件**、**控制**、**传感器**、**声音**、**运算符**、**变量**、**列表**和**我的模块**。其他类别会在配置文件需要时出现：**电机**和**灯光**（当集线器支持时）、**运动**（使用 [Robot Inventor 集线器](/docs/Application/Hubs/RobotInventorHub)时）、**模拟器**（当仪表板上有踏板、变速箱或手刹时）、**屏幕控制器**和**游戏手柄**。
 - **程序区**是你拖放积木、搭建脚本的地方。
 - 顶栏中有**撤销**和**重做**、**仪表板**、**我的集线器**、**游戏手柄**、侧边面板 **AI 构建器**、[**背包**](/docs/Application/BlockBuilder/Backpack)和**监视器**、**更多**（其中有**编辑器设置**）以及**运行/停止**。在手机或平板上，侧边面板和游戏手柄位于**更多**中。
 
@@ -146,7 +146,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - [事件](/docs/Application/BlockBuilder/Blocks/Events) · [控制](/docs/Application/BlockBuilder/Blocks/Control) · [运算符](/docs/Application/BlockBuilder/Blocks/Operators)
 - [变量](/docs/Application/BlockBuilder/Blocks/Variables) · [列表](/docs/Application/BlockBuilder/Blocks/Lists) · [我的模块](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [电机](/docs/Application/BlockBuilder/Blocks/Motors) · [灯光](/docs/Application/BlockBuilder/Blocks/Light) · [传感器](/docs/Application/BlockBuilder/Blocks/Sensors) · [声音](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [运动](/docs/Application/BlockBuilder/Blocks/Movement) · [电机](/docs/Application/BlockBuilder/Blocks/Motors) · [灯光](/docs/Application/BlockBuilder/Blocks/Light) · [传感器](/docs/Application/BlockBuilder/Blocks/Sensors) · [声音](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [模拟器](/docs/Application/BlockBuilder/Blocks/Simulator) · [屏幕控制器](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [游戏手柄](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 在应用中，长按（或右键点击）积木并选择**关于该模块**，即可在这里打开它的说明。

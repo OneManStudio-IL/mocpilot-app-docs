@@ -97,9 +97,9 @@ Určí, čo motor urobí, keď sa zastaví.
 
 ### `zapnúť detekciu zaseknutia …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Zapne alebo vypne detekciu zaseknutia.
+Zapne alebo vypne detekciu zaseknutia. Keď je zapnutá, zablokovaný motor to vzdá namiesto toho, aby ďalej tlačil, takže blok, ktorý na motor čaká, môže skončiť.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nesie ikonu hubu).
 
 ### `nastaviť zrýchlenie na …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Vráti aktuálnu rýchlosť motora.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Vráti aktuálny výkon motora.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nesie ikonu hubu).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Tieto bloky pochádzajú z aplikácie Robot Inventor a fungujú iba s [hubmi MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesú ikonu hubu. Na riadenie dvojkolesového robota slúžia bloky [Pohyb](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `spustiť motor na … % výkon` (Pokročilý) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Spustí motory na vybraných portoch zadaným výkonom, od −100 do 100 % (predvolene 75 %). Na rozdiel od bloku **spustiť motor na … % rýchlosť** motor neudržiava regulovanú rýchlosť: pod záťažou spomalí ako motor bez enkodéra.
+
+### `bol motor prerušený?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true`, ak posledný príkaz motora na tomto porte nedobehol do konca, pretože ho prerušil iný blok motora na rovnakom porte.
 
 ## Technic Move Hub {#technic-move-hub}
 

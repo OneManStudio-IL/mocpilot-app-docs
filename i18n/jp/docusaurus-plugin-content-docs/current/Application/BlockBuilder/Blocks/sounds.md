@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # サウンド {#sounds}
 
-サウンドブロックは、MOCPilot を実行しているスマートフォン、タブレット、コンピューターでサウンドを再生します。ビープ音、合図、クラクション、効果音、そして自分で録音した音を鳴らせます。
+サウンドブロックは、MOCPilot を実行しているスマートフォン、タブレット、コンピューターでサウンドを再生します。ビープ音、合図、クラクション、効果音、そして自分で録音した音を鳴らせます。Robot Inventor のハブにも専用のスピーカーがあります。[Robot Inventor のハブのスピーカー](#robot-inventor-sounds) を参照してください。
 
 ## 再生できるサウンド {#which-sounds-you-can-play}
 
@@ -73,3 +73,122 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 選択したサウンドを値として返します。
 
 - 主な用途：サウンドを変数やリストに保存したり、[私のブロック](/docs/Application/BlockBuilder/Blocks/MyBlocks)に渡したりして、**サウンド … 再生**で再生します。
+
+## Robot Inventor のハブのスピーカー {#robot-inventor-sounds}
+
+これらのブロックは Robot Inventor アプリから来たもので、お使いのデバイスではなく [MINDSTORMS Robot Inventor または SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)のスピーカーで音を鳴らします。ハブのアイコンが付いています。音符は MIDI のノート番号で指定します。60 が真ん中のド（C）で、1 つ増えるごとに半音上がります（0～132）。
+
+### `ビープ音を鳴らす … の間 … 秒` (初心者) {#block_ri_sound_beep_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_beep_for.svg')} alt="block_ri_sound_beep_for.svg" />
+
+指定した音符（初期値 60）のビープ音を指定した時間（初期値 0.2 秒）鳴らし、終わるまで待ちます。
+
+### `ビープ音を開始 …` (上級者) {#block_ri_sound_beep}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_beep.svg')} alt="block_ri_sound_beep.svg" />
+
+指定した音符のビープ音を鳴らし始め、すぐに次へ進みます。ビープ音は **すべての音を止める** か、ハブの別の音が鳴るまで続きます。
+
+### `音を鳴らす … 終わるまで` (初心者) {#block_ri_sound_play_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_play_until_done.svg')} alt="block_ri_sound_play_until_done.svg" />
+
+ハブに保存されているロボットサウンド（Affirmative、Laser、Hello、Tadaa ほか 80 種類）の 1 つを鳴らし、終わるまで待ちます。サウンドはハブのソフトウェアに含まれています。ハブから音が出ない場合は、[ハブが起動しない場合](/docs/Application/Hubs/RobotInventorHub#restore) を参照してください。
+
+### `音を開始 …` (初心者) {#block_ri_sound_play}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_play.svg')} alt="block_ri_sound_play.svg" />
+
+ハブのロボットサウンドを鳴らし始め、すぐに次へ進みます。
+
+### `すべての音を止める` (ハブ) (初心者) {#block_ri_sound_stop}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_stop.svg')} alt="block_ri_sound_stop.svg" />
+
+ハブのサウンドとビープ音を止めます。ハブのアイコンが付いていない同じ名前のブロックは、お使いのデバイスの音を止めます。
+
+### `ハブの音量を設定 … %` (上級者) {#block_ri_sound_set_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_set_volume.svg')} alt="block_ri_sound_set_volume.svg" />
+
+ハブのビープ音、サウンド、音符の音量を 0～100 % で設定します（変えるまでは 100 %）。
+
+### `ハブの音量を変える …` (上級者) {#block_ri_sound_change_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_change_volume.svg')} alt="block_ri_sound_change_volume.svg" />
+
+ハブの音を指定した量（初期値 −10）だけ大きく、または小さくします。音量は 0～100 % の範囲に収まります。
+
+### `ハブの音量` (上級者) {#block_ri_sound_volume}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_volume.svg')} alt="block_ri_sound_volume.svg" />
+
+ハブの音量を 0～100 で返します。
+
+### `設定する … の効果を …` (上級者) {#block_ri_sound_set_effect}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_set_effect.svg')} alt="block_ri_sound_set_effect.svg" />
+
+このあとに始まるロボットサウンドに音の効果を設定します。
+
+- `ピッチ`：−360～360。プラスの値で音は高く速く、マイナスの値で低く遅くなります。0 が通常です。
+- `左右にパン`：−100～100。ハブのスピーカーは 1 つしかないので聞き分けられません。この値は Robot Inventor アプリで作ったプログラムのために保持されています。
+
+### `変更する … の効果を次だけ変える: …` (上級者) {#block_ri_sound_change_effect}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_change_effect.svg')} alt="block_ri_sound_change_effect.svg" />
+
+ピッチまたはパンの効果を、同じ範囲内で指定した量（初期値 10）だけ変えます。
+
+### `音の効果をなくす` (上級者) {#block_ri_sound_clear_effects}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_clear_effects.svg')} alt="block_ri_sound_clear_effects.svg" />
+
+ピッチとパンを 0 に戻します。
+
+### 音楽 {#robot-inventor-music}
+
+音楽のブロックは時間を **拍** で数えます。テンポが 1 分あたり 60 拍（初期値）のとき、1 拍は 1 秒です。MOCPilot でプログラムを実行している間、音符は正しい高さと長さのハブのビープ音として、ドラムは短いビープ音として鳴ります。楽器による音の違いはまだありません。
+
+#### `音符を鳴らす … の間 … 拍` (上級者) {#block_ri_sound_music_note}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_note.svg')} alt="block_ri_sound_music_note.svg" />
+
+音符（初期値 60）を指定した拍数（初期値 0.25）だけ鳴らし、待ちます。
+
+#### `ドラムを鳴らす … の間 … 拍` (上級者) {#block_ri_sound_music_drum}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_drum.svg')} alt="block_ri_sound_music_drum.svg" />
+
+18 種類のドラム（スネアドラム、バスドラム、ハイハット、カウベルなど）の 1 つを鳴らし、指定した拍数だけ待ちます。
+
+#### `休む … 拍` (上級者) {#block_ri_sound_music_rest}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_rest.svg')} alt="block_ri_sound_music_rest.svg" />
+
+何も鳴らさずに、指定した拍数だけ待ちます。
+
+#### `楽器を設定 …` (達人) {#block_ri_sound_music_instrument}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_instrument.svg')} alt="block_ri_sound_music_instrument.svg" />
+
+このあとの音符に使う楽器を 21 種類（ピアノ、オルガン、ギター、フルート、合唱、シンセなど）から選びます。
+
+#### `テンポを設定 …` (上級者) {#block_ri_sound_music_set_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_set_tempo.svg')} alt="block_ri_sound_music_set_tempo.svg" />
+
+テンポを 1 分あたりの拍数で、20～500（初期値 60）の範囲で設定します。
+
+#### `テンポを変える …` (上級者) {#block_ri_sound_music_change_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_change_tempo.svg')} alt="block_ri_sound_music_change_tempo.svg" />
+
+音楽を、指定した 1 分あたりの拍数（初期値 20）だけ速く、または遅くします。
+
+#### `テンポ` (上級者) {#block_ri_sound_music_tempo}
+
+<img src={useBaseUrl('/img/blocks/block_ri_sound_music_tempo.svg')} alt="block_ri_sound_music_tempo.svg" />
+
+現在のテンポを 1 分あたりの拍数で返します。

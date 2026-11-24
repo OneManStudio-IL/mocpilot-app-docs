@@ -22,7 +22,7 @@ De links naar de stores vind je op [mocpilot.com](https://mocpilot.com). De app 
 ## Bluetooth {#bluetooth}
 
 - Hubs maken verbinding via **Bluetooth Low Energy** (Bluetooth 4.0 of nieuwer). Vrijwel elke telefoon en tablet heeft dat; op een computer gebruik je de ingebouwde adapter of een USB-Bluetooth-dongle.
-- De **Robot Inventor**-hub gebruikt klassieke Bluetooth. Die werkt op Android, Mac en Windows, maar niet op iPhone en iPad.
+- De **Robot Inventor**-hub gebruikt klassieke Bluetooth. Die werkt op Android, Mac en Windows, maar niet op iPhone en iPad. Op Windows en Mac kan hij ook met een USB-kabel worden verbonden.
 - **Mould King**-hubs ontvangen opdrachten als Bluetooth-uitzendingen (advertising). Op Windows heeft Mould King 6.0 een adapter en stuurprogramma nodig die kunnen uitzenden, en Mould King 4.0 werkt daar helemaal niet; gebruik daarvoor een telefoon of tablet.
 - De app vraagt om toestemming voor Bluetooth (op Android ook voor Apparaten in de buurt of Locatie). Zie [Bluetooth en machtigingen](/docs/Help/BluetoothPermissions).
 

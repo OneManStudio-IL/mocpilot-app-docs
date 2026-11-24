@@ -54,10 +54,13 @@ Hubben i LEGO® Technics radiostyrda bilar (Porsche GT4 e-Performance, Lamborghi
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Allt om anslutning, firmware och blocken: [MINDSTORMS Robot Inventor-hubben](/docs/Application/Hubs/RobotInventorHub).
+
 - **LED-matris**: en nivåstapel, ett tal eller en bild i Snabbkopplingar; text och pixlar i Logikblock.
 - **Sensorlampor** (avståndssensorns ”ögon”).
 - **Stoppdetektering** och motoreffekt.
-- Klassisk Bluetooth: inte tillgänglig på iPhone och iPad.
+- Alla block från Robot Inventor-appen: [Rörelse](/docs/Application/BlockBuilder/Blocks/Movement), hubbljud och musik, gester, yaw, kraftsensorn, radio mellan hubbar.
+- Klassisk Bluetooth (inte tillgänglig på iPhone och iPad) eller en USB-kabel på Windows och Mac.
 
 ## LEGO®-hubbar med färglysdiod {#lego-hubs-with-a-colour-led}
 

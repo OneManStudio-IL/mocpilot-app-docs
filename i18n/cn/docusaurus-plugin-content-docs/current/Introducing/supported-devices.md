@@ -18,7 +18,7 @@ MOCPilot 支持以下集线器、电机和传感器。所有集线器都可以�
 
 - 一个配置文件有 5 个集线器槽位：其中 2 个免费，另外 3 个需单独购买集线器槽位或开通 [MocPilot Pro](/docs/Application/Account/Pro)。
 - **Mould King** 集线器只接收命令（没有传感器，也没有反馈）。一个配置文件中只能使用一种 Mould King 类型：最多 3 个 Mould King 4.0 集线器，或 1 个 Mould King 6.0。
-- **Robot Inventor** 集线器（LEGO® 大型集线器）使用经典蓝牙，在 iPhone 和 iPad 上不可用。
+- **Robot Inventor** 集线器（LEGO® 大型集线器）和 **SPIKE Prime** 集线器（测试版，SPIKE Legacy 固件）使用经典蓝牙，在 iPhone 和 iPad 上不可用。在 Windows 和 Mac 上，它们也可以用 USB 线连接。请参阅 [MINDSTORMS Robot Inventor 集线器](/docs/Application/Hubs/RobotInventorHub)。
 - Technic Hub、Technic Move Hub、BOOST Move Hub 和 City Hub 支持固件更新和恢复。参见[固件更新](/docs/Application/Hubs/FirmwareUpdating)。
 - 各集线器除电机和灯光之外的其他功能，请参见[集线器特有功能](/docs/Application/Hubs/HubFunctions)。
 

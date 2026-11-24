@@ -4,6 +4,7 @@ title: Lys
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Lys {#light}
 
@@ -96,7 +97,49 @@ Indstiller orienteringen af billedet på lysmatrixen. Standard er `opretstående
 
 Styrer lysene omkring »øjnene« på afstandssensoren på den valgte port. Du kan tænde eller slukke hvert lys eller sætte en liste ind i feltet for at indstille lysstyrken for hvert lys.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blokken har hub-ikonet).
+
+## Robot Inventor-lysmatrix {#robot-inventor-light}
+
+Disse blokke kommer fra Robot Inventor-appen og virker kun med [hubbene fra MINDSTORMS Robot Inventor og SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). De har hub-ikonet. Tryk på billedet i en blok for at tegne det; i animationsblokkene viser det det første billede og antallet af billeder.
+
+### `tænd … i … sekunder` (Begynder) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Viser billedet på lysmatrixen i den angivne tid (som standard 2 sekunder) og slukker det derefter. Blokken venter, til tiden er gået.
+
+### `afspil animation … ved … billeder pr. sekund indtil færdig` (Begynder) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Afspiller animationens billeder én gang med den angivne hastighed (som standard 4 billeder pr. sekund) og venter til det sidste billede.
+
+### `start animation … ved … billeder pr. sekund …` (Begynder) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Starter animationen og går straks videre til næste blok.
+
+- `én gang`: afspiller den én gang.
+- `gentage` (standard): afspiller den igen og igen, indtil en anden lysblok ændrer matrixen.
+
+### `indstil pixellysstyrke til … %` (Avanceret) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Indstiller, hvor klart billederne og animationerne fra Robot Inventor-blokkene ovenfor lyser, fra 0 til 100 %. Indtil denne blok kører, lyser de med fuld lysstyrke. Hver pixel beholder sin egen lysstyrke i forhold til de andre.
+
+### Tegning af billeder og animationer {#animation-editor}
+
+Tryk på billedet i en lysblok for at åbne editoren:
+
+- **Pixels**: Tryk på eller træk hen over 5×5-gitteret for at male med den valgte lysstyrke.
+- **Lysstyrke**: Skalaen ved siden af gitteret vælger den lysstyrke, der males med (10 niveauer, fra slukket til fuld).
+- **Alle slukket / alle tændt**: ryd billedet, eller fyld det med den valgte lysstyrke.
+- **Billeder** (kun animationsblokke): Bjælken under gitteret viser det aktuelle billede, for eksempel **2/3**. Knapperne går til det **forrige** og **næste** billede, **tilføjer** et tomt billede efter det aktuelle, **dublerer** det aktuelle billede eller **sletter** det (en animation beholder mindst ét billede).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Animationseditoren: 5×5-gitteret, lysstyrkeskalaen og billedbjælken" width={600} />
 
 ## Port-LED'er på BuWizz 3 {#buwizz-3-port-leds}
 

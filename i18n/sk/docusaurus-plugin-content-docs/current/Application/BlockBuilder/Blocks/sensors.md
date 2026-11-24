@@ -14,6 +14,7 @@ Na tejto stránke:
 - [Stav hubu](#hub-state): batéria, napätie, teplota, prúd a režim výkonu
 - [Tlačidlá, náklon a orientácia hubu](#hub-tilt-and-orientation)
 - [Senzory na portoch](#sensors-on-ports): ľubovoľné zariadenie, farebný senzor Technic, senzor vzdialenosti Technic, senzor farby a vzdialenosti BOOST, senzory WeDo 2.0
+- [Hub Robot Inventor](#robot-inventor-sensors): senzor sily, gestá, orientácia, vybočenie, náklon a klonenie, naklonenie, rádio medzi hubmi
 - [Toto zariadenie](#this-device): telefón, tablet alebo počítač, na ktorom beží MOCPilot
 - [Časovač](#timer)
 
@@ -240,6 +241,98 @@ Vráti údaje zo senzora náklonu WeDo 2.0: uhol náklonu alebo smer, ktorým je
 - Uhly: `klonenie`, `náklon`
 - Výstup smeru: `text` alebo `číslo`; smery: `neutrálny`, `dopredu`, `dozadu`, `vľavo`, `vpravo`, `neznámy`
 - Huby: WeDo 2.0.
+
+## Hub Robot Inventor {#robot-inventor-sensors}
+
+Tieto bloky pochádzajú z aplikácie Robot Inventor a fungujú iba s [hubmi MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesú ikonu hubu. Ich udalosti (keď hubom zatrasiete, nakloníte ho a podobne) nájdete na stránke [Udalosti](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Senzor sily {#robot-inventor-force-sensor}
+
+#### `je … stlačené / silno stlačený / uvoľnené ?` (Začiatočník) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Skontroluje senzor sily na vybranom porte. `silno stlačený` znamená stlačenie silou väčšou ako 5 newtonov.
+
+#### `… tlak v % / newtonoch` (Začiatočník) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Vráti, ako silno je senzor sily stlačený: v percentách (0–100) alebo v newtonoch (0–10).
+
+### Pohyb hubu {#robot-inventor-motion}
+
+#### `je hub … ?` (Pokročilý) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, ak s hubom práve niekto takto pohol: `poklepaný`, `dvakrát poklepaný`, `zatrasený` (predvolené) alebo `padá`. Gesto sa počíta raz: keď ho niektorý blok prečíta, zmizne.
+
+#### `gesto` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Vráti posledné gesto ako text: `tapped`, `doubletapped`, `shake` alebo `freefall`, prípadne prázdnu hodnotu, ak žiadne nebolo.
+
+#### `je … hore?` (Začiatočník) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, ak je táto strana hubu otočená nahor: `predná strana` (svetelná matica), `horná strana`, `pravá strana`, `zadná strana`, `spodná strana` alebo `ľavá strana`.
+
+#### `orientácia` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Vráti stranu, ktorá je hore, ako text: `front`, `up`, `rightside`, `back`, `down` alebo `leftside`.
+
+#### `… uhol` (Začiatočník) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Vráti uhol hubu v stupňoch okolo jednej osi: `ryskanie` (vybočenie: otáčanie doľava a doprava ako kompas), `náklon` (predok hore a dole) alebo `rotácia` (klonenie: nakláňanie do strán).
+
+- Typické použitie: viesť robota rovno alebo ho otočiť presne o 90°: vynulujte vybočenie a potom zatáčajte, kým nedosiahne požadovaný uhol.
+
+#### `nastaviť uhol ryskania na 0` (Začiatočník) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Urobí z aktuálneho smeru hubu novú nulu uhla vybočenia. Blok počká 0,1 s, aby sa ďalšie meranie už počítalo od nej.
+
+#### `uhlová rýchlosť …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Vráti, ako rýchlo sa hub otáča okolo osi `x`, `y` alebo `z` (gyroskop), v stupňoch za sekundu.
+
+#### `zrýchlenie …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Vráti zrýchlenie hubu pozdĺž osi `x`, `y` alebo `z` tak, ako ho hub hlási.
+
+#### `je hub naklonený … ?` (Pokročilý) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, ak je hub naklonený týmto smerom: nahor (v aplikácii `hore`), nadol (`dole`), `doľava`, `doprava` alebo `akýkoľvek` (predvolené). Hub sa považuje za naklonený približne od 12° od vodorovnej polohy; keď je naklonený oboma smermi, rozhoduje väčší náklon.
+
+### Rádio medzi hubmi {#robot-inventor-radio}
+
+Huby Robot Inventor si môžu bezdrôtovo posielať krátke signály, bez MOCPilotu ako sprostredkovateľa. Signál má názov a hodnotu.
+
+#### `vyslať signál hubu … s …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Pošle z tohto hubu hubom v okolí signál so zadaným názvom (predvolene `signal`) a hodnotou (`1`).
+
+#### `prijatý signál … hodnota` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Vráti poslednú hodnotu, ktorú tento hub prijal pre signál s týmto názvom, alebo 0, ak zatiaľ žiadna neprišla. Ak chcete reagovať hneď, ako signál príde, použite [keď hub prijme signál](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Toto zariadenie {#this-device}
 

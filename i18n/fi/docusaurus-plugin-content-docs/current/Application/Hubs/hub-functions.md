@@ -54,10 +54,13 @@ LEGO® Technic -kauko-ohjattavien autojen (Porsche GT4 e-Performance, Lamborghin
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Kaikki yhdistämisestä, laiteohjelmistosta ja lohkoista: [MINDSTORMS Robot Inventor -hubi](/docs/Application/Hubs/RobotInventorHub).
+
 - **LED-matriisi**: tasopalkki, luku tai kuva Pikalinkeissä; teksti ja pikselit Logiikkalohkoissa.
 - **Etäisyysanturin valot** (anturin ”silmät”).
 - **Jumiutumisen tunnistus** ja moottorin teho.
-- Klassinen Bluetooth: ei käytettävissä iPhonessa eikä iPadissa.
+- Kaikki Robot Inventor -sovelluksen lohkot: [Liike](/docs/Application/BlockBuilder/Blocks/Movement), hubin äänet ja musiikki, eleet, kääntökulma, voima-anturi, hubien välinen radio.
+- Klassinen Bluetooth (ei käytettävissä iPhonessa eikä iPadissa) tai USB-kaapeli Windowsissa ja Macissa.
 
 ## LEGO®-hubit, joissa on väri-LED {#lego-hubs-with-a-colour-led}
 

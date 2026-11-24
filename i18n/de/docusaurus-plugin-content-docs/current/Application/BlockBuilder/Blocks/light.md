@@ -4,6 +4,7 @@ title: Licht
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Licht {#light}
 
@@ -96,7 +97,49 @@ Legt die Ausrichtung des Bildes auf der Lichtmatrix fest. Standardmäßig ist si
 
 Steuert die Lichter um die „Augen“ des Abstandssensors am ausgewählten Port. Sie können jedes Licht ein- oder ausschalten oder eine Liste in das Eingabefeld setzen, um die Helligkeit jedes Lichts festzulegen.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (der Block trägt das Hub-Symbol).
+
+## Robot-Inventor-Lichtmatrix {#robot-inventor-light}
+
+Diese Blöcke stammen aus der Robot-Inventor-App und funktionieren nur mit den [Hubs von MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Sie tragen das Hub-Symbol. Tippen Sie auf das Bild in einem Block, um es zu zeichnen; in den Animationsblöcken zeigt es das erste Bild und die Anzahl der Bilder.
+
+### `einschalten … für … sekunden` (Anfänger) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Zeigt das Bild für die angegebene Zeit (standardmäßig 2 Sekunden) auf der Lichtmatrix und schaltet es dann aus. Der Block wartet, bis die Zeit abgelaufen ist.
+
+### `Animation abspielen … bei … Bilder pro Sekunde bis zum Ende` (Anfänger) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Spielt die Bilder der Animation einmal mit der angegebenen Geschwindigkeit ab (standardmäßig 4 Bilder pro Sekunde) und wartet bis zum letzten Bild.
+
+### `Animation starten … bei … Bilder pro Sekunde …` (Anfänger) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Startet die Animation und geht sofort zum nächsten Block weiter.
+
+- `einmal`: spielt sie ein Mal ab.
+- `wiederholen` (Standard): spielt sie immer wieder ab, bis ein anderer Lichtblock die Matrix ändert.
+
+### `Pixelhelligkeit einstellen auf … %` (Fortgeschritten) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Legt fest, wie hell die Bilder und Animationen der Robot-Inventor-Blöcke oben sind, von 0 bis 100 %. Bis dieser Block läuft, leuchten sie mit voller Helligkeit. Jedes Pixel behält seine eigene Helligkeit im Verhältnis zu den anderen.
+
+### Bilder und Animationen zeichnen {#animation-editor}
+
+Tippen Sie auf das Bild in einem Lichtblock, um den Editor zu öffnen:
+
+- **Pixel**: Tippen Sie auf das 5×5-Raster oder ziehen Sie darüber, um mit der gewählten Helligkeit zu malen.
+- **Helligkeit**: Die Skala neben dem Raster wählt die Helligkeit zum Malen (10 Stufen, von aus bis voll).
+- **Alle aus / alle an**: das Bild löschen oder mit der gewählten Helligkeit füllen.
+- **Bilder** (nur Animationsblöcke): Die Leiste unter dem Raster zeigt das aktuelle Bild, zum Beispiel **2/3**. Die Schaltflächen gehen zum **vorherigen** und **nächsten** Bild, **fügen** nach dem aktuellen ein leeres Bild **hinzu**, **duplizieren** das aktuelle Bild oder **löschen** es (eine Animation behält mindestens ein Bild).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Der Animationseditor: das 5×5-Raster, die Helligkeitsskala und die Bildleiste" width={600} />
 
 ## Port-LEDs des BuWizz 3 {#buwizz-3-port-leds}
 

@@ -97,9 +97,9 @@ Alege ce face motorul când se oprește.
 
 ### `activați detectarea blocajului …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Activează sau dezactivează detectarea blocării.
+Activează sau dezactivează detectarea blocării. Când este activată, un motor care se blochează renunță în loc să continue să împingă, așa că un bloc care așteaptă motorul se poate termina.
 
-- Huburi: MINDSTORMS Robot Inventor.
+- Huburi: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocul poartă pictograma hubului).
 
 ### `setează accelerația la …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Returnează viteza curentă a motorului.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Returnează puterea curentă a motorului.
 
-- Huburi: MINDSTORMS Robot Inventor.
+- Huburi: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocul poartă pictograma hubului).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Aceste blocuri vin din aplicația Robot Inventor și funcționează doar cu [huburile MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ele poartă pictograma hubului. Ca să conduci un robot cu două roți, vezi blocurile de [Mișcare](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `pornește motorul la … % putere` (Avansat) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Pornește motoarele de pe porturile selectate cu puterea dată, de la −100 la 100 % (implicit 75 %). Spre deosebire de **pornește motorul la … % viteză**, motorul nu menține o viteză reglată: sub sarcină încetinește, ca un motor fără encoder.
+
+### `a fost întrerupt motorul?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` dacă ultima comandă a motorului de pe acest port nu s-a terminat pentru că un alt bloc de motor pe același port a întrerupt-o.
 
 ## Technic Move Hub {#technic-move-hub}
 

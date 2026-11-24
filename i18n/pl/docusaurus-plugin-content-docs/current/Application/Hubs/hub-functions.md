@@ -54,10 +54,13 @@ Hub zdalnie sterowanych samochodów LEGO® Technic (Porsche GT4 e-Performance, L
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Wszystko o łączeniu, firmware i blokach: [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+
 - **Matryca LED**: pasek poziomu, liczba lub obraz w Szybkich połączeniach; tekst i piksele w Blokach logicznych.
 - **Światła czujnika odległości** („oczy” czujnika).
 - **Wykrywanie zablokowania** i moc silnika.
-- Klasyczny Bluetooth: niedostępny na iPhonie i iPadzie.
+- Wszystkie bloki aplikacji Robot Inventor: [Ruch](/docs/Application/BlockBuilder/Blocks/Movement), dźwięki i muzyka huba, gesty, ryskanie, czujnik siły, radio między hubami.
+- Klasyczny Bluetooth (niedostępny na iPhonie i iPadzie) lub kabel USB w Windows i na Macu.
 
 ## Huby LEGO® z kolorową diodą LED {#lego-hubs-with-a-colour-led}
 

@@ -22,7 +22,7 @@ MOCPilot はスマートフォン、タブレット、パソコンで動作し�
 ## Bluetooth {#bluetooth}
 
 - ハブは **Bluetooth Low Energy**（Bluetooth 4.0 以降）で接続します。ほとんどのスマートフォンとタブレットが対応しています。パソコンでは、内蔵アダプターか USB Bluetooth ドングルを使ってください。
-- **Robot Inventor** ハブはクラシック Bluetooth を使います。Android、Mac、Windows では使えますが、iPhone と iPad では使えません。
+- **Robot Inventor** ハブはクラシック Bluetooth を使います。Android、Mac、Windows では使えますが、iPhone と iPad では使えません。Windows と Mac では USB ケーブルでも接続できます。
 - **Mould King** のハブは、Bluetooth のブロードキャスト（アドバタイジング）でコマンドを受信します。Windows では、Mould King 6.0 にはブロードキャストに対応したアダプターとドライバーが必要で、Mould King 4.0 はまったく動作しません。その場合はスマートフォンかタブレットを使ってください。
 - アプリは Bluetooth の権限を求めます（Android では「付近のデバイス」または「位置情報」も）。[Bluetooth と権限](/docs/Help/BluetoothPermissions)を参照してください。
 

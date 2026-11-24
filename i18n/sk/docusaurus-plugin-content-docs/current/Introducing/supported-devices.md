@@ -18,7 +18,7 @@ Poznámky:
 
 - Profil má 5 slotov pre huby: 2 sú zadarmo, ďalšie 3 získate nákupom dodatočného slotu pre hub alebo s [MocPilot Pro](/docs/Application/Account/Pro).
 - Huby **Mould King** iba prijímajú príkazy (bez senzorov, bez spätnej väzby). V jednom profile môžete použiť iba jeden typ Mould King: až 3 huby Mould King 4.0 alebo 1 Mould King 6.0.
-- Hub **Robot Inventor** (LEGO® Large Hub) používa klasický Bluetooth a na iPhone a iPade nie je k dispozícii.
+- Hub **Robot Inventor** (LEGO® Large Hub) a hub **SPIKE Prime** (beta, firmvér SPIKE Legacy) používajú klasický Bluetooth a na iPhone a iPade nie sú k dispozícii. Vo Windows a na Macu sa pripájajú aj káblom USB. Pozrite [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
 - Aktualizácia a obnova firmvéru sú k dispozícii pre Technic Hub, Technic Move Hub, BOOST Move Hub a City Hub. Pozrite si [Aktualizácia firmvéru](/docs/Application/Hubs/FirmwareUpdating).
 - Čo jednotlivé huby dokážu okrem motorov a svetiel, je popísané v časti [Funkcie jednotlivých hubov](/docs/Application/Hubs/HubFunctions).
 

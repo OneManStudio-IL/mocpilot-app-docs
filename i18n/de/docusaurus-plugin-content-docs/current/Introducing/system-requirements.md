@@ -22,7 +22,7 @@ Die Links zu den Stores finden Sie auf [mocpilot.com](https://mocpilot.com). Die
 ## Bluetooth {#bluetooth}
 
 - Hubs werden über **Bluetooth Low Energy** (Bluetooth 4.0 oder neuer) verbunden. Fast jedes Smartphone und Tablet unterstützt es; an einem Computer verwenden Sie den eingebauten Adapter oder einen USB-Bluetooth-Stick.
-- Der **Robot Inventor**-Hub nutzt klassisches Bluetooth. Er funktioniert unter Android, auf dem Mac und unter Windows, aber nicht auf iPhone und iPad.
+- Der **Robot Inventor**-Hub nutzt klassisches Bluetooth. Er funktioniert unter Android, auf dem Mac und unter Windows, aber nicht auf iPhone und iPad. Unter Windows und auf dem Mac kann er auch über ein USB-Kabel verbunden werden.
 - **Mould King**-Hubs empfangen Befehle als Bluetooth-Broadcasts (Advertising). Unter Windows benötigt Mould King 6.0 einen Adapter und Treiber, die Broadcasts senden können, und Mould King 4.0 funktioniert dort gar nicht; verwenden Sie dafür ein Smartphone oder Tablet.
 - Die App fragt nach der Bluetooth-Berechtigung (unter Android auch nach „Geräte in der Nähe“ oder dem Standort). Siehe [Bluetooth und Berechtigungen](/docs/Help/BluetoothPermissions).
 

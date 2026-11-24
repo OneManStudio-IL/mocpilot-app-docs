@@ -97,9 +97,9 @@ Valitsee, mitä moottori tekee pysähtyessään.
 
 ### `ota käyttöön jumiutumisen tunnistus …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Kytkee jumiutumisen tunnistuksen päälle tai pois.
+Kytkee jumiutumisen tunnistuksen päälle tai pois. Kun se on päällä, jumiin juuttunut moottori luovuttaa eikä jatka työntämistä, joten moottoria odottava lohko voi päättyä.
 
-- Hubit: MINDSTORMS Robot Inventor.
+- Hubit: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (lohkossa on hubikuvake).
 
 ### `aseta kiihtyvyys …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Palauttaa moottorin nykyisen nopeuden.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Palauttaa moottorin nykyisen tehon.
 
-- Hubit: MINDSTORMS Robot Inventor.
+- Hubit: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (lohkossa on hubikuvake).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Nämä lohkot tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS Robot Inventor- ja SPIKE Prime -hubien](/docs/Application/Hubs/RobotInventorHub) kanssa. Niissä on hubikuvake. Kaksipyöräisen robotin ajamiseen katso [Liike](/docs/Application/BlockBuilder/Blocks/Movement)-lohkot.
+
+### `käynnistä moottori … % teho` (Edistynyt) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Käynnistää valittujen porttien moottorit annetulla teholla väliltä −100–100 % (oletus 75 %). Toisin kuin **käynnistä moottori … % nopeus**, moottori ei pidä säädettyä nopeutta: kuormitettuna se hidastuu kuin moottori ilman kulma-anturia.
+
+### `keskeytyikö moottori?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true`, jos tämän portin moottorin viimeisin komento ei päättynyt, koska toinen saman portin moottorilohko keskeytti sen.
 
 ## Technic Move Hub {#technic-move-hub}
 

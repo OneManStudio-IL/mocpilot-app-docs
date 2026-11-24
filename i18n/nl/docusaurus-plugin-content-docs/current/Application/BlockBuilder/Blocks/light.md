@@ -4,6 +4,7 @@ title: Licht
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Licht {#light}
 
@@ -96,7 +97,49 @@ Stelt de oriëntatie van het beeld op de lichtmatrix in. Standaard is dat `recht
 
 Stuurt de lampjes rond de “ogen” van de afstandssensor op de gekozen poort aan. Je kunt elk lampje aan- of uitzetten, of een lijst in het vak zetten om de helderheid van elk lampje in te stellen.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (het blok draagt het hubpictogram).
+
+## Robot Inventor-lichtmatrix {#robot-inventor-light}
+
+Deze blokken komen uit de Robot Inventor-app en werken alleen met de [hubs van MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ze dragen het hubpictogram. Tik op de afbeelding in een blok om hem te tekenen; in de animatieblokken toont hij het eerste beeld en het aantal beelden.
+
+### `inschakelen … voor … seconden` (Beginner) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Toont de afbeelding op de lichtmatrix gedurende de opgegeven tijd (standaard 2 seconden) en zet hem daarna uit. Het blok wacht tot de tijd om is.
+
+### `speel animatie … bij … beelden per seconde tot het klaar is` (Beginner) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Speelt de beelden van de animatie één keer af met de opgegeven snelheid (standaard 4 beelden per seconde) en wacht tot het laatste beeld.
+
+### `start animatie … bij … beelden per seconde …` (Beginner) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Start de animatie en gaat meteen door naar het volgende blok.
+
+- `één keer`: speelt hem één keer af.
+- `herhalen` (standaard): speelt hem steeds opnieuw af, totdat een ander lichtblok de matrix verandert.
+
+### `stel pixelhelderheid in op … %` (Gevorderd) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Stelt in hoe helder de afbeeldingen en animaties van de Robot Inventor-blokken hierboven zijn, van 0 tot 100 %. Totdat dit blok draait, branden ze op volle helderheid. Elke pixel behoudt zijn eigen helderheid ten opzichte van de andere.
+
+### Afbeeldingen en animaties tekenen {#animation-editor}
+
+Tik op de afbeelding in een lichtblok om de editor te openen:
+
+- **Pixels**: tik op het raster van 5×5 of sleep eroverheen om te schilderen met de gekozen helderheid.
+- **Helderheid**: de schaal naast het raster kiest de helderheid om mee te schilderen (10 niveaus, van uit tot vol).
+- **Alles uit / alles aan**: de afbeelding wissen of vullen met de gekozen helderheid.
+- **Beelden** (alleen animatieblokken): de balk onder het raster toont het huidige beeld, bijvoorbeeld **2/3**. De knoppen gaan naar het **vorige** en **volgende** beeld, **voegen** een leeg beeld na het huidige **toe**, **dupliceren** het huidige beeld of **verwijderen** het (een animatie houdt minstens één beeld).
+
+<Screenshot name="robot-inventor-animation-editor" alt="De animatie-editor: het raster van 5×5, de helderheidsschaal en de beeldbalk" width={600} />
 
 ## Poort-leds van de BuWizz 3 {#buwizz-3-port-leds}
 

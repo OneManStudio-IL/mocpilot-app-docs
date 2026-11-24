@@ -29,7 +29,7 @@ Een **Hub** is de Bluetooth-steen van je model: motoren, lampen en sensoren slui
 | LEGO® Move Hub / BOOST (88006) | 2 ingebouwde motoren + 2 poorten |
 | LEGO® Remote Control (88010) | de knoppen zijn ingangen |
 | LEGO® WeDo 2.0 Smart Hub | 2 poorten |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 poorten, lichtmatrix; niet op iPhone en iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 poorten, lichtmatrix, luidspreker, gyroscoop; Bluetooth of USB; niet op iPhone en iPad |
 | BuWizz 2.0 | 4 poorten, vermogensmodi |
 | BuWizz 3.0 Pro | 6 poorten, poortkleur-leds |
 | SBrick, SBrick Plus | 4 poorten, snelheidsregeling, geen positieregeling |

@@ -147,3 +147,37 @@ Estes eventos leem um sensor conectado a uma porta do hub. Hubs: City Hub, Techn
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 É executado quando o sensor de cor e distância BOOST vê a cor selecionada.
+
+## Eventos do Robot Inventor {#robot-inventor-events}
+
+Estes eventos vêm do app Robot Inventor e só funcionam com os [hubs MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Eles têm o ícone do hub. Os valores correspondentes estão na página [Sensores](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `quando o hub for …` (Iniciante) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+É executado uma vez cada vez que o hub é `tocado`, `tocado duas vezes`, `sacudido` (padrão) ou está `caindo`.
+
+### `quando … estiver para cima` (Iniciante) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+É executado quando o lado selecionado do hub fica virado para cima: `frente` (a matriz de luzes, padrão), `topo`, `lado direito`, `traseira`, `base` ou `lado esquerdo`.
+
+### `quando o hub for inclinado …` (Avançado) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+É executado quando o hub é inclinado `para cima`, `para baixo`, `para a esquerda`, `para a direita` ou em `qualquer` direção (padrão), em cerca de 12° ou mais.
+
+### `quando … pressionado / pressionado com força / solto` (Iniciante) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+É executado quando o sensor de força na porta selecionada é pressionado, pressionado com força (mais de 5 newtons) ou solto.
+
+### `quando o hub receber o sinal …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+É executado quando este hub recebe de outro hub o sinal de rádio com este nome. Leia o valor dele com [sinal recebido … valor](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

@@ -29,7 +29,7 @@ L'**hub** è il mattoncino Bluetooth del tuo modello: motori, luci e sensori si 
 | LEGO® Move Hub / BOOST (88006) | 2 motori integrati + 2 porte |
 | LEGO® Remote Control (88010) | i suoi pulsanti sono ingressi |
 | LEGO® WeDo 2.0 Smart Hub | 2 porte |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 porte, matrice di luci; non disponibile su iPhone e iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 porte, matrice di luci, altoparlante, giroscopio; Bluetooth o USB; non disponibile su iPhone e iPad |
 | BuWizz 2.0 | 4 porte, modalità di potenza |
 | BuWizz 3.0 Pro | 6 porte, LED colorati sulle porte |
 | SBrick, SBrick Plus | 4 porte, controllo della velocità, nessun controllo della posizione |

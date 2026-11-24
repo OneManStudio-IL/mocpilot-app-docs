@@ -22,7 +22,7 @@ Kauppojen linkit löydät osoitteesta [mocpilot.com](https://mocpilot.com). Sove
 ## Bluetooth {#bluetooth}
 
 - Hubit yhdistetään **Bluetooth Low Energy** -yhteydellä (Bluetooth 4.0 tai uudempi). Se on lähes jokaisessa puhelimessa ja tabletissa; tietokoneessa voit käyttää sisäänrakennettua sovitinta tai USB-Bluetooth-sovitinta.
-- **Robot Inventor** -hubi käyttää perinteistä Bluetoothia. Se toimii Androidissa, Macissa ja Windowsissa, mutta ei iPhonessa eikä iPadissa.
+- **Robot Inventor** -hubi käyttää perinteistä Bluetoothia. Se toimii Androidissa, Macissa ja Windowsissa, mutta ei iPhonessa eikä iPadissa. Windowsissa ja Macissa sen voi yhdistää myös USB-kaapelilla.
 - **Mould King** -hubit vastaanottavat komennot Bluetooth-lähetyksinä (advertising). Windowsissa Mould King 6.0 tarvitsee sovittimen ja ajurin, jotka pystyvät lähettämään, eikä Mould King 4.0 toimi lainkaan; käytä sen kanssa puhelinta tai tablettia.
 - Sovellus pyytää Bluetooth-luvan (Androidissa myös Lähellä olevat laitteet- tai Sijainti-luvan). Katso [Bluetooth ja käyttöoikeudet](/docs/Help/BluetoothPermissions).
 

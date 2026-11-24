@@ -22,7 +22,7 @@ Odkazy do obchodů najdete na [mocpilot.com](https://mocpilot.com). Aplikace si 
 ## Bluetooth {#bluetooth}
 
 - Huby se připojují přes **Bluetooth Low Energy** (Bluetooth 4.0 nebo novější). Má ho téměř každý telefon a tablet; na počítači použijte vestavěný adaptér nebo USB adaptér Bluetooth.
-- Hub **Robot Inventor** používá klasické Bluetooth. Funguje na Androidu, Macu a Windows, ale ne na iPhonu a iPadu.
+- Hub **Robot Inventor** používá klasické Bluetooth. Funguje na Androidu, Macu a Windows, ale ne na iPhonu a iPadu. Ve Windows a na Macu ho lze připojit i kabelem USB.
 - Huby **Mould King** přijímají příkazy jako bluetoothové vysílání (advertising). Ve Windows potřebuje Mould King 6.0 adaptér a ovladač, které vysílání podporují, a Mould King 4.0 nefunguje vůbec; použijte pro něj telefon nebo tablet.
 - Aplikace požádá o oprávnění k Bluetooth (na Androidu také Zařízení v okolí nebo Poloha). Viz [Bluetooth a oprávnění](/docs/Help/BluetoothPermissions).
 

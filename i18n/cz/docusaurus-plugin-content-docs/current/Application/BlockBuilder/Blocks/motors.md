@@ -123,9 +123,9 @@ Určuje, co motor udělá, když se zastaví.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
 
-Zapne nebo vypne detekci zablokování.
+Zapne nebo vypne detekci zablokování. Když je zapnutá, zablokovaný motor to vzdá, místo aby dál tlačil, takže blok, který na motor čeká, může skončit.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nese ikonu hubu).
 
 ### `nastavit zrychlení na …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 
@@ -175,7 +175,23 @@ Vrací aktuální rychlost motoru.
 
 Vrací aktuální výkon motoru.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nese ikonu hubu).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Tyto bloky pocházejí z aplikace Robot Inventor a fungují jen s [huby MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesou ikonu hubu. K řízení dvoukolového robota slouží bloky [Pohyb](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `spustit motor na … % výkon` (Pokročilý) {#block_ri_motor_start_power}
+
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+
+Spustí motory na vybraných portech zadaným výkonem, od −100 do 100 % (výchozí 75 %). Na rozdíl od bloku **spustit motor na … % rychlost** motor neudržuje regulovanou rychlost: pod zátěží zpomalí jako motor bez enkodéru.
+
+### `byl motor přerušen?` (Guru) {#block_ri_motor_was_interrupted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+
+`true`, pokud poslední příkaz motoru na tomto portu nedoběhl do konce, protože ho přerušil jiný blok motoru na stejném portu.
 
 ## Technic Move Hub {#technic-move-hub}
 

@@ -97,9 +97,9 @@ Określa, co robi silnik, gdy się zatrzymuje.
 
 ### `włącz wykrywanie zablokowania …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Włącza lub wyłącza wykrywanie zablokowania.
+Włącza lub wyłącza wykrywanie zablokowania. Gdy jest włączone, zablokowany silnik się poddaje, zamiast dalej napierać, więc blok czekający na silnik może się zakończyć.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok ma ikonę huba).
 
 ### `ustaw przyspieszenie na …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Zwraca bieżącą prędkość silnika.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Zwraca bieżącą moc silnika.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok ma ikonę huba).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Te bloki pochodzą z aplikacji Robot Inventor i działają tylko z [hubami MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Mają ikonę huba. Do sterowania robotem z dwoma kołami służą bloki [Ruch](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `uruchom silnik na … % mocy` (Zaawansowany) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Uruchamia silniki na wybranych portach z podaną mocą, od −100 do 100 % (domyślnie 75 %). W odróżnieniu od **uruchom silnik na … % prędkość** silnik nie utrzymuje regulowanej prędkości: pod obciążeniem zwalnia, jak silnik bez enkodera.
+
+### `czy silnik został przerwany?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true`, jeśli ostatnie polecenie silnika na tym porcie się nie skończyło, bo przerwał je inny blok silnika na tym samym porcie.
 
 ## Technic Move Hub {#technic-move-hub}
 

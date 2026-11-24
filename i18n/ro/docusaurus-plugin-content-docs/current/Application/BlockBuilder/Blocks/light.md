@@ -4,6 +4,7 @@ title: Lumină
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Lumină {#light}
 
@@ -96,7 +97,49 @@ Setează orientarea imaginii de pe matricea de lumini. Implicit este `vertical`;
 
 Controlează luminile din jurul „ochilor” senzorului de distanță de pe portul selectat. Poți aprinde sau stinge fiecare lumină ori poți pune o listă în câmp pentru a seta luminozitatea fiecărei lumini.
 
-- Huburi: MINDSTORMS Robot Inventor.
+- Huburi: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocul poartă pictograma hubului).
+
+## Matricea de lumini Robot Inventor {#robot-inventor-light}
+
+Aceste blocuri vin din aplicația Robot Inventor și funcționează doar cu [huburile MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ele poartă pictograma hubului. Atinge imaginea dintr-un bloc ca s-o desenezi; în blocurile de animație ea arată primul cadru și numărul de cadre.
+
+### `pornește … pentru … secunde` (Începător) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Afișează imaginea pe matricea de lumini pentru timpul dat (implicit 2 secunde), apoi o stinge. Blocul așteaptă până expiră timpul.
+
+### `redă animația … la … cadre pe secundă până la final` (Începător) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Redă o dată cadrele animației, cu viteza dată (implicit 4 cadre pe secundă), și așteaptă până la ultimul cadru.
+
+### `pornește animația … la … cadre pe secundă …` (Începător) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Pornește animația și trece imediat la blocul următor.
+
+- `o dată`: o redă o singură dată.
+- `repeta` (implicit): o redă din nou și din nou, până când un alt bloc de lumină schimbă matricea.
+
+### `setează luminozitatea pixelilor la … %` (Avansat) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Setează cât de luminoase sunt imaginile și animațiile blocurilor Robot Inventor de mai sus, de la 0 la 100 %. Până rulează acest bloc, ele au luminozitatea maximă. Fiecare pixel își păstrează luminozitatea relativă față de ceilalți.
+
+### Desenarea imaginilor și a animațiilor {#animation-editor}
+
+Atinge imaginea dintr-un bloc de lumină ca să deschizi editorul:
+
+- **Pixeli**: atinge grila 5×5 sau trage peste ea ca să pictezi cu luminozitatea selectată.
+- **Luminozitate**: scala de lângă grilă alege luminozitatea cu care pictezi (10 niveluri, de la stins la maxim).
+- **Toate stinse / toate aprinse**: golește imaginea sau o umple cu luminozitatea selectată.
+- **Cadre** (doar în blocurile de animație): bara de sub grilă arată cadrul curent, de exemplu **2/3**. Butoanele trec la cadrul **anterior** și la cel **următor**, **adaugă** un cadru gol după cel curent, **duplică** cadrul curent sau îl **șterg** (o animație păstrează cel puțin un cadru).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Editorul de animații: grila 5×5, scala de luminozitate și bara de cadre" width={600} />
 
 ## LED-urile porturilor BuWizz 3 {#buwizz-3-port-leds}
 

@@ -14,6 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [集线器状态](#hub-state)：电池、电压、温度、电流和功率模式
 - [集线器按钮、倾斜和方向](#hub-tilt-and-orientation)
 - [端口上的传感器](#sensors-on-ports)：任意设备、Technic 颜色传感器、Technic 距离传感器、BOOST 颜色与距离传感器、WeDo 2.0 传感器
+- [Robot Inventor 集线器](#robot-inventor-sensors)：力传感器、手势、方向、偏航、俯仰和横滚、倾斜、集线器之间的无线电
 - [本设备](#this-device)：运行 MOCPilot 的手机、平板电脑或电脑
 - [计时器](#timer)
 
@@ -306,6 +307,98 @@ WeDo 2.0 运动传感器测得的距离满足条件时返回 `true`。
 - 角度：`俯仰`、`滚转`
 - 方向输出：`文本` 或 `数字`；方向：`中性`、`前进`、`向后`、`左`、`右`、`未知`
 - 集线器：WeDo 2.0。
+
+## Robot Inventor 集线器 {#robot-inventor-sensors}
+
+这些积木来自 Robot Inventor 应用，只适用于 [MINDSTORMS Robot Inventor 和 SPIKE Prime 集线器](/docs/Application/Hubs/RobotInventorHub)。它们带有集线器图标。相应的事件（集线器被摇晃、倾斜等时）在[事件](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events)页面上。
+
+### 力传感器 {#robot-inventor-force-sensor}
+
+#### `… 是 按下 / 用力按下 / 释放 ?`（初学者） {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+检查所选端口上的力传感器。`用力按下`表示以超过 5 牛顿的力按下。
+
+#### `… 压力单位 % / 牛顿`（初学者） {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+返回力传感器被按压的力度：以百分比（0–100）或牛顿（0–10）表示。
+
+### 集线器运动 {#robot-inventor-motion}
+
+#### `集线器是否 … ?`（进阶） {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+如果集线器刚刚以这种方式被移动过，就为 `true`：`被轻敲`、`被轻敲两次`、`被摇晃`（默认）或`正在掉落`。一个手势只计一次：被某个积木读取之后，它就消失了。
+
+#### `手势`（大师） {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+以文本形式返回最后一个手势：`tapped`、`doubletapped`、`shake` 或 `freefall`；如果没有手势，则返回空值。
+
+#### `是 … 朝上？`（初学者） {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+如果集线器的这一面朝上，就为 `true`：`正面`（灯光点阵）、`顶面`、`右侧`、`背面`、`底面`或`左侧`。
+
+#### `方向`（大师） {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+以文本形式返回朝上的一面：`front`、`up`、`rightside`、`back`、`down` 或 `leftside`。
+
+#### `… 角度`（初学者） {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+返回集线器绕某一轴的角度，以度为单位：`偏航`（像指南针一样左右转动）、`俯仰`（前端上下抬落）或`横滚`（向两侧倾斜）。
+
+- 典型用法：让机器人走直线或精确转动 90°：先重置偏航角，然后一直转向，直到偏航角达到目标角度。
+
+#### `将偏航角设为 0`（初学者） {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+把集线器的当前朝向设为偏航角的新零点。积木会等待 0.1 秒，以便下一次读数已经从新零点开始计算。
+
+#### `角速度 …`（大师） {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+返回集线器绕 `x`、`y` 或 `z` 轴转动的快慢（陀螺仪），以度/秒为单位。
+
+#### `加速 …`（大师） {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+返回集线器沿 `x`、`y` 或 `z` 轴的加速度，即集线器报告的数值。
+
+#### `集线器是否倾斜 … ?`（进阶） {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+如果集线器朝这个方向倾斜，就为 `true`：`向上`、`向下`、`向左`、`向右`或`任何`（默认）。偏离水平约 12° 起，集线器就算倾斜；同时朝两个方向倾斜时，以倾斜较大的方向为准。
+
+### 集线器之间的无线电 {#robot-inventor-radio}
+
+Robot Inventor 集线器之间可以通过无线方式互相发送简短的信号，中间不需要 MOCPilot。信号有一个名称和一个数值。
+
+#### `集线器发送信号 … 与 …`（大师） {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+从这个集线器向附近的集线器发送具有指定名称（默认为 `signal`）和数值（`1`）的信号。
+
+#### `收到的信号 … 值`（大师） {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+返回这个集线器为该名称的信号收到的最后一个数值；如果还没有收到，则返回 0。要在信号到达的那一刻做出反应，请使用[当集线器收到信号](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio)。
 
 ## 本设备 {#this-device}
 

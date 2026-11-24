@@ -123,9 +123,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
 
-开启或关闭卡死检测。
+开启或关闭卡死检测。开启后，被卡住的电机会放弃而不是继续用力，这样等待该电机的积木就能结束。
 
-- 集线器：MINDSTORMS Robot Inventor。
+- 集线器：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（积木带有集线器图标）。
 
 ### `设置加速度为 …`（大师） {#block_hubs_all_motors_port_set_acceleration}
 
@@ -175,7 +175,23 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 返回电机的当前功率。
 
-- 集线器：MINDSTORMS Robot Inventor。
+- 集线器：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（积木带有集线器图标）。
+
+## Robot Inventor {#robot-inventor-motors}
+
+这些积木来自 Robot Inventor 应用，只适用于 [MINDSTORMS Robot Inventor 和 SPIKE Prime 集线器](/docs/Application/Hubs/RobotInventorHub)。它们带有集线器图标。要驾驶两轮机器人，请参阅[运动](/docs/Application/BlockBuilder/Blocks/Movement)积木。
+
+### `启动电机于 … 功率 %`（进阶） {#block_ri_motor_start_power}
+
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+
+以指定的功率启动所选端口上的电机，范围 −100 到 100 %（默认 75 %）。与**启动电机于 … 速度 %**不同，电机不会保持受调节的速度：负载下它会变慢，就像没有编码器的电机一样。
+
+### `电机被中断了吗？`（大师） {#block_ri_motor_was_interrupted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+
+如果这个端口上电机的上一条命令因为同一端口上的另一个电机积木中途打断而没有完成，就为 `true`。
 
 ## Technic Move Hub {#technic-move-hub}
 

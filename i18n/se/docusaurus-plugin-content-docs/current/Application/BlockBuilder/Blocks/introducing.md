@@ -23,7 +23,7 @@ Logikblock har sin egen uppsättning block och sitt eget beteende. Du kan inte i
 
 <Screenshot name="blocks-editor" alt="Redigeraren för Logikblock med paletten och ett program" width={900} />
 
-- **Paletten** listar blockkategorierna: **Händelser**, **Kontroll**, **Sensorer**, **Ljud**, **Operator**, **Variabler**, **Listor** och **Mina block**. Andra kategorier visas när profilen behöver dem: **Motorer** och **Ljus** (när en hubb stöder dem), **Simulator** (när instrumentpanelen har pedaler, en växellåda eller en handbroms), **Skärmkontroller** och **Handkontroll**.
+- **Paletten** listar blockkategorierna: **Händelser**, **Kontroll**, **Sensorer**, **Ljud**, **Operator**, **Variabler**, **Listor** och **Mina block**. Andra kategorier visas när profilen behöver dem: **Motorer** och **Ljus** (när en hubb stöder dem), **Rörelse** (med en [Robot Inventor-hubb](/docs/Application/Hubs/RobotInventorHub)), **Simulator** (när instrumentpanelen har pedaler, en växellåda eller en handbroms), **Skärmkontroller** och **Handkontroll**.
 - **Programområdet** är där du drar block och bygger skript.
 - Det övre fältet har **Ångra** och **Gör om**, **Instrumentpanel**, **Mina hubbar**, **Handkontroll**, sidopanelerna **AI-byggare**, [**Ryggsäck**](/docs/Application/BlockBuilder/Backpack) och **Monitor**, **Mer** (med **Redigerarens inställningar**) och **Kör/Stoppa**. På en telefon eller surfplatta finns sidopanelerna och Handkontroll under **Mer**.
 
@@ -146,7 +146,7 @@ Varje profil har en **blocknivå**: **Nybörjare** visar de enklaste blocken, **
 
 - [Händelser](/docs/Application/BlockBuilder/Blocks/Events) · [Kontroll](/docs/Application/BlockBuilder/Blocks/Control) · [Operatorer](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Variabler](/docs/Application/BlockBuilder/Blocks/Variables) · [Listor](/docs/Application/BlockBuilder/Blocks/Lists) · [Mina block](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motorer](/docs/Application/BlockBuilder/Blocks/Motors) · [Ljus](/docs/Application/BlockBuilder/Blocks/Light) · [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors) · [Ljud](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Rörelse](/docs/Application/BlockBuilder/Blocks/Movement) · [Motorer](/docs/Application/BlockBuilder/Blocks/Motors) · [Ljus](/docs/Application/BlockBuilder/Blocks/Light) · [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors) · [Ljud](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Skärmkontroller](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Handkontroll](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 I appen trycker du länge på (eller högerklickar) ett block och väljer **Om blocket** för att öppna dess beskrivning här.

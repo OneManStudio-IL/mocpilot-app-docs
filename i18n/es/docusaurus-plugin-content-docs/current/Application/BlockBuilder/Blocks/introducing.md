@@ -23,7 +23,7 @@ Bloques lógicos tiene su propio conjunto de bloques y su propio comportamiento.
 
 <Screenshot name="blocks-editor" alt="Editor de Bloques lógicos con la paleta y un programa" width={900} />
 
-- La **paleta** muestra las categorías de bloques: **Eventos**, **Control**, **Sensores**, **Sonidos**, **Operador**, **Variables**, **Listas** y **Mis bloques**. Otras categorías aparecen cuando tu perfil las necesita: **Motores** y **Luz** (cuando algún hub las admite), **Simulador** (cuando el panel tiene pedales, caja de cambios o freno de mano), **Controladores en pantalla** y **Gamepad**.
+- La **paleta** muestra las categorías de bloques: **Eventos**, **Control**, **Sensores**, **Sonidos**, **Operador**, **Variables**, **Listas** y **Mis bloques**. Otras categorías aparecen cuando tu perfil las necesita: **Motores** y **Luz** (cuando algún hub las admite), **Movimiento** (con un [hub Robot Inventor](/docs/Application/Hubs/RobotInventorHub)), **Simulador** (cuando el panel tiene pedales, caja de cambios o freno de mano), **Controladores en pantalla** y **Gamepad**.
 - El **área del programa** es donde arrastras los bloques y creas los scripts.
 - La barra superior tiene **Deshacer** y **Rehacer**, **Panel**, **Mis hubs**, **Gamepad**, los paneles laterales **Asistente IA**, [**Mochila**](/docs/Application/BlockBuilder/Backpack) y **Monitor**, **Más** (con **Configuración del editor**) y **Ejecutar/Detener**. En un teléfono o una tablet, los paneles laterales y Gamepad están en **Más**.
 
@@ -146,7 +146,7 @@ Cada perfil tiene un **Nivel de bloques**: **Principiante** muestra los bloques 
 
 - [Eventos](/docs/Application/BlockBuilder/Blocks/Events) · [Control](/docs/Application/BlockBuilder/Blocks/Control) · [Operadores](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Variables](/docs/Application/BlockBuilder/Blocks/Variables) · [Listas](/docs/Application/BlockBuilder/Blocks/Lists) · [Mis bloques](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motores](/docs/Application/BlockBuilder/Blocks/Motors) · [Luz](/docs/Application/BlockBuilder/Blocks/Light) · [Sensores](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sonidos](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Movimiento](/docs/Application/BlockBuilder/Blocks/Movement) · [Motores](/docs/Application/BlockBuilder/Blocks/Motors) · [Luz](/docs/Application/BlockBuilder/Blocks/Light) · [Sensores](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sonidos](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulador](/docs/Application/BlockBuilder/Blocks/Simulator) · [Controladores en pantalla](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 En la app, mantén pulsado (o haz clic con el botón derecho en) un bloque y elige **Acerca del bloque** para abrir aquí su descripción.

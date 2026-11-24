@@ -23,7 +23,7 @@ Blocuri logice are propriul set de blocuri și propriul comportament. Nu poți i
 
 <Screenshot name="blocks-editor" alt="Editorul Blocuri logice cu paleta și un program" width={900} />
 
-- **Paleta** conține categoriile de blocuri: **Evenimente**, **Control**, **Senzori**, **Sunete**, **Operator**, **Variabile**, **Liste** și **Blocurile mele**. Alte categorii apar când profilul are nevoie de ele: **Motoare** și **Lumină** (când un hub le acceptă), **Simulator** (când tabloul de bord are pedale, cutie de viteze sau frână de mână), **Controlere pe ecran** și **Gamepad**.
+- **Paleta** conține categoriile de blocuri: **Evenimente**, **Control**, **Senzori**, **Sunete**, **Operator**, **Variabile**, **Liste** și **Blocurile mele**. Alte categorii apar când profilul are nevoie de ele: **Motoare** și **Lumină** (când un hub le acceptă), **Mișcare** (cu un [hub Robot Inventor](/docs/Application/Hubs/RobotInventorHub)), **Simulator** (când tabloul de bord are pedale, cutie de viteze sau frână de mână), **Controlere pe ecran** și **Gamepad**.
 - **Zona programului** este locul unde tragi blocurile și construiește scripturile.
 - Bara de sus conține **Anulează** și **Refă**, **Tablou de bord**, **Huburile mele**, **Gamepad**, panourile laterale **Constructor AI**, [**Rucsac**](/docs/Application/BlockBuilder/Backpack) și **Monitor**, **Mai mult** (cu **Setări editor**) și **Rulează/Oprește**. Pe telefon sau tabletă, panourile laterale și Gamepad se află în **Mai mult**.
 
@@ -146,7 +146,7 @@ Fiecare profil are un **Nivel blocuri**: **Începător** afișează cele mai sim
 
 - [Evenimente](/docs/Application/BlockBuilder/Blocks/Events) · [Control](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Variabile](/docs/Application/BlockBuilder/Blocks/Variables) · [Liste](/docs/Application/BlockBuilder/Blocks/Lists) · [Blocurile mele](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motoare](/docs/Application/BlockBuilder/Blocks/Motors) · [Lumină](/docs/Application/BlockBuilder/Blocks/Light) · [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sunete](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Mișcare](/docs/Application/BlockBuilder/Blocks/Movement) · [Motoare](/docs/Application/BlockBuilder/Blocks/Motors) · [Lumină](/docs/Application/BlockBuilder/Blocks/Light) · [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors) · [Sunete](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Controlere pe ecran](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 În aplicație, ține apăsat (sau fă clic dreapta pe) un bloc și alege **Despre bloc** ca să-i deschizi descrierea aici.

@@ -4,6 +4,7 @@ title: 灯光
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # 灯光 {#light}
 
@@ -96,7 +97,49 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 控制所选端口上距离传感器“眼睛”周围的灯。你可以分别打开或关闭每盏灯，也可以在插槽中放入一个列表来设置每盏灯的亮度。
 
-- 集线器：MINDSTORMS Robot Inventor。
+- 集线器：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（积木带有集线器图标）。
+
+## Robot Inventor 灯光点阵 {#robot-inventor-light}
+
+这些积木来自 Robot Inventor 应用，只适用于 [MINDSTORMS Robot Inventor 和 SPIKE Prime 集线器](/docs/Application/Hubs/RobotInventorHub)。它们带有集线器图标。点按积木中的图片即可绘制它；在动画积木中，图片显示第一帧和帧数。
+
+### `开启 … 持续 … 秒`（初学者） {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+在灯光点阵上显示图像，持续指定的时间（默认 2 秒），然后将其关闭。积木会一直等到时间结束。
+
+### `播放动画 … 在 … 帧/秒，直到播完`（初学者） {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+以指定的速度（默认每秒 4 帧）把动画的各帧播放一遍，并等到最后一帧。
+
+### `开始播放动画 … 在 … 帧/秒 …`（初学者） {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+开始播放动画，并立即继续执行下一个积木。
+
+- `一次`：播放一遍。
+- `重复`（默认）：反复播放，直到另一个灯光积木改变点阵。
+
+### `设置像素亮度为 … %`（进阶） {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+设置上面这些 Robot Inventor 积木的图像和动画的亮度，范围 0 到 100 %。在这个积木运行之前，它们以最大亮度显示。每个像素相对于其他像素保持自己的亮度。
+
+### 绘制图像和动画 {#animation-editor}
+
+点按灯光积木中的图片即可打开编辑器：
+
+- **像素**：在 5×5 网格上点按或拖动，用所选亮度绘制。
+- **亮度**：网格旁边的刻度用于选择绘制所用的亮度（10 级，从关闭到最亮）。
+- **全部关闭 / 全部点亮**：清除图像，或用所选亮度填满图像。
+- **帧**（仅限动画积木）：网格下方的条显示当前帧，例如 **2/3**。按钮可以转到**上一帧**和**下一帧**、在当前帧之后**添加**一个空白帧、**复制**当前帧或**删除**当前帧（动画至少保留一帧）。
+
+<Screenshot name="robot-inventor-animation-editor" alt="动画编辑器：5×5 网格、亮度刻度和帧条" width={600} />
 
 ## BuWizz 3 端口 LED {#buwizz-3-port-leds}
 

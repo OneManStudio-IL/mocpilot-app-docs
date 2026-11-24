@@ -14,6 +14,7 @@ Pe această pagină:
 - [Starea hubului](#hub-state): baterie, tensiune, temperatură, curent și mod de putere
 - [Butoanele, înclinarea și orientarea hubului](#hub-tilt-and-orientation)
 - [Senzori pe porturi](#sensors-on-ports): orice dispozitiv, senzorul de culoare Technic, senzorul de distanță Technic, senzorul de culoare și distanță BOOST, senzorii WeDo 2.0
+- [Hubul Robot Inventor](#robot-inventor-sensors): senzorul de forță, gesturi, orientare, unghiurile de derapaj, înclinare și rotire, înclinarea într-o direcție, radio între huburi
 - [Acest dispozitiv](#this-device): telefonul, tableta sau computerul pe care rulează MOCPilot
 - [Cronometru](#timer)
 
@@ -240,6 +241,98 @@ Returnează date de la senzorul de înclinare WeDo 2.0: un unghi de înclinare s
 - Unghiuri: `înclinare`, `rotire`
 - Ieșirea pentru direcție: `text` sau `număr`; direcții: `neutru`, `înainte`, `înapoi`, `stânga`, `dreapta`, `necunoscut`
 - Huburi: WeDo 2.0.
+
+## Hubul Robot Inventor {#robot-inventor-sensors}
+
+Aceste blocuri vin din aplicația Robot Inventor și funcționează doar cu [huburile MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ele poartă pictograma hubului. Evenimentele lor (când hubul este scuturat, înclinat și așa mai departe) se află pe pagina [Evenimente](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Senzorul de forță {#robot-inventor-force-sensor}
+
+#### `… este apăsat / apăsat tare / eliberat ?` (Începător) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Verifică senzorul de forță de pe portul selectat. `apăsat tare` înseamnă apăsat cu mai mult de 5 newtoni.
+
+#### `… presiune în % / newtoni` (Începător) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Returnează cât de tare este apăsat senzorul de forță: în procente (0–100) sau în newtoni (0–10).
+
+### Mișcarea hubului {#robot-inventor-motion}
+
+#### `este hubul … ?` (Avansat) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` dacă hubul tocmai a fost mișcat în acest fel: `atins`, `atins de două ori`, `scuturat` (implicit) sau `în cădere`. Un gest contează o singură dată: după ce un bloc l-a citit, dispare.
+
+#### `gest` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Returnează ultimul gest ca text: `tapped`, `doubletapped`, `shake` sau `freefall`, ori o valoare goală dacă nu a existat niciunul.
+
+#### `este … sus?` (Începător) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` dacă această parte a hubului este cu fața în sus: `față` (matricea de lumini), `partea de sus`, `partea dreaptă`, `spate`, `partea de jos` sau `partea stângă`.
+
+#### `orientare` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Returnează ca text partea care este cu fața în sus: `front`, `up`, `rightside`, `back`, `down` sau `leftside`.
+
+#### `… unghi` (Începător) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Returnează unghiul hubului în grade în jurul unei axe: `derapaj` (aici: rotirea la stânga și la dreapta, ca la o busolă), `înclinare` (partea din față în sus și în jos) sau `rotire` (înclinarea spre lateral).
+
+- Utilizare tipică: condu un robot în linie dreaptă sau întoarce-l exact cu 90°: resetează derapajul, apoi virează până când derapajul ajunge la unghiul dorit.
+
+#### `setează unghiul de derapaj la 0` (Începător) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Face din direcția curentă a hubului noul zero al unghiului de derapaj. Blocul așteaptă 0,1 s, ca următoarea citire să fie deja numărată de la el.
+
+#### `viteză unghiulară …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Returnează cât de repede se rotește hubul în jurul axei `x`, `y` sau `z` (giroscopul), în grade pe secundă.
+
+#### `accelerație …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Returnează accelerația hubului de-a lungul axei `x`, `y` sau `z`, așa cum o raportează hubul.
+
+#### `este hubul înclinat … ?` (Avansat) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` dacă hubul este înclinat în această direcție: `în sus`, `în jos`, `la stânga`, `la dreapta` sau `orice` (implicit). Hubul este considerat înclinat de la aproximativ 12° față de orizontală; când este înclinat în ambele sensuri, câștigă înclinarea mai mare.
+
+### Radio între huburi {#robot-inventor-radio}
+
+Huburile Robot Inventor își pot trimite unul altuia semnale scurte prin aer, fără MOCPilot la mijloc. Un semnal are un nume și o valoare.
+
+#### `transmite semnalul hubului … cu …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Trimite de la acest hub către huburile din apropiere semnalul cu numele dat (implicit `signal`) și valoarea dată (`1`).
+
+#### `semnal primit … valoare` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Returnează ultima valoare pe care acest hub a primit-o pentru semnalul cu acest nume sau 0 dacă încă nu a sosit niciuna. Ca să reacționezi chiar în momentul în care sosește un semnal, folosește [când hubul primește semnalul](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Acest dispozitiv {#this-device}
 

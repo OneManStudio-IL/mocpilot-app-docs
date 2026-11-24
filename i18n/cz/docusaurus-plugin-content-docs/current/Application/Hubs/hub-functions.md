@@ -54,10 +54,13 @@ Hub dálkově ovládaných aut LEGO® Technic (Porsche GT4 e-Performance, Lambor
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Vše o připojení, firmwaru a blocích: [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+
 - **LED matice**: ukazatel úrovně, číslo nebo obrázek v Rychlých propojeních; text a pixely v Logických blocích.
 - **Světla senzoru vzdálenosti** („oči“ senzoru).
 - **Detekce zablokování** a výkon motoru.
-- Klasický Bluetooth: na iPhonu a iPadu není k dispozici.
+- Všechny bloky aplikace Robot Inventor: [Pohyb](/docs/Application/BlockBuilder/Blocks/Movement), zvuky a hudba hubu, gesta, stáčení, senzor síly, rádio mezi huby.
+- Klasický Bluetooth (na iPhonu a iPadu není k dispozici) nebo kabel USB ve Windows a na Macu.
 
 ## Huby LEGO® s barevnou LED {#lego-hubs-with-a-colour-led}
 

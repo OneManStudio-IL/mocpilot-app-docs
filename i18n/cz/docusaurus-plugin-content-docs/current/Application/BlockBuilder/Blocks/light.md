@@ -4,6 +4,7 @@ title: Světlo
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Světlo {#light}
 
@@ -96,7 +97,49 @@ Nastaví orientaci obrazu na světelné matici. Výchozí je `vzpřímeně`; nov
 
 Ovládá světla kolem „očí“ senzoru vzdálenosti na vybraném portu. Každé světlo můžete rozsvítit nebo zhasnout, nebo do slotu vložit seznam a nastavit jas každého světla.
 
-- Huby: MINDSTORMS Robot Inventor.
+- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nese ikonu hubu).
+
+## Světelná matice Robot Inventor {#robot-inventor-light}
+
+Tyto bloky pocházejí z aplikace Robot Inventor a fungují jen s [huby MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesou ikonu hubu. Klepnutím na obrázek v bloku ho nakreslíte; v blocích animací ukazuje první snímek a počet snímků.
+
+### `zapnout … po dobu … sekundy` (Začátečník) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Zobrazí obrázek na světelné matici po zadanou dobu (výchozí 2 sekundy) a pak ho zhasne. Blok čeká, dokud čas neuplyne.
+
+### `přehrát animaci … na … snímků za sekundu až do konce` (Začátečník) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Jednou přehraje snímky animace zadanou rychlostí (výchozí 4 snímky za sekundu) a čeká na poslední snímek.
+
+### `spustit animaci … na … snímků za sekundu …` (Začátečník) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Spustí animaci a hned pokračuje dalším blokem.
+
+- `jednou`: přehraje ji jednou.
+- `opakovat` (výchozí): přehrává ji stále dokola, dokud matici nezmění jiný blok světla.
+
+### `nastavit jas pixelů na … %` (Pokročilý) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Nastaví, jak jasně svítí obrázky a animace výše uvedených bloků Robot Inventor, od 0 do 100 %. Dokud tento blok neproběhne, svítí plným jasem. Každý pixel si zachovává svůj jas vůči ostatním.
+
+### Kreslení obrázků a animací {#animation-editor}
+
+Klepnutím na obrázek v bloku světla otevřete editor:
+
+- **Pixely**: klepáním nebo tažením po mřížce 5×5 malujete zvoleným jasem.
+- **Jas**: stupnice vedle mřížky vybírá jas, kterým malujete (10 úrovní, od zhasnuto po plný jas).
+- **Vše zhasnout / vše rozsvítit**: vymaže obrázek nebo ho vyplní zvoleným jasem.
+- **Snímky** (jen v blocích animací): lišta pod mřížkou ukazuje aktuální snímek, například **2/3**. Tlačítka přejdou na **předchozí** a **další** snímek, **přidají** prázdný snímek za aktuální, aktuální snímek **zduplikují** nebo ho **smažou** (animace má vždy alespoň jeden snímek).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Editor animací: mřížka 5×5, stupnice jasu a lišta snímků" width={600} />
 
 ## LED portů BuWizz 3 {#buwizz-3-port-leds}
 

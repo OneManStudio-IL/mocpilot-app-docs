@@ -147,3 +147,37 @@ Wird ausgeführt, wenn der vom BOOST-Farb- und Abstandssensor gemessene Abstand 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Wird ausgeführt, wenn der BOOST-Farb- und Abstandssensor die ausgewählte Farbe erkennt.
+
+## Robot-Inventor-Ereignisse {#robot-inventor-events}
+
+Diese Ereignisse stammen aus der Robot-Inventor-App und funktionieren nur mit den [Hubs von MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Sie tragen das Hub-Symbol. Die passenden Werte finden Sie auf der Seite [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `wenn Hub …` (Anfänger) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Wird jedes Mal einmal ausgeführt, wenn der Hub `angetippt`, `doppelt angetippt` oder `geschüttelt` (Standard) wird oder `fallend` ist.
+
+### `wenn … oben ist` (Anfänger) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Wird ausgeführt, wenn die gewählte Seite des Hubs nach oben zeigt: `Vorderseite` (die Lichtmatrix, Standard), `Oberseite`, `rechte Seite`, `Rückseite`, `Unterseite` oder `linke Seite`.
+
+### `wenn Hub geneigt …` (Fortgeschritten) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Wird ausgeführt, wenn der Hub um etwa 12° oder mehr `nach oben`, `nach unten`, `nach links`, `nach rechts` oder in eine beliebige Richtung (`irgendein`, Standard) geneigt wird.
+
+### `wenn … gedrückt / fest gedrückt / freigegeben` (Anfänger) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Wird ausgeführt, wenn der Kraftsensor am gewählten Port gedrückt, fest gedrückt (mit mehr als 5 Newton) oder losgelassen wird (in der App `freigegeben`).
+
+### `wenn Hub Signal empfängt …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Wird ausgeführt, wenn dieser Hub das Funksignal mit diesem Namen von einem anderen Hub empfängt. Seinen Wert liest [empfangenes Signal … Wert](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

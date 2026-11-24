@@ -97,9 +97,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### `スタール検出を有効にする …` (達人) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-ストール（過負荷による停止）検出のオン／オフを切り替えます。
+ストール（過負荷による停止）検出のオン／オフを切り替えます。オンにすると、動けなくなったモーターは押し続けずにあきらめるので、そのモーターを待つブロックが終われるようになります。
 
-- ハブ：MINDSTORMS Robot Inventor。
+- ハブ：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（ブロックにハブのアイコンが付いています）。
 
 ### `加速度を設定 …` (達人) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 モーターの現在のパワーを返します。
 
-- ハブ：MINDSTORMS Robot Inventor。
+- ハブ：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（ブロックにハブのアイコンが付いています）。
+
+## Robot Inventor {#robot-inventor-motors}
+
+これらのブロックは Robot Inventor アプリから来たもので、[MINDSTORMS Robot Inventor と SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)でのみ動作します。ハブのアイコンが付いています。2 輪のロボットを走らせるには、[移動](/docs/Application/BlockBuilder/Blocks/Movement)のブロックを参照してください。
+
+### `モーターを起動（設定値） … パワー %` (上級者) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+選んだポートのモーターを、指定したパワー（−100～100 %、初期値 75 %）で起動します。**モーターを起動（設定値） … 速度 %** と違い、モーターは制御された速度を保ちません。負荷がかかると、エンコーダーのないモーターのように遅くなります。
+
+### `モーターは中断された?` (達人) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+このポートのモーターへの直前のコマンドが、同じポートの別のモーターブロックに途中で打ち切られて終わらなかった場合に `true` になります。
 
 ## Technic Move Hub {#technic-move-hub}
 

@@ -54,7 +54,7 @@ MOCPilot zeigt **Bluetooth ist aus** an, wenn Bluetooth auf dem Gerät ausgescha
 
 ## Hubs mit klassischem Bluetooth {#classic-bluetooth-hubs}
 
-Der **Robot Inventor**-Hub nutzt klassisches Bluetooth, nicht Bluetooth Low Energy. Er funktioniert unter Android, auf dem Mac und unter Windows, aber nicht auf iPhone und iPad. Findet MOCPilot ihn unter Windows nicht, koppeln Sie den Hub zuerst unter **Einstellungen → Bluetooth und Geräte → Gerät hinzufügen** und suchen Sie dann in der App erneut.
+Der **Robot Inventor**-Hub nutzt klassisches Bluetooth, nicht Bluetooth Low Energy. Er funktioniert unter Android, auf dem Mac und unter Windows, aber nicht auf iPhone und iPad. Findet MOCPilot ihn unter Windows nicht, koppeln Sie den Hub zuerst unter **Einstellungen → Bluetooth und Geräte → Gerät hinzufügen** und suchen Sie dann in der App erneut. Unter Windows und auf dem Mac können Sie ihn auch mit einem USB-Kabel verbinden; siehe [MINDSTORMS-Robot-Inventor-Hub](/docs/Application/Hubs/RobotInventorHub#connect).
 
 Alle anderen unterstützten Hubs nutzen Bluetooth Low Energy und werden nur in MOCPilot hinzugefügt, nicht in den Bluetooth-Einstellungen des Systems.
 

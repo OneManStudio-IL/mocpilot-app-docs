@@ -97,9 +97,9 @@ Sceglie che cosa fa il motore quando si ferma.
 
 ### `attivare il rilevamento del blocco …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Attiva o disattiva il rilevamento del blocco del motore.
+Attiva o disattiva il rilevamento del blocco del motore. Quando è attivo, un motore che si blocca rinuncia invece di continuare a spingere, così un blocco che attende il motore può terminare.
 
-- Hub: MINDSTORMS Robot Inventor.
+- Hub: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (il blocco ha l'icona dell'hub).
 
 ### `imposta accelerazione a …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Restituisce la velocità attuale del motore.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Restituisce la potenza attuale del motore.
 
-- Hub: MINDSTORMS Robot Inventor.
+- Hub: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (il blocco ha l'icona dell'hub).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Questi blocchi provengono dall'app Robot Inventor e funzionano solo con gli [hub MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Hanno l'icona dell'hub. Per guidare un robot a due ruote, vedi i blocchi [Movimento](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `avvia motore a … % potenza` (Avanzato) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Avvia i motori sulle porte selezionate alla potenza indicata, da −100 a 100 % (75 % come predefinito). A differenza di **avvia motore a … % velocità**, il motore non mantiene una velocità regolata: sotto carico rallenta, come un motore senza encoder.
+
+### `il motore è stato interrotto?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` se l'ultimo comando del motore su questa porta non è terminato perché un altro blocco motore sulla stessa porta l'ha interrotto.
 
 ## Technic Move Hub {#technic-move-hub}
 

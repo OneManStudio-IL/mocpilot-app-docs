@@ -147,3 +147,37 @@ Uruchamia się, gdy odległość zmierzona przez czujnik koloru i odległości B
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Uruchamia się, gdy czujnik koloru i odległości BOOST zobaczy wybrany kolor.
+
+## Wydarzenia Robot Inventor {#robot-inventor-events}
+
+Te wydarzenia pochodzą z aplikacji Robot Inventor i działają tylko z [hubami MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Mają ikonę huba. Odpowiadające im wartości są na stronie [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `kiedy hub jest …` (Początkujący) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Uruchamia się raz za każdym razem, gdy hub zostanie `stuknięty`, `stuknięty dwukrotnie`, `potrząśnięty` (domyślnie) albo gdy spada (opcja `spada`; w aplikacji blok czyta się wtedy „kiedy hub jest spada”).
+
+### `gdy … jest u góry` (Początkujący) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Uruchamia się, gdy wybrana strona huba obróci się do góry: `przód` (matryca świetlna, domyślnie), `góra`, `prawy bok`, `tył`, `spód` lub `lewy bok`.
+
+### `kiedy hub jest przechylony …` (Zaawansowany) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Uruchamia się, gdy hub zostanie przechylony `w górę`, `w dół`, `w lewo`, `w prawo` lub w dowolnym kierunku (`jakikolwiek`, domyślnie), o około 12° lub więcej.
+
+### `gdy … naciśnięty / mocno naciśnięty / zwolniony` (Początkujący) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Uruchamia się, gdy czujnik siły na wybranym porcie zostanie naciśnięty, mocno naciśnięty (siłą ponad 5 niutonów) lub zwolniony.
+
+### `kiedy hub odbierze sygnał …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Uruchamia się, gdy ten hub odbierze od innego huba sygnał radiowy o tej nazwie. Jego wartość odczytasz blokiem [odebrany sygnał … wartość](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

@@ -23,7 +23,7 @@ Logikkblokker har sitt eget sett med blokker og sin egen oppførsel. Du kan ikke
 
 <Screenshot name="blocks-editor" alt="Redigeringsprogrammet for Logikkblokker med paletten og et program" width={900} />
 
-- **Paletten** viser blokkategoriene: **Hendelser**, **Kontroll**, **Sensorer**, **Lyder**, **Operatør**, **Variabler**, **Lister** og **Mine blokker**. Andre kategorier vises når profilen trenger dem: **Motorer** og **Lys** (når en hub støtter dem), **Simulator** (når dashboardet har pedaler, girkasse eller handbrekk), **Skjermkontrollere** og **Spillkontroller**.
+- **Paletten** viser blokkategoriene: **Hendelser**, **Kontroll**, **Sensorer**, **Lyder**, **Operatør**, **Variabler**, **Lister** og **Mine blokker**. Andre kategorier vises når profilen trenger dem: **Motorer** og **Lys** (når en hub støtter dem), **Bevegelse** (med en [Robot Inventor-hub](/docs/Application/Hubs/RobotInventorHub)), **Simulator** (når dashboardet har pedaler, girkasse eller handbrekk), **Skjermkontrollere** og **Spillkontroller**.
 - **Programområdet** er der du drar inn blokker og bygger skript.
 - Topplinjen har **Angre** og **Gjør om**, **Dashboard**, **Mine hubber**, **Spillkontroller**, sidepanelene **AI-bygger**, [**Ryggsekk**](/docs/Application/BlockBuilder/Backpack) og **Monitor**, **Mer** (med **Editorinnstillinger**) og **Kjør/Stopp**. På telefon og nettbrett ligger sidepanelene og Spillkontroller under **Mer**.
 
@@ -146,7 +146,7 @@ Hver profil har et **blokknivå**: **Nybegynner** viser de enkleste blokkene, **
 
 - [Hendelser](/docs/Application/BlockBuilder/Blocks/Events) · [Kontroll](/docs/Application/BlockBuilder/Blocks/Control) · [Operatører](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Variabler](/docs/Application/BlockBuilder/Blocks/Variables) · [Lister](/docs/Application/BlockBuilder/Blocks/Lists) · [Mine blokker](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motorer](/docs/Application/BlockBuilder/Blocks/Motors) · [Lys](/docs/Application/BlockBuilder/Blocks/Light) · [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors) · [Lyder](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Bevegelse](/docs/Application/BlockBuilder/Blocks/Movement) · [Motorer](/docs/Application/BlockBuilder/Blocks/Motors) · [Lys](/docs/Application/BlockBuilder/Blocks/Light) · [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors) · [Lyder](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Skjermkontrollere](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Spillkontroller](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 I appen holder du fingeren på en blokk (eller høyreklikker) og velger **Om blokken** for å åpne beskrivelsen her.

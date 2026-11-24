@@ -29,7 +29,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Move Hub / BOOST (88006) | 内蔵モーター 2 個 + 2 ポート |
 | LEGO® Remote Control (88010) | ボタンが入力になります |
 | LEGO® WeDo 2.0 Smart Hub | 2 ポート |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 ポート、ライトマトリックス。iPhone と iPad では使用不可 |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 ポート、ライトマトリックス、スピーカー、ジャイロ。Bluetooth または USB。iPhone と iPad では使用不可 |
 | BuWizz 2.0 | 4 ポート、パワーモード |
 | BuWizz 3.0 Pro | 6 ポート、ポートのカラー LED |
 | SBrick, SBrick Plus | 4 ポート、速度制御のみ（位置制御なし） |

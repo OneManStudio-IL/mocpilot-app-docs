@@ -23,7 +23,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <Screenshot name="blocks-editor" alt="パレットとプログラムが表示されたロジックブロックのエディター" width={900} />
 
-- **パレット** には、ブロックのカテゴリーが並んでいます。**イベント**、**コントロール**、**センサー**、**サウンド**、**演算子**、**変数**、**リスト**、**私のブロック** です。プロフィールで必要になると、ほかのカテゴリーも表示されます。**モーター** と **ライト**（ハブが対応している場合）、**シミュレーター**（ダッシュボードにペダル、ギアボックス、ハンドブレーキがある場合）、**オンスクリーンコントローラー**、**ゲームパッド** です。
+- **パレット** には、ブロックのカテゴリーが並んでいます。**イベント**、**コントロール**、**センサー**、**サウンド**、**演算子**、**変数**、**リスト**、**私のブロック** です。プロフィールで必要になると、ほかのカテゴリーも表示されます。**モーター** と **ライト**（ハブが対応している場合）、**移動**（[Robot Inventor のハブ](/docs/Application/Hubs/RobotInventorHub)がある場合）、**シミュレーター**（ダッシュボードにペダル、ギアボックス、ハンドブレーキがある場合）、**オンスクリーンコントローラー**、**ゲームパッド** です。
 - **プログラムエリア** は、ブロックをドラッグしてスクリプトを組み立てる場所です。
 - 上部バーには、**元に戻す** と **やり直す**、**ダッシュボード**、**マイハブ**、**ゲームパッド**、サイドパネルの **AI ビルダー**、[**バックパック**](/docs/Application/BlockBuilder/Backpack)、**モニター**、**その他**（**エディター設定** はここにあります）、**実行**／**停止** があります。スマートフォンやタブレットでは、サイドパネルとゲームパッドは **その他** にあります。
 
@@ -146,7 +146,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - [イベント](/docs/Application/BlockBuilder/Blocks/Events) · [コントロール](/docs/Application/BlockBuilder/Blocks/Control) · [演算子](/docs/Application/BlockBuilder/Blocks/Operators)
 - [変数](/docs/Application/BlockBuilder/Blocks/Variables) · [リスト](/docs/Application/BlockBuilder/Blocks/Lists) · [私のブロック](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [モーター](/docs/Application/BlockBuilder/Blocks/Motors) · [ライト](/docs/Application/BlockBuilder/Blocks/Light) · [センサー](/docs/Application/BlockBuilder/Blocks/Sensors) · [サウンド](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [移動](/docs/Application/BlockBuilder/Blocks/Movement) · [モーター](/docs/Application/BlockBuilder/Blocks/Motors) · [ライト](/docs/Application/BlockBuilder/Blocks/Light) · [センサー](/docs/Application/BlockBuilder/Blocks/Sensors) · [サウンド](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [シミュレーター](/docs/Application/BlockBuilder/Blocks/Simulator) · [オンスクリーンコントローラー](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [ゲームパッド](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 アプリでブロックを長押し（または右クリック）して **ブロックについて** を選ぶと、ここにあるそのブロックの説明が開きます。

@@ -147,3 +147,37 @@ Rulează când distanța măsurată de senzorul de culoare și distanță BOOST 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Rulează când senzorul de culoare și distanță BOOST vede culoarea selectată.
+
+## Evenimente Robot Inventor {#robot-inventor-events}
+
+Aceste evenimente vin din aplicația Robot Inventor și funcționează doar cu [huburile MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ele poartă pictograma hubului. Valorile corespunzătoare se află pe pagina [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `când hubul este …` (Începător) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Rulează o dată de fiecare dată când hubul este `atins`, `atins de două ori`, `scuturat` (implicit) sau este `în cădere`.
+
+### `când … este sus` (Începător) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Rulează când partea selectată a hubului ajunge cu fața în sus: `față` (matricea de lumini, implicit), `partea de sus`, `partea dreaptă`, `spate`, `partea de jos` sau `partea stângă`.
+
+### `când hubul este înclinat …` (Avansat) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Rulează când hubul este înclinat `în sus`, `în jos`, `la stânga`, `la dreapta` sau în `orice` direcție (implicit), cu aproximativ 12° sau mai mult.
+
+### `când … apăsat / apăsat tare / eliberat` (Începător) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Rulează când senzorul de forță de pe portul selectat este apăsat, apăsat tare (cu mai mult de 5 newtoni) sau eliberat.
+
+### `când hubul primește semnalul …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Rulează când acest hub primește de la alt hub semnalul radio cu acest nume. Citește-i valoarea cu [semnal primit … valoare](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

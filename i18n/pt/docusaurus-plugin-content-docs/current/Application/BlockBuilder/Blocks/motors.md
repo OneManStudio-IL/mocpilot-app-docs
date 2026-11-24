@@ -97,9 +97,9 @@ Escolhe o que o motor faz quando para.
 
 ### `ativar detecção de bloqueio …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Liga ou desliga a detecção de travamento.
+Liga ou desliga a detecção de travamento. Com ela ligada, um motor que fica bloqueado desiste em vez de continuar forçando, e assim um bloco que espera pelo motor pode terminar.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (o bloco tem o ícone do hub).
 
 ### `definir aceleração para …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Retorna a velocidade atual do motor.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Retorna a potência atual do motor.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (o bloco tem o ícone do hub).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Estes blocos vêm do app Robot Inventor e só funcionam com os [hubs MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Eles têm o ícone do hub. Para dirigir um robô de duas rodas, veja os blocos de [Movimento](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `iniciar motor em … % potência` (Avançado) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Liga os motores nas portas selecionadas com a potência indicada, de −100 a 100 % (padrão 75 %). Ao contrário de **iniciar motor em … % velocidade**, o motor não mantém uma velocidade regulada: sob carga ele desacelera, como um motor sem encoder.
+
+### `o motor foi interrompido?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` se o último comando do motor nesta porta não terminou porque outro bloco de motor na mesma porta o interrompeu.
 
 ## Technic Move Hub {#technic-move-hub}
 

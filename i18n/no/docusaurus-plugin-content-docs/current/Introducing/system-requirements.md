@@ -22,7 +22,7 @@ Du finner lenkene til butikkene på [mocpilot.com](https://mocpilot.com). Appen 
 ## Bluetooth {#bluetooth}
 
 - Hubber kobles til over **Bluetooth Low Energy** (Bluetooth 4.0 eller nyere). Nesten alle telefoner og nettbrett har det; på en datamaskin bruker du den innebygde adapteren eller en USB-Bluetooth-adapter.
-- **Robot Inventor**-huben bruker klassisk Bluetooth. Den fungerer på Android, Mac og Windows, men ikke på iPhone og iPad.
+- **Robot Inventor**-huben bruker klassisk Bluetooth. Den fungerer på Android, Mac og Windows, men ikke på iPhone og iPad. På Windows og Mac kan den også kobles til med en USB-kabel.
 - **Mould King**-hubber tar imot kommandoer som Bluetooth-kringkasting (advertising). På Windows trenger Mould King 6.0 en adapter og driver som kan kringkaste, og Mould King 4.0 fungerer ikke i det hele tatt; bruk en telefon eller et nettbrett til den.
 - Appen ber om tillatelse til Bluetooth (på Android også Enheter i nærheten eller Posisjon). Se [Bluetooth og tillatelser](/docs/Help/BluetoothPermissions).
 

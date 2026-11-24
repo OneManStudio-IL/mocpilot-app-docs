@@ -4,6 +4,7 @@ title: Valo
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Valo {#light}
 
@@ -96,7 +97,49 @@ Asettaa valomatriisin kuvan suunnan. Oletuksena se on `oikein päin`; uusi suunt
 
 Ohjaa valitussa portissa olevan etäisyysanturin ”silmien” ympärillä olevia valoja. Voit sytyttää tai sammuttaa jokaisen valon tai asettaa paikkaan listan, jolla määrität kunkin valon kirkkauden.
 
-- Hubit: MINDSTORMS Robot Inventor.
+- Hubit: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (lohkossa on hubikuvake).
+
+## Robot Inventor -valomatriisi {#robot-inventor-light}
+
+Nämä lohkot tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS Robot Inventor- ja SPIKE Prime -hubien](/docs/Application/Hubs/RobotInventorHub) kanssa. Niissä on hubikuvake. Napauta lohkossa olevaa kuvaa piirtääksesi sen; animaatiolohkoissa se näyttää ensimmäisen kuvan ja kuvien määrän.
+
+### `kytke päälle … ajaksi … sekunnit` (Aloittelija) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Näyttää kuvan valomatriisissa annetun ajan (oletuksena 2 sekuntia) ja sammuttaa sen sitten. Lohko odottaa, kunnes aika on kulunut.
+
+### `toista animaatio … ssa … kuvaa sekunnissa loppuun asti` (Aloittelija) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Toistaa animaation kuvat kerran annetulla nopeudella (oletuksena 4 kuvaa sekunnissa) ja odottaa viimeiseen kuvaan asti. Lohkon `ssa` tarkoittaa ”nopeudella”.
+
+### `käynnistä animaatio … ssa … kuvaa sekunnissa …` (Aloittelija) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Käynnistää animaation ja siirtyy heti seuraavaan lohkoon.
+
+- `kerran`: toistaa sen yhden kerran.
+- `toistaa` (oletus): toistaa sitä yhä uudelleen, kunnes jokin muu valolohko muuttaa matriisia.
+
+### `aseta pikselien kirkkaus … %` (Edistynyt) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Asettaa yllä olevien Robot Inventor -lohkojen kuvien ja animaatioiden kirkkauden väliltä 0–100 %. Ennen kuin tämä lohko suoritetaan, ne näkyvät täydellä kirkkaudella. Jokainen pikseli säilyttää oman kirkkautensa suhteessa muihin.
+
+### Kuvien ja animaatioiden piirtäminen {#animation-editor}
+
+Napauta valolohkon kuvaa avataksesi editorin:
+
+- **Pikselit**: napauta 5×5-ruudukkoa tai vedä sen yli maalataksesi valitulla kirkkaudella.
+- **Kirkkaus**: ruudukon vieressä oleva asteikko valitsee maalauksen kirkkauden (10 tasoa, sammutetusta täyteen).
+- **Kaikki pois / kaikki päälle**: tyhjennä kuva tai täytä se valitulla kirkkaudella.
+- **Kuvat** (vain animaatiolohkoissa): ruudukon alla oleva palkki näyttää nykyisen kuvan, esimerkiksi **2/3**. Painikkeilla siirrytään **edelliseen** ja **seuraavaan** kuvaan, **lisätään** tyhjä kuva nykyisen jälkeen, **monistetaan** nykyinen kuva tai **poistetaan** se (animaatiossa on aina vähintään yksi kuva).
+
+<Screenshot name="robot-inventor-animation-editor" alt="Animaatioeditori: 5×5-ruudukko, kirkkausasteikko ja kuvapalkki" width={600} />
 
 ## BuWizz 3:n porttien LEDit {#buwizz-3-port-leds}
 

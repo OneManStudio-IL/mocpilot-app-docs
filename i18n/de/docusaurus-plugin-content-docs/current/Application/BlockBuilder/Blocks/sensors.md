@@ -14,6 +14,7 @@ Auf dieser Seite:
 - [Hub-Zustand](#hub-state): Akku, Spannung, Temperatur, Strom und Leistungsmodus
 - [Hub-Tasten, Neigung und Ausrichtung](#hub-tilt-and-orientation)
 - [Sensoren an Ports](#sensors-on-ports): beliebiges Gerät, Technic-Farbsensor, Technic-Abstandssensor, BOOST-Farb- und Abstandssensor, WeDo-2.0-Sensoren
+- [Robot-Inventor-Hub](#robot-inventor-sensors): Kraftsensor, Gesten, Ausrichtung, Gieren, Nicken und Rollen, Neigung, Funk zwischen Hubs
 - [Dieses Gerät](#this-device): das Telefon, Tablet oder der Computer, auf dem MOCPilot läuft
 - [Timer](#timer)
 
@@ -240,6 +241,98 @@ Liefert Daten des WeDo-2.0-Neigungssensors: einen Neigungswinkel oder die Richtu
 - Winkel: `Neigung`, `Roll`
 - Richtungsausgabe: `Text` oder `Zahl`; Richtungen: `neutral`, `vorwärts`, `rückwärts`, `links`, `rechts`, `unbekannt`
 - Hubs: WeDo 2.0.
+
+## Robot-Inventor-Hub {#robot-inventor-sensors}
+
+Diese Blöcke stammen aus der Robot-Inventor-App und funktionieren nur mit den [Hubs von MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Sie tragen das Hub-Symbol. Ihre Ereignisse (wenn der Hub geschüttelt, geneigt wird usw.) finden Sie auf der Seite [Ereignisse](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Kraftsensor {#robot-inventor-force-sensor}
+
+#### `… ist gedrückt / fest gedrückt / freigegeben ?` (Anfänger) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Prüft den Kraftsensor am gewählten Port. `fest gedrückt` bedeutet mit mehr als 5 Newton gedrückt; `freigegeben` bedeutet hier losgelassen.
+
+#### `… Druck in % / Newton` (Anfänger) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Liefert, wie fest der Kraftsensor gedrückt wird: in Prozent (0–100) oder in Newton (0–10).
+
+### Bewegung des Hubs {#robot-inventor-motion}
+
+#### `ist Hub … ?` (Fortgeschritten) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, wenn der Hub gerade auf diese Weise bewegt wurde: `angetippt`, `doppelt angetippt`, `geschüttelt` (Standard) oder `fallend`. Eine Geste zählt einmal: Nachdem ein Block sie gelesen hat, ist sie weg.
+
+#### `Geste` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Liefert die letzte Geste als Text: `tapped`, `doubletapped`, `shake` oder `freefall`, oder einen leeren Wert, wenn es keine gab.
+
+#### `ist … oben?` (Anfänger) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, wenn diese Seite des Hubs nach oben zeigt: `Vorderseite` (die Lichtmatrix), `Oberseite`, `rechte Seite`, `Rückseite`, `Unterseite` oder `linke Seite`.
+
+#### `Ausrichtung` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Liefert die Seite, die nach oben zeigt, als Text: `front`, `up`, `rightside`, `back`, `down` oder `leftside`.
+
+#### `… Winkel` (Anfänger) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Liefert den Winkel des Hubs in Grad um eine Achse: `Gieren` (Drehen nach links und rechts, wie ein Kompass), `neigung` (Nicken: Nase hoch und runter) oder `roll` (Rollen: Kippen zur Seite).
+
+- Typische Verwendung: einen Roboter geradeaus fahren oder genau um 90° drehen: Setzen Sie das Gieren zurück und lenken Sie dann, bis das Gieren den Winkel erreicht.
+
+#### `Gierwinkel auf 0 setzen` (Anfänger) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Macht die aktuelle Richtung des Hubs zur neuen Null des Gierwinkels. Der Block wartet 0,1 s, damit der nächste Messwert schon davon aus gezählt wird.
+
+#### `Winkelgeschwindigkeit …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Liefert, wie schnell sich der Hub um die Achse `x`, `y` oder `z` dreht (das Gyroskop), in Grad pro Sekunde.
+
+#### `beschleunigung …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Liefert die Beschleunigung des Hubs entlang der Achse `x`, `y` oder `z`, so wie der Hub sie meldet.
+
+#### `ist Hub geneigt … ?` (Fortgeschritten) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, wenn der Hub in diese Richtung geneigt ist: `nach oben`, `nach unten`, `nach links`, `nach rechts` oder `irgendein` (Standard). Der Hub gilt ab etwa 12° Abweichung von der Waagerechten als geneigt; ist er in beide Richtungen geneigt, zählt die größere Neigung.
+
+### Funk zwischen Hubs {#robot-inventor-radio}
+
+Robot-Inventor-Hubs können einander kurze Signale per Funk senden, ohne MOCPilot dazwischen. Ein Signal hat einen Namen und einen Wert.
+
+#### `Hub-Signal senden … mit …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Sendet das Signal mit dem angegebenen Namen (standardmäßig `signal`) und Wert (`1`) von diesem Hub an die Hubs in der Nähe.
+
+#### `empfangenes Signal … Wert` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Liefert den letzten Wert, den dieser Hub für das Signal mit diesem Namen empfangen hat, oder 0, wenn noch keiner kam. Um sofort zu reagieren, wenn ein Signal ankommt, verwenden Sie [wenn Hub Signal empfängt](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Dieses Gerät {#this-device}
 

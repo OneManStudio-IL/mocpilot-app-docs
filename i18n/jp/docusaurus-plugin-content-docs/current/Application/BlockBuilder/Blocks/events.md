@@ -147,3 +147,37 @@ BOOST カラー＆距離センサーで測った距離が条件を満たした�
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 BOOST カラー＆距離センサーが選択した色を検出したときに実行します。
+
+## Robot Inventor のイベント {#robot-inventor-events}
+
+これらのイベントは Robot Inventor アプリから来たもので、[MINDSTORMS Robot Inventor と SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)でのみ動作します。ハブのアイコンが付いています。対応する値のブロックは[センサー](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors)のページにあります。
+
+### `ハブが …` (初心者) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+ハブが `タップされた`、`ダブルタップされた`、`振られた`（初期値）、`落下中` のとき、そのたびに 1 回実行します。
+
+### `いつ … が上` (初心者) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+ハブの選んだ面が上を向いたときに実行します：`前面`（ライトマトリックス、初期値）、`上面`、`右側面`、`背面`、`底面`、`左側面`。ブロックの先頭には `いつ` と表示されますが、意味は「…が上を向いたとき」です。
+
+### `ハブが傾いたとき …` (上級者) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+ハブが `上`、`下`、`左`、`右`、または `任意` の方向（初期値）に約 12° 以上傾いたときに実行します。
+
+### `いつ … 押された / 強く押された / 解放された` (初心者) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+選んだポートのフォースセンサーが押されたとき、強く（5 ニュートンを超える力で）押されたとき、または離されたときに実行します。ここでも先頭の `いつ` は「…したとき」という意味です。
+
+### `ハブが信号を受信したとき …` (達人) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+このハブが、別のハブからこの名前の無線信号を受信したときに実行します。その値は[受信した信号 … 値](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value)で読み取ります。

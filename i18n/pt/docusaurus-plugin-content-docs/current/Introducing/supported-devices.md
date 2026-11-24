@@ -18,7 +18,7 @@ Observações:
 
 - Um perfil tem 5 slots de hub: 2 são gratuitos, e mais 3 vêm com a compra de slots adicionais de hub ou com o [MocPilot Pro](/docs/Application/Account/Pro).
 - Os hubs **Mould King** apenas recebem comandos (sem sensores e sem retorno). Só um tipo de Mould King pode ser usado em um perfil: até 3 hubs Mould King 4.0 ou 1 Mould King 6.0.
-- O hub **Robot Inventor** (LEGO® Large Hub) usa Bluetooth clássico e não está disponível no iPhone e no iPad.
+- O hub **Robot Inventor** (LEGO® Large Hub) e o hub **SPIKE Prime** (beta, firmware SPIKE Legacy) usam Bluetooth clássico e não estão disponíveis no iPhone e no iPad. No Windows e no Mac, eles também se conectam com um cabo USB. Veja [hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
 - Atualização e recuperação de firmware estão disponíveis para Technic Hub, Technic Move Hub, BOOST Move Hub e City Hub. Veja [Atualização de firmware](/docs/Application/Hubs/FirmwareUpdating).
 - O que cada hub faz além de motores e luzes está descrito em [Funções específicas dos hubs](/docs/Application/Hubs/HubFunctions).
 

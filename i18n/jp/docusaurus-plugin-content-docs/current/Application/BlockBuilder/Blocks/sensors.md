@@ -14,6 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [ハブの状態](#hub-state)：バッテリー、電圧、温度、電流、電源モード
 - [ハブのボタン、傾き、向き](#hub-tilt-and-orientation)
 - [ポートのセンサー](#sensors-on-ports)：任意のデバイス、Technic カラーセンサー、Technic 距離センサー、BOOST カラー＆距離センサー、WeDo 2.0 のセンサー
+- [Robot Inventor のハブ](#robot-inventor-sensors)：フォースセンサー、ジェスチャー、向き、ヨー・ピッチ・ロール、傾き、ハブ間の無線通信
 - [このデバイス](#this-device)：MOCPilot を実行しているスマートフォン、タブレット、パソコン
 - [タイマー](#timer)
 
@@ -240,6 +241,98 @@ WeDo 2.0 傾きセンサーのデータとして、傾き角度または傾い�
 - 角度：`ピッチ`、`ロール`
 - 方向の出力：`テキスト` または `数値`。方向：`中立`、`前方`、`後方`、`左`、`右`、`不明`
 - ハブ：WeDo 2.0。
+
+## Robot Inventor のハブ {#robot-inventor-sensors}
+
+これらのブロックは Robot Inventor アプリから来たもので、[MINDSTORMS Robot Inventor と SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)でのみ動作します。ハブのアイコンが付いています。対応するイベント（ハブが振られたとき、傾いたときなど）は[イベント](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events)のページにあります。
+
+### フォースセンサー {#robot-inventor-force-sensor}
+
+#### `… です 押された / 強く押された / 解放された ?` (初心者) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+選んだポートのフォースセンサーを調べます。ブロックには `です` と表示されますが、意味は「…が押されているか？」です。`強く押された` は 5 ニュートンを超える力で押されていること、`解放された` は押されていない（離された）ことを表します。
+
+#### `… 圧力の単位 % / ニュートン` (初心者) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+フォースセンサーがどれだけ強く押されているかを、パーセント（0～100）またはニュートン（0～10）で返します。
+
+### ハブの動き {#robot-inventor-motion}
+
+#### `ハブが … ?` (上級者) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+ハブが今この動きをした場合に `true` になります：`タップされた`、`ダブルタップされた`、`振られた`（初期値）、`落下中`。ジェスチャーは 1 回だけ数えられます。あるブロックが読み取ると、消えてしまいます。
+
+#### `ジェスチャー` (達人) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+最後のジェスチャーをテキストで返します：`tapped`、`doubletapped`、`shake`、`freefall`。ジェスチャーがなければ空の値を返します。
+
+#### `です … が上?` (初心者) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+ハブのこの面が上を向いている場合に `true` になります：`前面`（ライトマトリックス）、`上面`、`右側面`、`背面`、`底面`、`左側面`。先頭に `です` と表示されますが、ブロックの意味は「…が上を向いているか？」です。
+
+#### `向き` (達人) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+上を向いている面をテキストで返します：`front`、`up`、`rightside`、`back`、`down`、`leftside`。
+
+#### `… 角度` (初心者) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+1 つの軸のまわりのハブの角度を度で返します：`ヨー`（コンパスのように左右に向きを変える）、`ピッチ`（前側が上下する）、`ロール`（左右に傾く）。
+
+- 主な使い方：ロボットをまっすぐ走らせる、またはちょうど 90° 回す。ヨーをリセットしてから、ヨーが目標の角度になるまでステアリングします。
+
+#### `ヨー角を0にする` (初心者) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+ハブの今の向きを、ヨー角の新しい 0 にします。次の読み取り値がすでにそこから数えられるよう、ブロックは 0.1 秒待ちます。
+
+#### `角速度 …` (達人) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+ハブが `x`、`y`、`z` 軸のまわりにどれだけ速く回っているか（ジャイロ）を、度/秒で返します。
+
+#### `加速 …` (達人) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+`x`、`y`、`z` 軸方向のハブの加速度を、ハブが報告するとおりに返します。
+
+#### `ハブが傾いている … ?` (上級者) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+ハブがこの方向に傾いている場合に `true` になります：`上`、`下`、`左`、`右`、`任意`（初期値）。水平から約 12° 以上で傾いているとみなされます。両方向に傾いているときは、傾きの大きいほうが優先されます。
+
+### ハブ間の無線通信 {#robot-inventor-radio}
+
+Robot Inventor のハブどうしは、MOCPilot を介さずに無線で短い信号を送り合えます。信号には名前と値があります。
+
+#### `ハブの信号を送信 … と …` (達人) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+指定した名前（初期値 `signal`）と値（`1`）の信号を、このハブから近くのハブへ送ります。
+
+#### `受信した信号 … 値` (達人) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+この名前の信号についてこのハブが最後に受信した値を返します。まだ何も届いていなければ 0 です。信号が届いた瞬間に反応するには、[ハブが信号を受信したとき](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio) を使います。
 
 ## このデバイス {#this-device}
 

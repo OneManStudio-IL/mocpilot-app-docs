@@ -18,7 +18,7 @@ Huomioita:
 
 - Profiilissa on 5 hubipaikkaa: 2 on ilmaisia, ja 3 lisää saat ostamalla lisähubipaikan tai [MocPilot Pron](/docs/Application/Account/Pro).
 - **Mould King** -hubit vain vastaanottavat komentoja (ei antureita eikä palautetta). Profiilissa voi käyttää vain yhtä Mould King -tyyppiä: enintään 3 Mould King 4.0 -hubia tai 1 Mould King 6.0 -hubin.
-- **Robot Inventor** -hubi (LEGO® Large Hub) käyttää perinteistä Bluetoothia, eikä se ole käytettävissä iPhonessa ja iPadissa.
+- **Robot Inventor** -hubi (LEGO® Large Hub) ja **SPIKE Prime** -hubi (beta, SPIKE Legacy -laiteohjelmisto) käyttävät perinteistä Bluetoothia, eivätkä ne ole käytettävissä iPhonessa ja iPadissa. Windowsissa ja Macissa ne voi yhdistää myös USB-kaapelilla. Katso [MINDSTORMS Robot Inventor -hubi](/docs/Application/Hubs/RobotInventorHub).
 - Laiteohjelmiston päivitys ja palautus ovat käytettävissä Technic Hubille, Technic Move Hubille, BOOST Move Hubille ja City Hubille. Katso [Laiteohjelmiston päivittäminen](/docs/Application/Hubs/FirmwareUpdating).
 - Mitä kukin hubi osaa moottorien ja valojen lisäksi, kerrotaan sivulla [Hubikohtaiset toiminnot](/docs/Application/Hubs/HubFunctions).
 

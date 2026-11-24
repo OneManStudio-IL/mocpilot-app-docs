@@ -147,3 +147,37 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 当 BOOST 颜色与距离传感器检测到所选颜色时运行。
+
+## Robot Inventor 事件 {#robot-inventor-events}
+
+这些事件来自 Robot Inventor 应用，只适用于 [MINDSTORMS Robot Inventor 和 SPIKE Prime 集线器](/docs/Application/Hubs/RobotInventorHub)。它们带有集线器图标。对应的数值积木在[传感器](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors)页面上。
+
+### `当集线器 …`（初学者） {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+集线器每次`被轻敲`、`被轻敲两次`、`被摇晃`（默认）或`正在掉落`时运行一次。
+
+### `当 … 朝上`（初学者） {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+当集线器的所选一面转为朝上时运行：`正面`（灯光点阵，默认）、`顶面`、`右侧`、`背面`、`底面`或`左侧`。
+
+### `当集线器倾斜 …`（进阶） {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+当集线器`向上`、`向下`、`向左`、`向右`或朝`任何`方向（默认）倾斜约 12° 或更多时运行。
+
+### `当 … 按下 / 用力按下 / 释放`（初学者） {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+当所选端口上的力传感器被按下、被用力按下（超过 5 牛顿）或被松开时运行。
+
+### `当集线器收到信号 …`（大师） {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+当这个集线器从另一个集线器收到这个名称的无线电信号时运行。用[收到的信号 … 值](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value)读取它的数值。

@@ -97,9 +97,9 @@ Choisit ce que fait le moteur lorsqu’il s’arrête.
 
 ### `activer la détection de blocage …` (Gourou) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Active ou désactive la détection de blocage.
+Active ou désactive la détection de blocage. Lorsqu’elle est activée, un moteur bloqué abandonne au lieu de continuer à forcer, ce qui permet à un bloc qui attend le moteur de se terminer.
 
-- Hubs : MINDSTORMS Robot Inventor.
+- Hubs : [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (le bloc porte l’icône du hub).
 
 ### `définir l'accélération à …` (Gourou) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Renvoie la vitesse actuelle du moteur.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Renvoie la puissance actuelle du moteur.
 
-- Hubs : MINDSTORMS Robot Inventor.
+- Hubs : [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (le bloc porte l’icône du hub).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Ces blocs proviennent de l’application Robot Inventor et ne fonctionnent qu’avec les [hubs MINDSTORMS Robot Inventor et SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ils portent l’icône du hub. Pour piloter un robot à deux roues, voir les blocs [Mouvement](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `démarrer le moteur à … % puissance` (Avancé) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Démarre les moteurs des ports sélectionnés à la puissance indiquée, de −100 à 100 % (75 % par défaut). Contrairement à **démarrer le moteur à … % vitesse**, le moteur ne maintient pas une vitesse régulée : sous la charge, il ralentit, comme un moteur sans encodeur.
+
+### `le moteur a-t-il été interrompu ?` (Gourou) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` si la dernière commande du moteur de ce port ne s’est pas terminée parce qu’un autre bloc moteur sur le même port l’a interrompue.
 
 ## Technic Move Hub {#technic-move-hub}
 

@@ -54,7 +54,7 @@ MOCPilot 通过蓝牙与集线器通信，因此系统会请你授予相应权�
 
 ## 经典蓝牙集线器 {#classic-bluetooth-hubs}
 
-**Robot Inventor** 集线器使用经典蓝牙，而不是低功耗蓝牙。它可在 Android、Mac 和 Windows 上使用，但不支持 iPhone 和 iPad。在 Windows 上，如果 MOCPilot 找不到它，请先在**设置 → 蓝牙和其他设备 → 添加设备**中配对集线器，然后在应用中重新搜索。
+**Robot Inventor** 集线器使用经典蓝牙，而不是低功耗蓝牙。它可在 Android、Mac 和 Windows 上使用，但不支持 iPhone 和 iPad。在 Windows 上，如果 MOCPilot 找不到它，请先在**设置 → 蓝牙和其他设备 → 添加设备**中配对集线器，然后在应用中重新搜索。在 Windows 和 Mac 上，你也可以用 USB 线连接它；请参阅 [MINDSTORMS Robot Inventor 集线器](/docs/Application/Hubs/RobotInventorHub#connect)。
 
 其他所有受支持的集线器都使用低功耗蓝牙，只需在 MOCPilot 中添加，无需在系统的蓝牙设置中添加。
 

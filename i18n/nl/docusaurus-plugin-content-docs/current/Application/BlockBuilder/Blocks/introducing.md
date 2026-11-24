@@ -23,7 +23,7 @@ Logicablokken heeft een eigen set blokken en een eigen gedrag. Je kunt MOCPilot-
 
 <Screenshot name="blocks-editor" alt="Editor van Logicablokken met het palet en een programma" width={900} />
 
-- Het **palet** toont de blokcategorieën: **Gebeurtenissen**, **Besturing**, **Sensoren**, **Geluiden**, **Operator**, **Variabelen**, **Lijsten** en **Mijn blokken**. Andere categorieën verschijnen als je profiel ze nodig heeft: **Motoren** en **Licht** (als een hub ze ondersteunt), **Simulator** (als het dashboard pedalen, een versnellingsbak of een handrem heeft), **Dashboardbedieningselementen** en **Gamepad**.
+- Het **palet** toont de blokcategorieën: **Gebeurtenissen**, **Besturing**, **Sensoren**, **Geluiden**, **Operator**, **Variabelen**, **Lijsten** en **Mijn blokken**. Andere categorieën verschijnen als je profiel ze nodig heeft: **Motoren** en **Licht** (als een hub ze ondersteunt), **Beweging** (met een [Robot Inventor-hub](/docs/Application/Hubs/RobotInventorHub)), **Simulator** (als het dashboard pedalen, een versnellingsbak of een handrem heeft), **Dashboardbedieningselementen** en **Gamepad**.
 - In het **programmagebied** sleep je blokken en bouw je scripts.
 - De bovenbalk bevat **Ongedaan maken** en **Opnieuw**, **Dashboard**, **Mijn hubs**, **Gamepad**, de zijpanelen **AI-bouwer**, [**Rugzak**](/docs/Application/BlockBuilder/Backpack) en **Monitor**, **Meer** (met **Editorinstellingen**) en **Start/Stop**. Op een telefoon of tablet staan de zijpanelen en Gamepad in **Meer**.
 
@@ -146,7 +146,7 @@ Elk profiel heeft een **Blokniveau**: **Beginner** toont de eenvoudigste blokken
 
 - [Gebeurtenissen](/docs/Application/BlockBuilder/Blocks/Events) · [Besturing](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Variabelen](/docs/Application/BlockBuilder/Blocks/Variables) · [Lijsten](/docs/Application/BlockBuilder/Blocks/Lists) · [Mijn blokken](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motoren](/docs/Application/BlockBuilder/Blocks/Motors) · [Licht](/docs/Application/BlockBuilder/Blocks/Light) · [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors) · [Geluiden](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Beweging](/docs/Application/BlockBuilder/Blocks/Movement) · [Motoren](/docs/Application/BlockBuilder/Blocks/Motors) · [Licht](/docs/Application/BlockBuilder/Blocks/Light) · [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors) · [Geluiden](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Dashboardbedieningselementen](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 Houd in de app een blok lang ingedrukt (of klik er met de rechtermuisknop op) en kies **Over het blok** om de beschrijving hier te openen.

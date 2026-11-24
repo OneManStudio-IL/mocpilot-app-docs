@@ -23,7 +23,7 @@ Logické bloky mají vlastní sadu bloků a vlastní chování. Programy z MOCPi
 
 <Screenshot name="blocks-editor" alt="Editor Logických bloků s paletou a programem" width={900} />
 
-- **Paleta** obsahuje kategorie bloků: **Události**, **Ovládání**, **Senzory**, **Zvuky**, **Operátor**, **Proměnné**, **Seznamy** a **Moje bloky**. Další kategorie se objeví, když je váš profil potřebuje: **Motory** a **Světlo** (když je hub podporuje), **Simulátor** (když má panel pedály, převodovku nebo ruční brzdu), **Ovladače na obrazovce** a **Herní ovladač**.
+- **Paleta** obsahuje kategorie bloků: **Události**, **Ovládání**, **Senzory**, **Zvuky**, **Operátor**, **Proměnné**, **Seznamy** a **Moje bloky**. Další kategorie se objeví, když je váš profil potřebuje: **Motory** a **Světlo** (když je hub podporuje), **Pohyb** (s [hubem Robot Inventor](/docs/Application/Hubs/RobotInventorHub)), **Simulátor** (když má panel pedály, převodovku nebo ruční brzdu), **Ovladače na obrazovce** a **Herní ovladač**.
 - **Programová plocha** je místo, kam přetahujete bloky a skládáte skripty.
 - Horní lišta obsahuje **Zpět** a **Znovu**, **Panel**, **Moje huby**, **Herní ovladač**, boční panely **AI tvůrce**, [**Batoh**](/docs/Application/BlockBuilder/Backpack) a **Monitor**, **Více** (s **Nastavením editoru**) a **Spustit/Zastavit**. Na telefonu nebo tabletu jsou boční panely a Herní ovladač v nabídce **Více**.
 
@@ -146,7 +146,7 @@ Každý profil má **Úroveň bloků**: **Začátečník** ukazuje nejjednoduš�
 
 - [Události](/docs/Application/BlockBuilder/Blocks/Events) · [Ovládání](/docs/Application/BlockBuilder/Blocks/Control) · [Operátor](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Proměnné](/docs/Application/BlockBuilder/Blocks/Variables) · [Seznamy](/docs/Application/BlockBuilder/Blocks/Lists) · [Moje bloky](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Motory](/docs/Application/BlockBuilder/Blocks/Motors) · [Světlo](/docs/Application/BlockBuilder/Blocks/Light) · [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors) · [Zvuky](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Pohyb](/docs/Application/BlockBuilder/Blocks/Movement) · [Motory](/docs/Application/BlockBuilder/Blocks/Motors) · [Světlo](/docs/Application/BlockBuilder/Blocks/Light) · [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors) · [Zvuky](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Simulátor](/docs/Application/BlockBuilder/Blocks/Simulator) · [Ovladače na obrazovce](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Herní ovladač](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 V aplikaci blok dlouze podržte (nebo na něj klikněte pravým tlačítkem) a zvolte **O bloku**; otevře se jeho popis zde.

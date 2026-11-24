@@ -29,7 +29,7 @@ Un **Hub** este cărămida Bluetooth a modelului: motoarele, luminile și senzor
 | LEGO® Move Hub / BOOST (88006) | 2 motoare încorporate + 2 porturi |
 | LEGO® Remote Control (88010) | butoanele sale sunt intrări |
 | LEGO® WeDo 2.0 Smart Hub | 2 porturi |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 porturi, matrice de lumini; nu este disponibil pe iPhone și iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 porturi, matrice de lumini, difuzor, giroscop; Bluetooth sau USB; nu este disponibil pe iPhone și iPad |
 | BuWizz 2.0 | 4 porturi, moduri de putere |
 | BuWizz 3.0 Pro | 6 porturi, LED-uri de culoare pe porturi |
 | SBrick, SBrick Plus | 4 porturi, controlul vitezei, fără controlul poziției |

@@ -14,6 +14,7 @@ På denne side:
 - [Hubbens tilstand](#hub-state): batteri, spænding, temperatur, strøm og strømtilstand
 - [Hubbens knapper, hældning og orientering](#hub-tilt-and-orientation)
 - [Sensorer på porte](#sensors-on-ports): enhver enhed, Technic-farvesensor, Technic-afstandssensor, BOOST-farve- og afstandssensor, WeDo 2.0-sensorer
+- [Robot Inventor-hub](#robot-inventor-sensors): kraftsensor, gestusser, orientering, gyring, hældning og rulning, vipning, radio mellem hubs
 - [Denne enhed](#this-device): den telefon, tablet eller computer, der kører MOCPilot
 - [Timer](#timer)
 
@@ -240,6 +241,98 @@ Returnerer data fra WeDo 2.0-hældningssensoren: en hældningsvinkel eller den r
 - Vinkler: `hældning`, `rulning`
 - Output for retning: `tekst` eller `tal`; retninger: `neutral`, `fremad`, `baglæns`, `venstre`, `højre`, `ukendt`
 - Hubs: WeDo 2.0.
+
+## Robot Inventor-hub {#robot-inventor-sensors}
+
+Disse blokke kommer fra Robot Inventor-appen og virker kun med [hubbene fra MINDSTORMS Robot Inventor og SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). De har hub-ikonet. Deres begivenheder (når hubben rystes, vippes og så videre) findes på siden [Begivenheder](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Kraftsensor {#robot-inventor-force-sensor}
+
+#### `… er trykket / trykket hårdt / sluppet ?` (Begynder) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Tjekker kraftsensoren på den valgte port. `trykket hårdt` betyder trykket med mere end 5 newton.
+
+#### `… tryk i % / newton` (Begynder) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Returnerer, hvor hårdt kraftsensoren trykkes: i procent (0–100) eller i newton (0–10).
+
+### Hubbens bevægelse {#robot-inventor-motion}
+
+#### `er hub … ?` (Avanceret) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, hvis hubben lige er blevet bevæget på denne måde: `banket`, `dobbeltbanket`, `rystet` (standard) eller `falder`. En gestus tæller én gang: Når en blok har læst den, er den væk.
+
+#### `gestus` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Returnerer den sidste gestus som tekst: `tapped`, `doubletapped`, `shake` eller `freefall`, eller en tom værdi, hvis der ikke var nogen.
+
+#### `er … opad?` (Begynder) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, hvis denne side af hubben vender opad: `forside` (lysmatrixen), `overside`, `højre side`, `bagside`, `underside` eller `venstre side`.
+
+#### `orientering` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Returnerer den side, der vender opad, som tekst: `front`, `up`, `rightside`, `back`, `down` eller `leftside`.
+
+#### `… vinkel` (Begynder) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Returnerer hubbens vinkel i grader om én akse: `gyring` (drejning til venstre og højre som et kompas), `hældning` (næsen op og ned) eller `rulning` (vipning til siderne).
+
+- Typisk brug: Kør en robot i en lige linje, eller drej den præcis 90°: Nulstil gyringen, og styr derefter, indtil gyringen når vinklen.
+
+#### `indstil gyringsvinkel til 0` (Begynder) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Gør hubbens nuværende retning til nyt nulpunkt for gyringsvinklen. Blokken venter 0,1 s, så den næste måling allerede regnes fra det.
+
+#### `vinkelhastighed …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Returnerer, hvor hurtigt hubben drejer om aksen `x`, `y` eller `z` (gyroskopet), i grader pr. sekund.
+
+#### `acceleration …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Returnerer hubbens acceleration langs aksen `x`, `y` eller `z`, sådan som hubben melder den.
+
+#### `er hub vippet … ?` (Avanceret) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, hvis hubben er vippet i denne retning: `op`, `ned`, `til venstre`, `til højre` eller `enhver` (standard). Hubben regnes som vippet fra omkring 12° fra vandret; er den vippet begge veje, tæller den største vipning.
+
+### Radio mellem hubs {#robot-inventor-radio}
+
+Robot Inventor-hubs kan sende korte signaler til hinanden via radio, uden at MOCPilot er involveret. Et signal har et navn og en værdi.
+
+#### `send hub-signal … med …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Sender signalet med det angivne navn (som standard `signal`) og værdi (`1`) fra denne hub til hubs i nærheden.
+
+#### `modtaget signal … værdi` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Returnerer den sidste værdi, som denne hub har modtaget for signalet med dette navn, eller 0, hvis der ikke er kommet noget endnu. Brug [når hub modtager signal](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio) for at reagere i det øjeblik, et signal kommer.
 
 ## Denne enhed {#this-device}
 

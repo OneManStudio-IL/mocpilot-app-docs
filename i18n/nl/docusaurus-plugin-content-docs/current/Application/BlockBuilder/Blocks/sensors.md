@@ -14,6 +14,7 @@ Op deze pagina:
 - [Hubtoestand](#hub-state): batterij, spanning, temperatuur, stroom en vermogensmodus
 - [Hubknoppen, kanteling en oriëntatie](#hub-tilt-and-orientation)
 - [Sensoren op poorten](#sensors-on-ports): elk apparaat, Technic-kleursensor, Technic-afstandssensor, BOOST-kleur- en afstandssensor, WeDo 2.0-sensoren
+- [Robot Inventor-hub](#robot-inventor-sensors): krachtsensor, gebaren, oriëntatie, gieren, helling en rol, kanteling, radio tussen hubs
 - [Dit apparaat](#this-device): de telefoon, tablet of computer waarop MOCPilot draait
 - [Timer](#timer)
 
@@ -240,6 +241,98 @@ Geeft gegevens van de WeDo 2.0-kantelsensor terug: een kantelhoek, of de richtin
 - Hoeken: `helling`, `rol`
 - Uitvoer voor de richting: `tekst` of `getal`; richtingen: `neutraal`, `vooruit`, `achteruit`, `links`, `rechts`, `onbekend`
 - Hubs: WeDo 2.0.
+
+## Robot Inventor-hub {#robot-inventor-sensors}
+
+Deze blokken komen uit de Robot Inventor-app en werken alleen met de [hubs van MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ze dragen het hubpictogram. Hun gebeurtenissen (als de hub geschud, gekanteld wordt enzovoort) staan op de pagina [Gebeurtenissen](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Krachtsensor {#robot-inventor-force-sensor}
+
+#### `… is ingedrukt / hard ingedrukt / vrijgegeven ?` (Beginner) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Controleert de krachtsensor op de gekozen poort. `hard ingedrukt` betekent ingedrukt met meer dan 5 newton; `vrijgegeven` betekent hier losgelaten.
+
+#### `… druk in % / newton` (Beginner) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Geeft terug hoe hard de krachtsensor wordt ingedrukt: in procenten (0–100) of in newton (0–10).
+
+### Beweging van de hub {#robot-inventor-motion}
+
+#### `is hub … ?` (Gevorderd) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` als de hub net op deze manier is bewogen: `getikt`, `dubbel getikt`, `geschud` (standaard) of `vallend`. Een gebaar telt één keer: nadat een blok het heeft gelezen, is het weg.
+
+#### `gebaar` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Geeft het laatste gebaar terug als tekst: `tapped`, `doubletapped`, `shake` of `freefall`, of een lege waarde als er geen was.
+
+#### `is … boven?` (Beginner) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` als deze kant van de hub naar boven wijst: `voorkant` (de lichtmatrix), `bovenkant`, `rechterkant`, `achterkant`, `onderkant` of `linkerkant`.
+
+#### `oriëntatie` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Geeft de kant die naar boven wijst terug als tekst: `front`, `up`, `rightside`, `back`, `down` of `leftside`.
+
+#### `… hoek` (Beginner) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Geeft de hoek van de hub in graden rond één as terug: `gieren` (links en rechts draaien, zoals een kompas), `helling` (neus omhoog en omlaag) of `rol` (opzij kantelen).
+
+- Gebruikelijke toepassing: een robot in een rechte lijn laten rijden of precies 90° laten draaien: reset het gieren en stuur dan tot het gieren de hoek bereikt.
+
+#### `stel gierhoek in op 0` (Beginner) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Maakt de huidige richting van de hub het nieuwe nulpunt van de gierhoek. Het blok wacht 0,1 s, zodat de volgende meting al vanaf daar wordt geteld.
+
+#### `hoeksnelheid …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Geeft terug hoe snel de hub rond de as `x`, `y` of `z` draait (de gyroscoop), in graden per seconde.
+
+#### `versnelling …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Geeft de versnelling van de hub langs de as `x`, `y` of `z` terug, zoals de hub die meldt.
+
+#### `is hub gekanteld … ?` (Gevorderd) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` als de hub in deze richting gekanteld is: `omhoog`, `omlaag`, `naar links`, `naar rechts` of `elke` (standaard). De hub telt als gekanteld vanaf ongeveer 12° uit het horizontale vlak; als hij beide kanten op gekanteld is, telt de grootste kanteling.
+
+### Radio tussen hubs {#robot-inventor-radio}
+
+Robot Inventor-hubs kunnen elkaar via de radio korte signalen sturen, zonder MOCPilot ertussen. Een signaal heeft een naam en een waarde.
+
+#### `verzend hubsignaal … met …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Verzendt het signaal met de opgegeven naam (standaard `signal`) en waarde (`1`) van deze hub naar de hubs in de buurt.
+
+#### `ontvangen signaal … waarde` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Geeft de laatste waarde terug die deze hub voor het signaal met deze naam heeft ontvangen, of 0 als er nog niets is binnengekomen. Om meteen te reageren als een signaal binnenkomt, gebruik je [wanneer hub signaal ontvangt](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Dit apparaat {#this-device}
 

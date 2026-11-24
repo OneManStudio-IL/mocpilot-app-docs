@@ -14,6 +14,7 @@ På denne siden:
 - [Hubtilstand](#hub-state): batteri, spenning, temperatur, strøm og effektmodus
 - [Hubknapper, helling og orientering](#hub-tilt-and-orientation)
 - [Sensorer på porter](#sensors-on-ports): hvilken som helst enhet, Technic-fargesensor, Technic-avstandssensor, BOOST farge- og avstandssensor, WeDo 2.0-sensorer
+- [Robot Inventor-huben](#robot-inventor-sensors): kraftsensor, gester, orientering, yaw, stigning og rulling, helling, radio mellom hubber
 - [Denne enheten](#this-device): telefonen, nettbrettet eller datamaskinen som kjører MOCPilot
 - [Timer](#timer)
 
@@ -240,6 +241,98 @@ Returnerer data fra WeDo 2.0-vippesensoren: en hellingsvinkel eller retningen de
 - Vinkler: `stigning`, `rulling`
 - Utdata for retning: `tekst` eller `tall`; retninger: `nøytral`, `fremover`, `bakover`, `venstre`, `høyre`, `ukjent`
 - Hubber: WeDo 2.0.
+
+## Robot Inventor-huben {#robot-inventor-sensors}
+
+Disse blokkene kommer fra Robot Inventor-appen og fungerer bare med [MINDSTORMS Robot Inventor- og SPIKE Prime-hubbene](/docs/Application/Hubs/RobotInventorHub). De har hubikonet. Hendelsene deres (når huben ristes, vippes og så videre) finner du på siden [Hendelser](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Kraftsensor {#robot-inventor-force-sensor}
+
+#### `er … trykket / hardt trykket / utløst ?` (Nybegynner) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Sjekker kraftsensoren på den valgte porten. `hardt trykket` betyr trykket med mer enn 5 newton. `utløst` betyr at sensoren er sluppet.
+
+#### `… trykk i % / newton` (Nybegynner) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Returnerer hvor hardt kraftsensoren trykkes: i prosent (0–100) eller i newton (0–10).
+
+### Hubens bevegelse {#robot-inventor-motion}
+
+#### `er huben … ?` (Avansert) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` hvis huben nettopp er beveget på denne måten: `banket`, `dobbeltbanket`, `ristet` (standard) eller `faller`. En gest teller én gang: når en blokk har lest den, er den borte.
+
+#### `gest` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Returnerer den siste gesten som tekst: `tapped`, `doubletapped`, `shake` eller `freefall`, eller en tom verdi hvis det ikke har vært noen.
+
+#### `er … opp?` (Nybegynner) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` hvis denne siden av huben vender opp: `forside` (lysmatrisen), `overside`, `høyre side`, `bakside`, `underside` eller `venstre side`.
+
+#### `orientering` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Returnerer siden som vender opp, som tekst: `front`, `up`, `rightside`, `back`, `down` eller `leftside`.
+
+#### `… vinkel` (Nybegynner) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Returnerer hubens vinkel i grader rundt én akse: `yaw` (dreining mot venstre og høyre, som et kompass), `stigning` (nesen opp og ned) eller `rulling` (helling til sidene).
+
+- Typisk bruk: kjøre en robot i rett linje eller snu den nøyaktig 90°: nullstill yaw-vinkelen og styr deretter til yaw-vinkelen når ønsket vinkel.
+
+#### `sett yaw-vinkel til 0` (Nybegynner) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Gjør hubens nåværende retning til nytt nullpunkt for yaw-vinkelen. Blokken venter 0,1 s slik at neste avlesning allerede regnes fra det.
+
+#### `vinkelhastighet …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Returnerer hvor raskt huben dreier rundt aksen `x`, `y` eller `z` (gyroskopet), i grader per sekund.
+
+#### `akselerasjon …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Returnerer hubens akselerasjon langs aksen `x`, `y` eller `z`, slik huben rapporterer den.
+
+#### `er huben vippet … ?` (Avansert) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` hvis huben er vippet i denne retningen: `opp`, `ned`, `til venstre`, `til høyre` eller `hvilken som helst` (standard). Huben regnes som vippet fra omtrent 12° fra vannrett; når den er vippet begge veier, gjelder den største hellingen.
+
+### Radio mellom hubber {#robot-inventor-radio}
+
+Robot Inventor-hubber kan sende korte signaler til hverandre trådløst, uten MOCPilot imellom. Et signal har et navn og en verdi.
+
+#### `send hub-signal … med …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Sender signalet med angitt navn (`signal` som standard) og verdi (`1`) fra denne huben til hubbene i nærheten.
+
+#### `mottatt signal … verdi` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Returnerer den siste verdien denne huben har mottatt for signalet med dette navnet, eller 0 hvis ingenting har kommet ennå. For å reagere i det øyeblikket et signal kommer, bruker du [når huben mottar signal](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Denne enheten {#this-device}
 

@@ -23,7 +23,7 @@ Bloki logiczne mają własny zestaw bloków i własne zachowanie. Nie można imp
 
 <Screenshot name="blocks-editor" alt="Edytor Bloków logicznych z paletą i programem" width={900} />
 
-- **Paleta** zawiera kategorie bloków: **Wydarzenia**, **Kontrola**, **Czujniki**, **Dźwięki**, **Operator**, **Zmienne**, **Listy** i **Moje bloki**. Inne kategorie pojawiają się, gdy potrzebuje ich Twój profil: **Silniki** i **Światło** (gdy obsługuje je hub), **Symulator** (gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny), **Kontrolery ekranowe nawigacyjnego** i **Gamepad**.
+- **Paleta** zawiera kategorie bloków: **Wydarzenia**, **Kontrola**, **Czujniki**, **Dźwięki**, **Operator**, **Zmienne**, **Listy** i **Moje bloki**. Inne kategorie pojawiają się, gdy potrzebuje ich Twój profil: **Silniki** i **Światło** (gdy obsługuje je hub), **Ruch** (z [hubem Robot Inventor](/docs/Application/Hubs/RobotInventorHub)), **Symulator** (gdy na panelu są pedały, skrzynia biegów lub hamulec ręczny), **Kontrolery ekranowe nawigacyjnego** i **Gamepad**.
 - **Obszar programu** to miejsce, do którego przeciągasz bloki i w którym budujesz skrypty.
 - Na górnym pasku są **Cofnij** i **Ponów**, **Panel**, **Moje huby**, **Gamepad**, panele boczne **Kreator AI**, [**Plecak**](/docs/Application/BlockBuilder/Backpack) i **Monitor**, **Więcej** (z **Ustawieniami edytora**) oraz **Uruchom/Zatrzymaj**. Na telefonie lub tablecie panele boczne i Gamepad są w menu **Więcej**.
 
@@ -146,7 +146,7 @@ Każdy profil ma **poziom bloków**: **Początkujący** pokazuje najprostsze blo
 
 - [Wydarzenia](/docs/Application/BlockBuilder/Blocks/Events) · [Kontrola](/docs/Application/BlockBuilder/Blocks/Control) · [Operator](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Zmienne](/docs/Application/BlockBuilder/Blocks/Variables) · [Listy](/docs/Application/BlockBuilder/Blocks/Lists) · [Moje bloki](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Silniki](/docs/Application/BlockBuilder/Blocks/Motors) · [Światło](/docs/Application/BlockBuilder/Blocks/Light) · [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors) · [Dźwięki](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Ruch](/docs/Application/BlockBuilder/Blocks/Movement) · [Silniki](/docs/Application/BlockBuilder/Blocks/Motors) · [Światło](/docs/Application/BlockBuilder/Blocks/Light) · [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors) · [Dźwięki](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Symulator](/docs/Application/BlockBuilder/Blocks/Simulator) · [Kontrolery panelu](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Gamepad](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 W aplikacji przytrzymaj blok (lub kliknij go prawym przyciskiem myszy) i wybierz **O bloku**, aby otworzyć tutaj jego opis.

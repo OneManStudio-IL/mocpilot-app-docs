@@ -147,3 +147,37 @@ Spustí sa, keď vzdialenosť nameraná senzorom farby a vzdialenosti BOOST spln
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Spustí sa, keď senzor farby a vzdialenosti BOOST uvidí vybranú farbu.
+
+## Udalosti Robot Inventor {#robot-inventor-events}
+
+Tieto udalosti pochádzajú z aplikácie Robot Inventor a fungujú iba s [hubmi MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesú ikonu hubu. Zodpovedajúce hodnoty nájdete na stránke [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `keď je hub …` (Začiatočník) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Spustí sa raz zakaždým, keď je hub `poklepaný`, `dvakrát poklepaný`, `zatrasený` (predvolené) alebo keď `padá`.
+
+### `keď … je hore` (Začiatočník) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Spustí sa, keď sa vybraná strana hubu otočí nahor: `predná strana` (svetelná matica, predvolené), `horná strana`, `pravá strana`, `zadná strana`, `spodná strana` alebo `ľavá strana`.
+
+### `keď je hub naklonený …` (Pokročilý) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Spustí sa, keď sa hub nakloní nahor (v aplikácii `hore`), nadol (`dole`), `doľava`, `doprava` alebo ľubovoľným smerom (`akýkoľvek`, predvolené), a to približne o 12° alebo viac.
+
+### `keď … stlačené / silno stlačený / uvoľnené` (Začiatočník) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Spustí sa, keď je senzor sily na vybranom porte stlačený, silno stlačený (viac ako 5 newtonov) alebo uvoľnený.
+
+### `keď hub prijme signál …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Spustí sa, keď tento hub prijme od iného hubu rádiový signál s týmto názvom. Jeho hodnotu prečíta blok [prijatý signál … hodnota](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

@@ -54,7 +54,7 @@ MOCPilot показує **Bluetooth вимкнено**, коли Bluetooth на 
 
 ## Хаби з класичним Bluetooth {#classic-bluetooth-hubs}
 
-Хаб **Robot Inventor** використовує класичний Bluetooth, а не Bluetooth Low Energy. Він працює на Android, Mac і Windows, але не на iPhone та iPad. Якщо у Windows MOCPilot його не знаходить, спершу з’єднайте хаб у **Параметри → Bluetooth і пристрої → Додати пристрій**, а потім знову запустіть пошук у застосунку.
+Хаб **Robot Inventor** використовує класичний Bluetooth, а не Bluetooth Low Energy. Він працює на Android, Mac і Windows, але не на iPhone та iPad. Якщо у Windows MOCPilot його не знаходить, спершу з’єднайте хаб у **Параметри → Bluetooth і пристрої → Додати пристрій**, а потім знову запустіть пошук у застосунку. У Windows і на Mac його можна підключити й USB-кабелем; див. [Хаб MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub#connect).
 
 Усі інші підтримувані хаби використовують Bluetooth Low Energy й додаються лише в MOCPilot, а не в системних налаштуваннях Bluetooth.
 

@@ -29,7 +29,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Move Hub / BOOST (88006) | 2 sisäänrakennettua moottoria + 2 porttia |
 | LEGO® Remote Control (88010) | sen painikkeet ovat syötteitä |
 | LEGO® WeDo 2.0 Smart Hub | 2 porttia |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 porttia, valomatriisi; ei iPhonessa eikä iPadissa |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 porttia, valomatriisi, kaiutin, gyroskooppi; Bluetooth tai USB; ei iPhonessa eikä iPadissa |
 | BuWizz 2.0 | 4 porttia, tehotilat |
 | BuWizz 3.0 Pro | 6 porttia, porttien väri-LEDit |
 | SBrick, SBrick Plus | 4 porttia, nopeuden ohjaus, ei asennon ohjausta |

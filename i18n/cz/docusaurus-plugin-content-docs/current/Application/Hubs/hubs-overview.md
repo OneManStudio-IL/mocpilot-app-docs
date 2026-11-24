@@ -29,7 +29,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Move Hub / BOOST (88006) | 2 vestavěné motory + 2 porty |
 | LEGO® Remote Control (88010) | jeho tlačítka slouží jako vstupy |
 | LEGO® WeDo 2.0 Smart Hub | 2 porty |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 portů, světelná matice; ne na iPhonu a iPadu |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 portů, světelná matice, reproduktor, gyroskop; Bluetooth nebo USB; ne na iPhonu a iPadu |
 | BuWizz 2.0 | 4 porty, režimy výkonu |
 | BuWizz 3.0 Pro | 6 portů, barevné LED portů |
 | SBrick, SBrick Plus | 4 porty, řízení rychlosti, bez řízení polohy |

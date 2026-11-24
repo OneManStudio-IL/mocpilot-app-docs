@@ -4,6 +4,7 @@ title: ライト
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # ライト {#light}
 
@@ -96,7 +97,49 @@ Technic Move Hub のライトをオン／オフします。
 
 選んだポートの距離センサーの「目」のまわりにあるライトを制御します。ライトを 1 つずつオン／オフできるほか、欄にリストを入れて各ライトの明るさを設定することもできます。
 
-- ハブ：MINDSTORMS Robot Inventor。
+- ハブ：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（ブロックにハブのアイコンが付いています）。
+
+## Robot Inventor のライトマトリックス {#robot-inventor-light}
+
+これらのブロックは Robot Inventor アプリから来たもので、[MINDSTORMS Robot Inventor と SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)でのみ動作します。ハブのアイコンが付いています。ブロック内の絵をタップすると描けます。アニメーションのブロックでは、最初のフレームとフレーム数が表示されます。
+
+### `点灯 … の間 … 秒` (初心者) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+指定した時間（初期値 2 秒）だけライトマトリックスに画像を表示し、そのあと消します。ブロックは時間が過ぎるまで待ちます。
+
+### `アニメーションを再生 … で … フレーム/秒 終わるまで` (初心者) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+アニメーションのフレームを指定した速さ（初期値は毎秒 4 フレーム）で 1 回再生し、最後のフレームまで待ちます。
+
+### `アニメーションを開始 … で … フレーム/秒 …` (初心者) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+アニメーションを開始し、すぐに次のブロックへ進みます。
+
+- `1回`：1 回だけ再生します。
+- `繰り返す`（初期値）：別のライトブロックがマトリックスを変えるまで、何度も再生します。
+
+### `ピクセルの明るさを設定 … %` (上級者) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+上の Robot Inventor のブロックで表示する画像とアニメーションの明るさを 0～100 % で設定します。このブロックが実行されるまでは、最大の明るさで表示されます。各ピクセルは、ほかのピクセルとの明るさの比を保ちます。
+
+### 画像とアニメーションを描く {#animation-editor}
+
+ライトブロック内の絵をタップするとエディターが開きます。
+
+- **ピクセル**：5×5 のグリッドをタップまたはドラッグして、選んだ明るさで塗ります。
+- **明るさ**：グリッドの横の目盛りで、塗る明るさを選びます（消灯から最大まで 10 段階）。
+- **すべて消灯／すべて点灯**：画像を消すか、選んだ明るさで塗りつぶします。
+- **フレーム**（アニメーションのブロックのみ）：グリッドの下のバーに現在のフレームが表示されます（例：**2/3**）。ボタンで **前の** フレームと **次の** フレームに移動したり、現在のフレームのあとに空のフレームを **追加**、現在のフレームを **複製** または **削除** したりできます（アニメーションには少なくとも 1 フレームが残ります）。
+
+<Screenshot name="robot-inventor-animation-editor" alt="アニメーションエディター：5×5 のグリッド、明るさの目盛り、フレームのバー" width={600} />
 
 ## BuWizz 3 のポート LED {#buwizz-3-port-leds}
 

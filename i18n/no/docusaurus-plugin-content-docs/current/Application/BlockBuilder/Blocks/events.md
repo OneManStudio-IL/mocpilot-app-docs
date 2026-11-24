@@ -147,3 +147,37 @@ Kjører når avstanden som BOOST-farge- og avstandssensoren måler, oppfyller be
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Kjører når BOOST-farge- og avstandssensoren ser den valgte fargen.
+
+## Robot Inventor-hendelser {#robot-inventor-events}
+
+Disse hendelsene kommer fra Robot Inventor-appen og fungerer bare med [MINDSTORMS Robot Inventor- og SPIKE Prime-hubbene](/docs/Application/Hubs/RobotInventorHub). De har hubikonet. De tilsvarende verdiene finner du på siden [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `når huben er …` (Nybegynner) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Kjører én gang hver gang huben blir `banket`, `dobbeltbanket`, `ristet` (standard) eller når den `faller`.
+
+### `når … vender opp` (Nybegynner) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Kjører når den valgte siden av huben snus opp: `forside` (lysmatrisen, standard), `overside`, `høyre side`, `bakside`, `underside` eller `venstre side`.
+
+### `når huben er vippet …` (Avansert) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Kjører når huben vippes `opp`, `ned`, `til venstre`, `til høyre` eller i en hvilken som helst retning (`hvilken som helst`, standard), med omtrent 12° eller mer.
+
+### `når … trykket / hardt trykket / utløst` (Nybegynner) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Kjører når kraftsensoren på den valgte porten trykkes inn, trykkes hardt (mer enn 5 newton) eller slippes. Valget `utløst` betyr her at sensoren er sluppet.
+
+### `når huben mottar signal …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Kjører når denne huben mottar radiosignalet med dette navnet fra en annen hub. Les verdien med [mottatt signal … verdi](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

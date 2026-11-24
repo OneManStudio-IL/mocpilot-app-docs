@@ -54,10 +54,13 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Totul despre conectare, firmware și blocuri: [Hubul MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+
 - **Matrice LED**: o bară de nivel, un număr sau o imagine în Legături rapide; text și pixeli în Blocuri logice.
 - **Luminile senzorului de distanță** („ochii” senzorului).
 - **Detectarea blocării** și puterea motorului.
-- Bluetooth clasic: nu este disponibil pe iPhone și iPad.
+- Toate blocurile aplicației Robot Inventor: [Mișcare](/docs/Application/BlockBuilder/Blocks/Movement), sunetele și muzica hubului, gesturi, derapaj, senzorul de forță, radio între huburi.
+- Bluetooth clasic (nu este disponibil pe iPhone și iPad) sau un cablu USB pe Windows și Mac.
 
 ## Huburi LEGO® cu LED color {#lego-hubs-with-a-colour-led}
 

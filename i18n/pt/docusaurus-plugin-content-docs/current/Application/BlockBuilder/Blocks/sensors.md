@@ -14,6 +14,7 @@ Nesta página:
 - [Estado do hub](#hub-state): bateria, tensão, temperatura, corrente e modo de potência
 - [Botões, inclinação e orientação do hub](#hub-tilt-and-orientation)
 - [Sensores nas portas](#sensors-on-ports): qualquer dispositivo, sensor de cor Technic, sensor de distância Technic, sensor de cor e distância BOOST, sensores WeDo 2.0
+- [Hub Robot Inventor](#robot-inventor-sensors): sensor de força, gestos, orientação, guinada, inclinação e rotação, inclinação para um lado, rádio entre hubs
 - [Este dispositivo](#this-device): o celular, tablet ou computador que executa o MOCPilot
 - [Temporizador](#timer)
 
@@ -240,6 +241,98 @@ Retorna dados do sensor de inclinação WeDo 2.0: um ângulo de inclinação ou 
 - Ângulos: `inclinação`, `rotação`
 - Saída da direção: `texto` ou `número`; direções: `neutro`, `para a frente`, `para trás`, `esquerda`, `direita`, `desconhecido`
 - Hubs: WeDo 2.0.
+
+## Hub Robot Inventor {#robot-inventor-sensors}
+
+Estes blocos vêm do app Robot Inventor e só funcionam com os [hubs MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Eles têm o ícone do hub. Os eventos deles (quando o hub é sacudido, inclinado etc.) estão na página [Eventos](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Sensor de força {#robot-inventor-force-sensor}
+
+#### `… está pressionado / pressionado com força / solto ?` (Iniciante) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Verifica o sensor de força na porta selecionada. `pressionado com força` significa pressionado com mais de 5 newtons.
+
+#### `… pressão em % / newton` (Iniciante) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Retorna a força com que o sensor de força é pressionado: em porcentagem (0–100) ou em newtons (0–10).
+
+### Movimento do hub {#robot-inventor-motion}
+
+#### `o hub está … ?` (Avançado) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` se o hub acabou de ser movido desta forma: `tocado`, `tocado duas vezes`, `sacudido` (padrão) ou `caindo`. Um gesto conta uma vez só: depois que um bloco o lê, ele desaparece.
+
+#### `gesto` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Retorna o último gesto como texto: `tapped`, `doubletapped`, `shake` ou `freefall`, ou um valor vazio se não houve nenhum.
+
+#### `está … para cima?` (Iniciante) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` se este lado do hub está virado para cima: `frente` (a matriz de luzes), `topo`, `lado direito`, `traseira`, `base` ou `lado esquerdo`.
+
+#### `orientação` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Retorna o lado virado para cima como texto: `front`, `up`, `rightside`, `back`, `down` ou `leftside`.
+
+#### `… ângulo` (Iniciante) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Retorna o ângulo do hub em graus em torno de um eixo: `guinada` (virar para a esquerda e para a direita, como uma bússola), `inclinação` (frente para cima e para baixo) ou `rotação` (inclinar para os lados).
+
+- Uso típico: fazer um robô andar em linha reta ou virar exatamente 90°: zere a guinada e depois corrija a direção até a guinada chegar ao ângulo.
+
+#### `definir ângulo de guinada para 0` (Iniciante) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Torna a direção atual do hub o novo zero do ângulo de guinada. O bloco espera 0,1 s para que a próxima leitura já seja contada a partir dele.
+
+#### `velocidade angular …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Retorna a velocidade com que o hub gira em torno do eixo `x`, `y` ou `z` (o giroscópio), em graus por segundo.
+
+#### `aceleração …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Retorna a aceleração do hub ao longo do eixo `x`, `y` ou `z`, como o hub a informa.
+
+#### `o hub está inclinado … ?` (Avançado) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` se o hub está inclinado nesta direção: `para cima`, `para baixo`, `para a esquerda`, `para a direita` ou `qualquer` (padrão). O hub conta como inclinado a partir de cerca de 12° em relação à horizontal; quando está inclinado nos dois sentidos, vale a inclinação maior.
+
+### Rádio entre hubs {#robot-inventor-radio}
+
+Os hubs Robot Inventor podem enviar sinais curtos uns aos outros pelo ar, sem o MOCPilot no meio. Um sinal tem um nome e um valor.
+
+#### `transmitir sinal do hub … com …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Envia o sinal com o nome indicado (`signal` por padrão) e o valor indicado (`1`) deste hub para os hubs próximos.
+
+#### `sinal recebido … valor` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Retorna o último valor que este hub recebeu para o sinal com este nome, ou 0 se ainda não chegou nenhum. Para reagir no momento em que um sinal chega, use [quando o hub receber o sinal](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Este dispositivo {#this-device}
 

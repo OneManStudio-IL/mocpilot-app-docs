@@ -14,6 +14,7 @@ Sur cette page :
 - [État du hub](#hub-state) : batterie, tension, température, courant et mode de puissance
 - [Boutons, inclinaison et orientation du hub](#hub-tilt-and-orientation)
 - [Capteurs sur les ports](#sensors-on-ports) : n’importe quel appareil, capteur de couleur Technic, capteur de distance Technic, capteur de couleur et de distance BOOST, capteurs WeDo 2.0
+- [Hub Robot Inventor](#robot-inventor-sensors) : capteur de force, gestes, orientation, lacet, tangage et roulis, inclinaison, radio entre hubs
 - [Cet appareil](#this-device) : le téléphone, la tablette ou l’ordinateur sur lequel tourne MOCPilot
 - [Minuteur](#timer)
 
@@ -240,6 +241,98 @@ Renvoie les données du capteur d’inclinaison WeDo 2.0 : un angle d’inclinai
 - Angles : `tangage`, `roulis`
 - Sortie de direction : `texte` ou `nombre` ; directions : `neutre`, `en avant`, `en arrière`, `gauche`, `droite`, `inconnu`
 - Hubs : WeDo 2.0.
+
+## Hub Robot Inventor {#robot-inventor-sensors}
+
+Ces blocs proviennent de l’application Robot Inventor et ne fonctionnent qu’avec les [hubs MINDSTORMS Robot Inventor et SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ils portent l’icône du hub. Leurs événements (quand le hub est secoué, incliné, etc.) se trouvent sur la page [Événements](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Capteur de force {#robot-inventor-force-sensor}
+
+#### `est … pressé / appuyé fort / relâché ?` (Débutant) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Vérifie le capteur de force branché sur le port sélectionné. `appuyé fort` signifie appuyé avec plus de 5 newtons.
+
+#### `… pression en % / newton` (Débutant) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Renvoie la force avec laquelle le capteur de force est appuyé : en pourcentage (0–100) ou en newtons (0–10).
+
+### Mouvements du hub {#robot-inventor-motion}
+
+#### `le hub est-il … ?` (Avancé) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` si le hub vient d’être bougé de cette façon : `tapoté`, `tapoté deux fois`, `secoué` (par défaut) ou `en chute`. Un geste ne compte qu’une fois : une fois lu par un bloc, il disparaît.
+
+#### `geste` (Gourou) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Renvoie le dernier geste sous forme de texte : `tapped`, `doubletapped`, `shake` ou `freefall`, ou une valeur vide s’il n’y en a pas eu.
+
+#### `est … en haut ?` (Débutant) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` si cette face du hub est tournée vers le haut : `avant` (la matrice lumineuse), `dessus`, `côté droit`, `arrière`, `dessous` ou `côté gauche`.
+
+#### `orientation` (Gourou) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Renvoie la face tournée vers le haut sous forme de texte : `front`, `up`, `rightside`, `back`, `down` ou `leftside`.
+
+#### `… angle` (Débutant) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Renvoie l’angle du hub en degrés autour d’un axe : `lacet` (rotation à gauche et à droite, comme une boussole), `tangage` (avant qui monte et descend) ou `roulis` (inclinaison sur les côtés).
+
+- Utilisation type : faire rouler un robot en ligne droite ou le faire tourner d’exactement 90° : remettez le lacet à zéro, puis braquez jusqu’à ce que le lacet atteigne l’angle voulu.
+
+#### `mettre l'angle de lacet à 0` (Débutant) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Fait de la direction actuelle du hub le nouveau zéro de l’angle de lacet. Le bloc attend 0,1 s pour que la mesure suivante soit déjà comptée à partir de ce zéro.
+
+#### `vitesse angulaire …` (Gourou) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Renvoie la vitesse de rotation du hub autour de l’axe `x`, `y` ou `z` (le gyroscope), en degrés par seconde.
+
+#### `accélération …` (Gourou) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Renvoie l’accélération du hub le long de l’axe `x`, `y` ou `z`, telle que le hub la transmet.
+
+#### `le hub est-il incliné … ?` (Avancé) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` si le hub est incliné dans cette direction : `vers le haut`, `vers le bas`, `vers la gauche`, `vers la droite` ou dans n’importe laquelle (l’option `n'importe`, par défaut). Le hub est considéré comme incliné à partir d’environ 12° par rapport à l’horizontale ; s’il est incliné dans deux directions, c’est la plus forte inclinaison qui l’emporte.
+
+### Radio entre hubs {#robot-inventor-radio}
+
+Les hubs Robot Inventor peuvent s’envoyer de courts signaux par radio, sans passer par MOCPilot. Un signal a un nom et une valeur.
+
+#### `envoyer le signal du hub … avec …` (Gourou) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Envoie le signal portant le nom indiqué (`signal` par défaut) et la valeur indiquée (`1`) depuis ce hub vers les hubs à proximité.
+
+#### `signal reçu … valeur` (Gourou) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Renvoie la dernière valeur reçue par ce hub pour le signal portant ce nom, ou 0 si aucune n’est encore arrivée. Pour réagir dès qu’un signal arrive, utilisez [quand le hub reçoit le signal](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Cet appareil {#this-device}
 

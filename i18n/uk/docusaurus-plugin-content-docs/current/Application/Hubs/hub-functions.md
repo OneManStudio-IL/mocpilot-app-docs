@@ -54,10 +54,13 @@ description: "Особливі функції Technic Move, BuWizz, SBrick, Moul
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
 
+Усе про підключення, прошивку й блоки: [Хаб MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+
 - **Світлодіодна матриця**: шкала рівня, число або зображення у Швидких зв’язках; текст і пікселі в Логічних блоках.
 - **Світло датчика відстані** («очі» датчика).
 - **Виявлення заклинювання** і потужність мотора.
-- Класичний Bluetooth: недоступно на iPhone та iPad.
+- Усі блоки застосунку Robot Inventor: [Рух](/docs/Application/BlockBuilder/Blocks/Movement), звуки й музика хаба, жести, рискання, датчик сили, радіозв’язок між хабами.
+- Класичний Bluetooth (недоступно на iPhone та iPad) або USB-кабель у Windows і на Mac.
 
 ## Хаби LEGO® з кольоровим світлодіодом {#lego-hubs-with-a-colour-led}
 
