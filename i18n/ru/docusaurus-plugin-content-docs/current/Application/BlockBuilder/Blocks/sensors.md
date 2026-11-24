@@ -14,6 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - [Состояние хаба](#hub-state): батарея, напряжение, температура, ток и режим питания
 - [Кнопки, наклон и ориентация хаба](#hub-tilt-and-orientation)
 - [Датчики на портах](#sensors-on-ports): любое устройство, датчик цвета Technic, датчик расстояния Technic, датчик цвета и расстояния BOOST, датчики WeDo 2.0
+- [Хаб Robot Inventor](#robot-inventor-sensors): датчик силы, жесты, ориентация, рысканье, тангаж и крен, наклон, радиосвязь между хабами
 - [Это устройство](#this-device): телефон, планшет или компьютер, на котором работает MOCPilot
 - [Таймер](#timer)
 
@@ -240,6 +241,98 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - Углы: `тангаж`, `крен`
 - Направление: результат `текст` или `число`; значения `нейтральный`, `вперёд`, `назад`, `влево`, `вправо`, `неизвестно`
 - Хабы: WeDo 2.0.
+
+## Хаб Robot Inventor {#robot-inventor-sensors}
+
+Эти блоки взяты из приложения Robot Inventor и работают только с [хабами MINDSTORMS Robot Inventor и SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). На них есть значок хаба. Их события (когда хаб встряхнули, наклонили и т. д.) описаны на странице [События](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events).
+
+### Датчик силы {#robot-inventor-force-sensor}
+
+#### `… нажат / сильно нажат / отпущен ?` (Новичок) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Проверяет датчик силы на выбранном порту. `сильно нажат` означает нажатие с силой больше 5 ньютонов.
+
+#### `… давление в % / ньютонах` (Новичок) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Возвращает, насколько сильно нажат датчик силы: в процентах (0–100) или в ньютонах (0–10).
+
+### Движение хаба {#robot-inventor-motion}
+
+#### `хаб … ?` (Продвинутый) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true`, если хаб только что подвергся такому действию: `стукнули`, `дважды стукнули`, `встряхнули` (по умолчанию) или `падает`. Жест учитывается один раз: после того как блок его прочитал, он исчезает.
+
+#### `жест` (Гуру) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Возвращает последний жест в виде текста: `tapped`, `doubletapped`, `shake` или `freefall` либо пустое значение, если жеста не было.
+
+#### `… сверху?` (Новичок) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true`, если эта сторона хаба смотрит вверх: `передняя сторона` (световая матрица), `верхняя сторона`, `правая сторона`, `задняя сторона`, `нижняя сторона` или `левая сторона`.
+
+#### `ориентация` (Гуру) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Возвращает сторону, которая смотрит вверх, в виде текста: `front`, `up`, `rightside`, `back`, `down` или `leftside`.
+
+#### `… угол` (Новичок) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Возвращает угол хаба в градусах вокруг одной оси: `рысканье` (поворот влево и вправо, как у компаса), `тангаж` (нос вверх и вниз) или `крен` (наклон в стороны).
+
+- Для чего: вести робота по прямой или повернуть его ровно на 90°: сбросьте рысканье, а потом рулите, пока рысканье не достигнет нужного угла.
+
+#### `установить угол рысканья на 0` (Новичок) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Делает текущее направление хаба новым нулём угла рысканья. Блок ждёт 0,1 с, чтобы следующее показание уже отсчитывалось от него.
+
+#### `угловая скорость …` (Гуру) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Возвращает, как быстро хаб вращается вокруг оси `x`, `y` или `z` (гироскоп), в градусах в секунду.
+
+#### `ускорение …` (Гуру) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Возвращает ускорение хаба вдоль оси `x`, `y` или `z` в том виде, в каком его сообщает хаб.
+
+#### `хаб наклонён … ?` (Продвинутый) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true`, если хаб наклонён в этом направлении: `вверх`, `вниз`, `левый`, `правый` или `любой` (по умолчанию). Хаб считается наклонённым примерно от 12° от горизонтали; если он наклонён в обе стороны, учитывается больший наклон.
+
+### Радиосвязь между хабами {#robot-inventor-radio}
+
+Хабы Robot Inventor могут отправлять друг другу короткие сигналы по радио, без участия MOCPilot. У сигнала есть имя и значение.
+
+#### `отправить сигнал хаба … с …` (Гуру) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Отправляет сигнал с заданным именем (по умолчанию `signal`) и значением (`1`) с этого хаба хабам поблизости.
+
+#### `полученный сигнал … значение` (Гуру) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Возвращает последнее значение, которое этот хаб получил для сигнала с этим именем, или 0, если ещё ничего не пришло. Чтобы реагировать в момент получения сигнала, используйте [когда хаб получает сигнал](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## Это устройство {#this-device}
 

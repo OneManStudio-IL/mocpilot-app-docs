@@ -29,7 +29,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Move Hub / BOOST (88006) | 2 встроенных мотора + 2 порта |
 | LEGO® Remote Control (88010) | его кнопки — входы |
 | LEGO® WeDo 2.0 Smart Hub | 2 порта |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 портов, световая матрица; недоступен на iPhone и iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 портов, световая матрица, динамик, гироскоп; Bluetooth или USB; недоступен на iPhone и iPad |
 | BuWizz 2.0 | 4 порта, режимы мощности |
 | BuWizz 3.0 Pro | 6 портов, цветные светодиоды портов |
 | SBrick, SBrick Plus | 4 порта, управление скоростью без управления позицией |

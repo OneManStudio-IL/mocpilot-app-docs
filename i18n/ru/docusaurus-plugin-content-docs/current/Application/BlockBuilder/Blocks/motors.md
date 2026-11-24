@@ -97,9 +97,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### `включить обнаружение застревания …` (Гуру) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Включает или выключает обнаружение застревания мотора.
+Включает или выключает обнаружение застревания мотора. Когда оно включено, заблокированный мотор перестаёт давить и сдаётся, поэтому блок, который ждёт мотор, может завершиться.
 
-- Хабы: MINDSTORMS Robot Inventor.
+- Хабы: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (на блоке значок хаба).
 
 ### `установить ускорение на …` (Гуру) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Возвращает текущую мощность мотора.
 
-- Хабы: MINDSTORMS Robot Inventor.
+- Хабы: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (на блоке значок хаба).
+
+## Robot Inventor {#robot-inventor-motors}
+
+Эти блоки взяты из приложения Robot Inventor и работают только с [хабами MINDSTORMS Robot Inventor и SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). На них есть значок хаба. Чтобы управлять двухколёсным роботом, используйте блоки категории [Движение](/docs/Application/BlockBuilder/Blocks/Movement).
+
+### `запустить мотор на … % мощность` (Продвинутый) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Запускает моторы на выбранных портах с заданной мощностью от −100 до 100 % (по умолчанию 75 %). В отличие от **запустить мотор на … % скорость**, мотор не поддерживает заданную скорость: под нагрузкой он замедляется, как мотор без энкодера.
+
+### `мотор был прерван?` (Гуру) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true`, если последняя команда мотора на этом порту не завершилась, потому что её прервал другой блок мотора на том же порту.
 
 ## Technic Move Hub
 

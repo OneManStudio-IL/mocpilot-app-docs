@@ -18,7 +18,7 @@ MOCPilot работает с этими хабами, моторами и дат
 
 - В профиле 5 слотов для хабов: 2 бесплатных, ещё 3 открываются покупкой дополнительного слота или с [MocPilot Pro](/docs/Application/Account/Pro).
 - Хабы **Mould King** только принимают команды (без датчиков и обратной связи). В профиле можно использовать только один тип Mould King: до 3 хабов Mould King 4.0 или 1 Mould King 6.0.
-- Хаб **Robot Inventor** (LEGO® Large Hub) использует классический Bluetooth и недоступен на iPhone и iPad.
+- Хаб **Robot Inventor** (LEGO® Large Hub) и хаб **SPIKE Prime** (бета, прошивка SPIKE Legacy) используют классический Bluetooth и недоступны на iPhone и iPad. На Windows и Mac их можно подключить и USB-кабелем. См. [Хаб MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
 - Обновление и восстановление прошивки доступны для Technic Hub, Technic Move Hub, BOOST Move Hub и City Hub. См. [Обновление прошивки](/docs/Application/Hubs/FirmwareUpdating).
 - Что умеет каждый хаб, кроме моторов и света, описано в разделе [Функции отдельных хабов](/docs/Application/Hubs/HubFunctions).
 

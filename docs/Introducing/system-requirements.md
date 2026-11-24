@@ -22,7 +22,7 @@ You'll find the store links on [mocpilot.com](https://mocpilot.com). The app pic
 ## Bluetooth
 
 - Hubs connect over **Bluetooth Low Energy** (Bluetooth 4.0 or newer). Almost every phone and tablet has it; on a computer, use the built-in adapter or a USB Bluetooth dongle.
-- The **Robot Inventor** hub uses classic Bluetooth. It works on Android, Mac and Windows, but not on iPhone and iPad.
+- The **Robot Inventor** hub uses classic Bluetooth. It works on Android, Mac and Windows, but not on iPhone and iPad. On Windows and Mac it can also connect with a USB cable.
 - **Mould King** hubs receive commands as Bluetooth broadcasts (advertising). On Windows, Mould King 6.0 needs an adapter and driver that can broadcast, and Mould King 4.0 doesn't work at all; use a phone or tablet for it.
 - The app asks for Bluetooth permission (on Android, also Nearby devices or Location). See [Bluetooth and permissions](/docs/Help/BluetoothPermissions).
 

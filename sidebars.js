@@ -118,6 +118,7 @@ const sidebars = {
             'Application/BlockBuilder/Blocks/Variables',
             'Application/BlockBuilder/Blocks/Lists',
             'Application/BlockBuilder/Blocks/MyBlocks',
+            'Application/BlockBuilder/Blocks/Movement',
             'Application/BlockBuilder/Blocks/Motors',
             'Application/BlockBuilder/Blocks/Light',
             'Application/BlockBuilder/Blocks/Sensors',
@@ -140,6 +141,7 @@ const sidebars = {
         'Application/Hubs/FirmwareUpdating',
         'Application/Hubs/RecoveryHubFirmware',
         'Application/Hubs/TechnicMoveHubConfigurations',
+        'Application/Hubs/RobotInventorHub',
       ],
     },
     {

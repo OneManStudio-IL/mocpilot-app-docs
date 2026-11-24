@@ -97,9 +97,9 @@ Chooses what the motor does when it stops.
 
 ### `turn stall detection …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motors_stall_detection.svg')} alt="block_hubs_all_motors_port_set_motors_stall_detection.svg" />
-Turns stall detection on or off.
+Turns stall detection on or off. With it on, a motor that gets blocked gives up instead of pushing on, so a block that waits for the motor can finish.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (the block has the hub icon).
 
 ### `set acceleration to …` (Guru) {#block_hubs_all_motors_port_set_acceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
@@ -137,7 +137,19 @@ Returns the motor's current speed.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_power.svg')} alt="block_hubs_all_motors_port_power.svg" />
 Returns the motor's current power.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (the block has the hub icon).
+
+## Robot Inventor {#robot-inventor-motors}
+
+These blocks come from the Robot Inventor app and work only with the [MINDSTORMS Robot Inventor and SPIKE Prime hubs](/docs/Application/Hubs/RobotInventorHub). They carry the hub icon. To drive a two-wheeled robot, see the [Movement](/docs/Application/BlockBuilder/Blocks/Movement) blocks.
+
+### `start motor at … % power` (Advanced) {#block_ri_motor_start_power}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_start_power.svg')} alt="block_ri_motor_start_power.svg" />
+Starts the motors on the selected ports at the given power, from −100 to 100 % (default 75 %). Unlike **start motor at … % speed**, the motor doesn't keep a regulated speed: under load it slows down, like a motor without an encoder.
+
+### `was the motor interrupted?` (Guru) {#block_ri_motor_was_interrupted}
+<img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
+`true` if the last command of the motor on this port didn't finish because another motor block on the same port cut it short.
 
 ## Technic Move Hub
 

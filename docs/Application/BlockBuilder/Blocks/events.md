@@ -147,3 +147,37 @@ Runs when the distance measured by the BOOST Color & Distance Sensor meets the c
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Runs when the BOOST Color & Distance Sensor sees the selected color.
+
+## Robot Inventor events {#robot-inventor-events}
+
+These events come from the Robot Inventor app and work only with the [MINDSTORMS Robot Inventor and SPIKE Prime hubs](/docs/Application/Hubs/RobotInventorHub). They carry the hub icon. The matching values are on the [Sensors](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors) page.
+
+### `when hub is …` (Beginner) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Runs once each time the hub is `tapped`, `double-tapped`, `shaken` (default) or `falling`.
+
+### `when … is up` (Beginner) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Runs when the selected side of the hub turns to face up: `front` (the light matrix, default), `top`, `right side`, `back`, `bottom` or `left side`.
+
+### `when hub is tilted …` (Advanced) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Runs when the hub gets tilted `up`, `down`, `left`, `right` or in `any` direction (default), by about 12° or more.
+
+### `when … pressed / hard-pressed / released` (Beginner) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Runs when the Force Sensor on the selected port is pressed, pressed hard (more than 5 newtons) or released.
+
+### `when hub receives signal …` (Guru) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Runs when this hub receives the radio signal with this name from another hub. Read its value with [received … value](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

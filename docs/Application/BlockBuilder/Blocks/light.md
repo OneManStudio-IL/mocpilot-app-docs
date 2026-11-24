@@ -4,6 +4,7 @@ title: Light
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Screenshot from '@site/src/components/Screenshot';
 
 # Light
 
@@ -96,7 +97,49 @@ Sets the orientation of the picture on the light matrix. It's `upright` by defau
 
 Controls the lights around the "eyes" of the Distance Sensor on the selected port. You can turn each light on or off, or put a list in the slot to set the brightness of each light.
 
-- Hubs: MINDSTORMS Robot Inventor.
+- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (the block has the hub icon).
+
+## Robot Inventor light matrix {#robot-inventor-light}
+
+These blocks come from the Robot Inventor app and work only with the [MINDSTORMS Robot Inventor and SPIKE Prime hubs](/docs/Application/Hubs/RobotInventorHub). They carry the hub icon. Tap the picture in a block to draw it; in the animation blocks it shows the first frame and the number of frames.
+
+### `turn on … for … seconds` (Beginner) {#block_ri_light_image_for}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_image_for.svg')} alt="block_ri_light_image_for.svg" />
+
+Shows the image on the light matrix for the given time (2 seconds by default), then turns it off. The block waits until the time is up.
+
+### `play animation … at … frames per second until done` (Beginner) {#block_ri_light_animation_until_done}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
+
+Plays the frames of the animation once, at the given speed (4 frames per second by default), and waits until the last frame.
+
+### `start animation … at … frames per second …` (Beginner) {#block_ri_light_animation_start}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
+
+Starts the animation and goes on to the next block at once.
+
+- `once`: plays it one time.
+- `repeat` (default): plays it over and over until another light block changes the matrix.
+
+### `set pixel brightness to … %` (Advanced) {#block_ri_light_set_brightness}
+
+<img src={useBaseUrl('/img/blocks/block_ri_light_set_brightness.svg')} alt="block_ri_light_set_brightness.svg" />
+
+Sets how bright the images and animations of the Robot Inventor blocks above are, from 0 to 100 %. Until this block runs, they are at full brightness. Each pixel keeps its own brightness relative to the others.
+
+### Drawing images and animations {#animation-editor}
+
+Tap the picture in a light block to open the editor:
+
+- **Pixels**: tap or drag over the 5×5 grid to paint with the selected brightness.
+- **Brightness**: the scale next to the grid picks the brightness to paint with (10 levels, from off to full).
+- **All off / all on**: clear the image or fill it with the selected brightness.
+- **Frames** (animation blocks only): the bar under the grid shows the current frame, for example **2/3**. The buttons go to the **previous** and **next** frame, **add** an empty frame after the current one, **duplicate** the current frame or **delete** it (an animation keeps at least one frame).
+
+<Screenshot name="robot-inventor-animation-editor" alt="The animation editor: the 5×5 grid, the brightness scale and the frame bar" width={600} />
 
 ## BuWizz 3 port LEDs
 

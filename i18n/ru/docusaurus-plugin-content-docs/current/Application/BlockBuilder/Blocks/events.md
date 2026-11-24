@@ -147,3 +147,37 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_color.svg')} alt="block_hubs_all_event_port_boost_sensor_color.svg" />
 
 Срабатывает, когда датчик цвета и расстояния BOOST видит выбранный цвет.
+
+## События Robot Inventor {#robot-inventor-events}
+
+Эти события взяты из приложения Robot Inventor и работают только с [хабами MINDSTORMS Robot Inventor и SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). На них есть значок хаба. Соответствующие значения описаны на странице [Датчики](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors).
+
+### `когда хаб …` (Новичок) {#block_ri_when_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
+
+Срабатывает каждый раз, когда хаб `стукнули`, `дважды стукнули`, `встряхнули` (по умолчанию) или когда он `падает`.
+
+### `когда … сверху` (Новичок) {#block_ri_when_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
+
+Срабатывает, когда выбранная сторона хаба поворачивается вверх: `передняя сторона` (световая матрица, по умолчанию), `верхняя сторона`, `правая сторона`, `задняя сторона`, `нижняя сторона` или `левая сторона`.
+
+### `когда хаб наклонён …` (Продвинутый) {#block_ri_when_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
+
+Срабатывает, когда хаб наклоняют `вверх`, `вниз`, `левый`, `правый` или в любую сторону (`любой`, по умолчанию) примерно на 12° или больше.
+
+### `когда … нажат / сильно нажат / отпущен` (Новичок) {#block_ri_when_force}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
+
+Срабатывает, когда датчик силы на выбранном порту нажат, сильно нажат (больше 5 ньютонов) или отпущен.
+
+### `когда хаб получает сигнал …` (Гуру) {#block_ri_when_radio}
+
+<img src={useBaseUrl('/img/blocks/block_ri_when_radio.svg')} alt="block_ri_when_radio.svg" />
+
+Срабатывает, когда этот хаб получает от другого хаба радиосигнал с этим именем. Его значение читает блок [полученный сигнал … значение](/docs/Application/BlockBuilder/Blocks/Sensors#block_ri_radio_value).

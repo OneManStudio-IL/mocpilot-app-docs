@@ -23,7 +23,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <Screenshot name="blocks-editor" alt="Редактор Логических блоков: палитра и программа" width={900} />
 
-- В **палитре** собраны категории блоков: **События**, **Контроль**, **Датчики**, **Звуки**, **Операторы**, **Переменные**, **Списки** и **Мои блоки**. Остальные появляются, когда они нужны профилю: **Моторы** и **Свет** (если их поддерживает хаб), **Симулятор** (если на панели есть педали, коробка передач или ручник), **Наэкранные контроллеры** и **Геймпад**.
+- В **палитре** собраны категории блоков: **События**, **Контроль**, **Датчики**, **Звуки**, **Операторы**, **Переменные**, **Списки** и **Мои блоки**. Остальные появляются, когда они нужны профилю: **Моторы** и **Свет** (если их поддерживает хаб), **Движение** (с [хабом Robot Inventor](/docs/Application/Hubs/RobotInventorHub)), **Симулятор** (если на панели есть педали, коробка передач или ручник), **Наэкранные контроллеры** и **Геймпад**.
 - В **области программы** вы раскладываете блоки и собираете из них скрипты.
 - На верхней панели — **Отменить** и **Повторить**, **Панель**, **Мои хабы**, **Геймпад**, боковые панели **ИИ-конструктор**, [**Рюкзак**](/docs/Application/BlockBuilder/Backpack) и **Монитор**, **Ещё** (с **Настройками редактора**) и **Запустить/Остановить**. На телефоне и планшете боковые панели и **Геймпад** находятся в меню **Ещё**.
 
@@ -146,7 +146,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - [События](/docs/Application/BlockBuilder/Blocks/Events) · [Контроль](/docs/Application/BlockBuilder/Blocks/Control) · [Операторы](/docs/Application/BlockBuilder/Blocks/Operators)
 - [Переменные](/docs/Application/BlockBuilder/Blocks/Variables) · [Списки](/docs/Application/BlockBuilder/Blocks/Lists) · [Мои блоки](/docs/Application/BlockBuilder/Blocks/MyBlocks)
-- [Моторы](/docs/Application/BlockBuilder/Blocks/Motors) · [Свет](/docs/Application/BlockBuilder/Blocks/Light) · [Датчики](/docs/Application/BlockBuilder/Blocks/Sensors) · [Звуки](/docs/Application/BlockBuilder/Blocks/Sounds)
+- [Движение](/docs/Application/BlockBuilder/Blocks/Movement) · [Моторы](/docs/Application/BlockBuilder/Blocks/Motors) · [Свет](/docs/Application/BlockBuilder/Blocks/Light) · [Датчики](/docs/Application/BlockBuilder/Blocks/Sensors) · [Звуки](/docs/Application/BlockBuilder/Blocks/Sounds)
 - [Симулятор](/docs/Application/BlockBuilder/Blocks/Simulator) · [Наэкранные контроллеры](/docs/Application/BlockBuilder/Blocks/DashboardControllers) · [Геймпад](/docs/Application/BlockBuilder/Blocks/Gamepad)
 
 В приложении долгое нажатие (или правый клик) по блоку → **О блоке** открывает его описание здесь.

@@ -54,10 +54,13 @@ The hub of the LEGO® Technic remote-controlled cars (Porsche GT4 e-Performance,
 
 ## Robot Inventor (LEGO® Large Hub)
 
+All about connecting, firmware and the blocks: [MINDSTORMS Robot Inventor hub](/docs/Application/Hubs/RobotInventorHub).
+
 - **LED matrix**: a level bar, a number or an image in Quick Links; text and pixels in Logic Blocks.
 - **Distance sensor lights** (the sensor's "eyes").
 - **Stall detection** and motor power.
-- Classic Bluetooth: not available on iPhone and iPad.
+- All the blocks of the Robot Inventor app: [Movement](/docs/Application/BlockBuilder/Blocks/Movement), hub sounds and music, gestures, yaw, the Force Sensor, hub-to-hub radio.
+- Classic Bluetooth (not available on iPhone and iPad) or a USB cable on Windows and Mac.
 
 ## LEGO® hubs with a colour LED
 

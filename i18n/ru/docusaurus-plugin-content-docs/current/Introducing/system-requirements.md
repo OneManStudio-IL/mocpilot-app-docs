@@ -22,7 +22,7 @@ MOCPilot работает на телефонах, планшетах и ком�
 ## Bluetooth {#bluetooth}
 
 - Хабы подключаются по **Bluetooth Low Energy** (Bluetooth 4.0 и новее). Он есть почти в каждом телефоне и планшете; на компьютере подойдёт встроенный адаптер или USB-адаптер Bluetooth.
-- Хаб **Robot Inventor** работает по классическому Bluetooth. Он подключается на Android, Mac и Windows, но не на iPhone и iPad.
+- Хаб **Robot Inventor** работает по классическому Bluetooth. Он подключается на Android, Mac и Windows, но не на iPhone и iPad. На Windows и Mac его можно подключить и USB-кабелем.
 - Хабы **Mould King** получают команды через широковещательные сообщения Bluetooth (рекламу). На Windows для Mould King 6.0 нужен адаптер с драйвером, который умеет такую рассылку, а Mould King 4.0 там не работает совсем: для него используйте телефон или планшет.
 - Приложение запрашивает доступ к Bluetooth (на Android — ещё к устройствам поблизости или к геолокации). См. [Bluetooth и разрешения](/docs/Help/BluetoothPermissions).
 

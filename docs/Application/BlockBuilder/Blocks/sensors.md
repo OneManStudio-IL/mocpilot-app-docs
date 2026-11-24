@@ -14,6 +14,7 @@ On this page:
 - [Hub state](#hub-state): battery, voltage, temperature, current and power mode
 - [Hub buttons, tilt and orientation](#hub-tilt-and-orientation)
 - [Sensors on ports](#sensors-on-ports): any device, Technic Color Sensor, Technic Distance Sensor, BOOST Color & Distance Sensor, WeDo 2.0 sensors
+- [Robot Inventor hub](#robot-inventor-sensors): Force Sensor, gestures, orientation, yaw, pitch and roll, tilt, hub-to-hub radio
 - [This device](#this-device): the phone, tablet or computer that runs MOCPilot
 - [Timer](#timer)
 
@@ -240,6 +241,98 @@ Returns data from the WeDo 2.0 Tilt Sensor: a tilt angle, or the direction it is
 - Angles: `pitch`, `roll`
 - Direction output: `text` or `number`; directions: `neutral`, `forward`, `backward`, `left`, `right`, `unknown`
 - Hubs: WeDo 2.0.
+
+## Robot Inventor hub {#robot-inventor-sensors}
+
+These blocks come from the Robot Inventor app and work only with the [MINDSTORMS Robot Inventor and SPIKE Prime hubs](/docs/Application/Hubs/RobotInventorHub). They carry the hub icon. Their events (when the hub is shaken, tilted and so on) are on the [Events](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events) page.
+
+### Force Sensor {#robot-inventor-force-sensor}
+
+#### `is … pressed / hard-pressed / released ?` (Beginner) {#block_ri_force_is_pressed}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
+
+Checks the Force Sensor on the selected port. `hard-pressed` means pressed with more than 5 newtons.
+
+#### `… pressure in % / newton` (Beginner) {#block_ri_force_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_force_value.svg')} alt="block_ri_force_value.svg" />
+
+Returns how hard the Force Sensor is pressed: in percent (0–100) or in newtons (0–10).
+
+### Hub motion {#robot-inventor-motion}
+
+#### `is hub … ?` (Advanced) {#block_ri_is_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
+
+`true` if the hub has just been moved in this way: `tapped`, `double-tapped`, `shaken` (default) or `falling`. A gesture counts once: after a block has read it, it's gone.
+
+#### `gesture` (Guru) {#block_ri_gesture}
+
+<img src={useBaseUrl('/img/blocks/block_ri_gesture.svg')} alt="block_ri_gesture.svg" />
+
+Returns the last gesture as text: `tapped`, `doubletapped`, `shake` or `freefall`, or an empty value if there was none.
+
+#### `is … up?` (Beginner) {#block_ri_is_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
+
+`true` if this side of the hub faces up: `front` (the light matrix), `top`, `right side`, `back`, `bottom` or `left side`.
+
+#### `orientation` (Guru) {#block_ri_orientation}
+
+<img src={useBaseUrl('/img/blocks/block_ri_orientation.svg')} alt="block_ri_orientation.svg" />
+
+Returns the side that faces up as text: `front`, `up`, `rightside`, `back`, `down` or `leftside`.
+
+#### `… angle` (Beginner) {#block_ri_angle}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
+
+Returns the hub's angle in degrees around one axis: `yaw` (turning left and right, like a compass), `pitch` (nose up and down) or `roll` (tilting to the sides).
+
+- Typical use: drive a robot in a straight line or turn it by exactly 90°: reset the yaw, then steer until the yaw reaches the angle.
+
+#### `set yaw angle to 0` (Beginner) {#block_ri_reset_yaw}
+
+<img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
+
+Makes the current direction of the hub the new zero of the yaw angle. The block waits 0.1 s so that the next reading is already counted from it.
+
+#### `angular velocity …` (Guru) {#block_ri_angular_velocity}
+
+<img src={useBaseUrl('/img/blocks/block_ri_angular_velocity.svg')} alt="block_ri_angular_velocity.svg" />
+
+Returns how fast the hub turns around the `x`, `y` or `z` axis (the gyro), in degrees per second.
+
+#### `acceleration …` (Guru) {#block_ri_acceleration}
+
+<img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
+
+Returns the hub's acceleration along the `x`, `y` or `z` axis, as the hub reports it.
+
+#### `is hub tilted … ?` (Advanced) {#block_ri_is_tilted}
+
+<img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
+
+`true` if the hub is tilted in this direction: `up`, `down`, `left`, `right` or `any` (default). The hub counts as tilted from about 12° away from level; when it's tilted both ways, the bigger tilt wins.
+
+### Hub-to-hub radio {#robot-inventor-radio}
+
+Robot Inventor hubs can send short signals to each other over the air, without MOCPilot in between. A signal has a name and a value.
+
+#### `hub transmit signal … with …` (Guru) {#block_ri_radio_transmit}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_transmit.svg')} alt="block_ri_radio_transmit.svg" />
+
+Sends the signal with the given name (`signal` by default) and value (`1`) from this hub to the hubs nearby.
+
+#### `received … value` (Guru) {#block_ri_radio_value}
+
+<img src={useBaseUrl('/img/blocks/block_ri_radio_value.svg')} alt="block_ri_radio_value.svg" />
+
+Returns the last value this hub received for the signal with this name, or 0 if none came yet. To react the moment a signal arrives, use [when hub receives signal](/docs/Application/BlockBuilder/Blocks/Events#block_ri_when_radio).
 
 ## This device {#this-device}
 

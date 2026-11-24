@@ -29,7 +29,7 @@ A **hub** is the Bluetooth brick of your model: motors, lights and sensors plug 
 | LEGO® Move Hub / BOOST (88006) | 2 built-in motors + 2 ports |
 | LEGO® Remote Control (88010) | its buttons are inputs |
 | LEGO® WeDo 2.0 Smart Hub | 2 ports |
-| LEGO® Large Hub / Robot Inventor (88016) | 6 ports, light matrix; not on iPhone and iPad |
+| LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 ports, light matrix, speaker, gyro; Bluetooth or USB; not on iPhone and iPad |
 | BuWizz 2.0 | 4 ports, power modes |
 | BuWizz 3.0 Pro | 6 ports, port colour LEDs |
 | SBrick, SBrick Plus | 4 ports, speed control, no position control |
