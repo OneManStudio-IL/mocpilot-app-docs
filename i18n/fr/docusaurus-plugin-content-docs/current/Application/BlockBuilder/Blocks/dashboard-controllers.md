@@ -98,7 +98,7 @@ Ces blocs fonctionnent avec l’interrupteur à étapes et l’interrupteur à �
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_event.svg')} alt="block_dashboard_controller_stepper_event.svg" />
 
-*lorsque l'interrupteur à étapes [commande] [n'importe / réinitialiser / moins / plus] est [appuyé / relâché]* : exécute le script lorsqu’un bouton de l’interrupteur à étapes est appuyé ou relâché (**n'importe** désigne n’importe lequel).
+*lorsque l'interrupteur à étapes [commande] [n'importe quel côté / réinitialiser / moins / plus] est [appuyé / relâché]* : exécute le script lorsqu’un bouton de l’interrupteur à étapes est appuyé ou relâché (**n'importe quel côté** désigne n’importe lequel des boutons).
 
 - Type : bloc d’événement
 
@@ -273,7 +273,7 @@ Blocs des [pédales](/docs/Application/Dashboard/SpecialControls#pedals).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_event.svg')} alt="block_dashboard_controller_pedals_event.svg" />
 
-*lorsque les pédales [commande] [n'importe / frein / accélération] est [déplacé / appuyé / relâché]* : exécute le script lorsqu’une pédale bouge, est enfoncée ou est relâchée.
+*lorsque les pédales [commande] [n'importe quel côté / frein / accélération] est [déplacé / appuyé / relâché]* : exécute le script lorsqu’une pédale bouge, est enfoncée ou est relâchée.
 
 - Type : bloc d’événement
 

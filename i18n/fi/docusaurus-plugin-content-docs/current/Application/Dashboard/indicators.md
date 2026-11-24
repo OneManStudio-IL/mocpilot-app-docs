@@ -34,7 +34,7 @@ Käytä kojelaudan ohjainten lohkoja:
 
 - *näytä … näytössä …* Seurannalle;
 - *aseta … arvoon … näyttö* Akun varaukselle ja Nopeusmittarille;
-- *aseta … arvoon … kallistus / pyörintä -näyttö* Kallistusnäytölle.
+- *aseta … arvoon … nyökkäys / kallistus -näyttö* Kallistusnäytölle.
 
 Voit näyttää mitä tahansa, minkä voit laskea: anturin arvon, muuttujan tai tekstiä, kuten ”Vaihde 2”. Katso [Näytön ohjaimet](/docs/Application/BlockBuilder/Blocks/DashboardControllers#monitor-blocks).
 

@@ -23,20 +23,20 @@ Cu un City Hub, folosește porturile **A** și **B** și renunță la lumini.
 
 ```text
 când începe programul
-seta (lumini) la 0
+setează (lumini) la 0
 setează poziția relativă 0  (Hub 1, portul B)
 repeta mereu
-    seta (accelerație) la (joystick JOY1 axa Y)
+    setează (accelerație) la (joystick JOY1 axa Y)
     pornește motorul la (accelerație) % viteză  (Hub 1, portul A)
     mergi la poziție relativă (joystick JOY1 axa X × 0.9) la 100 % viteză  (Hub 1, portul B)
 
 când butonul BTN1 este apăsat
     dacă (lumini) = 0 atunci
         porni la 100 % luminozitate  (Hub 1, portul C)
-        seta (lumini) la 1
+        setează (lumini) la 1
     altul
         opriți  (Hub 1, portul C)
-        seta (lumini) la 0
+        setează (lumini) la 0
 ```
 
 Cum citești listările: fiecare linie este un bloc, așa cum îl afișează aplicația. Valorile dintre paranteze sunt hubul și portul pe care le alegi în bloc sau un bloc ori o variabilă pe care le pui într-un slot. Liniile indentate intră în blocul C de deasupra lor.
@@ -126,19 +126,19 @@ repeta mereu
 Legături rapide are un bloc Comutare gata făcut. În Blocuri logice, o [variabilă](/docs/Application/BlockBuilder/Blocks/Variables) ține minte dacă luminile sunt aprinse.
 
 1. În **Variabile**, atinge **Creează o variabilă** și numește-o `lumini`.
-2. Adaugă [seta … la …](/docs/Application/BlockBuilder/Blocks/Variables#block_variables_set_to) la începutul scriptului principal: `seta (lumini) la 0`.
+2. Adaugă [setează … la …](/docs/Application/BlockBuilder/Blocks/Variables#block_variables_set_to) la începutul scriptului principal: `setează (lumini) la 0`.
 3. Din **Controlere pe ecran**, trage [când butonul … este apăsat](/docs/Application/BlockBuilder/Blocks/DashboardControllers#block_dashboard_controller_button_event) într-un loc liber și alege **BTN1**.
 4. Sub el, adaugă [dacă … atunci … altul](/docs/Application/BlockBuilder/Blocks/Control#block_control_if_else) cu condiția [… = …](/docs/Application/BlockBuilder/Blocks/Operators#block_operator_equal): `(lumini) = 0`.
-5. În prima ramură, adaugă [porni la … % luminozitate](/docs/Application/BlockBuilder/Blocks/Light#block_hubs_all_light_light_turn_to) (portul **C**) și `seta (lumini) la 1`. În a doua ramură, adaugă [opriți](/docs/Application/BlockBuilder/Blocks/Light#block_hubs_all_light_light_turn_off) (portul **C**) și `seta (lumini) la 0`.
+5. În prima ramură, adaugă [porni la … % luminozitate](/docs/Application/BlockBuilder/Blocks/Light#block_hubs_all_light_light_turn_to) (portul **C**) și `setează (lumini) la 1`. În a doua ramură, adaugă [opriți](/docs/Application/BlockBuilder/Blocks/Light#block_hubs_all_light_light_turn_off) (portul **C**) și `setează (lumini) la 0`.
 
 ```text
 când butonul BTN1 este apăsat
     dacă (lumini) = 0 atunci
         porni la 100 % luminozitate  (Hub 1, portul C)
-        seta (lumini) la 1
+        setează (lumini) la 1
     altul
         opriți  (Hub 1, portul C)
-        seta (lumini) la 0
+        setează (lumini) la 0
 ```
 
 Cu un **Comutator** în locul butonului e și mai simplu: *când comutator … este comutat activat / oprit*; vezi [exemplele](/docs/Application/BlockBuilder/Examples).
@@ -152,7 +152,7 @@ Când ceva nu merge cum te aștepți, uită-te la valori. [Monitorul](/docs/Appl
 
 ```text
 repeta mereu
-    seta (accelerație) la (joystick JOY1 axa Y)
+    setează (accelerație) la (joystick JOY1 axa Y)
     pornește motorul la (accelerație) % viteză  (Hub 1, portul A)
     mergi la poziție relativă (joystick JOY1 axa X × 0.9) la 100 % viteză  (Hub 1, portul B)
 ```

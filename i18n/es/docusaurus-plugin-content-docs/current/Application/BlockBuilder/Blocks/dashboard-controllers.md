@@ -231,7 +231,7 @@ Bloques de los [monitores](/docs/Application/Dashboard/Indicators).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_tilt_set_value.svg')} alt="block_dashboard_controller_monitor_tilt_set_value.svg" />
 
-*configurar [valor] a [control] [inclinación / balanceo] monitor*: fija el cabeceo o el balanceo que muestra un **Monitor de inclinación**.
+*configurar [valor] a [control] [cabeceo / balanceo] monitor*: fija el cabeceo o el balanceo que muestra un **Monitor de inclinación**.
 
 - Tipo: bloque de comando
 

@@ -105,14 +105,14 @@ Activează sau dezactivează detectarea blocării. Când este activată, un moto
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_acceleration.svg')} alt="block_hubs_all_motors_port_set_acceleration.svg" />
 Alege cât de repede accelerează motorul.
 
-- Opțiuni: `implicit`, `rapid`, `echilibrat`, `neted`, `încet`, `foarte încet`
+- Opțiuni: `implicit`, `rapid`, `echilibrat`, `lin`, `încet`, `foarte încet`
 - Doar motoare cu encoder.
 
 ### `setează decelerarea la …` (Guru) {#block_hubs_all_motors_port_set_deceleration}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_deceleration.svg')} alt="block_hubs_all_motors_port_set_deceleration.svg" />
 Alege cât de repede încetinește motorul.
 
-- Opțiuni: `implicit`, `rapid`, `echilibrat`, `neted`, `încet`, `foarte încet`
+- Opțiuni: `implicit`, `rapid`, `echilibrat`, `lin`, `încet`, `foarte încet`
 - Doar motoare cu encoder.
 
 ## Valorile motorului {#motor-values}

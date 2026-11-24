@@ -42,9 +42,9 @@ Legt fest, wie schnell die Fahrmotoren beschleunigen und abbremsen.
 <img src={useBaseUrl('/img/blocks/block_ri_move_set_stop.svg')} alt="block_ri_move_set_stop.svg" />
 Legt fest, was die Motoren tun, wenn der Roboter anhält.
 
-- `ausrollen`: Die Motoren laufen frei und der Roboter rollt aus.
-- `bremse` (Standard): Die Motoren bremsen.
-- `position halten`: Die Motoren halten ihre Position aktiv, auch wenn Sie den Roboter schieben.
+- `Ausrollen`: Die Motoren laufen frei und der Roboter rollt aus.
+- `Bremsen` (Standard): Die Motoren bremsen.
+- `Position halten`: Die Motoren halten ihre Position aktiv, auch wenn Sie den Roboter schieben.
 
 ## Fahren {#moving}
 
@@ -52,7 +52,7 @@ Legt fest, was die Motoren tun, wenn der Roboter anhält.
 <img src={useBaseUrl('/img/blocks/block_ri_move.svg')} alt="block_ri_move.svg" />
 Bewegt den Roboter mit der Fahrgeschwindigkeit und wartet, bis er fertig ist.
 
-- Richtung: `vpřed` (vorwärts; die App zeigt hier das tschechische Wort), `rückwärts`, `im uhrzeigersinn`, `gegen den Uhrzeigersinn` (die letzten beiden drehen den Roboter auf der Stelle).
+- Richtung: `vorwärts`, `rückwärts`, `im uhrzeigersinn`, `gegen den Uhrzeigersinn` (die letzten beiden drehen den Roboter auf der Stelle).
 - Einheiten: `cm`, `Zoll`, `umdrehungen`, `grad`, `sekunden`. Standard: 10 cm.
 
 ### `fahren … um …` (mit Lenkung) (Anfänger) {#block_ri_move_steer}

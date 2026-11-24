@@ -135,11 +135,11 @@ Angir en lydeffekt for robotlydene som starter etter blokken.
 - `tonehøyde`: fra −360 til 360; positive verdier gjør lydene lysere og raskere, negative dypere og langsommere. 0 er normalt.
 - `panorering venstre/høyre`: fra −100 til 100. Huben har bare én høyttaler, så du hører det ikke; verdien beholdes for programmer som er laget i Robot Inventor-appen.
 
-### `veranderen … effekt med …` (Avansert) {#block_ri_sound_change_effect}
+### `endre … effekt med …` (Avansert) {#block_ri_sound_change_effect}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_change_effect.svg')} alt="block_ri_sound_change_effect.svg" />
 
-Endrer tonehøyde- eller panoreringseffekten med angitt mengde (10 som standard), innenfor de samme grensene. Ordet `veranderen` i blokken (nederlandsk for «endre») står slik i appen; blokken betyr «endre … effekt med …».
+Endrer tonehøyde- eller panoreringseffekten med angitt mengde (10 som standard), innenfor de samme grensene.
 
 ### `fjern lydeffekter` (Avansert) {#block_ri_sound_clear_effects}
 

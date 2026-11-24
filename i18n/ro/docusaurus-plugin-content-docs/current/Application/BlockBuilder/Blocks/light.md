@@ -122,7 +122,7 @@ Redă o dată cadrele animației, cu viteza dată (implicit 4 cadre pe secundă)
 Pornește animația și trece imediat la blocul următor.
 
 - `o dată`: o redă o singură dată.
-- `repeta` (implicit): o redă din nou și din nou, până când un alt bloc de lumină schimbă matricea.
+- `repetă` (implicit): o redă din nou și din nou, până când un alt bloc de lumină schimbă matricea.
 
 ### `setează luminozitatea pixelilor la … %` (Avansat) {#block_ri_light_set_brightness}
 

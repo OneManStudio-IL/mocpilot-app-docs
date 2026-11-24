@@ -14,7 +14,7 @@ Pe această pagină:
 - [Starea hubului](#hub-state): baterie, tensiune, temperatură, curent și mod de putere
 - [Butoanele, înclinarea și orientarea hubului](#hub-tilt-and-orientation)
 - [Senzori pe porturi](#sensors-on-ports): orice dispozitiv, senzorul de culoare Technic, senzorul de distanță Technic, senzorul de culoare și distanță BOOST, senzorii WeDo 2.0
-- [Hubul Robot Inventor](#robot-inventor-sensors): senzorul de forță, gesturi, orientare, unghiurile de derapaj, înclinare și rotire, înclinarea într-o direcție, radio între huburi
+- [Hubul Robot Inventor](#robot-inventor-sensors): senzorul de forță, gesturi, orientare, unghiurile de girație, înclinare și rotire, înclinarea într-o direcție, radio între huburi
 - [Acest dispozitiv](#this-device): telefonul, tableta sau computerul pe care rulează MOCPilot
 - [Cronometru](#timer)
 
@@ -73,8 +73,8 @@ Returnează `true` când butonul selectat al hubului este în starea selectată.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Returnează unghiul de înclinare al hubului.
 
-- Unghiuri: `înclinare`, `rotire`, `derapaj`
-- `derapaj` este disponibil doar pe Technic Hub și Robot Inventor.
+- Unghiuri: `înclinare`, `rotire`, `girație`
+- `girație` este disponibilă doar pe Technic Hub și Robot Inventor.
 
 ### `… … accelerometru (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
@@ -101,7 +101,7 @@ Returnează `true` când fața selectată a hubului este îndreptată în sus.
 
 - Opțiuni: `Față`, `Sus`, `Dreapta`, `Spate`, `Jos`, `Stânga`
 
-### `seta … orientare înclinată la …` (Avansat) {#block_hubs_sensors_set_tilt_orientation}
+### `setează … orientare înclinată la …` (Avansat) {#block_hubs_sensors_set_tilt_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_set_tilt_orientation.svg')} alt="block_hubs_sensors_set_tilt_orientation.svg" />
 Îi spune hubului cum este montat în model, astfel încât înclinarea și orientarea să fie măsurate față de această poziție.
 
@@ -290,15 +290,15 @@ Returnează ca text partea care este cu fața în sus: `front`, `up`, `rightside
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Returnează unghiul hubului în grade în jurul unei axe: `derapaj` (aici: rotirea la stânga și la dreapta, ca la o busolă), `înclinare` (partea din față în sus și în jos) sau `rotire` (înclinarea spre lateral).
+Returnează unghiul hubului în grade în jurul unei axe: `girație` (rotirea la stânga și la dreapta, ca la o busolă), `înclinare` (partea din față în sus și în jos) sau `rotire` (înclinarea spre lateral).
 
-- Utilizare tipică: condu un robot în linie dreaptă sau întoarce-l exact cu 90°: resetează derapajul, apoi virează până când derapajul ajunge la unghiul dorit.
+- Utilizare tipică: condu un robot în linie dreaptă sau întoarce-l exact cu 90°: resetează girația, apoi virează până când girația ajunge la unghiul dorit.
 
 #### `setează unghiul de derapaj la 0` (Începător) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 
-Face din direcția curentă a hubului noul zero al unghiului de derapaj. Blocul așteaptă 0,1 s, ca următoarea citire să fie deja numărată de la el.
+Face din direcția curentă a hubului noul zero al unghiului de girație. Blocul așteaptă 0,1 s, ca următoarea citire să fie deja numărată de la el.
 
 #### `viteză unghiulară …` (Guru) {#block_ri_angular_velocity}
 
@@ -346,7 +346,7 @@ Returnează nivelul bateriei dispozitivului, în procente.
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Returnează unghiul de înclinare al dispozitivului.
 
-- Unghiuri: `înclinare`, `rotire`, `derapaj`
+- Unghiuri: `înclinare`, `rotire`, `girație`
 - Utilizare tipică: condu modelul înclinând telefonul.
 
 ### `dispozitiv … accelerometru (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}

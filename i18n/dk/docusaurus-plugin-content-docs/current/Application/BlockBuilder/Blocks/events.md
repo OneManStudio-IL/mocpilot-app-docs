@@ -156,7 +156,7 @@ Disse begivenheder kommer fra Robot Inventor-appen og virker kun med [hubbene fr
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
 
-Kører én gang, hver gang hubben bliver `banket`, `dobbeltbanket` eller `rystet` (standard), eller når den `falder`.
+Kører én gang, hver gang hubben bliver `banket`, `dobbeltbanket` eller `rystet` (standard), eller når den er `i frit fald`.
 
 ### `når … vender opad` (Begynder) {#block_ri_when_orientation}
 

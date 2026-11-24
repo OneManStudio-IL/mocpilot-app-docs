@@ -103,8 +103,8 @@ Spustí se, když se změní hodnoty akcelerometru hubu.
 
 Spustí se, když se změní úhel náklonu hubu.
 
-- Volby úhlu: `jakýkoli`, `náklon`, `rotace`, `kormidlování` (libovolný, klopení, klonění, stáčení)
-- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `kormidlování` (stáčení) je k dispozici jen u Technic Hubu a Robot Inventoru.
+- Volby úhlu: `jakýkoli`, `náklon`, `rotace`, `vybočení` (libovolný, klopení, klonění, stáčení)
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `vybočení` je k dispozici jen u Technic Hubu a Robot Inventoru.
 
 ### `když … orientace byla změněna` (Začátečník) {#block_hubs_all_event_tilt_orientation_changed}
 

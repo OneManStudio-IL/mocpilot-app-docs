@@ -14,7 +14,7 @@ Auf dieser Seite:
 - [Hub-Zustand](#hub-state): Akku, Spannung, Temperatur, Strom und Leistungsmodus
 - [Hub-Tasten, Neigung und Ausrichtung](#hub-tilt-and-orientation)
 - [Sensoren an Ports](#sensors-on-ports): beliebiges Gerät, Technic-Farbsensor, Technic-Abstandssensor, BOOST-Farb- und Abstandssensor, WeDo-2.0-Sensoren
-- [Robot-Inventor-Hub](#robot-inventor-sensors): Kraftsensor, Gesten, Ausrichtung, Gieren, Nicken und Rollen, Neigung, Funk zwischen Hubs
+- [Robot-Inventor-Hub](#robot-inventor-sensors): Kraftsensor, Gesten, Ausrichtung, Gieren, Neigung und Rollen, Neigung, Funk zwischen Hubs
 - [Dieses Gerät](#this-device): das Telefon, Tablet oder der Computer, auf dem MOCPilot läuft
 - [Timer](#timer)
 
@@ -73,7 +73,7 @@ Liefert `true`, wenn die ausgewählte Hub-Taste im ausgewählten Zustand ist.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Liefert den Neigungswinkel des Hubs.
 
-- Winkel: `Neigung`, `Roll`, `Gieren`
+- Winkel: `Neigung`, `Rollen`, `Gieren`
 - `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
 
 ### `… … Beschleunigungssensor (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
@@ -238,7 +238,7 @@ Liefert `true`, wenn der vom WeDo-2.0-Bewegungssensor gemessene Abstand die Bedi
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
 Liefert Daten des WeDo-2.0-Neigungssensors: einen Neigungswinkel oder die Richtung, in die er geneigt ist.
 
-- Winkel: `Neigung`, `Roll`
+- Winkel: `Neigung`, `Rollen`
 - Richtungsausgabe: `Text` oder `Zahl`; Richtungen: `neutral`, `vorwärts`, `rückwärts`, `links`, `rechts`, `unbekannt`
 - Hubs: WeDo 2.0.
 
@@ -248,11 +248,11 @@ Diese Blöcke stammen aus der Robot-Inventor-App und funktionieren nur mit den [
 
 ### Kraftsensor {#robot-inventor-force-sensor}
 
-#### `… ist gedrückt / fest gedrückt / freigegeben ?` (Anfänger) {#block_ri_force_is_pressed}
+#### `… ist gedrückt / fest gedrückt / losgelassen ?` (Anfänger) {#block_ri_force_is_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
 
-Prüft den Kraftsensor am gewählten Port. `fest gedrückt` bedeutet mit mehr als 5 Newton gedrückt; `freigegeben` bedeutet hier losgelassen.
+Prüft den Kraftsensor am gewählten Port. `fest gedrückt` bedeutet mit mehr als 5 Newton gedrückt.
 
 #### `… Druck in % / Newton` (Anfänger) {#block_ri_force_value}
 
@@ -290,7 +290,7 @@ Liefert die Seite, die nach oben zeigt, als Text: `front`, `up`, `rightside`, `b
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Liefert den Winkel des Hubs in Grad um eine Achse: `Gieren` (Drehen nach links und rechts, wie ein Kompass), `neigung` (Nicken: Nase hoch und runter) oder `roll` (Rollen: Kippen zur Seite).
+Liefert den Winkel des Hubs in Grad um eine Achse: `Gieren` (Drehen nach links und rechts, wie ein Kompass), `Neigung` (Nase hoch und runter) oder `Rollen` (Kippen zur Seite).
 
 - Typische Verwendung: einen Roboter geradeaus fahren oder genau um 90° drehen: Setzen Sie das Gieren zurück und lenken Sie dann, bis das Gieren den Winkel erreicht.
 
@@ -306,7 +306,7 @@ Macht die aktuelle Richtung des Hubs zur neuen Null des Gierwinkels. Der Block w
 
 Liefert, wie schnell sich der Hub um die Achse `x`, `y` oder `z` dreht (das Gyroskop), in Grad pro Sekunde.
 
-#### `beschleunigung …` (Guru) {#block_ri_acceleration}
+#### `Beschleunigung …` (Guru) {#block_ri_acceleration}
 
 <img src={useBaseUrl('/img/blocks/block_ri_acceleration.svg')} alt="block_ri_acceleration.svg" />
 
@@ -346,7 +346,7 @@ Liefert den Akkustand des Geräts in Prozent.
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Liefert den Neigungswinkel des Geräts.
 
-- Winkel: `Neigung`, `Roll`, `Gieren`
+- Winkel: `Neigung`, `Rollen`, `Gieren`
 - Typische Verwendung: das Modell durch Neigen des Telefons lenken.
 
 ### `Gerät … Beschleunigungssensor (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}

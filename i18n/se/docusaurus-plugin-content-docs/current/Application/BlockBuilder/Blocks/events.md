@@ -156,7 +156,7 @@ De här händelserna kommer från Robot Inventor-appen och fungerar bara med [MI
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
 
-Körs en gång varje gång hubben blir `knackad`, `dubbelknackad`, `skakad` (standard) eller när den `faller`.
+Körs en gång varje gång hubben blir `knackad`, `dubbelknackad`, `skakad` (standard) eller när den är `i fritt fall`.
 
 ### `när … är uppåt` (Nybörjare) {#block_ri_when_orientation}
 

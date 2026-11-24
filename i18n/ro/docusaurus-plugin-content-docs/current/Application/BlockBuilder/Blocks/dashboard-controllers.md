@@ -27,7 +27,7 @@ Pe această pagină:
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_all_set_color.svg')} alt="block_dashboard_controller_all_set_color.svg" />
 
-*seta [comandă] culoare la [culoare]*: schimbă culoarea de accent a unei comenzi.
+*setează [comandă] culoare la [culoare]*: schimbă culoarea de accent a unei comenzi.
 
 - Tip: bloc de comandă
 - Funcționează cu comenzile care au o culoare de accent (nu cu volanul sau pedalele)
@@ -223,7 +223,7 @@ Blocurile [monitoarelor](/docs/Application/Dashboard/Indicators).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_set_value.svg')} alt="block_dashboard_controller_monitor_set_value.svg" />
 
-*seta [valoare] la [comandă] monitor*: setează valoarea unui monitor **Nivelul bateriei** sau **Vitezometru**.
+*setează [valoare] la [comandă] monitor*: setează valoarea unui monitor **Nivelul bateriei** sau **Vitezometru**.
 
 - Tip: bloc de comandă
 
@@ -231,7 +231,7 @@ Blocurile [monitoarelor](/docs/Application/Dashboard/Indicators).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_tilt_set_value.svg')} alt="block_dashboard_controller_monitor_tilt_set_value.svg" />
 
-*seta [valoare] la [comandă] [înclinare / rotire] monitor*: setează tangajul sau ruliul afișat pe un **Monitor înclinare**.
+*setează [valoare] la [comandă] [înclinare / rotire] monitor*: setează tangajul sau ruliul afișat pe un **Monitor înclinare**.
 
 - Tip: bloc de comandă
 

@@ -62,11 +62,11 @@ Technic Move Hub の電源モードを設定します。
 
 ボタンのブロックには、対応するハブが一覧で表示されます。傾きと向きのブロックは、BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor で使えます。
 
-### `です … … ボタン …` (初心者) {#block_hubs_all_sensors_button_pressed}
+### `が … … ボタン …` (初心者) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
 選択したハブのボタンが選択した状態のとき、`true` を返します。
 
-- 状態：`押された`、`解放された`
+- 状態：`押された`、`離された`
 - ハブ：LEGO Powered Up のハブ、WeDo 2.0、Robot Inventor。ボタンの一覧はハブによって異なります（通常は `中心`）。
 
 ### `… … 角度` (初心者) {#block_hubs_all_sensors_tilt}
@@ -173,7 +173,7 @@ Technic 距離センサーで測った距離を返します。
 
 - 単位：`mm`、`cm`、`インチ`、`%`
 
-#### Technic センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
+#### Technic センサー：`が より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_when_distance_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg')} alt="block_hubs_all_sensors_port_technic_sensor_when_distance_is.svg" />
 Technic 距離センサーで測った距離が条件を満たすとき、`true` を返します。
 
@@ -198,7 +198,7 @@ BOOST カラー＆距離センサーで測った距離を返します。
 
 - 単位：`%`、`cm`、`インチ`
 
-#### BOOST センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
+#### BOOST センサー：`が より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_distance.svg" />
 BOOST センサーで測った距離が条件を満たすとき、`true` を返します。
 
@@ -226,7 +226,7 @@ WeDo 2.0 モーションセンサーで測った距離を返します。
 - 単位：`%`、`cm`、`インチ`
 - ハブ：WeDo 2.0。
 
-#### WeDo 2.0 センサー：`です より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
+#### WeDo 2.0 センサー：`が より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_sensors_port_wedo2_sensor_when_distance}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg')} alt="block_hubs_all_sensors_port_wedo2_sensor_when_distance.svg" />
 WeDo 2.0 モーションセンサーで測った距離が条件を満たすとき、`true` を返します。
 
@@ -248,11 +248,11 @@ WeDo 2.0 傾きセンサーのデータとして、傾き角度または傾い�
 
 ### フォースセンサー {#robot-inventor-force-sensor}
 
-#### `… です 押された / 強く押された / 解放された ?` (初心者) {#block_ri_force_is_pressed}
+#### `… が 押された / 強く押された / 離された ?` (初心者) {#block_ri_force_is_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
 
-選んだポートのフォースセンサーを調べます。ブロックには `です` と表示されますが、意味は「…が押されているか？」です。`強く押された` は 5 ニュートンを超える力で押されていること、`解放された` は押されていない（離された）ことを表します。
+選んだポートのフォースセンサーを調べます。`強く押された` は 5 ニュートンを超える力で押されていることを表します。
 
 #### `… 圧力の単位 % / ニュートン` (初心者) {#block_ri_force_value}
 
@@ -274,11 +274,11 @@ WeDo 2.0 傾きセンサーのデータとして、傾き角度または傾い�
 
 最後のジェスチャーをテキストで返します：`tapped`、`doubletapped`、`shake`、`freefall`。ジェスチャーがなければ空の値を返します。
 
-#### `です … が上?` (初心者) {#block_ri_is_orientation}
+#### `が … が上?` (初心者) {#block_ri_is_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_orientation.svg')} alt="block_ri_is_orientation.svg" />
 
-ハブのこの面が上を向いている場合に `true` になります：`前面`（ライトマトリックス）、`上面`、`右側面`、`背面`、`底面`、`左側面`。先頭に `です` と表示されますが、ブロックの意味は「…が上を向いているか？」です。
+ハブのこの面が上を向いている場合に `true` になります：`前面`（ライトマトリックス）、`上面`、`右側面`、`背面`、`底面`、`左側面`。
 
 #### `向き` (達人) {#block_ri_orientation}
 

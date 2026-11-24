@@ -266,7 +266,7 @@ Returnerer, hvor hårdt kraftsensoren trykkes: i procent (0–100) eller i newto
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
 
-`true`, hvis hubben lige er blevet bevæget på denne måde: `banket`, `dobbeltbanket`, `rystet` (standard) eller `falder`. En gestus tæller én gang: Når en blok har læst den, er den væk.
+`true`, hvis hubben lige er blevet bevæget på denne måde: `banket`, `dobbeltbanket`, `rystet` (standard) eller `i frit fald`. En gestus tæller én gang: Når en blok har læst den, er den væk.
 
 #### `gestus` (Guru) {#block_ri_gesture}
 

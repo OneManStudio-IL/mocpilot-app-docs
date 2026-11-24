@@ -57,7 +57,7 @@ Hat das Profil einen Robot-Inventor- oder SPIKE-Prime-Hub, bekommt die Palette d
 | [Motoren](/docs/Application/BlockBuilder/Blocks/Motors#robot-inventor-motors) | mit Leistung starten, „wurde der Motor unterbrochen?“, dazu Motorleistung und Blockiererkennung |
 | [Licht](/docs/Application/BlockBuilder/Blocks/Light#robot-inventor-light) | Bild für einige Sekunden, Animationen mit Bildeditor, Pixelhelligkeit, dazu die Sensorlichter des Abstandssensors |
 | [Töne](/docs/Application/BlockBuilder/Blocks/Sounds#robot-inventor-sounds) | Pieptöne, die Roboterklänge des Hubs, Lautstärke, Klangeffekte, Musik: Noten, Trommeln, Pausen, Instrument, Tempo |
-| [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors) | Kraftsensor, Gesten, Ausrichtung, Gieren / Nicken / Rollen, Gieren zurücksetzen, Winkelgeschwindigkeit, Beschleunigung, Neigung, Funk zwischen Hubs |
+| [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors) | Kraftsensor, Gesten, Ausrichtung, Gieren / Neigung / Rollen, Gieren zurücksetzen, Winkelgeschwindigkeit, Beschleunigung, Neigung, Funk zwischen Hubs |
 | [Ereignisse](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events) | wenn der Hub geschüttelt oder angetippt wird, auf einer Seite liegt, geneigt ist, wenn der Kraftsensor gedrückt wird, wenn ein Funksignal ankommt |
 
 Die Steuerungs-, Operator-, Variablen-, Listen- und Meine-Blöcke-Blöcke der Robot-Inventor-App sind dieselben wie die eigenen [Grundblöcke](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) von MOCPilot. Die Blöcke, die die allgemeinen Hub-Blöcke bereits abdecken (Motorgeschwindigkeit und -position, Farb- und Abstandssensor, Lichtmatrix, Hub-Taste, Timer), finden Sie in ihren gewohnten Kategorien.

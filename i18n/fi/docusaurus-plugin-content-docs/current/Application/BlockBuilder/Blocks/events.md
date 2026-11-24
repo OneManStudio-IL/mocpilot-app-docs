@@ -103,8 +103,8 @@ Suoritetaan, kun hubin kiihtyvyysanturin arvot muuttuvat.
 
 Suoritetaan, kun hubin kallistuskulma muuttuu.
 
-- Kulmavaihtoehdot: `mikä tahansa`, `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll), `kallistus` (kierto, yaw)
-- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. Kierto (yaw) on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
+- Kulmavaihtoehdot: `mikä tahansa`, `nyökkäys`, `kallistus`, `kääntö`
+- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `Kääntö` on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
 
 ### `kun … suunta muuttui` (Aloittelija) {#block_hubs_all_event_tilt_orientation_changed}
 
@@ -156,7 +156,7 @@ Nämä tapahtumat tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDST
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
 
-Suoritetaan kerran aina, kun hubi on `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai kun se `putoaa`.
+Suoritetaan kerran aina, kun hubi on `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai `putoamassa`.
 
 ### `kun … on ylöspäin` (Aloittelija) {#block_ri_when_orientation}
 

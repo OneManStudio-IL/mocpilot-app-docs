@@ -248,11 +248,11 @@ Disse blokkene kommer fra Robot Inventor-appen og fungerer bare med [MINDSTORMS 
 
 ### Kraftsensor {#robot-inventor-force-sensor}
 
-#### `er … trykket / hardt trykket / utløst ?` (Nybegynner) {#block_ri_force_is_pressed}
+#### `er … trykket / hardt trykket / sluppet ?` (Nybegynner) {#block_ri_force_is_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
 
-Sjekker kraftsensoren på den valgte porten. `hardt trykket` betyr trykket med mer enn 5 newton. `utløst` betyr at sensoren er sluppet.
+Sjekker kraftsensoren på den valgte porten. `hardt trykket` betyr trykket med mer enn 5 newton.
 
 #### `… trykk i % / newton` (Nybegynner) {#block_ri_force_value}
 
@@ -266,7 +266,7 @@ Returnerer hvor hardt kraftsensoren trykkes: i prosent (0–100) eller i newton 
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
 
-`true` hvis huben nettopp er beveget på denne måten: `banket`, `dobbeltbanket`, `ristet` (standard) eller `faller`. En gest teller én gang: når en blokk har lest den, er den borte.
+`true` hvis huben nettopp er beveget på denne måten: `banket`, `dobbeltbanket`, `ristet` (standard) eller `i fritt fall`. En gest teller én gang: når en blokk har lest den, er den borte.
 
 #### `gest` (Guru) {#block_ri_gesture}
 

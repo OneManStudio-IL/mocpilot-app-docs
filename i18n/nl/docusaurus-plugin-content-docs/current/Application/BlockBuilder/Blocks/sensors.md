@@ -66,7 +66,7 @@ Het knopblok vermeldt met welke hubs het werkt. De kantel- en oriëntatieblokken
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
 Geeft `true` terug als de gekozen hubknop in de gekozen toestand is.
 
-- Toestanden: `ingedrukt`, `vrijgegeven`
+- Toestanden: `ingedrukt`, `losgelaten`
 - Hubs: LEGO Powered Up-hubs, WeDo 2.0 en Robot Inventor. Welke knoppen er zijn, hangt af van de hub (meestal `midden`).
 
 ### `… … hoek` (Beginner) {#block_hubs_all_sensors_tilt}
@@ -248,11 +248,11 @@ Deze blokken komen uit de Robot Inventor-app en werken alleen met de [hubs van M
 
 ### Krachtsensor {#robot-inventor-force-sensor}
 
-#### `… is ingedrukt / hard ingedrukt / vrijgegeven ?` (Beginner) {#block_ri_force_is_pressed}
+#### `… is ingedrukt / hard ingedrukt / losgelaten ?` (Beginner) {#block_ri_force_is_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
 
-Controleert de krachtsensor op de gekozen poort. `hard ingedrukt` betekent ingedrukt met meer dan 5 newton; `vrijgegeven` betekent hier losgelaten.
+Controleert de krachtsensor op de gekozen poort. `hard ingedrukt` betekent ingedrukt met meer dan 5 newton.
 
 #### `… druk in % / newton` (Beginner) {#block_ri_force_value}
 

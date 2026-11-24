@@ -73,8 +73,8 @@ Palauttaa arvon `true`, kun valittu hubin painike on valitussa tilassa.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Palauttaa hubin kallistuskulman.
 
-- Kulmat: `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll), `kallistus` (kierto, yaw)
-- Kierto (yaw) on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
+- Kulmat: `nyökkäys`, `kallistus`, `kääntö`
+- `Kääntö` on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
 
 ### `… … kiihtyvyysanturi (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
@@ -238,7 +238,7 @@ Palauttaa arvon `true`, kun WeDo 2.0 -liikeanturin mittaama etäisyys täyttää
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
 Palauttaa WeDo 2.0 -kallistusanturin tietoja: kallistuskulman tai suunnan, johon anturi on kallistettu.
 
-- Kulmat: `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll)
+- Kulmat: `nyökkäys`, `kallistus`
 - Suunnan tulos: `teksti` tai `luku`; suunnat: `neutraali`, `eteenpäin`, `taaksepäin`, `vasen`, `oikea`, `tuntematon`
 - Hubit: WeDo 2.0.
 
@@ -266,7 +266,7 @@ Palauttaa, kuinka lujaa voima-anturia painetaan: prosentteina (0–100) tai newt
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
 
-`true`, jos hubia on juuri liikutettu näin: `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai `putoaa`. Ele lasketaan kerran: kun lohko on lukenut sen, se katoaa.
+`true`, jos hubia on juuri liikutettu näin: `napautettu`, `kaksoisnapautettu`, `ravisteltu` (oletus) tai `putoamassa`. Ele lasketaan kerran: kun lohko on lukenut sen, se katoaa.
 
 #### `ele` (Guru) {#block_ri_gesture}
 
@@ -290,7 +290,7 @@ Palauttaa ylöspäin olevan puolen tekstinä: `front`, `up`, `rightside`, `back`
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Palauttaa hubin kulman asteina yhden akselin ympäri. Sovelluksessa valikon kaikki kolme vaihtoehtoa näkyvät nimellä `kallistus`; ne ovat tässä järjestyksessä kääntökulma (yaw: kääntyminen vasemmalle ja oikealle kuin kompassissa), nyökkäyskulma (pitch: keula ylös ja alas) ja kallistuskulma (roll: kallistuminen sivuille).
+Palauttaa hubin kulman asteina yhden akselin ympäri: `kääntö` (kääntyminen vasemmalle ja oikealle kuin kompassissa), `nyökkäys` (keula ylös ja alas) tai `kallistus` (kallistuminen sivuille).
 
 - Tyypillinen käyttö: robotin ajaminen suoraan tai kääntäminen tarkalleen 90°: nollaa kääntökulma ja ohjaa sitten, kunnes kääntökulma saavuttaa halutun kulman.
 
@@ -346,7 +346,7 @@ Palauttaa laitteen akun varaustason prosentteina.
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Palauttaa laitteen kallistuskulman.
 
-- Kulmat: `kallistus` (pituussuunta, pitch), `kallistus` (sivusuunta, roll), `kallistus` (kierto, yaw)
+- Kulmat: `nyökkäys`, `kallistus`, `kääntö`
 - Tyypillinen käyttö: mallin ohjaaminen puhelinta kallistamalla.
 
 ### `laite … kiihtyvyysanturi (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}

@@ -149,21 +149,21 @@ Przywraca wysokość dźwięku i balans do 0.
 
 ### Muzyka {#robot-inventor-music}
 
-Bloki muzyczne liczą czas w uderzeniach (miarach), które bloki nazywają **taktami** (`taktów`): przy tempie 60 uderzeń na minutę (domyślnie) jedno uderzenie trwa sekundę. Gdy program działa w MOCPilot, nuty brzmią jako sygnały huba o właściwej wysokości i długości, a bębny jako krótkie sygnały; instrument na razie nie zmienia brzmienia.
+Bloki muzyczne liczą czas w **miarach** (uderzeniach): przy tempie 60 uderzeń na minutę (domyślnie) jedno uderzenie trwa sekundę. Gdy program działa w MOCPilot, nuty brzmią jako sygnały huba o właściwej wysokości i długości, a bębny jako krótkie sygnały; instrument na razie nie zmienia brzmienia.
 
-#### `zagraj nutę … przez … taktów` (Zaawansowany) {#block_ri_sound_music_note}
+#### `zagraj nutę … przez … miar` (Zaawansowany) {#block_ri_sound_music_note}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_music_note.svg')} alt="block_ri_sound_music_note.svg" />
 
 Gra nutę (domyślnie 60) przez podaną liczbę uderzeń (domyślnie 0,25) i czeka.
 
-#### `zagraj na bębnie … przez … taktów` (Zaawansowany) {#block_ri_sound_music_drum}
+#### `zagraj na bębnie … przez … miar` (Zaawansowany) {#block_ri_sound_music_drum}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_music_drum.svg')} alt="block_ri_sound_music_drum.svg" />
 
 Gra na jednym z 18 bębnów (werbel, bęben basowy, hi-hat, krowi dzwonek i inne) i czeka przez podaną liczbę uderzeń.
 
-#### `pauza przez … taktów` (Zaawansowany) {#block_ri_sound_music_rest}
+#### `pauza przez … miar` (Zaawansowany) {#block_ri_sound_music_rest}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_music_rest.svg')} alt="block_ri_sound_music_rest.svg" />
 

@@ -11,7 +11,7 @@ Variabilele stochează valori pe care orice script din program le poate citi și
 
 ## Modificarea unei variabile {#changing-a-variable}
 
-### `seta … la …` (Începător) {#block_variables_set_to}
+### `setează … la …` (Începător) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
@@ -19,7 +19,7 @@ Setează variabila selectată la o valoare.
 
 - Utilizare tipică: setarea unei valori inițiale, înlocuirea valorii anterioare.
 
-### `schimba … de către …` (Avansat) {#block_variables_change_by}
+### `schimbă … de către …` (Avansat) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 

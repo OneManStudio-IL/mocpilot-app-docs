@@ -197,8 +197,8 @@ Elk speciaal bedieningselement voegt eigen blokken toe aan de categorie **Dashbo
 
 | Bedieningselement | Gebeurtenissen | Waarden |
 |---|---|---|
-| Stuurwiel | *wanneer het stuur … is bewogen / ingedrukt / vrijgegeven* | *stuurwiel …*, *is stuurwiel … ingedrukt / vrijgegeven?* |
-| Pedalen | *wanneer de pedalen … elke / rem / versnelling is bewogen / ingedrukt / vrijgegeven* | *pedalen … versnelling / rem*, *is pedaal … ingedrukt / vrijgegeven?* |
+| Stuurwiel | *wanneer het stuur … is bewogen / ingedrukt / losgelaten* | *stuurwiel …*, *is stuurwiel … ingedrukt / losgelaten?* |
+| Pedalen | *wanneer de pedalen … elke / rem / versnelling is bewogen / ingedrukt / losgelaten* | *pedalen … versnelling / rem*, *is pedaal … ingedrukt / losgelaten?* |
 | Versnellingsbakken | *wanneer versnellingsbak … schakelt / schakelt op / schakelt terug / schakelt naar neutraal / schakelt in zijn achteruit / schakelt naar parkeren* | *versnelling …*, *is versnellingsbak … in neutraal / in zijn achteruit / in een vooruitversnelling / in parkeerstand?*, *versnellingen van …* |
 | Handrem | *wanneer handrem … is getrokken / vergrendeld / ontgrendeld / losgelaten* | *handremkracht …*, *is handrem … vergrendeld / ontgrendeld / getrokken?* |
 | Richtingaanwijzers | *wanneer richtingaanwijzers … linker richtingaanwijzer / rechter richtingaanwijzer / licht gaat aan / gaat uit* | *richtingaanwijzers … linker richtingaanwijzer / rechter richtingaanwijzer / licht is aan?* |

@@ -25,7 +25,7 @@ Blocurile de control decid cum rulează un script: așteptări, bucle, ramifica�
 
 ## Bucle {#loops}
 
-### `repeta …` (Avansat) {#block_control_repeat_for}
+### `repetă …` (Avansat) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 
@@ -101,7 +101,7 @@ Returnează `true` când hubul selectat este conectat.
 - Tip: bloc boolean
 - Huburi: toate.
 
-### `seta … configurația la …` (Avansat) {#block_hubs_set_hub_config}
+### `setează … configurația la …` (Avansat) {#block_hubs_set_hub_config}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_set_hub_config.svg')} alt="block_hubs_set_hub_config.svg" />
 
@@ -121,7 +121,7 @@ Returnează configurația curentă a hubului.
 - Huburi: Technic Move Hub.
 - Returnează `NaN` când hubul nu este conectat sau nu are nicio configurație.
 
-### `seta … mod de alimentare la …` (Începător) {#block_hubs_buwizz_sensors_set_power_mode}
+### `setează … mod de alimentare la …` (Începător) {#block_hubs_buwizz_sensors_set_power_mode}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_set_power_mode.svg')} alt="block_hubs_buwizz_sensors_set_power_mode.svg" />
 
@@ -139,7 +139,7 @@ Returnează modul de putere curent al unui BuWizz 2.
 - Ieșire: `text` sau `index`
 - Huburi: BuWizz 2.
 
-### `seta … canal de control către …` (Avansat) {#block_hubs_mouldking_control_set_control_channel}
+### `setează … canal de control către …` (Avansat) {#block_hubs_mouldking_control_set_control_channel}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_mouldking_control_set_control_channel.svg')} alt="block_hubs_mouldking_control_set_control_channel.svg" />
 

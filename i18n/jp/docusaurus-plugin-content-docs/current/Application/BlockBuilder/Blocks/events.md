@@ -19,15 +19,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - 主な用途：変数の初期値を設定する、モーターを初期状態にする、「準備完了」のメッセージを表示する。
 
-### `いつ …` (上級者) {#block_event_when}
+### `とき …` (上級者) {#block_event_when}
 
 <img src={useBaseUrl('/img/blocks/block_event_when.svg')} alt="block_event_when.svg" />
 
 スロットの条件が偽から真に変わったときに、スクリプトを実行します。スクリプトの実行中、ブロックは待機します。条件がいったん偽になり、再び真になったときにだけ、もう一度動作します。
 
-- 主な用途：状態に反応する。例：`いつ タイマー > 5 かつ スイッチ 有効`
+- 主な用途：状態に反応する。例：`とき タイマー > 5 かつ スイッチ 有効`
 
-### `いつ タイマー > …` (上級者) {#block_event_when_timer_greater_than}
+### `タイマー > … の場合` (上級者) {#block_event_when_timer_greater_than}
 
 <img src={useBaseUrl('/img/blocks/block_event_when_timer_greater_than.svg')} alt="block_event_when_timer_greater_than.svg" />
 
@@ -63,16 +63,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 これらのブロックは、プロフィール内のハブが対応している場合に表示されます。Mould King のハブにはありません。
 
-### `いつ … … ボタン …` (初心者) {#block_hubs_all_event_button_pressed}
+### `とき … … ボタン …` (初心者) {#block_hubs_all_event_button_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_button_pressed.svg')} alt="block_hubs_all_event_button_pressed.svg" />
 
 ハブのボタンが押されたとき、または離されたときに実行します。
 
-- 状態の選択肢：`押された`、`解放された`、`変更された`
+- 状態の選択肢：`押された`、`離された`、`変更された`
 - ハブ：LEGO Powered Up のハブ、WeDo 2.0、Robot Inventor。ボタンの一覧はハブによって異なります。
 
-### `いつ … です 接続済み / 切断済み` (初心者) {#block_hubs_all_event_connection_changed}
+### `とき … が 接続済み / 切断済み` (初心者) {#block_hubs_all_event_connection_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_connection_changed.svg')} alt="block_hubs_all_event_connection_changed.svg" />
 
@@ -80,7 +80,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - 主な用途：接続が切れたらモデルを安全に止め、つながったら元の状態に戻す。
 
-### `いつ … % バッテリーが変更されました` (初心者) {#block_hubs_all_event_battery_changed}
+### `とき … % バッテリーが変更されました` (初心者) {#block_hubs_all_event_battery_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_battery_changed.svg')} alt="block_hubs_all_event_battery_changed.svg" />
 
@@ -89,7 +89,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - ハブ：バッテリー残量を報告するハブ。
 - 主な用途：バッテリー低下の警告、省電力モードへの切り替え。
 
-### `いつ … 加速度センサーのデータが変更されました` (達人) {#block_hubs_all_event_accelerometer_changed}
+### `とき … 加速度センサーのデータが変更されました` (達人) {#block_hubs_all_event_accelerometer_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_accelerometer_changed.svg')} alt="block_hubs_all_event_accelerometer_changed.svg" />
 
@@ -97,7 +97,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。
 
-### `いつ … 傾き … 角度が変更されました` (初心者) {#block_hubs_all_event_tilt_changed}
+### `とき … 傾き … 角度が変更されました` (初心者) {#block_hubs_all_event_tilt_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_changed.svg')} alt="block_hubs_all_event_tilt_changed.svg" />
 
@@ -106,7 +106,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - 角度の選択肢：`任意`、`ピッチ`、`ロール`、`ヨー`
 - ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。`ヨー` は Technic Hub と Robot Inventor でのみ使えます。
 
-### `いつ … 向きが変更されました` (初心者) {#block_hubs_all_event_tilt_orientation_changed}
+### `とき … 向きが変更されました` (初心者) {#block_hubs_all_event_tilt_orientation_changed}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_tilt_orientation_changed.svg')} alt="block_hubs_all_event_tilt_orientation_changed.svg" />
 
@@ -124,7 +124,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Technic カラーセンサーが選択した色を検出したときに実行します。
 
-### Technic センサー：`いつ … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_technic_sensor_distance}
+### Technic センサー：`とき … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_technic_sensor_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_technic_sensor_distance.svg')} alt="block_hubs_all_event_port_technic_sensor_distance.svg" />
 
@@ -133,7 +133,7 @@ Technic 距離センサーで測った距離が条件を満たしたときに実
 - 比較の選択肢：`より近い`、`より遠い`、`正確に`
 - 単位：`mm`、`cm`、`インチ`、`%`
 
-### BOOST センサー：`いつ … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_boost_sensor_when_distance}
+### BOOST センサー：`とき … より近い / より遠い / 正確に …` (初心者) {#block_hubs_all_event_port_boost_sensor_when_distance}
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_event_port_boost_sensor_when_distance.svg')} alt="block_hubs_all_event_port_boost_sensor_when_distance.svg" />
 
@@ -158,11 +158,11 @@ BOOST カラー＆距離センサーが選択した色を検出したときに�
 
 ハブが `タップされた`、`ダブルタップされた`、`振られた`（初期値）、`落下中` のとき、そのたびに 1 回実行します。
 
-### `いつ … が上` (初心者) {#block_ri_when_orientation}
+### `とき … が上` (初心者) {#block_ri_when_orientation}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_orientation.svg')} alt="block_ri_when_orientation.svg" />
 
-ハブの選んだ面が上を向いたときに実行します：`前面`（ライトマトリックス、初期値）、`上面`、`右側面`、`背面`、`底面`、`左側面`。ブロックの先頭には `いつ` と表示されますが、意味は「…が上を向いたとき」です。
+ハブの選んだ面が上を向いたときに実行します：`前面`（ライトマトリックス、初期値）、`上面`、`右側面`、`背面`、`底面`、`左側面`。
 
 ### `ハブが傾いたとき …` (上級者) {#block_ri_when_tilted}
 
@@ -170,11 +170,11 @@ BOOST カラー＆距離センサーが選択した色を検出したときに�
 
 ハブが `上`、`下`、`左`、`右`、または `任意` の方向（初期値）に約 12° 以上傾いたときに実行します。
 
-### `いつ … 押された / 強く押された / 解放された` (初心者) {#block_ri_when_force}
+### `とき … 押された / 強く押された / 離された` (初心者) {#block_ri_when_force}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
 
-選んだポートのフォースセンサーが押されたとき、強く（5 ニュートンを超える力で）押されたとき、または離されたときに実行します。ここでも先頭の `いつ` は「…したとき」という意味です。
+選んだポートのフォースセンサーが押されたとき、強く（5 ニュートンを超える力で）押されたとき、または離されたときに実行します。
 
 ### `ハブが信号を受信したとき …` (達人) {#block_ri_when_radio}
 

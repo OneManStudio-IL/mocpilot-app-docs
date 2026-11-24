@@ -69,7 +69,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Спрацьовує, коли кнопку на хабі натиснуто або відпущено.
 
-- Варіанти стану: `натиснута`, `відпущена`, `змінено`
+- Варіанти стану: `натиснута`, `відпущено`, `змінено`
 - Хаби: хаби LEGO Powered Up, WeDo 2.0 і Robot Inventor. Перелік кнопок залежить від хаба.
 
 ### `коли … є підключено / відключено` (Початківець) {#block_hubs_all_event_connection_changed}
@@ -103,8 +103,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Спрацьовує, коли змінюється кут нахилу хаба.
 
-- Варіанти кута: `будь-який`, `тангаж`, `крен`, `рискування`
-- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `рискування` доступне лише на Technic Hub і Robot Inventor.
+- Варіанти кута: `будь-який`, `тангаж`, `крен`, `рискання`
+- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `рискання` доступне лише на Technic Hub і Robot Inventor.
 
 ### `коли … орієнтацію змінено` (Початківець) {#block_hubs_all_event_tilt_orientation_changed}
 
@@ -170,11 +170,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Спрацьовує, коли хаб нахиляють `вгору`, `вниз`, `вліво`, `вправо` або в будь-який бік (`будь-який`, типово) приблизно на 12° або більше.
 
-### `коли … натиснута / сильно натиснуто / відпущен` (Початківець) {#block_ri_when_force}
+### `коли … натиснута / сильно натиснуто / відпущено` (Початківець) {#block_ri_when_force}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
 
-Спрацьовує, коли датчик сили на вибраному порту натиснуто, сильно натиснуто (понад 5 ньютонів) або відпущено (у застосунку `відпущен`).
+Спрацьовує, коли датчик сили на вибраному порту натиснуто, сильно натиснуто (понад 5 ньютонів) або відпущено.
 
 ### `коли хаб отримує сигнал …` (Гуру) {#block_ri_when_radio}
 

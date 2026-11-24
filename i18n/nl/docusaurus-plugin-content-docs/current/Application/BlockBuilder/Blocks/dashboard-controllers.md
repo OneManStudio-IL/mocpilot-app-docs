@@ -60,7 +60,7 @@ Op deze pagina:
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_event.svg')} alt="block_dashboard_controller_button_event.svg" />
 
-*wanneer de knop [bediening] [ingedrukt / vrijgegeven]*: voert het script uit als de knop wordt ingedrukt of losgelaten.
+*wanneer de knop [bediening] [ingedrukt / losgelaten]*: voert het script uit als de knop wordt ingedrukt of losgelaten.
 
 - Type: gebeurtenisblok
 
@@ -68,7 +68,7 @@ Op deze pagina:
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_value_boolean.svg')} alt="block_dashboard_controller_button_value_boolean.svg" />
 
-*knop [bediening] [ingedrukt / vrijgegeven]*: of de knop op dit moment is ingedrukt of losgelaten.
+*knop [bediening] [ingedrukt / losgelaten]*: of de knop op dit moment is ingedrukt of losgelaten.
 
 - Type: waardeblok, `true` / `false`
 
@@ -98,7 +98,7 @@ Deze blokken werken met de stappenschakelaar en de verticale stappenschakelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_event.svg')} alt="block_dashboard_controller_stepper_event.svg" />
 
-*wanneer de stappen schakelaar [bediening] [elke / resetten / min / plus] is [ingedrukt / vrijgegeven]*: voert het script uit als een knop van de stappenschakelaar wordt ingedrukt of losgelaten (**elke** betekent een willekeurige knop).
+*wanneer de stappen schakelaar [bediening] [elke / resetten / min / plus] is [ingedrukt / losgelaten]*: voert het script uit als een knop van de stappenschakelaar wordt ingedrukt of losgelaten (**elke** betekent een willekeurige knop).
 
 - Type: gebeurtenisblok
 
@@ -118,7 +118,7 @@ Deze blokken werken met de stappenschakelaar en de verticale stappenschakelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_event.svg')} alt="block_dashboard_controller_joystick_event.svg" />
 
-*wanneer de joystick [bediening] is [omhoog / omlaag / links / rechts / bewogen / vrijgegeven]*: voert het script uit als de stick in een richting wordt geduwd, überhaupt wordt bewogen of wordt losgelaten.
+*wanneer de joystick [bediening] is [omhoog / omlaag / links / rechts / bewogen / losgelaten]*: voert het script uit als de stick in een richting wordt geduwd, überhaupt wordt bewogen of wordt losgelaten.
 
 - Type: gebeurtenisblok
 
@@ -134,7 +134,7 @@ Deze blokken werken met de stappenschakelaar en de verticale stappenschakelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_boolean.svg')} alt="block_dashboard_controller_joystick_value_boolean.svg" />
 
-*is joystick [bediening] [ingedrukt / vrijgegeven]*: of er een vinger op de joystick is.
+*is joystick [bediening] [ingedrukt / losgelaten]*: of er een vinger op de joystick is.
 
 - Type: waardeblok, `true` / `false`
 
@@ -144,7 +144,7 @@ Deze blokken werken met de stappenschakelaar en de verticale stappenschakelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_event.svg')} alt="block_dashboard_controller_dpad_event.svg" />
 
-*wanneer de D-pad [bediening] [omhoog / omlaag / links / rechts] knop [ingedrukt / vrijgegeven]*: voert het script uit als een knop van het richtingspad wordt ingedrukt of losgelaten.
+*wanneer de D-pad [bediening] [omhoog / omlaag / links / rechts] knop [ingedrukt / losgelaten]*: voert het script uit als een knop van het richtingspad wordt ingedrukt of losgelaten.
 
 - Type: gebeurtenisblok
 
@@ -152,7 +152,7 @@ Deze blokken werken met de stappenschakelaar en de verticale stappenschakelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_value_boolean.svg')} alt="block_dashboard_controller_dpad_value_boolean.svg" />
 
-*richtingspad [bediening] [omhoog / omlaag / links / rechts] knop [ingedrukt / vrijgegeven]*: of een knop van het richtingspad op dit moment is ingedrukt of losgelaten.
+*richtingspad [bediening] [omhoog / omlaag / links / rechts] knop [ingedrukt / losgelaten]*: of een knop van het richtingspad op dit moment is ingedrukt of losgelaten.
 
 - Type: waardeblok, `true` / `false`
 
@@ -166,7 +166,7 @@ Deze blokken werken met de schuifregelaar en de verticale schuifregelaar.
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_event.svg')} alt="block_dashboard_controller_slider_event.svg" />
 
-*wanneer de schuifregelaar [bediening] is [laag / hoog / bewogen / vrijgegeven]*: voert het script uit als de schuif het onderste of bovenste uiteinde bereikt, beweegt of wordt losgelaten.
+*wanneer de schuifregelaar [bediening] is [laag / hoog / bewogen / losgelaten]*: voert het script uit als de schuif het onderste of bovenste uiteinde bereikt, beweegt of wordt losgelaten.
 
 - Type: gebeurtenisblok
 
@@ -245,7 +245,7 @@ Blokken van het [stuur](/docs/Application/Dashboard/SpecialControls#steering-whe
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_event.svg')} alt="block_dashboard_controller_steering_wheel_event.svg" />
 
-*wanneer het stuur [bediening] is [bewogen / ingedrukt / vrijgegeven]*: voert het script uit als het stuur draait, of als je het aanraakt of loslaat.
+*wanneer het stuur [bediening] is [bewogen / ingedrukt / losgelaten]*: voert het script uit als het stuur draait, of als je het aanraakt of loslaat.
 
 - Type: gebeurtenisblok
 
@@ -261,7 +261,7 @@ Blokken van het [stuur](/docs/Application/Dashboard/SpecialControls#steering-whe
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steeringwheel_value_boolean.svg')} alt="block_dashboard_controller_steeringwheel_value_boolean.svg" />
 
-*stuurwiel [bediening] [ingedrukt / vrijgegeven]*: of er een vinger op het stuur is.
+*stuurwiel [bediening] [ingedrukt / losgelaten]*: of er een vinger op het stuur is.
 
 - Type: waardeblok, `true` / `false`
 
@@ -273,7 +273,7 @@ Blokken van de [pedalen](/docs/Application/Dashboard/SpecialControls#pedals).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_event.svg')} alt="block_dashboard_controller_pedals_event.svg" />
 
-*wanneer de pedalen [bediening] [elke / rem / versnelling] is [bewogen / ingedrukt / vrijgegeven]*: voert het script uit als een pedaal beweegt, wordt ingetrapt of wordt losgelaten.
+*wanneer de pedalen [bediening] [elke / rem / versnelling] is [bewogen / ingedrukt / losgelaten]*: voert het script uit als een pedaal beweegt, wordt ingetrapt of wordt losgelaten.
 
 - Type: gebeurtenisblok
 
@@ -289,7 +289,7 @@ Blokken van de [pedalen](/docs/Application/Dashboard/SpecialControls#pedals).
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_boolean.svg')} alt="block_dashboard_controller_pedals_value_boolean.svg" />
 
-*pedaal [bediening] [versnelling / rem] [ingedrukt / vrijgegeven]*: of een pedaal is ingetrapt.
+*pedaal [bediening] [versnelling / rem] [ingedrukt / losgelaten]*: of een pedaal is ingetrapt.
 
 - Type: waardeblok, `true` / `false`
 

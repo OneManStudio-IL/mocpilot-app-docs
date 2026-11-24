@@ -11,7 +11,7 @@ Muuttujat tallentavat arvoja, joita ohjelman jokainen skripti voi lukea ja muutt
 
 ## Muuttujan muuttaminen {#changing-a-variable}
 
-### `asettaa … arvoon …` (Aloittelija) {#block_variables_set_to}
+### `aseta … arvoon …` (Aloittelija) {#block_variables_set_to}
 
 <img src={useBaseUrl('/img/blocks/block_variables_set_to.svg')} alt="block_variables_set_to.svg" />
 
@@ -19,7 +19,7 @@ Asettaa valitulle muuttujalle arvon.
 
 - Tyypillinen käyttö: alkuarvon asettaminen, edellisen arvon korvaaminen.
 
-### `muuttaa … arvolla …` (Edistynyt) {#block_variables_change_by}
+### `muuta … arvolla …` (Edistynyt) {#block_variables_change_by}
 
 <img src={useBaseUrl('/img/blocks/block_variables_change_by.svg')} alt="block_variables_change_by.svg" />
 

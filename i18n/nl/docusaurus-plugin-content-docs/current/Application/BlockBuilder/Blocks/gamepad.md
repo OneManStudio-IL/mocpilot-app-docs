@@ -22,7 +22,7 @@ Wordt uitgevoerd als de gekozen knop wordt ingedrukt of losgelaten.
 
 - Knoppen (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
 - Knoppen (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Toestanden: `ingedrukt`, `vrijgegeven`
+- Toestanden: `ingedrukt`, `losgelaten`
 
 ### `wanneer D-Pad … knop is …` (Beginner) {#block_gamepad_event_when_dpad_is}
 
@@ -31,7 +31,7 @@ Wordt uitgevoerd als de gekozen knop wordt ingedrukt of losgelaten.
 Wordt uitgevoerd als een knop van het richtingspad wordt ingedrukt of losgelaten.
 
 - Richtingen: `omhoog`, `omlaag`, `links`, `rechts`
-- Toestanden: `ingedrukt`, `vrijgegeven`
+- Toestanden: `ingedrukt`, `losgelaten`
 
 ### `wanneer … stick …` (Beginner) {#block_gamepad_event_when_thumbstick_is}
 
@@ -40,7 +40,7 @@ Wordt uitgevoerd als een knop van het richtingspad wordt ingedrukt of losgelaten
 Wordt uitgevoerd als een stick in een richting wordt geduwd, bewogen of losgelaten.
 
 - Stick: `links`, `rechts`
-- Toestand: `omhoog`, `omlaag`, `links`, `rechts`, `bewogen`, `vrijgegeven`
+- Toestand: `omhoog`, `omlaag`, `links`, `rechts`, `bewogen`, `losgelaten`
 - Gebruikelijke toepassing: reageren op stickbewegingen, en het model stoppen of centreren als de stick wordt losgelaten.
 
 ## Waarden {#values}
@@ -56,7 +56,7 @@ Geeft `true` terug als de gekozen knop in de gekozen toestand is.
 
 - Knoppen (Xbox-indeling): `A`, `B`, `X`, `Y`, `LB`, `RB`, `LT`, `RT`, `LSB`, `RSB`
 - Knoppen (Sony-indeling): `kruis`, `cirkel`, `vierkant`, `driehoek`, `L1`, `R1`, `L2`, `R2`, `L3`, `R3`
-- Toestanden: `ingedrukt`, `vrijgegeven`
+- Toestanden: `ingedrukt`, `losgelaten`
 
 ### `D-Pad … knop …` (Beginner) {#block_gamepad_dpad_button_value_boolean}
 
@@ -65,7 +65,7 @@ Geeft `true` terug als de gekozen knop in de gekozen toestand is.
 Geeft `true` terug als de gekozen knop van het richtingspad in de gekozen toestand is.
 
 - Richtingen: `omhoog`, `omlaag`, `links`, `rechts`
-- Toestanden: `ingedrukt`, `vrijgegeven`
+- Toestanden: `ingedrukt`, `losgelaten`
 
 ### `stick … …` (Beginner) {#block_gamepad_thumbstick_value_float}
 

@@ -34,7 +34,7 @@ Detalii în [Lucrul în editor](/docs/Application/BlockBuilder/Editor).
 - Un script începe cu un bloc de **eveniment** (un bloc „pălărie”): *când începe programul*, *când butonul … apăsat*, *când primesc …* și așa mai departe.
 - Blocurile atașate sub el rulează de sus în jos.
 - Mai multe scripturi rulează **în același timp**. Folosește mesaje (*transmite*) ca să le coordonezi.
-- **Buclele** (*repeta mereu*, *repeta*, *repeta cât timp*) mențin un script în funcțiune; **condițiile** (*dacă*, *dacă … altul*, *așteptați până la*) iau decizii.
+- **Buclele** (*repeta mereu*, *repetă*, *repeta cât timp*) mențin un script în funcțiune; **condițiile** (*dacă*, *dacă … altul*, *așteptați până la*) iau decizii.
 - Blocurile **raportor** (rotunjite) returnează valori și se potrivesc în intrările altor blocuri; blocurile **booleene** (ascuțite) returnează adevărat sau fals pentru condiții.
 - **Variabilele** și **listele** păstrează valori între blocuri și scripturi.
 

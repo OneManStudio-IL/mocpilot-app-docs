@@ -34,7 +34,7 @@ Lisätietoja: [Työskentely editorissa](/docs/Application/BlockBuilder/Editor).
 - Skripti alkaa **tapahtumalohkolla** (hattulohko): *kun ohjelma käynnistyy*, *kun nappia painetaan …*, *kun vastaanotan …* ja niin edelleen.
 - Sen alle liitetyt lohkot suoritetaan ylhäältä alas.
 - Useat skriptit toimivat **samanaikaisesti**. Koordinoi niitä viesteillä (*siirtää*).
-- **Silmukat** (*toistaa aina*, *toistaa*, *toistaa, kunnes*) pitävät skriptin käynnissä; **ehdot** (*jos*, *jos … muu*, *odota kunnes*) tekevät päätöksiä.
+- **Silmukat** (*toistaa aina*, *toista*, *toistaa, kunnes*) pitävät skriptin käynnissä; **ehdot** (*jos*, *jos … muu*, *odota kunnes*) tekevät päätöksiä.
 - **Raportointilohkot** (pyöristetyt) palauttavat arvoja ja sopivat muiden lohkojen syötteisiin; **totuusarvolohkot** (kärkevät) palauttavat ehtoja varten tosi tai epätosi.
 - **Muuttujat** ja **listat** säilyttävät arvoja lohkojen ja skriptien välillä.
 

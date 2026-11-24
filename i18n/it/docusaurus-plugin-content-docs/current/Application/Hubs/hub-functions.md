@@ -16,7 +16,7 @@ Ogni hub dotato di porte può comandare motori e luci. Alcuni hub sanno fare di 
 | Servo dello sterzo con calibrazione | [Servo](/docs/Application/Links/Blocks/OutputBlocks#op-servo) (Manuale / Auto) | vai alla posizione relativa, calibrare cremagliera |
 | Rotazione di un angolo | [Ruota di gradi](/docs/Application/Links/Blocks/OutputBlocks#op-degrees) | eseguire per |
 | Posizione assoluta (motori angolari) | [Vai alla posizione](/docs/Application/Links/Blocks/OutputBlocks#op-goto) | vai … alla posizione |
-| Comportamento all'arresto: inerzia, freno, mantenimento | Motore → **All'arresto** | imposta motore a … alla fermata |
+| Comportamento all'arresto: inerzia, freno, mantenimento | Motore → **All'arresto** | imposta motore a … all'arresto |
 | Preimpostazioni di accelerazione dell'hub | Motore → **Accelerazione dell'hub** | imposta accelerazione a, imposta decelerazione a |
 | Velocità, posizione, potenza, corrente come ingresso | [Ingresso Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) | velocità, posizione, posizione relativa, potenza |
 

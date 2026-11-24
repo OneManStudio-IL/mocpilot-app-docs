@@ -69,7 +69,7 @@ Deze blokken verschijnen als een hub in het profiel ze ondersteunt. Voor Mould K
 
 Wordt uitgevoerd als een knop op de hub wordt ingedrukt of losgelaten.
 
-- Toestanden: `ingedrukt`, `vrijgegeven`, `gewijzigd`
+- Toestanden: `ingedrukt`, `losgelaten`, `gewijzigd`
 - Hubs: LEGO Powered Up-hubs, WeDo 2.0 en Robot Inventor. Welke knoppen er zijn, hangt af van de hub.
 
 ### `wanneer … verbonden / verbinding verbroken` (Beginner) {#block_hubs_all_event_connection_changed}
@@ -170,11 +170,11 @@ Wordt uitgevoerd als de gekozen kant van de hub naar boven wijst: `voorkant` (de
 
 Wordt uitgevoerd als de hub ongeveer 12° of meer `omhoog`, `omlaag`, `naar links`, `naar rechts` of in een willekeurige richting (`elke`, standaard) wordt gekanteld.
 
-### `wanneer … ingedrukt / hard ingedrukt / vrijgegeven` (Beginner) {#block_ri_when_force}
+### `wanneer … ingedrukt / hard ingedrukt / losgelaten` (Beginner) {#block_ri_when_force}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
 
-Wordt uitgevoerd als de krachtsensor op de gekozen poort wordt ingedrukt, hard wordt ingedrukt (met meer dan 5 newton) of wordt losgelaten (in de app `vrijgegeven`).
+Wordt uitgevoerd als de krachtsensor op de gekozen poort wordt ingedrukt, hard wordt ingedrukt (met meer dan 5 newton) of wordt losgelaten.
 
 ### `wanneer hub signaal ontvangt …` (Guru) {#block_ri_when_radio}
 

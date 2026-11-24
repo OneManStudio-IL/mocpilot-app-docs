@@ -266,7 +266,7 @@ Returnerar hur hårt kraftsensorn trycks in: i procent (0–100) eller i newton 
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
 
-`true` om hubben just har rörts på det här sättet: `knackad`, `dubbelknackad`, `skakad` (standard) eller `faller`. En gest räknas en gång: när ett block har läst den är den borta.
+`true` om hubben just har rörts på det här sättet: `knackad`, `dubbelknackad`, `skakad` (standard) eller `i fritt fall`. En gest räknas en gång: när ett block har läst den är den borta.
 
 #### `gest` (Guru) {#block_ri_gesture}
 

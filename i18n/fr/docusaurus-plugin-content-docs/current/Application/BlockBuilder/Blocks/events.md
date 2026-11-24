@@ -103,7 +103,7 @@ S’exécute lorsque les valeurs de l’accéléromètre du hub changent.
 
 S’exécute lorsque l’angle d’inclinaison du hub change.
 
-- Angles possibles : `n'importe`, `tangage`, `roulis`, `lacet`
+- Angles possibles : `n'importe quel côté`, `tangage`, `roulis`, `lacet`
 - Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `lacet` n’est disponible que sur le Technic Hub et le Robot Inventor.
 
 ### `quand … l’orientation a changé` (Débutant) {#block_hubs_all_event_tilt_orientation_changed}
@@ -168,7 +168,7 @@ S’exécute lorsque la face choisie du hub se tourne vers le haut : `avant` (la
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_tilted.svg')} alt="block_ri_when_tilted.svg" />
 
-S’exécute lorsque le hub est incliné `vers le haut`, `vers le bas`, `vers la gauche`, `vers la droite` ou dans n’importe quelle direction (l’option `n'importe`, par défaut), d’environ 12° ou plus.
+S’exécute lorsque le hub est incliné `vers le haut`, `vers le bas`, `vers la gauche`, `vers la droite` ou `n'importe quel côté` (par défaut), d’environ 12° ou plus.
 
 ### `quand … pressé / appuyé fort / relâché` (Débutant) {#block_ri_when_force}
 

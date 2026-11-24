@@ -126,7 +126,7 @@ Face hubul mai tare sau mai încet cu valoarea dată (implicit −10); volumul r
 
 Returnează volumul hubului, de la 0 la 100.
 
-### `seta … efectul la …` (Avansat) {#block_ri_sound_set_effect}
+### `setează … efectul la …` (Avansat) {#block_ri_sound_set_effect}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_set_effect.svg')} alt="block_ri_sound_set_effect.svg" />
 
@@ -135,7 +135,7 @@ Setează un efect sonor pentru sunetele de robot care pornesc după el.
 - `înălțime`: de la −360 la 360; valorile pozitive fac sunetele mai înalte și mai rapide, cele negative mai joase și mai lente. 0 este normal.
 - `balans stânga/dreapta`: de la −100 la 100. Hubul are un singur difuzor, așa că nu vei auzi diferența; valoarea este păstrată pentru programele făcute în aplicația Robot Inventor.
 
-### `schimba … efectul cu …` (Avansat) {#block_ri_sound_change_effect}
+### `schimbă … efectul cu …` (Avansat) {#block_ri_sound_change_effect}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_change_effect.svg')} alt="block_ri_sound_change_effect.svg" />
 

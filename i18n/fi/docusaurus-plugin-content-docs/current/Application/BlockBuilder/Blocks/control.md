@@ -25,7 +25,7 @@ Keskeyttää skriptin, kunnes ehto toteutuu.
 
 ## Silmukat {#loops}
 
-### `toistaa …` (Edistynyt) {#block_control_repeat_for}
+### `toista …` (Edistynyt) {#block_control_repeat_for}
 
 <img src={useBaseUrl('/img/blocks/block_control_repeat_for.svg')} alt="block_control_repeat_for.svg" />
 

@@ -57,7 +57,7 @@ Gdy profil ma hub Robot Inventor lub SPIKE Prime, paleta Bloków logicznych dost
 | [Silniki](/docs/Application/BlockBuilder/Blocks/Motors#robot-inventor-motors) | uruchamianie z mocą, „czy silnik został przerwany?”, a także moc silnika i wykrywanie zablokowania |
 | [Światło](/docs/Application/BlockBuilder/Blocks/Light#robot-inventor-light) | obraz na kilka sekund, animacje z edytorem klatek, jasność pikseli, a także światła czujnika odległości |
 | [Dźwięki](/docs/Application/BlockBuilder/Blocks/Sounds#robot-inventor-sounds) | sygnały, dźwięki robota zapisane w hubie, głośność, efekty dźwiękowe, muzyka: nuty, bębny, pauzy, instrument, tempo |
-| [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors) | czujnik siły, gesty, orientacja, kąty ryskania / pochylenia / obrotu, zerowanie ryskania, prędkość kątowa, przyspieszenie, przechylenie, radio między hubami |
+| [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-sensors) | czujnik siły, gesty, orientacja, kąty odchylenia / pochylenia / przechylenia, zerowanie odchylenia, prędkość kątowa, przyspieszenie, przechylenie w danym kierunku, radio między hubami |
 | [Wydarzenia](/docs/Application/BlockBuilder/Blocks/Events#robot-inventor-events) | gdy hub zostanie potrząśnięty lub stuknięty, leży na boku, jest przechylony, gdy czujnik siły zostanie naciśnięty, gdy przyjdzie sygnał radiowy |
 
 Bloki kontroli, operatorów, zmiennych, list i Moich bloków z aplikacji Robot Inventor są takie same jak [podstawowe bloki](/docs/Application/BlockBuilder/Blocks/BlocksIntroducing) MOCPilot. Bloki, które obejmują już ogólne bloki hubów (prędkość i pozycja silnika, czujniki koloru i odległości, matryca świetlna, przycisk huba, stoper), są w swoich zwykłych kategoriach.

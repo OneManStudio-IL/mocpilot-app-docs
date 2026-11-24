@@ -126,7 +126,7 @@ Muuttaa hubin ääntä kovemmaksi tai hiljaisemmaksi annetun määrän (oletukse
 
 Palauttaa hubin äänenvoimakkuuden väliltä 0–100.
 
-### `asettaa … tehoste arvoon …` (Edistynyt) {#block_ri_sound_set_effect}
+### `aseta … tehoste arvoon …` (Edistynyt) {#block_ri_sound_set_effect}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_set_effect.svg')} alt="block_ri_sound_set_effect.svg" />
 
@@ -135,7 +135,7 @@ Asettaa äänitehosteen robottiäänille, jotka alkavat sen jälkeen.
 - `sävelkorkeus`: −360–360; positiiviset arvot tekevät äänistä korkeampia ja nopeampia, negatiiviset matalampia ja hitaampia. 0 on normaali.
 - `panorointi vasen/oikea`: −100–100. Hubissa on vain yksi kaiutin, joten et kuule eroa; arvo säilytetään Robot Inventor -sovelluksessa tehtyjä ohjelmia varten.
 
-### `muuttaa … tehostetta …` (Edistynyt) {#block_ri_sound_change_effect}
+### `muuta … tehostetta …` (Edistynyt) {#block_ri_sound_change_effect}
 
 <img src={useBaseUrl('/img/blocks/block_ri_sound_change_effect.svg')} alt="block_ri_sound_change_effect.svg" />
 

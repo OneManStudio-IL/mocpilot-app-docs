@@ -34,7 +34,7 @@ Usa los bloques de controladores en pantalla:
 
 - *mostrar … en … monitor* para el Monitor;
 - *configurar … a … monitor* para el Nivel de batería y el Velocímetro;
-- *configurar … a … monitor de inclinación / balanceo* para el Monitor de inclinación.
+- *configurar … a … cabeceo / balanceo monitor* para el Monitor de inclinación.
 
 Puedes mostrar cualquier cosa que puedas calcular: el valor de un sensor, una variable, un texto como «Marcha 2». Consulta [Controladores en pantalla](/docs/Application/BlockBuilder/Blocks/DashboardControllers#monitor-blocks).
 

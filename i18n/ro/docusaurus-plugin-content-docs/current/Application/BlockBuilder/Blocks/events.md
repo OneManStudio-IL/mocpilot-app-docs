@@ -103,8 +103,8 @@ Rulează când valorile accelerometrului hubului se schimbă.
 
 Rulează când unghiul de înclinare al hubului se schimbă.
 
-- Opțiuni de unghi: `orice`, `înclinare`, `rotire`, `derapaj`
-- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `derapaj` este disponibil doar pe Technic Hub și Robot Inventor.
+- Opțiuni de unghi: `orice`, `înclinare`, `rotire`, `girație`
+- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `girație` este disponibilă doar pe Technic Hub și Robot Inventor.
 
 ### `când … orientarea a fost modificată` (Începător) {#block_hubs_all_event_tilt_orientation_changed}
 

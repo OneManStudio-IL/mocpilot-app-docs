@@ -316,7 +316,7 @@ Renvoie l’accélération du hub le long de l’axe `x`, `y` ou `z`, telle que 
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_tilted.svg')} alt="block_ri_is_tilted.svg" />
 
-`true` si le hub est incliné dans cette direction : `vers le haut`, `vers le bas`, `vers la gauche`, `vers la droite` ou dans n’importe laquelle (l’option `n'importe`, par défaut). Le hub est considéré comme incliné à partir d’environ 12° par rapport à l’horizontale ; s’il est incliné dans deux directions, c’est la plus forte inclinaison qui l’emporte.
+`true` si le hub est incliné dans cette direction : `vers le haut`, `vers le bas`, `vers la gauche`, `vers la droite` ou `n'importe quel côté` (par défaut). Le hub est considéré comme incliné à partir d’environ 12° par rapport à l’horizontale ; s’il est incliné dans deux directions, c’est la plus forte inclinaison qui l’emporte.
 
 ### Radio entre hubs {#robot-inventor-radio}
 

@@ -64,7 +64,7 @@ Co motory udělají, když robot zastaví.
 
 Pohne robotem rychlostí pohybu a čeká, dokud pohyb neskončí.
 
-- Směr: `vpřed`, `zpětný` (tedy vzad), `ve směru hodinových ručiček`, `proti směru hodinových ručiček` (poslední dva otáčejí robotem na místě).
+- Směr: `vpřed`, `vzad`, `ve směru hodinových ručiček`, `proti směru hodinových ručiček` (poslední dva otáčejí robotem na místě).
 - Jednotky: `cm`, `palce`, `otáčky`, `stupně`, `sekundy`. Výchozí: 10 cm.
 
 ### `jet … o …` (se zatáčením) (Začátečník) {#block_ri_move_steer}

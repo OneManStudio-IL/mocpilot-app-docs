@@ -36,7 +36,7 @@ Setează viteza, de la −100 la 100 %, a blocurilor de mișcare care nu au vite
 <img src={useBaseUrl('/img/blocks/block_ri_move_set_acceleration.svg')} alt="block_ri_move_set_acceleration.svg" />
 Cât de repede accelerează și încetinesc motoarele de mișcare.
 
-- Opțiuni: `implicit`, `rapid` (0,1 s), `echilibrat` (0,35 s), `neted` (adică lin, 0,8 s), `încet` (1,2 s), `foarte încet` (2 s): timpul de la oprire până la viteza maximă.
+- Opțiuni: `implicit`, `rapid` (0,1 s), `echilibrat` (0,35 s), `lin` (0,8 s), `încet` (1,2 s), `foarte încet` (2 s): timpul de la oprire până la viteza maximă.
 
 ### `setează motoarele de mișcare la … la oprire` (Avansat) {#block_ri_move_set_stop}
 <img src={useBaseUrl('/img/blocks/block_ri_move_set_stop.svg')} alt="block_ri_move_set_stop.svg" />

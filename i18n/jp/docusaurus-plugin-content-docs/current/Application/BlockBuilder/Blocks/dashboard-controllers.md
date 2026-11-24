@@ -60,7 +60,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_event.svg')} alt="block_dashboard_controller_button_event.svg" />
 
-*ボタンを押したとき [コントロール] です [押された / 解放された]*：ボタンが押されたとき、または離されたときにスクリプトを実行します。
+*ボタンを押したとき [コントロール] が [押された / 離された]*：ボタンが押されたとき、または離されたときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -68,7 +68,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_button_value_boolean.svg')} alt="block_dashboard_controller_button_value_boolean.svg" />
 
-*ボタン [コントロール] [押された / 解放された]*：ボタンが今押されているか、離されているか。
+*ボタン [コントロール] [押された / 離された]*：ボタンが今押されているか、離されているか。
 
 - 種類：値ブロック、`true` / `false`
 
@@ -98,7 +98,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_stepper_event.svg')} alt="block_dashboard_controller_stepper_event.svg" />
 
-*ステップスイッチが [コントロール] [任意 / リセット / マイナス / プラス] です [押された / 解放された]*：ステップスイッチのボタンが押されたとき、または離されたときにスクリプトを実行します（**任意**はどのボタンでもよいという意味です）。
+*ステップスイッチが [コントロール] [任意 / リセット / マイナス / プラス] が [押された / 離された]*：ステップスイッチのボタンが押されたとき、または離されたときにスクリプトを実行します（**任意**はどのボタンでもよいという意味です）。
 
 - 種類：イベントブロック
 
@@ -118,7 +118,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_event.svg')} alt="block_dashboard_controller_joystick_event.svg" />
 
-*ジョイスティックが [コントロール] です [上 / 下 / 左 / 右 / 移動 / 解放された]*：スティックがある方向に倒されたとき、少しでも動いたとき、または離されたときにスクリプトを実行します。
+*ジョイスティックが [コントロール] が [上 / 下 / 左 / 右 / 移動 / 離された]*：スティックがある方向に倒されたとき、少しでも動いたとき、または離されたときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -134,7 +134,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_joystick_value_boolean.svg')} alt="block_dashboard_controller_joystick_value_boolean.svg" />
 
-*ジョイスティックである [コントロール] [押された / 解放された]*：ジョイスティックに指が触れているかどうか。
+*ジョイスティックである [コントロール] [押された / 離された]*：ジョイスティックに指が触れているかどうか。
 
 - 種類：値ブロック、`true` / `false`
 
@@ -144,7 +144,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_event.svg')} alt="block_dashboard_controller_dpad_event.svg" />
 
-*十字キーの場合 [コントロール] [上 / 下 / 左 / 右] ボタン [押された / 解放された]*：十字キーのボタンが押されたとき、または離されたときにスクリプトを実行します。
+*十字キーの場合 [コントロール] [上 / 下 / 左 / 右] ボタン [押された / 離された]*：十字キーのボタンが押されたとき、または離されたときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -152,7 +152,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_dpad_value_boolean.svg')} alt="block_dashboard_controller_dpad_value_boolean.svg" />
 
-*方向パッド [コントロール] [上 / 下 / 左 / 右] ボタン [押された / 解放された]*：十字キーのボタンが今押されているか、離されているか。
+*方向パッド [コントロール] [上 / 下 / 左 / 右] ボタン [押された / 離された]*：十字キーのボタンが今押されているか、離されているか。
 
 - 種類：値ブロック、`true` / `false`
 
@@ -166,7 +166,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_slider_event.svg')} alt="block_dashboard_controller_slider_event.svg" />
 
-*スライダーが [コントロール] です [低い / 高い / 移動 / 解放された]*：つまみが下端または上端に達したとき、動いたとき、または離されたときにスクリプトを実行します。
+*スライダーが [コントロール] が [低い / 高い / 移動 / 離された]*：つまみが下端または上端に達したとき、動いたとき、または離されたときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -245,7 +245,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steering_wheel_event.svg')} alt="block_dashboard_controller_steering_wheel_event.svg" />
 
-*ハンドルが [コントロール] です [移動 / 押された / 解放された]*：ハンドルが回されたとき、触れたとき、または離したときにスクリプトを実行します。
+*ハンドルが [コントロール] が [移動 / 押された / 離された]*：ハンドルが回されたとき、触れたとき、または離したときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -261,7 +261,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_steeringwheel_value_boolean.svg')} alt="block_dashboard_controller_steeringwheel_value_boolean.svg" />
 
-*ハンドル [コントロール] [押された / 解放された]*：ハンドルに指が触れているかどうか。
+*ハンドル [コントロール] [押された / 離された]*：ハンドルに指が触れているかどうか。
 
 - 種類：値ブロック、`true` / `false`
 
@@ -273,7 +273,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_event.svg')} alt="block_dashboard_controller_pedals_event.svg" />
 
-*ペダルが [コントロール] [任意 / ブレーキ / 加速] です [移動 / 押された / 解放された]*：ペダルが動いたとき、踏まれたとき、または離されたときにスクリプトを実行します。
+*ペダルが [コントロール] [任意 / ブレーキ / 加速] が [移動 / 押された / 離された]*：ペダルが動いたとき、踏まれたとき、または離されたときにスクリプトを実行します。
 
 - 種類：イベントブロック
 
@@ -289,7 +289,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_pedals_value_boolean.svg')} alt="block_dashboard_controller_pedals_value_boolean.svg" />
 
-*ペダル [コントロール] [加速 / ブレーキ] [押された / 解放された]*：ペダルが踏まれているかどうか。
+*ペダル [コントロール] [加速 / ブレーキ] [押された / 離された]*：ペダルが踏まれているかどうか。
 
 - 種類：値ブロック、`true` / `false`
 

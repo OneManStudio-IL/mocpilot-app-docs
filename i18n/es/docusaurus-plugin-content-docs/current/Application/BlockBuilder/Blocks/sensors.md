@@ -73,7 +73,7 @@ Devuelve `true` cuando el botón seleccionado del hub está en el estado selecci
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Devuelve el ángulo de inclinación del hub.
 
-- Ángulos: `inclinación`, `balanceo`, `guiñada`
+- Ángulos: `cabeceo`, `balanceo`, `guiñada`
 - `guiñada` solo está disponible en el Technic Hub y el Robot Inventor.
 
 ### `… … acelerómetro (m/s²)` (Gurú) {#block_hubs_all_sensors_accelerometer}
@@ -238,7 +238,7 @@ Devuelve `true` cuando la distancia que mide el sensor de movimiento WeDo 2.0 cu
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
 Devuelve datos del sensor de inclinación WeDo 2.0: un ángulo de inclinación o la dirección hacia la que está inclinado.
 
-- Ángulos: `inclinación`, `balanceo`
+- Ángulos: `cabeceo`, `balanceo`
 - Salida de dirección: `texto` o `número`; direcciones: `neutral`, `hacia adelante`, `hacia atrás`, `izquierda`, `derecha`, `desconocido`
 - Hubs: WeDo 2.0.
 
@@ -290,7 +290,7 @@ Devuelve como texto el lado que mira hacia arriba: `front`, `up`, `rightside`, `
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Devuelve el ángulo del hub en grados alrededor de un eje: `guiñada` (giro a izquierda y derecha, como una brújula), `inclinación` (en la app, el cabeceo: el morro sube y baja) o `balanceo` (inclinación hacia los lados).
+Devuelve el ángulo del hub en grados alrededor de un eje: `guiñada` (giro a izquierda y derecha, como una brújula), `cabeceo` (el morro sube y baja) o `balanceo` (inclinación hacia los lados).
 
 - Uso típico: hacer que un robot vaya en línea recta o gire exactamente 90°: pon la guiñada a cero y luego gira hasta que la guiñada llegue al ángulo.
 
@@ -346,7 +346,7 @@ Devuelve el nivel de batería del dispositivo, en porcentaje.
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Devuelve el ángulo de inclinación del dispositivo.
 
-- Ángulos: `inclinación`, `balanceo`, `guiñada`
+- Ángulos: `cabeceo`, `balanceo`, `guiñada`
 - Uso típico: dirigir el modelo inclinando el teléfono.
 
 ### `dispositivo … acelerómetro (m/s²)` (Gurú) {#block_sensors_device_accelerometer_sensor_data}

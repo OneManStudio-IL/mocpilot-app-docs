@@ -90,9 +90,9 @@ Ermittelt die Mitte und den Stellweg einer Lenkzahnstange.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
 Legt fest, was der Motor tut, wenn er stoppt.
 
-- `Bremse`: hält schnell an.
+- `Bremsen`: hält schnell an.
 - `Position halten`: hält seine Position aktiv (nützlich für die Lenkung).
-- `ausrollen`: läuft frei aus.
+- `Ausrollen`: läuft frei aus.
 - Nur Encoder-Motoren.
 
 ### `Blockierungserkennung aktivieren …` (Guru) {#block_hubs_all_motors_port_set_motors_stall_detection}

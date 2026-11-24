@@ -109,7 +109,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 左の値が右の値より小さいときに `true` を返します。
 
-### `です … の間に … かつ …` (上級者) {#block_operator_is_in_between}
+### `が … の間に … かつ …` (上級者) {#block_operator_is_in_between}
 
 <img src={useBaseUrl('/img/blocks/block_operator_is_in_between.svg')} alt="block_operator_is_in_between.svg" />
 

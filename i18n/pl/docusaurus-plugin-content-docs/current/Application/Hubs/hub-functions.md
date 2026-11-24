@@ -59,7 +59,7 @@ Wszystko o łączeniu, firmware i blokach: [Hub MINDSTORMS Robot Inventor](/docs
 - **Matryca LED**: pasek poziomu, liczba lub obraz w Szybkich połączeniach; tekst i piksele w Blokach logicznych.
 - **Światła czujnika odległości** („oczy” czujnika).
 - **Wykrywanie zablokowania** i moc silnika.
-- Wszystkie bloki aplikacji Robot Inventor: [Ruch](/docs/Application/BlockBuilder/Blocks/Movement), dźwięki i muzyka huba, gesty, ryskanie, czujnik siły, radio między hubami.
+- Wszystkie bloki aplikacji Robot Inventor: [Ruch](/docs/Application/BlockBuilder/Blocks/Movement), dźwięki i muzyka huba, gesty, odchylenie, czujnik siły, radio między hubami.
 - Klasyczny Bluetooth (niedostępny na iPhonie i iPadzie) lub kabel USB w Windows i na Macu.
 
 ## Huby LEGO® z kolorową diodą LED {#lego-hubs-with-a-colour-led}

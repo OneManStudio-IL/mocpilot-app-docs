@@ -109,20 +109,20 @@ Nämä lohkot tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS
 
 Näyttää kuvan valomatriisissa annetun ajan (oletuksena 2 sekuntia) ja sammuttaa sen sitten. Lohko odottaa, kunnes aika on kulunut.
 
-### `toista animaatio … ssa … kuvaa sekunnissa loppuun asti` (Aloittelija) {#block_ri_light_animation_until_done}
+### `toista animaatio … – … kuvaa sekunnissa loppuun asti` (Aloittelija) {#block_ri_light_animation_until_done}
 
 <img src={useBaseUrl('/img/blocks/block_ri_light_animation_until_done.svg')} alt="block_ri_light_animation_until_done.svg" />
 
-Toistaa animaation kuvat kerran annetulla nopeudella (oletuksena 4 kuvaa sekunnissa) ja odottaa viimeiseen kuvaan asti. Lohkon `ssa` tarkoittaa ”nopeudella”.
+Toistaa animaation kuvat kerran annetulla nopeudella (oletuksena 4 kuvaa sekunnissa) ja odottaa viimeiseen kuvaan asti.
 
-### `käynnistä animaatio … ssa … kuvaa sekunnissa …` (Aloittelija) {#block_ri_light_animation_start}
+### `käynnistä animaatio … – … kuvaa sekunnissa …` (Aloittelija) {#block_ri_light_animation_start}
 
 <img src={useBaseUrl('/img/blocks/block_ri_light_animation_start.svg')} alt="block_ri_light_animation_start.svg" />
 
 Käynnistää animaation ja siirtyy heti seuraavaan lohkoon.
 
 - `kerran`: toistaa sen yhden kerran.
-- `toistaa` (oletus): toistaa sitä yhä uudelleen, kunnes jokin muu valolohko muuttaa matriisia.
+- `toista` (oletus): toistaa sitä yhä uudelleen, kunnes jokin muu valolohko muuttaa matriisia.
 
 ### `aseta pikselien kirkkaus … %` (Edistynyt) {#block_ri_light_set_brightness}
 

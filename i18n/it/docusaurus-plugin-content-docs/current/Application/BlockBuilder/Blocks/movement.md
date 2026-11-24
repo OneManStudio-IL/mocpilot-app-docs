@@ -38,9 +38,9 @@ Quanto rapidamente i motori di movimento accelerano e rallentano.
 
 - Opzioni: `predefinito`, `veloce` (0,1 s), `bilanciato` (0,35 s), `morbido` (0,8 s), `lento` (1,2 s), `molto lento` (2 s): il tempo da fermo alla massima velocità.
 
-### `imposta motori di movimento a … alla fermata` (Avanzato) {#block_ri_move_set_stop}
+### `imposta motori di movimento a … all'arresto` (Avanzato) {#block_ri_move_set_stop}
 <img src={useBaseUrl('/img/blocks/block_ri_move_set_stop.svg')} alt="block_ri_move_set_stop.svg" />
-Cosa fanno i motori quando il robot si ferma («alla fermata» nell'app significa «all'arresto»).
+Cosa fanno i motori quando il robot si ferma.
 
 - `inerzia`: i motori girano liberi e il robot rotola fino a fermarsi.
 - `freno` (predefinito): i motori frenano.
@@ -97,7 +97,7 @@ Guida a carro armato con la potenza del motore di ciascuna ruota invece di una v
 
 ### `smetti di muoverti` (Principiante) {#block_ri_move_stop}
 <img src={useBaseUrl('/img/blocks/block_ri_move_stop.svg')} alt="block_ri_move_stop.svg" />
-Ferma entrambi i motori di movimento nel modo indicato da **imposta motori di movimento a … alla fermata** (frenando, come predefinito).
+Ferma entrambi i motori di movimento nel modo indicato da **imposta motori di movimento a … all'arresto** (frenando, come predefinito).
 
 ### `il movimento è stato interrotto?` (Guru) {#block_ri_move_was_interrupted}
 <img src={useBaseUrl('/img/blocks/block_ri_move_was_interrupted.svg')} alt="block_ri_move_was_interrupted.svg" />

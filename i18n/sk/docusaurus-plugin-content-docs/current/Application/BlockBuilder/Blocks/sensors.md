@@ -290,7 +290,7 @@ Vráti stranu, ktorá je hore, ako text: `front`, `up`, `rightside`, `back`, `do
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Vráti uhol hubu v stupňoch okolo jednej osi: `ryskanie` (vybočenie: otáčanie doľava a doprava ako kompas), `náklon` (predok hore a dole) alebo `rotácia` (klonenie: nakláňanie do strán).
+Vráti uhol hubu v stupňoch okolo jednej osi: `vybočenie` (otáčanie doľava a doprava ako kompas), `náklon` (predok hore a dole) alebo `rotácia` (klonenie: nakláňanie do strán).
 
 - Typické použitie: viesť robota rovno alebo ho otočiť presne o 90°: vynulujte vybočenie a potom zatáčajte, kým nedosiahne požadovaný uhol.
 

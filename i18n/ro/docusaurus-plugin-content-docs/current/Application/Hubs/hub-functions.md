@@ -32,7 +32,7 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 
 ## BuWizz 2.0 {#buwizz-20}
 
-- **Mod de putere**: Lentă, Normal, Rapidă, Ludicrous. În Legături rapide: operația [Mod de putere](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); în Blocuri logice: *seta … mod de alimentare la*.
+- **Mod de putere**: Lentă, Normal, Rapidă, Ludicrous. În Legături rapide: operația [Mod de putere](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); în Blocuri logice: *setează … mod de alimentare la*.
 - Modul de putere curent, **Tensiune de ieșire** și curentul motorului ca intrări.
 - Control simplu al vitezei pe porturile 1–4: fără controlul poziției.
 
@@ -49,7 +49,7 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 ## Mould King 4.0 și 6.0 {#mould-king-40-and-60}
 
 - Doar comenzi: fără senzori, fără butoane, fără confirmarea conexiunii.
-- **Canal de control** A, B sau C: operația [Canal](/docs/Application/Links/Blocks/OutputBlocks#op-channel) din Legături rapide, blocul *seta … canal de control către* din Blocuri logice sau **Selectează canalul** în Huburile mele.
+- **Canal de control** A, B sau C: operația [Canal](/docs/Application/Links/Blocks/OutputBlocks#op-channel) din Legături rapide, blocul *setează … canal de control către* din Blocuri logice sau **Selectează canalul** în Huburile mele.
 - Cel mult 3 Mould King 4.0 sau 1 Mould King 6.0 per profil și un singur tip de Mould King per profil.
 
 ## Robot Inventor (LEGO® Large Hub) {#robot-inventor-lego-large-hub}
@@ -59,7 +59,7 @@ Totul despre conectare, firmware și blocuri: [Hubul MINDSTORMS Robot Inventor](
 - **Matrice LED**: o bară de nivel, un număr sau o imagine în Legături rapide; text și pixeli în Blocuri logice.
 - **Luminile senzorului de distanță** („ochii” senzorului).
 - **Detectarea blocării** și puterea motorului.
-- Toate blocurile aplicației Robot Inventor: [Mișcare](/docs/Application/BlockBuilder/Blocks/Movement), sunetele și muzica hubului, gesturi, derapaj, senzorul de forță, radio între huburi.
+- Toate blocurile aplicației Robot Inventor: [Mișcare](/docs/Application/BlockBuilder/Blocks/Movement), sunetele și muzica hubului, gesturi, girație, senzorul de forță, radio între huburi.
 - Bluetooth clasic (nu este disponibil pe iPhone și iPad) sau un cablu USB pe Windows și Mac.
 
 ## Huburi LEGO® cu LED color {#lego-hubs-with-a-colour-led}
@@ -72,4 +72,4 @@ Butoanele ei sunt intrări, așa că poți conduce un model cu telecomanda fizic
 
 ## Senzori încorporați {#built-in-sensors}
 
-Nivelul și tensiunea bateriei, temperatura plăcii, înclinarea (pitch, roll, yaw), accelerația și orientarea sunt disponibile pe huburile care le au. Setează **Orientarea hubului** (Legături rapide) sau *seta … orientare înclinată la* (Blocuri logice) în funcție de cum este montat hubul.
+Nivelul și tensiunea bateriei, temperatura plăcii, înclinarea (pitch, roll, yaw), accelerația și orientarea sunt disponibile pe huburile care le au. Setează **Orientarea hubului** (Legături rapide) sau *setează … orientare înclinată la* (Blocuri logice) în funcție de cum este montat hubul.

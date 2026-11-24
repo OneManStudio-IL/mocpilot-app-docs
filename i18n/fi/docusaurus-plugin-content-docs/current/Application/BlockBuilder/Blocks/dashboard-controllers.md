@@ -223,7 +223,7 @@ Maksullisten teemojen [kiertonupin](/docs/Application/Dashboard/ControlTypes#rot
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_set_value.svg')} alt="block_dashboard_controller_monitor_set_value.svg" />
 
-*asettaa [arvo] [ohjain] näyttö*: asettaa **Akun taso**- tai **Nopeusmittari**-näytön arvon.
+*aseta [arvo] [ohjain] näyttö*: asettaa **Akun taso**- tai **Nopeusmittari**-näytön arvon.
 
 - Tyyppi: komentolohko
 
@@ -231,7 +231,7 @@ Maksullisten teemojen [kiertonupin](/docs/Application/Dashboard/ControlTypes#rot
 
 <img src={useBaseUrl('/img/blocks/block_dashboard_controller_monitor_tilt_set_value.svg')} alt="block_dashboard_controller_monitor_tilt_set_value.svg" />
 
-*asettaa [arvo] [ohjain] [pituuskallistus / sivukallistus] näyttö*: asettaa **Kallistusnäytössä** näkyvän pituus- tai sivukallistuksen.
+*aseta [arvo] [ohjain] [nyökkäys / kallistus] näyttö*: asettaa **Kallistusnäytössä** näkyvän pituus- tai sivukallistuksen.
 
 - Tyyppi: komentolohko
 

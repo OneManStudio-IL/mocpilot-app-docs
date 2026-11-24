@@ -103,7 +103,7 @@ Wird ausgeführt, wenn sich die Werte des Beschleunigungssensors des Hubs änder
 
 Wird ausgeführt, wenn sich der Neigungswinkel des Hubs ändert.
 
-- Winkeloptionen: `irgendein`, `Neigung`, `Roll`, `Gieren`
+- Winkeloptionen: `irgendein`, `Neigung`, `Rollen`, `Gieren`
 - Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
 
 ### `wenn … Ausrichtung wurde geändert` (Anfänger) {#block_hubs_all_event_tilt_orientation_changed}
@@ -170,11 +170,11 @@ Wird ausgeführt, wenn die gewählte Seite des Hubs nach oben zeigt: `Vorderseit
 
 Wird ausgeführt, wenn der Hub um etwa 12° oder mehr `nach oben`, `nach unten`, `nach links`, `nach rechts` oder in eine beliebige Richtung (`irgendein`, Standard) geneigt wird.
 
-### `wenn … gedrückt / fest gedrückt / freigegeben` (Anfänger) {#block_ri_when_force}
+### `wenn … gedrückt / fest gedrückt / losgelassen` (Anfänger) {#block_ri_when_force}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
 
-Wird ausgeführt, wenn der Kraftsensor am gewählten Port gedrückt, fest gedrückt (mit mehr als 5 Newton) oder losgelassen wird (in der App `freigegeben`).
+Wird ausgeführt, wenn der Kraftsensor am gewählten Port gedrückt, fest gedrückt (mit mehr als 5 Newton) oder losgelassen wird.
 
 ### `wenn Hub Signal empfängt …` (Guru) {#block_ri_when_radio}
 

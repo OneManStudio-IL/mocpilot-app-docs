@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## イベント {#events}
 
-### `いつ … です …` (初心者) {#block_gamepad_event_when_button_is}
+### `とき … が …` (初心者) {#block_gamepad_event_when_button_is}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_button_is.svg')} alt="block_gamepad_event_when_button_is.svg" />
@@ -22,7 +22,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - ボタン（Xbox 配置）：`A`、`B`、`X`、`Y`、`LB`、`RB`、`LT`、`RT`、`LSB`、`RSB`
 - ボタン（Sony 配置）：`クロス`、`サークル`、`四角`、`三角形`、`L1`、`R1`、`L2`、`R2`、`L3`、`R3`
-- 状態：`押された`、`解放された`
+- 状態：`押された`、`離された`
 
 ### `D-Padの場合 … ボタン …` (初心者) {#block_gamepad_event_when_dpad_is}
 
@@ -31,21 +31,21 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 十字キーのボタンが押されたとき、または離されたときに実行されます。
 
 - 方向：`上`、`下`、`左`、`右`
-- 状態：`押された`、`解放された`
+- 状態：`押された`、`離された`
 
-### `いつ … スティック …` (初心者) {#block_gamepad_event_when_thumbstick_is}
+### `とき … スティック …` (初心者) {#block_gamepad_event_when_thumbstick_is}
 
 <img src={useBaseUrl('/img/blocks/block_gamepad_event_when_thumbstick_is.svg')} alt="block_gamepad_event_when_thumbstick_is.svg" />
 
 スティックがある方向に倒されたとき、動かされたとき、または離されたときに実行されます。
 
 - スティック：`左`、`右`
-- 状態：`上`、`下`、`左`、`右`、`移動`、`解放された`
+- 状態：`上`、`下`、`左`、`右`、`移動`、`離された`
 - 主な用途：スティックの動きに反応し、スティックを離したらモデルを停止させたり中央に戻したりします。
 
 ## 値 {#values}
 
-### `です … …` (初心者) {#block_gamepad_button_value_boolean}
+### `が … …` (初心者) {#block_gamepad_button_value_boolean}
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '8px'}}>
   <img src={useBaseUrl('/img/blocks/block_gamepad_button_value_boolean.svg')} alt="block_gamepad_button_value_boolean.svg" />
@@ -56,7 +56,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 - ボタン（Xbox 配置）：`A`、`B`、`X`、`Y`、`LB`、`RB`、`LT`、`RT`、`LSB`、`RSB`
 - ボタン（Sony 配置）：`クロス`、`サークル`、`四角`、`三角形`、`L1`、`R1`、`L2`、`R2`、`L3`、`R3`
-- 状態：`押された`、`解放された`
+- 状態：`押された`、`離された`
 
 ### `D-Pad … ボタン …` (初心者) {#block_gamepad_dpad_button_value_boolean}
 
@@ -65,7 +65,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 選択した十字キーのボタンが選択した状態にあるとき `true` を返します。
 
 - 方向：`上`、`下`、`左`、`右`
-- 状態：`押された`、`解放された`
+- 状態：`押された`、`離された`
 
 ### `スティック … …` (初心者) {#block_gamepad_thumbstick_value_float}
 

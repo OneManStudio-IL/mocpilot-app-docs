@@ -64,7 +64,7 @@ când începe programul
 repeta mereu
     afișează (Hub 1 % baterie) pe MNTR1 monitor
     dacă (Hub 1 % baterie) < 20 atunci
-        seta BTN1 culoare la roșu
+        setează BTN1 culoare la roșu
     aștepta 5 secunde
 ```
 
@@ -90,7 +90,7 @@ Comutatorul pas cu pas **STPR1** cu 4 trepte limitează viteza maximă.
 ```text
 când începe programul
 repeta mereu
-    seta (limita de viteză) la (comutator pas cu pas STPR1 × 25)
+    setează (limita de viteză) la (comutator pas cu pas STPR1 × 25)
     pornește motorul la (joystick JOY1 axa Y × limita de viteză / 100) % viteză  (Hub 1, portul A)
 ```
 

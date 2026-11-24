@@ -89,8 +89,8 @@ Vrací `true`, když je vybrané tlačítko hubu ve vybraném stavu.
 
 Vrací úhel náklonu hubu.
 
-- Úhly: `náklon`, `rotace`, `kormidlování` (klopení, klonění, stáčení)
-- `kormidlování` (stáčení) je k dispozici jen u Technic Hubu a Robot Inventoru.
+- Úhly: `náklon`, `rotace`, `vybočení` (klopení, klonění, stáčení)
+- `vybočení` je k dispozici jen u Technic Hubu a Robot Inventoru.
 
 ### `… … akcelerometr (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
 
@@ -305,7 +305,7 @@ Vrací `true`, když vzdálenost změřená senzorem pohybu WeDo 2.0 splní podm
 Vrací data ze senzoru náklonu WeDo 2.0: úhel náklonu nebo směr, kterým je nakloněný.
 
 - Úhly: `náklon`, `rotace` (klopení, klonění)
-- Výstup směru: `text` nebo `číslo`; směry: `neutrální`, `vpřed`, `zpětný`, `vlevo`, `vpravo`, `neznámý`
+- Výstup směru: `text` nebo `číslo`; směry: `neutrální`, `vpřed`, `vzad`, `vlevo`, `vpravo`, `neznámý`
 - Huby: WeDo 2.0.
 
 ## Hub Robot Inventor {#robot-inventor-sensors}
@@ -356,7 +356,7 @@ Vrací stranu, která je nahoře, jako text: `front`, `up`, `rightside`, `back`,
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Vrací úhel hubu ve stupních kolem jedné osy: `kormidlování` (stáčení: otáčení doleva a doprava jako kompas), `náklon` (klopení: příď nahoru a dolů) nebo `rotace` (klonění: naklápění do stran).
+Vrací úhel hubu ve stupních kolem jedné osy: `vybočení` (otáčení doleva a doprava jako kompas), `náklon` (klopení: příď nahoru a dolů) nebo `rotace` (klonění: naklápění do stran).
 
 - Typické použití: vést robota rovně nebo ho otočit přesně o 90°: vynulujte úhel stáčení a pak zatáčejte, dokud nedosáhne požadovaného úhlu.
 
@@ -416,7 +416,7 @@ Vrací úroveň baterie zařízení v procentech.
 
 Vrací úhel náklonu zařízení.
 
-- Úhly: `náklon`, `rotace`, `kormidlování` (klopení, klonění, stáčení)
+- Úhly: `náklon`, `rotace`, `vybočení` (klopení, klonění, stáčení)
 - Typické použití: řídit model nakláněním telefonu.
 
 ### `zařízení … akcelerometr (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}

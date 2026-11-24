@@ -33,8 +33,8 @@ Indicatorul afișează valoarea așa cum este, așa că rândul nu are operație
 Folosește blocurile controlerelor de pe ecran:
 
 - *afișează … pe monitorul …* pentru Monitor;
-- *seta … la monitorul …* pentru Nivelul bateriei și Vitezometru;
-- *seta … la monitorul de tangaj / ruliu …* pentru Monitor înclinat.
+- *setează … la monitorul …* pentru Nivelul bateriei și Vitezometru;
+- *setează … la monitorul de tangaj / ruliu …* pentru Monitor înclinat.
 
 Poți afișa orice poți calcula: valoarea unui senzor, o variabilă, un text precum „Treapta 2”. Vezi [Controlere pe ecran](/docs/Application/BlockBuilder/Blocks/DashboardControllers#monitor-blocks).
 

@@ -66,15 +66,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
 Повертає `true`, коли вибрана кнопка хаба у вибраному стані.
 
-- Стани: `натиснута`, `відпущена`
+- Стани: `натиснута`, `відпущено`
 - Хаби: хаби LEGO Powered Up, WeDo 2.0 і Robot Inventor. Перелік кнопок залежить від хаба (зазвичай `центр`).
 
 ### `… … кут` (Початківець) {#block_hubs_all_sensors_tilt}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Повертає кут нахилу хаба.
 
-- Кути: `тангаж`, `крен`, `рискування`
-- `рискування` доступне лише на Technic Hub і Robot Inventor.
+- Кути: `тангаж`, `крен`, `рискання`
+- `рискання` доступне лише на Technic Hub і Robot Inventor.
 
 ### `… … акселерометр (м/с²)` (Гуру) {#block_hubs_all_sensors_accelerometer}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
@@ -248,11 +248,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### Датчик сили {#robot-inventor-force-sensor}
 
-#### `є … натиснута / сильно натиснуто / відпущен ?` (Початківець) {#block_ri_force_is_pressed}
+#### `є … натиснута / сильно натиснуто / відпущено ?` (Початківець) {#block_ri_force_is_pressed}
 
 <img src={useBaseUrl('/img/blocks/block_ri_force_is_pressed.svg')} alt="block_ri_force_is_pressed.svg" />
 
-Перевіряє датчик сили на вибраному порту. `сильно натиснуто` означає натискання із силою понад 5 ньютонів; `відпущен` означає «відпущено».
+Перевіряє датчик сили на вибраному порту. `сильно натиснуто` означає натискання із силою понад 5 ньютонів.
 
 #### `… тиск у % / ньютонах` (Початківець) {#block_ri_force_value}
 
@@ -290,7 +290,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Повертає кут хаба в градусах навколо однієї осі: `рискування` (тобто рискання: поворот ліворуч і праворуч, як у компаса), `тангаж` (ніс угору й униз) або `крен` (нахил убік).
+Повертає кут хаба в градусах навколо однієї осі: `рискання` (поворот ліворуч і праворуч, як у компаса), `тангаж` (ніс угору й униз) або `крен` (нахил убік).
 
 - Для чого: вести робота по прямій або повернути його рівно на 90°: обнуліть рискання, а потім кермуйте, доки воно не досягне потрібного кута.
 
@@ -346,7 +346,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Повертає кут нахилу пристрою.
 
-- Кути: `тангаж`, `крен`, `рискування`
+- Кути: `тангаж`, `крен`, `рискання`
 - Для чого: кермувати моделлю, нахиляючи телефон.
 
 ### `пристрій … акселерометр (м/с²)` (Гуру) {#block_sensors_device_accelerometer_sensor_data}

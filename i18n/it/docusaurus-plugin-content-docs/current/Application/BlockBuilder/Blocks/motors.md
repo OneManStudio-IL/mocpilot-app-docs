@@ -86,7 +86,7 @@ Trova il centro e la corsa di una cremagliera dello sterzo.
 
 ## Impostazioni del motore {#motor-settings}
 
-### `imposta motore a … alla fermata` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
+### `imposta motore a … all'arresto` (Guru) {#block_hubs_all_motors_port_set_motor_to_at_stop}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_set_motor_to_at_stop.svg')} alt="block_hubs_all_motors_port_set_motor_to_at_stop.svg" />
 Sceglie che cosa fa il motore quando si ferma.
 

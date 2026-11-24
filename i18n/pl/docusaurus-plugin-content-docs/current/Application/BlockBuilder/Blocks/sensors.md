@@ -14,7 +14,7 @@ Na tej stronie:
 - [Stan huba](#hub-state): bateria, napięcie, temperatura, prąd i tryb mocy
 - [Przyciski, nachylenie i orientacja huba](#hub-tilt-and-orientation)
 - [Czujniki na portach](#sensors-on-ports): dowolne urządzenie, czujnik koloru Technic, czujnik odległości Technic, czujnik koloru i odległości BOOST, czujniki WeDo 2.0
-- [Hub Robot Inventor](#robot-inventor-sensors): czujnik siły, gesty, orientacja, kąty ryskania, pochylenia i obrotu, przechylenie, radio między hubami
+- [Hub Robot Inventor](#robot-inventor-sensors): czujnik siły, gesty, orientacja, kąty odchylenia, pochylenia i przechylenia, przechylenie w danym kierunku, radio między hubami
 - [To urządzenie](#this-device): telefon, tablet lub komputer, na którym działa MOCPilot
 - [Stoper](#timer)
 
@@ -73,8 +73,8 @@ Zwraca `true`, gdy wybrany przycisk huba jest w wybranym stanie.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_tilt.svg')} alt="block_hubs_all_sensors_tilt.svg" />
 Zwraca kąt nachylenia huba.
 
-- Kąty: `pochylenie`, `obrót`, `ryskanie`
-- `ryskanie` jest dostępne tylko w Technic Hub i Robot Inventor.
+- Kąty: `pochylenie`, `przechylenie`, `odchylenie`
+- `odchylenie` jest dostępne tylko w Technic Hub i Robot Inventor.
 
 ### `… … akcelerometr (m/s²)` (Guru) {#block_hubs_all_sensors_accelerometer}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_accelerometer.svg')} alt="block_hubs_all_sensors_accelerometer.svg" />
@@ -238,7 +238,7 @@ Zwraca `true`, gdy odległość zmierzona przez czujnik ruchu WeDo 2.0 spełnia 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_wedo2_tilt.svg')} alt="block_hubs_all_sensors_port_wedo2_tilt.svg" />
 Zwraca dane z czujnika nachylenia WeDo 2.0: kąt nachylenia albo kierunek, w którym czujnik jest nachylony.
 
-- Kąty: `pochylenie`, `obrót`
+- Kąty: `pochylenie`, `przechylenie`
 - Wynik kierunku: `tekst` lub `liczba`; kierunki: `neutralny`, `do przodu`, `do tyłu`, `lewo`, `prawo`, `nieznany`
 - Huby: WeDo 2.0.
 
@@ -266,7 +266,7 @@ Zwraca, jak mocno naciśnięty jest czujnik siły: w procentach (0–100) lub w 
 
 <img src={useBaseUrl('/img/blocks/block_ri_is_gesture.svg')} alt="block_ri_is_gesture.svg" />
 
-`true`, jeśli hub został właśnie poruszony w ten sposób: `stuknięty`, `stuknięty dwukrotnie`, `potrząśnięty` (domyślnie) lub `spada`. Gest liczy się raz: gdy jakiś blok go odczyta, znika.
+`true`, jeśli hub został właśnie poruszony w ten sposób: `stuknięty`, `stuknięty dwukrotnie`, `potrząśnięty` (domyślnie) lub `spadający`. Gest liczy się raz: gdy jakiś blok go odczyta, znika.
 
 #### `gest` (Guru) {#block_ri_gesture}
 
@@ -290,15 +290,15 @@ Zwraca jako tekst stronę skierowaną do góry: `front`, `up`, `rightside`, `bac
 
 <img src={useBaseUrl('/img/blocks/block_ri_angle.svg')} alt="block_ri_angle.svg" />
 
-Zwraca kąt huba w stopniach wokół jednej osi: `ryskanie` (obrót w lewo i w prawo, jak kompas), `pochylenie` (przód w górę i w dół) lub `obrót` (przechylanie na boki).
+Zwraca kąt huba w stopniach wokół jednej osi: `odchylenie` (obrót w lewo i w prawo, jak kompas), `pochylenie` (przód w górę i w dół) lub `przechylenie` (przechylanie na boki).
 
-- Typowe zastosowanie: prowadzić robota po prostej albo obrócić go dokładnie o 90°: wyzeruj ryskanie, a potem skręcaj, aż ryskanie osiągnie zadany kąt.
+- Typowe zastosowanie: prowadzić robota po prostej albo obrócić go dokładnie o 90°: wyzeruj odchylenie, a potem skręcaj, aż odchylenie osiągnie zadany kąt.
 
 #### `ustaw kąt ryskania na 0` (Początkujący) {#block_ri_reset_yaw}
 
 <img src={useBaseUrl('/img/blocks/block_ri_reset_yaw.svg')} alt="block_ri_reset_yaw.svg" />
 
-Ustala bieżący kierunek huba jako nowe zero kąta ryskania. Blok czeka 0,1 s, żeby następny odczyt był już liczony od niego.
+Ustala bieżący kierunek huba jako nowe zero kąta odchylenia. Blok czeka 0,1 s, żeby następny odczyt był już liczony od niego.
 
 #### `prędkość kątowa …` (Guru) {#block_ri_angular_velocity}
 
@@ -346,7 +346,7 @@ Zwraca poziom baterii urządzenia w procentach.
 <img src={useBaseUrl('/img/blocks/block_sensors_device_tilt_sensor_data.svg')} alt="block_sensors_device_tilt_sensor_data.svg" />
 Zwraca kąt nachylenia urządzenia.
 
-- Kąty: `pochylenie`, `obrót`, `ryskanie`
+- Kąty: `pochylenie`, `przechylenie`, `odchylenie`
 - Typowe zastosowanie: sterowanie modelem przez przechylanie telefonu.
 
 ### `urządzenie … akcelerometr (m/s²)` (Guru) {#block_sensors_device_accelerometer_sensor_data}

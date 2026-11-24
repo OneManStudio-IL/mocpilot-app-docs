@@ -21,7 +21,7 @@ Appuyez sur **Créer un véhicule** en haut de la catégorie et donnez-lui un no
 Une voiture type : accrochez **conduire** à l’événement des pédales, reliez les pédales à `accélérateur` et `frein`, et à l’intérieur démarrez le moteur de propulsion à la `vitesse` du véhicule :
 
 ```text
-lorsque les pédales PDL1 n'importe est déplacé
+lorsque les pédales PDL1 n'importe quel côté est déplacé
     Véhicule 1  conduire  accélérateur (pédales PDL1 accélération)  frein (pédales PDL1 frein)
         démarrer le moteur à (vitesse de Véhicule 1) % vitesse  (Hub 1, port A)
 ```

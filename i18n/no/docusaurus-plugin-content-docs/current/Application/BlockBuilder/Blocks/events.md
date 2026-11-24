@@ -156,7 +156,7 @@ Disse hendelsene kommer fra Robot Inventor-appen og fungerer bare med [MINDSTORM
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_gesture.svg')} alt="block_ri_when_gesture.svg" />
 
-Kjører én gang hver gang huben blir `banket`, `dobbeltbanket`, `ristet` (standard) eller når den `faller`.
+Kjører én gang hver gang huben blir `banket`, `dobbeltbanket`, `ristet` (standard) eller er `i fritt fall`.
 
 ### `når … vender opp` (Nybegynner) {#block_ri_when_orientation}
 
@@ -170,11 +170,11 @@ Kjører når den valgte siden av huben snus opp: `forside` (lysmatrisen, standar
 
 Kjører når huben vippes `opp`, `ned`, `til venstre`, `til høyre` eller i en hvilken som helst retning (`hvilken som helst`, standard), med omtrent 12° eller mer.
 
-### `når … trykket / hardt trykket / utløst` (Nybegynner) {#block_ri_when_force}
+### `når … trykket / hardt trykket / sluppet` (Nybegynner) {#block_ri_when_force}
 
 <img src={useBaseUrl('/img/blocks/block_ri_when_force.svg')} alt="block_ri_when_force.svg" />
 
-Kjører når kraftsensoren på den valgte porten trykkes inn, trykkes hardt (mer enn 5 newton) eller slippes. Valget `utløst` betyr her at sensoren er sluppet.
+Kjører når kraftsensoren på den valgte porten trykkes inn, trykkes hardt (mer enn 5 newton) eller slippes.
 
 ### `når huben mottar signal …` (Guru) {#block_ri_when_radio}
 
