@@ -14,6 +14,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: 110}} /><div>Technic Hub</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: 110}} /><div>Technic Move</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: 110}} /><div>City Hub</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/spike_hub_p.webp')} alt="SPIKE Prime Hub" style={{maxWidth: 110}} /><div>SPIKE Prime</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/essential_hub_p.webp')} alt="SPIKE Essential Hub" style={{maxWidth: 110}} /><div>SPIKE Essential</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro" style={{maxWidth: 110}} /><div>BuWizz 3.0</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick" style={{maxWidth: 110}} /><div>SBrick</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King" style={{maxWidth: 110}} /><div>Mould King</div></div>
@@ -30,6 +32,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Remote Control (88010) | jego przyciski są wejściami |
 | LEGO® WeDo 2.0 Smart Hub | 2 porty |
 | LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 portów, matryca świetlna, głośnik, żyroskop; Bluetooth lub USB; niedostępny na iPhonie i iPadzie |
+| LEGO® SPIKE™ Prime Hub (45601) | beta; ten sam hub co Robot Inventor z firmware SPIKE Legacy; Bluetooth lub USB; niedostępny na iPhonie i iPadzie |
+| LEGO® SPIKE™ Essential Hub (45609) | beta; 2 porty, światło, nachylenie i przyspieszenie; Bluetooth Low Energy |
 | BuWizz 2.0 | 4 porty, tryby mocy |
 | BuWizz 3.0 Pro | 6 portów, kolorowe diody LED portów |
 | SBrick, SBrick Plus | 4 porty, sterowanie prędkością, bez sterowania pozycją |

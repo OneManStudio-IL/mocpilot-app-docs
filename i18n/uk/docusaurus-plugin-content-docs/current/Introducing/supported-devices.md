@@ -19,6 +19,8 @@ MOCPilot працює з такими хабами, моторами й датч
 - Профіль має 5 слотів для хабів: 2 безкоштовні, ще 3 стають доступні після покупки додаткового слота хаба або з [MocPilot Pro](/docs/Application/Account/Pro).
 - Хаби **Mould King** лише отримують команди (без датчиків і зворотного зв’язку). У профілі можна використовувати лише один тип Mould King: до 3 хабів Mould King 4.0 або 1 Mould King 6.0.
 - Хаб **Robot Inventor** (LEGO® Large Hub) і хаб **SPIKE Prime** (бета, прошивка SPIKE Legacy) використовують класичний Bluetooth і недоступні на iPhone та iPad. У Windows і на Mac їх можна підключити й USB-кабелем. Див. [Хаб MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+- Хаб **SPIKE Essential** (бета) підключається через Bluetooth Low Energy, як Technic Hub: 2 порти, світловий індикатор, нахил і прискорення. Йому теж потрібна прошивка SPIKE Legacy; хаби з прошивкою SPIKE App 3 поки не підтримуються.
+- Хаби SPIKE Prime і SPIKE Essential позначені в застосунку міткою **Beta**: їхня підтримка з'явилася нещодавно й перевірена ще не на всіх хабах.
 - Оновлення й відновлення прошивки доступні для Technic Hub, Technic Move Hub, BOOST Move Hub і City Hub. Див. [Оновлення прошивки](/docs/Application/Hubs/FirmwareUpdating).
 - Що вміє кожен хаб, крім керування моторами й світлом, описано в розділі [Функції окремих хабів](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ MOCPilot працює з такими хабами, моторами й датч
 ## Датчики й світло {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+**Датчик сили** працює з хабами Robot Inventor і SPIKE Prime: він вимірює силу натискання (0–10 Н) і визначає, чи він натиснутий, сильно натиснутий або відпущений. Див. [Блоки Robot Inventor: датчик сили](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). З хабами Powered Up (Technic Hub, City Hub, BOOST) він не працює.
 
 Можна також використовувати вбудовані датчики хабів (батарея, нахил, прискорення, температура) і датчики вашого телефона чи планшета. Див. [Датчики телефона](/docs/Application/Dashboard/PhoneSensors).

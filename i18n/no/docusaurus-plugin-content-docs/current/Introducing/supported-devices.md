@@ -19,6 +19,8 @@ Merknader:
 - En profil har 5 hubplasser: 2 er gratis, 3 til følger med et kjøp av ekstra hubplasser eller [MocPilot Pro](/docs/Application/Account/Pro).
 - **Mould King**-hubber tar bare imot kommandoer (ingen sensorer, ingen tilbakemelding). Bare én Mould King-type kan brukes i en profil: opptil 3 Mould King 4.0-hubber eller 1 Mould King 6.0.
 - **Robot Inventor**-huben (LEGO® Large Hub) og **SPIKE Prime**-huben (beta, SPIKE Legacy-fastvare) bruker klassisk Bluetooth og er ikke tilgjengelige på iPhone og iPad. På Windows og Mac kan de også kobles til med en USB-kabel. Se [MINDSTORMS Robot Inventor-huben](/docs/Application/Hubs/RobotInventorHub).
+- **SPIKE Essential**-huben (beta) kobles til via Bluetooth Low Energy, som Technic Hub: 2 porter, et lys, helling og akselerasjon. Den trenger også SPIKE Legacy-fastvaren; hubber med SPIKE App 3-fastvaren støttes ikke ennå.
+- SPIKE Prime- og SPIKE Essential-hubbene er merket **Beta** i appen: støtten er ny og er ikke testet på alle hubber ennå.
 - Fastvareoppdatering og gjenoppretting er tilgjengelig for Technic Hub, Technic Move Hub, BOOST Move Hub og City Hub. Se [Oppdatere fastvaren](/docs/Application/Hubs/FirmwareUpdating).
 - Hva hver hub kan gjøre utover motorer og lys, er beskrevet i [Hubspesifikke funksjoner](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ Motorer med enkoder (vinkelmotorer, Technic L og XL) rapporterer hastighet og po
 ## Sensorer og lys {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+**Kraftsensoren** fungerer på Robot Inventor- og SPIKE Prime-hubbene: den måler hvor hardt den trykkes (0–10 N), og om den er trykket, hardt trykket eller sluppet. Se [Robot Inventor-blokker: kraftsensor](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). Den fungerer ikke på Powered Up-hubber (Technic Hub, City Hub, BOOST).
 
 Hubbenes innebygde sensorer (batteri, helling, akselerasjon, temperatur) og sensorene i telefonen eller nettbrettet ditt kan også brukes. Se [Telefonsensorer](/docs/Application/Dashboard/PhoneSensors).

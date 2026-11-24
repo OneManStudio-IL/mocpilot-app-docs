@@ -19,6 +19,8 @@ Huomioita:
 - Profiilissa on 5 hubipaikkaa: 2 on ilmaisia, ja 3 lisää saat ostamalla lisähubipaikan tai [MocPilot Pron](/docs/Application/Account/Pro).
 - **Mould King** -hubit vain vastaanottavat komentoja (ei antureita eikä palautetta). Profiilissa voi käyttää vain yhtä Mould King -tyyppiä: enintään 3 Mould King 4.0 -hubia tai 1 Mould King 6.0 -hubin.
 - **Robot Inventor** -hubi (LEGO® Large Hub) ja **SPIKE Prime** -hubi (beta, SPIKE Legacy -laiteohjelmisto) käyttävät perinteistä Bluetoothia, eivätkä ne ole käytettävissä iPhonessa ja iPadissa. Windowsissa ja Macissa ne voi yhdistää myös USB-kaapelilla. Katso [MINDSTORMS Robot Inventor -hubi](/docs/Application/Hubs/RobotInventorHub).
+- **SPIKE Essential** -hubi (beta) yhdistetään Bluetooth Low Energyllä kuten Technic Hub: 2 porttia, valo, kallistus ja kiihtyvyys. Sekin tarvitsee SPIKE Legacy -laiteohjelmiston; hubeja, joissa on SPIKE App 3 -laiteohjelmisto, ei vielä tueta.
+- SPIKE Prime- ja SPIKE Essential -hubeilla on sovelluksessa merkintä **Beta**: niiden tuki on uusi, eikä sitä ole vielä tarkistettu jokaisella hubilla.
 - Laiteohjelmiston päivitys ja palautus ovat käytettävissä Technic Hubille, Technic Move Hubille, BOOST Move Hubille ja City Hubille. Katso [Laiteohjelmiston päivittäminen](/docs/Application/Hubs/FirmwareUpdating).
 - Mitä kukin hubi osaa moottorien ja valojen lisäksi, kerrotaan sivulla [Hubikohtaiset toiminnot](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ Enkooderilla varustetut moottorit (kulmamoottorit, Technic L ja XL) ilmoittavat 
 ## Anturit ja valot {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+**Voima-anturi** toimii Robot Inventor- ja SPIKE Prime -hubeissa: se mittaa, kuinka lujaa sitä painetaan (0–10 N), ja onko se painettu, painettu lujaa vai vapautettu. Katso [Robot Inventor -lohkot: voima-anturi](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). Se ei toimi Powered Up -hubeissa (Technic Hub, City Hub, BOOST).
 
 Myös hubien sisäänrakennettuja antureita (akku, kallistus, kiihtyvyys, lämpötila) sekä puhelimesi tai tablettisi antureita voi käyttää. Katso [Puhelimen anturit](/docs/Application/Dashboard/PhoneSensors).

@@ -489,6 +489,18 @@
     "message": "Inte tillgänglig på iOS",
     "description": "Shown in supported hubs table for Large Hub"
   },
+  "supportedDevices.spikePrimeHub.comment": {
+    "message": "Beta. SPIKE Legacy-firmware. Inte tillgänglig på iPhone och iPad",
+    "description": "Shown in supported hubs table for SPIKE Prime Hub"
+  },
+  "supportedDevices.spikeEssentialHub.comment": {
+    "message": "Beta",
+    "description": "Shown in supported hubs table for SPIKE Essential Hub"
+  },
+  "supportedDevices.forceSensor.comment": {
+    "message": "Endast Robot Inventor- och SPIKE Prime-hubbar",
+    "description": "Shown in supported sensors table for the Force Sensor"
+  },
   "theme.IconExternalLink.ariaLabel": {
     "message": "(öppnas i en ny flik)",
     "description": "The ARIA label for the external link icon"

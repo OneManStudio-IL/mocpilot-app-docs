@@ -19,6 +19,8 @@ Note:
 - Un profilo ha 5 slot per gli hub: 2 sono gratuiti, altri 3 si ottengono acquistando slot aggiuntivi o con [MocPilot Pro](/docs/Application/Account/Pro).
 - Gli hub **Mould King** ricevono solo comandi (niente sensori, nessun riscontro). In un profilo si può usare un solo tipo di Mould King: fino a 3 hub Mould King 4.0 oppure 1 Mould King 6.0.
 - L'hub **Robot Inventor** (LEGO® Large Hub) e l'hub **SPIKE Prime** (beta, firmware SPIKE Legacy) usano il Bluetooth classico e non sono disponibili su iPhone e iPad. Su Windows e Mac si collegano anche con un cavo USB. Vedi [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+- L'hub **SPIKE Essential** (beta) si collega tramite Bluetooth Low Energy, come il Technic Hub: 2 porte, una luce, inclinazione e accelerazione. Anche questo richiede il firmware SPIKE Legacy; gli hub con il firmware SPIKE App 3 non sono ancora supportati.
+- Gli hub SPIKE Prime e SPIKE Essential sono contrassegnati come **Beta** nell'app: il loro supporto è nuovo e non è ancora stato verificato su tutti gli hub.
 - L'aggiornamento e il ripristino del firmware sono disponibili per Technic Hub, Technic Move Hub, BOOST Move Hub e City Hub. Vedi [Aggiornamento del firmware](/docs/Application/Hubs/FirmwareUpdating).
 - Cosa sa fare ogni hub oltre a motori e luci è descritto in [Funzioni specifiche degli hub](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ I motori con encoder (motori angolari, Technic L e XL) riportano velocità e pos
 ## Sensori e luci {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+Il **Force Sensor** funziona con gli hub Robot Inventor e SPIKE Prime: misura quanto forte viene premuto (0–10 N) e se è premuto, premuto forte o rilasciato. Vedi [Blocchi Robot Inventor: Force Sensor](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). Non funziona con gli hub Powered Up (Technic Hub, City Hub, BOOST).
 
 Si possono usare anche i sensori integrati negli hub (batteria, inclinazione, accelerazione, temperatura) e i sensori del tuo smartphone o tablet. Vedi [Sensori dello smartphone](/docs/Application/Dashboard/PhoneSensors).

@@ -63,6 +63,28 @@ const devices = [
     }),
   },
   {
+    name: 'LEGO® SPIKE™ Prime Hub',
+    partNumber: '45601',
+    imgSrc: 'img/devices/spike_hub_p.webp',
+    alt: 'SPIKE Prime Hub',
+    comment: translate({
+      id: 'supportedDevices.spikePrimeHub.comment',
+      message: 'Beta. SPIKE Legacy firmware. Not available on iPhone and iPad',
+      description: 'Shown in supported hubs table for SPIKE Prime Hub',
+    }),
+  },
+  {
+    name: 'LEGO® SPIKE™ Essential Hub',
+    partNumber: '45609',
+    imgSrc: 'img/devices/essential_hub_p.webp',
+    alt: 'SPIKE Essential Hub',
+    comment: translate({
+      id: 'supportedDevices.spikeEssentialHub.comment',
+      message: 'Beta',
+      description: 'Shown in supported hubs table for SPIKE Essential Hub',
+    }),
+  },
+  {
     name: 'BuWizz® 2.0 Hub',
     partNumber: '',
     imgSrc: 'img/devices/buwizz2_hub_p.webp',
@@ -193,6 +215,17 @@ const sensors = [
     partNumber: '45605',
     imgSrc: 'img/devices/technic_color_sensor.webp',
     alt: 'technic hub',
+  },
+  {
+    name: 'Force Sensor',
+    partNumber: '45606',
+    imgSrc: 'img/devices/force_sensor.webp',
+    alt: 'force sensor',
+    comment: translate({
+      id: 'supportedDevices.forceSensor.comment',
+      message: 'Robot Inventor and SPIKE Prime hubs only',
+      description: 'Shown in supported sensors table for the Force Sensor',
+    }),
   },
   {
     name: 'WeDo 2.0 Tilt Sensor',

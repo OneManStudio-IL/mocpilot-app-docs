@@ -19,6 +19,8 @@ Uwagi:
 - Profil ma 5 slotów na huby: 2 są bezpłatne, 3 kolejne otrzymujesz, kupując dodatkowy slot na hub lub [MocPilot Pro](/docs/Application/Account/Pro).
 - Huby **Mould King** tylko odbierają polecenia (bez czujników i bez informacji zwrotnej). W jednym profilu można używać tylko jednego typu Mould King: do 3 hubów Mould King 4.0 albo 1 Mould King 6.0.
 - Hub **Robot Inventor** (LEGO® Large Hub) i hub **SPIKE Prime** (beta, firmware SPIKE Legacy) korzystają z klasycznego Bluetooth i nie są dostępne na iPhonie i iPadzie. W Windows i na Macu łączą się też kablem USB. Zobacz [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+- Hub **SPIKE Essential** (beta) łączy się przez Bluetooth Low Energy, tak jak Technic Hub: 2 porty, światło, nachylenie i przyspieszenie. On również wymaga firmware SPIKE Legacy; huby z firmware SPIKE App 3 nie są jeszcze obsługiwane.
+- Huby SPIKE Prime i SPIKE Essential są w aplikacji oznaczone jako **Beta**: ich obsługa jest nowa i nie została jeszcze sprawdzona na każdym hubie.
 - Aktualizacja i odzyskiwanie firmware są dostępne dla Technic Hub, Technic Move Hub, BOOST Move Hub i City Hub. Zobacz [Aktualizacja firmware](/docs/Application/Hubs/FirmwareUpdating).
 - Co poza silnikami i światłami potrafi każdy hub, opisuje artykuł [Funkcje poszczególnych hubów](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ Silniki z enkoderem (silniki kątowe, Technic L i XL) podają prędkość i pozy
 ## Czujniki i światła {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+**Czujnik siły** działa z hubami Robot Inventor i SPIKE Prime: mierzy, jak mocno jest naciśnięty (0–10 N), oraz czy jest naciśnięty, mocno naciśnięty czy zwolniony. Zobacz [Bloki Robot Inventor: czujnik siły](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). Nie działa z hubami Powered Up (Technic Hub, City Hub, BOOST).
 
 Można też korzystać z wbudowanych czujników hubów (bateria, nachylenie, przyspieszenie, temperatura) oraz czujników telefonu lub tabletu. Zobacz [Czujniki telefonu](/docs/Application/Dashboard/PhoneSensors).

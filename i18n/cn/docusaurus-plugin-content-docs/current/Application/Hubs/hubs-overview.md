@@ -14,6 +14,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: 110}} /><div>Technic Hub</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: 110}} /><div>Technic Move</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: 110}} /><div>City Hub</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/spike_hub_p.webp')} alt="SPIKE Prime Hub" style={{maxWidth: 110}} /><div>SPIKE Prime</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/essential_hub_p.webp')} alt="SPIKE Essential Hub" style={{maxWidth: 110}} /><div>SPIKE Essential</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro" style={{maxWidth: 110}} /><div>BuWizz 3.0</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick" style={{maxWidth: 110}} /><div>SBrick</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King" style={{maxWidth: 110}} /><div>Mould King</div></div>
@@ -30,6 +32,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | LEGO® Remote Control (88010) | 它的按钮可作为输入 |
 | LEGO® WeDo 2.0 Smart Hub | 2 个端口 |
 | LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 个端口，灯光点阵，扬声器，陀螺仪；蓝牙或 USB；不支持 iPhone 和 iPad |
+| LEGO® SPIKE™ Prime Hub (45601) | 测试版；与 Robot Inventor 相同的集线器，搭载 SPIKE Legacy 固件；蓝牙或 USB；不支持 iPhone 和 iPad |
+| LEGO® SPIKE™ Essential Hub (45609) | 测试版；2 个端口，灯光，倾斜和加速度；低功耗蓝牙 |
 | BuWizz 2.0 | 4 个端口，功率模式 |
 | BuWizz 3.0 Pro | 6 个端口，端口彩色 LED |
 | SBrick、SBrick Plus | 4 个端口，速度控制，不支持位置控制 |

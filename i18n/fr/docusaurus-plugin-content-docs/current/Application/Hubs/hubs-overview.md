@@ -14,6 +14,8 @@ Un **Hub** est la brique Bluetooth de votre modèle : moteurs, lumières et capt
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: 110}} /><div>Technic Hub</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: 110}} /><div>Technic Move</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: 110}} /><div>City Hub</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/spike_hub_p.webp')} alt="SPIKE Prime Hub" style={{maxWidth: 110}} /><div>SPIKE Prime</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/essential_hub_p.webp')} alt="SPIKE Essential Hub" style={{maxWidth: 110}} /><div>SPIKE Essential</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro" style={{maxWidth: 110}} /><div>BuWizz 3.0</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick" style={{maxWidth: 110}} /><div>SBrick</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King" style={{maxWidth: 110}} /><div>Mould King</div></div>
@@ -30,6 +32,8 @@ Un **Hub** est la brique Bluetooth de votre modèle : moteurs, lumières et capt
 | LEGO® Remote Control (88010) | ses boutons sont des entrées |
 | LEGO® WeDo 2.0 Smart Hub | 2 ports |
 | LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 ports, matrice lumineuse, haut-parleur, gyroscope ; Bluetooth ou USB ; non disponible sur iPhone et iPad |
+| LEGO® SPIKE™ Prime Hub (45601) | bêta ; le même hub que Robot Inventor avec le firmware SPIKE Legacy ; Bluetooth ou USB ; non disponible sur iPhone et iPad |
+| LEGO® SPIKE™ Essential Hub (45609) | bêta ; 2 ports, lumière, inclinaison et accélération ; Bluetooth Low Energy |
 | BuWizz 2.0 | 4 ports, modes de puissance |
 | BuWizz 3.0 Pro | 6 ports, LED de couleur des ports |
 | SBrick, SBrick Plus | 4 ports, contrôle de la vitesse, pas de contrôle de position |

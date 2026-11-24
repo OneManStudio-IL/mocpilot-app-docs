@@ -14,6 +14,8 @@ Un **Hub** este cărămida Bluetooth a modelului: motoarele, luminile și senzor
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: 110}} /><div>Technic Hub</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: 110}} /><div>Technic Move</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: 110}} /><div>City Hub</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/spike_hub_p.webp')} alt="SPIKE Prime Hub" style={{maxWidth: 110}} /><div>SPIKE Prime</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/essential_hub_p.webp')} alt="SPIKE Essential Hub" style={{maxWidth: 110}} /><div>SPIKE Essential</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro" style={{maxWidth: 110}} /><div>BuWizz 3.0</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick" style={{maxWidth: 110}} /><div>SBrick</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King" style={{maxWidth: 110}} /><div>Mould King</div></div>
@@ -30,6 +32,8 @@ Un **Hub** este cărămida Bluetooth a modelului: motoarele, luminile și senzor
 | LEGO® Remote Control (88010) | butoanele sale sunt intrări |
 | LEGO® WeDo 2.0 Smart Hub | 2 porturi |
 | LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 porturi, matrice de lumini, difuzor, giroscop; Bluetooth sau USB; nu este disponibil pe iPhone și iPad |
+| LEGO® SPIKE™ Prime Hub (45601) | beta; același hub ca Robot Inventor, cu firmware-ul SPIKE Legacy; Bluetooth sau USB; nu este disponibil pe iPhone și iPad |
+| LEGO® SPIKE™ Essential Hub (45609) | beta; 2 porturi, lumină, înclinare și accelerație; Bluetooth Low Energy |
 | BuWizz 2.0 | 4 porturi, moduri de putere |
 | BuWizz 3.0 Pro | 6 porturi, LED-uri de culoare pe porturi |
 | SBrick, SBrick Plus | 4 porturi, controlul vitezei, fără controlul poziției |

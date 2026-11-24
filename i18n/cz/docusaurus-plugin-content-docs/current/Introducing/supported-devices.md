@@ -19,6 +19,8 @@ Poznámky:
 - Profil má 5 slotů pro huby: 2 jsou zdarma, další 3 získáte nákupem dodatečného slotu pro hub nebo s [MocPilot Pro](/docs/Application/Account/Pro).
 - Huby **Mould King** pouze přijímají příkazy (žádné senzory, žádná zpětná vazba). V jednom profilu lze použít jen jeden typ Mould King: až 3 huby Mould King 4.0, nebo 1 Mould King 6.0.
 - Hub **Robot Inventor** (LEGO® Large Hub) a hub **SPIKE Prime** (beta, firmware SPIKE Legacy) používají klasické Bluetooth a na iPhonu a iPadu nejsou k dispozici. Ve Windows a na Macu se připojují i kabelem USB. Viz [Hub MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub).
+- Hub **SPIKE Essential** (beta) se připojuje přes Bluetooth Low Energy, stejně jako Technic Hub: 2 porty, světlo, náklon a zrychlení. I on potřebuje firmware SPIKE Legacy; huby s firmwarem SPIKE App 3 zatím podporovány nejsou.
+- Huby SPIKE Prime a SPIKE Essential jsou v aplikaci označeny jako **Beta**: jejich podpora je nová a zatím nebyla ověřena na všech hubech.
 - Aktualizace a obnovení firmwaru jsou k dispozici pro Technic Hub, Technic Move Hub, BOOST Move Hub a City Hub. Viz [Aktualizace firmwaru](/docs/Application/Hubs/FirmwareUpdating).
 - Co jednotlivé huby umí kromě motorů a světel, popisuje článek [Funkce jednotlivých hubů](/docs/Application/Hubs/HubFunctions).
 
@@ -31,5 +33,7 @@ Motory s enkodérem (úhlové motory, Technic L a XL) hlásí rychlost a polohu,
 ## Senzory a světla {#sensors-and-lights}
 
 <SupportedSensorsTable />
+
+**Senzor síly** funguje s huby Robot Inventor a SPIKE Prime: měří, jak silně je stisknutý (0–10 N), a zda je stisknutý, silně stisknutý nebo uvolněný. Viz [Bloky Robot Inventor: senzor síly](/docs/Application/BlockBuilder/Blocks/Sensors#robot-inventor-force-sensor). S huby Powered Up (Technic Hub, City Hub, BOOST) nefunguje.
 
 Používat lze také vestavěné senzory hubů (baterie, náklon, zrychlení, teplota) a senzory vašeho telefonu nebo tabletu. Viz [Senzory telefonu](/docs/Application/Dashboard/PhoneSensors).

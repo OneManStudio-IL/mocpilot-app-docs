@@ -14,6 +14,8 @@ En **hub** er Bluetooth-klossen i modellen din: motorer, lys og sensorer kobles 
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_hub_p.webp')} alt="Technic Hub" style={{maxWidth: 110}} /><div>Technic Hub</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/technic_move_hub_p.webp')} alt="Technic Move Hub" style={{maxWidth: 110}} /><div>Technic Move</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/city_hub_p.webp')} alt="City Hub" style={{maxWidth: 110}} /><div>City Hub</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/spike_hub_p.webp')} alt="SPIKE Prime Hub" style={{maxWidth: 110}} /><div>SPIKE Prime</div></div>
+  <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/essential_hub_p.webp')} alt="SPIKE Essential Hub" style={{maxWidth: 110}} /><div>SPIKE Essential</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/buwizz3_hub_p.webp')} alt="BuWizz 3.0 Pro" style={{maxWidth: 110}} /><div>BuWizz 3.0</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/sbrick_hub_p.webp')} alt="SBrick" style={{maxWidth: 110}} /><div>SBrick</div></div>
   <div style={{textAlign: 'center'}}><img src={useBaseUrl('/img/devices/mould_king_4_p.webp')} alt="Mould King" style={{maxWidth: 110}} /><div>Mould King</div></div>
@@ -30,6 +32,8 @@ En **hub** er Bluetooth-klossen i modellen din: motorer, lys og sensorer kobles 
 | LEGO® Remote Control (88010) | knappene er innganger |
 | LEGO® WeDo 2.0 Smart Hub | 2 porter |
 | LEGO® Large Hub / [Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (88016) | 6 porter, lysmatrise, høyttaler, gyroskop; Bluetooth eller USB; ikke på iPhone og iPad |
+| LEGO® SPIKE™ Prime Hub (45601) | beta; samme hub som Robot Inventor med SPIKE Legacy-fastvaren; Bluetooth eller USB; ikke på iPhone og iPad |
+| LEGO® SPIKE™ Essential Hub (45609) | beta; 2 porter, lys, helling og akselerasjon; Bluetooth Low Energy |
 | BuWizz 2.0 | 4 porter, effektmoduser |
 | BuWizz 3.0 Pro | 6 porter, LED-er med portfarge |
 | SBrick, SBrick Plus | 4 porter, hastighetsstyring, ingen posisjonsstyring |
