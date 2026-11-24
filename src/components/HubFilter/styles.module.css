@@ -1,0 +1,150 @@
+.bar {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  margin: 0 0 1.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+}
+
+.label {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.all {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.1rem 0.25rem 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-gray-900);
+  white-space: nowrap;
+}
+
+.chipRemove {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+  opacity: 0.7;
+}
+
+.chipRemove:hover {
+  opacity: 1;
+}
+
+.more {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.chooseButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.chooseButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.caret {
+  font-size: 0.75em;
+}
+
+.linkButton {
+  border: 0;
+  background: transparent;
+  padding: 0.2rem 0.3rem;
+  color: var(--ifm-link-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+.count {
+  margin-left: auto;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85em;
+}
+
+/* Drop-down under the bar: it covers the content instead of pushing it, so the bar height stays the same */
+.panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -1px;
+  right: -1px;
+  padding: 0.75rem;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 0.3rem 1rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+
+.option input {
+  margin: 0;
+  accent-color: var(--ifm-color-primary);
+}
+
+.panelFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.note {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85em;
+}
+
+.empty {
+  margin-top: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+  font-style: italic;
+}

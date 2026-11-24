@@ -77,3 +77,13 @@ html[data-theme="dark"] {
 [class*='colorModeToggle'] {
   display: none !important;
 }
+
+/* Hub filter on the block pages (src/components/HubFilter) */
+[data-hub-hidden] {
+  display: none !important;
+}
+
+/* Anchor links land below the sticky filter bar; --hub-filter-height is 0 on pages without the bar */
+.theme-doc-markdown .anchor {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + var(--hub-filter-height, 0px) + 0.5rem);
+}

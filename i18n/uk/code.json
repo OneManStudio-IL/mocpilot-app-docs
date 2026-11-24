@@ -650,5 +650,41 @@
   "howItWorks.bluetooth": {
     "message": "через Bluetooth",
     "description": "How it works diagram"
+  },
+  "hubFilter.label": {
+    "message": "Показати блоки для:",
+    "description": "Block pages: label before the hubs chosen in the hub filter bar"
+  },
+  "hubFilter.removeHub": {
+    "message": "Прибрати",
+    "description": "Block pages: tooltip of the x on a chosen hub in the hub filter bar"
+  },
+  "hubFilter.allHubs": {
+    "message": "усіх хабів",
+    "description": "Block pages: shown in the hub filter bar when no hub is chosen"
+  },
+  "hubFilter.choose": {
+    "message": "Вибрати хаби",
+    "description": "Block pages: button that opens the hub list of the hub filter bar"
+  },
+  "hubFilter.showAll": {
+    "message": "Показати всі",
+    "description": "Block pages: button that clears the hub filter"
+  },
+  "hubFilter.hiddenCount": {
+    "message": "Приховано блоків: {count}",
+    "description": "Block pages: how many blocks of this page the hub filter hides"
+  },
+  "hubFilter.note": {
+    "message": "Блоки, які працюють з будь-яким хабом, показуються завжди.",
+    "description": "Block pages: note under the hub list of the hub filter bar"
+  },
+  "hubFilter.done": {
+    "message": "Готово",
+    "description": "Block pages: button that closes the hub list of the hub filter bar"
+  },
+  "hubFilter.empty": {
+    "message": "На цій сторінці немає блоків для вибраних хабів.",
+    "description": "Block pages: shown when the hub filter hides every hub block of the page"
   }
 }

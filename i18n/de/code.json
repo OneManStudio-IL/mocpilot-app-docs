@@ -650,5 +650,41 @@
   "howItWorks.bluetooth": {
     "message": "über Bluetooth",
     "description": "How it works diagram"
+  },
+  "hubFilter.label": {
+    "message": "Blöcke anzeigen für:",
+    "description": "Block pages: label before the hubs chosen in the hub filter bar"
+  },
+  "hubFilter.removeHub": {
+    "message": "Entfernen",
+    "description": "Block pages: tooltip of the x on a chosen hub in the hub filter bar"
+  },
+  "hubFilter.allHubs": {
+    "message": "alle Hubs",
+    "description": "Block pages: shown in the hub filter bar when no hub is chosen"
+  },
+  "hubFilter.choose": {
+    "message": "Hubs auswählen",
+    "description": "Block pages: button that opens the hub list of the hub filter bar"
+  },
+  "hubFilter.showAll": {
+    "message": "Alle anzeigen",
+    "description": "Block pages: button that clears the hub filter"
+  },
+  "hubFilter.hiddenCount": {
+    "message": "Ausgeblendete Blöcke: {count}",
+    "description": "Block pages: how many blocks of this page the hub filter hides"
+  },
+  "hubFilter.note": {
+    "message": "Blöcke, die mit jedem Hub funktionieren, werden immer angezeigt.",
+    "description": "Block pages: note under the hub list of the hub filter bar"
+  },
+  "hubFilter.done": {
+    "message": "Fertig",
+    "description": "Block pages: button that closes the hub list of the hub filter bar"
+  },
+  "hubFilter.empty": {
+    "message": "Auf dieser Seite gibt es keine Blöcke für die gewählten Hubs.",
+    "description": "Block pages: shown when the hub filter hides every hub block of the page"
   }
 }

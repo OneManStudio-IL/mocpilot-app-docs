@@ -650,5 +650,41 @@
   "howItWorks.bluetooth": {
     "message": "Bluetooth 経由",
     "description": "How it works diagram"
+  },
+  "hubFilter.label": {
+    "message": "表示するハブ：",
+    "description": "Block pages: label before the hubs chosen in the hub filter bar"
+  },
+  "hubFilter.removeHub": {
+    "message": "外す",
+    "description": "Block pages: tooltip of the x on a chosen hub in the hub filter bar"
+  },
+  "hubFilter.allHubs": {
+    "message": "すべてのハブ",
+    "description": "Block pages: shown in the hub filter bar when no hub is chosen"
+  },
+  "hubFilter.choose": {
+    "message": "ハブを選ぶ",
+    "description": "Block pages: button that opens the hub list of the hub filter bar"
+  },
+  "hubFilter.showAll": {
+    "message": "すべて表示",
+    "description": "Block pages: button that clears the hub filter"
+  },
+  "hubFilter.hiddenCount": {
+    "message": "非表示のブロック：{count}",
+    "description": "Block pages: how many blocks of this page the hub filter hides"
+  },
+  "hubFilter.note": {
+    "message": "どのハブでも使えるブロックは常に表示されます。",
+    "description": "Block pages: note under the hub list of the hub filter bar"
+  },
+  "hubFilter.done": {
+    "message": "完了",
+    "description": "Block pages: button that closes the hub list of the hub filter bar"
+  },
+  "hubFilter.empty": {
+    "message": "このページには、選んだハブのブロックがありません。",
+    "description": "Block pages: shown when the hub filter hides every hub block of the page"
   }
 }
