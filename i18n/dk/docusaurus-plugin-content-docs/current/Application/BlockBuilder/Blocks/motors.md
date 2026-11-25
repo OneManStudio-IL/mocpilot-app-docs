@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Motorblokke starter, stopper og positionerer motorer, der er tilsluttet hubbens porte, og justerer, hvordan de bevæger sig. Kategorien vises, når en hub i profilen har motorporte. I hver blok vælger du hubben og en eller flere porte.
 
-Nogle blokke kræver en motor med indbygget rotationssensor (encoder), for eksempel Technic-vinkelmotorerne, og en hub, der kan styre den. Disse blokke er markeret med »encodermotorer«. De er ikke tilgængelige for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 og Mould King-hubs. Technic Move Hub har sit eget sæt blokke sidst på denne side.
+Nogle blokke kræver en motor med indbygget rotationssensor (encoder), for eksempel Technic-vinkelmotorerne, og en hub, der kan styre den. Disse blokke er markeret med »encodermotorer«. De er ikke tilgængelige for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 og Mould King-hubs. Technic Move Hub virker også med disse blokke (dens motorer er portene `A`, `B` og `C`) og har desuden sine egne bilprofilblokke: se [Technic Move Hub](#technic-move-hub) sidst på denne side.
 
 ## Kør motorer {#running-motors}
 
@@ -80,7 +80,7 @@ Erklærer motorens aktuelle position for at være den angivne værdi. Relative p
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Finder midten og vandringen for en styretandstang.
 
-- Motoren drejer tandstangen til begge ender, måler, hvor langt den kan komme, og lægger resultatet i de to variabler, du sætter ind i felterne: midterpositionen og området i grader. Tandstangen stopper i midten, men dens relative position dér er lig med centerværdien, ikke 0, så tilføj **indstil relativ position** 0 lige efter denne blok; styr derefter med `område × joystick / 100`.
+- Motoren drejer tandstangen til begge ender, måler, hvor langt den kan komme, og lægger resultatet i de to variabler, du sætter ind i felterne: midterpositionen og området i grader (fra midten til den ene ende). Tandstangen stopper i midten, og det punkt bliver relativ position 0: styr med **gå til relativ position** `område × joystick / 100`.
 - Styretøjet skal have faste mekaniske stop i begge ender (enden af tandstangen eller gearingen).
 - Kun encodermotorer.
 
@@ -153,7 +153,14 @@ Starter motorerne på de valgte porte med den angivne effekt fra −100 til 100 
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub driver sine indbyggede motorer med disse blokke i stedet for portblokkene ovenfor.
+Technic Move Hub (i de fjernstyrede LEGO® Technic-biler) kan programmeres på to måder:
+
+- **Portblokke** (motorblokkene ovenfor). Hubbens tre indbyggede motorer er porte: `A` og `B` er drivmotorerne, `C` er styremotoren. De er encodermotorer, så alle motorblokkene ovenfor virker på dem undtagen **tænd for blokering registrering** og **effekt**. I LEGO-bilmodellerne drejer `A` den modsatte vej af `B` for at køre fremad, og styringen på `C` har endestop: Kør **kalibrer tandstang** på `C` én gang, og styr derefter med **gå til relativ position** på `C` (0 er midten). Hubbens seks lys er portene `1`–`6` i [lysblokkene](/docs/Application/BlockBuilder/Blocks/Light), og dens blokke til [hældning, acceleration og orientering](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) virker som på Technic Hub.
+- **Bilprofilblokke** (nedenfor): kørsel, styring, bremse, kraftimpuls, lys og effekttilstand via den bilkonfiguration, der er indlæst i hubben. Se [Technic Move Hub-konfigurationer](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Brug én måde pr. hub
+Profilblokkene og portblokkene styrer de samme motorer og lys: Den sidste kommando vinder, og en profilblok tager motorerne og lysene tilbage. Programkontrollen i blokeditoren advarer om det på hver portblok for den hub: »… styres både af blokkene i bilprofilen og af portblokke«.
+:::
 
 ### `start motorer ved … % hastighed` (Begynder) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

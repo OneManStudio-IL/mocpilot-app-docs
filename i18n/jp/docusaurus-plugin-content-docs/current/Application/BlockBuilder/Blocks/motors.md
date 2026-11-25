@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 モーターブロックは、ハブのポートにつないだモーターの起動・停止・位置決めを行い、動き方を調整します。このカテゴリーは、プロフィール内のハブにモーター用のポートがあるときに表示されます。どのブロックでも、ハブと 1 つ以上のポートを選びます。
 
-一部のブロックには、Technic アンギュラーモーターのような回転センサー（エンコーダー）内蔵のモーターと、それを制御できるハブが必要です。これらのブロックには「エンコーダー付きモーター」と記載しています。SBrick、SBrick Plus、BuWizz 2、WeDo 2.0、Mould King のハブでは使えません。Technic Move Hub 専用のブロックは、このページの最後で紹介します。
+一部のブロックには、Technic アンギュラーモーターのような回転センサー（エンコーダー）内蔵のモーターと、それを制御できるハブが必要です。これらのブロックには「エンコーダー付きモーター」と記載しています。SBrick、SBrick Plus、BuWizz 2、WeDo 2.0、Mould King のハブでは使えません。Technic Move Hub もこれらのブロックで使えます（モーターはポート `A`、`B`、`C` です）。さらに、専用の車のプロフィールブロックもあります。このページの最後の [Technic Move Hub](#technic-move-hub) を参照してください。
 
 ## モーターを動かす {#running-motors}
 
@@ -80,7 +80,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 ステアリングラックの中心と可動範囲を求めます。
 
-- モーターがラックを両端まで動かして可動範囲を測り、欄に置いた 2 つの変数に結果を入れます。中心位置と、度単位の範囲です。ラックは中央で止まりますが、そこでの相対位置は 0 ではなく中心の値になります。そのため、このブロックの直後に **相対位置を設定** 0 を置いてください。あとは `範囲 × ジョイスティック / 100` でステアリングを操作します。
+- モーターがラックを両端まで動かして可動範囲を測り、欄に置いた 2 つの変数に結果を入れます。中心位置と、度単位の範囲（中心から片側の端まで）です。ラックは中央で止まり、その位置が相対位置 0 になります。あとは **相対位置へ移動** `範囲 × ジョイスティック / 100` でステアリングを操作します。
 - ステアリングの両端には、機械的なしっかりしたストッパー（ラックの端やギアの限界）が必要です。
 - エンコーダー付きモーター専用です。
 
@@ -153,7 +153,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub は、上記のポート用ブロックではなく、以下のブロックで内蔵モーターを動かします。
+Technic Move Hub（LEGO® Technic のリモコンカーのハブ）は、2 通りの方法でプログラムできます。
+
+- **ポートブロック**（上記のモーターブロック）。ハブの 3 つの内蔵モーターがポートになります。`A` と `B` が駆動モーター、`C` がステアリングモーターです。エンコーダー付きモーターなので、上記のモーターブロックは **スタール検出を有効にする** と **電力** 以外すべて使えます。LEGO の車のモデルでは、前進するとき `A` は `B` と逆向きに回ります。また、`C` のステアリングには端のストッパーがあります。`C` で **ラックをキャリブレーション** を一度実行し、そのあと `C` で **相対位置へ移動** を使ってステアリングを操作します（0 が中心）。ハブの 6 つのライトは[ライトブロック](/docs/Application/BlockBuilder/Blocks/Light)のポート `1`–`6` で、[傾き、加速度、向き](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation)のブロックは Technic Hub と同じように使えます。
+- **車のプロフィールブロック**（以下）：走行、ステアリング、ブレーキ、パワーパルス、ライト、パワーモードを、ハブに読み込んだ車の構成を通じて操作します。[Technic Move Hub の構成](/docs/Application/Hubs/TechnicMoveHubConfigurations)を参照してください。
+
+:::caution 1 つのハブには 1 つの方法で
+プロフィールブロックとポートブロックは同じモーターとライトに命令します。最後の命令が優先され、プロフィールブロックはモーターとライトの制御を取り戻します。ブロックエディターのプログラムチェックは、そのハブのすべてのポートブロックで次の警告を出します：「… は車のプロファイルブロックとポートブロックの両方で制御されています」。
+:::
 
 ### `モーターを起動 … 速度 %` (初心者) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

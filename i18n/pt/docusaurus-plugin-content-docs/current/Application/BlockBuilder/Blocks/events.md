@@ -95,7 +95,7 @@ Estes blocos aparecem quando algum hub do perfil os suporta. Eles não existem p
 
 É executado quando os valores do acelerômetro do hub mudam.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `quando … inclinação … ângulo alterado` (Iniciante) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Estes blocos aparecem quando algum hub do perfil os suporta. Eles não existem p
 É executado quando o ângulo de inclinação do hub muda.
 
 - Opções de ângulo: `qualquer`, `inclinação`, `rotação`, `guinada`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `guinada` só está disponível no Technic Hub e no Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `guinada` só está disponível no Technic Hub e no Robot Inventor.
 
 ### `quando … orientação alterada` (Iniciante) {#block_hubs_all_event_tilt_orientation_changed}
 

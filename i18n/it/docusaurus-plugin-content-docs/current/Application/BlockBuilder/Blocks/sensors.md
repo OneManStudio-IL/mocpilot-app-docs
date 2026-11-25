@@ -60,7 +60,7 @@ Imposta la modalità di potenza di un Technic Move Hub.
 
 ## Pulsanti, inclinazione e orientamento dell'hub {#hub-tilt-and-orientation}
 
-Il blocco del pulsante elenca gli hub con cui funziona. I blocchi di inclinazione e orientamento funzionano su BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub e Robot Inventor.
+Il blocco del pulsante elenca gli hub con cui funziona. I blocchi di inclinazione e orientamento funzionano su BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub e Robot Inventor. Sul Technic Move Hub vengono calcolati dal suo accelerometro per l'hub montato con il pulsante verso il basso, come nei modelli di auto LEGO; non ha `imbardata` né **impostare … orientamento inclinato a …**.
 
 ### `è … … pulsante …` (Principiante) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Restituisce `true` quando il lato selezionato dell'hub è rivolto verso l'alto.
 Indica all'hub come è montato nel modello, così inclinazione e orientamento vengono misurati a partire da quella posizione.
 
 - Opzioni: `Davanti`, `Superiore`, `Destra`, `Posteriore`, `Fondo`, `Sinistra`
+- Non disponibile per il Technic Move Hub.
 
 ## Sensori sulle porte {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ I blocchi per i sensori Technic e BOOST qui sotto funzionano su City Hub, Techni
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Restituisce il tipo del dispositivo collegato alla porta selezionata.
 
-- Hub: tutti gli hub con porte tranne SBrick, SBrick Plus e BuWizz 2.
+- Hub: tutti gli hub con porte tranne SBrick, SBrick Plus, BuWizz 2 e Technic Move Hub.
 - Uso tipico: verificare che cosa è collegato prima di eseguire blocchi specifici per un dispositivo.
 
 ### Technic Color Sensor {#technic-color-sensor}

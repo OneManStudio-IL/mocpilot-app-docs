@@ -95,7 +95,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 当集线器的加速度计数值变化时运行。
 
-- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。
+- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub、Robot Inventor。
 
 ### `当 … 倾斜 … 角度已更改`（初学者） {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 当集线器的倾斜角度变化时运行。
 
 - 角度选项：`任何`、`俯仰`、`滚转`、`偏航`
-- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。`偏航` 仅在 Technic Hub 和 Robot Inventor 上可用。
+- 集线器：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub、Robot Inventor。`偏航` 仅在 Technic Hub 和 Robot Inventor 上可用。
 
 ### `当 … 方向已更改`（初学者） {#block_hubs_all_event_tilt_orientation_changed}
 

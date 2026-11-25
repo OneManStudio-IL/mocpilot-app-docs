@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 I blocchi Motori avviano, fermano e posizionano i motori collegati alle porte degli hub e regolano il modo in cui si muovono. La categoria compare quando un hub del profilo ha porte per motori. In ogni blocco scegli l'hub e una o più porte.
 
-Alcuni blocchi richiedono un motore con sensore di rotazione integrato (encoder), come i motori angolari Technic, e un hub in grado di controllarlo. Questi blocchi sono indicati come «motori con encoder». Non sono disponibili per gli hub SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 e Mould King. Il Technic Move Hub ha un proprio insieme di blocchi, in fondo a questa pagina.
+Alcuni blocchi richiedono un motore con sensore di rotazione integrato (encoder), come i motori angolari Technic, e un hub in grado di controllarlo. Questi blocchi sono indicati come «motori con encoder». Non sono disponibili per gli hub SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 e Mould King. Anche il Technic Move Hub funziona con questi blocchi (i suoi motori sono le porte `A`, `B` e `C`) e ha inoltre i propri blocchi del profilo auto: vedi [Technic Move Hub](#technic-move-hub) in fondo a questa pagina.
 
 ## Far girare i motori {#running-motors}
 
@@ -80,7 +80,7 @@ Dichiara che la posizione attuale del motore corrisponde al valore indicato. Le 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Trova il centro e la corsa di una cremagliera dello sterzo.
 
-- Il motore porta la cremagliera fino a entrambe le estremità, misura quanto può spostarsi e mette il risultato nelle due variabili che inserisci negli spazi: la posizione del centro e l'escursione in gradi. La cremagliera si ferma al centro, ma lì la sua posizione relativa vale quanto il centro, non 0, quindi aggiungi **imposta posizione relativa** 0 subito dopo questo blocco; poi sterza con `escursione × joystick / 100`.
+- Il motore porta la cremagliera fino a entrambe le estremità, misura quanto può spostarsi e mette il risultato nelle due variabili che inserisci negli spazi: la posizione del centro e l'escursione in gradi (dal centro a un'estremità). La cremagliera si ferma al centro, e quel punto diventa la posizione relativa 0: poi sterza con **vai alla posizione relativa** `escursione × joystick / 100`.
 - Lo sterzo deve avere finecorsa meccanici rigidi a entrambe le estremità (la fine della cremagliera o degli ingranaggi).
 - Solo motori con encoder.
 
@@ -153,7 +153,14 @@ Avvia i motori sulle porte selezionate alla potenza indicata, da −100 a 100 % 
 
 ## Technic Move Hub {#technic-move-hub}
 
-Il Technic Move Hub comanda i suoi motori integrati con questi blocchi al posto dei blocchi per le porte descritti sopra.
+Il Technic Move Hub (nelle auto radiocomandate LEGO® Technic) si può programmare in due modi:
+
+- **Blocchi per le porte** (i blocchi Motori descritti sopra). I tre motori integrati dell'hub sono porte: `A` e `B` sono i motori di trazione, `C` è il motore dello sterzo. Sono motori con encoder, quindi tutti i blocchi Motori descritti sopra funzionano con essi, tranne **attivare il rilevamento del blocco** e **potenza**. Nei modelli di auto LEGO, `A` gira nel verso opposto a `B` per andare avanti, e lo sterzo su `C` ha dei finecorsa: esegui una volta **calibrare cremagliera** su `C`, poi sterza con **vai alla posizione relativa** su `C` (0 è il centro). Le sei luci dell'hub sono le porte `1`–`6` dei [blocchi Luce](/docs/Application/BlockBuilder/Blocks/Light), e i suoi blocchi di [inclinazione, accelerazione e orientamento](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) funzionano come sul Technic Hub.
+- **Blocchi del profilo auto** (qui sotto): trazione, sterzo, freno, impulso di potenza, luci e modalità di potenza, tramite la configurazione dell'auto caricata nell'hub. Vedi [Configurazioni del Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Un solo modo per hub
+I blocchi del profilo e i blocchi per le porte comandano gli stessi motori e le stesse luci: vince l'ultimo comando, e un blocco del profilo riprende il controllo di motori e luci. Il controllo del programma nell'editor dei blocchi lo segnala su ogni blocco per le porte di quell'hub: «… è controllato sia dai blocchi del suo profilo auto sia da blocchi delle porte».
+:::
 
 ### `avvia i motori a … % velocità` (Principiante) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

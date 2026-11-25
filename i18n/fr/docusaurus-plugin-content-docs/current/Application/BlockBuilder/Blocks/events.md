@@ -95,7 +95,7 @@ S’exécute lorsque le niveau de batterie signalé par le hub change.
 
 S’exécute lorsque les valeurs de l’accéléromètre du hub changent.
 
-- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `quand … inclinaison … l’angle a changé` (Débutant) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ S’exécute lorsque les valeurs de l’accéléromètre du hub changent.
 S’exécute lorsque l’angle d’inclinaison du hub change.
 
 - Angles possibles : `n'importe quel côté`, `tangage`, `roulis`, `lacet`
-- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `lacet` n’est disponible que sur le Technic Hub et le Robot Inventor.
+- Hubs : BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `lacet` n’est disponible que sur le Technic Hub et le Robot Inventor.
 
 ### `quand … l’orientation a changé` (Débutant) {#block_hubs_all_event_tilt_orientation_changed}
 

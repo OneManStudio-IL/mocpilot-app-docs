@@ -95,7 +95,7 @@ Suoritetaan, kun hubin ilmoittama akun taso muuttuu.
 
 Suoritetaan, kun hubin kiihtyvyysanturin arvot muuttuvat.
 
-- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `kun … kallistus … kulma muuttui` (Aloittelija) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Suoritetaan, kun hubin kiihtyvyysanturin arvot muuttuvat.
 Suoritetaan, kun hubin kallistuskulma muuttuu.
 
 - Kulmavaihtoehdot: `mikä tahansa`, `nyökkäys`, `kallistus`, `kääntö`
-- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `Kääntö` on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
+- Hubit: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `Kääntö` on käytettävissä vain Technic Hubissa ja Robot Inventorissa.
 
 ### `kun … suunta muuttui` (Aloittelija) {#block_hubs_all_event_tilt_orientation_changed}
 

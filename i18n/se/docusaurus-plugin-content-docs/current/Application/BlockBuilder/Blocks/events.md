@@ -95,7 +95,7 @@ Körs när batterinivån som hubben rapporterar ändras.
 
 Körs när hubbens accelerometervärden ändras.
 
-- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `när … lutning … vinkel har ändrats` (Nybörjare) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Körs när hubbens accelerometervärden ändras.
 Körs när hubbens lutningsvinkel ändras.
 
 - Vinkelalternativ: `vilken som helst`, `lutning`, `rullning`, `yaw`
-- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `yaw` finns bara på Technic Hub och Robot Inventor.
+- Hubbar: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `yaw` finns bara på Technic Hub och Robot Inventor.
 
 ### `när … orientering har ändrats` (Nybörjare) {#block_hubs_all_event_tilt_orientation_changed}
 

@@ -72,7 +72,7 @@ Nastaví režim výkonu Technic Move Hubu.
 
 ## Tlačítka, náklon a orientace hubu {#hub-tilt-and-orientation}
 
-Blok tlačítka uvádí huby, se kterými funguje. Bloky náklonu a orientace fungují na BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub a Robot Inventor.
+Blok tlačítka uvádí huby, se kterými funguje. Bloky náklonu a orientace fungují na BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub a Robot Inventor. Na Technic Move Hubu se počítají z jeho akcelerometru pro hub namontovaný tlačítkem dolů, jako v modelech aut LEGO; nemá úhel `vybočení` ani blok **nastavit … nakloňte orientaci na …**.
 
 ### `je … … tlačítko …` (Začátečník) {#block_hubs_all_sensors_button_pressed}
 
@@ -132,6 +132,7 @@ Vrací `true`, když vybraná strana hubu směřuje nahoru.
 Sdělí hubu, jak je v modelu namontovaný, aby se náklon a orientace měřily od této polohy.
 
 - Volby: `Přední`, `Horní`, `Vpravo`, `Zadní`, `Dno`, `Vlevo`
+- Není k dispozici pro Technic Move Hub.
 
 ## Senzory na portech {#sensors-on-ports}
 
@@ -145,7 +146,7 @@ Níže uvedené bloky senzorů Technic a BOOST fungují na City Hubu, Technic Hu
 
 Vrací typ zařízení připojeného k vybranému portu.
 
-- Huby: všechny huby s porty kromě SBrick, SBrick Plus a BuWizz 2.
+- Huby: všechny huby s porty kromě SBrick, SBrick Plus, BuWizz 2 a Technic Move Hubu.
 - Typické použití: zkontrolovat, co je připojeno, než spustíte bloky pro konkrétní zařízení.
 
 ### Senzor barev Technic {#technic-color-sensor}

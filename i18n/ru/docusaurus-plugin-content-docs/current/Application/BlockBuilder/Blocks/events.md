@@ -95,7 +95,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Срабатывает, когда меняются показания акселерометра хаба.
 
-- Хабы: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Хабы: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `когда … наклон … угол изменён` (Новичок) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Срабатывает, когда меняется угол наклона хаба.
 
 - Углы: `любой`, `тангаж`, `крен`, `рысканье`
-- Хабы: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `рысканье` есть только у Technic Hub и Robot Inventor.
+- Хабы: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `рысканье` есть только у Technic Hub и Robot Inventor.
 
 ### `когда … ориентация изменена` (Новичок) {#block_hubs_all_event_tilt_orientation_changed}
 

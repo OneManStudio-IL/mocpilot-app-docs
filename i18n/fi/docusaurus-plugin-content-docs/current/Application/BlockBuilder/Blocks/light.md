@@ -28,6 +28,7 @@ Asettaa hubin tilavalon värin.
 Sytyttää valittuun porttiin kytketyt valot annetulla kirkkaudella.
 
 - Hubit: kaikki hubit, joissa on portteja, paitsi WeDo 2.0.
+- Technic Move Hub: portit `1`–`6` ovat hubin kuusi valoa, jotka on numeroitu hubiin. Jokaisen valon voi asettaa erikseen, kirkkaus 0–100 %.
 - Tyypillinen käyttö: ajovalot, säädettävä valaistus.
 
 ### `sammuta` (Aloittelija) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Sammuttaa valittuun porttiin kytketyt valot.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Sytyttää tai sammuttaa Technic Move Hubin valot.
+Sytyttää tai sammuttaa Technic Move Hubin valot sen autoprofiilin kautta.
 
 - Vaihtoehdot: `pois`, `käytössä`
-- Hubit: Technic Move Hub.
+- Hubit: Technic Move Hub. Jos haluat asettaa jokaisen valon erikseen, käytä sen sijaan lohkoa **käynnistä kohdassa … % kirkkaus** porteilla `1`–`6`; älä sekoita näitä kahta samassa hubissa (katso [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Valomatriisi {#light-matrix}
 

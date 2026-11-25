@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Met motorblokken start, stop en positioneer je motoren die op hubpoorten zijn aangesloten, en stel je in hoe ze bewegen. De categorie verschijnt als een hub in het profiel motorpoorten heeft. In elk blok kies je de hub en een of meer poorten.
 
-Sommige blokken hebben een motor met ingebouwde rotatiesensor (encoder) nodig, zoals de Technic-hoekmotoren, en een hub die hem kan aansturen. Deze blokken zijn gemarkeerd met “motoren met encoder”. Ze zijn niet beschikbaar voor SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 en Mould King-hubs. De Technic Move Hub heeft een eigen set blokken aan het eind van deze pagina.
+Sommige blokken hebben een motor met ingebouwde rotatiesensor (encoder) nodig, zoals de Technic-hoekmotoren, en een hub die hem kan aansturen. Deze blokken zijn gemarkeerd met “motoren met encoder”. Ze zijn niet beschikbaar voor SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 en Mould King-hubs. De Technic Move Hub werkt ook met deze blokken (zijn motoren zijn de poorten `A`, `B` en `C`) en heeft daarnaast eigen autoprofielblokken: zie [Technic Move Hub](#technic-move-hub) aan het eind van deze pagina.
 
 ## Motoren laten draaien {#running-motors}
 
@@ -80,7 +80,7 @@ Legt vast dat de huidige positie van de motor de opgegeven waarde is. Relatieve 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Bepaalt het midden en de slag van een stuurheugel.
 
-- De motor draait de heugel naar beide uiteinden, meet hoe ver hij kan gaan en zet het resultaat in de twee variabelen die je in de vakken plaatst: de middenpositie en het bereik in graden. De heugel stopt in het midden, maar de relatieve positie is daar gelijk aan de middenwaarde en niet 0; zet daarom direct na dit blok **stel relatieve positie in** 0 en stuur daarna met `bereik × joystick / 100`.
+- De motor draait de heugel naar beide uiteinden, meet hoe ver hij kan gaan en zet het resultaat in de twee variabelen die je in de vakken plaatst: de middenpositie en het bereik in graden (van het midden tot één uiteinde). De heugel stopt in het midden en dat punt wordt relatieve positie 0: stuur met **ga naar relatieve positie** `bereik × joystick / 100`.
 - De besturing moet aan beide kanten harde mechanische aanslagen hebben (het einde van de heugel of de overbrenging).
 - Alleen motoren met encoder.
 
@@ -153,7 +153,14 @@ Start de motoren op de gekozen poorten met het opgegeven vermogen, van −100 to
 
 ## Technic Move Hub {#technic-move-hub}
 
-De Technic Move Hub stuurt zijn ingebouwde motoren aan met deze blokken in plaats van met de poortblokken hierboven.
+De Technic Move Hub (in de op afstand bestuurbare LEGO® Technic-auto's) kun je op twee manieren programmeren:
+
+- **Poortblokken** (de motorblokken hierboven). De drie ingebouwde motoren van de hub zijn poorten: `A` en `B` zijn de aandrijfmotoren, `C` is de stuurmotor. Het zijn motoren met encoder, dus elk motorblok hierboven werkt ermee, behalve **schakel stall detectie in** en **vermogen**. In de LEGO-automodellen draait `A` de andere kant op dan `B` om vooruit te rijden, en de besturing op `C` heeft eindaanslagen: voer één keer **rek kalibreren** uit op `C` en stuur daarna met **ga naar relatieve positie** op `C` (0 is het midden). De zes lichten van de hub zijn de poorten `1`–`6` van de [lichtblokken](/docs/Application/BlockBuilder/Blocks/Light), en de blokken voor [kanteling, versnelling en oriëntatie](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) werken net als op de Technic Hub.
+- **Autoprofielblokken** (hieronder): rijden, sturen, remmen, krachtpuls, lichten en vermogensmodus, via de autoconfiguratie die in de hub is geladen. Zie [Configuraties van de Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Eén manier per hub
+De profielblokken en de poortblokken sturen dezelfde motoren en lichten aan: het laatste commando wint, en een profielblok neemt de motoren en lichten weer over. De programmacontrole in de blokeditor waarschuwt hiervoor bij elk poortblok van die hub: “… wordt zowel door de blokken van zijn autoprofiel als door poortblokken bestuurd”.
+:::
 
 ### `start motoren bij … % snelheid` (Beginner) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

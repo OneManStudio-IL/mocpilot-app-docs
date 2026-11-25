@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Les blocs de moteurs démarrent, arrêtent et positionnent les moteurs branchés sur les ports des hubs, et règlent leur façon de se déplacer. La catégorie apparaît lorsqu’un hub du profil possède des ports moteur. Dans chaque bloc, vous choisissez le hub et un ou plusieurs ports.
 
-Certains blocs nécessitent un moteur doté d’un capteur de rotation intégré (encodeur), comme les moteurs angulaires Technic, et un hub capable de le contrôler. Ces blocs portent la mention « moteurs à encodeur ». Ils ne sont pas disponibles pour les hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 et Mould King. Le Technic Move Hub dispose de ses propres blocs, présentés à la fin de cette page.
+Certains blocs nécessitent un moteur doté d’un capteur de rotation intégré (encodeur), comme les moteurs angulaires Technic, et un hub capable de le contrôler. Ces blocs portent la mention « moteurs à encodeur ». Ils ne sont pas disponibles pour les hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 et Mould King. Le Technic Move Hub fonctionne aussi avec ces blocs (ses moteurs sont les ports `A`, `B` et `C`) et dispose en plus de ses propres blocs de profil de voiture : voir [Technic Move Hub](#technic-move-hub) à la fin de cette page.
 
 ## Faire tourner les moteurs {#running-motors}
 
@@ -80,7 +80,7 @@ Déclare que la position actuelle du moteur vaut la valeur indiquée. Les positi
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Trouve le centre et la course d’une crémaillère de direction.
 
-- Le moteur pousse la crémaillère jusqu’aux deux extrémités, mesure jusqu’où elle peut aller et place le résultat dans les deux variables que vous mettez dans les emplacements : la position du centre et la plage en degrés. La crémaillère s’arrête au milieu, mais sa position relative à cet endroit vaut la valeur du centre et non 0 : ajoutez donc **définir la position relative** 0 juste après ce bloc, puis dirigez avec `plage × joystick / 100`.
+- Le moteur pousse la crémaillère jusqu’aux deux extrémités, mesure jusqu’où elle peut aller et place le résultat dans les deux variables que vous mettez dans les emplacements : la position du centre et la plage en degrés (du centre à une extrémité). La crémaillère s’arrête au milieu, et ce point devient la position relative 0 : dirigez ensuite avec **aller à la position relative** `plage × joystick / 100`.
 - La direction doit avoir des butées mécaniques franches aux deux extrémités (la fin de la crémaillère ou de l’engrenage).
 - Moteurs à encodeur uniquement.
 
@@ -153,7 +153,14 @@ Démarre les moteurs des ports sélectionnés à la puissance indiquée, de −1
 
 ## Technic Move Hub {#technic-move-hub}
 
-Le Technic Move Hub pilote ses moteurs intégrés avec ces blocs au lieu des blocs de port ci-dessus.
+Le Technic Move Hub (dans les voitures télécommandées LEGO® Technic) se programme de deux façons :
+
+- **Blocs de port** (les blocs de moteurs ci-dessus). Les trois moteurs intégrés du hub sont des ports : `A` et `B` sont les moteurs de propulsion, `C` est le moteur de direction. Ce sont des moteurs à encodeur : tous les blocs de moteurs ci-dessus fonctionnent avec eux, sauf **activer la détection de blocage** et **puissance**. Dans les modèles de voitures LEGO, `A` tourne dans le sens inverse de `B` pour avancer, et la direction sur `C` a des butées : exécutez une fois **étalonner la crémaillère** sur `C`, puis dirigez avec **aller à la position relative** sur `C` (0 est le centre). Les six lumières du hub sont les ports `1`–`6` des [blocs Lumière](/docs/Application/BlockBuilder/Blocks/Light), et ses blocs d’[inclinaison, d’accélération et d’orientation](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) fonctionnent comme sur le Technic Hub.
+- **Blocs de profil de voiture** (ci-dessous) : propulsion, direction, frein, impulsion de puissance, phares et mode de puissance, via la configuration de voiture chargée dans le hub. Voir [Configurations du Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Une seule méthode par hub
+Les blocs de profil et les blocs de port commandent les mêmes moteurs et lumières : la dernière commande l’emporte, et un bloc de profil reprend le contrôle des moteurs et des lumières. La vérification du programme dans l’éditeur de blocs le signale sur chaque bloc de port de ce hub : « … est commandé à la fois par les blocs de son profil de voiture et par des blocs de ports ».
+:::
 
 ### `démarrer les moteurs à … % vitesse` (Débutant) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

@@ -28,7 +28,8 @@ Le hub des voitures télécommandées LEGO® Technic (Porsche GT4 e-Performance,
 - La **direction** étalonne elle-même sa crémaillère.
 - **Frein**, **Boost** (mode de puissance) et **Impulsion de puissance** (uniquement avec la configuration Batmobile™ Tumbler).
 - **Configurations du hub** : chargez un profil de voiture dans le hub avec **Mes hubs → Sélectionner la configuration**. Voir [Configurations du Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Phares dans Blocs logiques : *allumer les lumières …*.
+- Blocs logiques : les blocs de profil de voiture (*démarrer les moteurs*, *définir la crémaillère de direction sur*, *définir le frein des moteurs*, *impulsion de puissance*, *allumer les lumières*, *définir le mode d'alimentation*), ou les blocs de port ordinaires : moteurs `A`, `B` (propulsion) et `C` (direction ; *étalonner la crémaillère* sur `C`, puis *aller à la position relative*), lumières `1`–`6` une par une, inclinaison, accélération et orientation. Une seule méthode par hub : les deux commandent les mêmes moteurs et lumières. Voir [Moteurs → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Liens rapides : les lignes propres au hub (propulsion, direction, phares) ; une [Entrée Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) peut aussi lire son inclinaison et son accélération.
 
 ## BuWizz 2.0 {#buwizz-20}
 

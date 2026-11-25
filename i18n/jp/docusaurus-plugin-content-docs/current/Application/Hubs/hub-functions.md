@@ -28,7 +28,8 @@ LEGO® Technic のリモコンカー（Porsche GT4 e-Performance、Lamborghini R
 - **ステアリング**は自分でラックをキャリブレーションします。
 - **ブレーキ**、**Boost**（パワーモード）、**パワーパルス**（Batmobile™ Tumbler の構成のみ）。
 - **ハブの構成**：**マイハブ → 設定を選択**で、車のプロフィールをハブに読み込みます。[Technic Move Hub の構成](/docs/Application/Hubs/TechnicMoveHubConfigurations)を参照してください。
-- ロジックブロックでのライト：*Technic Move ライトの切り替え*ブロック。
+- ロジックブロック：車のプロフィールブロック（*モーターを起動*、*ステアリングラックを設定*、*モーターのブレーキを設定*、*パワーパルス*、*ライトをつける*、*電源モードを設定*）、または通常のポートブロック：モーター `A`、`B`（駆動）と `C`（ステアリング。`C` で *ラックをキャリブレーション* のあと *相対位置へ移動*）、ライト `1`–`6` の個別制御、傾き、加速度、向き。1 つのハブでは 1 つの方法だけを使ってください。どちらも同じモーターとライトに命令します。[モーター → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)を参照してください。
+- クイックリンク：ハブ専用の行（走行、ステアリング、ライト）。[ハブ入力](/docs/Application/Links/Blocks/InputBlocks#src-hub)で傾きと加速度も読み取れます。
 
 ## BuWizz 2.0 {#buwizz-20}
 

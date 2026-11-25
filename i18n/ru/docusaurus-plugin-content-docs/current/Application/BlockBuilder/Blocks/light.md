@@ -28,6 +28,7 @@ import Screenshot from '@site/src/components/Screenshot';
 Включает свет на выбранном порту с заданной яркостью.
 
 - Хабы: все хабы с портами, кроме WeDo 2.0.
+- Technic Move Hub: порты `1`–`6` — это шесть лампочек хаба, пронумерованных на хабе. Каждую лампочку можно включать отдельно, яркость 0–100 %.
 - Для чего: фары, регулируемая подсветка.
 
 ### `выключить` (Новичок) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Включает или выключает свет Technic Move Hub.
+Включает или выключает свет Technic Move Hub через его профиль машины.
 
 - Варианты: `выключено`, `включено`
-- Хабы: Technic Move Hub.
+- Хабы: Technic Move Hub. Чтобы задавать каждую лампочку отдельно, используйте вместо него **включить на … % яркость** с портами `1`–`6`; не смешивайте эти два способа на одном хабе (см. [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Светодиодная матрица
 

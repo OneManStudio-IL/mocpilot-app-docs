@@ -28,6 +28,7 @@ Setează culoarea luminii de stare a hubului.
 Aprinde luminile conectate la portul selectat, cu luminozitatea dată.
 
 - Huburi: toate huburile cu porturi, cu excepția WeDo 2.0.
+- Technic Move Hub: porturile `1`–`6` sunt cele șase lumini ale hubului, numerotate pe hub. Fiecare lumină poate fi setată separat, luminozitate 0–100 %.
 - Utilizare tipică: faruri, iluminare reglabilă.
 
 ### `opriți` (Începător) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Stinge luminile conectate la portul selectat.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Aprinde sau stinge luminile unui Technic Move Hub.
+Aprinde sau stinge luminile unui Technic Move Hub prin profilul său de mașină.
 
 - Opțiuni: `oprit`, `activat`
-- Huburi: Technic Move Hub.
+- Huburi: Technic Move Hub. Ca să setezi fiecare lumină separat, folosește în schimb **porni la … % luminozitate** cu porturile `1`–`6`; nu amesteca cele două metode pe același hub (vezi [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Matricea de lumini {#light-matrix}
 

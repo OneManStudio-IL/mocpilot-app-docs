@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Moottorilohkot käynnistävät, pysäyttävät ja asemoivat hubin portteihin kytkettyjä moottoreita ja säätävät niiden liikettä. Luokka näkyy, kun jossakin profiilin hubissa on moottoriportteja. Jokaisessa lohkossa valitaan hubi ja yksi tai useampi portti.
 
-Jotkin lohkot tarvitsevat moottorin, jossa on sisäänrakennettu kiertoanturi (kulma-anturi), kuten Technic-kulmamoottorit, sekä hubin, joka osaa ohjata sitä. Nämä lohkot on merkitty ”kulma-anturilliset moottorit”. Ne eivät ole käytettävissä SBrick-, SBrick Plus-, BuWizz 2-, WeDo 2.0- eikä Mould King -hubeissa. Technic Move Hubilla on omat lohkonsa tämän sivun lopussa.
+Jotkin lohkot tarvitsevat moottorin, jossa on sisäänrakennettu kiertoanturi (kulma-anturi), kuten Technic-kulmamoottorit, sekä hubin, joka osaa ohjata sitä. Nämä lohkot on merkitty ”kulma-anturilliset moottorit”. Ne eivät ole käytettävissä SBrick-, SBrick Plus-, BuWizz 2-, WeDo 2.0- eikä Mould King -hubeissa. Technic Move Hub toimii myös näiden lohkojen kanssa (sen moottorit ovat portit `A`, `B` ja `C`), ja sillä on lisäksi omat autoprofiilin lohkot: katso [Technic Move Hub](#technic-move-hub) tämän sivun lopussa.
 
 ## Moottorien käyttäminen {#running-motors}
 
@@ -80,7 +80,7 @@ Määrittää moottorin nykyisen asennon annetuksi arvoksi. Suhteelliset asennot
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Etsii ohjaustangon keskikohdan ja liikeradan.
 
-- Moottori kääntää tangon molempiin päihin, mittaa, kuinka pitkälle se pääsee, ja tallentaa tuloksen kahteen paikkoihin asettamaasi muuttujaan: keskiasentoon ja liikealueeseen asteina. Tanko pysähtyy keskelle, mutta sen suhteellinen asento siinä on keskikohdan arvo eikä 0, joten lisää heti tämän lohkon perään **aseta suhteellinen sijainti** 0; ohjaa sitten kaavalla `alue × ohjainsauva / 100`.
+- Moottori kääntää tangon molempiin päihin, mittaa, kuinka pitkälle se pääsee, ja tallentaa tuloksen kahteen paikkoihin asettamaasi muuttujaan: keskiasentoon ja liikealueeseen asteina (keskeltä toiseen päähän). Tanko pysähtyy keskelle, ja siitä kohdasta tulee suhteellinen asento 0: ohjaa lohkolla **mene suhteelliseen asentoon** `alue × ohjainsauva / 100`.
 - Ohjauksessa täytyy olla kiinteät mekaaniset rajoittimet molemmissa päissä (tangon tai välityksen pää).
 - Vain kulma-anturilliset moottorit.
 
@@ -153,7 +153,14 @@ Käynnistää valittujen porttien moottorit annetulla teholla väliltä −100�
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub käyttää sisäänrakennettuja moottoreitaan näillä lohkoilla yllä olevien porttilohkojen sijaan.
+Technic Move Hubia (LEGO® Technic -kauko-ohjattavissa autoissa) voi ohjelmoida kahdella tavalla:
+
+- **Porttilohkot** (yllä olevat moottorilohkot). Hubin kolme sisäänrakennettua moottoria ovat portteja: `A` ja `B` ovat ajomoottorit, `C` on ohjausmoottori. Ne ovat kulma-anturillisia moottoreita, joten kaikki yllä olevat moottorilohkot toimivat niillä paitsi **ota käyttöön jumiutumisen tunnistus** ja **teho**. LEGO-automalleissa `A` pyörii eteenpäin ajettaessa eri suuntaan kuin `B`, ja `C`:n ohjauksessa on päätyrajoittimet: suorita **kalibroi hammasratas** `C`:lle kerran ja ohjaa sitten lohkolla **mene suhteelliseen asentoon** `C`:ssä (0 on keskikohta). Hubin kuusi valoa ovat [valolohkojen](/docs/Application/BlockBuilder/Blocks/Light) portit `1`–`6`, ja sen [kallistus-, kiihtyvyys- ja suuntalohkot](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) toimivat kuten Technic Hubissa.
+- **Autoprofiilin lohkot** (alla): ajo, ohjaus, jarru, tehopulssi, valot ja tehotila hubiin ladatun autokokoonpanon kautta. Katso [Technic Move Hubin kokoonpanot](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Yksi tapa hubia kohden
+Profiililohkot ja porttilohkot ohjaavat samoja moottoreita ja valoja: viimeisin komento voittaa, ja profiililohko ottaa moottorit ja valot takaisin. Lohkoeditorin ohjelmatarkistus varoittaa tästä jokaisessa kyseisen hubin porttilohkossa: ”… ohjataan sekä autoprofiilin palikoilla että porttipalikoilla”.
+:::
 
 ### `käynnistä moottorit … % nopeus` (Aloittelija) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

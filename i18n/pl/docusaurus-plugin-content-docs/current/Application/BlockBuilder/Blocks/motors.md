@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Bloki silników uruchamiają, zatrzymują i ustawiają w pozycji silniki podłączone do portów huba oraz dostrajają ich ruch. Kategoria pojawia się, gdy hub w profilu ma porty silników. W każdym bloku wybierasz hub i jeden lub więcej portów.
 
-Niektóre bloki wymagają silnika z wbudowanym czujnikiem obrotu (enkoderem), takiego jak silniki kątowe Technic, oraz huba, który potrafi nim sterować. Takie bloki oznaczono jako „silniki z enkoderem”. Nie są dostępne dla hubów SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 i Mould King. Technic Move Hub ma własny zestaw bloków, opisany na końcu tej strony.
+Niektóre bloki wymagają silnika z wbudowanym czujnikiem obrotu (enkoderem), takiego jak silniki kątowe Technic, oraz huba, który potrafi nim sterować. Takie bloki oznaczono jako „silniki z enkoderem”. Nie są dostępne dla hubów SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 i Mould King. Technic Move Hub też działa z tymi blokami (jego silniki to porty `A`, `B` i `C`), a do tego ma własne bloki profilu samochodu: zobacz [Technic Move Hub](#technic-move-hub) na końcu tej strony.
 
 ## Uruchamianie silników {#running-motors}
 
@@ -80,7 +80,7 @@ Przyjmuje, że bieżąca pozycja silnika ma podaną wartość. Od niej liczone s
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Wyznacza środek i zakres ruchu zębatki układu kierowniczego.
 
-- Silnik przesuwa zębatkę do obu końców, mierzy, jak daleko może się przesunąć, i zapisuje wynik w dwóch zmiennych wstawionych do pól: pozycję środka i zakres w stopniach. Zębatka zatrzymuje się na środku, ale jej pozycja względna jest tam równa wartości środka, a nie 0, więc zaraz po tym bloku dodaj **ustaw pozycję względną** 0; potem skręcaj za pomocą `zakres × joystick / 100`.
+- Silnik przesuwa zębatkę do obu końców, mierzy, jak daleko może się przesunąć, i zapisuje wynik w dwóch zmiennych wstawionych do pól: pozycję środka i zakres w stopniach (od środka do jednego końca). Zębatka zatrzymuje się na środku i ten punkt staje się pozycją względną 0: skręcaj blokiem **przejdź do względnej pozycji** `zakres × joystick / 100`.
 - Układ kierowniczy musi mieć twarde mechaniczne ograniczniki po obu stronach (koniec zębatki lub przekładni).
 - Tylko silniki z enkoderem.
 
@@ -153,7 +153,14 @@ Uruchamia silniki na wybranych portach z podaną mocą, od −100 do 100 % (domy
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub napędza swoje wbudowane silniki tymi blokami zamiast powyższych bloków portów.
+Technic Move Hub (w zdalnie sterowanych samochodach LEGO® Technic) można programować na dwa sposoby:
+
+- **Bloki portów** (powyższe bloki silników). Trzy wbudowane silniki huba to porty: `A` i `B` to silniki napędowe, `C` to silnik układu kierowniczego. To silniki z enkoderem, więc działają na nich wszystkie powyższe bloki silników z wyjątkiem **włącz wykrywanie zablokowania** i **moc**. W modelach samochodów LEGO `A` przy jeździe do przodu obraca się w przeciwną stronę niż `B`, a układ kierowniczy na `C` ma ograniczniki: raz uruchom **skalibruj zębatkę** na `C`, a potem skręcaj blokiem **przejdź do względnej pozycji** na `C` (0 to środek). Sześć świateł huba to porty `1`–`6` [bloków światła](/docs/Application/BlockBuilder/Blocks/Light), a bloki [nachylenia, przyspieszenia i orientacji](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) działają tak jak w Technic Hub.
+- **Bloki profilu samochodu** (poniżej): jazda, skręt, hamulec, impuls mocy, światła i tryb zasilania, przez konfigurację samochodu wgraną do huba. Zobacz [Konfiguracje Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Jeden sposób na hub
+Bloki profilu i bloki portów sterują tymi samymi silnikami i światłami: wygrywa ostatnie polecenie, a blok profilu odbiera silniki i światła z powrotem. Sprawdzanie programu w edytorze bloków ostrzega o tym na każdym bloku portu tego huba: „… jest sterowany zarówno blokami profilu samochodu, jak i blokami portów”.
+:::
 
 ### `uruchom silniki przy … % prędkość` (Początkujący) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

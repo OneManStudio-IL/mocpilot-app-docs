@@ -28,7 +28,8 @@ Hub dálkově ovládaných aut LEGO® Technic (Porsche GT4 e-Performance, Lambor
 - **Řízení** si samo kalibruje hřeben řízení.
 - **Brzda**, **Boost** (režim výkonu) a **Výkonový pulz** (jen s konfigurací Batmobile™ Tumbler).
 - **Konfigurace hubu**: profil auta nahrajete do hubu přes **Moje huby → Vybrat konfiguraci**. Viz [Konfigurace Technic Move Hubu](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Světla v Logických blocích: *zapnout světla* (Technic Move).
+- Logické bloky: bloky profilu auta (*spustit motory*, *nastavit řízení na*, *nastavit brzdu motorů*, *výkonový impuls*, *zapnout světla*, *nastavit režim napájení*), nebo běžné bloky pro porty: motory `A`, `B` (pohon) a `C` (řízení; *kalibrovat ozubený hřeben* na `C`, pak *jít na relativní polohu*), světla `1`–`6` jednotlivě, náklon, zrychlení a orientace. Na jednom hubu používejte jen jeden způsob: oba ovládají stejné motory a světla. Viz [Motory → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Rychlá propojení: vlastní řádky hubu (pohon, řízení, světla); [Vstup Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) umí číst i jeho náklon a zrychlení.
 
 ## BuWizz 2.0 {#buwizz-20}
 

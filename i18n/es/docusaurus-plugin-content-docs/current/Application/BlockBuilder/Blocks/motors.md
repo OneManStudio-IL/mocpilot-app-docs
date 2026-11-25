@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Los bloques de motores arrancan, detienen y posicionan los motores conectados a los puertos del hub, y ajustan cómo se mueven. La categoría aparece cuando algún hub del perfil tiene puertos para motores. En cada bloque eliges el hub y uno o varios puertos.
 
-Algunos bloques necesitan un motor con sensor de giro integrado (encoder), como los motores angulares Technic, y un hub capaz de controlarlo. Estos bloques están marcados como «motores con encoder». No están disponibles para los hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 y Mould King. El Technic Move Hub tiene su propio conjunto de bloques al final de esta página.
+Algunos bloques necesitan un motor con sensor de giro integrado (encoder), como los motores angulares Technic, y un hub capaz de controlarlo. Estos bloques están marcados como «motores con encoder». No están disponibles para los hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 y Mould King. El Technic Move Hub también funciona con estos bloques (sus motores son los puertos `A`, `B` y `C`) y además tiene sus propios bloques de perfil de coche: consulta [Technic Move Hub](#technic-move-hub) al final de esta página.
 
 ## Mover motores {#running-motors}
 
@@ -80,7 +80,7 @@ Declara que la posición actual del motor es el valor indicado. Las posiciones r
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Encuentra el centro y el recorrido de una cremallera de dirección.
 
-- El motor lleva la cremallera hasta ambos extremos, mide cuánto puede recorrer y guarda el resultado en las dos variables que colocas en los campos: la posición central y el rango en grados. La cremallera se detiene en el medio, pero su posición relativa allí es igual al valor del centro, no a 0, así que añade **establecer posición relativa** 0 justo después de este bloque; después dirige con `rango × joystick / 100`.
+- El motor lleva la cremallera hasta ambos extremos, mide cuánto puede recorrer y guarda el resultado en las dos variables que colocas en los campos: la posición central y el rango en grados (del centro a un extremo). La cremallera se detiene en el medio, y ese punto pasa a ser la posición relativa 0: dirige con **ir a posición relativa** `rango × joystick / 100`.
 - La dirección debe tener topes mecánicos firmes en ambos extremos (el final de la cremallera o los engranajes).
 - Solo motores con encoder.
 
@@ -153,7 +153,14 @@ Arranca los motores de los puertos seleccionados con la potencia indicada, de �
 
 ## Technic Move Hub {#technic-move-hub}
 
-El Technic Move Hub mueve sus motores integrados con estos bloques en lugar de los bloques de puerto anteriores.
+El Technic Move Hub (de los coches teledirigidos LEGO® Technic) se puede programar de dos formas:
+
+- **Bloques de puerto** (los bloques de motores anteriores). Los tres motores integrados del hub son puertos: `A` y `B` son los motores de tracción y `C` es el motor de dirección. Son motores con encoder, así que todos los bloques de motores anteriores funcionan con ellos, excepto **activar detección de bloqueo** y **potencia**. En los modelos de coche LEGO, `A` gira en sentido contrario a `B` para avanzar, y la dirección en `C` tiene topes: ejecuta **calibrar cremallera** en `C` una vez y después dirige con **ir a posición relativa** en `C` (0 es el centro). Las seis luces del hub son los puertos `1`–`6` de los [bloques de Luz](/docs/Application/BlockBuilder/Blocks/Light), y sus bloques de [inclinación, aceleración y orientación](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) funcionan como en el Technic Hub.
+- **Bloques de perfil de coche** (a continuación): tracción, dirección, freno, pulso de potencia, luces y modo de potencia, mediante la configuración de coche cargada en el hub. Consulta [Configuraciones del Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Una sola forma por hub
+Los bloques de perfil y los bloques de puerto controlan los mismos motores y luces: gana la última orden, y un bloque de perfil recupera el control de los motores y las luces. La comprobación del programa en el editor de bloques lo avisa en cada bloque de puerto de ese hub: «… está controlado tanto por los bloques de su perfil de coche como por bloques de puertos».
+:::
 
 ### `iniciar motores a … % velocidad` (Principiante) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

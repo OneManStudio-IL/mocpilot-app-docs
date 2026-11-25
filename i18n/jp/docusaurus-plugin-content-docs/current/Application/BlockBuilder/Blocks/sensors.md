@@ -60,7 +60,7 @@ Technic Move Hub の電源モードを設定します。
 
 ## ハブのボタン、傾き、向き {#hub-tilt-and-orientation}
 
-ボタンのブロックには、対応するハブが一覧で表示されます。傾きと向きのブロックは、BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor で使えます。
+ボタンのブロックには、対応するハブが一覧で表示されます。傾きと向きのブロックは、BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub、Robot Inventor で使えます。Technic Move Hub では、LEGO の車のモデルと同じくボタンを下に向けて取り付けた状態を前提に、加速度計の値から計算されます。`ヨー` と **傾斜方向に設定** はありません。
 
 ### `が … … ボタン …` (初心者) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Technic Move Hub の電源モードを設定します。
 ハブがモデルにどの向きで取り付けられているかをハブに伝えます。傾きと向きは、その位置を基準に測られます。
 
 - 選択肢：`前`、`上部`、`右`、`後部`、`底`、`左`
+- Technic Move Hub では使えません。
 
 ## ポートのセンサー {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Technic Move Hub の電源モードを設定します。
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 選択したポートに接続されているデバイスの種類を返します。
 
-- ハブ：SBrick、SBrick Plus、BuWizz 2 を除く、ポートのあるすべてのハブ。
+- ハブ：SBrick、SBrick Plus、BuWizz 2、Technic Move Hub を除く、ポートのあるすべてのハブ。
 - 主な用途：デバイス専用のブロックを実行する前に、何が接続されているかを確認する。
 
 ### Technic カラーセンサー {#technic-color-sensor}

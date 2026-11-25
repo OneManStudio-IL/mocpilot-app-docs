@@ -28,7 +28,8 @@ LEGO® Technic -kauko-ohjattavien autojen (Porsche GT4 e-Performance, Lamborghin
 - **Ohjaus** kalibroi oman hammastankonsa.
 - **Jarru**, **Boost** (tehotila) ja **Tehopulssi** (vain Batmobile™ Tumbler -kokoonpanolla).
 - **Hubin kokoonpanot**: lataa auton profiili hubiin kohdasta **Omat hubit → Valitse kokoonpano**. Katso [Technic Move Hubin kokoonpanot](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Valot Logiikkalohkoissa: *kytke valot päälle* (Technic Move).
+- Logiikkalohkot: autoprofiilin lohkot (*käynnistä moottorit*, *aseta ohjausrata*, *aseta moottorien jarru*, *tehopulssi*, *kytke valot päälle*, *aseta virta-asetus*) tai tavalliset porttilohkot: moottorit `A`, `B` (ajo) ja `C` (ohjaus; *kalibroi hammasratas* `C`:lle, sitten *mene suhteelliseen asentoon*), valot `1`–`6` yksitellen, kallistus, kiihtyvyys ja suunta. Käytä yhtä tapaa hubia kohden: molemmat ohjaavat samoja moottoreita ja valoja. Katso [Moottorit → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Pikalinkit: hubin omat rivit (ajo, ohjaus, valot); [Hubi-syöte](/docs/Application/Links/Blocks/InputBlocks#src-hub) voi myös lukea sen kallistuksen ja kiihtyvyyden.
 
 ## BuWizz 2.0 {#buwizz-20}
 

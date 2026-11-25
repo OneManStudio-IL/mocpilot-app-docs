@@ -95,7 +95,7 @@ Rulează când nivelul bateriei raportat de hub se schimbă.
 
 Rulează când valorile accelerometrului hubului se schimbă.
 
-- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `când … înclinare … unghiul a fost modificat` (Începător) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Rulează când valorile accelerometrului hubului se schimbă.
 Rulează când unghiul de înclinare al hubului se schimbă.
 
 - Opțiuni de unghi: `orice`, `înclinare`, `rotire`, `girație`
-- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `girație` este disponibilă doar pe Technic Hub și Robot Inventor.
+- Huburi: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `girație` este disponibilă doar pe Technic Hub și Robot Inventor.
 
 ### `când … orientarea a fost modificată` (Începător) {#block_hubs_all_event_tilt_orientation_changed}
 

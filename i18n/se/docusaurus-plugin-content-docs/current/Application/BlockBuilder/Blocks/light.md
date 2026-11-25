@@ -28,6 +28,7 @@ Ställer in färgen på hubbens statuslampa.
 Tänder lamporna som är anslutna till den valda porten med angiven ljusstyrka.
 
 - Hubbar: alla hubbar med portar utom WeDo 2.0.
+- Technic Move Hub: portarna `1`–`6` är hubbens sex lampor, numrerade på hubben. Varje lampa kan ställas in separat, ljusstyrka 0–100 %.
 - Typisk användning: strålkastare, justerbar belysning.
 
 ### `stänga av` (Nybörjare) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Släcker lamporna som är anslutna till den valda porten.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Tänder eller släcker lamporna på en Technic Move Hub.
+Tänder eller släcker lamporna på en Technic Move Hub via dess bilprofil.
 
 - Alternativ: `av`, `aktiverad`
-- Hubbar: Technic Move Hub.
+- Hubbar: Technic Move Hub. Om du vill ställa in varje lampa separat använder du i stället **slå på vid … % ljusstyrka** med portarna `1`–`6`; blanda inte de två på samma hubb (se [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Ljusmatris {#light-matrix}
 

@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Bloky motorů spouštějí, zastavují a natáčejí motory připojené k portům hubu a ladí, jak se pohybují. Kategorie se objeví, když má některý hub v profilu porty pro motory. V každém bloku vybíráte hub a jeden nebo více portů.
 
-Některé bloky potřebují motor s vestavěným senzorem otáčení (enkodérem), například úhlové motory Technic, a hub, který ho umí řídit. Tyto bloky jsou označené „motory s enkodérem“. Nejsou k dispozici pro huby SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 a Mould King. Technic Move Hub má vlastní sadu bloků na konci této stránky.
+Některé bloky potřebují motor s vestavěným senzorem otáčení (enkodérem), například úhlové motory Technic, a hub, který ho umí řídit. Tyto bloky jsou označené „motory s enkodérem“. Nejsou k dispozici pro huby SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 a Mould King. Technic Move Hub s těmito bloky také funguje (jeho motory jsou porty `A`, `B` a `C`) a má navíc vlastní bloky profilu auta: viz [Technic Move Hub](#technic-move-hub) na konci této stránky.
 
 ## Spouštění motorů {#running-motors}
 
@@ -102,7 +102,7 @@ Prohlásí aktuální polohu motoru za zadanou hodnotu. Relativní polohy se po�
 
 Najde střed a rozsah pohybu hřebenu řízení.
 
-- Motor otočí hřebenem do obou krajních poloh, změří, kam až může dojet, a výsledek uloží do dvou proměnných, které vložíte do slotů: polohu středu a rozsah ve stupních. Hřeben se zastaví uprostřed, ale jeho relativní poloha tam odpovídá hodnotě středu, ne 0, takže hned za tento blok přidejte **nastavit relativní polohu** 0; pak řiďte pomocí `rozsah × joystick / 100`.
+- Motor otočí hřebenem do obou krajních poloh, změří, kam až může dojet, a výsledek uloží do dvou proměnných, které vložíte do slotů: polohu středu a rozsah ve stupních (od středu k jednomu konci). Hřeben se zastaví uprostřed a tento bod se stane relativní polohou 0: řiďte pomocí **jít na relativní polohu** `rozsah × joystick / 100`.
 - Řízení musí mít na obou koncích pevné mechanické dorazy (konec hřebenu nebo převodů).
 - Jen motory s enkodérem.
 
@@ -195,7 +195,14 @@ Spustí motory na vybraných portech zadaným výkonem, od −100 do 100 % (výc
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub pohání své vestavěné motory těmito bloky místo výše uvedených bloků pro porty.
+Technic Move Hub (v dálkově ovládaných autech LEGO® Technic) lze programovat dvěma způsoby:
+
+- **Bloky pro porty** (výše uvedené bloky motorů). Tři vestavěné motory hubu jsou porty: `A` a `B` jsou hnací motory, `C` je motor řízení. Jsou to motory s enkodérem, takže na nich fungují všechny výše uvedené bloky motorů kromě **zapnout detekci zablokování** a **výkon**. V modelech aut LEGO se `A` při jízdě vpřed otáčí opačně než `B` a řízení na `C` má dorazy: jednou spusťte **kalibrovat ozubený hřeben** na `C` a pak řiďte pomocí **jít na relativní polohu** na `C` (0 je střed). Šest světel hubu jsou porty `1`–`6` [bloků světel](/docs/Application/BlockBuilder/Blocks/Light) a bloky [náklonu, zrychlení a orientace](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) fungují stejně jako na Technic Hubu.
+- **Bloky profilu auta** (níže): pohon, řízení, brzda, výkonový impuls, světla a režim napájení, přes konfiguraci auta nahranou do hubu. Viz [Konfigurace Technic Move Hubu](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Jeden způsob na hub
+Bloky profilu a bloky pro porty ovládají stejné motory a světla: platí poslední příkaz a blok profilu si motory a světla vezme zpět. Kontrola programu v editoru bloků na to upozorní u každého bloku pro port tohoto hubu: „… je ovládán jak bloky profilu auta, tak bloky portů“.
+:::
 
 ### `spustit motory na … % rychlost` (Začátečník) {#block_hubs_technicmove_motors_start_motors_at_speed}
 

@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Blocurile pentru motoare pornesc, opresc și poziționează motoarele conectate la porturile hubului și reglează felul în care se mișcă. Categoria apare când un hub din profil are porturi pentru motoare. În fiecare bloc alegi hubul și unul sau mai multe porturi.
 
-Unele blocuri au nevoie de un motor cu senzor de rotație încorporat (encoder), cum sunt motoarele unghiulare Technic, și de un hub care îl poate controla. Aceste blocuri sunt marcate „motoare cu encoder”. Ele nu sunt disponibile pentru huburile SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 și Mould King. Technic Move Hub are propriul set de blocuri, la sfârșitul acestei pagini.
+Unele blocuri au nevoie de un motor cu senzor de rotație încorporat (encoder), cum sunt motoarele unghiulare Technic, și de un hub care îl poate controla. Aceste blocuri sunt marcate „motoare cu encoder”. Ele nu sunt disponibile pentru huburile SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 și Mould King. Technic Move Hub funcționează și cu aceste blocuri (motoarele lui sunt porturile `A`, `B` și `C`) și are în plus propriile blocuri de profil de mașină: vezi [Technic Move Hub](#technic-move-hub) la sfârșitul acestei pagini.
 
 ## Acționarea motoarelor {#running-motors}
 
@@ -80,7 +80,7 @@ Declară că poziția curentă a motorului are valoarea dată. Pozițiile relati
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Găsește centrul și cursa unei cremaliere de direcție.
 
-- Motorul rotește cremaliera până la ambele capete, măsoară cât de departe poate merge și pune rezultatul în cele două variabile pe care le pui în câmpuri: poziția centrului și intervalul în grade. Cremaliera se oprește la mijloc, dar poziția ei relativă acolo este egală cu valoarea centrului, nu cu 0, așa că adaugă **setează poziția relativă** 0 imediat după acest bloc; apoi virează cu `interval × joystick / 100`.
+- Motorul rotește cremaliera până la ambele capete, măsoară cât de departe poate merge și pune rezultatul în cele două variabile pe care le pui în câmpuri: poziția centrului și intervalul în grade (de la centru până la un capăt). Cremaliera se oprește la mijloc, iar acel punct devine poziția relativă 0: virează cu **mergi la poziție relativă** `interval × joystick / 100`.
 - Direcția trebuie să aibă opritoare mecanice ferme la ambele capete (capătul cremalierei sau al angrenajului).
 - Doar motoare cu encoder.
 
@@ -153,7 +153,14 @@ Pornește motoarele de pe porturile selectate cu puterea dată, de la −100 la 
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub își acționează motoarele încorporate cu aceste blocuri, în locul blocurilor pentru porturi de mai sus.
+Technic Move Hub (din mașinile LEGO® Technic cu telecomandă) poate fi programat în două moduri:
+
+- **Blocurile pentru porturi** (blocurile de motor de mai sus). Cele trei motoare încorporate ale hubului sunt porturi: `A` și `B` sunt motoarele de tracțiune, `C` este motorul de direcție. Sunt motoare cu encoder, așa că pe ele funcționează toate blocurile de motor de mai sus, cu excepția **activați detectarea blocajului** și **putere**. La modelele de mașini LEGO, `A` se rotește invers față de `B` pentru mersul înainte, iar direcția de pe `C` are opritoare: rulează o dată **calibrare cremalieră** pe `C`, apoi virează cu **mergi la poziție relativă** pe `C` (0 este centrul). Cele șase lumini ale hubului sunt porturile `1`–`6` ale [blocurilor de lumină](/docs/Application/BlockBuilder/Blocks/Light), iar blocurile de [înclinare, accelerație și orientare](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) funcționează ca pe Technic Hub.
+- **Blocurile de profil de mașină** (mai jos): tracțiune, direcție, frână, impuls de putere, lumini și mod de alimentare, prin configurația de mașină încărcată în hub. Consultă [Configurațiile Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution O singură metodă pe hub
+Blocurile de profil și blocurile pentru porturi comandă aceleași motoare și lumini: câștigă ultima comandă, iar un bloc de profil preia înapoi motoarele și luminile. Verificarea programului din editorul de blocuri avertizează despre asta pe fiecare bloc de port al acelui hub: „… este controlat atât de blocurile profilului său de mașină, cât și de blocuri de porturi”.
+:::
 
 ### `porni motoarele la … % viteză` (Începător) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

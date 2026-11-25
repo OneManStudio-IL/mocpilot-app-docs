@@ -28,6 +28,7 @@ Define a cor da luz de status do hub.
 Acende as luzes conectadas à porta selecionada com o brilho indicado.
 
 - Hubs: todos os hubs com portas, exceto o WeDo 2.0.
+- Technic Move Hub: as portas `1`–`6` são as seis luzes do hub, numeradas no hub. Cada luz pode ser ajustada separadamente, com brilho de 0–100 %.
 - Uso típico: faróis, iluminação ajustável.
 
 ### `desligar` (Iniciante) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Apaga as luzes conectadas à porta selecionada.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Acende ou apaga as luzes de um Technic Move Hub.
+Acende ou apaga as luzes de um Technic Move Hub pelo seu perfil de carro.
 
 - Opções: `desligado`, `ativado`
-- Hubs: Technic Move Hub.
+- Hubs: Technic Move Hub. Para ajustar cada luz separadamente, use **ligar em … % brilho** com as portas `1`–`6`; não misture os dois no mesmo hub (veja [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Matriz de luzes {#light-matrix}
 

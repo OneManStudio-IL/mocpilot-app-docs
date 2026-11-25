@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Os blocos de motor ligam, param e posicionam motores conectados às portas do hub e ajustam como eles se movem. A categoria aparece quando algum hub do perfil tem portas de motor. Em cada bloco, você escolhe o hub e uma ou mais portas.
 
-Alguns blocos precisam de um motor com sensor de rotação integrado (encoder), como os motores angulares Technic, e de um hub capaz de controlá-lo. Esses blocos estão marcados como "motores com encoder". Eles não estão disponíveis para os hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 e Mould King. O Technic Move Hub tem o seu próprio conjunto de blocos no fim desta página.
+Alguns blocos precisam de um motor com sensor de rotação integrado (encoder), como os motores angulares Technic, e de um hub capaz de controlá-lo. Esses blocos estão marcados como "motores com encoder". Eles não estão disponíveis para os hubs SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 e Mould King. O Technic Move Hub também funciona com esses blocos (os motores dele são as portas `A`, `B` e `C`) e tem ainda os seus próprios blocos de perfil de carro: veja [Technic Move Hub](#technic-move-hub) no fim desta página.
 
 ## Acionar motores {#running-motors}
 
@@ -80,7 +80,7 @@ Declara que a posição atual do motor é o valor indicado. As posições relati
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Encontra o centro e o curso de uma cremalheira de direção.
 
-- O motor gira a cremalheira até as duas extremidades, mede até onde ela vai e coloca o resultado nas duas variáveis que você põe nos encaixes: a posição do centro e a amplitude em graus. A cremalheira para no meio, mas a posição relativa dela ali é igual ao valor do centro, não a 0, então adicione **definir posição relativa** 0 logo depois deste bloco; depois, controle a direção com `amplitude × joystick / 100`.
+- O motor gira a cremalheira até as duas extremidades, mede até onde ela vai e coloca o resultado nas duas variáveis que você põe nos encaixes: a posição do centro e a amplitude em graus (do centro até uma extremidade). A cremalheira para no meio, e esse ponto passa a ser a posição relativa 0: controle a direção com **ir para posição relativa** `amplitude × joystick / 100`.
 - A direção precisa ter batentes mecânicos firmes nas duas extremidades (o fim da cremalheira ou das engrenagens).
 - Só motores com encoder.
 
@@ -153,7 +153,14 @@ Liga os motores nas portas selecionadas com a potência indicada, de −100 a 10
 
 ## Technic Move Hub {#technic-move-hub}
 
-O Technic Move Hub aciona os seus motores integrados com estes blocos, em vez dos blocos de porta acima.
+O Technic Move Hub (dos carros de controle remoto LEGO® Technic) pode ser programado de duas maneiras:
+
+- **Blocos de porta** (os blocos de motor acima). Os três motores integrados do hub são portas: `A` e `B` são os motores de tração, `C` é o motor da direção. São motores com encoder, então todos os blocos de motor acima funcionam com eles, exceto **ativar detecção de bloqueio** e **potência**. Nos modelos de carro LEGO, `A` gira no sentido contrário ao de `B` para andar para frente, e a direção em `C` tem batentes: execute **calibrar cremalheira** em `C` uma vez e depois controle a direção com **ir para posição relativa** em `C` (0 é o centro). As seis luzes do hub são as portas `1`–`6` dos [blocos de Luz](/docs/Application/BlockBuilder/Blocks/Light), e os blocos de [inclinação, aceleração e orientação](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) dele funcionam como no Technic Hub.
+- **Blocos de perfil de carro** (abaixo): tração, direção, freio, pulso de potência, luzes e modo de potência, pela configuração de carro carregada no hub. Veja [Configurações do Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Uma só maneira por hub
+Os blocos de perfil e os blocos de porta comandam os mesmos motores e luzes: vale o último comando, e um bloco de perfil retoma o controle dos motores e das luzes. A verificação do programa no editor de blocos avisa sobre isso em cada bloco de porta desse hub: "… é controlado tanto pelos blocos do seu perfil de carro como por blocos de portas".
+:::
 
 ### `iniciar motores em … % velocidade` (Iniciante) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

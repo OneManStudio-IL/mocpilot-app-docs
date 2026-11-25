@@ -95,7 +95,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Спрацьовує, коли змінюються значення акселерометра хаба.
 
-- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `коли … нахил … кут змінено` (Початківець) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Спрацьовує, коли змінюється кут нахилу хаба.
 
 - Варіанти кута: `будь-який`, `тангаж`, `крен`, `рискання`
-- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `рискання` доступне лише на Technic Hub і Robot Inventor.
+- Хаби: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `рискання` доступне лише на Technic Hub і Robot Inventor.
 
 ### `коли … орієнтацію змінено` (Початківець) {#block_hubs_all_event_tilt_orientation_changed}
 

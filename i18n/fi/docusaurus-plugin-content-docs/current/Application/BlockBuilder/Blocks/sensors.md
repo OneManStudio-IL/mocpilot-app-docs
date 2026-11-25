@@ -60,7 +60,7 @@ Asettaa Technic Move Hubin tehotilan.
 
 ## Hubin painikkeet, kallistus ja suunta {#hub-tilt-and-orientation}
 
-Painikelohkon kuvauksessa luetellaan hubit, joiden kanssa se toimii. Kallistus- ja suuntalohkot toimivat BuWizz 2:ssa, BuWizz 3:ssa, BOOST Move Hubissa, Technic Hubissa ja Robot Inventorissa.
+Painikelohkon kuvauksessa luetellaan hubit, joiden kanssa se toimii. Kallistus- ja suuntalohkot toimivat BuWizz 2:ssa, BuWizz 3:ssa, BOOST Move Hubissa, Technic Hubissa, Technic Move Hubissa ja Robot Inventorissa. Technic Move Hubissa ne lasketaan sen kiihtyvyysanturista hubille, joka on asennettu painike alaspäin kuten LEGO-automalleissa; siinä ei ole `kääntö`-kulmaa eikä lohkoa **aseta … kallistuksen suuntaan**.
 
 ### `on … … painike …` (Aloittelija) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Palauttaa arvon `true`, kun hubin valittu sivu osoittaa ylöspäin.
 Kertoo hubille, miten se on asennettu malliin, jotta kallistus ja suunta mitataan siitä asennosta.
 
 - Vaihtoehdot: `Etuosa`, `Yläosa`, `Oikea`, `Takaosa`, `Pohja`, `Vasen`
+- Ei käytettävissä Technic Move Hubissa.
 
 ## Porttien anturit {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Alla olevat Technic- ja BOOST-anturilohkot toimivat City Hubissa, Technic Hubiss
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Palauttaa valittuun porttiin kytketyn laitteen tyypin.
 
-- Hubit: kaikki hubit, joissa on portteja, paitsi SBrick, SBrick Plus ja BuWizz 2.
+- Hubit: kaikki hubit, joissa on portteja, paitsi SBrick, SBrick Plus, BuWizz 2 ja Technic Move Hub.
 - Tyypillinen käyttö: tarkista, mitä on kytketty, ennen kuin suoritat laitekohtaisia lohkoja.
 
 ### Technic-värianturi {#technic-color-sensor}

@@ -28,6 +28,7 @@ Angir fargen på statuslyset til huben.
 Slår på lysene som er koblet til den valgte porten, med den angitte lysstyrken.
 
 - Hubber: alle hubber med porter, unntatt WeDo 2.0.
+- Technic Move Hub: portene `1`–`6` er hubens seks lys, nummerert på huben. Hvert lys kan stilles inn for seg, lysstyrke 0–100 %.
 - Typisk bruk: frontlys, justerbar belysning.
 
 ### `skru av` (Nybegynner) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Slår av lysene som er koblet til den valgte porten.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Slår lysene på en Technic Move Hub av eller på.
+Slår lysene på en Technic Move Hub av eller på via bilprofilen.
 
 - Valg: `av`, `på`
-- Hubber: Technic Move Hub.
+- Hubber: Technic Move Hub. For å stille inn hvert lys for seg bruker du i stedet **skru på ved … % lysstyrke** med portene `1`–`6`; ikke bland de to på samme hub (se [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Lysmatrise {#light-matrix}
 

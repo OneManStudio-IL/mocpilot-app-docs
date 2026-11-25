@@ -72,7 +72,7 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 ## 集线器按钮、倾斜和方向 {#hub-tilt-and-orientation}
 
-按钮积木的说明中列出了它适用的集线器。倾斜和方向积木适用于 BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub 和 Robot Inventor。
+按钮积木的说明中列出了它适用的集线器。倾斜和方向积木适用于 BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub 和 Robot Inventor。在 Technic Move Hub 上，这些值由其加速度计计算得出，前提是集线器按钮朝下安装（与 LEGO 汽车模型相同）；它没有 `偏航`，也没有**设置倾斜方向**。
 
 ### `是否 … … 按钮 …`（初学者） {#block_hubs_all_sensors_button_pressed}
 
@@ -132,6 +132,7 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 告诉集线器它在模型中的安装方式，以便从该位置开始测量倾斜和方向。
 
 - 选项：`前`、`上`、`右`、`后`、`下`、`左`
+- 不适用于 Technic Move Hub。
 
 ## 端口上的传感器 {#sensors-on-ports}
 
@@ -145,7 +146,7 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 返回连接在所选端口上的设备类型。
 
-- 集线器：除 SBrick、SBrick Plus 和 BuWizz 2 外所有带端口的集线器。
+- 集线器：除 SBrick、SBrick Plus、BuWizz 2 和 Technic Move Hub 外所有带端口的集线器。
 - 典型用法：在运行特定设备的积木之前，先检查连接的是什么设备。
 
 ### Technic 颜色传感器 {#technic-color-sensor}

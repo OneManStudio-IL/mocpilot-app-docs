@@ -28,6 +28,7 @@ import Screenshot from '@site/src/components/Screenshot';
 選んだポートにつないだライトを、指定した明るさで点灯します。
 
 - ハブ：ポートのあるすべてのハブ（WeDo 2.0 を除く）。
+- Technic Move Hub：ポート `1`–`6` はハブの 6 つのライトで、番号はハブに表示されています。ライトは 1 つずつ個別に、明るさ 0–100 % で設定できます。
 - 主な使い方：ヘッドライト、明るさを調整できる照明。
 
 ### `オフにする` (初心者) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Technic Move Hub のライトをオン／オフします。
+Technic Move Hub のライトを、車のプロフィールを通じてオン／オフします。
 
 - 選択肢：`オフ`、`有効`
-- ハブ：Technic Move Hub。
+- ハブ：Technic Move Hub。ライトを 1 つずつ設定するには、代わりにポート `1`–`6` で **でオンにする … 明るさ %** を使います。1 つのハブで両方を混ぜて使わないでください（[Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)を参照）。
 
 ## ライトマトリックス {#light-matrix}
 

@@ -95,7 +95,7 @@ Viene eseguito quando cambia il livello della batteria riportato dall'hub.
 
 Viene eseguito quando cambiano i valori dell'accelerometro dell'hub.
 
-- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `quando … inclinazione … angolo cambiato` (Principiante) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Viene eseguito quando cambiano i valori dell'accelerometro dell'hub.
 Viene eseguito quando cambia l'angolo di inclinazione dell'hub.
 
 - Opzioni dell'angolo: `qualsiasi`, `beccheggio`, `rollio`, `imbardata`
-- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `imbardata` è disponibile solo su Technic Hub e Robot Inventor.
+- Hub: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `imbardata` è disponibile solo su Technic Hub e Robot Inventor.
 
 ### `quando … orientamento cambiato` (Principiante) {#block_hubs_all_event_tilt_orientation_changed}
 

@@ -28,7 +28,8 @@ LEGO® Technic 遥控车（Porsche GT4 e-Performance、Lamborghini Revuelto、Ba
 - **转向**会自行校准转向齿条。
 - **刹车**、**Boost**（功率模式）和**动力脉冲**（仅限 Batmobile™ Tumbler 配置）。
 - **集线器配置**：通过**我的集线器 → 选择配置**把汽车配置加载到集线器中。请参阅 [Technic Move Hub 配置](/docs/Application/Hubs/TechnicMoveHubConfigurations)。
-- 逻辑积木中的灯光：*Technic Move 灯光设为*。
+- 逻辑积木：汽车配置积木（*以此启动电机 … 速度 %*、*设置转向架为*、*设置电机刹车*、*动力脉冲*、*打开灯光*、*设置电源模式*），或普通的端口积木：电机 `A`、`B`（驱动）和 `C`（转向；先在 `C` 上运行*校准齿条*，再用*移动到相对位置*），逐个控制的灯 `1`–`6`，以及倾斜、加速度和方向。每个集线器只用一种方式：两者控制的是同一组电机和灯。请参阅 [电机 → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)。
+- 快速连接：集线器自己的行（驱动、转向、灯光）；[集线器输入](/docs/Application/Links/Blocks/InputBlocks#src-hub)也可以读取它的倾斜和加速度。
 
 ## BuWizz 2.0 {#buwizz-20}
 

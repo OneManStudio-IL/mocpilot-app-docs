@@ -28,6 +28,7 @@ Sets the color of the hub's status light.
 Turns on the lights connected to the selected port at the given brightness.
 
 - Hubs: all hubs with ports, except WeDo 2.0.
+- Technic Move Hub: the ports `1`–`6` are the hub's six lights, numbered on the hub. Each light can be set on its own, brightness 0–100 %.
 - Typical use: headlights, adjustable lighting.
 
 ### `turn off` (Beginner) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Turns off the lights connected to the selected port.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Turns the lights of a Technic Move Hub on or off.
+Turns the lights of a Technic Move Hub on or off through its car profile.
 
 - Options: `off`, `on`
-- Hubs: Technic Move Hub.
+- Hubs: Technic Move Hub. To set each light separately, use **turn on at … % brightness** with ports `1`–`6` instead; don't mix the two on one hub (see [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Light matrix
 

@@ -28,6 +28,7 @@ Imposta il colore della spia di stato dell'hub.
 Accende con la luminosità indicata le luci collegate alla porta selezionata.
 
 - Hub: tutti gli hub con porte, tranne WeDo 2.0.
+- Technic Move Hub: le porte `1`–`6` sono le sei luci dell'hub, numerate sull'hub. Ogni luce si può impostare singolarmente, luminosità 0–100 %.
 - Uso tipico: fari, illuminazione regolabile.
 
 ### `spegnere` (Principiante) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Spegne le luci collegate alla porta selezionata.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Accende o spegne le luci di un Technic Move Hub.
+Accende o spegne le luci di un Technic Move Hub tramite il suo profilo auto.
 
 - Opzioni: `spento`, `abilitato`
-- Hub: Technic Move Hub.
+- Hub: Technic Move Hub. Per impostare ogni luce singolarmente, usa invece **accendere a … % luminosità** con le porte `1`–`6`; non mescolare i due sullo stesso hub (vedi [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Matrice di luci {#light-matrix}
 

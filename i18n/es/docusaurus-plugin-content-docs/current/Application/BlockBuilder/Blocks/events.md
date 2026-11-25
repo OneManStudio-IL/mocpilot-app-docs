@@ -95,7 +95,7 @@ Se ejecuta cuando cambia el nivel de batería que informa el hub.
 
 Se ejecuta cuando cambian los valores del acelerómetro del hub.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `cuando … inclinación … el ángulo ha cambiado` (Principiante) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Se ejecuta cuando cambian los valores del acelerómetro del hub.
 Se ejecuta cuando cambia el ángulo de inclinación del hub.
 
 - Opciones de ángulo: `cualquiera`, `cabeceo`, `balanceo`, `guiñada`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `guiñada` solo está disponible en el Technic Hub y el Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `guiñada` solo está disponible en el Technic Hub y el Robot Inventor.
 
 ### `cuando … la orientación ha cambiado` (Principiante) {#block_hubs_all_event_tilt_orientation_changed}
 

@@ -95,7 +95,7 @@ Wordt uitgevoerd als het batterijniveau dat de hub meldt verandert.
 
 Wordt uitgevoerd als de waarden van de versnellingsmeter van de hub veranderen.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `wanneer … kanteling … hoek gewijzigd` (Beginner) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Wordt uitgevoerd als de waarden van de versnellingsmeter van de hub veranderen.
 Wordt uitgevoerd als de kantelhoek van de hub verandert.
 
 - Hoekopties: `elke`, `helling`, `rol`, `gieren`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `gieren` is alleen beschikbaar op de Technic Hub en Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `gieren` is alleen beschikbaar op de Technic Hub en Robot Inventor.
 
 ### `wanneer … oriëntatie gewijzigd` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
 

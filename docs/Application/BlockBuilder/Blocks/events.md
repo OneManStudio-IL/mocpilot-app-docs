@@ -95,7 +95,7 @@ Runs when the battery level reported by the hub changes.
 
 Runs when the hub's accelerometer values change.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `when … tilt … angle changed` (Beginner) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Runs when the hub's accelerometer values change.
 Runs when the hub's tilt angle changes.
 
 - Angle options: `any`, `pitch`, `roll`, `yaw`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `yaw` is available only on the Technic Hub and Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `yaw` is available only on the Technic Hub and Robot Inventor.
 
 ### `when … orientation changed` (Beginner) {#block_hubs_all_event_tilt_orientation_changed}
 

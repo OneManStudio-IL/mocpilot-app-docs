@@ -28,7 +28,8 @@ Der Hub der ferngesteuerten LEGO® Technic-Autos (Porsche GT4 e-Performance, Lam
 - **Lenkung** kalibriert ihre Zahnstange selbst.
 - **Bremsen**, **Boost** (Leistungsmodus) und **Kraftimpuls** (nur mit der Konfiguration Batmobile™ Tumbler).
 - **Hub-Konfigurationen**: Laden Sie ein Fahrzeugprofil mit **Meine Hubs → Konfiguration auswählen** in den Hub. Siehe [Konfigurationen des Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Licht in den Logikblöcken: *Technic Move Licht einschalten auf*.
+- Logikblöcke: die Fahrzeugprofil-Blöcke (*Starte Motoren*, *Setze die Lenkstange auf*, *Setze die Motorbremse*, *Leistungsimpuls*, *Lichter einschalten*, *Stromversorgungsmodus einstellen*) oder die normalen Port-Blöcke: Motoren `A`, `B` (Antrieb) und `C` (Lenkung; *Zahnstange kalibrieren* an `C`, dann *zur relativen Position gehen*), Lichter `1`–`6` einzeln, Neigung, Beschleunigung und Ausrichtung. Verwenden Sie nur eine Art pro Hub: Beide steuern dieselben Motoren und Lichter. Siehe [Motoren → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Schnellverknüpfungen: die eigenen Zeilen des Hubs (Antrieb, Lenkung, Licht); ein [Hub-Eingang](/docs/Application/Links/Blocks/InputBlocks#src-hub) kann auch seine Neigung und Beschleunigung lesen.
 
 ## BuWizz 2.0 {#buwizz-20}
 

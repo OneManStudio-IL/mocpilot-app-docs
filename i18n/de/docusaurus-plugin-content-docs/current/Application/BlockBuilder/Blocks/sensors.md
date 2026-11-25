@@ -60,7 +60,7 @@ Stellt den Leistungsmodus eines Technic Move Hub ein.
 
 ## Hub-Tasten, Neigung und Ausrichtung {#hub-tilt-and-orientation}
 
-Beim Tastenblock sind die Hubs angegeben, mit denen er funktioniert. Die Neigungs- und Ausrichtungsblöcke funktionieren mit BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub und Robot Inventor.
+Beim Tastenblock sind die Hubs angegeben, mit denen er funktioniert. Die Neigungs- und Ausrichtungsblöcke funktionieren mit BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub und Robot Inventor. Beim Technic Move Hub werden sie aus seinem Beschleunigungssensor berechnet, für einen Hub, der mit der Taste nach unten eingebaut ist, wie in den LEGO-Automodellen; er hat kein `Gieren` und kein **setzen … Neigungsausrichtung auf**.
 
 ### `ist … … Taste …` (Anfänger) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Liefert `true`, wenn die ausgewählte Seite des Hubs nach oben zeigt.
 Teilt dem Hub mit, wie er im Modell eingebaut ist, damit Neigung und Ausrichtung von dieser Lage aus gemessen werden.
 
 - Optionen: `Vorne`, `Oben`, `Rechts`, `Hinten`, `Unten`, `Links`
+- Nicht verfügbar für den Technic Move Hub.
 
 ## Sensoren an Ports {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Die folgenden Technic- und BOOST-Sensorblöcke funktionieren mit City Hub, Techn
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Liefert den Typ des Geräts, das am ausgewählten Port angeschlossen ist.
 
-- Hubs: alle Hubs mit Ports außer SBrick, SBrick Plus und BuWizz 2.
+- Hubs: alle Hubs mit Ports außer SBrick, SBrick Plus, BuWizz 2 und Technic Move Hub.
 - Typische Verwendung: prüfen, was angeschlossen ist, bevor gerätespezifische Blöcke laufen.
 
 ### Technic-Farbsensor {#technic-color-sensor}

@@ -60,7 +60,7 @@ Indstiller strømtilstanden på en Technic Move Hub.
 
 ## Hubbens knapper, hældning og orientering {#hub-tilt-and-orientation}
 
-Knapblokken angiver, hvilke hubs den virker med. Blokkene til hældning og orientering virker på BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub og Robot Inventor.
+Knapblokken angiver, hvilke hubs den virker med. Blokkene til hældning og orientering virker på BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub og Robot Inventor. På Technic Move Hub beregnes de ud fra dens accelerometer for en hub, der er monteret med knappen nedad, som i LEGO-bilmodellerne; den har ingen `gyring` og ingen **sæt … tilt orientering til**.
 
 ### `er … … knap …` (Begynder) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Returnerer `true`, når den valgte side af hubben vender opad.
 Fortæller hubben, hvordan den er monteret i modellen, så hældning og orientering måles fra den position.
 
 - Valg: `Foran`, `Top`, `Højre`, `Bageste`, `Bund`, `Venstre`
+- Ikke tilgængelig for Technic Move Hub.
 
 ## Sensorer på porte {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Technic- og BOOST-sensorblokkene nedenfor virker på City Hub, Technic Hub, BOOS
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Returnerer typen af den enhed, der er tilsluttet den valgte port.
 
-- Hubs: alle hubs med porte undtagen SBrick, SBrick Plus og BuWizz 2.
+- Hubs: alle hubs med porte undtagen SBrick, SBrick Plus, BuWizz 2 og Technic Move Hub.
 - Typisk brug: tjek, hvad der er tilsluttet, før du kører enhedsspecifikke blokke.
 
 ### Technic-farvesensor {#technic-color-sensor}

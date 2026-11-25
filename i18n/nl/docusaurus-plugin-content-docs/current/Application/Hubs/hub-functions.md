@@ -28,7 +28,8 @@ De hub van de op afstand bestuurbare LEGO® Technic-auto's (Porsche GT4 e-Perfor
 - **Sturen** kalibreert de eigen stuurheugel.
 - **Remmen**, **Boost** (vermogensmodus) en **Vermogenspuls** (alleen met de configuratie Batmobile™ Tumbler).
 - **Hubconfiguraties**: laad een autoprofiel in de hub via **Mijn hubs → Configuratie selecteren**. Zie [Configuraties van de Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Lichten in Logicablokken: *Technic Move zet lichten aan*.
+- Logicablokken: de autoprofielblokken (*start motoren*, *zet stuurinrichting op*, *zet motorrem in*, *krachtpuls*, *zet lichten aan*, *stel stroommodus in*), of de gewone poortblokken: motoren `A`, `B` (aandrijving) en `C` (besturing; *rek kalibreren* op `C`, daarna *ga naar relatieve positie*), lichten `1`–`6` afzonderlijk, kanteling, versnelling en oriëntatie. Gebruik één manier per hub: beide sturen dezelfde motoren en lichten aan. Zie [Motoren → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Snelle koppelingen: de eigen rijen van de hub (rijden, sturen, lichten); een [Hub-invoer](/docs/Application/Links/Blocks/InputBlocks#src-hub) kan ook de kanteling en versnelling ervan lezen.
 
 ## BuWizz 2.0 {#buwizz-20}
 

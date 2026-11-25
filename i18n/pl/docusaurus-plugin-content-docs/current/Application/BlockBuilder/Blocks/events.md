@@ -95,7 +95,7 @@ Uruchamia się, gdy zmieni się poziom baterii zgłaszany przez hub.
 
 Uruchamia się, gdy zmienią się wartości akcelerometru huba.
 
-- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `gdy … nachylenie … kąt został zmieniony` (Początkujący) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Uruchamia się, gdy zmienią się wartości akcelerometru huba.
 Uruchamia się, gdy zmieni się kąt nachylenia huba.
 
 - Opcje kąta: `jakikolwiek`, `pochylenie`, `przechylenie`, `odchylenie`
-- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `odchylenie` jest dostępne tylko w Technic Hub i Robot Inventor.
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `odchylenie` jest dostępne tylko w Technic Hub i Robot Inventor.
 
 ### `gdy … orientacja została zmieniona` (Początkujący) {#block_hubs_all_event_tilt_orientation_changed}
 

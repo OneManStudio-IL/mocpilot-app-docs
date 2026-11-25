@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Bloky motorov spúšťajú, zastavujú a polohujú motory pripojené k portom hubu a ladia ich pohyb. Kategória sa zobrazí, keď má niektorý hub v profile porty pre motory. V každom bloku vyberáte hub a jeden alebo viac portov.
 
-Niektoré bloky potrebujú motor so vstavaným senzorom otáčania (enkodérom), napríklad uhlové motory Technic, a hub, ktorý ho dokáže riadiť. Tieto bloky sú označené „motory s enkodérom“. Nie sú k dispozícii pre huby SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 a Mould King. Technic Move Hub má vlastnú sadu blokov na konci tejto stránky.
+Niektoré bloky potrebujú motor so vstavaným senzorom otáčania (enkodérom), napríklad uhlové motory Technic, a hub, ktorý ho dokáže riadiť. Tieto bloky sú označené „motory s enkodérom“. Nie sú k dispozícii pre huby SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 a Mould King. Technic Move Hub s týmito blokmi tiež funguje (jeho motory sú porty `A`, `B` a `C`) a má aj vlastné bloky profilu auta: pozrite si [Technic Move Hub](#technic-move-hub) na konci tejto stránky.
 
 ## Spúšťanie motorov {#running-motors}
 
@@ -80,7 +80,7 @@ Vyhlási aktuálnu polohu motora za zadanú hodnotu. Relatívne polohy sa počí
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Zistí stred a rozsah pohybu hrebeňa riadenia.
 
-- Motor otočí hrebeň k obom koncom, zmeria, kam až dosiahne, a výsledok uloží do dvoch premenných, ktoré vložíte do políčok: polohu stredu a rozsah v stupňoch. Hrebeň zastaví v strede, jeho relatívna poloha tam však zodpovedá hodnote stredu, nie 0, preto hneď za tento blok pridajte **nastaviť relatívnu polohu** 0; potom riaďte pomocou `rozsah × joystick / 100`.
+- Motor otočí hrebeň k obom koncom, zmeria, kam až dosiahne, a výsledok uloží do dvoch premenných, ktoré vložíte do políčok: polohu stredu a rozsah v stupňoch (od stredu k jednému koncu). Hrebeň zastaví v strede a tento bod sa stane relatívnou polohou 0: riaďte pomocou **ísť na relatívnu pozíciu** `rozsah × joystick / 100`.
 - Riadenie musí mať na oboch koncoch pevné mechanické dorazy (koniec hrebeňa alebo prevodu).
 - Iba motory s enkodérom.
 
@@ -153,7 +153,14 @@ Spustí motory na vybraných portoch zadaným výkonom, od −100 do 100 % (pred
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub poháňa svoje vstavané motory týmito blokmi namiesto vyššie uvedených blokov pre porty.
+Technic Move Hub (v diaľkovo ovládaných autách LEGO® Technic) sa dá programovať dvoma spôsobmi:
+
+- **Bloky pre porty** (vyššie uvedené bloky motorov). Tri vstavané motory hubu sú porty: `A` a `B` sú hnacie motory, `C` je motor riadenia. Sú to motory s enkodérom, takže na nich fungujú všetky vyššie uvedené bloky motorov okrem **zapnúť detekciu zaseknutia** a **výkon**. V modeloch áut LEGO sa `A` pri jazde dopredu otáča opačne ako `B` a riadenie na `C` má dorazy: raz spustite **kalibrovať hrebeň** na `C` a potom riaďte pomocou **ísť na relatívnu pozíciu** na `C` (0 je stred). Šesť svetiel hubu sú porty `1`–`6` [blokov svetla](/docs/Application/BlockBuilder/Blocks/Light) a bloky [náklonu, zrýchlenia a orientácie](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) fungujú rovnako ako na Technic Hube.
+- **Bloky profilu auta** (nižšie): pohon, riadenie, brzda, výkonový impulz, svetlá a režim napájania, cez konfiguráciu auta nahratú do hubu. Pozrite si [Konfigurácie Technic Move Hubu](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Jeden spôsob na hub
+Bloky profilu a bloky pre porty ovládajú tie isté motory a svetlá: platí posledný príkaz a blok profilu si motory a svetlá vezme späť. Kontrola programu v editore blokov na to upozorní pri každom bloku pre port tohto hubu: „… je ovládaný blokmi profilu auta aj blokmi portov“.
+:::
 
 ### `spustiť motory pri … % rýchlosť` (Začiatočník) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

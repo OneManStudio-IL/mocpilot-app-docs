@@ -95,7 +95,7 @@ Wird ausgeführt, wenn sich der vom Hub gemeldete Akkustand ändert.
 
 Wird ausgeführt, wenn sich die Werte des Beschleunigungssensors des Hubs ändern.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `wenn … Neigung … Winkel wurde geändert` (Anfänger) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Wird ausgeführt, wenn sich die Werte des Beschleunigungssensors des Hubs änder
 Wird ausgeführt, wenn sich der Neigungswinkel des Hubs ändert.
 
 - Winkeloptionen: `irgendein`, `Neigung`, `Rollen`, `Gieren`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `Gieren` gibt es nur beim Technic Hub und Robot Inventor.
 
 ### `wenn … Ausrichtung wurde geändert` (Anfänger) {#block_hubs_all_event_tilt_orientation_changed}
 

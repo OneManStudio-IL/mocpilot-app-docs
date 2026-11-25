@@ -60,7 +60,7 @@ Stelt de vermogensmodus van een Technic Move Hub in.
 
 ## Hubknoppen, kanteling en oriëntatie {#hub-tilt-and-orientation}
 
-Het knopblok vermeldt met welke hubs het werkt. De kantel- en oriëntatieblokken werken op BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub en Robot Inventor.
+Het knopblok vermeldt met welke hubs het werkt. De kantel- en oriëntatieblokken werken op BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub en Robot Inventor. Op de Technic Move Hub worden ze berekend uit de versnellingsmeter, voor een hub die met de knop naar beneden is gemonteerd, zoals in de LEGO-automodellen; hij heeft geen `gieren` en geen **stel … hellingsoriëntatie naar**.
 
 ### `… … knop …` (Beginner) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Geeft `true` terug als de gekozen kant van de hub naar boven wijst.
 Vertelt de hub hoe hij in het model gemonteerd is, zodat kanteling en oriëntatie vanuit die positie worden gemeten.
 
 - Opties: `Voor`, `Bovenkant`, `Rechts`, `Achterste`, `Onderkant`, `Links`
+- Niet beschikbaar voor de Technic Move Hub.
 
 ## Sensoren op poorten {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ De Technic- en BOOST-sensorblokken hieronder werken op de City Hub, Technic Hub,
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Geeft het type terug van het apparaat dat op de gekozen poort is aangesloten.
 
-- Hubs: alle hubs met poorten behalve SBrick, SBrick Plus en BuWizz 2.
+- Hubs: alle hubs met poorten behalve SBrick, SBrick Plus, BuWizz 2 en Technic Move Hub.
 - Gebruikelijke toepassing: controleren wat er is aangesloten voordat je apparaatspecifieke blokken uitvoert.
 
 ### Technic-kleursensor {#technic-color-sensor}

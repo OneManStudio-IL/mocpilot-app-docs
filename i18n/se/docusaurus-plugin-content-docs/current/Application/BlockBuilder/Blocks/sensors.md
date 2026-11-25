@@ -60,7 +60,7 @@ Ställer in effektläget på en Technic Move Hub.
 
 ## Hubbens knappar, lutning och orientering {#hub-tilt-and-orientation}
 
-Knappblocket listar de hubbar det fungerar med. Lutnings- och orienteringsblocken fungerar på BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub och Robot Inventor.
+Knappblocket listar de hubbar det fungerar med. Lutnings- och orienteringsblocken fungerar på BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub och Robot Inventor. På Technic Move Hub beräknas de från dess accelerometer för en hubb som är monterad med knappen nedåt, som i LEGO-bilmodellerna; den har ingen `yaw` och inget **ställ in … lutningsorientering till**.
 
 ### `är … … knapp …` (Nybörjare) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Returnerar `true` när den valda sidan av hubben är vänd uppåt.
 Talar om för hubben hur den är monterad i modellen, så att lutning och orientering mäts från det läget.
 
 - Alternativ: `Fram`, `Topp`, `Höger`, `Bak`, `Botten`, `Vänster`
+- Inte tillgängligt för Technic Move Hub.
 
 ## Sensorer på portar {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Technic- och BOOST-sensorblocken nedan fungerar på City Hub, Technic Hub, BOOST
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Returnerar typen av enhet som är ansluten till den valda porten.
 
-- Hubbar: alla hubbar med portar utom SBrick, SBrick Plus och BuWizz 2.
+- Hubbar: alla hubbar med portar utom SBrick, SBrick Plus, BuWizz 2 och Technic Move Hub.
 - Typisk användning: kontrollera vad som är anslutet innan enhetsspecifika block körs.
 
 ### Technic-färgsensor {#technic-color-sensor}

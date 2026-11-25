@@ -60,7 +60,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Кнопки, нахил і орієнтація хаба {#hub-tilt-and-orientation}
 
-Для блока кнопки вказано хаби, з якими він працює. Блоки нахилу й орієнтації працюють на BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub і Robot Inventor.
+Для блока кнопки вказано хаби, з якими він працює. Блоки нахилу й орієнтації працюють на BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub і Robot Inventor. На Technic Move Hub вони обчислюються за його акселерометром для хаба, закріпленого кнопкою донизу, як у моделях автомобілів LEGO; у нього немає кута `рискання` і блока **налаштувати … орієнтація нахилу до …**.
 
 ### `є … … кнопка …` (Початківець) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Повідомляє хабу, як його закріплено в моделі, щоб нахил і орієнтація вимірювалися від цього положення.
 
 - Варіанти: `Перед`, `Верх`, `вправо`, `Задня`, `Низ`, `вліво`
+- Недоступно для Technic Move Hub.
 
 ## Датчики на портах {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Повертає тип пристрою, підключеного до вибраного порту.
 
-- Хаби: усі хаби з портами, крім SBrick, SBrick Plus і BuWizz 2.
+- Хаби: усі хаби з портами, крім SBrick, SBrick Plus, BuWizz 2 і Technic Move Hub.
 - Для чого: перевірити, що підключено, перш ніж виконувати блоки для конкретного пристрою.
 
 ### Датчик кольору Technic {#technic-color-sensor}

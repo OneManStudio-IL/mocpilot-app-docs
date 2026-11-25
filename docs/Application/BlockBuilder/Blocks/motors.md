@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Motor blocks start, stop and position motors connected to hub ports, and tune how they move. The category appears when a hub in the profile has motor ports. In every block you pick the hub and one or more ports.
 
-Some blocks need a motor with a built-in rotation sensor (encoder), such as the Technic angular motors, and a hub that can control it. These blocks are marked "encoder motors". They aren't available for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 and Mould King hubs. The Technic Move Hub has its own set of blocks at the end of this page.
+Some blocks need a motor with a built-in rotation sensor (encoder), such as the Technic angular motors, and a hub that can control it. These blocks are marked "encoder motors". They aren't available for SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 and Mould King hubs. The Technic Move Hub works with these blocks too (its motors are ports `A`, `B` and `C`) and also has its own car profile blocks: see [Technic Move Hub](#technic-move-hub) at the end of this page.
 
 ## Running motors
 
@@ -80,7 +80,7 @@ Declares the motor's current position to be the given value. Relative positions 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Finds the center and the travel of a steering rack.
 
-- The motor turns the rack to both ends, measures how far it can go and puts the result into the two variables you place in the slots: the center position and the range in degrees. The rack stops in the middle, but its relative position there equals the center value, not 0, so add **set relative position to** 0 right after this block; then steer with `range × joystick / 100`.
+- The motor turns the rack to both ends, measures how far it can go and puts the result into the two variables you place in the slots: the center position and the range in degrees (from the center to one end). The rack stops in the middle, and that point becomes relative position 0: steer with **go to relative position** `range × joystick / 100`.
 - The steering must have hard mechanical stops at both ends (the end of the rack or the gearing).
 - Encoder motors only.
 
@@ -151,9 +151,16 @@ Starts the motors on the selected ports at the given power, from −100 to 100 %
 <img src={useBaseUrl('/img/blocks/block_ri_motor_was_interrupted.svg')} alt="block_ri_motor_was_interrupted.svg" />
 `true` if the last command of the motor on this port didn't finish because another motor block on the same port cut it short.
 
-## Technic Move Hub
+## Technic Move Hub {#technic-move-hub}
 
-The Technic Move Hub drives its built-in motors with these blocks instead of the port blocks above.
+The Technic Move Hub (in the LEGO® Technic remote-controlled cars) can be programmed in two ways:
+
+- **Port blocks** (the motor blocks above). The hub's three built-in motors are ports: `A` and `B` are the drive motors, `C` is the steering motor. They are encoder motors, so every motor block above works on them except **turn stall detection** and **power**. In the LEGO car models, `A` turns the other way than `B` to drive forward, and the steering on `C` has end stops: run **calibrate rack** on `C` once, then steer with **go to relative position** on `C` (0 is the center). The hub's six lights are ports `1`–`6` of the [light blocks](/docs/Application/BlockBuilder/Blocks/Light), and its [tilt, acceleration and orientation](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) blocks work as on the Technic Hub.
+- **Car profile blocks** (below): drive, steer, brake, power pulse, lights and power mode, through the car configuration loaded into the hub. See [Technic Move Hub configurations](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Use one way per hub
+The profile blocks and the port blocks command the same motors and lights: the last command wins, and a profile block takes the motors and lights back. The program check in the block editor warns about it on every port block of that hub: "… is controlled both by its car profile blocks and by port blocks".
+:::
 
 ### `start motors at … % speed` (Beginner) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

@@ -28,6 +28,7 @@ Ustawia kolor lampki stanu huba.
 Włącza światła podłączone do wybranego portu z podaną jasnością.
 
 - Huby: wszystkie huby z portami z wyjątkiem WeDo 2.0.
+- Technic Move Hub: porty `1`–`6` to sześć świateł huba, ponumerowanych na hubie. Każde światło można ustawić osobno, jasność 0–100 %.
 - Typowe zastosowanie: reflektory, regulowane oświetlenie.
 
 ### `wyłączyć` (Początkujący) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Wyłącza światła podłączone do wybranego portu.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Włącza lub wyłącza światła Technic Move Hub.
+Włącza lub wyłącza światła Technic Move Hub za pomocą jego profilu samochodu.
 
 - Opcje: `wyłącz`, `włączone`
-- Huby: Technic Move Hub.
+- Huby: Technic Move Hub. Aby ustawiać każde światło osobno, użyj zamiast tego bloku **włączyć w … % jasność** z portami `1`–`6`; nie łącz obu sposobów na jednym hubie (zobacz [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Matryca świetlna {#light-matrix}
 

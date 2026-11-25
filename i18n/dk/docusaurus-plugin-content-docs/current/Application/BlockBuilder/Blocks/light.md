@@ -28,6 +28,7 @@ Indstiller farven på hubbens statuslys.
 Tænder lysene, der er tilsluttet den valgte port, med den angivne lysstyrke.
 
 - Hubs: alle hubs med porte undtagen WeDo 2.0.
+- Technic Move Hub: portene `1`–`6` er hubbens seks lys, nummereret på hubben. Hvert lys kan indstilles for sig, lysstyrke 0–100 %.
 - Typisk brug: forlygter, justerbar belysning.
 
 ### `sluk` (Begynder) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Slukker lysene, der er tilsluttet den valgte port.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Tænder eller slukker lysene på en Technic Move Hub.
+Tænder eller slukker lysene på en Technic Move Hub via dens bilprofil.
 
 - Valg: `off`, `aktiveret`
-- Hubs: Technic Move Hub.
+- Hubs: Technic Move Hub. For at indstille hvert lys for sig skal du i stedet bruge **tænde på … % lysstyrke** med portene `1`–`6`; bland ikke de to på én hub (se [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Lysmatrix {#light-matrix}
 

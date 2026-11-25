@@ -60,7 +60,7 @@ Ustawia tryb mocy Technic Move Hub.
 
 ## Przyciski, nachylenie i orientacja huba {#hub-tilt-and-orientation}
 
-Blok przycisku podaje huby, z którymi działa. Bloki nachylenia i orientacji działają w BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub i Robot Inventor.
+Blok przycisku podaje huby, z którymi działa. Bloki nachylenia i orientacji działają w BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub i Robot Inventor. W Technic Move Hub są obliczane z jego akcelerometru dla huba zamontowanego przyciskiem w dół, jak w modelach samochodów LEGO; nie ma on kąta `odchylenie` ani bloku **ustawić … orientacja nachylenia do …**.
 
 ### `jest … … przycisk …` (Początkujący) {#block_hubs_all_sensors_button_pressed}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_button_pressed.svg?v=20260409-2258')} alt="block_hubs_all_sensors_button_pressed.svg" />
@@ -106,6 +106,7 @@ Zwraca `true`, gdy wybrana strona huba jest zwrócona do góry.
 Informuje hub, jak jest zamontowany w modelu, aby nachylenie i orientacja były mierzone względem tej pozycji.
 
 - Opcje: `Przód`, `Góra`, `Prawo`, `Tylny`, `Dół`, `Lewo`
+- Niedostępne dla Technic Move Hub.
 
 ## Czujniki na portach {#sensors-on-ports}
 
@@ -117,7 +118,7 @@ Poniższe bloki czujników Technic i BOOST działają w City Hub, Technic Hub, B
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_device_type.svg')} alt="block_hubs_all_motors_port_device_type.svg" />
 Zwraca typ urządzenia podłączonego do wybranego portu.
 
-- Huby: wszystkie huby z portami z wyjątkiem SBrick, SBrick Plus i BuWizz 2.
+- Huby: wszystkie huby z portami z wyjątkiem SBrick, SBrick Plus, BuWizz 2 i Technic Move Hub.
 - Typowe zastosowanie: sprawdzenie, co jest podłączone, przed uruchomieniem bloków dla konkretnego urządzenia.
 
 ### Czujnik koloru Technic {#technic-color-sensor}

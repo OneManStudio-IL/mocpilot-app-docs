@@ -28,7 +28,8 @@ The hub of the LEGO® Technic remote-controlled cars (Porsche GT4 e-Performance,
 - **Steering** calibrates its own rack.
 - **Brake**, **Boost** (power mode) and **Power pulse** (with the Batmobile™ Tumbler configuration only).
 - **Hub configurations**: load a car profile into the hub with **My Hubs → Select config**. See [Technic Move Hub configurations](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Lights in Logic Blocks: *Technic Move light turn to*.
+- Logic Blocks: the car profile blocks (*start motors*, *set steering rack to*, *set motors brake*, *power pulse*, *turn lights*, *set power mode*), or the ordinary port blocks: motors `A`, `B` (drive) and `C` (steering; *calibrate rack* on `C`, then *go to relative position*), lights `1`–`6` one by one, tilt, acceleration and orientation. Use one way per hub: both command the same motors and lights. See [Motors → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Quick Links: the hub's own rows (drive, steering, lights); a [Hub input](/docs/Application/Links/Blocks/InputBlocks#src-hub) can also read its tilt and acceleration.
 
 ## BuWizz 2.0
 

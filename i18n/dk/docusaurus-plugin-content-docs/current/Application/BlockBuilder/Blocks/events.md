@@ -95,7 +95,7 @@ Kører, når det batteriniveau, hubben rapporterer, ændrer sig.
 
 Kører, når hubbens accelerometerværdier ændrer sig.
 
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `når … hældning … vinkel ændret` (Begynder) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Kører, når hubbens accelerometerværdier ændrer sig.
 Kører, når hubbens hældningsvinkel ændrer sig.
 
 - Vinkler: `enhver`, `hældning`, `rulning`, `gyring`
-- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `gyring` findes kun på Technic Hub og Robot Inventor.
+- Hubs: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `gyring` findes kun på Technic Hub og Robot Inventor.
 
 ### `når … orientering ændret` (Begynder) {#block_hubs_all_event_tilt_orientation_changed}
 

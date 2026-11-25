@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 电机积木用于启动、停止连接在集线器端口上的电机并控制其位置，还可以调整电机的运动方式。当配置文件中有带电机端口的集线器时，就会出现这个类别。在每个积木中，你都要选择集线器以及一个或多个端口。
 
-有些积木需要带内置旋转传感器（编码器）的电机（例如 Technic 角度电机），以及能够控制它的集线器。这些积木标有“编码器电机”。它们不适用于 SBrick、SBrick Plus、BuWizz 2、WeDo 2.0 和 Mould King 集线器。Technic Move Hub 有自己的一套积木，列在本页末尾。
+有些积木需要带内置旋转传感器（编码器）的电机（例如 Technic 角度电机），以及能够控制它的集线器。这些积木标有“编码器电机”。它们不适用于 SBrick、SBrick Plus、BuWizz 2、WeDo 2.0 和 Mould King 集线器。Technic Move Hub 也可以使用这些积木（它的电机是端口 `A`、`B` 和 `C`），此外还有自己的汽车配置积木：请参阅本页末尾的 [Technic Move Hub](#technic-move-hub)。
 
 ## 运行电机 {#running-motors}
 
@@ -102,7 +102,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 找出转向齿条的中心和行程。
 
-- 电机会把齿条转到两端，测量它能移动多远，并把结果存入你放在插槽中的两个变量：中心位置和以度为单位的范围。齿条会停在中间，但此时它的相对位置等于中心值而不是 0，所以请在这个积木之后紧接着添加**设置相对位置** 0；然后用 `范围 × 操纵杆 / 100` 来转向。
+- 电机会把齿条转到两端，测量它能移动多远，并把结果存入你放在插槽中的两个变量：中心位置和以度为单位的范围（从中心到一端）。齿条会停在中间，该点即成为相对位置 0：然后用**移动到相对位置** `范围 × 操纵杆 / 100` 来转向。
 - 转向机构两端必须有坚固的机械限位（齿条末端或齿轮传动的末端）。
 - 仅限编码器电机。
 
@@ -195,7 +195,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub 使用这些积木（而不是上面的端口积木）来驱动其内置电机。
+Technic Move Hub（用于 LEGO® Technic 遥控车）有两种编程方式：
+
+- **端口积木**（上面的电机积木）。集线器的三个内置电机就是端口：`A` 和 `B` 是驱动电机，`C` 是转向电机。它们是编码器电机，因此上面所有电机积木都适用于它们，**启用卡死检测**和**功率**除外。在 LEGO 汽车模型中，`A` 要与 `B` 反向转动才能前进，而 `C` 上的转向机构有限位：先在 `C` 上运行一次**校准齿条**，然后在 `C` 上用**移动到相对位置**转向（0 为中心）。集线器的六盏灯是[灯光积木](/docs/Application/BlockBuilder/Blocks/Light)的端口 `1`–`6`，它的[倾斜、加速度和方向](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation)积木与在 Technic Hub 上的用法相同。
+- **汽车配置积木**（见下文）：通过加载到集线器中的汽车配置来控制驱动、转向、刹车、动力脉冲、灯光和功率模式。请参阅 [Technic Move Hub 配置](/docs/Application/Hubs/TechnicMoveHubConfigurations)。
+
+:::caution 每个集线器只用一种方式
+配置积木和端口积木控制的是同一组电机和灯：以最后一条命令为准，而且配置积木会重新接管电机和灯。积木编辑器中的程序检查会在该集线器的每个端口积木上发出警告：“… 同时由其汽车配置文件积木和端口积木控制”。
+:::
 
 ### `以此启动电机 … 速度 %`（初学者） {#block_hubs_technicmove_motors_start_motors_at_speed}
 

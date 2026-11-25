@@ -28,6 +28,7 @@ import Screenshot from '@site/src/components/Screenshot';
 Вмикає світло, підключене до вибраного порту, із заданою яскравістю.
 
 - Хаби: усі хаби з портами, крім WeDo 2.0.
+- Technic Move Hub: порти `1`–`6` — це шість лампочок хаба, пронумерованих на хабі. Кожну лампочку можна вмикати окремо, яскравість 0–100 %.
 - Для чого: фари, регульоване освітлення.
 
 ### `вимкнути` (Початківець) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Вмикає або вимикає світло Technic Move Hub.
+Вмикає або вимикає світло Technic Move Hub через його профіль автомобіля.
 
 - Варіанти: `вимкнено`, `увімкнено`
-- Хаби: Technic Move Hub.
+- Хаби: Technic Move Hub. Щоб налаштовувати кожну лампочку окремо, використовуйте натомість **увімкнути на … % яскравість** з портами `1`–`6`; не змішуйте ці два способи на одному хабі (див. [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Світлова матриця {#light-matrix}
 

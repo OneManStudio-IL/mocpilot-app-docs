@@ -28,6 +28,7 @@ Nastaví barvu stavového světla hubu.
 Rozsvítí světla připojená k vybranému portu na zadaný jas.
 
 - Huby: všechny huby s porty kromě WeDo 2.0.
+- Technic Move Hub: porty `1`–`6` jsou šest světel hubu, očíslovaných na hubu. Každé světlo lze nastavit zvlášť, jas 0–100 %.
 - Typické použití: světlomety, nastavitelné osvětlení.
 
 ### `vypnout` (Začátečník) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Zhasne světla připojená k vybranému portu.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Rozsvítí nebo zhasne světla Technic Move Hubu.
+Rozsvítí nebo zhasne světla Technic Move Hubu přes jeho profil auta.
 
 - Volby: `vypnuto`, `povoleno`
-- Huby: Technic Move Hub.
+- Huby: Technic Move Hub. Chcete-li nastavit každé světlo zvlášť, použijte místo něj **zapnout na … % jas** s porty `1`–`6`; oba způsoby na jednom hubu nemíchejte (viz [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Světelná matice {#light-matrix}
 

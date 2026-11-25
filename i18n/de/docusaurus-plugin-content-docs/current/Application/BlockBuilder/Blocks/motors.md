@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Motorblöcke starten, stoppen und positionieren Motoren an den Hub-Ports und stellen ein, wie sie sich bewegen. Die Kategorie erscheint, wenn ein Hub im Profil Motor-Ports hat. In jedem Block wählen Sie den Hub und einen oder mehrere Ports.
 
-Manche Blöcke brauchen einen Motor mit eingebautem Drehsensor (Encoder), etwa die Technic-Winkelmotoren, und einen Hub, der ihn steuern kann. Diese Blöcke sind mit „Encoder-Motoren“ gekennzeichnet. Für SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 und Mould-King-Hubs sind sie nicht verfügbar. Der Technic Move Hub hat eigene Blöcke am Ende dieser Seite.
+Manche Blöcke brauchen einen Motor mit eingebautem Drehsensor (Encoder), etwa die Technic-Winkelmotoren, und einen Hub, der ihn steuern kann. Diese Blöcke sind mit „Encoder-Motoren“ gekennzeichnet. Für SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 und Mould-King-Hubs sind sie nicht verfügbar. Der Technic Move Hub funktioniert ebenfalls mit diesen Blöcken (seine Motoren sind die Ports `A`, `B` und `C`) und hat außerdem eigene Fahrzeugprofil-Blöcke: siehe [Technic Move Hub](#technic-move-hub) am Ende dieser Seite.
 
 ## Motoren laufen lassen {#running-motors}
 
@@ -80,7 +80,7 @@ Erklärt die aktuelle Position des Motors zum angegebenen Wert. Relative Positio
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Ermittelt die Mitte und den Stellweg einer Lenkzahnstange.
 
-- Der Motor dreht die Zahnstange zu beiden Enden, misst, wie weit sie sich bewegen kann, und schreibt das Ergebnis in die beiden Variablen, die Sie in die Eingabefelder setzen: die Mittelposition und den Bereich in Grad. Die Zahnstange bleibt in der Mitte stehen, ihre relative Position dort entspricht aber dem Mittelwert, nicht 0; fügen Sie deshalb direkt nach diesem Block **relative Position einstellen** 0 hinzu und lenken Sie dann mit `range × joystick / 100`.
+- Der Motor dreht die Zahnstange zu beiden Enden, misst, wie weit sie sich bewegen kann, und schreibt das Ergebnis in die beiden Variablen, die Sie in die Eingabefelder setzen: die Mittelposition und den Bereich in Grad (von der Mitte bis zu einem Ende). Die Zahnstange bleibt in der Mitte stehen, und dieser Punkt wird zur relativen Position 0: Lenken Sie mit **zur relativen Position gehen** `range × joystick / 100`.
 - Die Lenkung muss an beiden Enden feste mechanische Anschläge haben (das Ende der Zahnstange oder des Getriebes).
 - Nur Encoder-Motoren.
 
@@ -153,7 +153,14 @@ Startet die Motoren an den gewählten Ports mit der angegebenen Leistung von −
 
 ## Technic Move Hub {#technic-move-hub}
 
-Der Technic Move Hub steuert seine eingebauten Motoren mit diesen Blöcken statt mit den Port-Blöcken oben.
+Der Technic Move Hub (in den ferngesteuerten LEGO® Technic-Autos) lässt sich auf zwei Arten programmieren:
+
+- **Port-Blöcke** (die Motorblöcke oben). Die drei eingebauten Motoren des Hubs sind Ports: `A` und `B` sind die Antriebsmotoren, `C` ist der Lenkmotor. Es sind Encoder-Motoren, daher funktioniert jeder Motorblock oben mit ihnen, außer **Blockierungserkennung aktivieren** und **Leistung**. In den LEGO-Automodellen dreht sich `A` zum Vorwärtsfahren andersherum als `B`, und die Lenkung an `C` hat Endanschläge: Führen Sie einmal **Zahnstange kalibrieren** an `C` aus und lenken Sie dann mit **zur relativen Position gehen** an `C` (0 ist die Mitte). Die sechs Lichter des Hubs sind die Ports `1`–`6` der [Lichtblöcke](/docs/Application/BlockBuilder/Blocks/Light), und seine Blöcke für [Neigung, Beschleunigung und Ausrichtung](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) funktionieren wie beim Technic Hub.
+- **Fahrzeugprofil-Blöcke** (unten): Fahren, Lenken, Bremsen, Leistungsimpuls, Licht und Leistungsmodus, über die in den Hub geladene Fahrzeugkonfiguration. Siehe [Konfigurationen des Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Nur eine Art pro Hub
+Die Profilblöcke und die Port-Blöcke steuern dieselben Motoren und Lichter: Der letzte Befehl gewinnt, und ein Profilblock übernimmt die Motoren und Lichter wieder. Die Programmprüfung im Blockeditor warnt davor bei jedem Port-Block dieses Hubs: „… wird sowohl von den Blöcken seines Fahrzeugprofils als auch von Port-Blöcken gesteuert“.
+:::
 
 ### `Starte Motoren bei … % Geschwindigkeit` (Anfänger) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

@@ -28,6 +28,7 @@ Stellt die Farbe der Statusleuchte des Hubs ein.
 Schaltet die am ausgewählten Port angeschlossenen Lichter mit der angegebenen Helligkeit ein.
 
 - Hubs: alle Hubs mit Ports außer WeDo 2.0.
+- Technic Move Hub: Die Ports `1`–`6` sind die sechs Lichter des Hubs, nummeriert wie auf dem Hub. Jedes Licht lässt sich einzeln einstellen, Helligkeit 0–100 %.
 - Typische Verwendung: Scheinwerfer, dimmbare Beleuchtung.
 
 ### `ausschalten` (Anfänger) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Schaltet die am ausgewählten Port angeschlossenen Lichter aus.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Schaltet die Lichter eines Technic Move Hub ein oder aus.
+Schaltet die Lichter eines Technic Move Hub über sein Fahrzeugprofil ein oder aus.
 
 - Optionen: `aus`, `auf`
-- Hubs: Technic Move Hub.
+- Hubs: Technic Move Hub. Um jedes Licht einzeln einzustellen, verwenden Sie stattdessen **einschalten bei … % Helligkeit** mit den Ports `1`–`6`; mischen Sie beides nicht an einem Hub (siehe [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Lichtmatrix {#light-matrix}
 

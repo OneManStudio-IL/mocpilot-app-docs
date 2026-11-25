@@ -28,7 +28,8 @@ Huben i de fjernstyrte LEGO® Technic-bilene (Porsche GT4 e-Performance, Lamborg
 - **Styring** kalibrerer sin egen tannstang.
 - **Brems**, **Boost** (effektmodus) og **Kraftpuls** (bare med Batmobile™ Tumbler-konfigurasjonen).
 - **Hubkonfigurasjoner**: last en bilprofil inn i huben med **Mine hubber → Velg konfigurasjon**. Se [Konfigurasjoner for Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
-- Lys i Logikkblokker: *Technic Move-lys slå til*.
+- Logikkblokker: bilprofilblokkene (*start motorer*, *sett styring til*, *sett motorbremsen*, *kraftpuls*, *slå på lysene*, *sett strømmodus*) eller de vanlige portblokkene: motorer `A`, `B` (drift) og `C` (styring; *kalibrer tannstang* på `C`, deretter *gå til relativ posisjon*), lys `1`–`6` hver for seg, helling, akselerasjon og orientering. Bruk én måte per hub: begge styrer de samme motorene og lysene. Se [Motorer → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
+- Hurtigkoblinger: hubens egne rader (kjøring, styring, lys); en [Hub-inngang](/docs/Application/Links/Blocks/InputBlocks#src-hub) kan også lese hellingen og akselerasjonen.
 
 ## BuWizz 2.0 {#buwizz-20}
 

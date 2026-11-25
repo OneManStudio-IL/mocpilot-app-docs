@@ -28,6 +28,7 @@ Règle la couleur du voyant d’état du hub.
 Allume les lumières branchées sur le port sélectionné à la luminosité indiquée.
 
 - Hubs : tous les hubs à ports, sauf WeDo 2.0.
+- Technic Move Hub : les ports `1`–`6` sont les six lumières du hub, numérotées sur le hub. Chaque lumière se règle séparément, luminosité de 0 à 100 %.
 - Utilisation type : phares, éclairage réglable.
 
 ### `éteindre` (Débutant) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Allume les lumières branchées sur le port sélectionné à la luminosité indi
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Allume ou éteint les phares d’un Technic Move Hub.
+Allume ou éteint les phares d’un Technic Move Hub via son profil de voiture.
 
 - Options : `éteint`, `activé`
-- Hubs : Technic Move Hub.
+- Hubs : Technic Move Hub. Pour régler chaque lumière séparément, utilisez plutôt **allumer à … % luminosité** avec les ports `1`–`6` ; ne mélangez pas les deux sur un même hub (voir [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Matrice lumineuse {#light-matrix}
 

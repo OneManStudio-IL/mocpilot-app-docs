@@ -28,6 +28,7 @@ import Screenshot from '@site/src/components/Screenshot';
 以指定亮度打开连接在所选端口上的灯。
 
 - 集线器：除 WeDo 2.0 外所有带端口的集线器。
+- Technic Move Hub：端口 `1`–`6` 是集线器的六盏灯，编号标在集线器上。每盏灯都可以单独设置，亮度为 0–100 %。
 - 典型用法：前大灯、可调光照明。
 
 ### `关闭`（初学者） {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-打开或关闭 Technic Move Hub 的灯。
+通过汽车配置打开或关闭 Technic Move Hub 的灯。
 
 - 选项：`关`、`开`
-- 集线器：Technic Move Hub。
+- 集线器：Technic Move Hub。如需单独设置每盏灯，请改用端口 `1`–`6` 的**在...打开 … 亮度 %**；不要在同一个集线器上混用这两种方式（请参阅 [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)）。
 
 ## 灯光点阵 {#light-matrix}
 

@@ -28,6 +28,7 @@ Stelt de kleur van het statuslampje van de hub in.
 Zet de lampen op de gekozen poort aan met de opgegeven helderheid.
 
 - Hubs: alle hubs met poorten, behalve WeDo 2.0.
+- Technic Move Hub: de poorten `1`–`6` zijn de zes lichten van de hub, genummerd op de hub. Elk licht kun je apart instellen, helderheid 0–100 %.
 - Gebruikelijke toepassing: koplampen, regelbare verlichting.
 
 ### `uitzetten` (Beginner) {#block_hubs_all_light_light_turn_off}
@@ -42,10 +43,10 @@ Zet de lampen op de gekozen poort uit.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_light_light_turn_to.svg')} alt="block_hubs_technicmove_light_light_turn_to.svg" />
 
-Zet de lichten van een Technic Move Hub aan of uit.
+Zet de lichten van een Technic Move Hub aan of uit via zijn autoprofiel.
 
 - Opties: `uit`, `ingeschakeld`
-- Hubs: Technic Move Hub.
+- Hubs: Technic Move Hub. Om elk licht apart in te stellen, gebruik je in plaats daarvan **inschakelen bij … % helderheid** met de poorten `1`–`6`; combineer de twee niet op één hub (zie [Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)).
 
 ## Lichtmatrix {#light-matrix}
 

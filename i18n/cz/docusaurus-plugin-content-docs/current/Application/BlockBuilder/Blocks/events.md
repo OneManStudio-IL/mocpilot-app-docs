@@ -95,7 +95,7 @@ Spustí se, když se změní úroveň baterie hlášená hubem.
 
 Spustí se, když se změní hodnoty akcelerometru hubu.
 
-- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor.
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor.
 
 ### `když … náklon … úhel byl změněn` (Začátečník) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ Spustí se, když se změní hodnoty akcelerometru hubu.
 Spustí se, když se změní úhel náklonu hubu.
 
 - Volby úhlu: `jakýkoli`, `náklon`, `rotace`, `vybočení` (libovolný, klopení, klonění, stáčení)
-- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Robot Inventor. `vybočení` je k dispozici jen u Technic Hubu a Robot Inventoru.
+- Huby: BuWizz 2, BuWizz 3, BOOST Move Hub, Technic Hub, Technic Move Hub, Robot Inventor. `vybočení` je k dispozici jen u Technic Hubu a Robot Inventoru.
 
 ### `když … orientace byla změněna` (Začátečník) {#block_hubs_all_event_tilt_orientation_changed}
 

@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Motorblock startar, stoppar och positionerar motorer som är anslutna till hubbens portar, och finjusterar hur de rör sig. Kategorin visas när en hubb i profilen har motorportar. I varje block väljer du hubb och en eller flera portar.
 
-Vissa block kräver en motor med inbyggd rotationssensor (pulsgivare), till exempel Technics vinkelmotorer, och en hubb som kan styra den. Dessa block är markerade med ”motorer med pulsgivare”. De är inte tillgängliga för SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 och Mould King-hubbar. Technic Move Hub har en egen uppsättning block i slutet av sidan.
+Vissa block kräver en motor med inbyggd rotationssensor (pulsgivare), till exempel Technics vinkelmotorer, och en hubb som kan styra den. Dessa block är markerade med ”motorer med pulsgivare”. De är inte tillgängliga för SBrick, SBrick Plus, BuWizz 2, WeDo 2.0 och Mould King-hubbar. Technic Move Hub fungerar också med de här blocken (dess motorer är portarna `A`, `B` och `C`) och har dessutom egna bilprofilblock: se [Technic Move Hub](#technic-move-hub) i slutet av sidan.
 
 ## Köra motorer {#running-motors}
 
@@ -80,7 +80,7 @@ Anger att motorns aktuella position har det givna värdet. Relativa positioner r
 <img src={useBaseUrl('/img/blocks/block_hubs_all_motors_port_calibrate_steering_rack.svg')} alt="block_hubs_all_motors_port_calibrate_steering_rack.svg" />
 Hittar mittläget och slaglängden för en styrkuggstång.
 
-- Motorn vrider kuggstången till båda ändarna, mäter hur långt den kan gå och lägger resultatet i de två variabler som du placerar i facken: mittpositionen och omfånget i grader. Kuggstången stannar i mitten, men dess relativa position där är lika med mittvärdet, inte 0, så lägg till **ställ in relativ position** 0 direkt efter det här blocket; styr sedan med `omfång × joystick / 100`.
+- Motorn vrider kuggstången till båda ändarna, mäter hur långt den kan gå och lägger resultatet i de två variabler som du placerar i facken: mittpositionen och omfånget i grader (från mitten till ena änden). Kuggstången stannar i mitten, och den punkten blir relativ position 0: styr med **gå till relativ position** `omfång × joystick / 100`.
 - Styrningen måste ha fasta mekaniska stopp i båda ändarna (kuggstångens ände eller utväxlingen).
 - Endast motorer med pulsgivare.
 
@@ -153,7 +153,14 @@ Startar motorerna på de valda portarna med angiven kraft, från −100 till 100
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub kör sina inbyggda motorer med de här blocken i stället för portblocken ovan.
+Technic Move Hub (i LEGO® Technics radiostyrda bilar) kan programmeras på två sätt:
+
+- **Portblock** (motorblocken ovan). Hubbens tre inbyggda motorer är portar: `A` och `B` är drivmotorerna, `C` är styrmotorn. De är motorer med pulsgivare, så alla motorblock ovan fungerar på dem utom **aktivera stall detektering** och **kraft**. I LEGO-bilmodellerna snurrar `A` åt andra hållet än `B` för att köra framåt, och styrningen på `C` har ändlägen: kör **kalibrera kuggstång** på `C` en gång och styr sedan med **gå till relativ position** på `C` (0 är mitten). Hubbens sex lampor är portarna `1`–`6` i [ljusblocken](/docs/Application/BlockBuilder/Blocks/Light), och dess block för [lutning, acceleration och orientering](/docs/Application/BlockBuilder/Blocks/Sensors#hub-tilt-and-orientation) fungerar som på Technic Hub.
+- **Bilprofilblock** (nedan): körning, styrning, broms, kraftpuls, lampor och effektläge, via bilkonfigurationen som har lästs in i hubben. Se [Konfigurationer för Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
+
+:::caution Använd ett sätt per hubb
+Profilblocken och portblocken styr samma motorer och lampor: det senaste kommandot vinner, och ett profilblock tar tillbaka motorerna och lamporna. Programkontrollen i blockredigeraren varnar för det på varje portblock för den hubben: ”… styrs både av blocken i sin bilprofil och av portblock”.
+:::
 
 ### `starta motorer vid … % hastighet` (Nybörjare) {#block_hubs_technicmove_motors_start_motors_at_speed}
 <img src={useBaseUrl('/img/blocks/block_hubs_technicmove_motors_start_motors_at_speed.svg')} alt="block_hubs_technicmove_motors_start_motors_at_speed.svg" />

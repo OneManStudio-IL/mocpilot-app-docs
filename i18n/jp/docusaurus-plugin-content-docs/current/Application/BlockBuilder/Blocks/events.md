@@ -95,7 +95,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ハブの加速度計の値が変わったときに実行します。
 
-- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。
+- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub、Robot Inventor。
 
 ### `とき … 傾き … 角度が変更されました` (初心者) {#block_hubs_all_event_tilt_changed}
 
@@ -104,7 +104,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ハブの傾き角度が変わったときに実行します。
 
 - 角度の選択肢：`任意`、`ピッチ`、`ロール`、`ヨー`
-- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Robot Inventor。`ヨー` は Technic Hub と Robot Inventor でのみ使えます。
+- ハブ：BuWizz 2、BuWizz 3、BOOST Move Hub、Technic Hub、Technic Move Hub、Robot Inventor。`ヨー` は Technic Hub と Robot Inventor でのみ使えます。
 
 ### `とき … 向きが変更されました` (初心者) {#block_hubs_all_event_tilt_orientation_changed}
 
