@@ -40,6 +40,7 @@ Vráti teplotu elektroniky hubu v stupňoch Celzia.
 - Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… prúd (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Vráti celkový prúd, ktorý hub odoberá, v miliampéroch.
 
 - Huby: Technic Hub.
@@ -95,6 +96,7 @@ Vráti zrýchlenie hubu v jednej osi.
 - Osi: `x`, `y`, `z`
 
 ### `… … rýchlosť otáčania (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Vráti, ako rýchlo sa hub otáča okolo jednej osi, v stupňoch za sekundu (z gyroskopu hubu).
 
 - Osi: `x`, `y`, `z`. `z` je otáčanie na mieste (kladná hodnota = doľava, keď hub leží naplocho); `x` a `y` sú náklon a klonenie.

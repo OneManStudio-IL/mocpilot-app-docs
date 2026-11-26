@@ -98,9 +98,11 @@ Nastaví orientaci obrazu na světelné matici. Výchozí je `vzpřímeně`; nov
 
 Ovládá světla kolem „očí“ senzoru vzdálenosti na vybraném portu. Každé světlo můžete rozsvítit nebo zhasnout, nebo do slotu vložit seznam a nastavit jas každého světla.
 
-- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nese ikonu hubu).
+- Huby: [MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) a také Technic Hub (blok nese ikonu hubu Robot Inventor). Senzor měří vzdálenost i tehdy, když jeho světla svítí.
 
 ### `rozsvítit senzor barvy 1 … 2 … 3 … %` (Pokročilý) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Nastaví jas tří světel kolem čočky senzoru barev Technic (senzoru barev SPIKE) na vybraném portu, každé od 0 do 100 %.
 

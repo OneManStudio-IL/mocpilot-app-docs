@@ -170,6 +170,8 @@ Ein Sensorwert wird entlang der Zeile durch seinen Vollausschlag geteilt und auf
 | **Neigung Rollen** | Wert | °, 180 | Hubs mit Neigungssensor |
 | **Neigung Gieren** | Wert | °, 180 | Hubs mit Gierachse |
 | **Beschleunigung X / Y / Z** | Wert | m/s², 19,6 | Hubs mit Beschleunigungssensor |
+| **Drehgeschwindigkeit X / Y / Z** | Wert | °/s, 360 | Hubs mit Gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hub-Strom** | Wert | mA, 3000 | Technic Hub |
 | **Motorgeschwindigkeit** | Wert | %, 100 | Port; alle Hubs mit Ports |
 | **Motorwinkel** | Wert | °, 360 (relativ) | Port; Motoren mit Encoder; nicht SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | Wert | °, 180 (absolut) | Port; Winkelmotoren |
@@ -178,6 +180,8 @@ Ein Sensorwert wird entlang der Zeile durch seinen Vollausschlag geteilt und auf
 | **Abstandssensor** | Wert | 250 | Port; nicht SBrick oder BuWizz |
 | **Farbsensor** | Wert | Farbnummer, 10 | Port; nicht SBrick, BuWizz oder WeDo 2.0 |
 | **Reflektiertes Licht**, **Umgebungslicht** | Wert | %, 100 | Port; nicht SBrick, BuWizz oder WeDo 2.0 |
+| **Farbton** | Wert | °, 360 | Port; Technic-Farbsensor oder BOOST-Farb- und Abstandssensor; nicht SBrick, BuWizz oder WeDo 2.0 |
+| **Farbsättigung**, **Farbhelligkeit** | Wert | %, 100 | Port; wie Farbton |
 | **Neigungssensor Nicken / Rollen** | Wert | °, 45 | Port; Neigungssensor von WeDo 2.0 / BOOST; nicht SBrick oder BuWizz |
 | **Leistungsmodus** | Wert | 1–4, 4 | BuWizz 2.0 |
 | **Verbunden** | an/aus | | alle Hubs |

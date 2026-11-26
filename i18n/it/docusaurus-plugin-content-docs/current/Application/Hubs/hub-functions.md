@@ -29,7 +29,7 @@ L'hub delle auto radiocomandate LEGO® Technic (Porsche GT4 e-Performance, Lambo
 - **Freno**, **Boost** (modalità di potenza) e **Impulso di potenza** (solo con la configurazione Batmobile™ Tumbler).
 - **Configurazioni dell'hub**: carica nell'hub il profilo di un'auto con **I miei hub → Seleziona configurazione**. Vedi [Configurazioni del Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Blocchi logici: i blocchi del profilo auto (*avvia i motori*, *imposta la cremagliera dello sterzo su*, *imposta il freno dei motori*, *impulso di potenza*, *accendere le luci*, *impostare modalità di alimentazione*), oppure i normali blocchi per le porte: motori `A`, `B` (trazione) e `C` (sterzo; *calibrare cremagliera* su `C`, poi *vai alla posizione relativa*), luci `1`–`6` una per una, inclinazione, accelerazione e orientamento. Usa un solo modo per hub: entrambi comandano gli stessi motori e le stesse luci. Vedi [Motori → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Collegamenti rapidi: le righe proprie dell'hub (trazione, sterzo, luci); un [Ingresso Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) può anche leggerne inclinazione e accelerazione.
+- Collegamenti rapidi: **Controllo** nel blocco Hub sceglie **Profilo auto** (le righe azionano trazione, sterzo e luci) o **Porte** (motori `A`, `B`, `C` e luci `1`–`6`, come gli altri hub). Vedi [Blocco Hub e porte → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). Un [Ingresso Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) può anche leggerne inclinazione, accelerazione e velocità di rotazione.
 
 ## BuWizz 2.0 {#buwizz-20}
 

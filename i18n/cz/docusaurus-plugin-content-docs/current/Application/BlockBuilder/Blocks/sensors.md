@@ -47,6 +47,8 @@ Vrací teplotu elektroniky hubu ve stupních Celsia.
 
 ### `… proud (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
 
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
+
 Vrací celkový proud, který hub odebírá, v miliampérech.
 
 - Huby: Technic Hub.
@@ -116,6 +118,8 @@ Vrací zrychlení hubu v jedné ose.
 - Osy: `x`, `y`, `z`
 
 ### `… … rychlost otáčení (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 
 Vrací, jak rychle se hub otáčí kolem jedné osy, ve stupních za sekundu (z gyroskopu hubu).
 

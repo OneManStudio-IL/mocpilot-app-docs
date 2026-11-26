@@ -98,9 +98,11 @@ Indstiller orienteringen af billedet på lysmatrixen. Standard er `opretstående
 
 Styrer lysene omkring »øjnene« på afstandssensoren på den valgte port. Du kan tænde eller slukke hvert lys eller sætte en liste ind i feltet for at indstille lysstyrken for hvert lys.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blokken har hub-ikonet).
+- Hubs: [MINDSTORMS Robot Inventor og SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) samt Technic Hub (blokken har Robot Inventor-hub-ikonet). Sensoren bliver ved med at måle afstanden, mens dens lys er tændt.
 
 ### `tænd farvesensorens lys 1 … 2 … 3 … %` (Avanceret) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Indstiller lysstyrken for de tre lys omkring linsen på Technic-farvesensoren (SPIKE-farvesensoren) på den valgte port, fra 0 til 100 % hver.
 

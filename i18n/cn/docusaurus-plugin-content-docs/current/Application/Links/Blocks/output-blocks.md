@@ -27,7 +27,7 @@ import Screenshot from '@site/src/components/Screenshot';
 - **停止时**：**集线器默认**（默认）、**惯性滑行**、**刹车**或**保持位置**。
 - **集线器加速**：**集线器默认**（默认）、**快**、**均衡**、**平滑**、**慢**或**很慢**：集线器自身的加减速曲线。如需自定义加减速，请使用[平滑](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth)。
 - **卡死检测**：**集线器默认**（默认）、**开**或**关**。
-- 集线器：任何带端口的集线器。**停止时**和**集线器加速**需要支持位置控制的集线器（不支持 SBrick、BuWizz 2.0、WeDo 2.0 或 Mould King）；**卡死检测**需要 Robot Inventor。在 Technic Move Hub 上，电机用于驱动汽车。
+- 集线器：任何带端口的集线器。**停止时**和**集线器加速**需要支持位置控制的集线器（不支持 SBrick、BuWizz 2.0、WeDo 2.0 或 Mould King）；**卡死检测**需要 Robot Inventor。在 Technic Move Hub 上，电机在**汽车配置文件**模式下用于驱动汽车，在**端口**模式下驱动电机 `A`–`C`（[Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)）。
 
 ### 舵机 {#op-servo}
 
@@ -40,7 +40,7 @@ import Screenshot from '@site/src/components/Screenshot';
 - **转动速度**：25、50、75 或 100 %（默认 100 %）。
 - 手动：零点是电机通电时所在的位置，或者你用**设为零点**设定的位置（可以先用 **◀ 5°** / **5° ▶** 微调）。
 - 自动：每次启动时，电机会转到两端限位；中间位置成为零点，行程成为角度。**立即校准**会马上执行校准。转向机构必须有限位。
-- 集线器和端口：支持位置控制的集线器（不支持 SBrick、BuWizz 2.0、WeDo 2.0 或 Mould King）上带编码器的电机。在 Technic Move Hub 上，舵机转动集线器的转向齿条，由集线器自行校准。
+- 集线器和端口：支持位置控制的集线器（不支持 SBrick、BuWizz 2.0、WeDo 2.0 或 Mould King）上带编码器的电机。在**汽车配置文件**模式下的 Technic Move Hub 上，舵机转动集线器的转向齿条，由集线器自行校准；在**端口**模式下，请在端口 `C` 上使用**自动**校准。
 
 <Screenshot name="links-servo-settings" alt="舵机积木的设置" width={900} />
 
@@ -50,7 +50,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - 接收：数值或开/关。
 - **时间**：0.5、1、2、3、5 或 10 秒（默认 1 秒）。
-- 集线器：任何带端口的集线器；在 Technic Move Hub 上用于驱动汽车。
+- 集线器：任何带端口的集线器；在**汽车配置文件**模式下的 Technic Move Hub 上用于驱动汽车。
 
 ### 按角度运行 {#op-degrees}
 
@@ -79,7 +79,7 @@ import Screenshot from '@site/src/components/Screenshot';
 - **亮度**：25、50、75 或 100 %（默认 100 %）。
 - **闪烁：开时**：**不闪烁**（默认）、0.25、0.5、1 或 2 秒：每次闪烁时灯亮的时长。
 - **闪烁：关时**：**与开时相同**（默认）、0.25、0.5、1 或 2 秒：灯灭的时长。
-- 集线器：除 WeDo 2.0 外任何带端口的集线器。在 Technic Move Hub 上，灯光用于开关汽车的灯。
+- 集线器：除 WeDo 2.0 外任何带端口的集线器。在 Technic Move Hub 上，灯光在**汽车配置文件**模式下用于开关汽车的灯，在**端口**模式下逐个控制灯 `1`–`6`。
 
 ### 端口颜色 {#op-portcolor}
 
@@ -98,7 +98,17 @@ import Screenshot from '@site/src/components/Screenshot';
 - 接收：数值或开/关。
 - **灯**：**全部**（默认）、**上**、**下**、**左**、**右**或**对角**。
 - **亮度**：25、50、75 或 100 %（默认 100 %）。
-- 集线器和端口：Robot Inventor，接距离传感器的一个端口。程序停止时灯熄灭。
+- 集线器和端口：Robot Inventor、SPIKE Prime 和 Technic Hub，接距离传感器的一个端口。程序停止时灯熄灭。
+
+### 颜色传感器灯 {#op-colorlights}
+
+输入为开时，点亮 Technic 颜色传感器（SPIKE 颜色传感器）镜头周围的三盏灯。
+
+- 接收：数值或开/关。
+- **灯**：**全部**（默认）、1、2、3、1 + 2、2 + 3 或 1 + 3。
+- **亮度**：25、50、75 或 100 %（默认 100 %）。
+- 集线器和端口：Technic Hub，接颜色传感器的端口。
+- 灯亮着时，传感器不进行任何测量。输入变为关或程序停止时，灯熄灭，传感器重新开始测量颜色。如果某一行读取的颜色传感器所在的端口被另一行点亮，就会显示问题（“第 2 行点亮了端口 A 上的颜色传感器：点亮的传感器不进行任何测量”）。
 
 ## 整个集线器的操作 {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - **集线器**：配置文件中的某个集线器。
 - **端口**：该集线器的一个或多个端口（大多数集线器和 SBrick 为 A–D，Robot Inventor 和 Mould King 6.0 为 A–F，BuWizz 2.0 为 1–4，BuWizz 3.0 Pro 为 1–4 加上 A 和 B）。一个端口只能属于一行。
-- 接收：一个操作。Technic Move Hub 和整个集线器的操作不需要端口。
+- 接收：一个操作。**汽车配置文件**模式下的 Technic Move Hub 和整个集线器的操作不需要端口。在**端口**模式下，Technic Move Hub 有端口 A–C，**灯光**还有灯 1–6。
 - 更多内容：[集线器积木与端口](/docs/Application/Links/HubsAndPorts)。
 
 ### 指示器 {#dash-indicator}

@@ -98,9 +98,11 @@ Ajusta la orientación de la imagen en la matriz de luces. Por defecto es `derec
 
 Controla las luces alrededor de los «ojos» del sensor de distancia en el puerto seleccionado. Puedes encender o apagar cada luz, o poner una lista en el campo para ajustar el brillo de cada una.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (el bloque lleva el icono del hub).
+- Hubs: [MINDSTORMS Robot Inventor y SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), y el Technic Hub (el bloque lleva el icono del hub Robot Inventor). El sensor sigue midiendo la distancia mientras sus luces están encendidas.
 
 ### `iluminar el sensor de color 1 … 2 … 3 … %` (Avanzado) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Ajusta el brillo de las tres luces que rodean la lente del sensor de color Technic (el sensor de color SPIKE) conectado al puerto seleccionado, de 0 a 100 % cada una.
 

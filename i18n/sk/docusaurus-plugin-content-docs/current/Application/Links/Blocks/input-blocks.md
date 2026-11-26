@@ -170,6 +170,8 @@ Hodnota senzora putuje riadkom vydelená svojím plným rozsahom a obmedzená na
 | **Náklon do strany** | hodnota | °, 180 | huby so senzorom náklonu |
 | **Otočenie (yaw)** | hodnota | °, 180 | huby s osou yaw |
 | **Zrýchlenie X / Y / Z** | hodnota | m/s², 19,6 | huby s akcelerometrom |
+| **Rýchlosť otáčania X / Y / Z** | hodnota | °/s, 360 | huby s gyroskopom: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Prúd hubu** | hodnota | mA, 3000 | Technic Hub |
 | **Rýchlosť motora** | hodnota | %, 100 | port; všetky huby s portami |
 | **Uhol motora** | hodnota | °, 360 (relatívny) | port; motory s enkodérom; nie SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Poloha motora** | hodnota | °, 180 (absolútna) | port; uhlové motory |
@@ -178,6 +180,8 @@ Hodnota senzora putuje riadkom vydelená svojím plným rozsahom a obmedzená na
 | **Senzor vzdialenosti** | hodnota | 250 | port; nie SBrick ani BuWizz |
 | **Farebný senzor** | hodnota | číslo farby, 10 | port; nie SBrick, BuWizz ani WeDo 2.0 |
 | **Odrazené svetlo**, **Okolité svetlo** | hodnota | %, 100 | port; nie SBrick, BuWizz ani WeDo 2.0 |
+| **Farebný tón** | hodnota | °, 360 | port; farebný senzor Technic alebo senzor farieb a vzdialenosti BOOST; nie SBrick, BuWizz ani WeDo 2.0 |
+| **Sýtosť farby**, **Jas farby** | hodnota | %, 100 | port; ako Farebný tón |
 | **Senzor náklonu: dopredu / do strany** | hodnota | °, 45 | port; senzor náklonu WeDo 2.0 / BOOST; nie SBrick ani BuWizz |
 | **Režim výkonu** | hodnota | 1–4, 4 | BuWizz 2.0 |
 | **Pripojené** | zap./vyp. | | všetky huby |

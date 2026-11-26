@@ -29,7 +29,7 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 - **Frână**, **Boost** (modul de putere) și **Impuls de putere** (doar cu configurația Batmobile™ Tumbler).
 - **Configurațiile hubului**: încarcă în hub un profil de mașină cu **Huburile mele → Selectează configurația**. Consultă [Configurațiile Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Blocuri logice: blocurile de profil de mașină (*porni motoarele*, *setați axul direcției la*, *setează frâna motoarelor*, *impuls de putere*, *aprinde luminile*, *setați modul de alimentare*) sau blocurile obișnuite pentru porturi: motoarele `A`, `B` (tracțiune) și `C` (direcție; *calibrare cremalieră* pe `C`, apoi *mergi la poziție relativă*), luminile `1`–`6` una câte una, înclinare, accelerație și orientare. Folosește o singură metodă pe hub: ambele comandă aceleași motoare și lumini. Consultă [Motoare → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Legături rapide: rândurile proprii ale hubului (tracțiune, direcție, lumini); [Intrarea Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) poate citi și înclinarea și accelerația lui.
+- Legături rapide: **Control** din blocul Hub alege **Profil de mașină** (rândurile acționează tracțiunea, direcția și luminile) sau **Porturi** (motoarele `A`, `B`, `C` și luminile `1`–`6`, ca la celelalte huburi). Consultă [Blocul Hub și porturile → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). [Intrarea Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) poate citi și înclinarea, accelerația și viteza lui de rotație.
 
 ## BuWizz 2.0 {#buwizz-20}
 

@@ -29,7 +29,7 @@ LEGO® Technic -kauko-ohjattavien autojen (Porsche GT4 e-Performance, Lamborghin
 - **Jarru**, **Boost** (tehotila) ja **Tehopulssi** (vain Batmobile™ Tumbler -kokoonpanolla).
 - **Hubin kokoonpanot**: lataa auton profiili hubiin kohdasta **Omat hubit → Valitse kokoonpano**. Katso [Technic Move Hubin kokoonpanot](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Logiikkalohkot: autoprofiilin lohkot (*käynnistä moottorit*, *aseta ohjausrata*, *aseta moottorien jarru*, *tehopulssi*, *kytke valot päälle*, *aseta virta-asetus*) tai tavalliset porttilohkot: moottorit `A`, `B` (ajo) ja `C` (ohjaus; *kalibroi hammasratas* `C`:lle, sitten *mene suhteelliseen asentoon*), valot `1`–`6` yksitellen, kallistus, kiihtyvyys ja suunta. Käytä yhtä tapaa hubia kohden: molemmat ohjaavat samoja moottoreita ja valoja. Katso [Moottorit → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Pikalinkit: hubin omat rivit (ajo, ohjaus, valot); [Hubi-syöte](/docs/Application/Links/Blocks/InputBlocks#src-hub) voi myös lukea sen kallistuksen ja kiihtyvyyden.
+- Pikalinkit: Hubi-lohkon **Ohjaus**-asetuksella valitaan **Autoprofiili** (rivit ajavat, ohjaavat ja kytkevät valot) tai **Portit** (moottorit `A`, `B`, `C` ja valot `1`–`6` kuten muissa hubeissa). Katso [Hubi-lohko ja portit → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). [Hubi-syöte](/docs/Application/Links/Blocks/InputBlocks#src-hub) voi myös lukea sen kallistuksen, kiihtyvyyden ja pyörimisnopeuden.
 
 ## BuWizz 2.0 {#buwizz-20}
 

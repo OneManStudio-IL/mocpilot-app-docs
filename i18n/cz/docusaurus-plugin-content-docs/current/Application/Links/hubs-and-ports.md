@@ -14,7 +14,7 @@ Výstup [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) ukončuje ř�
 
 - název hubu a **tečku připojení** (připojeno, nebo ne);
 - **Porty** jako čipy: A, B, C, D… u hubů LEGO® a SBrick (A–F u Robot Inventor a Mould King 6.0), 1–4 u BuWizz 2.0, 1–4 a navíc A a B u BuWizz 3.0 Pro;
-- podtitulek: „porty A, B“, „vyberte porty“, „celý hub“ (po operaci pro celý hub) nebo „pohon, řízení, světla“ (Technic Move).
+- podtitulek: „porty A, B“, „vyberte porty“, „celý hub“ (po operaci pro celý hub) nebo „pohon, řízení, světla“ (Technic Move v režimu **Profil auta**).
 
 ## Výběr portů {#choose-ports}
 
@@ -44,14 +44,18 @@ Když je hub připojený, MOCPilot ví, co je zapojeno do každého portu, a kon
 | „Port A přijímá jen jednoduché příkazy rychlosti: bez řízení polohy“ | tento port neumí řídit polohu |
 | „Port A nemá LED: použijte porty 1-4“ | Barva portu funguje jen na portech 1–4 BuWizz 3.0 Pro |
 | „Světla senzoru: vyberte jeden port, ten se senzorem vzdálenosti“ | Světla senzoru berou právě jeden port |
+| „Port A: není tam senzor barev“ | Světla senzoru barev a vstupy Barevný tón, Sytost barvy a Jas barvy potřebují na portu senzor barev |
 
 Operace, které hub neumí, se pro něj nenabízejí. Pokud řádek přepnete na jiný hub, řádek oznámí, která operace nesedí, například „Brzda: jen Technic Move (… nemá příkaz brzdy)“.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub (v dálkově ovládaných autech LEGO® Technic) se ovládá podle funkce, ne podle portu: jeho blok Hub ukazuje **pohon, řízení, světla** a nebere žádné porty. K jízdě použijte **Motor** nebo **Motor na dobu**, k řízení **Servo**, pro světla **Světlo** a pro speciální funkce **Brzda**, **Boost** a **Výkonový pulz**.
+Technic Move Hub (v dálkově ovládaných autech LEGO® Technic) lze ovládat dvěma způsoby. Jeden zvolte volbou **Ovládání** v okně bloku Hub: **Profil auta** (výchozí) nebo **Porty**. Volba patří hubu, takže všechny bloky Hub tohoto hubu používají stejný způsob.
 
-Pohon, řízení, světla, brzdu a boost může používat vždy jen jeden řádek („Řádek 2 už ovládá pohon tohoto Technic Move“).
+- **Profil auta**: hub se ovládá podle funkce, ne podle portu. Jeho blok Hub ukazuje **pohon, řízení, světla** a nebere žádné porty. K jízdě použijte **Motor** nebo **Motor na dobu**, k řízení **Servo**, pro světla **Světlo** a pro speciální funkce **Brzda**, **Boost** a **Výkonový pulz**. Pohon, řízení, světla, brzdu a boost může používat vždy jen jeden řádek („Řádek 2 už ovládá pohon tohoto Technic Move“).
+- **Porty**: hub funguje jako ostatní huby s porty. Jeho motory jsou porty `A`, `B` (motory pohonu) a `C` (motor řízení): fungují na nich **Motor**, **Motor na dobu**, **Servo** (s kalibrací **Auto** na `C`), **Otočit o stupně**, **Jet do polohy**, **Při zastavení** a **Zrychlení hubu**. Jeho šest světel jsou porty `1`–`6` řádků **Světlo**. [Vstup Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) čte rychlost a úhel motorů. **Brzda**, **Boost** a **Výkonový pulz** fungují jen v režimu **Profil auta**.
+
+Řádek, který neodpovídá režimu hubu, je problém, který řekne, co přepnout: „… je ovládán profilem auta: přepněte hub na „Porty““ nebo „… je ovládán po portech: přepněte hub na „Profil auta““. Profily vytvořené dříve, než tato volba existovala, se otevírají v režimu **Profil auta**.
 
 Konfiguraci auta (Porsche, Lamborghini, Batmobile) do hubu nahrajete přes **Moje huby → Vybrat konfiguraci**. Viz [Konfigurace Technic Move Hubu](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

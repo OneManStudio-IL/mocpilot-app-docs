@@ -40,6 +40,7 @@ Returnerer temperaturen til hubens elektronikk i grader celsius.
 - Hubber: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… strøm (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Returnerer den totale strømmen huben trekker, i milliampere.
 
 - Hubber: Technic Hub.
@@ -95,6 +96,7 @@ Returnerer hubens akselerasjon langs én akse.
 - Akser: `x`, `y`, `z`
 
 ### `… … rotasjonshastighet (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Returnerer hvor raskt huben dreier rundt én akse, i grader per sekund (fra hubens gyroskop).
 
 - Akser: `x`, `y`, `z`. `z` er dreining på stedet (positiv = mot venstre når huben ligger flatt); `x` og `y` er rulling og stigning.

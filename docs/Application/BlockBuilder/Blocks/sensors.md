@@ -40,6 +40,7 @@ Returns the temperature of the hub's electronics, in degrees Celsius.
 - Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… current (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Returns the total current the hub draws, in milliamperes.
 
 - Hubs: Technic Hub.
@@ -95,6 +96,7 @@ Returns the hub's acceleration along one axis.
 - Axes: `x`, `y`, `z`
 
 ### `… … rotation speed (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Returns how fast the hub turns around one axis, in degrees per second (from the hub's gyroscope).
 
 - Axes: `x`, `y`, `z`. `z` is turning on the spot (positive = to the left when the hub lies flat); `x` and `y` are rolling and pitching.

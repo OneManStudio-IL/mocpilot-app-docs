@@ -98,9 +98,11 @@ Règle l’orientation de l’image sur la matrice lumineuse. Elle est `à l’e
 
 Commande les lumières autour des « yeux » du capteur de distance branché sur le port sélectionné. Vous pouvez allumer ou éteindre chaque lumière, ou placer une liste dans l’emplacement pour régler la luminosité de chacune.
 
-- Hubs : [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (le bloc porte l’icône du hub).
+- Hubs : [MINDSTORMS Robot Inventor et SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), et le Technic Hub (le bloc porte l’icône du hub Robot Inventor). Le capteur continue de mesurer la distance pendant que ses lumières sont allumées.
 
 ### `allumer le capteur de couleur 1 … 2 … 3 … %` (Avancé) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Règle la luminosité des trois lumières autour de l’objectif du capteur de couleur Technic (le capteur de couleur SPIKE) branché sur le port sélectionné, de 0 à 100 % chacune.
 

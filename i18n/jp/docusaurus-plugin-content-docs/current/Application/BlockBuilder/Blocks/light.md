@@ -98,9 +98,11 @@ Technic Move Hub のライトを、車のプロフィールを通じてオン／
 
 選んだポートの距離センサーの「目」のまわりにあるライトを制御します。ライトを 1 つずつオン／オフできるほか、欄にリストを入れて各ライトの明るさを設定することもできます。
 
-- ハブ：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（ブロックにハブのアイコンが付いています）。
+- ハブ：[MINDSTORMS Robot Inventor と SPIKE Prime](/docs/Application/Hubs/RobotInventorHub)、および Technic Hub（ブロックに Robot Inventor のハブのアイコンが付いています）。ライトの点灯中も、センサーは距離を測り続けます。
 
 ### `カラーセンサーを点灯 1 … 2 … 3 … %` (上級者) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 選んだポートの Technic カラーセンサー（SPIKE のカラーセンサー）のレンズのまわりにある 3 つのライトの明るさを、それぞれ 0–100 % で設定します。
 

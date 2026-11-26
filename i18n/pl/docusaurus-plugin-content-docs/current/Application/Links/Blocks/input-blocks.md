@@ -170,6 +170,8 @@ Wartość czujnika przechodzi przez wiersz podzielona przez pełną skalę i ogr
 | **Nachylenie: przechył** | wartość | °, 180 | huby z czujnikiem nachylenia |
 | **Nachylenie: odchylenie** | wartość | °, 180 | huby z osią odchylenia |
 | **Przyspieszenie X / Y / Z** | wartość | m/s², 19,6 | huby z akcelerometrem |
+| **Prędkość obrotu X / Y / Z** | wartość | °/s, 360 | huby z żyroskopem: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Prąd huba** | wartość | mA, 3000 | Technic Hub |
 | **Prędkość silnika** | wartość | %, 100 | port; wszystkie huby z portami |
 | **Kąt silnika** | wartość | °, 360 (względny) | port; silniki z enkoderem; nie SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Pozycja silnika** | wartość | °, 180 (absolutna) | port; silniki kątowe |
@@ -178,6 +180,8 @@ Wartość czujnika przechodzi przez wiersz podzielona przez pełną skalę i ogr
 | **Czujnik odległości** | wartość | 250 | port; nie SBrick ani BuWizz |
 | **Czujnik koloru** | wartość | numer koloru, 10 | port; nie SBrick, BuWizz ani WeDo 2.0 |
 | **Światło odbite**, **Światło otoczenia** | wartość | %, 100 | port; nie SBrick, BuWizz ani WeDo 2.0 |
+| **Odcień koloru** | wartość | °, 360 | port; czujnik koloru Technic lub czujnik koloru i odległości BOOST; nie SBrick, BuWizz ani WeDo 2.0 |
+| **Nasycenie koloru**, **Jasność koloru** | wartość | %, 100 | port; jak Odcień koloru |
 | **Czujnik nachylenia: pochylenie / przechył** | wartość | °, 45 | port; czujnik nachylenia WeDo 2.0 / BOOST; nie SBrick ani BuWizz |
 | **Tryb mocy** | wartość | 1–4, 4 | BuWizz 2.0 |
 | **Połączony** | wł./wył. | | wszystkie huby |

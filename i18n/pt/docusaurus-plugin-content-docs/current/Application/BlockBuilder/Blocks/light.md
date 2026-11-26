@@ -98,9 +98,11 @@ Define a orientação da imagem na matriz de luzes. Por padrão, ela é `na vert
 
 Controla as luzes em volta dos "olhos" do sensor de distância na porta selecionada. Você pode acender ou apagar cada luz, ou colocar uma lista no encaixe para definir o brilho de cada uma.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (o bloco tem o ícone do hub).
+- Hubs: [MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), e o Technic Hub (o bloco tem o ícone do hub Robot Inventor). O sensor continua medindo a distância enquanto as luzes dele estão acesas.
 
 ### `iluminar o sensor de cor 1 … 2 … 3 … %` (Avançado) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Define o brilho das três luzes ao redor da lente do sensor de cor Technic (o sensor de cor SPIKE) na porta selecionada, de 0 a 100 % cada uma.
 

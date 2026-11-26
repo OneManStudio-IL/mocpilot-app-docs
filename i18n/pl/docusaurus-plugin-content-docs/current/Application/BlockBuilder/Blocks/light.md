@@ -98,9 +98,11 @@ Ustawia orientację obrazu na matrycy świetlnej. Domyślnie jest to `prosto`; n
 
 Steruje światłami wokół „oczu” czujnika odległości na wybranym porcie. Każde światło możesz włączyć lub wyłączyć albo wstawić do pola listę, aby ustawić jasność każdego światła.
 
-- Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok ma ikonę huba).
+- Huby: [MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) oraz Technic Hub (blok ma ikonę huba Robot Inventor). Czujnik nadal mierzy odległość, gdy jego światła są włączone.
 
 ### `podświetl czujnik koloru 1 … 2 … 3 … %` (Zaawansowany) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Ustawia jasność trzech świateł wokół soczewki czujnika koloru Technic (czujnika koloru SPIKE) na wybranym porcie, każdego od 0 do 100 %.
 

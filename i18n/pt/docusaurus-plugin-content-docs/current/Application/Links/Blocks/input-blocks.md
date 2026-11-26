@@ -170,6 +170,8 @@ O valor de um sensor percorre a linha dividido pela escala total e limitado a �
 | **Inclinação: rolagem** | valor | °, 180 | hubs com sensor de inclinação |
 | **Inclinação: guinada** | valor | °, 180 | hubs com eixo de guinada |
 | **Aceleração X / Y / Z** | valor | m/s², 19,6 | hubs com acelerômetro |
+| **Velocidade de rotação X / Y / Z** | valor | °/s, 360 | hubs com giroscópio: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Corrente do hub** | valor | mA, 3000 | Technic Hub |
 | **Velocidade do motor** | valor | %, 100 | porta; todos os hubs com portas |
 | **Ângulo do motor** | valor | °, 360 (relativo) | porta; motores com encoder; não no SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Posição do motor** | valor | °, 180 (absoluta) | porta; motores angulares |
@@ -178,6 +180,8 @@ O valor de um sensor percorre a linha dividido pela escala total e limitado a �
 | **Sensor de distância** | valor | 250 | porta; não no SBrick nem no BuWizz |
 | **Sensor de cor** | valor | número da cor, 10 | porta; não no SBrick, BuWizz nem WeDo 2.0 |
 | **Luz refletida**, **Luz ambiente** | valor | %, 100 | porta; não no SBrick, BuWizz nem WeDo 2.0 |
+| **Matiz da cor** | valor | °, 360 | porta; sensor de cor Technic ou sensor de cor e distância BOOST; não no SBrick, BuWizz nem WeDo 2.0 |
+| **Saturação da cor**, **Brilho da cor** | valor | %, 100 | porta; como Matiz da cor |
 | **Sensor de inclinação: arfagem / rolagem** | valor | °, 45 | porta; sensor de inclinação WeDo 2.0 / BOOST; não no SBrick nem no BuWizz |
 | **Modo de potência** | valor | 1–4, 4 | BuWizz 2.0 |
 | **Conectado** | liga/desliga | | todos os hubs |

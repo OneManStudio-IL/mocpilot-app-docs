@@ -170,6 +170,8 @@ En sensorværdi sendes videre i rækken divideret med sin fulde skala og begræn
 | **Hældning roll** | værdi | °, 180 | hubs med hældningssensor |
 | **Hældning gir** | værdi | °, 180 | hubs med giraksen |
 | **Acceleration X / Y / Z** | værdi | m/s², 19,6 | hubs med accelerometer |
+| **Rotationshastighed X / Y / Z** | værdi | °/s, 360 | hubs med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hubstrøm** | værdi | mA, 3000 | Technic Hub |
 | **Motorhastighed** | værdi | %, 100 | port; alle hubs med porte |
 | **Motorvinkel** | værdi | °, 360 (relativ) | port; motorer med encoder; ikke SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | værdi | °, 180 (absolut) | port; vinkelmotorer |
@@ -178,6 +180,8 @@ En sensorværdi sendes videre i rækken divideret med sin fulde skala og begræn
 | **Afstandssensor** | værdi | 250 | port; ikke SBrick eller BuWizz |
 | **Farvesensor** | værdi | farvenummer, 10 | port; ikke SBrick, BuWizz eller WeDo 2.0 |
 | **Reflekteret lys**, **Omgivningslys** | værdi | %, 100 | port; ikke SBrick, BuWizz eller WeDo 2.0 |
+| **Farvetone** | værdi | °, 360 | port; Technic-farvesensor eller BOOST-farve- og afstandssensor; ikke SBrick, BuWizz eller WeDo 2.0 |
+| **Farvemætning**, **Farvelysstyrke** | værdi | %, 100 | port; som Farvetone |
 | **Hældningssensor pitch / roll** | værdi | °, 45 | port; hældningssensor til WeDo 2.0 / BOOST; ikke SBrick eller BuWizz |
 | **Effekttilstand** | værdi | 1–4, 4 | BuWizz 2.0 |
 | **Forbundet** | til/fra | | alle hubs |

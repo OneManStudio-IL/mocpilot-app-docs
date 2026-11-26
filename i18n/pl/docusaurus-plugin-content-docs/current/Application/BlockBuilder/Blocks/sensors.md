@@ -40,6 +40,7 @@ Zwraca temperaturę elektroniki huba w stopniach Celsjusza.
 - Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… prąd (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Zwraca całkowity prąd pobierany przez hub, w miliamperach.
 
 - Huby: Technic Hub.
@@ -95,6 +96,7 @@ Zwraca przyspieszenie huba wzdłuż jednej osi.
 - Osie: `x`, `y`, `z`
 
 ### `… … prędkość obrotu (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Zwraca, jak szybko hub obraca się wokół jednej osi, w stopniach na sekundę (z żyroskopu huba).
 
 - Osie: `x`, `y`, `z`. `z` to obrót w miejscu (wartość dodatnia = w lewo, gdy hub leży płasko); `x` i `y` to przechył i pochylenie.

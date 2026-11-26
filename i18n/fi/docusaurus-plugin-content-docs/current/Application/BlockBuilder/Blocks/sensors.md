@@ -40,6 +40,7 @@ Palauttaa hubin elektroniikan lämpötilan celsiusasteina.
 - Hubit: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… virta (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Palauttaa hubin ottaman kokonaisvirran milliampeereina.
 
 - Hubit: Technic Hub.
@@ -95,6 +96,7 @@ Palauttaa hubin kiihtyvyyden yhden akselin suunnassa.
 - Akselit: `x`, `y`, `z`
 
 ### `… … pyörimisnopeus (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Palauttaa, kuinka nopeasti hubi kääntyy yhden akselin ympäri, asteina sekunnissa (hubin gyroskoopista).
 
 - Akselit: `x`, `y`, `z`. `z` on kääntyminen paikallaan (positiivinen = vasemmalle, kun hubi on vaakatasossa); `x` ja `y` ovat kallistus ja nyökkäys.

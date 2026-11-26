@@ -40,6 +40,7 @@ Restituisce la temperatura dell'elettronica dell'hub, in gradi Celsius.
 - Hub: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… corrente (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Restituisce la corrente totale assorbita dall'hub, in milliampere.
 
 - Hub: Technic Hub.
@@ -95,6 +96,7 @@ Restituisce l'accelerazione dell'hub lungo un asse.
 - Assi: `x`, `y`, `z`
 
 ### `… … velocità di rotazione (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Restituisce la velocità con cui l'hub ruota attorno a un asse, in gradi al secondo (dal giroscopio dell'hub).
 
 - Assi: `x`, `y`, `z`. `z` è la rotazione sul posto (positivo = verso sinistra con l'hub appoggiato in piano); `x` e `y` sono il rollio e il beccheggio.

@@ -98,9 +98,11 @@ Stelt de oriëntatie van het beeld op de lichtmatrix in. Standaard is dat `recht
 
 Stuurt de lampjes rond de “ogen” van de afstandssensor op de gekozen poort aan. Je kunt elk lampje aan- of uitzetten, of een lijst in het vak zetten om de helderheid van elk lampje in te stellen.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (het blok draagt het hubpictogram).
+- Hubs: [MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), en de Technic Hub (het blok draagt het Robot Inventor-hubpictogram). De sensor blijft de afstand meten terwijl zijn lichten aan zijn.
 
 ### `kleursensor verlichten 1 … 2 … 3 … %` (Gevorderd) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Stelt de helderheid in van de drie lampjes rond de lens van de Technic-kleursensor (de SPIKE-kleursensor) op de gekozen poort, elk van 0 tot 100 %.
 

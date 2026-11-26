@@ -40,6 +40,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - ハブ：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
 
 ### `… 電流 (mA)` (達人) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 ハブが消費している電流の合計をミリアンペアで返します。
 
 - ハブ：Technic Hub。
@@ -95,6 +96,7 @@ Technic Move Hub の電源モードを設定します。
 - 軸：`x`、`y`、`z`
 
 ### `… … 回転速度 (°/秒)` (達人) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 ハブが 1 軸のまわりを回転する速さを、度毎秒で返します（ハブのジャイロスコープによる値）。
 
 - 軸：`x`、`y`、`z`。`z` はその場での旋回です（ハブを水平に置いたとき、正の値 = 左回り）。`x` と `y` はロールとピッチです。

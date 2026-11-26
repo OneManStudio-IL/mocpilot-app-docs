@@ -98,9 +98,11 @@ Asettaa valomatriisin kuvan suunnan. Oletuksena se on `oikein päin`; uusi suunt
 
 Ohjaa valitussa portissa olevan etäisyysanturin ”silmien” ympärillä olevia valoja. Voit sytyttää tai sammuttaa jokaisen valon tai asettaa paikkaan listan, jolla määrität kunkin valon kirkkauden.
 
-- Hubit: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (lohkossa on hubikuvake).
+- Hubit: [MINDSTORMS Robot Inventor ja SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) sekä Technic Hub (lohkossa on Robot Inventor -hubin kuvake). Anturi mittaa etäisyyttä edelleen, kun sen valot palavat.
 
 ### `sytytä värisensorin valot 1 … 2 … 3 … %` (Edistynyt) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Asettaa valitussa portissa olevan Technic-värianturin (SPIKE-värianturin) linssin ympärillä olevien kolmen valon kirkkauden, kunkin välillä 0–100 %.
 

@@ -27,7 +27,7 @@ Acționează motorul la valoarea intrării: cu cât împingi mai mult, cu atât 
 - **La oprire**: **Implicit hub** (implicit), **Liber**, **Frână** sau **Menține poziția**.
 - **Accelerația hubului**: **Implicit hub** (implicit), **Rapidă**, **Echilibrată**, **Lin**, **Lentă** sau **Foarte lentă**: rampa proprie a hubului. Pentru o rampă proprie, folosește [Lin](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Detectarea blocării**: **Implicit hub** (implicit), **Pornit** sau **Oprit**.
-- Huburi: orice hub cu porturi. **La oprire** și **Accelerația hubului** au nevoie de un hub cu controlul poziției (nu SBrick, BuWizz 2.0, WeDo 2.0 sau Mould King); **Detectarea blocării** are nevoie de Robot Inventor. Pe un Technic Move Hub, Motor acționează tracțiunea mașinii.
+- Huburi: orice hub cu porturi. **La oprire** și **Accelerația hubului** au nevoie de un hub cu controlul poziției (nu SBrick, BuWizz 2.0, WeDo 2.0 sau Mould King); **Detectarea blocării** are nevoie de Robot Inventor. Pe un Technic Move Hub, Motor acționează tracțiunea mașinii în modul **Profil de mașină** și motoarele `A`–`C` în modul **Porturi** ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Virează cu un motor care are encoder: intrarea −1…1 rotește motorul la *ce
 - **Viteza de rotire**: 25, 50, 75 sau 100 % (implicit 100 %).
 - Manual: zero-ul este poziția motorului la pornire sau poziția setată cu **Setează ca zero** (ajustează mai întâi cu **◀ 5°** / **5° ▶**).
 - Auto: la fiecare pornire, motorul se rotește până la ambele opritoare; mijlocul devine zero, iar cursa devine unghiul. **Calibrează acum** face asta imediat. Direcția trebuie să aibă opritoare.
-- Huburi și porturi: un motor cu encoder pe un hub cu controlul poziției (nu SBrick, BuWizz 2.0, WeDo 2.0 sau Mould King). Pe un Technic Move Hub, Servo rotește cremaliera de direcție a hubului, pe care hubul o calibrează singur.
+- Huburi și porturi: un motor cu encoder pe un hub cu controlul poziției (nu SBrick, BuWizz 2.0, WeDo 2.0 sau Mould King). Pe un Technic Move Hub în modul **Profil de mașină**, Servo rotește cremaliera de direcție a hubului, pe care hubul o calibrează singur; în modul **Porturi**, folosește portul `C` cu calibrarea **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Setările unui bloc Servo" width={900} />
 
@@ -50,7 +50,7 @@ Acționează motorul un timp stabilit de fiecare dată când intrarea trece în 
 
 - Primește: valoare sau pornit/oprit.
 - **Durată**: 0,5, 1, 2, 3, 5 sau 10 s (implicit 1 s).
-- Huburi: orice hub cu porturi; pe un Technic Move Hub acționează tracțiunea mașinii.
+- Huburi: orice hub cu porturi; pe un Technic Move Hub în modul **Profil de mașină** acționează tracțiunea mașinii.
 
 ### Rotire cu grade {#op-degrees}
 
@@ -79,7 +79,7 @@ Acționează luminile LEGO® de pe un port.
 - **Luminozitate**: 25, 50, 75 sau 100 % (implicit 100 %).
 - **Clipire: pornit**: **Fără clipire** (implicit), 0,25, 0,5, 1 sau 2 s: cât timp rămâne aprinsă lumina la fiecare clipire.
 - **Clipire: oprit**: **Ca la pornit** (implicit), 0,25, 0,5, 1 sau 2 s: cât timp rămâne stinsă.
-- Huburi: orice hub cu porturi, cu excepția WeDo 2.0. Pe un Technic Move Hub, Lumină aprinde și stinge luminile mașinii.
+- Huburi: orice hub cu porturi, cu excepția WeDo 2.0. Pe un Technic Move Hub, Lumină aprinde și stinge luminile mașinii în modul **Profil de mașină**, iar luminile `1`–`6` una câte una în modul **Porturi**.
 
 ### Culoare port {#op-portcolor}
 
@@ -98,7 +98,17 @@ Aprinde cele patru segmente din jurul „ochilor” senzorului de distanță Tec
 - Primește: valoare sau pornit/oprit.
 - **Lumini**: **Toate** (implicit), **Sus**, **Jos**, **Stânga**, **Dreapta** sau **Diagonală**.
 - **Luminozitate**: 25, 50, 75 sau 100 % (implicit 100 %).
-- Huburi și porturi: Robot Inventor, un singur port, cel cu senzorul de distanță. Luminile se sting când programul se oprește.
+- Huburi și porturi: Robot Inventor, SPIKE Prime și Technic Hub, un singur port, cel cu senzorul de distanță. Luminile se sting când programul se oprește.
+
+### Luminile senzorului de culoare {#op-colorlights}
+
+Aprinde cele trei lumini din jurul lentilei senzorului de culoare Technic (senzorul de culoare SPIKE) cât timp intrarea este pornită.
+
+- Primește: valoare sau pornit/oprit.
+- **Lumini**: **Toate** (implicit), 1, 2, 3, 1 + 2, 2 + 3 sau 1 + 3.
+- **Luminozitate**: 25, 50, 75 sau 100 % (implicit 100 %).
+- Huburi și porturi: Technic Hub, portul cu senzorul de culoare.
+- Cât timp luminile lui sunt aprinse, senzorul nu măsoară nimic. Când intrarea se oprește sau programul se oprește, luminile se sting și senzorul măsoară din nou culorile. Un rând care citește senzorul de culoare de pe un port pe care îl aprinde alt rând este o problemă („Rândul 2 aprinde senzorul de culoare pe portul A: un senzor aprins nu măsoară nimic”).
 
 ## Operații pentru tot hubul {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Locul unde se execută operația: un hub și porturile lui. Există câte un blo
 
 - **Hub**: un hub al profilului.
 - **Porturi**: unul sau mai multe porturi ale acelui hub (A–D pe majoritatea huburilor și pe SBrick, A–F pe Robot Inventor și Mould King 6.0, 1–4 pe BuWizz 2.0, 1–4 plus A și B pe BuWizz 3.0 Pro). Un port poate aparține unui singur rând.
-- Primește: o operație. Huburile Technic Move și operațiile pentru tot hubul nu au porturi.
+- Primește: o operație. Huburile Technic Move în modul **Profil de mașină** și operațiile pentru tot hubul nu au porturi. În modul **Porturi**, un Technic Move Hub are porturile A–C și, pentru **Lumină**, luminile 1–6.
 - Mai multe: [Blocul Hub și porturile](/docs/Application/Links/HubsAndPorts).
 
 ### Indicator {#dash-indicator}

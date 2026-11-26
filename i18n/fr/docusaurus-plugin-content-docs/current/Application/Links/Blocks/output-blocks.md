@@ -27,7 +27,7 @@ Fait tourner le moteur selon la valeur de l’entrée : plus vous poussez, plus 
 - **À l'arrêt** : **Par défaut du hub** (par défaut), **Roue libre**, **Frein** ou **Maintenir la position**.
 - **Accélération du hub** : **Par défaut du hub** (par défaut), **Rapide**, **Équilibrée**, **Progressif**, **Lente** ou **Très lente** : la rampe propre au hub. Pour votre propre rampe, utilisez [Progressif](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Détection de blocage** : **Par défaut du hub** (par défaut), **Activée** ou **Désactivée**.
-- Hubs : tout hub doté de ports. **À l'arrêt** et **Accélération du hub** nécessitent un hub avec contrôle de position (pas SBrick, BuWizz 2.0, WeDo 2.0 ni Mould King) ; **Détection de blocage** nécessite un Robot Inventor. Sur un Technic Move Hub, Moteur fait rouler la voiture.
+- Hubs : tout hub doté de ports. **À l'arrêt** et **Accélération du hub** nécessitent un hub avec contrôle de position (pas SBrick, BuWizz 2.0, WeDo 2.0 ni Mould King) ; **Détection de blocage** nécessite un Robot Inventor. Sur un Technic Move Hub, Moteur fait rouler la voiture en mode **Profil de voiture** et pilote les moteurs `A`–`C` en mode **Ports** ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Dirige avec un moteur doté d’un encodeur : l’entrée −1…1 amène le mot
 - **Vitesse de rotation** : 25, 50, 75 ou 100 % (par défaut 100 %).
 - Manuel : le zéro est la position du moteur à la mise sous tension, ou celle que vous avez fixée avec **Définir comme zéro** (ajustez d’abord avec **◀ 5°** / **5° ▶**).
 - Auto : à chaque démarrage, le moteur tourne jusqu’aux deux butées ; le milieu devient le zéro et la course devient l’angle. **Étalonner maintenant** le lance aussitôt. La direction doit avoir des butées.
-- Hubs et ports : un moteur avec encodeur sur un hub avec contrôle de position (pas SBrick, BuWizz 2.0, WeDo 2.0 ni Mould King). Sur un Technic Move Hub, Servo actionne la crémaillère de direction du hub, que le hub étalonne lui-même.
+- Hubs et ports : un moteur avec encodeur sur un hub avec contrôle de position (pas SBrick, BuWizz 2.0, WeDo 2.0 ni Mould King). Sur un Technic Move Hub en mode **Profil de voiture**, Servo actionne la crémaillère de direction du hub, que le hub étalonne lui-même ; en mode **Ports**, utilisez le port `C` avec l’étalonnage **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Réglages d’un bloc Servo" width={900} />
 
@@ -50,7 +50,7 @@ Fait tourner le moteur pendant une durée fixe chaque fois que l’entrée s’a
 
 - Accepte : une valeur ou activé/désactivé.
 - **Durée** : 0,5, 1, 2, 3, 5 ou 10 s (par défaut 1 s).
-- Hubs : tout hub doté de ports ; sur un Technic Move Hub, il fait rouler la voiture.
+- Hubs : tout hub doté de ports ; sur un Technic Move Hub en mode **Profil de voiture**, il fait rouler la voiture.
 
 ### Tourner de X degrés {#op-degrees}
 
@@ -79,7 +79,7 @@ Commande des lumières LEGO® branchées sur un port.
 - **Luminosité** : 25, 50, 75 ou 100 % (par défaut 100 %).
 - **Clignotement : allumé** : **Sans clignotement** (par défaut), 0,25, 0,5, 1 ou 2 s : durée pendant laquelle la lumière reste allumée à chaque clignotement.
 - **Clignotement : éteint** : **Comme allumé** (par défaut), 0,25, 0,5, 1 ou 2 s : durée pendant laquelle elle reste éteinte.
-- Hubs : tout hub doté de ports sauf WeDo 2.0. Sur un Technic Move Hub, Lumière allume les phares de la voiture.
+- Hubs : tout hub doté de ports sauf WeDo 2.0. Sur un Technic Move Hub, Lumière allume les phares de la voiture en mode **Profil de voiture**, et les lumières `1`–`6` une par une en mode **Ports**.
 
 ### Couleur du port {#op-portcolor}
 
@@ -98,7 +98,17 @@ Allume les quatre segments autour des « yeux » du capteur de distance Technic 
 - Accepte : une valeur ou activé/désactivé.
 - **Lumières** : **Toutes** (par défaut), **Haut**, **Bas**, **Gauche**, **Droite** ou **Diagonale**.
 - **Luminosité** : 25, 50, 75 ou 100 % (par défaut 100 %).
-- Hubs et ports : Robot Inventor, un seul port, celui du capteur de distance. Les lumières s’éteignent à l’arrêt du programme.
+- Hubs et ports : Robot Inventor, SPIKE Prime et Technic Hub, un seul port, celui du capteur de distance. Les lumières s’éteignent à l’arrêt du programme.
+
+### Lumières du capteur de couleur {#op-colorlights}
+
+Allume les trois lumières autour de l’objectif du capteur de couleur Technic (le capteur de couleur SPIKE) tant que l’entrée est activée.
+
+- Accepte : une valeur ou activé/désactivé.
+- **Lumières** : **Toutes** (par défaut), 1, 2, 3, 1 + 2, 2 + 3 ou 1 + 3.
+- **Luminosité** : 25, 50, 75 ou 100 % (par défaut 100 %).
+- Hubs et ports : Technic Hub, le port du capteur de couleur.
+- Tant que ses lumières sont allumées, le capteur ne mesure rien. Quand l’entrée se désactive ou que le programme s’arrête, les lumières s’éteignent et le capteur mesure de nouveau les couleurs. Une ligne qui lit le capteur de couleur sur un port qu’une autre ligne allume est signalée comme problème (« La ligne 2 allume le capteur de couleur sur le port A : un capteur allumé ne mesure rien »).
 
 ## Opérations sur le hub entier {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ L’endroit où l’opération s’exécute : un hub et ses ports. Il y a un blo
 
 - **Hub** : un hub du profil.
 - **Ports** : un ou plusieurs ports de ce hub (A–D sur la plupart des hubs et sur SBrick, A–F sur Robot Inventor et Mould King 6.0, 1–4 sur BuWizz 2.0, 1–4 plus A et B sur BuWizz 3.0 Pro). Un port ne peut appartenir qu’à une seule ligne.
-- Accepte : une opération. Les Technic Move Hub et les opérations sur le hub entier ne prennent pas de ports.
+- Accepte : une opération. Les Technic Move Hub en mode **Profil de voiture** et les opérations sur le hub entier ne prennent pas de ports. En mode **Ports**, un Technic Move Hub a les ports A–C, et les lumières 1–6 pour **Lumière**.
 - Pour en savoir plus : [Bloc Hub et ports](/docs/Application/Links/HubsAndPorts).
 
 ### Indicateur {#dash-indicator}

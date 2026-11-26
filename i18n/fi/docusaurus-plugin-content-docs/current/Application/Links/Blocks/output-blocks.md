@@ -27,7 +27,7 @@ Pyörittää moottoria syötteen arvolla: mitä pidemmälle työnnät, sitä nop
 - **Pysähtyessä**: **Hubin oletus** (oletus), **Vapaa rullaus**, **Jarru** tai **Pidä asento**.
 - **Hubin kiihdytys**: **Hubin oletus** (oletus), **Nopea**, **Tasapainoinen**, **Pehmeä**, **Hidas** tai **Erittäin hidas**: hubin oma ramppi. Oman rampin saat [Pehmeä](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth)-lohkolla.
 - **Jumiutumisen tunnistus**: **Hubin oletus** (oletus), **Päällä** tai **Pois**.
-- Hubit: mikä tahansa hubi, jossa on portteja. **Pysähtyessä** ja **Hubin kiihdytys** vaativat hubin, jossa on asennon ohjaus (ei SBrick, BuWizz 2.0, WeDo 2.0 eikä Mould King); **Jumiutumisen tunnistus** vaatii Robot Inventorin. Technic Move Hubissa Moottori ajaa autoa.
+- Hubit: mikä tahansa hubi, jossa on portteja. **Pysähtyessä** ja **Hubin kiihdytys** vaativat hubin, jossa on asennon ohjaus (ei SBrick, BuWizz 2.0, WeDo 2.0 eikä Mould King); **Jumiutumisen tunnistus** vaatii Robot Inventorin. Technic Move Hubissa Moottori ajaa autoa **Autoprofiili**-tilassa ja moottoreita `A`–`C` **Portit**-tilassa ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Ohjaa kulma-anturillisella moottorilla: syöte −1…1 kääntää moottorin as
 - **Kääntönopeus**: 25, 50, 75 tai 100 % (oletus 100 %).
 - Manuaalinen: nollakohta on se, missä moottori oli virran kytkeytyessä, tai asento, jonka asetat **Aseta nollaksi** -painikkeella (siirrä ensin painikkeilla **◀ 5°** / **5° ▶**).
 - Auto: jokaisella käynnistyksellä moottori kääntyy molempiin päätyrajoittimiin; keskikohdasta tulee nolla ja liikeradasta kulma. **Kalibroi nyt** suorittaa kalibroinnin heti. Ohjauksessa täytyy olla päätyrajoittimet.
-- Hubit ja portit: kulma-anturillinen moottori hubissa, jossa on asennon ohjaus (ei SBrick, BuWizz 2.0, WeDo 2.0 eikä Mould King). Technic Move Hubissa Servo kääntää hubin ohjaustankoa, jonka hubi kalibroi itse.
+- Hubit ja portit: kulma-anturillinen moottori hubissa, jossa on asennon ohjaus (ei SBrick, BuWizz 2.0, WeDo 2.0 eikä Mould King). Technic Move Hubissa **Autoprofiili**-tilassa Servo kääntää hubin ohjaustankoa, jonka hubi kalibroi itse; **Portit**-tilassa käytä porttia `C` ja **Auto**-kalibrointia.
 
 <Screenshot name="links-servo-settings" alt="Servo-lohkon asetukset" width={900} />
 
@@ -50,7 +50,7 @@ Pyörittää moottoria asetetun ajan aina, kun syöte kytkeytyy päälle. Nopeus
 
 - Ottaa: arvon tai päällä/pois.
 - **Aika**: 0,5, 1, 2, 3, 5 tai 10 s (oletus 1 s).
-- Hubit: mikä tahansa hubi, jossa on portteja; Technic Move Hubissa se ajaa autoa.
+- Hubit: mikä tahansa hubi, jossa on portteja; Technic Move Hubissa se ajaa autoa **Autoprofiili**-tilassa.
 
 ### Pyöritä asteina {#op-degrees}
 
@@ -79,7 +79,7 @@ Ohjaa porttiin kytkettyjä LEGO®-valoja.
 - **Kirkkaus**: 25, 50, 75 tai 100 % (oletus 100 %).
 - **Vilkku: päällä**: **Ei vilkkua** (oletus), 0,25, 0,5, 1 tai 2 s: kuinka kauan valo palaa kussakin vilkahduksessa.
 - **Vilkku: pois**: **Sama kuin päällä** (oletus), 0,25, 0,5, 1 tai 2 s: kuinka kauan se on sammuksissa.
-- Hubit: mikä tahansa hubi, jossa on portteja, paitsi WeDo 2.0. Technic Move Hubissa Valo kytkee auton valot.
+- Hubit: mikä tahansa hubi, jossa on portteja, paitsi WeDo 2.0. Technic Move Hubissa Valo kytkee auton valot **Autoprofiili**-tilassa ja valot `1`–`6` yksitellen **Portit**-tilassa.
 
 ### Portin väri {#op-portcolor}
 
@@ -98,7 +98,17 @@ Sytyttää Technic-etäisyysanturin ”silmien” ympärillä olevat neljä segm
 - Ottaa: arvon tai päällä/pois.
 - **Valot**: **Kaikki** (oletus), **Yläosa**, **Pohja**, **Vasen**, **Oikea** tai **Vinottain**.
 - **Kirkkaus**: 25, 50, 75 tai 100 % (oletus 100 %).
-- Hubit ja portit: Robot Inventor, yksi portti, jossa on etäisyysanturi. Valot sammuvat, kun ohjelma pysähtyy.
+- Hubit ja portit: Robot Inventor, SPIKE Prime ja Technic Hub, yksi portti, jossa on etäisyysanturi. Valot sammuvat, kun ohjelma pysähtyy.
+
+### Värianturin valot {#op-colorlights}
+
+Sytyttää Technic-värianturin (SPIKE-värianturin) linssin ympärillä olevat kolme valoa, kun syöte on päällä.
+
+- Ottaa: arvon tai päällä/pois.
+- **Valot**: **Kaikki** (oletus), 1, 2, 3, 1 + 2, 2 + 3 tai 1 + 3.
+- **Kirkkaus**: 25, 50, 75 tai 100 % (oletus 100 %).
+- Hubit ja portit: Technic Hub, portti, jossa on värianturi.
+- Kun anturin valot palavat, anturi ei mittaa mitään. Kun syöte kytkeytyy pois tai ohjelma pysähtyy, valot sammuvat ja anturi mittaa taas värejä. Rivi, joka lukee värianturia portissa, jonka anturin valot toinen rivi sytyttää, on ongelma (”Rivi 2 sytyttää värianturin portissa A: palava anturi ei mittaa mitään”).
 
 ## Koko hubin toiminnot {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Missä toiminto tapahtuu: hubi ja sen portit. Jokaista profiilin hubia kohden on
 
 - **Hubi**: profiilin hubi.
 - **Portit**: yksi tai useampi kyseisen hubin portti (A–D useimmissa hubeissa ja SBrickissä, A–F Robot Inventorissa ja Mould King 6.0:ssa, 1–4 BuWizz 2.0:ssa, 1–4 sekä A ja B BuWizz 3.0 Prossa). Portti voi kuulua vain yhdelle riville.
-- Ottaa: toiminnon. Technic Move -hubit ja koko hubin toiminnot eivät ota portteja.
+- Ottaa: toiminnon. **Autoprofiili**-tilassa olevat Technic Move -hubit ja koko hubin toiminnot eivät ota portteja. **Portit**-tilassa Technic Move Hubissa on portit A–C sekä **Valo**-toiminnolle valot 1–6.
 - Lisää: [Hubi-lohko ja portit](/docs/Application/Links/HubsAndPorts).
 
 ### Ilmaisin {#dash-indicator}

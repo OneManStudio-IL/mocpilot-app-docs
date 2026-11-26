@@ -40,6 +40,7 @@ Renvoie la température de l’électronique du hub, en degrés Celsius.
 - Hubs : Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… courant (mA)` (Gourou) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Renvoie le courant total consommé par le hub, en milliampères.
 
 - Hubs : Technic Hub.
@@ -95,6 +96,7 @@ Renvoie l’accélération du hub sur un axe.
 - Axes : `x`, `y`, `z`
 
 ### `… … vitesse de rotation (°/s)` (Gourou) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Renvoie la vitesse à laquelle le hub tourne autour d’un axe, en degrés par seconde (d’après le gyroscope du hub).
 
 - Axes : `x`, `y`, `z`. `z` correspond à la rotation sur place (positif = vers la gauche lorsque le hub est posé à plat) ; `x` et `y` correspondent au roulis et au tangage.

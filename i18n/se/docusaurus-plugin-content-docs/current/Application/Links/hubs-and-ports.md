@@ -14,7 +14,7 @@ Utgången [Hubb](/docs/Application/Links/Blocks/OutputBlocks#hub-out) avslutar e
 
 - hubbens namn och en **anslutningsprick** (ansluten eller inte);
 - **portarna** som knappar: A, B, C, D … på LEGO®-hubbar och SBrick (A–F på Robot Inventor och Mould King 6.0), 1–4 på BuWizz 2.0, 1–4 plus A och B på BuWizz 3.0 Pro;
-- en undertext: ”portar A, B”, ”välj portar”, ”hela hubben” (efter en åtgärd för hela hubben) eller ”körning, styrning, lampor” (Technic Move).
+- en undertext: ”portar A, B”, ”välj portar”, ”hela hubben” (efter en åtgärd för hela hubben) eller ”körning, styrning, lampor” (Technic Move i läget **Bilprofil**).
 
 ## Välj portar {#choose-ports}
 
@@ -44,14 +44,18 @@ När hubben är ansluten vet MOCPilot vad som sitter i varje port och kontroller
 | ”Port A tar bara enkla hastighetskommandon: ingen positionsstyrning” | den här porten kan inte styra positioner |
 | ”Port A har ingen LED: använd portarna 1-4” | Portfärg fungerar bara på port 1–4 på BuWizz 3.0 Pro |
 | ”Sensorlampor: välj en port, den med avståndssensorn” | Sensorlampor tar exakt en port |
+| ”Port A: ingen färgsensor där” | Färgsensorns lampor och ingångarna färgton, färgmättnad och färgljusstyrka kräver en färgsensor på porten |
 
 Åtgärder som en hubb inte kan utföra erbjuds inte för den. Om du byter en rad till en annan hubb talar raden om vilken åtgärd som inte passar, till exempel ”Broms: endast Technic Move (… har inget bromskommando)”.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub (i LEGO® Technics radiostyrda bilar) styrs per funktion, inte per port: dess Hubb-block visar **körning, styrning, lampor** och tar inga portar. Använd **Motor** eller **Motor i tid** för att köra, **Servo** för att styra, **Ljus** för lamporna och **Broms**, **Boost** och **Effektpuls** för specialfunktionerna.
+Technic Move Hub (i LEGO® Technics radiostyrda bilar) kan styras på två sätt. Välj ett med **Styrning** i Hubb-blockets fönster: **Bilprofil** (standard) eller **Portar**. Valet hör till hubben, så alla Hubb-block för den hubben använder samma val.
 
-Körning, styrning, lampor, broms och boost kan var och en bara användas av en rad (”Rad 2 styr redan den här Technic Move”).
+- **Bilprofil**: hubben styrs per funktion, inte per port. Dess Hubb-block visar **körning, styrning, lampor** och tar inga portar. Använd **Motor** eller **Motor i tid** för att köra, **Servo** för att styra, **Ljus** för lamporna och **Broms**, **Boost** och **Effektpuls** för specialfunktionerna. Körning, styrning, lampor, broms och boost kan var och en bara användas av en rad (”Rad 2 styr redan den här Technic Move”).
+- **Portar**: hubben fungerar som de andra hubbarna med portar. Dess motorer är portarna `A`, `B` (drivmotorerna) och `C` (styrmotorn): **Motor**, **Motor i tid**, **Servo** (med kalibreringen **Auto** på `C`), **Kör ett antal grader**, **Gå till position**, **Vid stopp** och **Hubbacceleration** fungerar på dem. Dess sex lampor är portarna `1`–`6` i **Ljus**-rader. En [Hubb-ingång](/docs/Application/Links/Blocks/InputBlocks#src-hub) läser motorernas hastighet och vinkel. **Broms**, **Boost** och **Effektpuls** fungerar bara i läget **Bilprofil**.
+
+En rad som inte passar hubbens läge är ett problem som säger vad du ska växla: ”… styrs av sin bilprofil: växla hubben till ”Portar” för detta” eller ”… styrs port för port: växla hubben till ”Bilprofil” för detta”. Profiler som skapades innan det här valet fanns öppnas i läget **Bilprofil**.
 
 För att läsa in en bilkonfiguration i hubben (Porsche, Lamborghini, Batmobile) använder du **Mina hubbar → Välj konfiguration**. Se [Konfigurationer för Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

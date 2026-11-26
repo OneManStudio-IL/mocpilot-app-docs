@@ -27,7 +27,7 @@ Laat de motor draaien met de waarde van de invoer: hoe verder je duwt, hoe snell
 - **Bij stoppen**: **Standaard van hub** (standaard), **Uitrollen**, **Remmen** of **Positie vasthouden**.
 - **Versnelling van hub**: **Standaard van hub** (standaard), **Snel**, **Gebalanceerd**, **Geleidelijk**, **Langzaam** of **Heel langzaam**: de eigen versnellingscurve van de hub. Voor je eigen curve gebruik je [Geleidelijk](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Blokkeerdetectie**: **Standaard van hub** (standaard), **Aan** of **Uit**.
-- Hubs: elke hub met poorten. **Bij stoppen** en **Versnelling van hub** vereisen een hub met positieregeling (niet SBrick, BuWizz 2.0, WeDo 2.0 of Mould King); **Blokkeerdetectie** vereist Robot Inventor. Op een Technic Move Hub laat Motor de auto rijden.
+- Hubs: elke hub met poorten. **Bij stoppen** en **Versnelling van hub** vereisen een hub met positieregeling (niet SBrick, BuWizz 2.0, WeDo 2.0 of Mould King); **Blokkeerdetectie** vereist Robot Inventor. Op een Technic Move Hub laat Motor in de modus **Autoprofiel** de auto rijden en in de modus **Poorten** de motoren `A`–`C` draaien ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Stuurt met een motor met encoder: de invoer −1…1 draait de motor naar *midde
 - **Draaisnelheid**: 25, 50, 75 of 100 % (standaard 100 %).
 - Handmatig: het nulpunt is waar de motor stond bij het inschakelen, of de positie die je instelt met **Instellen als nul** (verschuif eerst met **◀ 5°** / **5° ▶**).
 - Auto: bij elke start draait de motor naar beide eindaanslagen; het midden wordt het nulpunt en de slag wordt de hoek. **Nu kalibreren** voert dit meteen uit. De besturing moet eindaanslagen hebben.
-- Hubs en poorten: een motor met encoder op een hub met positieregeling (niet SBrick, BuWizz 2.0, WeDo 2.0 of Mould King). Op een Technic Move Hub draait Servo de stuurheugel van de hub, die de hub zelf kalibreert.
+- Hubs en poorten: een motor met encoder op een hub met positieregeling (niet SBrick, BuWizz 2.0, WeDo 2.0 of Mould King). Op een Technic Move Hub in de modus **Autoprofiel** draait Servo de stuurheugel van de hub, die de hub zelf kalibreert; gebruik in de modus **Poorten** poort `C` met kalibratie **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Instellingen van een Servo-blok" width={900} />
 
@@ -50,7 +50,7 @@ Laat de motor een ingestelde tijd draaien, elke keer dat de invoer aan gaat. Sne
 
 - Neemt: waarde of aan/uit.
 - **Tijd**: 0,5, 1, 2, 3, 5 of 10 s (standaard 1 s).
-- Hubs: elke hub met poorten; op een Technic Move Hub laat het de auto rijden.
+- Hubs: elke hub met poorten; op een Technic Move Hub in de modus **Autoprofiel** laat het de auto rijden.
 
 ### Draaien met graden {#op-degrees}
 
@@ -79,7 +79,7 @@ Stuurt LEGO®-lampen op een poort aan.
 - **Helderheid**: 25, 50, 75 of 100 % (standaard 100 %).
 - **Knipperen: aan**: **Niet knipperen** (standaard), 0,25, 0,5, 1 of 2 s: hoe lang de lamp bij elke knipper aan blijft.
 - **Knipperen: uit**: **Zelfde als aan** (standaard), 0,25, 0,5, 1 of 2 s: hoe lang hij uit blijft.
-- Hubs: elke hub met poorten behalve WeDo 2.0. Op een Technic Move Hub schakelt Licht de lichten van de auto.
+- Hubs: elke hub met poorten behalve WeDo 2.0. Op een Technic Move Hub schakelt Licht in de modus **Autoprofiel** de lichten van de auto, en in de modus **Poorten** de lichten `1`–`6` één voor één.
 
 ### Poortkleur {#op-portcolor}
 
@@ -98,7 +98,17 @@ Laat de vier segmenten rond de “ogen” van de Technic-afstandssensor oplichte
 - Neemt: waarde of aan/uit.
 - **Lichten**: **Alle** (standaard), **Boven**, **Onder**, **Links**, **Rechts** of **Diagonaal**.
 - **Helderheid**: 25, 50, 75 of 100 % (standaard 100 %).
-- Hubs en poorten: Robot Inventor, één poort met de afstandssensor. De lichten gaan uit als het programma stopt.
+- Hubs en poorten: Robot Inventor, SPIKE Prime en Technic Hub, één poort met de afstandssensor. De lichten gaan uit als het programma stopt.
+
+### Kleursensorlampjes {#op-colorlights}
+
+Laat de drie lampjes rond de lens van de Technic-kleursensor (de SPIKE-kleursensor) oplichten zolang de invoer aan is.
+
+- Neemt: waarde of aan/uit.
+- **Lichten**: **Alle** (standaard), 1, 2, 3, 1 + 2, 2 + 3 of 1 + 3.
+- **Helderheid**: 25, 50, 75 of 100 % (standaard 100 %).
+- Hubs en poorten: Technic Hub, de poort met de kleursensor.
+- Zolang de lampjes aan zijn, meet de sensor niets. Als de invoer uitgaat of het programma stopt, gaan de lampjes uit en meet de sensor weer kleuren. Een rij die de kleursensor uitleest op een poort die een andere rij verlicht, is een probleem (“Rij 2 verlicht de kleursensor op poort A: een verlichte sensor meet niets”).
 
 ## Bewerkingen voor de hele hub {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Waar de bewerking plaatsvindt: een hub en zijn poorten. Er is één Hub-blok per
 
 - **Hub**: een hub van het profiel.
 - **Poorten**: een of meer poorten van die hub (A–D op de meeste hubs en op SBrick, A–F op Robot Inventor en Mould King 6.0, 1–4 op BuWizz 2.0, 1–4 plus A en B op BuWizz 3.0 Pro). Een poort kan maar bij één rij horen.
-- Neemt: een bewerking. Technic Move Hubs en bewerkingen voor de hele hub hebben geen poorten.
+- Neemt: een bewerking. Technic Move Hubs in de modus **Autoprofiel** en bewerkingen voor de hele hub hebben geen poorten. In de modus **Poorten** heeft een Technic Move Hub de poorten A–C, en lichten 1–6 voor **Licht**.
 - Meer: [Hub-blok en poorten](/docs/Application/Links/HubsAndPorts).
 
 ### Indicator {#dash-indicator}

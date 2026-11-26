@@ -170,6 +170,8 @@ Il valore di un sensore viaggia lungo la riga diviso per il suo fondo scala e li
 | **Inclinazione: rollio** | valore | °, 180 | hub con sensore di inclinazione |
 | **Inclinazione: imbardata** | valore | °, 180 | hub con asse di imbardata |
 | **Accelerazione X / Y / Z** | valore | m/s², 19,6 | hub con accelerometro |
+| **Velocità di rotazione X / Y / Z** | valore | °/s, 360 | hub con giroscopio: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Corrente dell’hub** | valore | mA, 3000 | Technic Hub |
 | **Velocità del motore** | valore | %, 100 | porta; tutti gli hub con porte |
 | **Angolo del motore** | valore | °, 360 (relativo) | porta; motori con encoder; non SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Posizione del motore** | valore | °, 180 (assoluta) | porta; motori angolari |
@@ -178,6 +180,8 @@ Il valore di un sensore viaggia lungo la riga diviso per il suo fondo scala e li
 | **Sensore di distanza** | valore | 250 | porta; non SBrick o BuWizz |
 | **Sensore di colore** | valore | numero del colore, 10 | porta; non SBrick, BuWizz o WeDo 2.0 |
 | **Luce riflessa**, **Luce ambientale** | valore | %, 100 | porta; non SBrick, BuWizz o WeDo 2.0 |
+| **Tonalità** | valore | °, 360 | porta; Technic Color Sensor o BOOST Color & Distance Sensor; non SBrick, BuWizz o WeDo 2.0 |
+| **Saturazione**, **Luminosità del colore** | valore | %, 100 | porta; come Tonalità |
 | **Sensore di inclinazione: beccheggio / rollio** | valore | °, 45 | porta; sensore di inclinazione WeDo 2.0 / BOOST; non SBrick o BuWizz |
 | **Modalità di potenza** | valore | 1–4, 4 | BuWizz 2.0 |
 | **Connesso** | acceso/spento | | tutti gli hub |

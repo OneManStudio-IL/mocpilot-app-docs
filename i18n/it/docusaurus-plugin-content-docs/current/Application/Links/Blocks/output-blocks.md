@@ -27,7 +27,7 @@ Fa girare il motore al valore dell'ingresso: più spingi, più va veloce; 0 lo f
 - **All'arresto**: **Predefinito dell'hub** (predefinito), **Inerzia**, **Freno** o **Mantieni posizione**.
 - **Accelerazione dell'hub**: **Predefinito dell'hub** (predefinito), **Veloce**, **Bilanciata**, **Graduale**, **Lenta** o **Molto lenta**: la rampa propria dell'hub. Per una rampa personalizzata, usa [Graduale](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Rilevamento del blocco**: **Predefinito dell'hub** (predefinito), **Attivo** o **Disattivo**.
-- Hub: qualsiasi hub con porte. **All'arresto** e **Accelerazione dell'hub** richiedono un hub con controllo della posizione (non SBrick, BuWizz 2.0, WeDo 2.0 o Mould King); **Rilevamento del blocco** richiede Robot Inventor. Su un Technic Move Hub, Motore aziona la trazione dell'auto.
+- Hub: qualsiasi hub con porte. **All'arresto** e **Accelerazione dell'hub** richiedono un hub con controllo della posizione (non SBrick, BuWizz 2.0, WeDo 2.0 o Mould King); **Rilevamento del blocco** richiede Robot Inventor. Su un Technic Move Hub, Motore aziona la trazione dell'auto in modalità **Profilo auto** e i motori `A`–`C` in modalità **Porte** ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Sterza con un motore dotato di encoder: l'ingresso −1…1 porta il motore a *c
 - **Velocità di rotazione**: 25, 50, 75 o 100 % (predefinito 100 %).
 - Manuale: lo zero è la posizione in cui si trovava il motore all'accensione, oppure quella impostata con **Imposta come zero** (prima regola con **◀ 5°** / **5° ▶**).
 - Auto: a ogni avvio il motore ruota fino a entrambi i finecorsa; il punto centrale diventa lo zero e la corsa diventa l'angolo. **Calibra ora** esegue subito la calibrazione. Lo sterzo deve avere dei finecorsa.
-- Hub e porte: un motore con encoder su un hub con controllo della posizione (non SBrick, BuWizz 2.0, WeDo 2.0 o Mould King). Su un Technic Move Hub, Servo ruota la cremagliera dello sterzo dell'hub, che l'hub calibra da solo.
+- Hub e porte: un motore con encoder su un hub con controllo della posizione (non SBrick, BuWizz 2.0, WeDo 2.0 o Mould King). Su un Technic Move Hub in modalità **Profilo auto**, Servo ruota la cremagliera dello sterzo dell'hub, che l'hub calibra da solo; in modalità **Porte**, usa la porta `C` con la calibrazione **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Impostazioni di un blocco Servo" width={900} />
 
@@ -50,7 +50,7 @@ Fa girare il motore per un tempo stabilito ogni volta che l'ingresso si accende.
 
 - Accetta: valore o acceso/spento.
 - **Tempo**: 0,5, 1, 2, 3, 5 o 10 s (predefinito 1 s).
-- Hub: qualsiasi hub con porte; su un Technic Move Hub aziona la trazione dell'auto.
+- Hub: qualsiasi hub con porte; su un Technic Move Hub in modalità **Profilo auto** aziona la trazione dell'auto.
 
 ### Ruota di gradi {#op-degrees}
 
@@ -79,7 +79,7 @@ Comanda le luci LEGO® su una porta.
 - **Luminosità**: 25, 50, 75 o 100 % (predefinito 100 %).
 - **Lampeggio: acceso**: **Nessun lampeggio** (predefinito), 0,25, 0,5, 1 o 2 s: per quanto tempo la luce resta accesa in ogni lampeggio.
 - **Lampeggio: spento**: **Come acceso** (predefinito), 0,25, 0,5, 1 o 2 s: per quanto tempo resta spenta.
-- Hub: qualsiasi hub con porte tranne WeDo 2.0. Su un Technic Move Hub, Luce accende e spegne le luci dell'auto.
+- Hub: qualsiasi hub con porte tranne WeDo 2.0. Su un Technic Move Hub, Luce accende e spegne le luci dell'auto in modalità **Profilo auto**, e le luci `1`–`6` una per una in modalità **Porte**.
 
 ### Colore della porta {#op-portcolor}
 
@@ -98,7 +98,17 @@ Accende i quattro segmenti attorno agli «occhi» del sensore di distanza Techni
 - Accetta: valore o acceso/spento.
 - **Luci**: **Tutte** (predefinito), **Sopra**, **Sotto**, **Sinistra**, **Destra** o **Diagonale**.
 - **Luminosità**: 25, 50, 75 o 100 % (predefinito 100 %).
-- Hub e porte: Robot Inventor, una porta con il sensore di distanza. Le luci si spengono quando il programma si ferma.
+- Hub e porte: Robot Inventor, SPIKE Prime e Technic Hub, una porta con il sensore di distanza. Le luci si spengono quando il programma si ferma.
+
+### Luci del sensore di colore {#op-colorlights}
+
+Accende le tre luci attorno alla lente del Technic Color Sensor (il sensore di colore SPIKE) finché l'ingresso è acceso.
+
+- Accetta: valore o acceso/spento.
+- **Luci**: **Tutte** (predefinito), 1, 2, 3, 1 + 2, 2 + 3 o 1 + 3.
+- **Luminosità**: 25, 50, 75 o 100 % (predefinito 100 %).
+- Hub e porte: Technic Hub, la porta con il sensore di colore.
+- Mentre le sue luci sono accese, il sensore non misura nulla. Quando l'ingresso si spegne o il programma si ferma, le luci si spengono e il sensore torna a misurare i colori. Una riga che legge il sensore di colore su una porta che un'altra riga accende viene segnalata come problema («La riga 2 accende il sensore di colore sulla porta A: un sensore acceso non misura nulla»).
 
 ## Operazioni per l'intero hub {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Dove avviene l'operazione: un hub e le sue porte. C'è un blocco Hub per ogni hu
 
 - **Hub**: un hub del profilo.
 - **Porte**: una o più porte di quell'hub (A–D sulla maggior parte degli hub e su SBrick, A–F su Robot Inventor e Mould King 6.0, 1–4 su BuWizz 2.0, 1–4 più A e B su BuWizz 3.0 Pro). Una porta può appartenere a una sola riga.
-- Accetta: un'operazione. I Technic Move Hub e le operazioni per l'intero hub non prevedono porte.
+- Accetta: un'operazione. I Technic Move Hub in modalità **Profilo auto** e le operazioni per l'intero hub non prevedono porte. In modalità **Porte** un Technic Move Hub ha le porte A–C, e le luci 1–6 per **Luce**.
 - Altre informazioni: [Blocco Hub e porte](/docs/Application/Links/HubsAndPorts).
 
 ### Indicatore {#dash-indicator}

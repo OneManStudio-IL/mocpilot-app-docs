@@ -14,7 +14,7 @@ La salida [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) cierra una 
 
 - el nombre del hub y un **punto de conexión** (conectado o no);
 - los **puertos** como chips: A, B, C, D… en los hubs LEGO® y en SBrick (A–F en Robot Inventor y Mould King 6.0), 1–4 en BuWizz 2.0, y 1–4 más A y B en BuWizz 3.0 Pro;
-- un subtítulo: «puertos A, B», «elegir puertos», «todo el hub» (tras una operación para todo el hub) o «tracción, dirección, luces» (Technic Move).
+- un subtítulo: «puertos A, B», «elegir puertos», «todo el hub» (tras una operación para todo el hub) o «tracción, dirección, luces» (Technic Move en el modo **Perfil de coche**).
 
 ## Elegir puertos {#choose-ports}
 
@@ -44,14 +44,18 @@ Cuando el hub está conectado, MOCPilot sabe qué hay conectado a cada puerto y 
 | «El puerto A solo acepta comandos de velocidad simples: sin control de posición» | este puerto no puede controlar posiciones |
 | «El puerto A no tiene LED: usa los puertos 1-4» | Color del puerto solo funciona en los puertos 1–4 del BuWizz 3.0 Pro |
 | «Luces del sensor: elige un solo puerto, el del sensor de distancia» | Luces del sensor admite exactamente un puerto |
+| «Puerto A: no hay sensor de color» | Luces del sensor de color y las entradas de tono, saturación y brillo del color necesitan un sensor de color en el puerto |
 
 Las operaciones que un hub no puede realizar no se ofrecen para él. Si cambias una fila a otro hub, la fila indica qué operación no encaja, por ejemplo «Freno: solo Technic Move (… no tiene comando de freno)».
 
 ## Technic Move Hub {#technic-move-hub}
 
-El Technic Move Hub (en los coches teledirigidos LEGO® Technic) se controla por función, no por puerto: su bloque Hub muestra **tracción, dirección, luces** y no tiene puertos. Usa **Motor** o **Motor por tiempo** para conducir, **Servo** para la dirección, **Luz** para las luces, y **Freno**, **Boost** y **Pulso de potencia** para las funciones especiales.
+El Technic Move Hub (en los coches teledirigidos LEGO® Technic) se puede controlar de dos formas. Elige una con **Control** en la ventana del bloque Hub: **Perfil de coche** (predeterminado) o **Puertos**. La elección pertenece al hub, así que todos los bloques Hub de ese hub usan la misma.
 
-La tracción, la dirección, las luces, el freno y el boost solo pueden usarse cada uno en una fila («La fila 2 ya controla este Technic Move»).
+- **Perfil de coche**: el hub se controla por función, no por puerto. Su bloque Hub muestra **tracción, dirección, luces** y no tiene puertos. Usa **Motor** o **Motor por tiempo** para conducir, **Servo** para la dirección, **Luz** para las luces, y **Freno**, **Boost** y **Pulso de potencia** para las funciones especiales. La tracción, la dirección, las luces, el freno y el boost solo pueden usarse cada uno en una fila («La fila 2 ya controla este Technic Move»).
+- **Puertos**: el hub funciona como los demás hubs con puertos. Sus motores son los puertos `A`, `B` (los motores de tracción) y `C` (el motor de dirección): **Motor**, **Motor por tiempo**, **Servo** (con calibración **Auto** en `C`), **Girar grados**, **Ir a la posición**, **Al detenerse** y **Aceleración del hub** funcionan con ellos. Sus seis luces son los puertos `1`–`6` de las filas **Luz**. Una [Entrada del hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) lee la velocidad y el ángulo de los motores. **Freno**, **Boost** y **Pulso de potencia** solo funcionan en el modo **Perfil de coche**.
+
+Una fila que no encaja con el modo del hub es un problema que indica qué cambiar: «… se controla con su perfil de coche: cambia el hub a «Puertos» para esto» o «… se controla puerto a puerto: cambia el hub a «Perfil de coche» para esto». Los perfiles creados antes de que existiera esta opción se abren en el modo **Perfil de coche**.
 
 Para cargar una configuración de coche en el hub (Porsche, Lamborghini, Batmobile), usa **Mis hubs → Seleccionar configuración**. Consulta [Configuraciones del Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

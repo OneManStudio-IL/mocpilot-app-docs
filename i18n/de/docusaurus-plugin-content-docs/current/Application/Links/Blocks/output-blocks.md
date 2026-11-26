@@ -27,7 +27,7 @@ Lässt den Motor mit dem Wert des Eingangs laufen: Je weiter Sie drücken, desto
 - **Beim Stopp**: **Hub-Standard** (Standard), **Ausrollen**, **Bremsen** oder **Position halten**.
 - **Hub-Beschleunigung**: **Hub-Standard** (Standard), **Schnell**, **Ausgewogen**, **Sanft**, **Langsam** oder **Sehr langsam**: die eigene Rampe des Hubs. Für Ihre eigene Rampe verwenden Sie [Sanft](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Blockiererkennung**: **Hub-Standard** (Standard), **An** oder **Aus**.
-- Hubs: jeder Hub mit Ports. **Beim Stopp** und **Hub-Beschleunigung** brauchen einen Hub mit Positionssteuerung (nicht SBrick, BuWizz 2.0, WeDo 2.0 oder Mould King); **Blockiererkennung** braucht Robot Inventor. Beim Technic Move Hub treibt Motor das Auto an.
+- Hubs: jeder Hub mit Ports. **Beim Stopp** und **Hub-Beschleunigung** brauchen einen Hub mit Positionssteuerung (nicht SBrick, BuWizz 2.0, WeDo 2.0 oder Mould King); **Blockiererkennung** braucht Robot Inventor. Beim Technic Move Hub treibt Motor im Modus **Fahrzeugprofil** das Auto an und im Modus **Ports** die Motoren `A`–`C` ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Lenkt mit einem Motor mit Encoder: Der Eingang −1…1 dreht den Motor auf *Mit
 - **Drehgeschwindigkeit**: 25, 50, 75 oder 100 % (Standard 100 %).
 - Manuell: Der Nullpunkt ist dort, wo der Motor beim Einschalten stand, oder die Position, die Sie mit **Als Nullpunkt setzen** festlegen (vorher mit **◀ 5°** / **5° ▶** nachjustieren).
 - Auto: Bei jedem Start dreht der Motor zu beiden Endanschlägen; die Mitte wird zum Nullpunkt und der Stellweg zum Winkel. **Jetzt kalibrieren** führt das sofort aus. Die Lenkung muss Endanschläge haben.
-- Hubs und Ports: ein Motor mit Encoder an einem Hub mit Positionssteuerung (nicht SBrick, BuWizz 2.0, WeDo 2.0 oder Mould King). Beim Technic Move Hub dreht Servo die Lenkzahnstange des Hubs, die der Hub selbst kalibriert.
+- Hubs und Ports: ein Motor mit Encoder an einem Hub mit Positionssteuerung (nicht SBrick, BuWizz 2.0, WeDo 2.0 oder Mould King). Beim Technic Move Hub im Modus **Fahrzeugprofil** dreht Servo die Lenkzahnstange des Hubs, die der Hub selbst kalibriert; im Modus **Ports** verwenden Sie Port `C` mit der Kalibrierung **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Einstellungen eines Servo-Blocks" width={900} />
 
@@ -50,7 +50,7 @@ Lässt den Motor jedes Mal, wenn der Eingang einschaltet, eine festgelegte Zeit 
 
 - Nimmt: Wert oder an/aus.
 - **Zeit**: 0,5, 1, 2, 3, 5 oder 10 s (Standard 1 s).
-- Hubs: jeder Hub mit Ports; beim Technic Move Hub treibt er das Auto an.
+- Hubs: jeder Hub mit Ports; beim Technic Move Hub im Modus **Fahrzeugprofil** treibt er das Auto an.
 
 ### Um Grad drehen {#op-degrees}
 
@@ -79,7 +79,7 @@ Steuert LEGO®-Lichter an einem Port.
 - **Helligkeit**: 25, 50, 75 oder 100 % (Standard 100 %).
 - **Blinken: an**: **Kein Blinken** (Standard), 0,25, 0,5, 1 oder 2 s: wie lange das Licht bei jedem Blinken an bleibt.
 - **Blinken: aus**: **Wie „an“** (Standard), 0,25, 0,5, 1 oder 2 s: wie lange es aus bleibt.
-- Hubs: jeder Hub mit Ports außer WeDo 2.0. Beim Technic Move Hub schaltet Licht die Beleuchtung des Autos.
+- Hubs: jeder Hub mit Ports außer WeDo 2.0. Beim Technic Move Hub schaltet Licht im Modus **Fahrzeugprofil** die Beleuchtung des Autos und im Modus **Ports** die Lichter `1`–`6` einzeln.
 
 ### Portfarbe {#op-portcolor}
 
@@ -98,7 +98,17 @@ Lässt die vier Segmente um die „Augen“ des Technic-Abstandssensors leuchten
 - Nimmt: Wert oder an/aus.
 - **Lichter**: **Alle** (Standard), **Oben**, **Unten**, **Links**, **Rechts** oder **Diagonal**.
 - **Helligkeit**: 25, 50, 75 oder 100 % (Standard 100 %).
-- Hubs und Ports: Robot Inventor, ein Port mit dem Abstandssensor. Die Lichter gehen aus, wenn das Programm stoppt.
+- Hubs und Ports: Robot Inventor, SPIKE Prime und Technic Hub, ein Port mit dem Abstandssensor. Die Lichter gehen aus, wenn das Programm stoppt.
+
+### Farbsensor-Lichter {#op-colorlights}
+
+Lässt die drei Lichter um die Linse des Technic-Farbsensors (des SPIKE-Farbsensors) leuchten, solange der Eingang an ist.
+
+- Nimmt: Wert oder an/aus.
+- **Lichter**: **Alle** (Standard), 1, 2, 3, 1 + 2, 2 + 3 oder 1 + 3.
+- **Helligkeit**: 25, 50, 75 oder 100 % (Standard 100 %).
+- Hubs und Ports: Technic Hub, der Port mit dem Farbsensor.
+- Solange seine Lichter an sind, misst der Sensor nichts. Schaltet der Eingang aus oder stoppt das Programm, gehen die Lichter aus und der Sensor misst wieder Farben. Eine Zeile, die den Farbsensor an einem Port liest, den eine andere Zeile beleuchtet, ist ein Problem („Zeile 2 beleuchtet den Farbsensor an Port A: ein leuchtender Sensor misst nichts“).
 
 ## Aktionen für den ganzen Hub {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Wo die Aktion stattfindet: ein Hub und seine Ports. Es gibt einen Hub-Block pro 
 
 - **Hub**: ein Hub des Profils.
 - **Ports**: ein oder mehrere Ports dieses Hubs (A–D bei den meisten Hubs und bei SBrick, A–F bei Robot Inventor und Mould King 6.0, 1–4 bei BuWizz 2.0, 1–4 sowie A und B bei BuWizz 3.0 Pro). Ein Port kann nur zu einer Zeile gehören.
-- Nimmt: eine Aktion. Technic Move Hubs und Aktionen für den ganzen Hub haben keine Ports.
+- Nimmt: eine Aktion. Technic Move Hubs im Modus **Fahrzeugprofil** und Aktionen für den ganzen Hub haben keine Ports. Im Modus **Ports** hat ein Technic Move Hub die Ports A–C sowie die Lichter 1–6 für **Licht**.
 - Mehr: [Hub-Block und Ports](/docs/Application/Links/HubsAndPorts).
 
 ### Anzeige {#dash-indicator}

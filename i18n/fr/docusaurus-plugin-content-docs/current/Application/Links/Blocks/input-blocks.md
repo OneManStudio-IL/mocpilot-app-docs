@@ -170,6 +170,8 @@ La valeur d’un capteur circule le long de la ligne divisée par sa pleine éch
 | **Inclinaison : roulis** | valeur | °, 180 | hubs avec capteur d’inclinaison |
 | **Inclinaison : lacet** | valeur | °, 180 | hubs avec axe de lacet |
 | **Accélération X / Y / Z** | valeur | m/s², 19,6 | hubs avec accéléromètre |
+| **Vitesse de rotation X / Y / Z** | valeur | °/s, 360 | hubs avec gyroscope : Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Courant du hub** | valeur | mA, 3000 | Technic Hub |
 | **Vitesse du moteur** | valeur | %, 100 | port ; tous les hubs à ports |
 | **Angle du moteur** | valeur | °, 360 (relatif) | port ; moteurs avec encodeur ; pas SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Position du moteur** | valeur | °, 180 (absolu) | port ; moteurs angulaires |
@@ -178,6 +180,8 @@ La valeur d’un capteur circule le long de la ligne divisée par sa pleine éch
 | **Capteur de distance** | valeur | 250 | port ; pas SBrick ni BuWizz |
 | **Capteur de couleur** | valeur | numéro de couleur, 10 | port ; pas SBrick, BuWizz ni WeDo 2.0 |
 | **Lumière réfléchie**, **Lumière ambiante** | valeur | %, 100 | port ; pas SBrick, BuWizz ni WeDo 2.0 |
+| **Teinte** | valeur | °, 360 | port ; capteur de couleur Technic ou capteur de couleur et de distance BOOST ; pas SBrick, BuWizz ni WeDo 2.0 |
+| **Saturation**, **Luminosité de la couleur** | valeur | %, 100 | port ; comme Teinte |
 | **Capteur d'inclinaison : tangage / roulis** | valeur | °, 45 | port ; capteur d’inclinaison WeDo 2.0 / BOOST ; pas SBrick ni BuWizz |
 | **Mode de puissance** | valeur | 1–4, 4 | BuWizz 2.0 |
 | **Connecté** | activé/désactivé | | tous les hubs |

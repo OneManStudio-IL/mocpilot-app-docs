@@ -98,9 +98,11 @@ Ställer in orienteringen för bilden på ljusmatrisen. Standard är `upprätt`;
 
 Styr lamporna runt ”ögonen” på avståndssensorn på den valda porten. Du kan tända eller släcka varje lampa, eller lägga en lista i facket för att ställa in ljusstyrkan för varje lampa.
 
-- Hubbar: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocket har hubbikonen).
+- Hubbar: [MINDSTORMS Robot Inventor och SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) samt Technic Hub (blocket har Robot Inventor-hubbikonen). Sensorn fortsätter att mäta avståndet medan dess lampor är tända.
 
 ### `tänd färgsensorns ljus 1 … 2 … 3 … %` (Avancerad) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Ställer in ljusstyrkan för de tre lamporna runt linsen på Technic-färgsensorn (SPIKE-färgsensorn) på den valda porten, från 0 till 100 % var.
 

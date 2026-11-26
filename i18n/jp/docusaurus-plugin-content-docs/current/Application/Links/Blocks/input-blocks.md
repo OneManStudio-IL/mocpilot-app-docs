@@ -170,6 +170,8 @@ import Screenshot from '@site/src/components/Screenshot';
 | **傾き ロール** | 値 | °、180 | 傾きセンサー付きのハブ |
 | **傾き ヨー** | 値 | °、180 | ヨー軸のあるハブ |
 | **加速度 X / Y / Z** | 値 | m/s²、19.6 | 加速度計付きのハブ |
+| **回転速度 X / Y / Z** | 値 | °/s、360 | ジャイロスコープ付きのハブ：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime |
+| **ハブの電流** | 値 | mA、3000 | Technic Hub |
 | **モーター速度** | 値 | %、100 | ポート、ポートのあるすべてのハブ |
 | **モーター角度** | 値 | °、360（相対） | ポート、エンコーダー付きモーター。SBrick、BuWizz 2.0、WeDo 2.0 は除く |
 | **モーター位置** | 値 | °、180（絶対） | ポート、アンギュラーモーター |
@@ -178,6 +180,8 @@ import Screenshot from '@site/src/components/Screenshot';
 | **距離センサー** | 値 | 250 | ポート。SBrick と BuWizz は除く |
 | **カラーセンサー** | 値 | 色番号、10 | ポート。SBrick、BuWizz、WeDo 2.0 は除く |
 | **反射光**、**周囲光** | 値 | %、100 | ポート。SBrick、BuWizz、WeDo 2.0 は除く |
+| **色相** | 値 | °、360 | ポート。Technic カラーセンサーまたは BOOST カラー＆距離センサー。SBrick、BuWizz、WeDo 2.0 は除く |
+| **彩度**、**明るさ** | 値 | %、100 | ポート。色相と同じ |
 | **傾きセンサー ピッチ / ロール** | 値 | °、45 | ポート、WeDo 2.0 / BOOST 傾きセンサー。SBrick と BuWizz は除く |
 | **パワーモード** | 値 | 1–4、4 | BuWizz 2.0 |
 | **接続済み** | オン/オフ | | すべてのハブ |

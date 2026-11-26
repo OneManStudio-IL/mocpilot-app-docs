@@ -14,7 +14,7 @@ Outputtet [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) afslutter e
 
 - hubbens navn og en **forbindelsesprik** (forbundet eller ej);
 - **portene** som knapper: A, B, C, D… på LEGO®-hubs og SBrick (A–F på Robot Inventor og Mould King 6.0), 1–4 på BuWizz 2.0, 1–4 samt A og B på BuWizz 3.0 Pro;
-- en undertitel: »porte A, B«, »vælg porte«, »hele hubben« (efter en handling for hele hubben) eller »kørsel, styring, lys« (Technic Move).
+- en undertitel: »porte A, B«, »vælg porte«, »hele hubben« (efter en handling for hele hubben) eller »kørsel, styring, lys« (Technic Move i tilstanden **Bilprofil**).
 
 ## Vælg porte {#choose-ports}
 
@@ -44,14 +44,18 @@ Når hubben er forbundet, ved MOCPilot, hvad der er sat i hver port, og kontroll
 | »Port A tager kun simple hastighedskommandoer: ingen positionsstyring« | denne port kan ikke styre positioner |
 | »Port A har ingen LED: brug port 1-4« | Portfarve virker kun på port 1–4 på BuWizz 3.0 Pro |
 | »Sensorlys: vælg én port, den med afstandssensoren« | Sensorlys bruger præcis én port |
+| »Port A: ingen farvesensor her« | Farvesensorens lys og inputtene farvetone, farvemætning og farvelysstyrke kræver en farvesensor på porten |
 
 Handlinger, som en hub ikke kan udføre, tilbydes ikke for den. Skifter du en række til en anden hub, fortæller rækken, hvilken handling der ikke passer, for eksempel »Bremse: kun Technic Move (… har ingen bremsekommando)«.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub (i fjernstyrede LEGO® Technic-biler) styres efter funktion, ikke efter port: Dens Hub-blok viser **kørsel, styring, lys** og har ingen porte. Brug **Motor** eller **Motor i tid** til at køre, **Servo** til at styre, **Lys** til lysene og **Bremse**, **Boost** og **Kraftimpuls** til specialfunktionerne.
+Technic Move Hub (i fjernstyrede LEGO® Technic-biler) kan styres på to måder. Vælg én med **Styring** i Hub-blokkens vindue: **Bilprofil** (standard) eller **Porte**. Valget hører til hubben, så alle Hub-blokke for den hub bruger det samme.
 
-Kørsel, styring, lys, bremse og boost kan hver kun bruges af én række (»Række 2 kører allerede denne Technic Move«).
+- **Bilprofil**: Hubben styres efter funktion, ikke efter port. Dens Hub-blok viser **kørsel, styring, lys** og har ingen porte. Brug **Motor** eller **Motor i tid** til at køre, **Servo** til at styre, **Lys** til lysene og **Bremse**, **Boost** og **Kraftimpuls** til specialfunktionerne. Kørsel, styring, lys, bremse og boost kan hver kun bruges af én række (»Række 2 kører allerede denne Technic Move«).
+- **Porte**: Hubben virker som de andre hubs med porte. Dens motorer er portene `A`, `B` (drivmotorerne) og `C` (styremotoren): **Motor**, **Motor i tid**, **Servo** (med kalibreringen **Auto** på `C`), **Kør et antal grader**, **Gå til position**, **Ved stop** og **Hubacceleration** virker på dem. Dens seks lys er portene `1`–`6` i **Lys**-rækker. Et [Hub-input](/docs/Application/Links/Blocks/InputBlocks#src-hub) læser motorernes hastighed og vinkel. **Bremse**, **Boost** og **Kraftimpuls** virker kun i tilstanden **Bilprofil**.
+
+En række, der ikke passer til hubbens tilstand, er et problem, der siger, hvad du skal skifte: »… styres af sin bilprofil: skift hubben til »Porte« for dette« eller »… styres port for port: skift hubben til »Bilprofil« for dette«. Profiler, der er lavet, før dette valg fandtes, åbner i tilstanden **Bilprofil**.
 
 Du indlæser en bilkonfiguration i hubben (Porsche, Lamborghini, Batmobile) under **Mine hubs → Vælg konfiguration**. Se [Technic Move Hub-konfigurationer](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

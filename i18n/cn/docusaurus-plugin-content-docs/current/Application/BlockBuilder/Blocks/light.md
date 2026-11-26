@@ -98,9 +98,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 控制所选端口上距离传感器“眼睛”周围的灯。你可以分别打开或关闭每盏灯，也可以在插槽中放入一个列表来设置每盏灯的亮度。
 
-- 集线器：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（积木带有集线器图标）。
+- 集线器：[MINDSTORMS Robot Inventor 和 SPIKE Prime](/docs/Application/Hubs/RobotInventorHub)，以及 Technic Hub（积木带有 Robot Inventor 集线器图标）。灯亮着时，传感器仍会继续测量距离。
 
 ### `点亮颜色传感器 1 … 2 … 3 … %`（进阶） {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 设置所选端口上 Technic 颜色传感器（SPIKE 颜色传感器）镜头周围三盏灯的亮度，每盏为 0–100 %。
 

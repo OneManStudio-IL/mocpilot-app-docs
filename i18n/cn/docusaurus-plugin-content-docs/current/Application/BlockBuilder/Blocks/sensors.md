@@ -47,6 +47,8 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 ### `… 电流 (毫安)`（大师） {#block_hubs_all_sensors_hub_current}
 
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
+
 返回集线器消耗的总电流，以毫安为单位。
 
 - 集线器：Technic Hub。
@@ -116,6 +118,8 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 - 轴：`x`、`y`、`z`
 
 ### `… … 旋转速度 (°/秒)`（大师） {#block_hubs_all_sensors_gyro}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 
 返回集线器绕某个轴转动的速度，以度/秒为单位（来自集线器的陀螺仪）。
 

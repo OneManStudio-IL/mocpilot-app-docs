@@ -14,7 +14,7 @@ Ieșirea [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) încheie un 
 
 - numele hubului și un **punct de conexiune** (conectat sau nu);
 - **porturile** ca opțiuni: A, B, C, D… pe huburile LEGO® și SBrick (A–F pe Robot Inventor și Mould King 6.0), 1–4 pe BuWizz 2.0, 1–4 plus A și B pe BuWizz 3.0 Pro;
-- un subtitlu: „porturi A, B”, „alege porturile”, „tot hubul” (după o operație pentru tot hubul) sau „tracțiune, direcție, lumini” (Technic Move).
+- un subtitlu: „porturi A, B”, „alege porturile”, „tot hubul” (după o operație pentru tot hubul) sau „tracțiune, direcție, lumini” (Technic Move în modul **Profil de mașină**).
 
 ## Alege porturile {#choose-ports}
 
@@ -44,14 +44,18 @@ Când hubul este conectat, MOCPilot știe ce este conectat la fiecare port și v
 | „Portul A acceptă doar comenzi simple de viteză: fără control al poziției” | acest port nu poate controla poziții |
 | „Portul A nu are LED: folosește porturile 1-4” | Culoare port funcționează doar pe porturile 1–4 ale BuWizz 3.0 Pro |
 | „Luminile senzorului: alege un singur port, cel cu senzorul de distanță” | Luminile senzorului folosesc exact un port |
+| „Portul A: niciun senzor de culoare acolo” | Luminile senzorului de culoare și intrările Nuanța culorii, Saturația culorii și Luminozitatea culorii au nevoie de un senzor de culoare pe port |
 
 Operațiile pe care un hub nu le poate executa nu îi sunt oferite. Dacă muți un rând pe alt hub, rândul arată ce operație nu se potrivește, de exemplu „Frână: doar Technic Move (… nu are comandă de frână)”.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub (din mașinile LEGO® Technic cu telecomandă) se controlează după funcție, nu după port: blocul său Hub arată **tracțiune, direcție, lumini** și nu are porturi. Folosește **Motor** sau **Motor pe durată** pentru tracțiune, **Servo** pentru direcție, **Lumină** pentru lumini și **Frână**, **Boost** și **Impuls de putere** pentru funcțiile speciale.
+Technic Move Hub (din mașinile LEGO® Technic cu telecomandă) poate fi controlat în două moduri. Alege unul cu **Control** în fereastra blocului Hub: **Profil de mașină** (implicit) sau **Porturi**. Alegerea aparține hubului, așa că toate blocurile Hub ale acelui hub folosesc același mod.
 
-Tracțiunea, direcția, luminile, frâna și boost-ul pot fi folosite fiecare de un singur rând („Rândul 2 acționează deja acest Technic Move”).
+- **Profil de mașină**: hubul se controlează după funcție, nu după port. Blocul său Hub arată **tracțiune, direcție, lumini** și nu are porturi. Folosește **Motor** sau **Motor pe durată** pentru tracțiune, **Servo** pentru direcție, **Lumină** pentru lumini și **Frână**, **Boost** și **Impuls de putere** pentru funcțiile speciale. Tracțiunea, direcția, luminile, frâna și boost-ul pot fi folosite fiecare de un singur rând („Rândul 2 acționează deja acest Technic Move”).
+- **Porturi**: hubul funcționează ca celelalte huburi cu porturi. Motoarele lui sunt porturile `A`, `B` (motoarele de tracțiune) și `C` (motorul de direcție): pe ele funcționează **Motor**, **Motor pe durată**, **Servo** (cu calibrarea **Auto** pe `C`), **Rotire cu grade**, **Mergi la poziție**, **La oprire** și **Accelerația hubului**. Cele șase lumini ale lui sunt porturile `1`–`6` ale rândurilor **Lumină**. [Intrarea Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) citește viteza și unghiul motoarelor. **Frână**, **Boost** și **Impuls de putere** funcționează doar în modul **Profil de mașină**.
+
+Un rând care nu se potrivește cu modul hubului este o problemă care spune ce trebuie comutat: „… este controlat de profilul său de mașină: comutați hubul pe „Porturi” pentru asta” sau „… este controlat port cu port: comutați hubul pe „Profil de mașină” pentru asta”. Profilurile create înainte să existe această alegere se deschid în modul **Profil de mașină**.
 
 Pentru a încărca în hub configurația unei mașini (Porsche, Lamborghini, Batmobile), folosește **Huburile mele → Selectează configurația**. Consultă [Configurațiile Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

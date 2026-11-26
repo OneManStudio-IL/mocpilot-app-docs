@@ -29,7 +29,7 @@ Der Hub der ferngesteuerten LEGO® Technic-Autos (Porsche GT4 e-Performance, Lam
 - **Bremsen**, **Boost** (Leistungsmodus) und **Kraftimpuls** (nur mit der Konfiguration Batmobile™ Tumbler).
 - **Hub-Konfigurationen**: Laden Sie ein Fahrzeugprofil mit **Meine Hubs → Konfiguration auswählen** in den Hub. Siehe [Konfigurationen des Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Logikblöcke: die Fahrzeugprofil-Blöcke (*Starte Motoren*, *Setze die Lenkstange auf*, *Setze die Motorbremse*, *Leistungsimpuls*, *Lichter einschalten*, *Stromversorgungsmodus einstellen*) oder die normalen Port-Blöcke: Motoren `A`, `B` (Antrieb) und `C` (Lenkung; *Zahnstange kalibrieren* an `C`, dann *zur relativen Position gehen*), Lichter `1`–`6` einzeln, Neigung, Beschleunigung und Ausrichtung. Verwenden Sie nur eine Art pro Hub: Beide steuern dieselben Motoren und Lichter. Siehe [Motoren → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Schnellverknüpfungen: die eigenen Zeilen des Hubs (Antrieb, Lenkung, Licht); ein [Hub-Eingang](/docs/Application/Links/Blocks/InputBlocks#src-hub) kann auch seine Neigung und Beschleunigung lesen.
+- Schnellverknüpfungen: **Steuerung** im Hub-Block wählt **Fahrzeugprofil** (die Zeilen fahren, lenken und schalten die Lichter) oder **Ports** (Motoren `A`, `B`, `C` und Lichter `1`–`6`, wie bei den anderen Hubs). Siehe [Hub-Block und Ports → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). Ein [Hub-Eingang](/docs/Application/Links/Blocks/InputBlocks#src-hub) kann auch seine Neigung, Beschleunigung und Drehgeschwindigkeit lesen.
 
 ## BuWizz 2.0 {#buwizz-20}
 

@@ -40,6 +40,7 @@ Liefert die Temperatur der Hub-Elektronik in Grad Celsius.
 - Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… Strom (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Liefert den gesamten Strom, den der Hub aufnimmt, in Milliampere.
 
 - Hubs: Technic Hub.
@@ -95,6 +96,7 @@ Liefert die Beschleunigung des Hubs entlang einer Achse.
 - Achsen: `x`, `y`, `z`
 
 ### `… … Drehgeschwindigkeit (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Liefert, wie schnell sich der Hub um eine Achse dreht, in Grad pro Sekunde (vom Gyroskop des Hubs).
 
 - Achsen: `x`, `y`, `z`. `z` ist das Drehen auf der Stelle (positiv = nach links, wenn der Hub flach liegt); `x` und `y` sind Rollen und Nicken.

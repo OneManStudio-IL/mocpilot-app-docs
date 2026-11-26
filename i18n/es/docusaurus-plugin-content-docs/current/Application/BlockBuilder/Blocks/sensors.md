@@ -40,6 +40,7 @@ Devuelve la temperatura de la electrónica del hub, en grados Celsius.
 - Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… corriente (mA)` (Gurú) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Devuelve la corriente total que consume el hub, en miliamperios.
 
 - Hubs: Technic Hub.
@@ -95,6 +96,7 @@ Devuelve la aceleración del hub en un eje.
 - Ejes: `x`, `y`, `z`
 
 ### `… … velocidad de giro (°/s)` (Gurú) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Devuelve lo rápido que gira el hub alrededor de un eje, en grados por segundo (según el giroscopio del hub).
 
 - Ejes: `x`, `y`, `z`. `z` es el giro sobre sí mismo (positivo = hacia la izquierda con el hub en plano); `x` e `y` son el balanceo y el cabeceo.

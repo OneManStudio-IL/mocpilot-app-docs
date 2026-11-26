@@ -29,7 +29,7 @@ LEGO® Technic のリモコンカー（Porsche GT4 e-Performance、Lamborghini R
 - **ブレーキ**、**Boost**（パワーモード）、**パワーパルス**（Batmobile™ Tumbler の構成のみ）。
 - **ハブの構成**：**マイハブ → 設定を選択**で、車のプロフィールをハブに読み込みます。[Technic Move Hub の構成](/docs/Application/Hubs/TechnicMoveHubConfigurations)を参照してください。
 - ロジックブロック：車のプロフィールブロック（*モーターを起動*、*ステアリングラックを設定*、*モーターのブレーキを設定*、*パワーパルス*、*ライトをつける*、*電源モードを設定*）、または通常のポートブロック：モーター `A`、`B`（駆動）と `C`（ステアリング。`C` で *ラックをキャリブレーション* のあと *相対位置へ移動*）、ライト `1`–`6` の個別制御、傾き、加速度、向き。1 つのハブでは 1 つの方法だけを使ってください。どちらも同じモーターとライトに命令します。[モーター → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub)を参照してください。
-- クイックリンク：ハブ専用の行（走行、ステアリング、ライト）。[ハブ入力](/docs/Application/Links/Blocks/InputBlocks#src-hub)で傾きと加速度も読み取れます。
+- クイックリンク：ハブブロックの **制御** で、**車のプロファイル**（行で走行、ステアリング、ライトの切り替えを行う）または **ポート**（ほかのハブと同じく、モーター `A`、`B`、`C` とライト `1`–`6`）を選びます。[ハブブロックとポート → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)を参照してください。[ハブ入力](/docs/Application/Links/Blocks/InputBlocks#src-hub)で傾き、加速度、回転速度も読み取れます。
 
 ## BuWizz 2.0 {#buwizz-20}
 

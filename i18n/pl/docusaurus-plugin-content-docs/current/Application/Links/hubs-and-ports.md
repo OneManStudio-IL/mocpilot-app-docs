@@ -14,7 +14,7 @@ Wyjście [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) kończy wier
 
 - nazwę huba i **kropkę połączenia** (połączony lub nie);
 - **porty** jako przyciski wyboru: A, B, C, D… w hubach LEGO® i SBrick (A–F w Robot Inventor i Mould King 6.0), 1–4 w BuWizz 2.0, 1–4 oraz A i B w BuWizz 3.0 Pro;
-- podpis: „porty A, B”, „wybierz porty”, „cały hub” (po operacji dla całego huba) albo „napęd, skręt, światła” (Technic Move).
+- podpis: „porty A, B”, „wybierz porty”, „cały hub” (po operacji dla całego huba) albo „napęd, skręt, światła” (Technic Move w trybie **Profil samochodu**).
 
 ## Wybierz porty {#choose-ports}
 
@@ -44,14 +44,18 @@ Gdy hub jest połączony, MOCPilot wie, co jest podłączone do każdego portu, 
 | „Port A przyjmuje tylko proste polecenia prędkości: bez sterowania pozycją” | ten port nie może sterować pozycją |
 | „Port A nie ma diody LED: użyj portów 1-4” | Kolor portu działa tylko na portach 1–4 BuWizz 3.0 Pro |
 | „Światła czujnika: wybierz jeden port, ten z czujnikiem odległości” | Światła czujnika przyjmują dokładnie jeden port |
+| „Port A: nie ma tam czujnika koloru” | Światła czujnika koloru i wejścia Odcień koloru, Nasycenie koloru i Jasność koloru wymagają czujnika koloru na porcie |
 
 Operacje, których hub nie potrafi wykonać, nie są dla niego proponowane. Jeśli przełączysz wiersz na inny hub, wiersz pokaże, która operacja nie pasuje, na przykład „Hamulec: tylko Technic Move (… nie ma polecenia hamowania)”.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hub (w zdalnie sterowanych samochodach LEGO® Technic) jest sterowany według funkcji, a nie portów: jego blok Hub pokazuje **napęd, skręt, światła** i nie przyjmuje portów. Do jazdy użyj operacji **Silnik** lub **Silnik na czas**, do skręcania — **Serwo**, do świateł — **Światło**, a do funkcji specjalnych — **Hamulec**, **Boost** i **Impuls mocy**.
+Technic Move Hub (w zdalnie sterowanych samochodach LEGO® Technic) można sterować na dwa sposoby. Wybierz jeden opcją **Sterowanie** w oknie bloku Hub: **Profil samochodu** (domyślnie) lub **Porty**. Wybór należy do huba, więc każdy blok Hub tego huba używa tego samego sposobu.
 
-Jazdy, skrętu, świateł, hamulca i trybu Boost może używać tylko jeden wiersz („Wiersz 2 już steruje napędem tego Technic Move”).
+- **Profil samochodu**: hub jest sterowany według funkcji, a nie portów. Jego blok Hub pokazuje **napęd, skręt, światła** i nie przyjmuje portów. Do jazdy użyj operacji **Silnik** lub **Silnik na czas**, do skręcania — **Serwo**, do świateł — **Światło**, a do funkcji specjalnych — **Hamulec**, **Boost** i **Impuls mocy**. Jazdy, skrętu, świateł, hamulca i trybu Boost może używać tylko jeden wiersz („Wiersz 2 już steruje napędem tego Technic Move”).
+- **Porty**: hub działa jak inne huby z portami. Jego silniki to porty `A`, `B` (silniki napędu) i `C` (silnik skrętu): działają na nich **Silnik**, **Silnik na czas**, **Serwo** (z kalibracją **Auto** na `C`), **Obrót o stopnie**, **Do pozycji**, **Przy zatrzymaniu** i **Przyspieszenie huba**. Jego sześć świateł to porty `1`–`6` wierszy **Światło**. [Wejście Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) odczytuje prędkość i kąt silników. **Hamulec**, **Boost** i **Impuls mocy** działają tylko w trybie **Profil samochodu**.
+
+Wiersz, który nie pasuje do trybu huba, to problem, który mówi, co przełączyć: „… jest sterowany profilem samochodu: przełącz hub na „Porty”” lub „… jest sterowany port po porcie: przełącz hub na „Profil samochodu””. Profile utworzone, zanim pojawił się ten wybór, otwierają się w trybie **Profil samochodu**.
 
 Aby wgrać do huba konfigurację samochodu (Porsche, Lamborghini, Batmobile), użyj **Moje huby → Wybierz konfigurację**. Zobacz [Konfiguracje Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

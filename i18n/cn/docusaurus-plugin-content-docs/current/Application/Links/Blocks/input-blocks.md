@@ -170,6 +170,8 @@ import Screenshot from '@site/src/components/Screenshot';
 | **倾斜滚转** | 数值 | °，180 | 带倾斜传感器的集线器 |
 | **倾斜偏航** | 数值 | °，180 | 带偏航轴的集线器 |
 | **加速度 X / Y / Z** | 数值 | m/s²，19.6 | 带加速度计的集线器 |
+| **旋转速度 X / Y / Z** | 数值 | °/s，360 | 带陀螺仪的集线器：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime |
+| **集线器电流** | 数值 | mA，3000 | Technic Hub |
 | **电机速度** | 数值 | %，100 | 端口；所有带端口的集线器 |
 | **电机角度** | 数值 | °，360（相对） | 端口；带编码器的电机；不支持 SBrick、BuWizz 2.0、WeDo 2.0 |
 | **电机位置** | 数值 | °，180（绝对） | 端口；角度电机 |
@@ -178,6 +180,8 @@ import Screenshot from '@site/src/components/Screenshot';
 | **距离传感器** | 数值 | 250 | 端口；不支持 SBrick 或 BuWizz |
 | **颜色传感器** | 数值 | 颜色编号，10 | 端口；不支持 SBrick、BuWizz 或 WeDo 2.0 |
 | **反射光**、**环境光** | 数值 | %，100 | 端口；不支持 SBrick、BuWizz 或 WeDo 2.0 |
+| **色调** | 数值 | °，360 | 端口；Technic 颜色传感器或 BOOST 颜色和距离传感器；不支持 SBrick、BuWizz 或 WeDo 2.0 |
+| **饱和度**、**颜色亮度** | 数值 | %，100 | 端口；同色调 |
 | **倾斜传感器俯仰 / 滚转** | 数值 | °，45 | 端口；WeDo 2.0 / BOOST 倾斜传感器；不支持 SBrick 或 BuWizz |
 | **功率模式** | 数值 | 1–4，4 | BuWizz 2.0 |
 | **已连接** | 开/关 | | 所有集线器 |

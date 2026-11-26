@@ -40,6 +40,7 @@ Geeft de temperatuur van de elektronica van de hub terug, in graden Celsius.
 - Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… stroom (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Geeft de totale stroom terug die de hub opneemt, in milliampère.
 
 - Hubs: Technic Hub.
@@ -95,6 +96,7 @@ Geeft de versnelling van de hub langs één as terug.
 - Assen: `x`, `y`, `z`
 
 ### `… … draaisnelheid (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Geeft terug hoe snel de hub om één as draait, in graden per seconde (van de gyroscoop van de hub).
 
 - Assen: `x`, `y`, `z`. `z` is draaien op de plaats (positief = naar links als de hub plat ligt); `x` en `y` zijn rol en helling.

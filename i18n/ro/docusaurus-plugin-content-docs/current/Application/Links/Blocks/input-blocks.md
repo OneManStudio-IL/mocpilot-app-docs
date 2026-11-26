@@ -170,6 +170,8 @@ Valoarea unui senzor circulă de-a lungul rândului împărțită la scala compl
 | **Înclinare: ruliu** | valoare | °, 180 | huburile cu senzor de înclinare |
 | **Înclinare: girație** | valoare | °, 180 | huburile cu axă de girație |
 | **Accelerație X / Y / Z** | valoare | m/s², 19,6 | huburile cu accelerometru |
+| **Viteza de rotație X / Y / Z** | valoare | °/s, 360 | huburile cu giroscop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Curentul hubului** | valoare | mA, 3000 | Technic Hub |
 | **Viteza motorului** | valoare | %, 100 | port; toate huburile cu porturi |
 | **Unghiul motorului** | valoare | °, 360 (relativ) | port; motoare cu encoder; nu SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Poziția motorului** | valoare | °, 180 (absolut) | port; motoare unghiulare |
@@ -178,6 +180,8 @@ Valoarea unui senzor circulă de-a lungul rândului împărțită la scala compl
 | **Senzor de distanță** | valoare | 250 | port; nu SBrick sau BuWizz |
 | **Senzor de culoare** | valoare | numărul culorii, 10 | port; nu SBrick, BuWizz sau WeDo 2.0 |
 | **Lumină reflectată**, **Lumină ambientală** | valoare | %, 100 | port; nu SBrick, BuWizz sau WeDo 2.0 |
+| **Nuanța culorii** | valoare | °, 360 | port; senzorul de culoare Technic sau senzorul de culoare și distanță BOOST; nu SBrick, BuWizz sau WeDo 2.0 |
+| **Saturația culorii**, **Luminozitatea culorii** | valoare | %, 100 | port; ca Nuanța culorii |
 | **Senzor de înclinare: tangaj / ruliu** | valoare | °, 45 | port; senzorul de înclinare WeDo 2.0 / BOOST; nu SBrick sau BuWizz |
 | **Mod de putere** | valoare | 1–4, 4 | BuWizz 2.0 |
 | **Conectat** | pornit/oprit | | toate huburile |

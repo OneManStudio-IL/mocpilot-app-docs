@@ -14,7 +14,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - hubin nimen ja **yhteyspisteen** (yhdistetty vai ei);
 - **portit** valintapaloina: A, B, C, D… LEGO®-hubeissa ja SBrickissä (A–F Robot Inventorissa ja Mould King 6.0:ssa), 1–4 BuWizz 2.0:ssa, 1–4 sekä A ja B BuWizz 3.0 Prossa;
-- alaotsikon: ”portit A, B”, ”valitse portit”, ”koko hubi” (koko hubin toiminnon jälkeen) tai ”ajo, ohjaus, valot” (Technic Move).
+- alaotsikon: ”portit A, B”, ”valitse portit”, ”koko hubi” (koko hubin toiminnon jälkeen) tai ”ajo, ohjaus, valot” (Technic Move **Autoprofiili**-tilassa).
 
 ## Valitse portit {#choose-ports}
 
@@ -44,14 +44,18 @@ Kun hubi on yhdistetty, MOCPilot tietää, mitä kuhunkin porttiin on kytketty, 
 | ”Portti A ottaa vastaan vain yksinkertaisia nopeuskomentoja: ei asennon ohjausta” | tämä portti ei pysty ohjaamaan asentoa |
 | ”Portissa A ei ole LEDiä: käytä portteja 1-4” | Portin väri toimii vain BuWizz 3.0 Pron porteissa 1–4 |
 | ”Anturin valot: valitse yksi portti, se jossa on etäisyysanturi” | Anturin valot ottaa täsmälleen yhden portin |
+| ”Portti A: siinä ei ole värintunnistinta” | Värianturin valot sekä värisävyn, värikylläisyyden ja värin kirkkauden syötteet tarvitsevat portissa värianturin |
 
 Toimintoja, joihin hubi ei pysty, ei tarjota sille. Jos vaihdat rivin toiseen hubiin, rivi kertoo, mikä toiminto ei sovi, esimerkiksi ”Jarru: vain Technic Move (…: ei jarrukomentoa)”.
 
 ## Technic Move Hub {#technic-move-hub}
 
-Technic Move Hubia (LEGO® Technic -kauko-ohjattavissa autoissa) ohjataan toiminnoittain, ei porteittain: sen Hubi-lohkossa lukee **ajo, ohjaus, valot**, eikä se ota portteja. Aja **Moottori**- tai **Moottori ajan** -toiminnolla, ohjaa **Servolla**, sytytä valot **Valolla** ja käytä erikoistoimintoihin **Jarrua**, **Boostia** ja **Tehopulssia**.
+Technic Move Hubia (LEGO® Technic -kauko-ohjattavissa autoissa) voi ohjata kahdella tavalla. Valitse tapa Hubi-lohkon ikkunan **Ohjaus**-asetuksella: **Autoprofiili** (oletus) tai **Portit**. Valinta kuuluu hubille, joten kaikki saman hubin Hubi-lohkot käyttävät samaa valintaa.
 
-Ajoa, ohjausta, valoja, jarrua ja boostia voi kutakin käyttää vain yksi rivi (”Rivi 2 ohjaa jo tämän Technic Moven toimintoa: ajo”).
+- **Autoprofiili**: hubia ohjataan toiminnoittain, ei porteittain. Sen Hubi-lohkossa lukee **ajo, ohjaus, valot**, eikä se ota portteja. Aja **Moottori**- tai **Moottori ajan** -toiminnolla, ohjaa **Servolla**, sytytä valot **Valolla** ja käytä erikoistoimintoihin **Jarrua**, **Boostia** ja **Tehopulssia**. Ajoa, ohjausta, valoja, jarrua ja boostia voi kutakin käyttää vain yksi rivi (”Rivi 2 ohjaa jo tämän Technic Moven toimintoa: ajo”).
+- **Portit**: hubi toimii kuten muut hubit, joissa on portteja. Sen moottorit ovat portit `A`, `B` (ajomoottorit) ja `C` (ohjausmoottori): **Moottori**, **Moottori ajan**, **Servo** (portissa `C` **Auto**-kalibroinnilla), **Pyöritä asteina**, **Siirry asentoon**, **Pysähtyessä** ja **Hubin kiihdytys** toimivat niissä. Sen kuusi valoa ovat **Valo**-rivien portit `1`–`6`. [Hubi-syöte](/docs/Application/Links/Blocks/InputBlocks#src-hub) lukee moottorien nopeuden ja kulman. **Jarru**, **Boost** ja **Tehopulssi** toimivat vain **Autoprofiili**-tilassa.
+
+Rivi, joka ei sovi hubin tilaan, on ongelma, joka kertoo, mitä vaihtaa: ”… ohjataan autoprofiililla: vaihda hub tilaan ”Portit” tätä varten” tai ”… ohjataan portti kerrallaan: vaihda hub tilaan ”Autoprofiili” tätä varten”. Ennen tätä valintaa tehdyt profiilit avautuvat **Autoprofiili**-tilassa.
 
 Auton kokoonpanon (Porsche, Lamborghini, Batmobile) voi ladata hubiin kohdasta **Omat hubit → Valitse kokoonpano**. Katso [Technic Move Hubin kokoonpanot](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

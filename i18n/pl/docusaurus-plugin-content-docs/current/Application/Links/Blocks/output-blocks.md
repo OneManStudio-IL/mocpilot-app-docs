@@ -27,7 +27,7 @@ Obraca silnik zgodnie z wartością wejścia: im dalej wychylisz, tym szybciej; 
 - **Przy zatrzymaniu**: **Domyślne huba** (domyślnie), **Toczenie**, **Hamulec** lub **Utrzymaj pozycję**.
 - **Przyspieszenie huba**: **Domyślne huba** (domyślnie), **Szybko**, **Zrównoważone**, **Wygładzanie**, **Wolno** lub **Bardzo wolno**: własna rampa huba. Aby ustawić własną rampę, użyj bloku [Wygładzanie](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Wykrywanie zablokowania**: **Domyślne huba** (domyślnie), **Wł.** lub **Wył.**
-- Huby: dowolny hub z portami. **Przy zatrzymaniu** i **Przyspieszenie huba** wymagają huba ze sterowaniem pozycją (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King); **Wykrywanie zablokowania** wymaga Robot Inventor. W Technic Move Hub operacja Silnik napędza samochód.
+- Huby: dowolny hub z portami. **Przy zatrzymaniu** i **Przyspieszenie huba** wymagają huba ze sterowaniem pozycją (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King); **Wykrywanie zablokowania** wymaga Robot Inventor. W Technic Move Hub operacja Silnik w trybie **Profil samochodu** napędza samochód, a w trybie **Porty** steruje silnikami `A`–`C` ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Serwo {#op-servo}
 
@@ -40,7 +40,7 @@ Skręca za pomocą silnika z enkoderem: wejście −1…1 obraca silnik do pozyc
 - **Prędkość obrotu**: 25, 50, 75 lub 100 % (domyślnie 100 %).
 - Ręczna: zero to położenie silnika w chwili włączenia albo pozycja ustawiona przyciskiem **Ustaw jako zero** (wcześniej dostrój ją za pomocą **◀ 5°** / **5° ▶**).
 - Auto: przy każdym uruchomieniu silnik obraca się do obu ograniczników; środek staje się zerem, a zakres ruchu — kątem. **Kalibruj teraz** uruchamia kalibrację od razu. Układ kierowniczy musi mieć ograniczniki.
-- Huby i porty: silnik z enkoderem w hubie ze sterowaniem pozycją (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King). W Technic Move Hub operacja Serwo obraca zębatkę skrętu huba, którą hub kalibruje sam.
+- Huby i porty: silnik z enkoderem w hubie ze sterowaniem pozycją (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King). W Technic Move Hub w trybie **Profil samochodu** operacja Serwo obraca zębatkę skrętu huba, którą hub kalibruje sam; w trybie **Porty** użyj portu `C` z kalibracją **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Ustawienia bloku Serwo" width={900} />
 
@@ -50,7 +50,7 @@ Obraca silnik przez ustalony czas za każdym razem, gdy wejście się włącza. 
 
 - Przyjmuje: wartość lub wł./wył.
 - **Czas**: 0,5, 1, 2, 3, 5 lub 10 s (domyślnie 1 s).
-- Huby: dowolny hub z portami; w Technic Move Hub napędza samochód.
+- Huby: dowolny hub z portami; w Technic Move Hub w trybie **Profil samochodu** napędza samochód.
 
 ### Obrót o stopnie {#op-degrees}
 
@@ -79,7 +79,7 @@ Steruje światłami LEGO® na porcie.
 - **Jasność**: 25, 50, 75 lub 100 % (domyślnie 100 %).
 - **Miganie: wł.**: **Bez migania** (domyślnie), 0,25, 0,5, 1 lub 2 s: jak długo światło świeci w każdym mignięciu.
 - **Miganie: wył.**: **Jak wł.** (domyślnie), 0,25, 0,5, 1 lub 2 s: jak długo pozostaje zgaszone.
-- Huby: dowolny hub z portami z wyjątkiem WeDo 2.0. W Technic Move Hub operacja Światło włącza światła samochodu.
+- Huby: dowolny hub z portami z wyjątkiem WeDo 2.0. W Technic Move Hub operacja Światło w trybie **Profil samochodu** włącza światła samochodu, a w trybie **Porty** — światła `1`–`6` pojedynczo.
 
 ### Kolor portu {#op-portcolor}
 
@@ -98,7 +98,17 @@ Zapala cztery segmenty wokół „oczu” czujnika odległości Technic, dopóki
 - Przyjmuje: wartość lub wł./wył.
 - **Światła**: **Wszystkie** (domyślnie), **Góra**, **Dół**, **Lewo**, **Prawo** lub **Przekątna**.
 - **Jasność**: 25, 50, 75 lub 100 % (domyślnie 100 %).
-- Huby i porty: Robot Inventor, jeden port z czujnikiem odległości. Światła gasną, gdy program się zatrzymuje.
+- Huby i porty: Robot Inventor, SPIKE Prime i Technic Hub, jeden port z czujnikiem odległości. Światła gasną, gdy program się zatrzymuje.
+
+### Światła czujnika koloru {#op-colorlights}
+
+Zapala trzy światła wokół soczewki czujnika koloru Technic (czujnika koloru SPIKE), dopóki wejście jest włączone.
+
+- Przyjmuje: wartość lub wł./wył.
+- **Światła**: **Wszystkie** (domyślnie), 1, 2, 3, 1 + 2, 2 + 3 lub 1 + 3.
+- **Jasność**: 25, 50, 75 lub 100 % (domyślnie 100 %).
+- Huby i porty: Technic Hub, port z czujnikiem koloru.
+- Gdy jego światła świecą, czujnik niczego nie mierzy. Gdy wejście się wyłączy lub program się zatrzyma, światła gasną, a czujnik znów mierzy kolory. Wiersz, który odczytuje czujnik koloru na porcie oświetlanym przez inny wiersz, to problem („Wiersz 2 zaświeca czujnik koloru na porcie A: świecący czujnik niczego nie mierzy”).
 
 ## Operacje dla całego huba {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Miejsce, w którym wykonuje się operacja: hub i jego porty. Na każdy hub profi
 
 - **Hub**: hub profilu.
 - **Porty**: jeden lub więcej portów tego huba (A–D w większości hubów i w SBrick, A–F w Robot Inventor i Mould King 6.0, 1–4 w BuWizz 2.0, 1–4 oraz A i B w BuWizz 3.0 Pro). Port może należeć tylko do jednego wiersza.
-- Przyjmuje: operację. Technic Move Hub i operacje dla całego huba nie przyjmują portów.
+- Przyjmuje: operację. Technic Move Hub w trybie **Profil samochodu** i operacje dla całego huba nie przyjmują portów. W trybie **Porty** Technic Move Hub ma porty A–C, a dla operacji **Światło** — światła 1–6.
 - Więcej: [Blok Hub i porty](/docs/Application/Links/HubsAndPorts).
 
 ### Wskaźnik {#dash-indicator}

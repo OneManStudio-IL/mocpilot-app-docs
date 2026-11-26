@@ -27,7 +27,7 @@ Poháňa motor hodnotou vstupu: čím viac zatlačíte, tým rýchlejšie; 0 ho 
 - **Pri zastavení**: **Predvolené hubom** (predvolené), **Dobeh**, **Brzda** alebo **Držať polohu**.
 - **Zrýchlenie hubu**: **Predvolené hubom** (predvolené), **Rýchlo**, **Vyvážene**, **Plynulo**, **Pomaly** alebo **Veľmi pomaly**: vlastná rampa hubu. Pre vlastnú rampu použite [Plynulo](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Detekcia zaseknutia**: **Predvolené hubom** (predvolené), **Zap.** alebo **Vyp.**
-- Huby: ktorýkoľvek hub s portami. **Pri zastavení** a **Zrýchlenie hubu** vyžadujú hub s riadením polohy (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King); **Detekcia zaseknutia** vyžaduje Robot Inventor. Na Technic Move Hube Motor poháňa auto.
+- Huby: ktorýkoľvek hub s portami. **Pri zastavení** a **Zrýchlenie hubu** vyžadujú hub s riadením polohy (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King); **Detekcia zaseknutia** vyžaduje Robot Inventor. Na Technic Move Hube Motor v režime **Profil auta** poháňa auto a v režime **Porty** motory `A`–`C` ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Riadi pomocou motora s enkodérom: vstup −1…1 natočí motor na *stred + hod
 - **Rýchlosť otáčania**: 25, 50, 75 alebo 100 % (predvolené 100 %).
 - Ručne: nula je tam, kde bol motor pri zapnutí, alebo poloha, ktorú nastavíte tlačidlom **Nastaviť ako nulu** (najprv ju doladíte tlačidlami **◀ 5°** / **5° ▶**).
 - Auto: pri každom spustení sa motor otočí k obom koncovým dorazom; stred sa stane nulou a rozsah pohybu uhlom. **Kalibrovať teraz** to spustí okamžite. Riadenie musí mať koncové dorazy.
-- Huby a porty: motor s enkodérom na hube s riadením polohy (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King). Na Technic Move Hube Servo otáča hrebeňom riadenia hubu, ktorý si hub kalibruje sám.
+- Huby a porty: motor s enkodérom na hube s riadením polohy (nie SBrick, BuWizz 2.0, WeDo 2.0 ani Mould King). Na Technic Move Hube v režime **Profil auta** Servo otáča hrebeňom riadenia hubu, ktorý si hub kalibruje sám; v režime **Porty** použite port `C` s kalibráciou **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Nastavenia bloku Servo" width={900} />
 
@@ -50,7 +50,7 @@ Pri každom zapnutí vstupu poháňa motor nastavený čas. Rýchlosť a smer sa
 
 - Prijíma: hodnotu alebo zap./vyp.
 - **Čas**: 0,5, 1, 2, 3, 5 alebo 10 s (predvolené 1 s).
-- Huby: ktorýkoľvek hub s portami; na Technic Move Hube poháňa auto.
+- Huby: ktorýkoľvek hub s portami; na Technic Move Hube v režime **Profil auta** poháňa auto.
 
 ### Otočiť o stupne {#op-degrees}
 
@@ -79,7 +79,7 @@ Ovláda svetlá LEGO® na porte.
 - **Jas**: 25, 50, 75 alebo 100 % (predvolené 100 %).
 - **Blikanie: zap.**: **Bez blikania** (predvolené), 0,25, 0,5, 1 alebo 2 s: ako dlho svetlo pri každom bliknutí svieti.
 - **Blikanie: vyp.**: **Rovnako ako zap.** (predvolené), 0,25, 0,5, 1 alebo 2 s: ako dlho je zhasnuté.
-- Huby: ktorýkoľvek hub s portami okrem WeDo 2.0. Na Technic Move Hube Svetlo zapína svetlá auta.
+- Huby: ktorýkoľvek hub s portami okrem WeDo 2.0. Na Technic Move Hube Svetlo v režime **Profil auta** zapína svetlá auta a v režime **Porty** jednotlivo svetlá `1`–`6`.
 
 ### Farba portu {#op-portcolor}
 
@@ -98,7 +98,17 @@ Kým je vstup zapnutý, rozsvieti štyri segmenty okolo „očí“ senzora vzdi
 - Prijíma: hodnotu alebo zap./vyp.
 - **Svetlá**: **Všetky** (predvolené), **Hore**, **Dole**, **Vľavo**, **Vpravo** alebo **Uhlopriečne**.
 - **Jas**: 25, 50, 75 alebo 100 % (predvolené 100 %).
-- Huby a porty: Robot Inventor, jeden port so senzorom vzdialenosti. Po zastavení programu svetlá zhasnú.
+- Huby a porty: Robot Inventor, SPIKE Prime a Technic Hub, jeden port so senzorom vzdialenosti. Po zastavení programu svetlá zhasnú.
+
+### Svetlá senzora farieb {#op-colorlights}
+
+Rozsvieti tri svetlá okolo šošovky farebného senzora Technic (farebného senzora SPIKE), kým je vstup zapnutý.
+
+- Prijíma: hodnotu alebo zap./vyp.
+- **Svetlá**: **Všetky** (predvolené), 1, 2, 3, 1 + 2, 2 + 3 alebo 1 + 3.
+- **Jas**: 25, 50, 75 alebo 100 % (predvolené 100 %).
+- Huby a porty: Technic Hub, port s farebným senzorom.
+- Kým jeho svetlá svietia, senzor nič nemeria. Keď sa vstup vypne alebo sa program zastaví, svetlá zhasnú a senzor opäť meria farby. Riadok, ktorý číta farebný senzor na porte, ktorý rozsvecuje iný riadok, je problém („Riadok 2 rozsvecuje senzor farieb na porte A: svietiaci senzor nič nemeria“).
 
 ## Operácie pre celý hub {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Kde sa operácia vykoná: hub a jeho porty. Pre každý hub profilu existuje jed
 
 - **Hub**: hub profilu.
 - **Porty**: jeden alebo viac portov daného hubu (A–D na väčšine hubov a na SBrick, A–F na Robot Inventor a Mould King 6.0, 1–4 na BuWizz 2.0, 1–4 a navyše A a B na BuWizz 3.0 Pro). Port môže patriť iba jednému riadku.
-- Prijíma: operáciu. Technic Move Huby a operácie pre celý hub neberú žiadne porty.
+- Prijíma: operáciu. Technic Move Huby v režime **Profil auta** a operácie pre celý hub neberú žiadne porty. V režime **Porty** má Technic Move Hub porty A–C a pre **Svetlo** svetlá 1–6.
 - Viac: [Blok Hub a porty](/docs/Application/Links/HubsAndPorts).
 
 ### Indikátor {#dash-indicator}

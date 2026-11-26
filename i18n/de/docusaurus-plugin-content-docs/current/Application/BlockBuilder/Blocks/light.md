@@ -98,9 +98,11 @@ Legt die Ausrichtung des Bildes auf der Lichtmatrix fest. Standardmäßig ist si
 
 Steuert die Lichter um die „Augen“ des Abstandssensors am ausgewählten Port. Sie können jedes Licht ein- oder ausschalten oder eine Liste in das Eingabefeld setzen, um die Helligkeit jedes Lichts festzulegen.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (der Block trägt das Hub-Symbol).
+- Hubs: [MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub) sowie der Technic Hub (der Block trägt das Robot-Inventor-Hub-Symbol). Der Sensor misst den Abstand weiter, während seine Lichter an sind.
 
 ### `Farbsensor beleuchten 1 … 2 … 3 … %` (Fortgeschritten) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Stellt die Helligkeit der drei Lichter um die Linse des Technic-Farbsensors (des SPIKE-Farbsensors) am ausgewählten Port ein, jeweils von 0 bis 100 %.
 

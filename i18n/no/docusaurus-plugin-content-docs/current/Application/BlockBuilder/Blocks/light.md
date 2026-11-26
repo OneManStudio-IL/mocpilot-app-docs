@@ -98,9 +98,11 @@ Angir orienteringen til bildet på lysmatrisen. Standard er `oppreist`; den nye 
 
 Styrer lysene rundt «øynene» på avstandssensoren på den valgte porten. Du kan slå hvert lys av eller på, eller legge en liste i feltet for å angi lysstyrken til hvert lys.
 
-- Hubber: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blokken har hubikonet).
+- Hubber: [MINDSTORMS Robot Inventor og SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), og Technic Hub (blokken har Robot Inventor-hubikonet). Sensoren fortsetter å måle avstanden mens lysene er på.
 
 ### `tenn fargesensorens lys 1 … 2 … 3 … %` (Avansert) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Angir lysstyrken til de tre lysene rundt linsen på Technic-fargesensoren (SPIKE-fargesensoren) på den valgte porten, fra 0 til 100 % hver.
 

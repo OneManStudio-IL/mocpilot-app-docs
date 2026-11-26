@@ -98,9 +98,11 @@ Imposta l'orientamento dell'immagine sulla matrice di luci. Per impostazione pre
 
 Controlla le luci attorno agli «occhi» del sensore di distanza sulla porta selezionata. Puoi accendere o spegnere ogni luce, oppure inserire una lista nello spazio per impostare la luminosità di ciascuna luce.
 
-- Hub: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (il blocco ha l'icona dell'hub).
+- Hub: [MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), e il Technic Hub (il blocco ha l'icona dell'hub Robot Inventor). Il sensore continua a misurare la distanza mentre le sue luci sono accese.
 
 ### `illumina il sensore di colore 1 … 2 … 3 … %` (Avanzato) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Imposta la luminosità delle tre luci attorno alla lente del Technic Color Sensor (il sensore di colore SPIKE) sulla porta selezionata, da 0 a 100 % ciascuna.
 

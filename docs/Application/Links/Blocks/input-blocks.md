@@ -170,6 +170,8 @@ A sensor value travels along the row divided by its full scale and limited to �
 | **Tilt roll** | value | °, 180 | hubs with a tilt sensor |
 | **Tilt yaw** | value | °, 180 | hubs with a yaw axis |
 | **Acceleration X / Y / Z** | value | m/s², 19.6 | hubs with an accelerometer |
+| **Rotation speed X / Y / Z** | value | °/s, 360 | hubs with a gyroscope: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hub current** | value | mA, 3000 | Technic Hub |
 | **Motor speed** | value | %, 100 | port; all hubs with ports |
 | **Motor angle** | value | °, 360 (relative) | port; motors with an encoder; not SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motor position** | value | °, 180 (absolute) | port; angular motors |
@@ -178,6 +180,8 @@ A sensor value travels along the row divided by its full scale and limited to �
 | **Distance sensor** | value | 250 | port; not SBrick or BuWizz |
 | **Color sensor** | value | colour number, 10 | port; not SBrick, BuWizz or WeDo 2.0 |
 | **Reflected light**, **Ambient light** | value | %, 100 | port; not SBrick, BuWizz or WeDo 2.0 |
+| **Colour hue** | value | °, 360 | port; Technic Color Sensor or BOOST Color & Distance Sensor; not SBrick, BuWizz or WeDo 2.0 |
+| **Colour saturation**, **Colour brightness** | value | %, 100 | port; as Colour hue |
 | **Tilt sensor pitch / roll** | value | °, 45 | port; WeDo 2.0 / BOOST tilt sensor; not SBrick or BuWizz |
 | **Power mode** | value | 1–4, 4 | BuWizz 2.0 |
 | **Connected** | on/off | | all hubs |

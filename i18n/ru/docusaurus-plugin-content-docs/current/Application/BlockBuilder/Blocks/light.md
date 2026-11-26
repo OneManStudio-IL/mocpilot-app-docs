@@ -98,9 +98,11 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Управляет подсветкой вокруг «глаз» датчика расстояния на выбранном порту. Можно включить или выключить каждый огонёк либо вставить в поле список, чтобы задать яркость каждого.
 
-- Хабы: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (на блоке значок хаба).
+- Хабы: [MINDSTORMS Robot Inventor и SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), а также Technic Hub (на блоке значок хаба Robot Inventor). Пока подсветка горит, датчик продолжает измерять расстояние.
 
 ### `подсветить датчик цвета 1 … 2 … 3 … %` (Продвинутый) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Задаёт яркость трёх огоньков вокруг линзы датчика цвета Technic (датчика цвета SPIKE) на выбранном порту — каждого от 0 до 100 %.
 

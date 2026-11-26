@@ -29,7 +29,7 @@ Hub zdalnie sterowanych samochodów LEGO® Technic (Porsche GT4 e-Performance, L
 - **Hamulec**, **Boost** (tryb mocy) i **Impuls mocy** (tylko z konfiguracją Batmobile™ Tumbler).
 - **Konfiguracje huba**: wgraj do huba profil samochodu za pomocą **Moje huby → Wybierz konfigurację**. Zobacz [Konfiguracje Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Bloki logiczne: bloki profilu samochodu (*uruchom silniki*, *ustaw drążek kierowniczy na*, *ustaw hamulec silnika*, *impuls mocy*, *włącz światła*, *ustaw tryb zasilania*) albo zwykłe bloki portów: silniki `A`, `B` (napęd) i `C` (skręt; *skalibruj zębatkę* na `C`, a potem *przejdź do względnej pozycji*), światła `1`–`6` pojedynczo, nachylenie, przyspieszenie i orientacja. Używaj jednego sposobu na hub: oba sterują tymi samymi silnikami i światłami. Zobacz [Silniki → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Szybkie połączenia: własne wiersze huba (jazda, skręt, światła); [Wejście Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) może też odczytywać jego nachylenie i przyspieszenie.
+- Szybkie połączenia: **Sterowanie** w bloku Hub wybiera **Profil samochodu** (wiersze sterują jazdą, skrętem i światłami) albo **Porty** (silniki `A`, `B`, `C` i światła `1`–`6`, jak w innych hubach). Zobacz [Blok Hub i porty → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). [Wejście Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) może też odczytywać jego nachylenie, przyspieszenie i prędkość obrotu.
 
 ## BuWizz 2.0 {#buwizz-20}
 

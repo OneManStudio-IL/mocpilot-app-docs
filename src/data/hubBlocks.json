@@ -86,7 +86,7 @@
   "block_hubs_all_light_light_turn_off": ["BOOST", "CITY", "TECHNIC", "TMOVE", "RI", "SPIKEP", "ESS", "BWZ2", "BWZ3", "SB", "SBP", "MK4", "MK6"],
   "block_hubs_all_light_light_turn_to": ["BOOST", "CITY", "TECHNIC", "TMOVE", "RI", "SPIKEP", "ESS", "BWZ2", "BWZ3", "SB", "SBP", "MK4", "MK6"],
   "block_hubs_all_light_port_color_sensor_light_up": ["TECHNIC"],
-  "block_hubs_all_light_port_distance_sensor_light_up": ["RI", "SPIKEP"],
+  "block_hubs_all_light_port_distance_sensor_light_up": ["TECHNIC", "RI", "SPIKEP"],
   "block_hubs_all_light_rotate_internal_led_matrix_orientation": ["RI", "SPIKEP"],
   "block_hubs_all_light_set_internal_led_matrix_image": ["RI", "SPIKEP"],
   "block_hubs_all_light_set_internal_led_matrix_orientation": ["RI", "SPIKEP"],

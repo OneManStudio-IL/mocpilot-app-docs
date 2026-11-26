@@ -40,6 +40,7 @@ Returnează temperatura electronicii hubului, în grade Celsius.
 - Huburi: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… curent (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Returnează curentul total consumat de hub, în miliamperi.
 
 - Huburi: Technic Hub.
@@ -95,6 +96,7 @@ Returnează accelerația hubului pe o axă.
 - Axe: `x`, `y`, `z`
 
 ### `… … viteză de rotație (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Returnează cât de repede se rotește hubul în jurul unei axe, în grade pe secundă (de la giroscopul hubului).
 
 - Axe: `x`, `y`, `z`. `z` este rotirea pe loc (pozitiv = spre stânga când hubul stă culcat); `x` și `y` sunt ruliul și tangajul.

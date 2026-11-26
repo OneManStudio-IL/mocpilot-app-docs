@@ -29,7 +29,7 @@ Hubben i LEGO® Technics radiostyrda bilar (Porsche GT4 e-Performance, Lamborghi
 - **Broms**, **Boost** (effektläge) och **Effektpuls** (endast med konfigurationen Batmobile™ Tumbler).
 - **Hubbkonfigurationer**: läs in en bilprofil i hubben med **Mina hubbar → Välj konfiguration**. Se [Konfigurationer för Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 - Logikblock: bilprofilblocken (*starta motorer*, *ställ in styrinriktning till*, *ställ in motorbromsen*, *kraftpuls*, *slå på ljusen*, *ställ in strömläge*) eller de vanliga portblocken: motorer `A`, `B` (drivning) och `C` (styrning; *kalibrera kuggstång* på `C`, sedan *gå till relativ position*), lampor `1`–`6` var för sig, lutning, acceleration och orientering. Använd ett sätt per hubb: båda styr samma motorer och lampor. Se [Motorer → Technic Move Hub](/docs/Application/BlockBuilder/Blocks/Motors#technic-move-hub).
-- Snabbkopplingar: hubbens egna rader (körning, styrning, lampor); en [Hubb-ingång](/docs/Application/Links/Blocks/InputBlocks#src-hub) kan också läsa dess lutning och acceleration.
+- Snabbkopplingar: **Styrning** i Hubb-blocket väljer **Bilprofil** (raderna kör, styr och tänder och släcker lamporna) eller **Portar** (motorerna `A`, `B`, `C` och lamporna `1`–`6`, som på de andra hubbarna). Se [Hubbblocket och portar → Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub). En [Hubb-ingång](/docs/Application/Links/Blocks/InputBlocks#src-hub) kan också läsa dess lutning, acceleration och rotationshastighet.
 
 ## BuWizz 2.0 {#buwizz-20}
 

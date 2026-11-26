@@ -27,7 +27,7 @@ Kører motoren med inputtets værdi: Jo længere du skubber, desto hurtigere; 0 
 - **Ved stop**: **Hubbens standard** (standard), **Frihjul**, **Bremse** eller **Hold position**.
 - **Hubacceleration**: **Hubbens standard** (standard), **Hurtig**, **Balanceret**, **Blød**, **Langsom** eller **Meget langsom**: hubbens egen rampe. Til din egen rampe bruger du [Blød](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Blokeringsregistrering**: **Hubbens standard** (standard), **Til** eller **Fra**.
-- Hubs: alle hubs med porte. **Ved stop** og **Hubacceleration** kræver en hub med positionsstyring (ikke SBrick, BuWizz 2.0, WeDo 2.0 eller Mould King); **Blokeringsregistrering** kræver Robot Inventor. På en Technic Move Hub driver Motor bilen.
+- Hubs: alle hubs med porte. **Ved stop** og **Hubacceleration** kræver en hub med positionsstyring (ikke SBrick, BuWizz 2.0, WeDo 2.0 eller Mould King); **Blokeringsregistrering** kræver Robot Inventor. På en Technic Move Hub driver Motor bilen i tilstanden **Bilprofil** og motorerne `A`–`C` i tilstanden **Porte** ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Styrer med en motor, der har encoder: Inputtet −1…1 drejer motoren til *midt
 - **Drejehastighed**: 25, 50, 75 eller 100 % (standard 100 %).
 - Manuel: Nulpunktet er der, hvor motoren stod ved opstart, eller den position, du indstiller med **Sæt som nul** (juster først med **◀ 5°** / **5° ▶**).
 - Auto: Ved hver start drejer motoren til begge endestop; midten bliver nulpunktet, og vandringen bliver vinklen. **Kalibrer nu** kører kalibreringen med det samme. Styringen skal have endestop.
-- Hubs og porte: en motor med encoder på en hub med positionsstyring (ikke SBrick, BuWizz 2.0, WeDo 2.0 eller Mould King). På en Technic Move Hub drejer Servo hubbens tandstang, som hubben selv kalibrerer.
+- Hubs og porte: en motor med encoder på en hub med positionsstyring (ikke SBrick, BuWizz 2.0, WeDo 2.0 eller Mould King). På en Technic Move Hub i tilstanden **Bilprofil** drejer Servo hubbens tandstang, som hubben selv kalibrerer; i tilstanden **Porte** bruger du port `C` med kalibreringen **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Indstillinger for en Servo-blok" width={900} />
 
@@ -50,7 +50,7 @@ Kører motoren i en fast tid, hver gang inputtet slås til. Hastighed og retning
 
 - Modtager: værdi eller til/fra.
 - **Tid**: 0,5, 1, 2, 3, 5 eller 10 s (standard 1 s).
-- Hubs: alle hubs med porte; på en Technic Move Hub driver den bilen.
+- Hubs: alle hubs med porte; på en Technic Move Hub i tilstanden **Bilprofil** driver den bilen.
 
 ### Kør et antal grader {#op-degrees}
 
@@ -79,7 +79,7 @@ Styrer LEGO®-lys på en port.
 - **Lysstyrke**: 25, 50, 75 eller 100 % (standard 100 %).
 - **Blink: til**: **Intet blink** (standard), 0,25, 0,5, 1 eller 2 s: hvor længe lyset er tændt i hvert blink.
 - **Blink: fra**: **Som ved til** (standard), 0,25, 0,5, 1 eller 2 s: hvor længe det er slukket.
-- Hubs: alle hubs med porte undtagen WeDo 2.0. På en Technic Move Hub tænder og slukker Lys bilens lys.
+- Hubs: alle hubs med porte undtagen WeDo 2.0. På en Technic Move Hub tænder og slukker Lys bilens lys i tilstanden **Bilprofil** og lysene `1`–`6` hver for sig i tilstanden **Porte**.
 
 ### Portfarve {#op-portcolor}
 
@@ -98,7 +98,17 @@ Tænder de fire segmenter omkring »øjnene« på Technic-afstandssensoren, mens
 - Modtager: værdi eller til/fra.
 - **Lys**: **Alle** (standard), **Top**, **Bund**, **Venstre**, **Højre** eller **Diagonal**.
 - **Lysstyrke**: 25, 50, 75 eller 100 % (standard 100 %).
-- Hubs og porte: Robot Inventor, én port med afstandssensoren. Lyset slukkes, når programmet stopper.
+- Hubs og porte: Robot Inventor, SPIKE Prime og Technic Hub, én port med afstandssensoren. Lyset slukkes, når programmet stopper.
+
+### Farvesensorens lys {#op-colorlights}
+
+Tænder de tre lys omkring linsen på Technic-farvesensoren (SPIKE-farvesensoren), mens inputtet er til.
+
+- Modtager: værdi eller til/fra.
+- **Lys**: **Alle** (standard), 1, 2, 3, 1 + 2, 2 + 3 eller 1 + 3.
+- **Lysstyrke**: 25, 50, 75 eller 100 % (standard 100 %).
+- Hubs og porte: Technic Hub, porten med farvesensoren.
+- Mens dens lys er tændt, måler sensoren intet. Når inputtet slås fra, eller programmet stopper, slukkes lyset, og sensoren måler farver igen. En række, der læser farvesensoren på en port, hvor en anden række tænder lyset, er et problem (»Række 2 tænder farvesensoren på port A: en tændt sensor måler intet«).
 
 ## Handlinger for hele hubben {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Hvor handlingen sker: en hub og dens porte. Der er én Hub-blok for hver hub i p
 
 - **Hub**: en hub i profilen.
 - **Porte**: en eller flere porte på hubben (A–D på de fleste hubs og på SBrick, A–F på Robot Inventor og Mould King 6.0, 1–4 på BuWizz 2.0, 1–4 samt A og B på BuWizz 3.0 Pro). En port kan kun høre til én række.
-- Modtager: en handling. Technic Move-hubs og handlinger for hele hubben har ingen porte.
+- Modtager: en handling. Technic Move-hubs i tilstanden **Bilprofil** og handlinger for hele hubben har ingen porte. I tilstanden **Porte** har en Technic Move Hub portene A–C og lysene 1–6 til **Lys**.
 - Mere: [Hub-blokken og porte](/docs/Application/Links/HubsAndPorts).
 
 ### Indikator {#dash-indicator}

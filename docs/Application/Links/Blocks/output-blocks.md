@@ -27,7 +27,7 @@ Runs the motor at the input's value: the further you push, the faster; 0 stops i
 - **At stop**: **Hub default** (default), **Coast**, **Brake** or **Hold position**.
 - **Hub acceleration**: **Hub default** (default), **Fast**, **Balanced**, **Smooth**, **Slow** or **Very slow**: the hub's own ramp. For your own ramp, use [Smooth](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Stall detection**: **Hub default** (default), **On** or **Off**.
-- Hubs: any hub with ports. **At stop** and **Hub acceleration** need a hub with position control (not SBrick, BuWizz 2.0, WeDo 2.0 or Mould King); **Stall detection** needs Robot Inventor. On a Technic Move Hub, Motor drives the car.
+- Hubs: any hub with ports. **At stop** and **Hub acceleration** need a hub with position control (not SBrick, BuWizz 2.0, WeDo 2.0 or Mould King); **Stall detection** needs Robot Inventor. On a Technic Move Hub, Motor drives the car in the **Car profile** mode and the motors `A`–`C` in the **Ports** mode ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Steers with a motor that has an encoder: the input −1…1 turns the motor to *
 - **Turn speed**: 25, 50, 75 or 100 % (default 100 %).
 - Manual: the zero is where the motor was at power-on, or the position you set with **Set as zero** (nudge with **◀ 5°** / **5° ▶** first).
 - Auto: at every start the motor turns to both end stops; the middle becomes the zero and the travel becomes the angle. **Calibrate now** runs it at once. The steering must have end stops.
-- Hubs and ports: a motor with an encoder on a hub with position control (not SBrick, BuWizz 2.0, WeDo 2.0 or Mould King). On a Technic Move Hub, Servo turns the hub's steering rack, which the hub calibrates itself.
+- Hubs and ports: a motor with an encoder on a hub with position control (not SBrick, BuWizz 2.0, WeDo 2.0 or Mould King). On a Technic Move Hub in the **Car profile** mode, Servo turns the hub's steering rack, which the hub calibrates itself; in the **Ports** mode, use port `C` with **Auto** calibration.
 
 <Screenshot name="links-servo-settings" alt="Settings of a Servo block" width={900} />
 
@@ -50,7 +50,7 @@ Runs the motor for a set time each time the input turns on. The speed and direct
 
 - Takes: value or on/off.
 - **Time**: 0.5, 1, 2, 3, 5 or 10 s (default 1 s).
-- Hubs: any hub with ports; on a Technic Move Hub it drives the car.
+- Hubs: any hub with ports; on a Technic Move Hub in the **Car profile** mode it drives the car.
 
 ### Run for degrees {#op-degrees}
 
@@ -79,7 +79,7 @@ Drives LEGO® lights on a port.
 - **Brightness**: 25, 50, 75 or 100 % (default 100 %).
 - **Blink: on**: **No blink** (default), 0.25, 0.5, 1 or 2 s: how long the light stays on in each blink.
 - **Blink: off**: **Same as on** (default), 0.25, 0.5, 1 or 2 s: how long it stays off.
-- Hubs: any hub with ports except WeDo 2.0. On a Technic Move Hub, Light switches the car's lights.
+- Hubs: any hub with ports except WeDo 2.0. On a Technic Move Hub, Light switches the car's lights in the **Car profile** mode, and the lights `1`–`6` one by one in the **Ports** mode.
 
 ### Port colour {#op-portcolor}
 
@@ -98,7 +98,17 @@ Lights the four segments around the "eyes" of the Technic distance sensor while 
 - Takes: value or on/off.
 - **Lights**: **All** (default), **Top**, **Bottom**, **Left**, **Right** or **Diagonal**.
 - **Brightness**: 25, 50, 75 or 100 % (default 100 %).
-- Hubs and ports: Robot Inventor, one port with the distance sensor. The lights go off when the program stops.
+- Hubs and ports: Robot Inventor, SPIKE Prime and Technic Hub, one port with the distance sensor. The lights go off when the program stops.
+
+### Colour sensor lights {#op-colorlights}
+
+Lights the three lights around the lens of the Technic Color Sensor (the SPIKE color sensor) while the input is on.
+
+- Takes: value or on/off.
+- **Lights**: **All** (default), 1, 2, 3, 1 + 2, 2 + 3 or 1 + 3.
+- **Brightness**: 25, 50, 75 or 100 % (default 100 %).
+- Hubs and ports: Technic Hub, the port with the colour sensor.
+- While its lights are on, the sensor measures nothing. When the input turns off or the program stops, the lights go off and the sensor measures colours again. A row that reads the colour sensor on a port that another row lights is a problem ("Row 2 lights the colour sensor on port A: a lit sensor measures nothing").
 
 ## Operations for the whole hub
 
@@ -151,7 +161,7 @@ Where the operation happens: a hub and its ports. There is one Hub block per hub
 
 - **Hub**: a hub of the profile.
 - **Ports**: one or more ports of that hub (A–D on most hubs and on SBrick, A–F on Robot Inventor and Mould King 6.0, 1–4 on BuWizz 2.0, 1–4 plus A and B on BuWizz 3.0 Pro). A port can belong to one row only.
-- Takes: an operation. Technic Move Hubs and whole-hub operations take no ports.
+- Takes: an operation. Technic Move Hubs in the **Car profile** mode and whole-hub operations take no ports. In the **Ports** mode a Technic Move Hub has ports A–C, and lights 1–6 for **Light**.
 - More: [Hub block and ports](/docs/Application/Links/HubsAndPorts).
 
 ### Indicator {#dash-indicator}

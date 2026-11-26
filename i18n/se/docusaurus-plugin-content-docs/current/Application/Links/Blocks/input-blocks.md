@@ -170,6 +170,8 @@ Ett sensorvärde går längs raden delat med sin fulla skala och begränsat till
 | **Lutning i sidled** | värde | °, 180 | hubbar med lutningssensor |
 | **Girning (yaw)** | värde | °, 180 | hubbar med girningsaxel |
 | **Acceleration X / Y / Z** | värde | m/s², 19,6 | hubbar med accelerometer |
+| **Rotationshastighet X / Y / Z** | värde | °/s, 360 | hubbar med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hubbens ström** | värde | mA, 3000 | Technic Hub |
 | **Motorhastighet** | värde | %, 100 | port; alla hubbar med portar |
 | **Motorvinkel** | värde | °, 360 (relativ) | port; motorer med pulsgivare; inte SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | värde | °, 180 (absolut) | port; vinkelmotorer |
@@ -178,6 +180,8 @@ Ett sensorvärde går längs raden delat med sin fulla skala och begränsat till
 | **Avståndssensor** | värde | 250 | port; inte SBrick eller BuWizz |
 | **Färgsensor** | värde | färgnummer, 10 | port; inte SBrick, BuWizz eller WeDo 2.0 |
 | **Reflekterat ljus**, **Omgivande ljus** | värde | %, 100 | port; inte SBrick, BuWizz eller WeDo 2.0 |
+| **Färgton** | värde | °, 360 | port; Technic-färgsensor eller BOOST färg- och avståndssensor; inte SBrick, BuWizz eller WeDo 2.0 |
+| **Färgmättnad**, **Färgljusstyrka** | värde | %, 100 | port; som Färgton |
 | **Lutningssensor: framåt / i sidled** | värde | °, 45 | port; lutningssensor för WeDo 2.0 / BOOST; inte SBrick eller BuWizz |
 | **Effektläge** | värde | 1–4, 4 | BuWizz 2.0 |
 | **Ansluten** | på/av | | alla hubbar |

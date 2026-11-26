@@ -98,9 +98,11 @@ Sets the orientation of the picture on the light matrix. It's `upright` by defau
 
 Controls the lights around the "eyes" of the Distance Sensor on the selected port. You can turn each light on or off, or put a list in the slot to set the brightness of each light.
 
-- Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (the block has the hub icon).
+- Hubs: [MINDSTORMS Robot Inventor and SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), and the Technic Hub (the block has the Robot Inventor hub icon). The sensor keeps measuring the distance while its lights are on.
 
 ### `light up colour sensor 1 … 2 … 3 … %` (Advanced) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Sets the brightness of the three lights around the lens of the Technic Color Sensor (the SPIKE color sensor) on the selected port, from 0 to 100 % each.
 

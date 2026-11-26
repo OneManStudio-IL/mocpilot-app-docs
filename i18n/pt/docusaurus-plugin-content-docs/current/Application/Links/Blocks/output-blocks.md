@@ -27,7 +27,7 @@ Aciona o motor com o valor da entrada: quanto mais você empurra, mais rápido; 
 - **Ao parar**: **Padrão do hub** (padrão), **Livre**, **Freio** ou **Manter posição**.
 - **Aceleração do hub**: **Padrão do hub** (padrão), **Rápida**, **Equilibrada**, **Suave**, **Lenta** ou **Muito lenta**: a rampa do próprio hub. Para uma rampa sua, use [Suave](/docs/Application/Links/Blocks/ProcessingBlocks#mod-smooth).
 - **Detecção de travamento**: **Padrão do hub** (padrão), **Ligado** ou **Desligado**.
-- Hubs: qualquer hub com portas. **Ao parar** e **Aceleração do hub** precisam de um hub com controle de posição (não SBrick, BuWizz 2.0, WeDo 2.0 nem Mould King); **Detecção de travamento** precisa do Robot Inventor. Em um Technic Move Hub, Motor controla a tração do carro.
+- Hubs: qualquer hub com portas. **Ao parar** e **Aceleração do hub** precisam de um hub com controle de posição (não SBrick, BuWizz 2.0, WeDo 2.0 nem Mould King); **Detecção de travamento** precisa do Robot Inventor. Em um Technic Move Hub, Motor controla a tração do carro no modo **Perfil de carro** e os motores `A`–`C` no modo **Portas** ([Technic Move Hub](/docs/Application/Links/HubsAndPorts#technic-move-hub)).
 
 ### Servo {#op-servo}
 
@@ -40,7 +40,7 @@ Controla a direção com um motor que tem encoder: a entrada −1…1 gira o mot
 - **Velocidade de giro**: 25, 50, 75 ou 100 % (padrão 100 %).
 - Manual: o zero é onde o motor estava ao ser ligado, ou a posição que você definiu com **Definir como zero** (ajuste antes com **◀ 5°** / **5° ▶**).
 - Auto: a cada início, o motor gira até os dois batentes; o meio vira o zero e o curso vira o ângulo. **Calibrar agora** faz isso imediatamente. A direção precisa ter batentes.
-- Hubs e portas: um motor com encoder em um hub com controle de posição (não SBrick, BuWizz 2.0, WeDo 2.0 nem Mould King). Em um Technic Move Hub, Servo gira a cremalheira de direção do hub, que o próprio hub calibra.
+- Hubs e portas: um motor com encoder em um hub com controle de posição (não SBrick, BuWizz 2.0, WeDo 2.0 nem Mould King). Em um Technic Move Hub no modo **Perfil de carro**, Servo gira a cremalheira de direção do hub, que o próprio hub calibra; no modo **Portas**, use a porta `C` com a calibração **Auto**.
 
 <Screenshot name="links-servo-settings" alt="Configurações de um bloco Servo" width={900} />
 
@@ -50,7 +50,7 @@ Aciona o motor por um tempo definido sempre que a entrada liga. A velocidade e o
 
 - Recebe: valor ou liga/desliga.
 - **Tempo**: 0,5, 1, 2, 3, 5 ou 10 s (padrão 1 s).
-- Hubs: qualquer hub com portas; em um Technic Move Hub, controla a tração do carro.
+- Hubs: qualquer hub com portas; em um Technic Move Hub no modo **Perfil de carro**, controla a tração do carro.
 
 ### Girar por graus {#op-degrees}
 
@@ -79,7 +79,7 @@ Controla luzes LEGO® em uma porta.
 - **Brilho**: 25, 50, 75 ou 100 % (padrão 100 %).
 - **Piscar: ligado**: **Sem piscar** (padrão), 0,25, 0,5, 1 ou 2 s: quanto tempo a luz fica acesa em cada piscada.
 - **Piscar: desligado**: **Igual a ligado** (padrão), 0,25, 0,5, 1 ou 2 s: quanto tempo ela fica apagada.
-- Hubs: qualquer hub com portas, exceto o WeDo 2.0. Em um Technic Move Hub, Luz liga e desliga as luzes do carro.
+- Hubs: qualquer hub com portas, exceto o WeDo 2.0. Em um Technic Move Hub, Luz liga e desliga as luzes do carro no modo **Perfil de carro**, e as luzes `1`–`6` uma a uma no modo **Portas**.
 
 ### Cor da porta {#op-portcolor}
 
@@ -98,7 +98,17 @@ Acende os quatro segmentos em volta dos "olhos" do sensor de distância Technic 
 - Recebe: valor ou liga/desliga.
 - **Luzes**: **Todas** (padrão), **Superior**, **Inferior**, **Esquerda**, **Direita** ou **Diagonal**.
 - **Brilho**: 25, 50, 75 ou 100 % (padrão 100 %).
-- Hubs e portas: Robot Inventor, uma porta com o sensor de distância. As luzes se apagam quando o programa para.
+- Hubs e portas: Robot Inventor, SPIKE Prime e Technic Hub, uma porta com o sensor de distância. As luzes se apagam quando o programa para.
+
+### Luzes do sensor de cor {#op-colorlights}
+
+Acende as três luzes ao redor da lente do sensor de cor Technic (o sensor de cor SPIKE) enquanto a entrada está ligada.
+
+- Recebe: valor ou liga/desliga.
+- **Luzes**: **Todas** (padrão), 1, 2, 3, 1 + 2, 2 + 3 ou 1 + 3.
+- **Brilho**: 25, 50, 75 ou 100 % (padrão 100 %).
+- Hubs e portas: Technic Hub, a porta com o sensor de cor.
+- Enquanto as luzes dele estão acesas, o sensor não mede nada. Quando a entrada desliga ou o programa para, as luzes se apagam e o sensor volta a medir cores. Uma linha que lê o sensor de cor em uma porta que outra linha acende é um problema ("A linha 2 acende o sensor de cor na porta A: um sensor aceso não mede nada").
 
 ## Operações para o hub inteiro {#operations-for-the-whole-hub}
 
@@ -151,7 +161,7 @@ Onde a operação acontece: um hub e as portas dele. Há um bloco Hub para cada 
 
 - **Hub**: um hub do perfil.
 - **Portas**: uma ou mais portas desse hub (A–D na maioria dos hubs e no SBrick, A–F no Robot Inventor e no Mould King 6.0, 1–4 no BuWizz 2.0, 1–4 mais A e B no BuWizz 3.0 Pro). Uma porta só pode pertencer a uma linha.
-- Recebe: uma operação. Os Technic Move Hubs e as operações para o hub inteiro não aceitam portas.
+- Recebe: uma operação. Os Technic Move Hubs no modo **Perfil de carro** e as operações para o hub inteiro não aceitam portas. No modo **Portas**, um Technic Move Hub tem as portas A–C, e as luzes 1–6 para **Luz**.
 - Mais: [Bloco Hub e portas](/docs/Application/Links/HubsAndPorts).
 
 ### Indicador {#dash-indicator}

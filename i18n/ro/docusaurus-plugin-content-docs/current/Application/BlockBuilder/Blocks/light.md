@@ -98,9 +98,11 @@ Setează orientarea imaginii de pe matricea de lumini. Implicit este `vertical`;
 
 Controlează luminile din jurul „ochilor” senzorului de distanță de pe portul selectat. Poți aprinde sau stinge fiecare lumină ori poți pune o listă în câmp pentru a seta luminozitatea fiecărei lumini.
 
-- Huburi: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocul poartă pictograma hubului).
+- Huburi: [MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub), plus Technic Hub (blocul poartă pictograma hubului Robot Inventor). Senzorul continuă să măsoare distanța cât timp luminile lui sunt aprinse.
 
 ### `aprinde senzorul de culoare 1 … 2 … 3 … %` (Avansat) {#block_hubs_all_light_port_color_sensor_light_up}
+
+<img src={useBaseUrl('/img/blocks/block_hubs_all_light_port_color_sensor_light_up.svg')} alt="block_hubs_all_light_port_color_sensor_light_up.svg" />
 
 Setează luminozitatea celor trei lumini din jurul lentilei senzorului de culoare Technic (senzorul de culoare SPIKE) de pe portul selectat, fiecare de la 0 la 100 %.
 

@@ -14,7 +14,7 @@ La sortie [Hub](/docs/Application/Links/Blocks/OutputBlocks#hub-out) termine une
 
 - le nom du hub et un **point de connexion** (connecté ou non) ;
 - les **Ports** sous forme de pastilles : A, B, C, D… sur les hubs LEGO® et le SBrick (A–F sur Robot Inventor et Mould King 6.0), 1–4 sur BuWizz 2.0, 1–4 plus A et B sur BuWizz 3.0 Pro ;
-- un sous-titre : « ports A, B », « choisir les ports », « hub entier » (après une opération sur le hub entier) ou « propulsion, direction, phares » (Technic Move).
+- un sous-titre : « ports A, B », « choisir les ports », « hub entier » (après une opération sur le hub entier) ou « propulsion, direction, phares » (Technic Move en mode **Profil de voiture**).
 
 ## Choisir les ports {#choose-ports}
 
@@ -44,14 +44,18 @@ Lorsque le hub est connecté, MOCPilot sait ce qui est branché sur chaque port 
 | « Le port A n'accepte que des commandes de vitesse simples : pas de contrôle de position » | ce port ne peut pas contrôler de positions |
 | « Le port A n'a pas de LED : utilisez les ports 1-4 » | Couleur du port ne fonctionne que sur les ports 1 à 4 du BuWizz 3.0 Pro |
 | « Lumières du capteur : choisissez un seul port, celui du capteur de distance » | Lumières du capteur prend exactement un port |
+| « Port A : aucun capteur de couleur » | Lumières du capteur de couleur et les entrées teinte, saturation et luminosité de la couleur nécessitent un capteur de couleur sur le port |
 
 Les opérations qu’un hub ne sait pas faire ne sont pas proposées pour lui. Si vous basculez une ligne vers un autre hub, la ligne indique quelle opération ne convient pas, par exemple « Frein : Technic Move uniquement (… n'a pas de commande de frein) ».
 
 ## Technic Move Hub {#technic-move-hub}
 
-Le Technic Move Hub (dans les voitures télécommandées LEGO® Technic) se pilote par fonction, et non par port : son bloc Hub affiche **propulsion, direction, phares** et ne prend pas de ports. Utilisez **Moteur** ou **Moteur temporisé** pour rouler, **Servo** pour diriger, **Lumière** pour les phares, et **Frein**, **Boost** et **Impulsion de puissance** pour les fonctions spéciales.
+Le Technic Move Hub (dans les voitures télécommandées LEGO® Technic) peut se piloter de deux façons. Choisissez-en une avec **Commande** dans la fenêtre du bloc Hub : **Profil de voiture** (par défaut) ou **Ports**. Ce choix appartient au hub : tous les blocs Hub de ce hub utilisent le même.
 
-La propulsion, la direction, les phares, le frein et le boost ne peuvent chacun être utilisés que par une seule ligne (« La ligne 2 pilote déjà ce Technic Move »).
+- **Profil de voiture** : le hub se pilote par fonction, et non par port. Son bloc Hub affiche **propulsion, direction, phares** et ne prend pas de ports. Utilisez **Moteur** ou **Moteur temporisé** pour rouler, **Servo** pour diriger, **Lumière** pour les phares, et **Frein**, **Boost** et **Impulsion de puissance** pour les fonctions spéciales. La propulsion, la direction, les phares, le frein et le boost ne peuvent chacun être utilisés que par une seule ligne (« La ligne 2 pilote déjà ce Technic Move »).
+- **Ports** : le hub fonctionne comme les autres hubs à ports. Ses moteurs sont les ports `A`, `B` (les moteurs de propulsion) et `C` (le moteur de direction) : **Moteur**, **Moteur temporisé**, **Servo** (avec l’étalonnage **Auto** sur `C`), **Tourner de X degrés**, **Aller à la position**, **À l'arrêt** et **Accélération du hub** fonctionnent sur eux. Ses six lumières sont les ports `1`–`6` des lignes **Lumière**. Une [Entrée Hub](/docs/Application/Links/Blocks/InputBlocks#src-hub) lit la vitesse et l’angle des moteurs. **Frein**, **Boost** et **Impulsion de puissance** ne fonctionnent qu’en mode **Profil de voiture**.
+
+Une ligne qui ne convient pas au mode du hub est signalée par un problème qui indique quoi changer : « … est commandé par son profil de voiture : passez le hub sur « Ports » pour cela » ou « … est commandé port par port : passez le hub sur « Profil de voiture » pour cela ». Les profils créés avant l’existence de ce choix s’ouvrent en mode **Profil de voiture**.
 
 Pour charger une configuration de voiture dans le hub (Porsche, Lamborghini, Batmobile), utilisez **Mes hubs → Sélectionner la configuration**. Voir [Configurations du Technic Move Hub](/docs/Application/Hubs/TechnicMoveHubConfigurations).
 

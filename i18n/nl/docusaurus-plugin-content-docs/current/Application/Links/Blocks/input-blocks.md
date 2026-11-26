@@ -170,6 +170,8 @@ Een sensorwaarde gaat door de rij gedeeld door de volle schaal en begrensd tot �
 | **Kanteling roll** | waarde | °, 180 | hubs met een kantelsensor |
 | **Kanteling gier** | waarde | °, 180 | hubs met een gieras |
 | **Versnelling X / Y / Z** | waarde | m/s², 19,6 | hubs met een versnellingsmeter |
+| **Draaisnelheid X / Y / Z** | waarde | °/s, 360 | hubs met een gyroscoop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hubstroom** | waarde | mA, 3000 | Technic Hub |
 | **Motorsnelheid** | waarde | %, 100 | poort; alle hubs met poorten |
 | **Motorhoek** | waarde | °, 360 (relatief) | poort; motoren met encoder; niet SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorpositie** | waarde | °, 180 (absoluut) | poort; hoekmotoren |
@@ -178,6 +180,8 @@ Een sensorwaarde gaat door de rij gedeeld door de volle schaal en begrensd tot �
 | **Afstandssensor** | waarde | 250 | poort; niet SBrick of BuWizz |
 | **Kleursensor** | waarde | kleurnummer, 10 | poort; niet SBrick, BuWizz of WeDo 2.0 |
 | **Weerkaatst licht**, **Omgevingslicht** | waarde | %, 100 | poort; niet SBrick, BuWizz of WeDo 2.0 |
+| **Kleurtint** | waarde | °, 360 | poort; Technic-kleursensor of BOOST-kleur- en afstandssensor; niet SBrick, BuWizz of WeDo 2.0 |
+| **Kleurverzadiging**, **Kleurhelderheid** | waarde | %, 100 | poort; zoals Kleurtint |
 | **Kantelsensor pitch / roll** | waarde | °, 45 | poort; kantelsensor van WeDo 2.0 / BOOST; niet SBrick of BuWizz |
 | **Vermogensmodus** | waarde | 1–4, 4 | BuWizz 2.0 |
 | **Verbonden** | aan/uit | | alle hubs |

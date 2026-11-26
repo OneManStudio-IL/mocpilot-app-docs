@@ -170,6 +170,8 @@ En sensorverdi går videre langs raden delt på full skala og begrenset til −1
 | **Helling roll** | verdi | °, 180 | hubber med helningssensor |
 | **Helling gir** | verdi | °, 180 | hubber med yaw-akse |
 | **Akselerasjon X / Y / Z** | verdi | m/s², 19,6 | hubber med akselerometer |
+| **Rotasjonshastighet X / Y / Z** | verdi | °/s, 360 | hubber med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
+| **Hubstrøm** | verdi | mA, 3000 | Technic Hub |
 | **Motorhastighet** | verdi | %, 100 | port; alle hubber med porter |
 | **Motorvinkel** | verdi | °, 360 (relativ) | port; motorer med enkoder; ikke SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposisjon** | verdi | °, 180 (absolutt) | port; vinkelmotorer |
@@ -178,6 +180,8 @@ En sensorverdi går videre langs raden delt på full skala og begrenset til −1
 | **Avstandssensor** | verdi | 250 | port; ikke SBrick eller BuWizz |
 | **Fargesensor** | verdi | fargenummer, 10 | port; ikke SBrick, BuWizz eller WeDo 2.0 |
 | **Reflektert lys**, **Omgivelseslys** | verdi | %, 100 | port; ikke SBrick, BuWizz eller WeDo 2.0 |
+| **Fargetone** | verdi | °, 360 | port; Technic-fargesensor eller BOOST farge- og avstandssensor; ikke SBrick, BuWizz eller WeDo 2.0 |
+| **Fargemetning**, **Fargelysstyrke** | verdi | %, 100 | port; som Fargetone |
 | **Hellingssensor pitch / roll** | verdi | °, 45 | port; helningssensor for WeDo 2.0 / BOOST; ikke SBrick eller BuWizz |
 | **Effektmodus** | verdi | 1–4, 4 | BuWizz 2.0 |
 | **Tilkoblet** | av/på | | alle hubber |

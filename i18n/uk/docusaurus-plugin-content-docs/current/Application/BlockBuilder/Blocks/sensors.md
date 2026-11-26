@@ -40,6 +40,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - Хаби: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
 
 ### `… струм (мА)` (Гуру) {#block_hubs_all_sensors_hub_current}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Повертає загальний струм, який споживає хаб, у міліамперах.
 
 - Хаби: Technic Hub.
@@ -95,6 +96,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - Осі: `x`, `y`, `z`
 
 ### `… … швидкість обертання (°/с)` (Гуру) {#block_hubs_all_sensors_gyro}
+<img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_gyro.svg')} alt="block_hubs_all_sensors_gyro.svg" />
 Повертає, як швидко хаб обертається навколо однієї осі, у градусах за секунду (за гіроскопом хаба).
 
 - Осі: `x`, `y`, `z`. `z` — поворот на місці (додатне значення — ліворуч, коли хаб лежить пласко); `x` і `y` — крен і тангаж.
