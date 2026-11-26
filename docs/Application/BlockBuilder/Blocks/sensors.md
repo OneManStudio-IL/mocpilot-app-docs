@@ -30,14 +30,20 @@ Returns the hub's battery level, in percent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returns the hub's battery voltage, in volts.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Returns `NaN` when the hub isn't connected.
 
 ### `… temperature (C°)` (Advanced) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Returns the temperature of the hub's electronics, in degrees Celsius.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… current (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Returns the total current the hub draws, in milliamperes.
+
+- Hubs: Technic Hub.
+- Typical use: stop a gripper or a winch when the load rises.
 
 ### `get … output voltage (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Returns the raw accelerometer reading of the hub along one axis.
 Returns the hub's acceleration along one axis.
 
 - Axes: `x`, `y`, `z`
+
+### `… … rotation speed (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Returns how fast the hub turns around one axis, in degrees per second (from the hub's gyroscope).
+
+- Axes: `x`, `y`, `z`. `z` is turning on the spot (positive = to the left when the hub lies flat); `x` and `y` are rolling and pitching.
+- Hubs: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Typical use: keep a vehicle driving straight, notice that a model spins or tips over.
 
 ### `get … orientation as …` (Beginner) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Returns `true` when the ambient light compares with the value as selected.
 
 #### Technic sensor: `raw …` (Beginner) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Returns the raw value of one color channel of the Technic Color Sensor.
+Returns one raw value of the color the sensor sees.
 
-- Channels: `red`, `green`, `blue`
+- Values: `red`, `green`, `blue`, `hue (°)` (0–359), `saturation (%)`, `brightness (%)`
+- Sensors: the Technic Color Sensor and the BOOST Color & Distance Sensor. On the Technic Hub, hue and saturation come from the sensor and brightness is computed from red, green and blue.
+- Typical use: tell apart colors the **color** block doesn't know, or similar shades, by hue.
 
 ### Technic Distance Sensor {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Returns `true` when the distance measured by the BOOST sensor meets the conditio
 
 #### BOOST sensor: `reflected light (%)` (Beginner) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Returns how much light the surface reflects back to the BOOST sensor, in percent.
+Returns how much light the surface reflects back to the BOOST sensor, in percent, in 1 % steps.
+
+- For the raw color (red, green, blue, hue, saturation, brightness) of this sensor, use Technic sensor: **raw …**, which works with it too.
 
 #### BOOST sensor: `reflection …` (Beginner) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

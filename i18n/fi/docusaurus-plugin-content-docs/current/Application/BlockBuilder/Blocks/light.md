@@ -100,6 +100,14 @@ Ohjaa valitussa portissa olevan etäisyysanturin ”silmien” ympärillä olevi
 
 - Hubit: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (lohkossa on hubikuvake).
 
+### `sytytä värisensorin valot 1 … 2 … 3 … %` (Edistynyt) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Asettaa valitussa portissa olevan Technic-värianturin (SPIKE-värianturin) linssin ympärillä olevien kolmen valon kirkkauden, kunkin välillä 0–100 %.
+
+- Hubit: Technic Hub.
+- Kun anturin valot palavat, se ei mittaa: sen väri- ja valoarvot pysyvät ennallaan. Ennen kuin luet anturia uudelleen, käytä samassa portissa lohkoa Technic-anturi: **aseta tila …** (`oletus` tai `ympäristö`). Lohkoeditorin ohjelmatarkistus varoittaa, kun ohjelma sytyttää anturin valot ja lukee anturia ilman **aseta tila** -lohkoa.
+- Tyypillinen käyttö: mallin merkkivalo tai robotin silmät.
+
 ## Robot Inventor -valomatriisi {#robot-inventor-light}
 
 Nämä lohkot tulevat Robot Inventor -sovelluksesta ja toimivat vain [MINDSTORMS Robot Inventor- ja SPIKE Prime -hubien](/docs/Application/Hubs/RobotInventorHub) kanssa. Niissä on hubikuvake. Napauta lohkossa olevaa kuvaa piirtääksesi sen; animaatiolohkoissa se näyttää ensimmäisen kuvan ja kuvien määrän.

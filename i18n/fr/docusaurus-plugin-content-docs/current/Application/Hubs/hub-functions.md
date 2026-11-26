@@ -74,3 +74,5 @@ Ses boutons sont des entrées : vous pouvez donc piloter un modèle avec la tél
 ## Capteurs intégrés {#built-in-sensors}
 
 Le niveau et la tension de la batterie, la température de la carte, l’inclinaison (tangage, roulis, lacet), l’accélération et l’orientation sont disponibles sur les hubs qui en disposent. Réglez **Orientation du hub** (Liens rapides) ou *définir … orientation d'inclinaison à …* (Blocs logiques) selon la façon dont le hub est monté.
+
+Dans les Blocs logiques, les hubs Technic Hub, Technic Move Hub, Robot Inventor et SPIKE Prime indiquent aussi leur vitesse de rotation (gyroscope, *vitesse de rotation (°/s)*), et le Technic Hub indique le courant qu’il consomme (*courant (mA)*). Voir [Capteurs](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

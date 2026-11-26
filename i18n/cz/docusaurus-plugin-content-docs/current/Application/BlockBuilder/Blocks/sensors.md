@@ -34,7 +34,7 @@ Vrací úroveň baterie hubu v procentech.
 
 Vrací napětí baterie hubu ve voltech.
 
-- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Vrací `NaN`, když hub není připojený.
 
 ### `… teplota (C°)` (Pokročilý) {#block_hubs_all_sensors_board_temp}
@@ -43,7 +43,14 @@ Vrací napětí baterie hubu ve voltech.
 
 Vrací teplotu elektroniky hubu ve stupních Celsia.
 
-- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… proud (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+
+Vrací celkový proud, který hub odebírá, v miliampérech.
+
+- Huby: Technic Hub.
+- Typické použití: zastavit chapadlo nebo naviják, když roste zátěž.
 
 ### `získat … výstupní napětí (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 
@@ -107,6 +114,14 @@ Vrací surovou hodnotu akcelerometru hubu v jedné ose.
 Vrací zrychlení hubu v jedné ose.
 
 - Osy: `x`, `y`, `z`
+
+### `… … rychlost otáčení (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+
+Vrací, jak rychle se hub otáčí kolem jedné osy, ve stupních za sekundu (z gyroskopu hubu).
+
+- Osy: `x`, `y`, `z`. `z` je otáčení na místě (kladná hodnota = doleva, když hub leží naplocho); `x` a `y` jsou klonění a klopení.
+- Huby: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Typické použití: udržet vozidlo v přímém směru, poznat, že se model točí nebo převrací.
 
 ### `získat … orientace …` (Začátečník) {#block_hubs_sensors_get_orientation}
 
@@ -206,9 +221,11 @@ Vrací `true`, když okolní světlo vyhovuje zvolenému porovnání s hodnotou.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
 
-Vrací surovou hodnotu jednoho barevného kanálu senzoru barev Technic.
+Vrací jednu surovou hodnotu barvy, kterou senzor vidí.
 
-- Kanály: `červená`, `zelená`, `modrá`
+- Hodnoty: `červená`, `zelená`, `modrá`, `odstín (°)` (0–359), `sytost (%)`, `jas (%)`
+- Senzory: senzor barev Technic a senzor barev a vzdálenosti BOOST. Na Technic Hubu dodává odstín a sytost samotný senzor a jas se počítá z červené, zelené a modré.
+- Typické použití: podle odstínu rozlišit barvy, které blok **barva …** nezná, nebo podobné odstíny.
 
 ### Senzor vzdálenosti Technic {#technic-distance-sensor}
 
@@ -266,7 +283,9 @@ Vrací `true`, když vzdálenost změřená senzorem BOOST splní podmínku.
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
 
-Vrací, kolik světla povrch odráží zpět do senzoru BOOST, v procentech.
+Vrací, kolik světla povrch odráží zpět do senzoru BOOST, v procentech, v krocích po 1 %.
+
+- Pro surovou barvu tohoto senzoru (červená, zelená, modrá, odstín, sytost, jas) použijte blok Senzor Technic: **surová hodnota …**, který funguje i s ním.
 
 #### Senzor BOOST: `odražené světlo …` (Začátečník) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 

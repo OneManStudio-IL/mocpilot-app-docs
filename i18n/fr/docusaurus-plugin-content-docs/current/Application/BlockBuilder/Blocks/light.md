@@ -100,6 +100,14 @@ Commande les lumières autour des « yeux » du capteur de distance branché sur
 
 - Hubs : [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (le bloc porte l’icône du hub).
 
+### `allumer le capteur de couleur 1 … 2 … 3 … %` (Avancé) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Règle la luminosité des trois lumières autour de l’objectif du capteur de couleur Technic (le capteur de couleur SPIKE) branché sur le port sélectionné, de 0 à 100 % chacune.
+
+- Hubs : Technic Hub.
+- Tant que ses lumières sont allumées, le capteur ne mesure pas : ses valeurs de couleur et de lumière restent inchangées. Avant de relire le capteur, utilisez Capteur Technic : **définir le mode sur …** (`par défaut` ou `ambiant`) sur ce port. La vérification du programme dans l’éditeur de blocs signale un programme qui allume le capteur et le lit sans **définir le mode**.
+- Utilisation type : un voyant sur le modèle, ou les yeux d’un robot.
+
 ## Matrice lumineuse Robot Inventor {#robot-inventor-light}
 
 Ces blocs proviennent de l’application Robot Inventor et ne fonctionnent qu’avec les [hubs MINDSTORMS Robot Inventor et SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ils portent l’icône du hub. Touchez l’image d’un bloc pour la dessiner ; dans les blocs d’animation, elle montre la première image et le nombre d’images.

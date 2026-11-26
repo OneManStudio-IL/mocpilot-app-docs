@@ -74,3 +74,5 @@ Its buttons are inputs, so you can drive a model with the physical remote throug
 ## Built-in sensors
 
 Battery level and voltage, board temperature, tilt (pitch, roll, yaw), acceleration and orientation are available on hubs that have them. Set **Hub orientation** (Quick Links) or *set tilt orientation* (Logic Blocks) to match how the hub is mounted.
+
+In Logic Blocks, the Technic Hub, Technic Move Hub, Robot Inventor and SPIKE Prime hubs also report their rotation speed (gyroscope, *rotation speed (°/s)*), and the Technic Hub reports the current it draws (*current (mA)*). See [Sensors](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

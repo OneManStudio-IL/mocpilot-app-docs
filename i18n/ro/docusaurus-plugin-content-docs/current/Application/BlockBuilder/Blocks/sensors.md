@@ -30,14 +30,20 @@ Returnează nivelul bateriei hubului, în procente.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returnează tensiunea bateriei hubului, în volți.
 
-- Huburi: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Huburi: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Returnează `NaN` când hubul nu este conectat.
 
 ### `… temperatură (C°)` (Avansat) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Returnează temperatura electronicii hubului, în grade Celsius.
 
-- Huburi: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Huburi: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… curent (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Returnează curentul total consumat de hub, în miliamperi.
+
+- Huburi: Technic Hub.
+- Utilizare tipică: oprirea unei gheare sau a unui troliu când sarcina crește.
 
 ### `obține … tensiune de ieșire (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Returnează citirea brută a accelerometrului hubului pe o axă.
 Returnează accelerația hubului pe o axă.
 
 - Axe: `x`, `y`, `z`
+
+### `… … viteză de rotație (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Returnează cât de repede se rotește hubul în jurul unei axe, în grade pe secundă (de la giroscopul hubului).
+
+- Axe: `x`, `y`, `z`. `z` este rotirea pe loc (pozitiv = spre stânga când hubul stă culcat); `x` și `y` sunt ruliul și tangajul.
+- Huburi: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Utilizare tipică: menținerea unui vehicul pe direcție dreaptă, observarea faptului că un model se învârte sau se răstoarnă.
 
 ### `obține … orientare …` (Începător) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Returnează `true` când lumina ambientală se compară cu valoarea conform oper
 
 #### Senzor Technic: `valoare brută …` (Începător) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Returnează valoarea brută a unui canal de culoare al senzorului de culoare Technic.
+Returnează o valoare brută a culorii pe care o vede senzorul.
 
-- Canale: `roșu`, `verde`, `albastru`
+- Valori: `roșu`, `verde`, `albastru`, `nuanță (°)` (0–359), `saturație (%)`, `luminozitate (%)`
+- Senzori: senzorul de culoare Technic și senzorul de culoare și distanță BOOST. Pe Technic Hub, nuanța și saturația vin de la senzor, iar luminozitatea este calculată din roșu, verde și albastru.
+- Utilizare tipică: deosebirea după nuanță a culorilor pe care blocul **culoare …** nu le cunoaște sau a tonurilor apropiate.
 
 ### Senzorul de distanță Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Returnează `true` când distanța măsurată de senzorul BOOST îndeplinește c
 
 #### Senzor BOOST: `lumină reflectată (%)` (Începător) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Returnează câtă lumină reflectă suprafața înapoi spre senzorul BOOST, în procente.
+Returnează câtă lumină reflectă suprafața înapoi spre senzorul BOOST, în procente, în pași de 1 %.
+
+- Pentru culoarea brută a acestui senzor (roșu, verde, albastru, nuanță, saturație, luminozitate), folosește blocul Senzor Technic: **valoare brută …**, care funcționează și cu el.
 
 #### Senzor BOOST: `lumină reflectată …` (Începător) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

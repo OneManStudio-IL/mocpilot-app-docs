@@ -30,14 +30,20 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Повертає напругу батареї хаба у вольтах.
 
-- Хаби: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Хаби: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Повертає `NaN`, коли хаб не підключено.
 
 ### `… температура (C°)` (Просунутий) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Повертає температуру електроніки хаба в градусах Цельсія.
 
-- Хаби: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Хаби: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… струм (мА)` (Гуру) {#block_hubs_all_sensors_hub_current}
+Повертає загальний струм, який споживає хаб, у міліамперах.
+
+- Хаби: Technic Hub.
+- Типове застосування: зупинити захоплення або лебідку, коли зростає навантаження.
 
 ### `отримати … вихідна напруга (В)` (Гуру) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Повертає прискорення хаба вздовж однієї осі.
 
 - Осі: `x`, `y`, `z`
+
+### `… … швидкість обертання (°/с)` (Гуру) {#block_hubs_all_sensors_gyro}
+Повертає, як швидко хаб обертається навколо однієї осі, у градусах за секунду (за гіроскопом хаба).
+
+- Осі: `x`, `y`, `z`. `z` — поворот на місці (додатне значення — ліворуч, коли хаб лежить пласко); `x` і `y` — крен і тангаж.
+- Хаби: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Типове застосування: утримувати машину на прямому курсі, помітити, що модель обертається або перекидається.
 
 ### `отримати … орієнтація …` (Початківець) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### Датчик Technic: `сире значення …` (Початківець) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Повертає сире значення одного колірного каналу датчика кольору Technic.
+Повертає одне сире значення кольору, який бачить датчик.
 
-- Канали: `червоний`, `зелений`, `синій`
+- Значення: `червоний`, `зелений`, `синій`, `тон (°)` (0–359), `насиченість (%)`, `яскравість (%)`
+- Датчики: датчик кольору Technic і датчик кольору й відстані BOOST. На Technic Hub тон і насиченість надає сам датчик, а яскравість обчислюється з червоного, зеленого й синього.
+- Типове застосування: розрізняти за тоном кольори, яких не знає блок **колір …**, або схожі відтінки.
 
 ### Датчик відстані Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### Датчик BOOST: `відбите світло (%)` (Початківець) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Повертає, скільки світла поверхня відбиває назад до датчика BOOST, у відсотках.
+Повертає, скільки світла поверхня відбиває назад до датчика BOOST, у відсотках, із кроком 1 %.
+
+- Щоб отримати сирий колір цього датчика (червоний, зелений, синій, тон, насиченість, яскравість), використовуйте блок Датчик Technic: **сире значення …** — він працює і з цим датчиком.
 
 #### Датчик BOOST: `відбите світло …` (Початківець) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

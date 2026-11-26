@@ -74,3 +74,5 @@ Technic、City、BOOST、Technic Move、WeDo 2.0、Robot Inventor 和遥控器�
 ## 内置传感器 {#built-in-sensors}
 
 电池电量和电压、主板温度、倾斜（俯仰、滚转、偏航）、加速度和方向，在具备这些传感器的集线器上可用。请设置**集线器方向**（快速连接）或*设置倾斜方向*（逻辑积木），使其与集线器的安装方式一致。
+
+在逻辑积木中，Technic Hub、Technic Move Hub、Robot Inventor 和 SPIKE Prime 集线器还会报告其旋转速度（陀螺仪，*旋转速度 (°/秒)*），Technic Hub 还会报告其消耗的电流（*电流 (毫安)*）。参见[传感器](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)。

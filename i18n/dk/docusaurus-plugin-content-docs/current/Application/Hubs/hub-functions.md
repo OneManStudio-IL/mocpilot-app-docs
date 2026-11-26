@@ -74,3 +74,5 @@ Dens knapper er input, så du kan køre en model med den fysiske fjernbetjening 
 ## Indbyggede sensorer {#built-in-sensors}
 
 Batteriniveau og -spænding, printkorttemperatur, hældning (pitch, roll, gir), acceleration og orientering er tilgængelige på hubs, der har dem. Indstil **Hubbens orientering** (Hurtige forbindelser) eller *tilt orientering til* (Logikblokke), så den svarer til, hvordan hubben er monteret.
+
+I Logikblokke rapporterer Technic Hub, Technic Move Hub, Robot Inventor og SPIKE Prime også deres rotationshastighed (gyroskop, *rotationshastighed (°/s)*), og Technic Hub rapporterer den strøm, den trækker (*strøm (mA)*). Se [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

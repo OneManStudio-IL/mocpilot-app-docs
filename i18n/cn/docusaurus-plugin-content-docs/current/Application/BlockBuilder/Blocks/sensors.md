@@ -34,7 +34,7 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 返回集线器的电池电压，以伏特为单位。
 
-- 集线器：BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- 集线器：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
 - 集线器未连接时返回 `NaN`。
 
 ### `… 温度 (C°)`（进阶） {#block_hubs_all_sensors_board_temp}
@@ -43,7 +43,14 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 返回集线器电子元件的温度，以摄氏度为单位。
 
-- 集线器：BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
+- 集线器：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
+
+### `… 电流 (毫安)`（大师） {#block_hubs_all_sensors_hub_current}
+
+返回集线器消耗的总电流，以毫安为单位。
+
+- 集线器：Technic Hub。
+- 典型用法：负载升高时让夹爪或绞盘停下。
 
 ### `获取 … 输出电压 (V)`（大师） {#block_hubs_buwizz_sensors_get_output_voltage}
 
@@ -107,6 +114,14 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 返回集线器在某个轴上的加速度。
 
 - 轴：`x`、`y`、`z`
+
+### `… … 旋转速度 (°/秒)`（大师） {#block_hubs_all_sensors_gyro}
+
+返回集线器绕某个轴转动的速度，以度/秒为单位（来自集线器的陀螺仪）。
+
+- 轴：`x`、`y`、`z`。`z` 表示原地转动（集线器平放时，正值 = 向左）；`x` 和 `y` 表示滚转和俯仰。
+- 集线器：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime。
+- 典型用法：让车辆保持直线行驶，察觉模型在打转或翻倒。
 
 ### `获取 … 方向 …`（初学者） {#block_hubs_sensors_get_orientation}
 
@@ -206,9 +221,11 @@ Technic 颜色传感器检测到所选颜色时返回 `true`。
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
 
-返回 Technic 颜色传感器某个颜色通道的原始值。
+返回传感器所见颜色的一个原始值。
 
-- 通道：`红色`、`绿色`、`蓝色`
+- 取值：`红色`、`绿色`、`蓝色`、`色调 (°)`（0–359）、`饱和度 (%)`、`亮度 (%)`
+- 传感器：Technic 颜色传感器和 BOOST 颜色与距离传感器。在 Technic Hub 上，色调和饱和度来自传感器，亮度则由红、绿、蓝计算得出。
+- 典型用法：按色调区分**颜色**积木不认识的颜色或相近的色度。
 
 ### Technic 距离传感器 {#technic-distance-sensor}
 
@@ -266,7 +283,9 @@ BOOST 传感器测得的距离满足条件时返回 `true`。
 
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
 
-返回表面反射回 BOOST 传感器的光量，以百分比表示。
+返回表面反射回 BOOST 传感器的光量，以百分比表示，步长为 1 %。
+
+- 如需获取此传感器的原始颜色（红、绿、蓝、色调、饱和度、亮度），请使用 Technic 传感器：**原始值 …**，它同样适用于此传感器。
 
 #### BOOST 传感器：`反射光 …`（初学者） {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 

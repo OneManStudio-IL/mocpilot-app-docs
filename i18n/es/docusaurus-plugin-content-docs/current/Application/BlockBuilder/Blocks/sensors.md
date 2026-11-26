@@ -30,14 +30,20 @@ Devuelve el nivel de batería del hub, en porcentaje.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Devuelve el voltaje de la batería del hub, en voltios.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Devuelve `NaN` cuando el hub no está conectado.
 
 ### `… temperatura (C°)` (Avanzado) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Devuelve la temperatura de la electrónica del hub, en grados Celsius.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… corriente (mA)` (Gurú) {#block_hubs_all_sensors_hub_current}
+Devuelve la corriente total que consume el hub, en miliamperios.
+
+- Hubs: Technic Hub.
+- Uso típico: detener una pinza o un cabrestante cuando aumenta la carga.
 
 ### `obtener … voltaje de salida (V)` (Gurú) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Devuelve la lectura en bruto del acelerómetro del hub en un eje.
 Devuelve la aceleración del hub en un eje.
 
 - Ejes: `x`, `y`, `z`
+
+### `… … velocidad de giro (°/s)` (Gurú) {#block_hubs_all_sensors_gyro}
+Devuelve lo rápido que gira el hub alrededor de un eje, en grados por segundo (según el giroscopio del hub).
+
+- Ejes: `x`, `y`, `z`. `z` es el giro sobre sí mismo (positivo = hacia la izquierda con el hub en plano); `x` e `y` son el balanceo y el cabeceo.
+- Hubs: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Uso típico: mantener un vehículo en línea recta, detectar que un modelo gira sobre sí mismo o vuelca.
 
 ### `obtener … orientación …` (Principiante) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Devuelve `true` cuando la luz ambiental cumple la comparación seleccionada con 
 
 #### Sensor Technic: `valor crudo …` (Principiante) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Devuelve el valor en bruto de un canal de color del sensor de color Technic.
+Devuelve un valor en bruto del color que ve el sensor.
 
-- Canales: `rojo`, `verde`, `azul`
+- Valores: `rojo`, `verde`, `azul`, `tono (°)` (0–359), `saturación (%)`, `brillo (%)`
+- Sensores: el sensor de color Technic y el sensor de color y distancia BOOST. En el Technic Hub, el tono y la saturación vienen del sensor y el brillo se calcula a partir del rojo, el verde y el azul.
+- Uso típico: distinguir por el tono colores que el bloque **color** no conoce, o matices parecidos.
 
 ### Sensor de distancia Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Devuelve `true` cuando la distancia que mide el sensor BOOST cumple la condició
 
 #### Sensor BOOST: `luz reflejada (%)` (Principiante) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Devuelve cuánta luz refleja la superficie hacia el sensor BOOST, en porcentaje.
+Devuelve cuánta luz refleja la superficie hacia el sensor BOOST, en porcentaje, en pasos de 1 %.
+
+- Para el color en bruto (rojo, verde, azul, tono, saturación, brillo) de este sensor, usa Sensor Technic: **valor crudo …**, que también funciona con él.
 
 #### Sensor BOOST: `luz reflejada …` (Principiante) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

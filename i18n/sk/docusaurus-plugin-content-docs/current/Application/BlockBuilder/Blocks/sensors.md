@@ -30,14 +30,20 @@ Vráti úroveň batérie hubu v percentách.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Vráti napätie batérie hubu vo voltoch.
 
-- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Vráti `NaN`, keď hub nie je pripojený.
 
 ### `… teplota (C°)` (Pokročilý) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Vráti teplotu elektroniky hubu v stupňoch Celzia.
 
-- Huby: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… prúd (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Vráti celkový prúd, ktorý hub odoberá, v miliampéroch.
+
+- Huby: Technic Hub.
+- Typické použitie: zastaviť chápadlo alebo navijak, keď rastie záťaž.
 
 ### `získať … výstupné napätie (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Vráti surový údaj akcelerometra hubu v jednej osi.
 Vráti zrýchlenie hubu v jednej osi.
 
 - Osi: `x`, `y`, `z`
+
+### `… … rýchlosť otáčania (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Vráti, ako rýchlo sa hub otáča okolo jednej osi, v stupňoch za sekundu (z gyroskopu hubu).
+
+- Osi: `x`, `y`, `z`. `z` je otáčanie na mieste (kladná hodnota = doľava, keď hub leží naplocho); `x` a `y` sú náklon a klonenie.
+- Huby: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Typické použitie: udržať vozidlo v priamom smere, zistiť, že sa model točí alebo prevracia.
 
 ### `získať … orientácia …` (Začiatočník) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Vráti `true`, keď okolité svetlo zodpovedá zvolenému porovnaniu s hodnotou.
 
 #### Senzor Technic: `surová hodnota …` (Začiatočník) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Vráti surovú hodnotu jedného farebného kanála farebného senzora Technic.
+Vráti jednu surovú hodnotu farby, ktorú senzor vidí.
 
-- Kanály: `červená`, `zelená`, `modrá`
+- Hodnoty: `červená`, `zelená`, `modrá`, `odtieň (°)` (0–359), `sýtosť (%)`, `jas (%)`
+- Senzory: farebný senzor Technic a senzor farby a vzdialenosti BOOST. Na Technic Hube dodáva odtieň a sýtosť samotný senzor a jas sa počíta z červenej, zelenej a modrej.
+- Typické použitie: podľa odtieňa rozlíšiť farby, ktoré blok **farba …** nepozná, alebo podobné odtiene.
 
 ### Senzor vzdialenosti Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Vráti `true`, keď vzdialenosť nameraná senzorom BOOST splní podmienku.
 
 #### Senzor BOOST: `odrazené svetlo (%)` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Vráti, koľko svetla povrch odráža späť do senzora BOOST, v percentách.
+Vráti, koľko svetla povrch odráža späť do senzora BOOST, v percentách, v krokoch po 1 %.
+
+- Pre surovú farbu tohto senzora (červená, zelená, modrá, odtieň, sýtosť, jas) použite blok Senzor Technic: **surová hodnota …**, ktorý funguje aj s ním.
 
 #### Senzor BOOST: `odrazené svetlo …` (Začiatočník) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

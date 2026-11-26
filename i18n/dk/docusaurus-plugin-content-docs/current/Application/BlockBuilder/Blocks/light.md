@@ -100,6 +100,14 @@ Styrer lysene omkring »øjnene« på afstandssensoren på den valgte port. Du k
 
 - Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blokken har hub-ikonet).
 
+### `tænd farvesensorens lys 1 … 2 … 3 … %` (Avanceret) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Indstiller lysstyrken for de tre lys omkring linsen på Technic-farvesensoren (SPIKE-farvesensoren) på den valgte port, fra 0 til 100 % hver.
+
+- Hubs: Technic Hub.
+- Mens dens lys er tændt, måler sensoren ikke: Dens farve- og lysværdier forbliver, som de var. Før du læser sensoren igen, skal du bruge Technic-sensor: **indstil tilstand til …** (`standard` eller `omgivende`) på den port. Programkontrollen i blokeditoren advarer, når et program tænder sensorens lys og læser den uden **indstil tilstand**.
+- Typisk brug: et signallys på modellen eller øjnene på en robot.
+
 ## Robot Inventor-lysmatrix {#robot-inventor-light}
 
 Disse blokke kommer fra Robot Inventor-appen og virker kun med [hubbene fra MINDSTORMS Robot Inventor og SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). De har hub-ikonet. Tryk på billedet i en blok for at tegne det; i animationsblokkene viser det det første billede og antallet af billeder.

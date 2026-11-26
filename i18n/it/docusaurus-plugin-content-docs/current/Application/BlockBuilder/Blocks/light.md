@@ -100,6 +100,14 @@ Controlla le luci attorno agli «occhi» del sensore di distanza sulla porta sel
 
 - Hub: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (il blocco ha l'icona dell'hub).
 
+### `illumina il sensore di colore 1 … 2 … 3 … %` (Avanzato) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Imposta la luminosità delle tre luci attorno alla lente del Technic Color Sensor (il sensore di colore SPIKE) sulla porta selezionata, da 0 a 100 % ciascuna.
+
+- Hub: Technic Hub.
+- Mentre le sue luci sono accese, il sensore non misura: i suoi valori di colore e di luce restano quelli di prima. Prima di leggere di nuovo il sensore, usa Sensore Technic: **imposta modalità su …** (`predefinito` o `ambiente`) su quella porta. Il controllo del programma nell'editor dei blocchi avvisa quando un programma accende il sensore e lo legge senza **imposta modalità**.
+- Uso tipico: una luce di segnalazione sul modello, o gli occhi di un robot.
+
 ## Matrice di luci Robot Inventor {#robot-inventor-light}
 
 Questi blocchi provengono dall'app Robot Inventor e funzionano solo con gli [hub MINDSTORMS Robot Inventor e SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Hanno l'icona dell'hub. Tocca l'immagine in un blocco per disegnarla; nei blocchi di animazione mostra il primo fotogramma e il numero di fotogrammi.

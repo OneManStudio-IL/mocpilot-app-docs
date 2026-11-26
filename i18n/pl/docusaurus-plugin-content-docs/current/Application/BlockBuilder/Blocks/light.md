@@ -100,6 +100,14 @@ Steruje światłami wokół „oczu” czujnika odległości na wybranym porcie.
 
 - Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok ma ikonę huba).
 
+### `podświetl czujnik koloru 1 … 2 … 3 … %` (Zaawansowany) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Ustawia jasność trzech świateł wokół soczewki czujnika koloru Technic (czujnika koloru SPIKE) na wybranym porcie, każdego od 0 do 100 %.
+
+- Huby: Technic Hub.
+- Gdy jego światła świecą, czujnik nie mierzy: jego wartości koloru i światła pozostają takie, jakie były. Zanim ponownie odczytasz czujnik, użyj na tym porcie bloku Czujnik Technic: **ustaw tryb na …** (`domyślny` lub `otoczenie`). Sprawdzanie programu w edytorze bloków ostrzega, gdy program podświetla czujnik i odczytuje go bez bloku **ustaw tryb na …**.
+- Typowe zastosowanie: lampka sygnalizacyjna w modelu lub oczy robota.
+
 ## Matryca świetlna Robot Inventor {#robot-inventor-light}
 
 Te bloki pochodzą z aplikacji Robot Inventor i działają tylko z [hubami MINDSTORMS Robot Inventor i SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Mają ikonę huba. Dotknij obrazu w bloku, aby go narysować; w blokach animacji pokazuje on pierwszą klatkę i liczbę klatek.

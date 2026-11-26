@@ -30,14 +30,20 @@ Renvoie le niveau de batterie du hub, en pourcentage.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Renvoie la tension de la batterie du hub, en volts.
 
-- Hubs : BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs : Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Renvoie `NaN` lorsque le hub n’est pas connecté.
 
 ### `… température (C°)` (Avancé) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Renvoie la température de l’électronique du hub, en degrés Celsius.
 
-- Hubs : BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubs : Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… courant (mA)` (Gourou) {#block_hubs_all_sensors_hub_current}
+Renvoie le courant total consommé par le hub, en milliampères.
+
+- Hubs : Technic Hub.
+- Utilisation type : arrêter une pince ou un treuil quand la charge augmente.
 
 ### `obtenir … tension de sortie (V)` (Gourou) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Renvoie la mesure brute de l’accéléromètre du hub sur un axe.
 Renvoie l’accélération du hub sur un axe.
 
 - Axes : `x`, `y`, `z`
+
+### `… … vitesse de rotation (°/s)` (Gourou) {#block_hubs_all_sensors_gyro}
+Renvoie la vitesse à laquelle le hub tourne autour d’un axe, en degrés par seconde (d’après le gyroscope du hub).
+
+- Axes : `x`, `y`, `z`. `z` correspond à la rotation sur place (positif = vers la gauche lorsque le hub est posé à plat) ; `x` et `y` correspondent au roulis et au tangage.
+- Hubs : Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Utilisation type : faire rouler un véhicule bien droit, détecter qu’un modèle tourne sur lui-même ou bascule.
 
 ### `obtenir … orientation …` (Débutant) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Renvoie `true` lorsque la lumière ambiante se compare à la valeur selon l’op
 
 #### Capteur Technic : `valeur brute …` (Débutant) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Renvoie la valeur brute d’un canal de couleur du capteur de couleur Technic.
+Renvoie une valeur brute de la couleur vue par le capteur.
 
-- Canaux : `rouge`, `vert`, `bleu`
+- Valeurs : `rouge`, `vert`, `bleu`, `teinte (°)` (0–359), `saturation (%)`, `luminosité (%)`
+- Capteurs : le capteur de couleur Technic et le capteur de couleur et de distance BOOST. Sur le Technic Hub, la teinte et la saturation viennent du capteur, et la luminosité est calculée à partir du rouge, du vert et du bleu.
+- Utilisation type : distinguer par la teinte des couleurs que le bloc **couleur** ne connaît pas, ou des nuances proches.
 
 ### Capteur de distance Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Renvoie `true` lorsque la distance mesurée par le capteur BOOST remplit la cond
 
 #### Capteur BOOST : `lumière réfléchie (%)` (Débutant) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Renvoie la quantité de lumière que la surface renvoie vers le capteur BOOST, en pourcentage.
+Renvoie la quantité de lumière que la surface renvoie vers le capteur BOOST, en pourcentage, par pas de 1 %.
+
+- Pour la couleur brute (rouge, vert, bleu, teinte, saturation, luminosité) de ce capteur, utilisez Capteur Technic : **valeur brute …**, qui fonctionne aussi avec lui.
 
 #### Capteur BOOST : `lumière réfléchie …` (Débutant) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

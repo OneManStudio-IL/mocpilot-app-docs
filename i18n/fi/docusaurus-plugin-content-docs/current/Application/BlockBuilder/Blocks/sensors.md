@@ -30,14 +30,20 @@ Palauttaa hubin akun varaustason prosentteina.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Palauttaa hubin akun jännitteen voltteina.
 
-- Hubit: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubit: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Palauttaa `NaN`, kun hubia ei ole yhdistetty.
 
 ### `… lämpötila (C°)` (Edistynyt) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Palauttaa hubin elektroniikan lämpötilan celsiusasteina.
 
-- Hubit: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubit: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… virta (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Palauttaa hubin ottaman kokonaisvirran milliampeereina.
+
+- Hubit: Technic Hub.
+- Tyypillinen käyttö: pysäytä tarrain tai vinssi, kun kuorma kasvaa.
 
 ### `hanki … ulostulojännite (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Palauttaa hubin kiihtyvyysanturin raakalukeman yhden akselin suunnassa.
 Palauttaa hubin kiihtyvyyden yhden akselin suunnassa.
 
 - Akselit: `x`, `y`, `z`
+
+### `… … pyörimisnopeus (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Palauttaa, kuinka nopeasti hubi kääntyy yhden akselin ympäri, asteina sekunnissa (hubin gyroskoopista).
+
+- Akselit: `x`, `y`, `z`. `z` on kääntyminen paikallaan (positiivinen = vasemmalle, kun hubi on vaakatasossa); `x` ja `y` ovat kallistus ja nyökkäys.
+- Hubit: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Tyypillinen käyttö: pidä ajoneuvo suorassa ajossa, huomaa, että malli pyörii tai kaatuu.
 
 ### `hanki … suunta muodossa …` (Aloittelija) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Palauttaa arvon `true`, kun ympäristön valo on valitussa suhteessa arvoon.
 
 #### Technic-anturi: `raaka arvo …` (Aloittelija) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Palauttaa Technic-värianturin yhden värikanavan raaka-arvon.
+Palauttaa yhden raaka-arvon anturin näkemästä väristä.
 
-- Kanavat: `punainen`, `vihreä`, `sininen`
+- Arvot: `punainen`, `vihreä`, `sininen`, `sävy (°)` (0–359), `kylläisyys (%)`, `kirkkaus (%)`
+- Anturit: Technic-värianturi ja BOOST-väri- ja etäisyysanturi. Technic Hubissa sävy ja kylläisyys tulevat anturilta ja kirkkaus lasketaan punaisesta, vihreästä ja sinisestä.
+- Tyypillinen käyttö: erota toisistaan sävyn perusteella värit, joita **väri**-lohko ei tunne, tai samankaltaiset sävyt.
 
 ### Technic-etäisyysanturi {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Palauttaa arvon `true`, kun BOOST-anturin mittaama etäisyys täyttää ehdon.
 
 #### BOOST-anturi: `heijastunut valo (%)` (Aloittelija) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Palauttaa prosentteina, kuinka paljon valoa pinta heijastaa takaisin BOOST-anturiin.
+Palauttaa prosentteina, 1 %:n askelin, kuinka paljon valoa pinta heijastaa takaisin BOOST-anturiin.
+
+- Tämän anturin raakavärin (punainen, vihreä, sininen, sävy, kylläisyys, kirkkaus) saat lohkolla Technic-anturi: **raaka arvo …**, joka toimii myös sen kanssa.
 
 #### BOOST-anturi: `heijastunut valo …` (Aloittelija) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

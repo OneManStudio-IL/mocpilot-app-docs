@@ -30,14 +30,20 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 ハブのバッテリー電圧をボルトで返します。
 
-- ハブ：BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- ハブ：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
 - ハブが接続されていないときは `NaN` を返します。
 
 ### `… 温度 (C°)` (上級者) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 ハブの電子回路の温度を摂氏で返します。
 
-- ハブ：BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
+- ハブ：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus。
+
+### `… 電流 (mA)` (達人) {#block_hubs_all_sensors_hub_current}
+ハブが消費している電流の合計をミリアンペアで返します。
+
+- ハブ：Technic Hub。
+- 主な用途：負荷が大きくなったらグリッパーやウインチを止める。
 
 ### `取得する … 出力電圧 (V)` (達人) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Technic Move Hub の電源モードを設定します。
 ハブの 1 軸の加速度を返します。
 
 - 軸：`x`、`y`、`z`
+
+### `… … 回転速度 (°/秒)` (達人) {#block_hubs_all_sensors_gyro}
+ハブが 1 軸のまわりを回転する速さを、度毎秒で返します（ハブのジャイロスコープによる値）。
+
+- 軸：`x`、`y`、`z`。`z` はその場での旋回です（ハブを水平に置いたとき、正の値 = 左回り）。`x` と `y` はロールとピッチです。
+- ハブ：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime。
+- 主な用途：車両をまっすぐ走らせる、モデルがスピンしたり倒れたりしたことに気づく。
 
 ### `取得する … 向き …` (初心者) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Technic カラーセンサーが選択した色を検出しているとき、`tr
 
 #### Technic センサー：`生の値 …` (初心者) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Technic カラーセンサーの 1 つの色チャンネルの生の値を返します。
+センサーが見ている色の生の値を 1 つ返します。
 
-- チャンネル：`赤`、`緑`、`青`
+- 値：`赤`、`緑`、`青`、`色相 (°)`（0–359）、`彩度 (%)`、`明るさ (%)`
+- センサー：Technic カラーセンサーと BOOST カラー＆距離センサー。Technic Hub では、色相と彩度はセンサーから得られ、明るさは赤・緑・青から計算されます。
+- 主な用途：**色** ブロックが知らない色や似た色合いを、色相で見分ける。
 
 ### Technic 距離センサー {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ BOOST センサーで測った距離が条件を満たすとき、`true` を返�
 
 #### BOOST センサー：`反射光（％）` (初心者) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-表面が BOOST センサーに反射して返す光の量をパーセントで返します。
+表面が BOOST センサーに反射して返す光の量をパーセント（1 % 刻み）で返します。
+
+- このセンサーの生の色（赤、緑、青、色相、彩度、明るさ）には、Technic センサー：**生の値 …** を使ってください。このセンサーにも使えます。
 
 #### BOOST センサー：`反射光 …` (初心者) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

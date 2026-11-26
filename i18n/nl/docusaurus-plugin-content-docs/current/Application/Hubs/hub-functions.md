@@ -74,3 +74,5 @@ De knoppen zijn ingangen, dus je kunt een model via MOCPilot met de fysieke afst
 ## Ingebouwde sensoren {#built-in-sensors}
 
 Batterijniveau en -spanning, temperatuur van de printplaat, kanteling (pitch, roll, yaw), versnelling en oriëntatie zijn beschikbaar op hubs die ze hebben. Stel **Oriëntatie van de hub** (Snelle koppelingen) of *stel hellingsoriëntatie in* (Logicablokken) zo in dat het overeenkomt met hoe de hub gemonteerd is.
+
+In Logicablokken melden de Technic Hub, Technic Move Hub, Robot Inventor en SPIKE Prime ook hun draaisnelheid (gyroscoop, *draaisnelheid (°/s)*), en de Technic Hub meldt de stroom die hij opneemt (*stroom (mA)*). Zie [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

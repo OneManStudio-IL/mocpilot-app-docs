@@ -74,3 +74,5 @@ Sen painikkeet ovat syötteitä, joten voit ohjata mallia fyysisellä kaukosää
 ## Sisäänrakennetut anturit {#built-in-sensors}
 
 Akun taso ja jännite, piirilevyn lämpötila, kallistus (pituus-, sivu- ja kiertosuunta), kiihtyvyys ja suunta ovat käytettävissä hubeissa, joissa niitä on. Aseta **Hubin suunta** (Pikalinkit) tai *kallistuksen suuntaan* (Logiikkalohkot) vastaamaan sitä, miten hubi on asennettu.
+
+Logiikkalohkoissa Technic Hub, Technic Move Hub, Robot Inventor ja SPIKE Prime ilmoittavat myös pyörimisnopeutensa (gyroskooppi, *pyörimisnopeus (°/s)*), ja Technic Hub ilmoittaa ottamansa virran (*virta (mA)*). Katso [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

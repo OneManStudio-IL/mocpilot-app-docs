@@ -100,6 +100,14 @@ import Screenshot from '@site/src/components/Screenshot';
 
 - 集线器：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（积木带有集线器图标）。
 
+### `点亮颜色传感器 1 … 2 … 3 … %`（进阶） {#block_hubs_all_light_port_color_sensor_light_up}
+
+设置所选端口上 Technic 颜色传感器（SPIKE 颜色传感器）镜头周围三盏灯的亮度，每盏为 0–100 %。
+
+- 集线器：Technic Hub。
+- 灯亮着时，传感器不进行测量：其颜色值和光线值保持不变。再次读取传感器之前，请在该端口上使用 Technic 传感器：**设置模式为 …**（`默认` 或 `环境`）。如果程序点亮了传感器，却没有使用**设置模式**就读取它，积木编辑器中的程序检查会发出警告。
+- 典型用法：模型上的信号灯，或机器人的眼睛。
+
 ## Robot Inventor 灯光点阵 {#robot-inventor-light}
 
 这些积木来自 Robot Inventor 应用，只适用于 [MINDSTORMS Robot Inventor 和 SPIKE Prime 集线器](/docs/Application/Hubs/RobotInventorHub)。它们带有集线器图标。点按积木中的图片即可绘制它；在动画积木中，图片显示第一帧和帧数。

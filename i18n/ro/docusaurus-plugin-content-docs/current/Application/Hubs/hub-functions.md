@@ -74,3 +74,5 @@ Butoanele ei sunt intrări, așa că poți conduce un model cu telecomanda fizic
 ## Senzori încorporați {#built-in-sensors}
 
 Nivelul și tensiunea bateriei, temperatura plăcii, înclinarea (pitch, roll, yaw), accelerația și orientarea sunt disponibile pe huburile care le au. Setează **Orientarea hubului** (Legături rapide) sau *setează … orientare înclinată la* (Blocuri logice) în funcție de cum este montat hubul.
+
+În Blocuri logice, huburile Technic Hub, Technic Move Hub, Robot Inventor și SPIKE Prime raportează și viteza de rotație (giroscop, *viteză de rotație (°/s)*), iar Technic Hub raportează curentul pe care îl consumă (*curent (mA)*). Vezi [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

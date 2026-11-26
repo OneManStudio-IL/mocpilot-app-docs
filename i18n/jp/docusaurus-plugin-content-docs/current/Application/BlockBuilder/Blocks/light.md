@@ -100,6 +100,14 @@ Technic Move Hub のライトを、車のプロフィールを通じてオン／
 
 - ハブ：[MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub)（ブロックにハブのアイコンが付いています）。
 
+### `カラーセンサーを点灯 1 … 2 … 3 … %` (上級者) {#block_hubs_all_light_port_color_sensor_light_up}
+
+選んだポートの Technic カラーセンサー（SPIKE のカラーセンサー）のレンズのまわりにある 3 つのライトの明るさを、それぞれ 0–100 % で設定します。
+
+- ハブ：Technic Hub。
+- ライトが点灯している間、センサーは測定しません。色と光の値は前のままになります。センサーを再び読み取る前に、そのポートで Technic センサー：**モードを設定 …**（`デフォルト` または `環境`）を使ってください。プログラムがセンサーを点灯させ、**モードを設定** を使わずに読み取っていると、ブロックエディターのプログラムチェックが警告を出します。
+- 主な用途：モデルの信号灯や、ロボットの目。
+
 ## Robot Inventor のライトマトリックス {#robot-inventor-light}
 
 これらのブロックは Robot Inventor アプリから来たもので、[MINDSTORMS Robot Inventor と SPIKE Prime のハブ](/docs/Application/Hubs/RobotInventorHub)でのみ動作します。ハブのアイコンが付いています。ブロック内の絵をタップすると描けます。アニメーションのブロックでは、最初のフレームとフレーム数が表示されます。

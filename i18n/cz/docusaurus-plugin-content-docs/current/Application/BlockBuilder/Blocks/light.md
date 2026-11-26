@@ -100,6 +100,14 @@ Ovládá světla kolem „očí“ senzoru vzdálenosti na vybraném portu. Kaž
 
 - Huby: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blok nese ikonu hubu).
 
+### `rozsvítit senzor barvy 1 … 2 … 3 … %` (Pokročilý) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Nastaví jas tří světel kolem čočky senzoru barev Technic (senzoru barev SPIKE) na vybraném portu, každé od 0 do 100 %.
+
+- Huby: Technic Hub.
+- Dokud jeho světla svítí, senzor neměří: jeho hodnoty barvy a světla zůstávají takové, jaké byly. Než senzor znovu přečtete, použijte na tomto portu blok Senzor Technic: **nastavit režim na …** (`výchozí` nebo `okolní`). Kontrola programu v editoru bloků upozorní, když program senzor rozsvítí a čte ho bez bloku **nastavit režim na …**.
+- Typické použití: signální světlo na modelu nebo oči robota.
+
 ## Světelná matice Robot Inventor {#robot-inventor-light}
 
 Tyto bloky pocházejí z aplikace Robot Inventor a fungují jen s [huby MINDSTORMS Robot Inventor a SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Nesou ikonu hubu. Klepnutím na obrázek v bloku ho nakreslíte; v blocích animací ukazuje první snímek a počet snímků.

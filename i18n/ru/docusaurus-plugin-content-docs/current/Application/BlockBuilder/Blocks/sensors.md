@@ -30,14 +30,20 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Возвращает напряжение батареи хаба в вольтах.
 
-- Хабы: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Хабы: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Возвращает `NaN`, если хаб не подключён.
 
 ### `… температура (C°)` (Продвинутый) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Возвращает температуру электроники хаба в градусах Цельсия.
 
-- Хабы: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Хабы: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… ток (мА)` (Гуру) {#block_hubs_all_sensors_hub_current}
+Возвращает общий ток, который потребляет хаб, в миллиамперах.
+
+- Хабы: Technic Hub.
+- Типичное применение: остановить захват или лебёдку, когда растёт нагрузка.
 
 ### `получить … выходное напряжение (В)` (Гуру) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Возвращает ускорение хаба по одной оси.
 
 - Оси: `x`, `y`, `z`
+
+### `… … скорость вращения (°/с)` (Гуру) {#block_hubs_all_sensors_gyro}
+Возвращает, как быстро хаб поворачивается вокруг одной оси, в градусах в секунду (по гироскопу хаба).
+
+- Оси: `x`, `y`, `z`. `z` — поворот на месте (положительное значение — влево, когда хаб лежит плашмя); `x` и `y` — крен и тангаж.
+- Хабы: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Типичное применение: удерживать машину на прямом курсе, заметить, что модель вращается или опрокидывается.
 
 ### `получить … ориентация …` (Новичок) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### Датчик Technic: `сырое значение …` (Новичок) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Возвращает «сырое» значение одного цветового канала датчика цвета Technic.
+Возвращает одно «сырое» значение цвета, который видит датчик.
 
-- Каналы: `красный`, `зеленый`, `синий`
+- Значения: `красный`, `зеленый`, `синий`, `тон (°)` (0–359), `насыщенность (%)`, `яркость (%)`
+- Датчики: датчик цвета Technic и датчик цвета и расстояния BOOST. На Technic Hub тон и насыщенность выдаёт сам датчик, а яркость вычисляется из красного, зелёного и синего.
+- Типичное применение: различать по тону цвета, которых не знает блок **цвет …**, или близкие оттенки.
 
 ### Датчик расстояния Technic {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### Датчик BOOST: `отражённый свет (%)` (Новичок) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Возвращает, сколько света поверхность отражает обратно в датчик BOOST, в процентах.
+Возвращает, сколько света поверхность отражает обратно в датчик BOOST, в процентах, с шагом 1 %.
+
+- Чтобы получить «сырой» цвет этого датчика (красный, зелёный, синий, тон, насыщенность, яркость), используйте блок Датчик Technic: **сырое значение …** — он работает и с этим датчиком.
 
 #### Датчик BOOST: `отражённый свет …` (сравнение) (Новичок) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

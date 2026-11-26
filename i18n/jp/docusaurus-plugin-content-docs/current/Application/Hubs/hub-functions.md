@@ -74,3 +74,5 @@ Technic、City、BOOST、Technic Move、WeDo 2.0、Robot Inventor、リモコン
 ## 内蔵センサー {#built-in-sensors}
 
 バッテリー残量と電圧、基板温度、傾き（ピッチ、ロール、ヨー）、加速度、向きは、それらを備えたハブで使えます。ハブの取り付け方に合わせて、**ハブの向き**（クイックリンク）または *傾斜方向に設定*（ロジックブロック）を設定してください。
+
+ロジックブロックでは、Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime のハブは回転速度（ジャイロスコープ、*回転速度 (°/秒)*）も報告し、Technic Hub は消費している電流（*電流 (mA)*）も報告します。[センサー](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)を参照してください。

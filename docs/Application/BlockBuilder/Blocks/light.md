@@ -100,6 +100,14 @@ Controls the lights around the "eyes" of the Distance Sensor on the selected por
 
 - Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (the block has the hub icon).
 
+### `light up colour sensor 1 … 2 … 3 … %` (Advanced) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Sets the brightness of the three lights around the lens of the Technic Color Sensor (the SPIKE color sensor) on the selected port, from 0 to 100 % each.
+
+- Hubs: Technic Hub.
+- While its lights are on, the sensor doesn't measure: its color and light values stay as they were. Before you read the sensor again, use Technic sensor: **set mode to …** (`default` or `ambient`) on that port. The program check in the block editor warns when a program lights the sensor and reads it without **set mode**.
+- Typical use: a signal light on the model, or the eyes of a robot.
+
 ## Robot Inventor light matrix {#robot-inventor-light}
 
 These blocks come from the Robot Inventor app and work only with the [MINDSTORMS Robot Inventor and SPIKE Prime hubs](/docs/Application/Hubs/RobotInventorHub). They carry the hub icon. Tap the picture in a block to draw it; in the animation blocks it shows the first frame and the number of frames.

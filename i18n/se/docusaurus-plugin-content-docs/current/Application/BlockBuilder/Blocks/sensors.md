@@ -30,14 +30,20 @@ Returnerar hubbens batterinivå i procent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returnerar hubbens batterispänning i volt.
 
-- Hubbar: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubbar: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Returnerar `NaN` när hubben inte är ansluten.
 
 ### `… temperatur (C°)` (Avancerad) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Returnerar temperaturen i hubbens elektronik i grader Celsius.
 
-- Hubbar: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubbar: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… ström (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Returnerar den totala ström som hubben drar, i milliampere.
+
+- Hubbar: Technic Hub.
+- Typisk användning: stoppa en gripklo eller en vinsch när belastningen ökar.
 
 ### `hämta … utgångsspänning (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Returnerar hubbens råa accelerometervärde längs en axel.
 Returnerar hubbens acceleration längs en axel.
 
 - Axlar: `x`, `y`, `z`
+
+### `… … rotationshastighet (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Returnerar hur snabbt hubben vrider sig runt en axel, i grader per sekund (från hubbens gyroskop).
+
+- Axlar: `x`, `y`, `z`. `z` är vridning på stället (positivt = åt vänster när hubben ligger plant); `x` och `y` är rollning och tippning.
+- Hubbar: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Typisk användning: hålla ett fordon på rak kurs, märka att en modell snurrar eller välter.
 
 ### `hämta … orientering …` (Nybörjare) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Returnerar `true` när det omgivande ljuset förhåller sig till värdet enligt 
 
 #### Technic-sensor: `rå värde …` (Nybörjare) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Returnerar råvärdet för en färgkanal i Technic-färgsensorn.
+Returnerar ett råvärde för färgen som sensorn ser.
 
-- Kanaler: `röd`, `grön`, `blå`
+- Värden: `röd`, `grön`, `blå`, `nyans (°)` (0–359), `mättnad (%)`, `ljusstyrka (%)`
+- Sensorer: Technic-färgsensorn och BOOST färg- och avståndssensorn. På Technic Hub kommer nyans och mättnad från sensorn, och ljusstyrkan beräknas från rött, grönt och blått.
+- Typisk användning: skilja på färger som blocket **färg** inte känner till, eller på liknande toner, med hjälp av nyansen.
 
 ### Technic-avståndssensor {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Returnerar `true` när avståndet som BOOST-sensorn mäter uppfyller villkoret.
 
 #### BOOST-sensor: `reflekterat ljus (%)` (Nybörjare) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Returnerar hur mycket ljus ytan reflekterar tillbaka till BOOST-sensorn, i procent.
+Returnerar hur mycket ljus ytan reflekterar tillbaka till BOOST-sensorn, i procent, i steg om 1 %.
+
+- För den råa färgen (röd, grön, blå, nyans, mättnad, ljusstyrka) från den här sensorn använder du Technic-sensor: **rå värde …**, som också fungerar med den.
 
 #### BOOST-sensor: `reflekterat ljus …` (Nybörjare) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

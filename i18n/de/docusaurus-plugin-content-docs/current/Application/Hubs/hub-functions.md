@@ -74,3 +74,5 @@ Ihre Tasten sind Eingänge, sodass Sie ein Modell mit der echten Fernbedienung �
 ## Eingebaute Sensoren {#built-in-sensors}
 
 Akkustand und -spannung, Platinentemperatur, Neigung (Nicken, Rollen, Gieren), Beschleunigung und Ausrichtung sind bei Hubs verfügbar, die diese Sensoren haben. Stellen Sie **Hub-Ausrichtung** (Schnellverknüpfungen) oder *Neigungsausrichtung auf* (Logikblöcke) passend zur Einbaulage des Hubs ein.
+
+In den Logikblöcken melden die Hubs Technic Hub, Technic Move Hub, Robot Inventor und SPIKE Prime auch ihre Drehgeschwindigkeit (Gyroskop, *Drehgeschwindigkeit (°/s)*), und der Technic Hub meldet den Strom, den er aufnimmt (*Strom (mA)*). Siehe [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

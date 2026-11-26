@@ -100,6 +100,14 @@ Stuurt de lampjes rond de “ogen” van de afstandssensor op de gekozen poort a
 
 - Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (het blok draagt het hubpictogram).
 
+### `kleursensor verlichten 1 … 2 … 3 … %` (Gevorderd) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Stelt de helderheid in van de drie lampjes rond de lens van de Technic-kleursensor (de SPIKE-kleursensor) op de gekozen poort, elk van 0 tot 100 %.
+
+- Hubs: Technic Hub.
+- Zolang de lampjes aan zijn, meet de sensor niet: zijn kleur- en lichtwaarden blijven zoals ze waren. Gebruik voordat je de sensor weer uitleest Technic-sensor: **stel modus in op …** (`standaard` of `omgeving`) op die poort. De programmacontrole in de blokeditor waarschuwt als een programma de sensor laat oplichten en hem uitleest zonder **stel modus in**.
+- Gebruikelijke toepassing: een signaallicht op het model, of de ogen van een robot.
+
 ## Robot Inventor-lichtmatrix {#robot-inventor-light}
 
 Deze blokken komen uit de Robot Inventor-app en werken alleen met de [hubs van MINDSTORMS Robot Inventor en SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ze dragen het hubpictogram. Tik op de afbeelding in een blok om hem te tekenen; in de animatieblokken toont hij het eerste beeld en het aantal beelden.

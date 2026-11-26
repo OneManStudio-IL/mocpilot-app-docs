@@ -100,6 +100,14 @@ Controlează luminile din jurul „ochilor” senzorului de distanță de pe por
 
 - Huburi: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (blocul poartă pictograma hubului).
 
+### `aprinde senzorul de culoare 1 … 2 … 3 … %` (Avansat) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Setează luminozitatea celor trei lumini din jurul lentilei senzorului de culoare Technic (senzorul de culoare SPIKE) de pe portul selectat, fiecare de la 0 la 100 %.
+
+- Huburi: Technic Hub.
+- Cât timp luminile lui sunt aprinse, senzorul nu măsoară: valorile lui de culoare și de lumină rămân cum erau. Înainte să citești din nou senzorul, folosește pe acel port blocul Senzor Technic: **setează modul la …** (`implicit` sau `ambiant`). Verificarea programului din editorul de blocuri avertizează când un program aprinde senzorul și îl citește fără blocul **setează modul la …**.
+- Utilizare tipică: o lumină de semnalizare pe model sau ochii unui robot.
+
 ## Matricea de lumini Robot Inventor {#robot-inventor-light}
 
 Aceste blocuri vin din aplicația Robot Inventor și funcționează doar cu [huburile MINDSTORMS Robot Inventor și SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Ele poartă pictograma hubului. Atinge imaginea dintr-un bloc ca s-o desenezi; în blocurile de animație ea arată primul cadru și numărul de cadre.

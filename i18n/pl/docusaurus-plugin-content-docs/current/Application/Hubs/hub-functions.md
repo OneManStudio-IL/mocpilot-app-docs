@@ -74,3 +74,5 @@ Jego przyciski są wejściami, więc możesz sterować modelem fizycznym pilotem
 ## Wbudowane czujniki {#built-in-sensors}
 
 Poziom i napięcie baterii, temperatura płytki, nachylenie (pochylenie, przechył, odchylenie), przyspieszenie i orientacja są dostępne w hubach, które je mają. Ustaw **Orientacja huba** (Szybkie połączenia) lub *orientacja nachylenia do* (Bloki logiczne) zgodnie z tym, jak hub jest zamontowany.
+
+W Blokach logicznych huby Technic Hub, Technic Move Hub, Robot Inventor i SPIKE Prime podają też swoją prędkość obrotu (żyroskop, *prędkość obrotu (°/s)*), a Technic Hub podaje pobierany prąd (*prąd (mA)*). Zobacz [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

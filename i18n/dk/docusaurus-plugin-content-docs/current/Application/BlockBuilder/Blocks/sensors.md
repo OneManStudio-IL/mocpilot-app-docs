@@ -30,14 +30,20 @@ Returnerer hubbens batteriniveau i procent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returnerer hubbens batterispænding i volt.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
 - Returnerer `NaN`, når hubben ikke er forbundet.
 
 ### `… temperatur (C°)` (Avanceret) {#block_hubs_all_sensors_board_temp}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_board_temp.svg')} alt="block_hubs_all_sensors_board_temp.svg" />
 Returnerer temperaturen i hubbens elektronik i grader celsius.
 
-- Hubs: BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus.
+
+### `… strøm (mA)` (Guru) {#block_hubs_all_sensors_hub_current}
+Returnerer den samlede strøm, som hubben trækker, i milliampere.
+
+- Hubs: Technic Hub.
+- Typisk brug: stop en griber eller et wirespil, når belastningen stiger.
 
 ### `hent … udgangsspænding (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
@@ -87,6 +93,13 @@ Returnerer hubbens rå accelerometeraflæsning langs én akse.
 Returnerer hubbens acceleration langs én akse.
 
 - Akser: `x`, `y`, `z`
+
+### `… … rotationshastighed (°/s)` (Guru) {#block_hubs_all_sensors_gyro}
+Returnerer, hvor hurtigt hubben drejer om én akse, i grader pr. sekund (fra hubbens gyroskop).
+
+- Akser: `x`, `y`, `z`. `z` er drejning på stedet (positiv = mod venstre, når hubben ligger fladt); `x` og `y` er rulning og hældning.
+- Hubs: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime.
+- Typisk brug: hold et køretøj kørende ligeud, opdag at en model drejer rundt eller vælter.
 
 ### `hent … orientering …` (Begynder) {#block_hubs_sensors_get_orientation}
 <img src={useBaseUrl('/img/blocks/block_hubs_sensors_get_orientation.svg')} alt="block_hubs_sensors_get_orientation.svg" />
@@ -162,9 +175,11 @@ Returnerer `true`, når det omgivende lys forholder sig til værdien som valgt.
 
 #### Technic-sensor: `rå værdi …` (Begynder) {#block_hubs_all_sensors_port_technic_sensor_raw_color}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_technic_sensor_raw_color.svg')} alt="block_hubs_all_sensors_port_technic_sensor_raw_color.svg" />
-Returnerer den rå værdi af én farvekanal i Technic-farvesensoren.
+Returnerer én rå værdi af den farve, sensoren ser.
 
-- Kanaler: `rød`, `grøn`, `blå`
+- Værdier: `rød`, `grøn`, `blå`, `farvetone (°)` (0–359), `mætning (%)`, `lysstyrke (%)`
+- Sensorer: Technic-farvesensoren og BOOST-farve- og afstandssensoren. På Technic Hub kommer farvetone og mætning fra sensoren, og lysstyrken beregnes ud fra rød, grøn og blå.
+- Typisk brug: skel mellem farver, som blokken **farve** ikke kender, eller mellem lignende nuancer ud fra farvetonen.
 
 ### Technic-afstandssensor {#technic-distance-sensor}
 
@@ -208,7 +223,9 @@ Returnerer `true`, når den afstand, BOOST-sensoren måler, opfylder betingelsen
 
 #### BOOST-sensor: `reflekteret lys (%)` (Begynder) {#block_hubs_all_sensors_port_boost_sensor_reflected_light}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_reflected_light.svg')} alt="block_hubs_all_sensors_port_boost_sensor_reflected_light.svg" />
-Returnerer, hvor meget lys overfladen kaster tilbage til BOOST-sensoren, i procent.
+Returnerer, hvor meget lys overfladen kaster tilbage til BOOST-sensoren, i procent, i trin på 1 %.
+
+- Til den rå farve (rød, grøn, blå, farvetone, mætning, lysstyrke) fra denne sensor bruger du Technic-sensor: **rå værdi …**, som også virker med den.
 
 #### BOOST-sensor: `reflekteret lys …` (Begynder) {#block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is}
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg')} alt="block_hubs_all_sensors_port_boost_sensor_when_reflected_light_is.svg" />

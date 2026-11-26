@@ -74,3 +74,5 @@ Knappene er innganger, så du kan kjøre en modell med den fysiske fjernkontroll
 ## Innebygde sensorer {#built-in-sensors}
 
 Batterinivå og spenning, korttemperatur, helning (stigning, rulling, yaw), akselerasjon og orientering er tilgjengelige på hubber som har dem. Still inn **Huborientering** (Hurtigkoblinger) eller *sett tiltorientering til* (Logikkblokker) slik at det passer med hvordan huben er montert.
+
+I Logikkblokker rapporterer Technic Hub, Technic Move Hub, Robot Inventor og SPIKE Prime også rotasjonshastigheten sin (gyroskop, *rotasjonshastighet (°/s)*), og Technic Hub rapporterer strømmen den trekker (*strøm (mA)*). Se [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

@@ -100,6 +100,14 @@ Steuert die Lichter um die „Augen“ des Abstandssensors am ausgewählten Port
 
 - Hubs: [MINDSTORMS Robot Inventor](/docs/Application/Hubs/RobotInventorHub) (der Block trägt das Hub-Symbol).
 
+### `Farbsensor beleuchten 1 … 2 … 3 … %` (Fortgeschritten) {#block_hubs_all_light_port_color_sensor_light_up}
+
+Stellt die Helligkeit der drei Lichter um die Linse des Technic-Farbsensors (des SPIKE-Farbsensors) am ausgewählten Port ein, jeweils von 0 bis 100 %.
+
+- Hubs: Technic Hub.
+- Solange seine Lichter an sind, misst der Sensor nicht: Seine Farb- und Lichtwerte bleiben, wie sie waren. Bevor Sie den Sensor wieder lesen, verwenden Sie Technic-Sensor: **Modus einstellen auf …** (`Standard` oder `Umgebung`) an diesem Port. Die Programmprüfung im Blockeditor warnt, wenn ein Programm den Sensor beleuchtet und ihn ohne **Modus einstellen** liest.
+- Typische Verwendung: ein Signallicht am Modell oder die Augen eines Roboters.
+
 ## Robot-Inventor-Lichtmatrix {#robot-inventor-light}
 
 Diese Blöcke stammen aus der Robot-Inventor-App und funktionieren nur mit den [Hubs von MINDSTORMS Robot Inventor und SPIKE Prime](/docs/Application/Hubs/RobotInventorHub). Sie tragen das Hub-Symbol. Tippen Sie auf das Bild in einem Block, um es zu zeichnen; in den Animationsblöcken zeigt es das erste Bild und die Anzahl der Bilder.

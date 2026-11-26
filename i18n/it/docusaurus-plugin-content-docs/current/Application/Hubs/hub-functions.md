@@ -74,3 +74,5 @@ I suoi pulsanti sono ingressi, quindi puoi guidare un modello con il telecomando
 ## Sensori integrati {#built-in-sensors}
 
 Livello e tensione della batteria, temperatura della scheda, inclinazione (beccheggio, rollio, imbardata), accelerazione e orientamento sono disponibili sugli hub che li hanno. Imposta **Orientamento dell'hub** (Collegamenti rapidi) o *impostare … orientamento inclinato a* (Blocchi logici) in base a come è montato l'hub.
+
+Nei Blocchi logici, gli hub Technic Hub, Technic Move Hub, Robot Inventor e SPIKE Prime indicano anche la loro velocità di rotazione (giroscopio, *velocità di rotazione (°/s)*), e il Technic Hub indica la corrente che assorbe (*corrente (mA)*). Vedi [Sensori](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

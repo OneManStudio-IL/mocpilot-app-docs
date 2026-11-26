@@ -74,3 +74,5 @@ Jeho tlačítka jsou vstupy, takže model můžete přes MOCPilot řídit fyzick
 ## Vestavěné senzory {#built-in-sensors}
 
 Úroveň a napětí baterie, teplota desky, náklon (klopení, klonění, stáčení), zrychlení a orientace jsou k dispozici u hubů, které je mají. Nastavte **Orientace hubu** (Rychlá propojení) nebo *nastavit orientaci náklonu* (Logické bloky) podle toho, jak je hub namontovaný.
+
+V Logických blocích hlásí huby Technic Hub, Technic Move Hub, Robot Inventor a SPIKE Prime také svou rychlost otáčení (gyroskop, *rychlost otáčení (°/s)*) a Technic Hub hlásí proud, který odebírá (*proud (mA)*). Viz [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
