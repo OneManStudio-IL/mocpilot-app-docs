@@ -48,6 +48,10 @@ L'hub delle auto radiocomandate LEGO® Technic (Porsche GT4 e-Performance, Lambo
 
 - Motori e luci con controllo della velocità.
 - Nessun controllo della posizione: Servo, Ruota di gradi e Vai alla posizione non sono disponibili.
+- I motori girano liberi per inerzia quando si fermano; per SBrick non c'è la scelta tra freno e mantenimento.
+- Le lettere delle porte A–D in MOCPilot sono quelle stampate sull'hub.
+- La tensione della batteria è mostrata in volt; la percentuale della batteria è approssimativa (calcolata su 4,8–9 V).
+- I sensori sulle porte di uno SBrick Plus (tramite adattatori) non sono ancora supportati.
 
 ## Mould King 4.0 e 6.0 {#mould-king-40-and-60}
 

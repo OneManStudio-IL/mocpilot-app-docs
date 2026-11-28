@@ -48,6 +48,10 @@ LEGO® Technic -kauko-ohjattavien autojen (Porsche GT4 e-Performance, Lamborghin
 
 - Moottorit ja valot nopeuden ohjauksella.
 - Ei asennon ohjausta: Servo, Pyöritä asteina ja Siirry asentoon eivät ole käytettävissä.
+- Moottorit rullaavat vapaasti pysähtyessään; SBrickissä ei voi valita jarrua eikä asennon pitoa.
+- MOCPilotin porttikirjaimet A–D ovat samat kuin hubiin painetut.
+- Akun jännite näytetään voltteina; akun prosenttilukema on likimääräinen (laskettu välille 4,8–9 V).
+- SBrick Plussan porttien antureita (sovittimien kautta) ei vielä tueta.
 
 ## Mould King 4.0 ja 6.0 {#mould-king-40-and-60}
 

@@ -48,6 +48,10 @@ De hub van de op afstand bestuurbare LEGO® Technic-auto's (Porsche GT4 e-Perfor
 
 - Motoren en lampen met snelheidsregeling.
 - Geen positieregeling: Servo, Draaien met graden en Naar positie gaan zijn niet beschikbaar.
+- Motoren rollen uit wanneer ze stoppen; bij SBrick is er geen keuze voor remmen of vasthouden.
+- De poortletters A–D in MOCPilot zijn de letters die op de hub gedrukt staan.
+- De batterijspanning wordt in volt weergegeven; het batterijpercentage is bij benadering (berekend over 4,8–9 V).
+- Sensoren op de poorten van een SBrick Plus (via adapters) worden nog niet ondersteund.
 
 ## Mould King 4.0 en 6.0 {#mould-king-40-and-60}
 

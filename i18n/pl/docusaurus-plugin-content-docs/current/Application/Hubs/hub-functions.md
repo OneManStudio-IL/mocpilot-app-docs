@@ -48,6 +48,10 @@ Hub zdalnie sterowanych samochodów LEGO® Technic (Porsche GT4 e-Performance, L
 
 - Silniki i światła ze sterowaniem prędkością.
 - Bez sterowania pozycją: Serwo, Obrót o stopnie i Do pozycji nie są dostępne.
+- Po zatrzymaniu silniki toczą się siłą rozpędu; SBrick nie ma wyboru hamulca ani utrzymania.
+- Litery portów A–D w MOCPilot to te nadrukowane na hubie.
+- Napięcie baterii jest pokazywane w woltach; procent baterii jest przybliżony (liczony w zakresie 4,8–9 V).
+- Czujniki na portach SBrick Plus (przez adaptery) nie są jeszcze obsługiwane.
 
 ## Mould King 4.0 i 6.0 {#mould-king-40-and-60}
 

@@ -48,6 +48,10 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 
 - Motoare și lumini cu controlul vitezei.
 - Fără controlul poziției: Servo, Rotire cu grade și Mergi la poziție nu sunt disponibile.
+- La oprire, motoarele rulează liber; SBrick nu are opțiunea de frână sau menținere.
+- Literele porturilor A–D din MOCPilot sunt cele imprimate pe hub.
+- Tensiunea bateriei este afișată în volți; procentul bateriei este aproximativ (calculat pe intervalul 4,8–9 V).
+- Senzorii de pe porturile unui SBrick Plus (prin adaptoare) nu sunt încă acceptați.
 
 ## Mould King 4.0 și 6.0 {#mould-king-40-and-60}
 

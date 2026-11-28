@@ -48,6 +48,10 @@ Hub diaľkovo ovládaných áut LEGO® Technic (Porsche GT4 e-Performance, Lambo
 
 - Motory a svetlá s riadením rýchlosti.
 - Bez riadenia polohy: Servo, Otočiť o stupne a Ísť do polohy nie sú k dispozícii.
+- Pri zastavení motory dobiehajú voľnobehom; brzdu ani držanie pri SBricku zvoliť nemožno.
+- Písmená portov A–D v MOCPilote sú tie, ktoré sú vytlačené na hube.
+- Napätie batérie sa zobrazuje vo voltoch; percento batérie je približné (počítané v rozsahu 4,8–9 V).
+- Senzory na portoch SBricku Plus (cez adaptéry) zatiaľ nie sú podporované.
 
 ## Mould King 4.0 a 6.0 {#mould-king-40-and-60}
 

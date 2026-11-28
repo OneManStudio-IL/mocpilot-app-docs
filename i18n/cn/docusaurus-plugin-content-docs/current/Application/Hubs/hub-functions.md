@@ -48,6 +48,10 @@ LEGO® Technic 遥控车（Porsche GT4 e-Performance、Lamborghini Revuelto、Ba
 
 - 支持速度控制的电机和灯。
 - 不支持位置控制：舵机、按角度运行和转到位置不可用。
+- 电机停止时惯性滑行；SBrick 没有刹车或保持选项。
+- MOCPilot 中的端口字母 A–D 与集线器上印的字母一致。
+- 电池电压以伏特显示；电池电量百分比为近似值（按 4.8–9 V 计算）。
+- 暂不支持 SBrick Plus 端口上（通过适配器连接）的传感器。
 
 ## Mould King 4.0 和 6.0 {#mould-king-40-and-60}
 

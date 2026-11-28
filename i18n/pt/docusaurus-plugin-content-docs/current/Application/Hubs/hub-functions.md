@@ -48,6 +48,10 @@ O hub dos carros de controle remoto LEGO® Technic (Porsche GT4 e-Performance, L
 
 - Motores e luzes com controle de velocidade.
 - Sem controle de posição: Servo, Girar por graus e Ir para a posição não estão disponíveis.
+- Os motores ficam em roda livre ao parar; não há opção de freio ou manter para o SBrick.
+- As letras das portas A–D no MOCPilot são as impressas no hub.
+- A tensão da bateria é mostrada em volts; a porcentagem da bateria é aproximada (calculada sobre 4,8–9 V).
+- Sensores nas portas de um SBrick Plus (por meio de adaptadores) ainda não são suportados.
 
 ## Mould King 4.0 e 6.0 {#mould-king-40-and-60}
 

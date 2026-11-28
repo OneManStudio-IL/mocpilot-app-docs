@@ -48,6 +48,10 @@ Huben i de fjernstyrte LEGO® Technic-bilene (Porsche GT4 e-Performance, Lamborg
 
 - Motorer og lys med hastighetsstyring.
 - Ingen posisjonsstyring: Servo, Kjør et antall grader og Gå til posisjon er ikke tilgjengelige.
+- Motorene ruller fritt når de stopper; SBrick har ikke valg mellom brems og hold.
+- Portbokstavene A–D i MOCPilot er de som er trykt på huben.
+- Batterispenningen vises i volt; batteriprosenten er omtrentlig (beregnet over 4,8–9 V).
+- Sensorer på portene til en SBrick Plus (via adaptere) støttes ikke ennå.
 
 ## Mould King 4.0 og 6.0 {#mould-king-40-and-60}
 

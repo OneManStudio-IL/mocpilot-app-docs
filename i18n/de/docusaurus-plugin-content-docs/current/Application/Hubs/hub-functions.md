@@ -48,6 +48,10 @@ Der Hub der ferngesteuerten LEGO® Technic-Autos (Porsche GT4 e-Performance, Lam
 
 - Motoren und Lichter mit Geschwindigkeitsregelung.
 - Keine Positionssteuerung: Servo, Um Grad drehen und Zu Position fahren sind nicht verfügbar.
+- Motoren rollen beim Stoppen aus; Bremsen oder Halten lässt sich beim SBrick nicht wählen.
+- Die Portbuchstaben A–D in MOCPilot sind die auf dem Hub aufgedruckten.
+- Die Akkuspannung wird in Volt angezeigt; der Akkustand in Prozent ist ein Näherungswert (berechnet über 4,8–9 V).
+- Sensoren an den Ports eines SBrick Plus (über Adapter) werden noch nicht unterstützt.
 
 ## Mould King 4.0 und 6.0 {#mould-king-40-and-60}
 

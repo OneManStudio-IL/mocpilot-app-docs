@@ -48,6 +48,10 @@ El hub de los coches teledirigidos de LEGO® Technic (Porsche GT4 e-Performance,
 
 - Motores y luces con control de velocidad.
 - Sin control de posición: Servo, Girar grados e Ir a la posición no están disponibles.
+- Al detenerse, los motores giran libremente por inercia; SBrick no tiene opción de freno ni de mantener.
+- Las letras de los puertos A–D en MOCPilot son las impresas en el hub.
+- El voltaje de la batería se muestra en voltios; el porcentaje de batería es aproximado (calculado sobre 4,8–9 V).
+- Los sensores en los puertos de un SBrick Plus (mediante adaptadores) aún no son compatibles.
 
 ## Mould King 4.0 y 6.0 {#mould-king-40-and-60}
 

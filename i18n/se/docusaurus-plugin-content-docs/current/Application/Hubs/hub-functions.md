@@ -48,6 +48,10 @@ Hubben i LEGO® Technics radiostyrda bilar (Porsche GT4 e-Performance, Lamborghi
 
 - Motorer och lampor med hastighetsstyrning.
 - Ingen positionsstyrning: Servo, Kör ett antal grader och Gå till position är inte tillgängliga.
+- Motorerna rullar fritt när de stannar; SBrick har inget val för broms eller håll position.
+- Portbokstäverna A–D i MOCPilot är de som är tryckta på hubben.
+- Batterispänningen visas i volt; batteriprocenten är ungefärlig (beräknad över 4,8–9 V).
+- Sensorer på portarna på en SBrick Plus (via adaptrar) stöds inte ännu.
 
 ## Mould King 4.0 och 6.0 {#mould-king-40-and-60}
 
