@@ -41,10 +41,10 @@ Tlačidlo **Moje huby** v editore (na počítači **Huby**) ukazuje, koľko hubo
 
 Otvorte pripojený hub a zobrazí sa jeho **monitor hubu**:
 
-- hub: model, názov, firmvér, batéria, nabíjanie, teplota dosky, konfigurácia, orientácia, náklon (pitch, roll, yaw) a akcelerometer;
+- hub: model, názov, firmvér, batéria, napätie batérie, nabíjanie, teplota dosky, konfigurácia, orientácia, náklon (pitch, roll, yaw) a akcelerometer;
 - každý port: pripojené zariadenie a jeho rýchlosť, poloha, relatívna poloha, farba, odrazené a okolité svetlo alebo vzdialenosť.
 
-Pomocou neho si pred zostavením programu overíte, ktorý motor je na ktorom porte a ktorým smerom sa točí.
+Pomocou neho si pred zostavením programu overíte, ktorý motor je na ktorom porte a ktorým smerom sa točí. Hodnoty sa ďalej aktualizujú, aj keď je okno MOCPilot na pozadí.
 
 <Screenshot name="hub-monitor" alt="Monitor hubu pripojeného Technic Hubu" width={900} />
 

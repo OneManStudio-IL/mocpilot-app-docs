@@ -34,13 +34,15 @@ Hub diaľkovo ovládaných áut LEGO® Technic (Porsche GT4 e-Performance, Lambo
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Režim výkonu**: Pomaly, Normálny, Rýchlo, Ludicrous. Rýchle prepojenia: operácia [Režim výkonu](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Logické bloky: *BuWizz 2 nastaviť režim napájania*.
-- Aktuálny režim výkonu, **výstupné napätie** a prúd motora ako vstupy.
+- Aktuálny režim výkonu, **výstupné napätie** a prúd motora ako vstupy. Bez záťaže je výstupné napätie asi 6,3 V v režime Pomaly, 7,7 V v režime Normálny, 9,15 V v režime Rýchlo a 10,5 V v režime Ludicrous.
 - Jednoduché riadenie rýchlosti na portoch 1–4: bez riadenia polohy.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - LED **Farba portu** na portoch 1–4: zo zoznamu alebo ako RGB ([Farba portu](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 nastaviť farbu LED*).
 - Prúd motora ako vstup, relatívne polohy.
+- Motory so senzorom (Technic L a XL, SPIKE, Robot Inventor a sivé uhlové motory) na portoch 1–4 bežia s reguláciou rýchlosti: hub drží nastavenú rýchlosť, takže sa točia rovnomerne aj pri nízkej rýchlosti (zhruba od 20 %). Pri zastavení dobiehajú voľnobehom. Jednoduché motory, svetlá a porty A a B fungujú ako predtým.
+- Motory BOOST (zo súpravy s BOOST Move Hub) na BuWizz 3.0 Pro nefungujú: hub ich rozpozná len občas a motor sa netočí správne.
 
 ## SBrick a SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Jeho tlačidlá sú vstupy, takže model môžete cez MOCPilot riadiť fyzickým
 
 Úroveň a napätie batérie, teplota dosky, náklon (pitch, roll, yaw), zrýchlenie a orientácia sú k dispozícii na huboch, ktoré ich majú. Nastavte **Orientácia hubu** (Rýchle prepojenia) alebo *nastaviť orientáciu náklonu* (Logické bloky) podľa toho, ako je hub namontovaný.
 
-V Logických blokoch hlásia huby Technic Hub, Technic Move Hub, Robot Inventor a SPIKE Prime aj svoju rýchlosť otáčania (gyroskop, *rýchlosť otáčania (°/s)*) a Technic Hub hlási prúd, ktorý odoberá (*prúd (mA)*). Pozri [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+V Logických blokoch hlásia huby Technic Hub, Technic Move Hub, Robot Inventor a SPIKE Prime aj svoju rýchlosť otáčania (gyroskop, *rýchlosť otáčania (°/s)*) a Technic Hub a BOOST Move Hub hlásia prúd, ktorý odoberajú (*prúd (mA)*). Pozri [Senzory](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

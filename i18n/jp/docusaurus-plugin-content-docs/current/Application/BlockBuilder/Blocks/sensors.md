@@ -30,7 +30,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 ハブのバッテリー電圧をボルトで返します。
 
-- ハブ：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- ハブ：Technic Hub、Technic Move Hub、BOOST Move Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- 代表的な値：Technic Move Hub は充電式セル 1 本で、満充電で約 4.2 V、空のときは 3.3〜3.5 V です。BOOST Move Hub は単4電池 6 本で動き、新品のときは約 9 V です。
 - ハブが接続されていないときは `NaN` を返します。
 
 ### `… 温度 (C°)` (上級者) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 ハブが消費している電流の合計をミリアンペアで返します。
 
-- ハブ：Technic Hub。
+- ハブ：Technic Hub、BOOST Move Hub。
 - 主な用途：負荷が大きくなったらグリッパーやウインチを止める。
 
 ### `取得する … 出力電圧 (V)` (達人) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 ハブが現在ポートに供給している電圧をボルトで返します。
+
+- 無負荷時はパワーモードによって異なり、「遅い」で約 6.3 V、「ノーマル」で約 7.7 V、「速い」で約 9.15 V、「Ludicrous」で約 10.5 V です。
 
 - ハブ：BuWizz 2。
 

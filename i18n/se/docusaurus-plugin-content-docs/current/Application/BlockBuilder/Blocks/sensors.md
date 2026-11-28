@@ -30,7 +30,8 @@ Returnerar hubbens batterinivå i procent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returnerar hubbens batterispänning i volt.
 
-- Hubbar: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubbar: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Typiska värden: Technic Move Hub har en laddningsbar cell, cirka 4,2 V när den är full och 3,3–3,5 V när den är tom; BOOST Move Hub drivs av 6 AAA-batterier, cirka 9 V när de är nya.
 - Returnerar `NaN` när hubben inte är ansluten.
 
 ### `… temperatur (C°)` (Avancerad) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Returnerar temperaturen i hubbens elektronik i grader Celsius.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Returnerar den totala ström som hubben drar, i milliampere.
 
-- Hubbar: Technic Hub.
+- Hubbar: Technic Hub, BOOST Move Hub.
 - Typisk användning: stoppa en gripklo eller en vinsch när belastningen ökar.
 
 ### `hämta … utgångsspänning (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Returnerar den spänning som hubben just nu levererar till sina portar, i volt.
+
+- Utan belastning beror den på effektläget: cirka 6,3 V i Långsam, 7,7 V i Normal, 9,15 V i Snabb och 10,5 V i Ludicrous.
 
 - Hubbar: BuWizz 2.
 

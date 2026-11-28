@@ -171,7 +171,7 @@ Valoarea unui senzor circulă de-a lungul rândului împărțită la scala compl
 | **Înclinare: girație** | valoare | °, 180 | huburile cu axă de girație |
 | **Accelerație X / Y / Z** | valoare | m/s², 19,6 | huburile cu accelerometru |
 | **Viteza de rotație X / Y / Z** | valoare | °/s, 360 | huburile cu giroscop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Curentul hubului** | valoare | mA, 3000 | Technic Hub |
+| **Curentul hubului** | valoare | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Viteza motorului** | valoare | %, 100 | port; toate huburile cu porturi |
 | **Unghiul motorului** | valoare | °, 360 (relativ) | port; motoare cu encoder; nu SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Poziția motorului** | valoare | °, 180 (absolut) | port; motoare unghiulare |

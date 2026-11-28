@@ -171,7 +171,7 @@ Ett sensorvärde går längs raden delat med sin fulla skala och begränsat till
 | **Girning (yaw)** | värde | °, 180 | hubbar med girningsaxel |
 | **Acceleration X / Y / Z** | värde | m/s², 19,6 | hubbar med accelerometer |
 | **Rotationshastighet X / Y / Z** | värde | °/s, 360 | hubbar med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hubbens ström** | värde | mA, 3000 | Technic Hub |
+| **Hubbens ström** | värde | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motorhastighet** | värde | %, 100 | port; alla hubbar med portar |
 | **Motorvinkel** | värde | °, 360 (relativ) | port; motorer med pulsgivare; inte SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | värde | °, 180 (absolut) | port; vinkelmotorer |

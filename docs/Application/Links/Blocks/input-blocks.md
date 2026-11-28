@@ -171,7 +171,7 @@ A sensor value travels along the row divided by its full scale and limited to �
 | **Tilt yaw** | value | °, 180 | hubs with a yaw axis |
 | **Acceleration X / Y / Z** | value | m/s², 19.6 | hubs with an accelerometer |
 | **Rotation speed X / Y / Z** | value | °/s, 360 | hubs with a gyroscope: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hub current** | value | mA, 3000 | Technic Hub |
+| **Hub current** | value | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motor speed** | value | %, 100 | port; all hubs with ports |
 | **Motor angle** | value | °, 360 (relative) | port; motors with an encoder; not SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motor position** | value | °, 180 (absolute) | port; angular motors |

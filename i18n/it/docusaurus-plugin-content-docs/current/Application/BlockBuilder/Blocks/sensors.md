@@ -30,7 +30,8 @@ Restituisce il livello della batteria dell'hub, in percentuale.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Restituisce la tensione della batteria dell'hub, in volt.
 
-- Hub: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hub: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Valori tipici: il Technic Move Hub ha una sola cella ricaricabile, circa 4,2 V quando è carica e 3,3–3,5 V quando è scarica; il BOOST Move Hub funziona con 6 batterie AAA, circa 9 V quando sono nuove.
 - Restituisce `NaN` quando l'hub non è collegato.
 
 ### `… temperatura (C°)` (Avanzato) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Restituisce la temperatura dell'elettronica dell'hub, in gradi Celsius.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Restituisce la corrente totale assorbita dall'hub, in milliampere.
 
-- Hub: Technic Hub.
+- Hub: Technic Hub, BOOST Move Hub.
 - Uso tipico: fermare una pinza o un argano quando il carico aumenta.
 
 ### `ottenere … tensione di uscita (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Restituisce la tensione che l'hub sta fornendo alle sue porte, in volt.
+
+- Senza carico dipende dalla modalità di potenza: circa 6,3 V in Lenta, 7,7 V in Normale, 9,15 V in Veloce e 10,5 V in Ludicrous.
 
 - Hub: BuWizz 2.
 

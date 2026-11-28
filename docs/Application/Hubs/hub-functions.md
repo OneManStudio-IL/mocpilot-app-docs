@@ -34,13 +34,15 @@ The hub of the LEGO® Technic remote-controlled cars (Porsche GT4 e-Performance,
 ## BuWizz 2.0
 
 - **Power mode**: Slow, Normal, Fast, Ludicrous. Quick Links: the [Power mode](/docs/Application/Links/Blocks/OutputBlocks#op-powermode) operation; Logic Blocks: *BuWizz 2 set power mode*.
-- The current power mode, the **output voltage** and the motor current as inputs.
+- The current power mode, the **output voltage** and the motor current as inputs. Without a load the output voltage is about 6.3 V in Slow, 7.7 V in Normal, 9.15 V in Fast and 10.5 V in Ludicrous.
 - Simple speed control on ports 1–4: no position control.
 
 ## BuWizz 3.0 Pro
 
 - **Port colour** LEDs on ports 1–4: from a list or RGB ([Port colour](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 set LED color*).
 - Motor current as an input, relative positions.
+- Motors with a sensor (Technic L and XL, SPIKE, Robot Inventor and the grey angular motors) on ports 1–4 run with speed control: the hub holds the set speed, so they turn steadily even at low speed (from about 20 %). They coast when they stop. Simple motors, lights and ports A and B work as before.
+- BOOST motors (from the BOOST Move Hub set) don't work on a BuWizz 3.0 Pro: the hub recognises them only now and then, and the motor doesn't turn properly.
 
 ## SBrick and SBrick Plus
 
@@ -75,4 +77,4 @@ Its buttons are inputs, so you can drive a model with the physical remote throug
 
 Battery level and voltage, board temperature, tilt (pitch, roll, yaw), acceleration and orientation are available on hubs that have them. Set **Hub orientation** (Quick Links) or *set tilt orientation* (Logic Blocks) to match how the hub is mounted.
 
-In Logic Blocks, the Technic Hub, Technic Move Hub, Robot Inventor and SPIKE Prime hubs also report their rotation speed (gyroscope, *rotation speed (°/s)*), and the Technic Hub reports the current it draws (*current (mA)*). See [Sensors](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+In Logic Blocks, the Technic Hub, Technic Move Hub, Robot Inventor and SPIKE Prime hubs also report their rotation speed (gyroscope, *rotation speed (°/s)*), and the Technic Hub and the BOOST Move Hub report the current they draw (*current (mA)*). See [Sensors](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

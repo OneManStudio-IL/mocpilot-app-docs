@@ -171,7 +171,7 @@ Wartość czujnika przechodzi przez wiersz podzielona przez pełną skalę i ogr
 | **Nachylenie: odchylenie** | wartość | °, 180 | huby z osią odchylenia |
 | **Przyspieszenie X / Y / Z** | wartość | m/s², 19,6 | huby z akcelerometrem |
 | **Prędkość obrotu X / Y / Z** | wartość | °/s, 360 | huby z żyroskopem: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Prąd huba** | wartość | mA, 3000 | Technic Hub |
+| **Prąd huba** | wartość | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Prędkość silnika** | wartość | %, 100 | port; wszystkie huby z portami |
 | **Kąt silnika** | wartość | °, 360 (względny) | port; silniki z enkoderem; nie SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Pozycja silnika** | wartość | °, 180 (absolutna) | port; silniki kątowe |

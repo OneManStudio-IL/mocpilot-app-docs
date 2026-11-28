@@ -171,7 +171,7 @@ Hodnota senzora putuje riadkom vydelená svojím plným rozsahom a obmedzená na
 | **Otočenie (yaw)** | hodnota | °, 180 | huby s osou yaw |
 | **Zrýchlenie X / Y / Z** | hodnota | m/s², 19,6 | huby s akcelerometrom |
 | **Rýchlosť otáčania X / Y / Z** | hodnota | °/s, 360 | huby s gyroskopom: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Prúd hubu** | hodnota | mA, 3000 | Technic Hub |
+| **Prúd hubu** | hodnota | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Rýchlosť motora** | hodnota | %, 100 | port; všetky huby s portami |
 | **Uhol motora** | hodnota | °, 360 (relatívny) | port; motory s enkodérom; nie SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Poloha motora** | hodnota | °, 180 (absolútna) | port; uhlové motory |

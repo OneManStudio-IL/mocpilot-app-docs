@@ -41,10 +41,10 @@ Przycisk **Moje huby** w edytorze (**Huby** na komputerze) pokazuje, ile hubów 
 
 Otwórz połączony hub, aby zobaczyć jego **monitor huba**:
 
-- hub: model, nazwę, firmware, baterię, ładowanie, temperaturę płytki, konfigurację, orientację, nachylenie (pochylenie, przechył, odchylenie) i akcelerometr;
+- hub: model, nazwę, firmware, baterię, napięcie baterii, ładowanie, temperaturę płytki, konfigurację, orientację, nachylenie (pochylenie, przechył, odchylenie) i akcelerometr;
 - każdy port: podłączone urządzenie oraz jego prędkość, pozycję, pozycję względną, kolor, światło odbite i otoczenia albo odległość.
 
-Dzięki niemu przed zbudowaniem programu sprawdzisz, który silnik jest na którym porcie i w którą stronę się obraca.
+Dzięki niemu przed zbudowaniem programu sprawdzisz, który silnik jest na którym porcie i w którą stronę się obraca. Wartości odświeżają się nadal, gdy okno MOCPilot jest w tle.
 
 <Screenshot name="hub-monitor" alt="Monitor huba połączonego Technic Hub" width={900} />
 

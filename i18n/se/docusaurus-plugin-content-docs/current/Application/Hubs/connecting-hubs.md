@@ -41,10 +41,10 @@ Knappen **Mina hubbar** i redigeraren (**Hubbar** på en dator) visar hur många
 
 Öppna en ansluten hubb för att se dess **hubbmonitor**:
 
-- hubben: modell, namn, firmware, batteri, laddning, korttemperatur, konfiguration, orientering, lutning (pitch, roll, yaw) och accelerometer;
+- hubben: modell, namn, firmware, batteri, batterispänning, laddning, korttemperatur, konfiguration, orientering, lutning (pitch, roll, yaw) och accelerometer;
 - varje port: den anslutna enheten och dess hastighet, position, relativa position, färg, reflekterat ljus och omgivningsljus eller avstånd.
 
-Använd den för att kontrollera vilken motor som sitter på vilken port och åt vilket håll den snurrar innan du bygger programmet.
+Använd den för att kontrollera vilken motor som sitter på vilken port och åt vilket håll den snurrar innan du bygger programmet. Värdena fortsätter att uppdateras medan MOCPilot-fönstret ligger i bakgrunden.
 
 <Screenshot name="hub-monitor" alt="Hubbmonitor för en ansluten Technic Hub" width={900} />
 

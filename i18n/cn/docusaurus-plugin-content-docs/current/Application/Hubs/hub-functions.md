@@ -34,13 +34,15 @@ LEGO® Technic 遥控车（Porsche GT4 e-Performance、Lamborghini Revuelto、Ba
 ## BuWizz 2.0 {#buwizz-20}
 
 - **功率模式**：慢、正常、快、Ludicrous。快速连接：[功率模式](/docs/Application/Links/Blocks/OutputBlocks#op-powermode)操作；逻辑积木：*BuWizz 2 设置电源模式*。
-- 当前功率模式、**输出电压**和电机电流可作为输入。
+- 当前功率模式、**输出电压**和电机电流可作为输入。空载时输出电压约为：慢 6.3 V、正常 7.7 V、快 9.15 V、Ludicrous 10.5 V。
 - 端口 1–4 上只有简单的速度控制：不支持位置控制。
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - 端口 1–4 上的**端口颜色** LED：从列表选择或使用 RGB（[端口颜色](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor)；*BuWizz 3 设置 LED 颜色为*）。
 - 电机电流可作为输入，支持相对位置。
+- 端口 1–4 上带传感器的电机（Technic L 和 XL、SPIKE、Robot Inventor 以及灰色角度电机）使用速度控制运行：集线器会保持设定的速度，因此即使在低速下（约 20 % 起）也能平稳转动。停止时电机会自由滑行。简单电机、灯以及端口 A 和 B 的工作方式不变。
+- BOOST 电机（BOOST Move Hub 套装中的电机）无法在 BuWizz 3.0 Pro 上使用：集线器只能偶尔识别它们，电机也无法正常转动。
 
 ## SBrick 和 SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Technic、City、BOOST、Technic Move、WeDo 2.0、Robot Inventor 和遥控器�
 
 电池电量和电压、主板温度、倾斜（俯仰、滚转、偏航）、加速度和方向，在具备这些传感器的集线器上可用。请设置**集线器方向**（快速连接）或*设置倾斜方向*（逻辑积木），使其与集线器的安装方式一致。
 
-在逻辑积木中，Technic Hub、Technic Move Hub、Robot Inventor 和 SPIKE Prime 集线器还会报告其旋转速度（陀螺仪，*旋转速度 (°/秒)*），Technic Hub 还会报告其消耗的电流（*电流 (毫安)*）。参见[传感器](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)。
+在逻辑积木中，Technic Hub、Technic Move Hub、Robot Inventor 和 SPIKE Prime 集线器还会报告其旋转速度（陀螺仪，*旋转速度 (°/秒)*），Technic Hub 和 BOOST Move Hub 还会报告其消耗的电流（*电流 (毫安)*）。参见[传感器](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)。

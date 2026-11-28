@@ -34,7 +34,8 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 返回集线器的电池电压，以伏特为单位。
 
-- 集线器：Technic Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- 集线器：Technic Hub、Technic Move Hub、BOOST Move Hub、BuWizz 2、BuWizz 3、SBrick、SBrick Plus、Robot Inventor。
+- 典型值：Technic Move Hub 使用一节可充电电池，充满时约 4.2 V，电量耗尽时为 3.3–3.5 V；BOOST Move Hub 使用 6 节 AAA 电池，新电池时约 9 V。
 - 集线器未连接时返回 `NaN`。
 
 ### `… 温度 (C°)`（进阶） {#block_hubs_all_sensors_board_temp}
@@ -51,7 +52,7 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 
 返回集线器消耗的总电流，以毫安为单位。
 
-- 集线器：Technic Hub。
+- 集线器：Technic Hub、BOOST Move Hub。
 - 典型用法：负载升高时让夹爪或绞盘停下。
 
 ### `获取 … 输出电压 (V)`（大师） {#block_hubs_buwizz_sensors_get_output_voltage}
@@ -59,6 +60,8 @@ Mould King 集线器不报告任何数据，因此没有这些积木。
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 
 返回集线器当前向端口提供的电压，以伏特为单位。
+
+- 空载时取决于功率模式：慢约 6.3 V，正常约 7.7 V，快约 9.15 V，Ludicrous 约 10.5 V。
 
 - 集线器：BuWizz 2。
 

@@ -171,7 +171,7 @@ El valor de un sensor recorre la fila dividido entre su fondo de escala y limita
 | **Inclinación: guiñada** | valor | °, 180 | hubs con eje de guiñada |
 | **Aceleración X / Y / Z** | valor | m/s², 19,6 | hubs con acelerómetro |
 | **Velocidad de giro X / Y / Z** | valor | °/s, 360 | hubs con giroscopio: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Corriente del hub** | valor | mA, 3000 | Technic Hub |
+| **Corriente del hub** | valor | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Velocidad del motor** | valor | %, 100 | puerto; todos los hubs con puertos |
 | **Ángulo del motor** | valor | °, 360 (relativo) | puerto; motores con encoder; no SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Posición del motor** | valor | °, 180 (absoluta) | puerto; motores angulares |

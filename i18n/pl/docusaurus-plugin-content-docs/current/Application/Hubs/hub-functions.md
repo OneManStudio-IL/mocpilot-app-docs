@@ -34,13 +34,15 @@ Hub zdalnie sterowanych samochodów LEGO® Technic (Porsche GT4 e-Performance, L
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Tryb mocy**: Wolno, Normalny, Szybko, Ludicrous. Szybkie połączenia: operacja [Tryb mocy](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Bloki logiczne: *ustawić … tryb zasilania na* (BuWizz 2).
-- Bieżący tryb mocy, **napięcie wyjściowe** i prąd silnika jako wejścia.
+- Bieżący tryb mocy, **napięcie wyjściowe** i prąd silnika jako wejścia. Bez obciążenia napięcie wyjściowe wynosi około 6,3 V w trybie Wolno, 7,7 V w trybie Normalny, 9,15 V w trybie Szybko i 10,5 V w trybie Ludicrous.
 - Proste sterowanie prędkością na portach 1–4: bez sterowania pozycją.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - Diody LED **Kolor portu** na portach 1–4: z listy lub RGB ([Kolor portu](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *ustaw kolor LED portu na* (BuWizz 3)).
 - Prąd silnika jako wejście, pozycje względne.
+- Silniki z czujnikiem (Technic L i XL, SPIKE, Robot Inventor oraz szare silniki kątowe) na portach 1–4 pracują z regulacją prędkości: hub utrzymuje zadaną prędkość, więc obracają się równo nawet przy małej prędkości (od około 20 %). Po zatrzymaniu toczą się siłą rozpędu. Zwykłe silniki, światła oraz porty A i B działają jak dotąd.
+- Silniki BOOST (z zestawu z BOOST Move Hub) nie działają na BuWizz 3.0 Pro: hub rozpoznaje je tylko od czasu do czasu, a silnik nie obraca się prawidłowo.
 
 ## SBrick i SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Jego przyciski są wejściami, więc możesz sterować modelem fizycznym pilotem
 
 Poziom i napięcie baterii, temperatura płytki, nachylenie (pochylenie, przechył, odchylenie), przyspieszenie i orientacja są dostępne w hubach, które je mają. Ustaw **Orientacja huba** (Szybkie połączenia) lub *orientacja nachylenia do* (Bloki logiczne) zgodnie z tym, jak hub jest zamontowany.
 
-W Blokach logicznych huby Technic Hub, Technic Move Hub, Robot Inventor i SPIKE Prime podają też swoją prędkość obrotu (żyroskop, *prędkość obrotu (°/s)*), a Technic Hub podaje pobierany prąd (*prąd (mA)*). Zobacz [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+W Blokach logicznych huby Technic Hub, Technic Move Hub, Robot Inventor i SPIKE Prime podają też swoją prędkość obrotu (żyroskop, *prędkość obrotu (°/s)*), a Technic Hub i BOOST Move Hub podają pobierany prąd (*prąd (mA)*). Zobacz [Czujniki](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

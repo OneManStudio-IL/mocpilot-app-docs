@@ -171,7 +171,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | **倾斜偏航** | 数值 | °，180 | 带偏航轴的集线器 |
 | **加速度 X / Y / Z** | 数值 | m/s²，19.6 | 带加速度计的集线器 |
 | **旋转速度 X / Y / Z** | 数值 | °/s，360 | 带陀螺仪的集线器：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime |
-| **集线器电流** | 数值 | mA，3000 | Technic Hub |
+| **集线器电流** | 数值 | mA，3000 | Technic Hub、BOOST Move Hub |
 | **电机速度** | 数值 | %，100 | 端口；所有带端口的集线器 |
 | **电机角度** | 数值 | °，360（相对） | 端口；带编码器的电机；不支持 SBrick、BuWizz 2.0、WeDo 2.0 |
 | **电机位置** | 数值 | °，180（绝对） | 端口；角度电机 |

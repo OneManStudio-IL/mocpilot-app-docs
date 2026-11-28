@@ -34,13 +34,15 @@ Der Hub der ferngesteuerten LEGO® Technic-Autos (Porsche GT4 e-Performance, Lam
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Leistungsmodus**: Langsam, Normal, Schnell, Ludicrous. Schnellverknüpfungen: die Aktion [Leistungsmodus](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Logikblöcke: *BuWizz 2 Stromversorgungsmodus einstellen*.
-- Der aktuelle Leistungsmodus, die **Ausgangsspannung** und der Motorstrom als Eingänge.
+- Der aktuelle Leistungsmodus, die **Ausgangsspannung** und der Motorstrom als Eingänge. Ohne Last beträgt die Ausgangsspannung etwa 6,3 V bei Langsam, 7,7 V bei Normal, 9,15 V bei Schnell und 10,5 V bei Ludicrous.
 - Einfache Geschwindigkeitsregelung an den Ports 1–4: keine Positionssteuerung.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - **Portfarbe**: LEDs an den Ports 1–4, aus einer Liste oder als RGB ([Portfarbe](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 LED-Farbe setzen auf*).
 - Motorstrom als Eingang, relative Positionen.
+- Motoren mit Sensor (Technic L und XL, SPIKE, Robot Inventor und die grauen Winkelmotoren) an den Ports 1–4 laufen mit Drehzahlregelung: Der Hub hält die eingestellte Geschwindigkeit, sodass sie auch langsam gleichmäßig drehen (ab etwa 20 %). Beim Stoppen rollen sie aus. Einfache Motoren, Lichter und die Ports A und B funktionieren wie bisher.
+- BOOST-Motoren (aus dem Set mit dem BOOST Move Hub) funktionieren nicht am BuWizz 3.0 Pro: Der Hub erkennt sie nur ab und zu, und der Motor dreht sich nicht richtig.
 
 ## SBrick und SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Ihre Tasten sind Eingänge, sodass Sie ein Modell mit der echten Fernbedienung �
 
 Akkustand und -spannung, Platinentemperatur, Neigung (Nicken, Rollen, Gieren), Beschleunigung und Ausrichtung sind bei Hubs verfügbar, die diese Sensoren haben. Stellen Sie **Hub-Ausrichtung** (Schnellverknüpfungen) oder *Neigungsausrichtung auf* (Logikblöcke) passend zur Einbaulage des Hubs ein.
 
-In den Logikblöcken melden die Hubs Technic Hub, Technic Move Hub, Robot Inventor und SPIKE Prime auch ihre Drehgeschwindigkeit (Gyroskop, *Drehgeschwindigkeit (°/s)*), und der Technic Hub meldet den Strom, den er aufnimmt (*Strom (mA)*). Siehe [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+In den Logikblöcken melden die Hubs Technic Hub, Technic Move Hub, Robot Inventor und SPIKE Prime auch ihre Drehgeschwindigkeit (Gyroskop, *Drehgeschwindigkeit (°/s)*), und der Technic Hub und der BOOST Move Hub melden den Strom, den sie aufnehmen (*Strom (mA)*). Siehe [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

@@ -171,7 +171,7 @@ En sensorværdi sendes videre i rækken divideret med sin fulde skala og begræn
 | **Hældning gir** | værdi | °, 180 | hubs med giraksen |
 | **Acceleration X / Y / Z** | værdi | m/s², 19,6 | hubs med accelerometer |
 | **Rotationshastighed X / Y / Z** | værdi | °/s, 360 | hubs med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hubstrøm** | værdi | mA, 3000 | Technic Hub |
+| **Hubstrøm** | værdi | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motorhastighed** | værdi | %, 100 | port; alle hubs med porte |
 | **Motorvinkel** | værdi | °, 360 (relativ) | port; motorer med encoder; ikke SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | værdi | °, 180 (absolut) | port; vinkelmotorer |

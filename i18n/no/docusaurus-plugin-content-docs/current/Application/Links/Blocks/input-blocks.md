@@ -171,7 +171,7 @@ En sensorverdi går videre langs raden delt på full skala og begrenset til −1
 | **Helling gir** | verdi | °, 180 | hubber med yaw-akse |
 | **Akselerasjon X / Y / Z** | verdi | m/s², 19,6 | hubber med akselerometer |
 | **Rotasjonshastighet X / Y / Z** | verdi | °/s, 360 | hubber med gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hubstrøm** | verdi | mA, 3000 | Technic Hub |
+| **Hubstrøm** | verdi | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motorhastighet** | verdi | %, 100 | port; alle hubber med porter |
 | **Motorvinkel** | verdi | °, 360 (relativ) | port; motorer med enkoder; ikke SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposisjon** | verdi | °, 180 (absolutt) | port; vinkelmotorer |

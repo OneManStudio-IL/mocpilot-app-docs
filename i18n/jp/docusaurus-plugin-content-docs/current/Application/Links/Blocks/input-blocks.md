@@ -171,7 +171,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | **傾き ヨー** | 値 | °、180 | ヨー軸のあるハブ |
 | **加速度 X / Y / Z** | 値 | m/s²、19.6 | 加速度計付きのハブ |
 | **回転速度 X / Y / Z** | 値 | °/s、360 | ジャイロスコープ付きのハブ：Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime |
-| **ハブの電流** | 値 | mA、3000 | Technic Hub |
+| **ハブの電流** | 値 | mA、3000 | Technic Hub、BOOST Move Hub |
 | **モーター速度** | 値 | %、100 | ポート、ポートのあるすべてのハブ |
 | **モーター角度** | 値 | °、360（相対） | ポート、エンコーダー付きモーター。SBrick、BuWizz 2.0、WeDo 2.0 は除く |
 | **モーター位置** | 値 | °、180（絶対） | ポート、アンギュラーモーター |

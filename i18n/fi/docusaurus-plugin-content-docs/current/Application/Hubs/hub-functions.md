@@ -34,13 +34,15 @@ LEGO® Technic -kauko-ohjattavien autojen (Porsche GT4 e-Performance, Lamborghin
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Tehotila**: Hidas, Normaali, Nopea, Ludicrous. Pikalinkit: [Tehotila](/docs/Application/Links/Blocks/OutputBlocks#op-powermode)-toiminto; Logiikkalohkot: *virta-asetus tilaksi* (BuWizz 2).
-- Nykyinen tehotila, **lähtöjännite** ja moottorin virta syötteinä.
+- Nykyinen tehotila, **lähtöjännite** ja moottorin virta syötteinä. Ilman kuormaa lähtöjännite on noin 6,3 V tilassa Hidas, 7,7 V tilassa Normaali, 9,15 V tilassa Nopea ja 10,5 V tilassa Ludicrous.
 - Yksinkertainen nopeuden ohjaus porteissa 1–4: ei asennon ohjausta.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - **Portin väri** -LEDit porteissa 1–4: luettelosta tai RGB:nä ([Portin väri](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *aseta portin LED-väri*).
 - Moottorin virta syötteenä, suhteelliset asennot.
+- Anturilliset moottorit (Technic L ja XL, SPIKE, Robot Inventor ja harmaat kulmamoottorit) porteissa 1–4 toimivat nopeuden säädöllä: hubi pitää asetetun nopeuden, joten ne pyörivät tasaisesti myös pienellä nopeudella (noin 20 %:sta alkaen). Pysähtyessään ne rullaavat vapaasti. Yksinkertaiset moottorit, valot sekä portit A ja B toimivat kuten ennenkin.
+- BOOST-moottorit (BOOST Move Hub -sarjasta) eivät toimi BuWizz 3.0 Pro -hubissa: hubi tunnistaa ne vain satunnaisesti, eikä moottori pyöri kunnolla.
 
 ## SBrick ja SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Sen painikkeet ovat syötteitä, joten voit ohjata mallia fyysisellä kaukosää
 
 Akun taso ja jännite, piirilevyn lämpötila, kallistus (pituus-, sivu- ja kiertosuunta), kiihtyvyys ja suunta ovat käytettävissä hubeissa, joissa niitä on. Aseta **Hubin suunta** (Pikalinkit) tai *kallistuksen suuntaan* (Logiikkalohkot) vastaamaan sitä, miten hubi on asennettu.
 
-Logiikkalohkoissa Technic Hub, Technic Move Hub, Robot Inventor ja SPIKE Prime ilmoittavat myös pyörimisnopeutensa (gyroskooppi, *pyörimisnopeus (°/s)*), ja Technic Hub ilmoittaa ottamansa virran (*virta (mA)*). Katso [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+Logiikkalohkoissa Technic Hub, Technic Move Hub, Robot Inventor ja SPIKE Prime ilmoittavat myös pyörimisnopeutensa (gyroskooppi, *pyörimisnopeus (°/s)*), ja Technic Hub ja BOOST Move Hub ilmoittavat ottamansa virran (*virta (mA)*). Katso [Anturit](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

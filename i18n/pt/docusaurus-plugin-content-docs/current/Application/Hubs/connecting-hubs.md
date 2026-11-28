@@ -41,10 +41,10 @@ O botão **Meus hubs** no editor (**Hubs** no computador) mostra quantos hubs es
 
 Abra um hub conectado para ver o **monitor do hub**:
 
-- o hub: modelo, nome, firmware, bateria, carregamento, temperatura da placa, configuração, orientação, inclinação (arfagem, rolagem, guinada) e acelerômetro;
+- o hub: modelo, nome, firmware, bateria, tensão da bateria, carregamento, temperatura da placa, configuração, orientação, inclinação (arfagem, rolagem, guinada) e acelerômetro;
 - cada porta: o dispositivo conectado e sua velocidade, posição, posição relativa, cor, luz refletida e ambiente, ou distância.
 
-Use-o para conferir qual motor está em qual porta e para que lado ele gira antes de montar o programa.
+Use-o para conferir qual motor está em qual porta e para que lado ele gira antes de montar o programa. Os valores continuam sendo atualizados enquanto a janela do MOCPilot está em segundo plano.
 
 <Screenshot name="hub-monitor" alt="Monitor do hub de um Technic Hub conectado" width={900} />
 

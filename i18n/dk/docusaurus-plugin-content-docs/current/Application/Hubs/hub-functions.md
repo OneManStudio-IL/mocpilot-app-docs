@@ -34,13 +34,15 @@ Hubben i de fjernstyrede LEGO® Technic-biler (Porsche GT4 e-Performance, Lambor
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Effekttilstand**: Langsom, Normal, Hurtig, Ludicrous. Hurtige forbindelser: handlingen [Effekttilstand](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Logikblokke: *BuWizz 2 indstil strømtilstand*.
-- Den aktuelle effekttilstand, **udgangsspændingen** og motorstrømmen som input.
+- Den aktuelle effekttilstand, **udgangsspændingen** og motorstrømmen som input. Uden belastning er udgangsspændingen ca. 6,3 V i Langsom, 7,7 V i Normal, 9,15 V i Hurtig og 10,5 V i Ludicrous.
 - Simpel hastighedsstyring på port 1–4: ingen positionsstyring.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - **Portfarve**-LED'er på port 1–4: fra en liste eller som RGB ([Portfarve](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 sæt LED-farve til*).
 - Motorstrøm som input, relative positioner.
+- Motorer med sensor (Technic L og XL, SPIKE, Robot Inventor og de grå vinkelmotorer) på port 1–4 kører med hastighedsregulering: Hubben holder den indstillede hastighed, så de drejer jævnt selv ved lav hastighed (fra ca. 20 %). Når de stopper, triller de ud. Simple motorer, lys og port A og B fungerer som før.
+- BOOST-motorer (fra sættet med BOOST Move Hub) virker ikke på en BuWizz 3.0 Pro: Hubben genkender dem kun en gang imellem, og motoren drejer ikke ordentligt.
 
 ## SBrick og SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Dens knapper er input, så du kan køre en model med den fysiske fjernbetjening 
 
 Batteriniveau og -spænding, printkorttemperatur, hældning (pitch, roll, gir), acceleration og orientering er tilgængelige på hubs, der har dem. Indstil **Hubbens orientering** (Hurtige forbindelser) eller *tilt orientering til* (Logikblokke), så den svarer til, hvordan hubben er monteret.
 
-I Logikblokke rapporterer Technic Hub, Technic Move Hub, Robot Inventor og SPIKE Prime også deres rotationshastighed (gyroskop, *rotationshastighed (°/s)*), og Technic Hub rapporterer den strøm, den trækker (*strøm (mA)*). Se [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+I Logikblokke rapporterer Technic Hub, Technic Move Hub, Robot Inventor og SPIKE Prime også deres rotationshastighed (gyroskop, *rotationshastighed (°/s)*), og Technic Hub og BOOST Move Hub rapporterer den strøm, de trækker (*strøm (mA)*). Se [Sensorer](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

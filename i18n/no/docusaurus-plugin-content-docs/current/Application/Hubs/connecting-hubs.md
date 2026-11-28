@@ -41,10 +41,10 @@ Knappen **Mine hubber** i redigeringsprogrammet (**Hubber** på en datamaskin) v
 
 Åpne en tilkoblet hub for å se **hubmonitoren**:
 
-- huben: modell, navn, fastvare, batteri, lading, korttemperatur, konfigurasjon, orientering, helning (stigning, rulling, yaw) og akselerometer;
+- huben: modell, navn, fastvare, batteri, batterispenning, lading, korttemperatur, konfigurasjon, orientering, helning (stigning, rulling, yaw) og akselerometer;
 - hver port: enheten som er koblet til, og dens hastighet, posisjon, relative posisjon, farge, reflektert lys og omgivelseslys eller avstand.
 
-Bruk den til å sjekke hvilken motor som sitter på hvilken port, og hvilken vei den går, før du lager programmet.
+Bruk den til å sjekke hvilken motor som sitter på hvilken port, og hvilken vei den går, før du lager programmet. Verdiene fortsetter å oppdateres mens MOCPilot-vinduet er i bakgrunnen.
 
 <Screenshot name="hub-monitor" alt="Hubmonitor for en tilkoblet Technic Hub" width={900} />
 

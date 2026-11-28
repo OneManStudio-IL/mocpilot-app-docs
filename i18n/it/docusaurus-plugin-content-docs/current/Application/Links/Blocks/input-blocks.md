@@ -171,7 +171,7 @@ Il valore di un sensore viaggia lungo la riga diviso per il suo fondo scala e li
 | **Inclinazione: imbardata** | valore | °, 180 | hub con asse di imbardata |
 | **Accelerazione X / Y / Z** | valore | m/s², 19,6 | hub con accelerometro |
 | **Velocità di rotazione X / Y / Z** | valore | °/s, 360 | hub con giroscopio: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Corrente dell’hub** | valore | mA, 3000 | Technic Hub |
+| **Corrente dell’hub** | valore | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Velocità del motore** | valore | %, 100 | porta; tutti gli hub con porte |
 | **Angolo del motore** | valore | °, 360 (relativo) | porta; motori con encoder; non SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Posizione del motore** | valore | °, 180 (assoluta) | porta; motori angolari |

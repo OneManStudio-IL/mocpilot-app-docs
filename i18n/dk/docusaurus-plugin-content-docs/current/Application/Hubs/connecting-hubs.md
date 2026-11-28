@@ -41,10 +41,10 @@ Knappen **Mine hubs** i editoren (**Hubs** på en computer) viser, hvor mange hu
 
 Åbn en forbundet hub for at se dens **hubmonitor**:
 
-- hubben: model, navn, firmware, batteri, opladning, printkorttemperatur, konfiguration, orientering, hældning (pitch, roll, gir) og accelerometer;
+- hubben: model, navn, firmware, batteri, batterispænding, opladning, printkorttemperatur, konfiguration, orientering, hældning (pitch, roll, gir) og accelerometer;
 - hver port: den tilsluttede enhed og dens hastighed, position, relative position, farve, reflekterede lys og omgivende lys eller afstand.
 
-Brug den til at tjekke, hvilken motor der sidder på hvilken port, og hvilken vej den drejer, før du bygger programmet.
+Brug den til at tjekke, hvilken motor der sidder på hvilken port, og hvilken vej den drejer, før du bygger programmet. Værdierne bliver ved med at blive opdateret, mens MOCPilot-vinduet er i baggrunden.
 
 <Screenshot name="hub-monitor" alt="Hubmonitor for en forbundet Technic Hub" width={900} />
 

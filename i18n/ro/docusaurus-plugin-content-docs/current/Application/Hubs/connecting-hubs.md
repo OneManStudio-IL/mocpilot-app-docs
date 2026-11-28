@@ -41,10 +41,10 @@ Butonul **Huburile mele** din editor (**Huburi** pe computer) arată câte hubur
 
 Deschide un hub conectat pentru a vedea **Monitor hub**:
 
-- hubul: model, nume, firmware, baterie, încărcare, temperatura plăcii, configurație, orientare, înclinare (pitch, roll, yaw) și accelerometru;
+- hubul: model, nume, firmware, baterie, tensiunea bateriei, încărcare, temperatura plăcii, configurație, orientare, înclinare (pitch, roll, yaw) și accelerometru;
 - fiecare port: dispozitivul conectat și viteza, poziția, poziția relativă, culoarea, lumina reflectată și ambientală sau distanța.
 
-Folosește-l ca să verifici ce motor este pe ce port și în ce sens se rotește, înainte de a construi programul.
+Folosește-l ca să verifici ce motor este pe ce port și în ce sens se rotește, înainte de a construi programul. Valorile continuă să se actualizeze cât timp fereastra MOCPilot este în fundal.
 
 <Screenshot name="hub-monitor" alt="Monitorul hubului pentru un Technic Hub conectat" width={900} />
 

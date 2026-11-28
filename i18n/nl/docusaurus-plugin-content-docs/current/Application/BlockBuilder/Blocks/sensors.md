@@ -30,7 +30,8 @@ Geeft het batterijniveau van de hub terug, in procent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Geeft de batterijspanning van de hub terug, in volt.
 
-- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Typische waarden: de Technic Move Hub heeft één oplaadbare cel, ongeveer 4,2 V als hij vol is en 3,3–3,5 V als hij leeg is; de BOOST Move Hub werkt op 6 AAA-batterijen, ongeveer 9 V als ze nieuw zijn.
 - Geeft `NaN` terug als de hub niet verbonden is.
 
 ### `… temperatuur (C°)` (Gevorderd) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Geeft de temperatuur van de elektronica van de hub terug, in graden Celsius.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Geeft de totale stroom terug die de hub opneemt, in milliampère.
 
-- Hubs: Technic Hub.
+- Hubs: Technic Hub, BOOST Move Hub.
 - Gebruikelijke toepassing: een grijper of een lier stoppen als de belasting toeneemt.
 
 ### `krijg … uitgangsspanning (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Geeft de spanning terug die de hub op dit moment aan zijn poorten levert, in volt.
+
+- Zonder belasting hangt ze af van de vermogensmodus: ongeveer 6,3 V in Langzaam, 7,7 V in Normaal, 9,15 V in Snel en 10,5 V in Ludicrous.
 
 - Hubs: BuWizz 2.
 

@@ -34,13 +34,15 @@ Le hub des voitures télécommandées LEGO® Technic (Porsche GT4 e-Performance,
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Mode de puissance** : Lent, Normal, Rapide, Ludicrous. Liens rapides : l’opération [Mode de puissance](/docs/Application/Links/Blocks/OutputBlocks#op-powermode) ; Blocs logiques : *définir … mode d'alimentation sur …*.
-- Le mode de puissance actuel, la **Tension de sortie** et le courant des moteurs comme entrées.
+- Le mode de puissance actuel, la **Tension de sortie** et le courant des moteurs comme entrées. À vide, la tension de sortie est d’environ 6,3 V en Lent, 7,7 V en Normal, 9,15 V en Rapide et 10,5 V en Ludicrous.
 - Simple contrôle de la vitesse sur les ports 1 à 4 : pas de contrôle de position.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - LED de **Couleur du port** sur les ports 1 à 4 : depuis une liste ou en RVB ([Couleur du port](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor) ; *définir la couleur de la LED du port sur …*).
 - Courant des moteurs comme entrée, positions relatives.
+- Les moteurs avec capteur (Technic L et XL, SPIKE, Robot Inventor et les moteurs angulaires gris) sur les ports 1 à 4 fonctionnent avec régulation de vitesse : le hub maintient la vitesse réglée, ils tournent donc régulièrement même à basse vitesse (à partir d’environ 20 %). À l’arrêt, ils passent en roue libre. Les moteurs simples, les lumières et les ports A et B fonctionnent comme avant.
+- Les moteurs BOOST (du coffret BOOST Move Hub) ne fonctionnent pas sur un BuWizz 3.0 Pro : le hub ne les reconnaît que de temps en temps et le moteur ne tourne pas correctement.
 
 ## SBrick et SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Ses boutons sont des entrées : vous pouvez donc piloter un modèle avec la tél
 
 Le niveau et la tension de la batterie, la température de la carte, l’inclinaison (tangage, roulis, lacet), l’accélération et l’orientation sont disponibles sur les hubs qui en disposent. Réglez **Orientation du hub** (Liens rapides) ou *définir … orientation d'inclinaison à …* (Blocs logiques) selon la façon dont le hub est monté.
 
-Dans les Blocs logiques, les hubs Technic Hub, Technic Move Hub, Robot Inventor et SPIKE Prime indiquent aussi leur vitesse de rotation (gyroscope, *vitesse de rotation (°/s)*), et le Technic Hub indique le courant qu’il consomme (*courant (mA)*). Voir [Capteurs](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+Dans les Blocs logiques, les hubs Technic Hub, Technic Move Hub, Robot Inventor et SPIKE Prime indiquent aussi leur vitesse de rotation (gyroscope, *vitesse de rotation (°/s)*), et le Technic Hub et le BOOST Move Hub indiquent le courant qu’ils consomment (*courant (mA)*). Voir [Capteurs](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

@@ -30,7 +30,8 @@ Vráti úroveň batérie hubu v percentách.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Vráti napätie batérie hubu vo voltoch.
 
-- Huby: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Huby: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Typické hodnoty: Technic Move Hub má jeden nabíjateľný článok, asi 4,2 V po úplnom nabití a 3,3–3,5 V po vybití; BOOST Move Hub beží na 6 batérií AAA, asi 9 V, keď sú nové.
 - Vráti `NaN`, keď hub nie je pripojený.
 
 ### `… teplota (C°)` (Pokročilý) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Vráti teplotu elektroniky hubu v stupňoch Celzia.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Vráti celkový prúd, ktorý hub odoberá, v miliampéroch.
 
-- Huby: Technic Hub.
+- Huby: Technic Hub, BOOST Move Hub.
 - Typické použitie: zastaviť chápadlo alebo navijak, keď rastie záťaž.
 
 ### `získať … výstupné napätie (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Vráti napätie, ktoré hub práve dodáva do svojich portov, vo voltoch.
+
+- Bez záťaže závisí od režimu výkonu: asi 6,3 V v režime Pomaly, 7,7 V v režime Normálny, 9,15 V v režime Rýchlo a 10,5 V v režime Ludicrous.
 
 - Huby: BuWizz 2.
 

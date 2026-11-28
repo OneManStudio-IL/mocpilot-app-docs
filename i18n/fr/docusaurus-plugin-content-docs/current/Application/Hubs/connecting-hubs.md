@@ -41,10 +41,10 @@ Le bouton **Mes hubs** de l’éditeur (**Hubs** sur un ordinateur) indique comb
 
 Ouvrez un hub connecté pour afficher son **Moniteur du hub** :
 
-- le hub : modèle, nom, firmware, batterie, charge, température de la carte, configuration, orientation, inclinaison (tangage, roulis, lacet) et accéléromètre ;
+- le hub : modèle, nom, firmware, batterie, tension de la batterie, charge, température de la carte, configuration, orientation, inclinaison (tangage, roulis, lacet) et accéléromètre ;
 - chaque port : l’appareil branché et sa vitesse, sa position, sa position relative, sa couleur, la lumière réfléchie et ambiante, ou la distance.
 
-Servez-vous-en pour vérifier quel moteur est sur quel port et dans quel sens il tourne avant de construire le programme.
+Servez-vous-en pour vérifier quel moteur est sur quel port et dans quel sens il tourne avant de construire le programme. Les valeurs continuent de se mettre à jour lorsque la fenêtre de MOCPilot est en arrière-plan.
 
 <Screenshot name="hub-monitor" alt="Moniteur du hub d’un Technic Hub connecté" width={900} />
 

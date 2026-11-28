@@ -41,10 +41,10 @@ De knop **Mijn hubs** in de editor (**Hubs** op een computer) laat zien hoeveel 
 
 Open een verbonden hub om de **Hubmonitor** te zien:
 
-- de hub: model, naam, firmware, batterij, opladen, temperatuur van de printplaat, configuratie, oriëntatie, kanteling (pitch, roll, yaw) en versnellingsmeter;
+- de hub: model, naam, firmware, batterij, batterijspanning, opladen, temperatuur van de printplaat, configuratie, oriëntatie, kanteling (pitch, roll, yaw) en versnellingsmeter;
 - elke poort: het aangesloten apparaat en zijn snelheid, positie, relatieve positie, kleur, gereflecteerd en omgevingslicht, of afstand.
 
-Zo controleer je welke motor op welke poort zit en welke kant hij op draait, voordat je het programma bouwt.
+Zo controleer je welke motor op welke poort zit en welke kant hij op draait, voordat je het programma bouwt. De waarden worden verder bijgewerkt terwijl het MOCPilot-venster op de achtergrond staat.
 
 <Screenshot name="hub-monitor" alt="Hubmonitor van een verbonden Technic Hub" width={900} />
 

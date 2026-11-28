@@ -41,10 +41,10 @@ Editorin **Omat hubit** -painike (tietokoneella **Hubit**) näyttää, montako h
 
 Avaa yhdistetty hubi nähdäksesi sen **hubin seurannan**:
 
-- hubi: malli, nimi, laiteohjelmisto, akku, lataus, piirilevyn lämpötila, kokoonpano, suunta, kallistus (pituus-, sivu- ja kiertosuunta) ja kiihtyvyysanturi;
+- hubi: malli, nimi, laiteohjelmisto, akku, akun jännite, lataus, piirilevyn lämpötila, kokoonpano, suunta, kallistus (pituus-, sivu- ja kiertosuunta) ja kiihtyvyysanturi;
 - jokainen portti: kytketty laite ja sen nopeus, asento, suhteellinen asento, väri, heijastunut valo ja ympäristön valo tai etäisyys.
 
-Sen avulla voit tarkistaa ennen ohjelman rakentamista, mikä moottori on missäkin portissa ja mihin suuntaan se pyörii.
+Sen avulla voit tarkistaa ennen ohjelman rakentamista, mikä moottori on missäkin portissa ja mihin suuntaan se pyörii. Arvot päivittyvät edelleen, vaikka MOCPilot-ikkuna on taustalla.
 
 <Screenshot name="hub-monitor" alt="Yhdistetyn Technic Hubin seuranta" width={900} />
 

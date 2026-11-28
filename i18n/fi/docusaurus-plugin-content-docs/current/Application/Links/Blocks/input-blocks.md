@@ -171,7 +171,7 @@ Anturin arvo kulkee rivillä jaettuna koko asteikollaan ja rajattuna välille �
 | **Kierto (yaw)** | arvo | °, 180 | hubit, joissa on kiertoakseli |
 | **Kiihtyvyys X / Y / Z** | arvo | m/s², 19,6 | hubit, joissa on kiihtyvyysanturi |
 | **Pyörimisnopeus X / Y / Z** | arvo | °/s, 360 | hubit, joissa on gyroskooppi: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hubin virta** | arvo | mA, 3000 | Technic Hub |
+| **Hubin virta** | arvo | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Moottorin nopeus** | arvo | %, 100 | portti; kaikki hubit, joissa on portteja |
 | **Moottorin kulma** | arvo | °, 360 (suhteellinen) | portti; kulma-anturilliset moottorit; ei SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Moottorin asento** | arvo | °, 180 (absoluuttinen) | portti; kulmamoottorit |

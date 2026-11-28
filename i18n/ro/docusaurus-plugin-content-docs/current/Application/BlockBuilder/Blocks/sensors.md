@@ -30,7 +30,8 @@ Returnează nivelul bateriei hubului, în procente.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Returnează tensiunea bateriei hubului, în volți.
 
-- Huburi: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Huburi: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Valori tipice: Technic Move Hub are o singură celulă reîncărcabilă, aproximativ 4,2 V când este încărcată complet și 3,3–3,5 V când este descărcată; BOOST Move Hub funcționează cu 6 baterii AAA, aproximativ 9 V când sunt noi.
 - Returnează `NaN` când hubul nu este conectat.
 
 ### `… temperatură (C°)` (Avansat) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Returnează temperatura electronicii hubului, în grade Celsius.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Returnează curentul total consumat de hub, în miliamperi.
 
-- Huburi: Technic Hub.
+- Huburi: Technic Hub, BOOST Move Hub.
 - Utilizare tipică: oprirea unei gheare sau a unui troliu când sarcina crește.
 
 ### `obține … tensiune de ieșire (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Returnează tensiunea pe care hubul o furnizează în acest moment porturilor, în volți.
+
+- Fără sarcină, depinde de modul de putere: aproximativ 6,3 V în modul Lentă, 7,7 V în modul Normal, 9,15 V în modul Rapidă și 10,5 V în modul Ludicrous.
 
 - Huburi: BuWizz 2.
 

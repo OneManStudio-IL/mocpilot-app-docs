@@ -30,7 +30,8 @@ Palauttaa hubin akun varaustason prosentteina.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Palauttaa hubin akun jännitteen voltteina.
 
-- Hubit: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubit: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Tyypilliset arvot: Technic Move Hubissa on yksi ladattava kenno, noin 4,2 V täytenä ja 3,3–3,5 V tyhjänä; BOOST Move Hub toimii kuudella AAA-paristolla, noin 9 V uusilla paristoilla.
 - Palauttaa `NaN`, kun hubia ei ole yhdistetty.
 
 ### `… lämpötila (C°)` (Edistynyt) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Palauttaa hubin elektroniikan lämpötilan celsiusasteina.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Palauttaa hubin ottaman kokonaisvirran milliampeereina.
 
-- Hubit: Technic Hub.
+- Hubit: Technic Hub, BOOST Move Hub.
 - Tyypillinen käyttö: pysäytä tarrain tai vinssi, kun kuorma kasvaa.
 
 ### `hanki … ulostulojännite (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Palauttaa jännitteen, jonka hubi syöttää parhaillaan portteihinsa, voltteina.
+
+- Ilman kuormaa se riippuu tehotilasta: noin 6,3 V tilassa Hidas, 7,7 V tilassa Normaali, 9,15 V tilassa Nopea ja 10,5 V tilassa Ludicrous.
 
 - Hubit: BuWizz 2.
 

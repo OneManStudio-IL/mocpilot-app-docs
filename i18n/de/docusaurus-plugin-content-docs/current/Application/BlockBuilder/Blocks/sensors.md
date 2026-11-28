@@ -30,7 +30,8 @@ Liefert den Akkustand des Hubs in Prozent.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Liefert die Akkuspannung des Hubs in Volt.
 
-- Hubs: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Hubs: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Typische Werte: Der Technic Move Hub hat eine Akkuzelle, etwa 4,2 V voll geladen und 3,3–3,5 V leer; der BOOST Move Hub läuft mit 6 AAA-Batterien, etwa 9 V, wenn sie neu sind.
 - Liefert `NaN`, wenn der Hub nicht verbunden ist.
 
 ### `… Temperatur (C°)` (Fortgeschritten) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ Liefert die Temperatur der Hub-Elektronik in Grad Celsius.
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Liefert den gesamten Strom, den der Hub aufnimmt, in Milliampere.
 
-- Hubs: Technic Hub.
+- Hubs: Technic Hub, BOOST Move Hub.
 - Typische Verwendung: einen Greifer oder eine Seilwinde stoppen, wenn die Last steigt.
 
 ### `holen … Ausgangsspannung (V)` (Guru) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Liefert die Spannung, die der Hub gerade an seine Ports abgibt, in Volt.
+
+- Ohne Last hängt sie vom Leistungsmodus ab: etwa 6,3 V bei Langsam, 7,7 V bei Normal, 9,15 V bei Schnell und 10,5 V bei Ludicrous.
 
 - Hubs: BuWizz 2.
 

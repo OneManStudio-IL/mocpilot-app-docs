@@ -41,10 +41,10 @@ Die Schaltfläche **Meine Hubs** im Editor (**Hubs** auf einem Computer) zeigt, 
 
 Öffnen Sie einen verbundenen Hub, um seinen **Hub-Monitor** zu sehen:
 
-- der Hub: Modell, Name, Firmware, Akku, Ladezustand, Platinentemperatur, Konfiguration, Ausrichtung, Neigung (Nicken, Rollen, Gieren) und Beschleunigungssensor;
+- der Hub: Modell, Name, Firmware, Akku, Akkuspannung, Ladezustand, Platinentemperatur, Konfiguration, Ausrichtung, Neigung (Nicken, Rollen, Gieren) und Beschleunigungssensor;
 - jeder Port: das angeschlossene Gerät und seine Geschwindigkeit, Position, relative Position, Farbe, reflektiertes Licht und Umgebungslicht oder Entfernung.
 
-So prüfen Sie, welcher Motor an welchem Port hängt und in welche Richtung er sich dreht, bevor Sie das Programm erstellen.
+So prüfen Sie, welcher Motor an welchem Port hängt und in welche Richtung er sich dreht, bevor Sie das Programm erstellen. Die Werte werden weiter aktualisiert, während das MOCPilot-Fenster im Hintergrund ist.
 
 <Screenshot name="hub-monitor" alt="Hub-Monitor eines verbundenen Technic Hub" width={900} />
 

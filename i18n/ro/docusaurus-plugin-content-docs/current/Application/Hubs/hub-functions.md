@@ -34,13 +34,15 @@ Hubul mașinilor LEGO® Technic cu telecomandă (Porsche GT4 e-Performance, Lamb
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Mod de putere**: Lentă, Normal, Rapidă, Ludicrous. În Legături rapide: operația [Mod de putere](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); în Blocuri logice: *setează … mod de alimentare la*.
-- Modul de putere curent, **Tensiune de ieșire** și curentul motorului ca intrări.
+- Modul de putere curent, **Tensiune de ieșire** și curentul motorului ca intrări. Fără sarcină, tensiunea de ieșire este de aproximativ 6,3 V în modul Lentă, 7,7 V în modul Normal, 9,15 V în modul Rapidă și 10,5 V în modul Ludicrous.
 - Control simplu al vitezei pe porturile 1–4: fără controlul poziției.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - LED-uri **Culoare port** pe porturile 1–4: dintr-o listă sau RGB ([Culoare port](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *setează culoarea LED-ului portului la*).
 - Curentul motorului ca intrare, poziții relative.
+- Motoarele cu senzor (Technic L și XL, SPIKE, Robot Inventor și motoarele unghiulare gri) de pe porturile 1–4 funcționează cu control al vitezei: hubul menține viteza setată, așa că se rotesc constant chiar și la viteză mică (de la aproximativ 20 %). La oprire rulează liber. Motoarele simple, luminile și porturile A și B funcționează ca înainte.
+- Motoarele BOOST (din setul cu BOOST Move Hub) nu funcționează pe BuWizz 3.0 Pro: hubul le recunoaște doar din când în când, iar motorul nu se rotește corect.
 
 ## SBrick și SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Butoanele ei sunt intrări, așa că poți conduce un model cu telecomanda fizic
 
 Nivelul și tensiunea bateriei, temperatura plăcii, înclinarea (pitch, roll, yaw), accelerația și orientarea sunt disponibile pe huburile care le au. Setează **Orientarea hubului** (Legături rapide) sau *setează … orientare înclinată la* (Blocuri logice) în funcție de cum este montat hubul.
 
-În Blocuri logice, huburile Technic Hub, Technic Move Hub, Robot Inventor și SPIKE Prime raportează și viteza de rotație (giroscop, *viteză de rotație (°/s)*), iar Technic Hub raportează curentul pe care îl consumă (*curent (mA)*). Vezi [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+În Blocuri logice, huburile Technic Hub, Technic Move Hub, Robot Inventor și SPIKE Prime raportează și viteza de rotație (giroscop, *viteză de rotație (°/s)*), iar Technic Hub și BOOST Move Hub raportează curentul pe care îl consumă (*curent (mA)*). Vezi [Senzori](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

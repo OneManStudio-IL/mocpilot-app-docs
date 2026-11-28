@@ -30,7 +30,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_battery_voltage.svg')} alt="block_hubs_all_sensors_battery_voltage.svg" />
 Возвращает напряжение батареи хаба в вольтах.
 
-- Хабы: Technic Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Хабы: Technic Hub, Technic Move Hub, BOOST Move Hub, BuWizz 2, BuWizz 3, SBrick, SBrick Plus, Robot Inventor.
+- Типичные значения: у Technic Move Hub один аккумулятор, около 4,2 В при полной зарядке и 3,3–3,5 В, когда он разряжен; BOOST Move Hub работает от 6 батареек AAA, около 9 В, когда они новые.
 - Возвращает `NaN`, если хаб не подключён.
 
 ### `… температура (C°)` (Продвинутый) {#block_hubs_all_sensors_board_temp}
@@ -43,12 +44,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img src={useBaseUrl('/img/blocks/block_hubs_all_sensors_hub_current.svg')} alt="block_hubs_all_sensors_hub_current.svg" />
 Возвращает общий ток, который потребляет хаб, в миллиамперах.
 
-- Хабы: Technic Hub.
+- Хабы: Technic Hub, BOOST Move Hub.
 - Типичное применение: остановить захват или лебёдку, когда растёт нагрузка.
 
 ### `получить … выходное напряжение (В)` (Гуру) {#block_hubs_buwizz_sensors_get_output_voltage}
 <img src={useBaseUrl('/img/blocks/block_hubs_buwizz_sensors_get_output_voltage.svg')} alt="block_hubs_buwizz_sensors_get_output_voltage.svg" />
 Возвращает напряжение, которое хаб сейчас подаёт на порты, в вольтах.
+
+- Без нагрузки оно зависит от режима мощности: около 6,3 В (Медленно), 7,7 В (Обычный), 9,15 В (Быстро) и 10,5 В (Ludicrous).
 
 - Хабы: BuWizz 2.
 

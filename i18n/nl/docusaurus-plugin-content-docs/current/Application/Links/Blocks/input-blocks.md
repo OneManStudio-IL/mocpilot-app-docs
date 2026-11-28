@@ -171,7 +171,7 @@ Een sensorwaarde gaat door de rij gedeeld door de volle schaal en begrensd tot �
 | **Kanteling gier** | waarde | °, 180 | hubs met een gieras |
 | **Versnelling X / Y / Z** | waarde | m/s², 19,6 | hubs met een versnellingsmeter |
 | **Draaisnelheid X / Y / Z** | waarde | °/s, 360 | hubs met een gyroscoop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hubstroom** | waarde | mA, 3000 | Technic Hub |
+| **Hubstroom** | waarde | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motorsnelheid** | waarde | %, 100 | poort; alle hubs met poorten |
 | **Motorhoek** | waarde | °, 360 (relatief) | poort; motoren met encoder; niet SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorpositie** | waarde | °, 180 (absoluut) | poort; hoekmotoren |

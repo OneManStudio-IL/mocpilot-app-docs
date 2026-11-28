@@ -34,13 +34,15 @@ De hub van de op afstand bestuurbare LEGO® Technic-auto's (Porsche GT4 e-Perfor
 ## BuWizz 2.0 {#buwizz-20}
 
 - **Vermogensmodus**: Langzaam, Normaal, Snel, Ludicrous. Snelle koppelingen: de bewerking [Vermogensmodus](/docs/Application/Links/Blocks/OutputBlocks#op-powermode); Logicablokken: *BuWizz 2 stel stroommodus in*.
-- De huidige vermogensmodus, de **Uitgangsspanning** en de motorstroom als ingangen.
+- De huidige vermogensmodus, de **Uitgangsspanning** en de motorstroom als ingangen. Zonder belasting is de uitgangsspanning ongeveer 6,3 V in Langzaam, 7,7 V in Normaal, 9,15 V in Snel en 10,5 V in Ludicrous.
 - Eenvoudige snelheidsregeling op poort 1–4: geen positieregeling.
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - **Poortkleur**-leds op poort 1–4: uit een lijst of als RGB ([Poortkleur](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor); *BuWizz 3 stel LED-kleur in op*).
 - Motorstroom als ingang, relatieve posities.
+- Motoren met sensor (Technic L en XL, SPIKE, Robot Inventor en de grijze hoekmotoren) op poort 1–4 draaien met snelheidsregeling: de hub houdt de ingestelde snelheid vast, dus ze draaien gelijkmatig, zelfs langzaam (vanaf ongeveer 20 %). Bij het stoppen rollen ze uit. Eenvoudige motoren, lampen en poort A en B werken zoals voorheen.
+- BOOST-motoren (uit de set met de BOOST Move Hub) werken niet op een BuWizz 3.0 Pro: de hub herkent ze maar af en toe, en de motor draait niet goed.
 
 ## SBrick en SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ De knoppen zijn ingangen, dus je kunt een model via MOCPilot met de fysieke afst
 
 Batterijniveau en -spanning, temperatuur van de printplaat, kanteling (pitch, roll, yaw), versnelling en oriëntatie zijn beschikbaar op hubs die ze hebben. Stel **Oriëntatie van de hub** (Snelle koppelingen) of *stel hellingsoriëntatie in* (Logicablokken) zo in dat het overeenkomt met hoe de hub gemonteerd is.
 
-In Logicablokken melden de Technic Hub, Technic Move Hub, Robot Inventor en SPIKE Prime ook hun draaisnelheid (gyroscoop, *draaisnelheid (°/s)*), en de Technic Hub meldt de stroom die hij opneemt (*stroom (mA)*). Zie [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).
+In Logicablokken melden de Technic Hub, Technic Move Hub, Robot Inventor en SPIKE Prime ook hun draaisnelheid (gyroscoop, *draaisnelheid (°/s)*), en de Technic Hub en de BOOST Move Hub melden de stroom die ze opnemen (*stroom (mA)*). Zie [Sensoren](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state).

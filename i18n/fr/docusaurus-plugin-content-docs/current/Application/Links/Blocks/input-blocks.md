@@ -171,7 +171,7 @@ La valeur d’un capteur circule le long de la ligne divisée par sa pleine éch
 | **Inclinaison : lacet** | valeur | °, 180 | hubs avec axe de lacet |
 | **Accélération X / Y / Z** | valeur | m/s², 19,6 | hubs avec accéléromètre |
 | **Vitesse de rotation X / Y / Z** | valeur | °/s, 360 | hubs avec gyroscope : Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Courant du hub** | valeur | mA, 3000 | Technic Hub |
+| **Courant du hub** | valeur | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Vitesse du moteur** | valeur | %, 100 | port ; tous les hubs à ports |
 | **Angle du moteur** | valeur | °, 360 (relatif) | port ; moteurs avec encodeur ; pas SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Position du moteur** | valeur | °, 180 (absolu) | port ; moteurs angulaires |

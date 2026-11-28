@@ -171,7 +171,7 @@ Ein Sensorwert wird entlang der Zeile durch seinen Vollausschlag geteilt und auf
 | **Neigung Gieren** | Wert | °, 180 | Hubs mit Gierachse |
 | **Beschleunigung X / Y / Z** | Wert | m/s², 19,6 | Hubs mit Beschleunigungssensor |
 | **Drehgeschwindigkeit X / Y / Z** | Wert | °/s, 360 | Hubs mit Gyroskop: Technic Hub, Technic Move Hub, Robot Inventor, SPIKE Prime |
-| **Hub-Strom** | Wert | mA, 3000 | Technic Hub |
+| **Hub-Strom** | Wert | mA, 3000 | Technic Hub, BOOST Move Hub |
 | **Motorgeschwindigkeit** | Wert | %, 100 | Port; alle Hubs mit Ports |
 | **Motorwinkel** | Wert | °, 360 (relativ) | Port; Motoren mit Encoder; nicht SBrick, BuWizz 2.0, WeDo 2.0 |
 | **Motorposition** | Wert | °, 180 (absolut) | Port; Winkelmotoren |

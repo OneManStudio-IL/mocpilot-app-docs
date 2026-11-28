@@ -34,13 +34,15 @@ LEGO® Technic のリモコンカー（Porsche GT4 e-Performance、Lamborghini R
 ## BuWizz 2.0 {#buwizz-20}
 
 - **パワーモード**：遅い、ノーマル、速い、Ludicrous。クイックリンクでは[パワーモード](/docs/Application/Links/Blocks/OutputBlocks#op-powermode)操作、ロジックブロックでは *BuWizz 2 電源モードを設定*ブロックを使います。
-- 現在のパワーモード、**出力電圧**、モーター電流を入力として使えます。
+- 現在のパワーモード、**出力電圧**、モーター電流を入力として使えます。無負荷時の出力電圧は、「遅い」で約 6.3 V、「ノーマル」で約 7.7 V、「速い」で約 9.15 V、「Ludicrous」で約 10.5 V です。
 - ポート 1〜4 は単純な速度制御のみで、位置制御はできません。
 
 ## BuWizz 3.0 Pro {#buwizz-30-pro}
 
 - ポート 1〜4 の**ポートの色** LED：一覧から、または RGB で指定します（[ポートの色](/docs/Application/Links/Blocks/OutputBlocks#op-portcolor)、*BuWizz 3 ポートLEDの色を設定*）。
 - モーター電流を入力として使え、相対位置も使えます。
+- ポート 1〜4 のセンサー付きモーター（Technic L と XL、SPIKE、Robot Inventor、グレーのアンギュラーモーター）は速度制御で動きます。ハブが設定速度を保つため、低速（約 20 % から）でも安定して回ります。停止するときは惰性で回って止まります。単純なモーター、ライト、ポート A と B はこれまでどおり動作します。
+- BOOST モーター（BOOST Move Hub セットのもの）は BuWizz 3.0 Pro では使えません。ハブがたまにしか認識せず、モーターが正しく回りません。
 
 ## SBrick と SBrick Plus {#sbrick-and-sbrick-plus}
 
@@ -75,4 +77,4 @@ Technic、City、BOOST、Technic Move、WeDo 2.0、Robot Inventor、リモコン
 
 バッテリー残量と電圧、基板温度、傾き（ピッチ、ロール、ヨー）、加速度、向きは、それらを備えたハブで使えます。ハブの取り付け方に合わせて、**ハブの向き**（クイックリンク）または *傾斜方向に設定*（ロジックブロック）を設定してください。
 
-ロジックブロックでは、Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime のハブは回転速度（ジャイロスコープ、*回転速度 (°/秒)*）も報告し、Technic Hub は消費している電流（*電流 (mA)*）も報告します。[センサー](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)を参照してください。
+ロジックブロックでは、Technic Hub、Technic Move Hub、Robot Inventor、SPIKE Prime のハブは回転速度（ジャイロスコープ、*回転速度 (°/秒)*）も報告し、Technic Hub と BOOST Move Hub は消費している電流（*電流 (mA)*）も報告します。[センサー](/docs/Application/BlockBuilder/Blocks/Sensors#hub-state)を参照してください。
